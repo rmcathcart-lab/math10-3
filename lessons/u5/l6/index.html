@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angle Partners · Math 10-3 5.6</title>
+<meta name="description" content="Math 10-3 Unit 5 Lesson 6: angle partners. Adjacent angles, complementary and supplementary angles, complementary, supplementary or neither, vertically opposite angles, angles around a point, and finding missing angles one step at a time with a reason for each. Scissors that open and close, a ray that turns on a straight line, a protractor to drag. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u5l6.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u5l6">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Coin That Rolls Around a Coin">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Coin That Rolls Around a Coin</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Put <b>two loonies</b> flat on a desk, touching. Hold one still.</p><p class="vw-ctx">Roll the other loonie <b>all the way around</b> the edge of the still one, with no slipping, until it is back on top.</p><p class="vw-ask">How many full turns does the rolling loonie make?</p></div><div class="vw-art"><svg viewBox="0 0 300 290" role="img" aria-label="Two gold coins touching, one on top of the other. The top coin rocks a little back and forth on the edge of the bottom coin.">
+    <g stroke="#8a6410" stroke-width="3">
+      <circle cx="150" cy="190" r="56" fill="#e8b931"/>
+      <circle cx="150" cy="190" r="45" fill="none" stroke="#c99a1e" stroke-width="2"/>
+    </g>
+    <text x="150" y="203" text-anchor="middle" font-size="40" font-weight="900" fill="#8a6410">1</text>
+    <text x="150" y="276" text-anchor="middle" font-size="17" font-weight="700" fill="#6e4a1c">held still</text>
+    <g><animateTransform attributeName="transform" type="rotate" values="-26 150 190;26 150 190;-26 150 190" dur="3.2s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+      <g><animateTransform attributeName="transform" type="rotate" values="-26 150 78;26 150 78;-26 150 78" dur="3.2s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+        <circle cx="150" cy="78" r="56" fill="#f0c53c" stroke="#8a6410" stroke-width="3"/>
+        <circle cx="150" cy="78" r="45" fill="none" stroke="#c99a1e" stroke-width="2"/>
+        <text x="150" y="92" text-anchor="middle" font-size="40" font-weight="900" fill="#8a6410">1</text>
+        <path d="M150 30 l-9 12 h18 z" fill="#c93a33"/>
+      </g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="262" y="60" font-size="44" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u5l6-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> 1 turn</div>
+      <div class="opt"><b>B</b> <span class="tex">1\tfrac12</span> turns</div>
+      <div class="opt right"><b>C</b> 2 turns</div>
+      <div class="opt"><b>D</b> 3 turns</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u5l6-wans"><div><b>C: 2 full turns!</b> Most people say 1. The coin turns once from <b>rolling along the edge</b>, and once more because it <b>travels all the way around</b> the other coin. That is <span class="tex">2\times360^\circ=720^\circ</span>. Watch the red arrow: at the bottom it already points up again. <span class="muted">Grab two coins and try it!</span></div>
+      <svg viewBox="0 0 300 300" class="u5l6-wroll" role="img" aria-label="The top coin rolls all the way around the still coin and turns twice">
+        <circle cx="150" cy="150" r="46" fill="#e8b931" stroke="#8a6410" stroke-width="3"/>
+        <text x="150" y="162" text-anchor="middle" font-size="32" font-weight="900" fill="#8a6410">1</text>
+        <circle cx="150" cy="150" r="92" fill="none" stroke="#c9b48a" stroke-width="2" stroke-dasharray="5 6"/>
+        <g><animateTransform attributeName="transform" type="rotate" from="0 150 150" to="360 150 150" dur="7s" repeatCount="indefinite"/>
+          <g><animateTransform attributeName="transform" type="rotate" from="0 150 58" to="360 150 58" dur="7s" repeatCount="indefinite"/>
+            <circle cx="150" cy="58" r="46" fill="#f0c53c" stroke="#8a6410" stroke-width="3"/>
+            <text x="150" y="70" text-anchor="middle" font-size="32" font-weight="900" fill="#8a6410">1</text>
+            <path d="M150 18 l-8 11 h16 z" fill="#c93a33"/>
+          </g>
+        </g>
+      </svg></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 5 Angles, Parallel Lines and Spatial Puzzles · Lesson 6</div>
+  <h1>Angle Partners: Complementary, Supplementary and Opposite Angles</h1>
+  <p class="lede">Angles that sit next to each other, angles that add to <span class="tex">90^\circ</span> or <span class="tex">180^\circ</span>, the equal angles made by two crossing lines, and finding missing angles <b>one step at a time</b>, with a reason for each step.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>tell when two angles are <b>adjacent</b>, and add adjacent angles</li>
+      <li>find the <b>complement</b> (<span class="tex">90^\circ-</span> the angle) and the <b>supplement</b> (<span class="tex">180^\circ-</span> the angle) of an angle</li>
+      <li>decide if two angles are <b>complementary, supplementary or neither</b>, and find a missing angle in a corner or on a straight line</li>
+      <li>use <b>vertically opposite angles</b> (equal) and <b>angles around a point</b> (<span class="tex">360^\circ</span>)</li>
+      <li>find missing angles one at a time and give a <b>reason</b> for each</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G5</b> Solve problems that involve parallel, perpendicular and transversal lines, and pairs of angles formed between them.</div>
+</section>
+
+<!-- ================= 1. Adjacent angles ================= -->
+<section class="card" data-ink="s1" data-section="1. Adjacent Angles">
+  <div class="sec-h"><span class="badge">1</span><h2>Adjacent Angles</h2></div>
+  <div class="u5l6-two">
+    <div>
+      <p>An angle has two <b>arms</b> that meet at a point called the <b>vertex</b>. You can name an angle three ways:</p>
+      <ul class="u5l6-list">
+        <li>with three letters, the vertex in the middle: <span class="tex">\angle PQR</span></li>
+        <li>with the vertex letter alone: <span class="tex">\angle Q</span></li>
+        <li>with a small number or letter inside the corner: <span class="tex">\angle 1</span> or <span class="tex">\angle a</span></li>
+      </ul>
+    </div>
+    <div class="u5l6-fig" data-fig="names"></div>
+  </div>
+  <div class="def"><b>Key idea</b> &nbsp; Two angles are <b>adjacent</b> (“next to each other”) when they
+    <ul class="u5l6-list">
+      <li>have the <b>same vertex</b>,</li>
+      <li>share <b>one arm</b>, and</li>
+      <li>do <b>not overlap</b> (one angle is not inside the other).</li>
+    </ul>
+    <div class="u5l6-key"><b>Adjacent angles add up.</b> If <span class="tex">\angle PQS</span> and <span class="tex">\angle SQR</span> are adjacent, then <span class="tex">\angle PQS+\angle SQR=\angle PQR</span> (the big angle made by the two outside arms).</div></div>
+  <div class="explainer" data-explainer="adjacent"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Can two adjacent angles <b>both</b> be obtuse? Sketch it.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> For example <span class="tex">100^\circ</span> and <span class="tex">120^\circ</span> side by side, sharing one arm. Together they make <span class="tex">220^\circ</span>, more than a straight line, but they are still adjacent.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Adjacent or not?</h3></div>
+  <p class="u5l6-q">In each picture, are <span class="tex">\angle 1</span> and <span class="tex">\angle 2</span> adjacent? Write yes or no, and give a reason.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a)</div><div class="u5l6-fig" data-fig="e1a"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> Same vertex <span class="tex">Q</span>, they share arm <span class="tex">QS</span>, and they do not overlap.</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u5l6-fig" data-fig="e1b"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> Same vertex, but they share <b>no</b> arm.</div></div></div>
+    <div class="part"><div class="pl">(c)</div><div class="u5l6-fig" data-fig="e1c"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> They share an arm, but the vertices are different.</div></div></div>
+    <div class="part"><div class="pl">(d)</div><div class="u5l6-fig" data-fig="e1d"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> Same vertex and a shared arm, but <span class="tex">\angle 1</span> is <b>inside</b> <span class="tex">\angle 2</span> (they overlap).</div></div></div>
+  </div>
+  <div class="part"><div class="pl">(e) In picture (a), <span class="tex">\angle PQS=35^\circ</span> and <span class="tex">\angle SQR=50^\circ</span>. Find <span class="tex">\angle PQR</span>.</div><div class="work" style="--h:90px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The angles are adjacent, so they add: <span class="tex">\angle PQR=35^\circ+50^\circ=85^\circ</span>.</div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Complementary and supplementary ================= -->
+<section class="card" data-ink="s2" data-section="2. Complementary and Supplementary Angles">
+  <div class="sec-h"><span class="badge">2</span><h2>Complementary and Supplementary Angles</h2></div>
+  <p>Two angles are <b>complementary</b> if they add up to <span class="tex">90^\circ</span>. Each angle is the <b>complement</b> of the other.<br>Two angles are <b>supplementary</b> if they add up to <span class="tex">180^\circ</span>. Each angle is the <b>supplement</b> of the other.</p>
+  <div class="u5l6-fig" data-fig="cs"></div>
+  <div class="def"><b>Key idea</b>
+    <div class="u5l6-formulas"><span><b>Complement</b> <span class="tex">=90^\circ-\text{the angle}</span></span><span><b>Supplement</b> <span class="tex">=180^\circ-\text{the angle}</span></span></div>
+    Only an <b>acute</b> angle (less than <span class="tex">90^\circ</span>) has a complement. Only an angle less than <span class="tex">180^\circ</span> has a supplement.</div>
+  <div class="tip u5l6-rem"><div class="tip-ic">i</div><div><b>Remember.</b> <b>C</b>omplementary goes with a <b>C</b>orner (<span class="tex">90^\circ</span>). <b>S</b>upplementary goes with a <b>S</b>traight line (<span class="tex">180^\circ</span>). The two angles do <b>not</b> have to be next to each other: a <span class="tex">30^\circ</span> angle in one corner of the page and a <span class="tex">60^\circ</span> angle in another corner are still complementary.</div></div>
+  <div class="explainer" data-explainer="partners"></div>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Partners Don’t Have to Touch">
+  <h3 class="sub">Partners don’t have to touch</h3>
+  <p>Two angles far apart can still be complementary or supplementary. Slide one over to the other and see.</p>
+  <div class="explainer" data-explainer="slide"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> What are the complement and the supplement of a tiny <span class="tex">1^\circ</span> angle?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Complement <span class="tex">90^\circ-1^\circ=89^\circ</span>, supplement <span class="tex">180^\circ-1^\circ=179^\circ</span>. The supplement is always <span class="tex">90^\circ</span> more than the complement.</div></div></div>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Finding a Partner Angle">
+  <h3 class="sub">Finding the complement and the supplement</h3>
+  <p>The complement is what <b>fills up the corner</b>. The supplement is what <b>fills up the straight line</b>.</p>
+  <div class="explainer" data-explainer="fill"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Complement and supplement</h3></div>
+  <div class="part"><div class="pl">Find the complement and the supplement of each angle. If one does not exist, say why.</div>
+    <table class="u5l6-tbl">
+      <tr><th>Angle</th><th>Complement (<span class="tex">90^\circ-</span> angle)</th><th>Supplement (<span class="tex">180^\circ-</span> angle)</th></tr>
+      <tr><td>(a) <span class="tex">25^\circ</span></td><td><span data-reveal="&nbsp;"><span class="tex">90^\circ-25^\circ=65^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">180^\circ-25^\circ=155^\circ</span></span></td></tr>
+      <tr><td>(b) <span class="tex">64^\circ</span></td><td><span data-reveal="&nbsp;"><span class="tex">90^\circ-64^\circ=26^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">180^\circ-64^\circ=116^\circ</span></span></td></tr>
+      <tr><td>(c) <span class="tex">8^\circ</span></td><td><span data-reveal="&nbsp;"><span class="tex">90^\circ-8^\circ=82^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">180^\circ-8^\circ=172^\circ</span></span></td></tr>
+      <tr><td>(d) <span class="tex">97^\circ</span></td><td><span data-reveal="&nbsp;">none: <span class="tex">97^\circ</span> is more than <span class="tex">90^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">180^\circ-97^\circ=83^\circ</span></span></td></tr>
+      <tr><td>(e) <span class="tex">210^\circ</span></td><td><span data-reveal="&nbsp;">none: more than <span class="tex">90^\circ</span></span></td><td><span data-reveal="&nbsp;">none: more than <span class="tex">180^\circ</span></span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <span class="tex">65^\circ,\ 155^\circ</span> · (b) <span class="tex">26^\circ,\ 116^\circ</span> · (c) <span class="tex">82^\circ,\ 172^\circ</span> · (d) no complement, <span class="tex">83^\circ</span> · (e) neither exists</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Work backwards, and partners on the job</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) The complement of an angle is <span class="tex">31^\circ</span>. What is the angle? What is its supplement?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Angle: <span class="tex">90^\circ-31^\circ=59^\circ</span><br>Supplement: <span class="tex">180^\circ-59^\circ=121^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) The supplement of an angle is <span class="tex">142^\circ</span>. What is the angle? What is its complement?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Angle: <span class="tex">180^\circ-142^\circ=38^\circ</span><br>Complement: <span class="tex">90^\circ-38^\circ=52^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c) A straight bike path ends at a straight sidewalk. The angle on one side of the path is <span class="tex">73^\circ</span>. What is the angle <span class="tex">x</span> on the other side?</div>
+      <div class="u5l6-fig" data-fig="bike"></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The sidewalk is a straight line, so the angles are supplementary.<br><span class="tex">x=180^\circ-73^\circ=107^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(d) A flagpole holder is screwed to a straight-up (vertical) wall. The pole makes a <span class="tex">34^\circ</span> angle with a level line out from the wall. What angle <span class="tex">y</span> does the pole make with the wall above it?</div>
+      <div class="u5l6-fig" data-fig="flag"></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The wall and the level line make a right angle, so the angles are complementary.<br><span class="tex">y=90^\circ-34^\circ=56^\circ</span></div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex3x" data-section="More Examples: Partners on the Job">
+  <div class="ex-head"><span class="ex-tag">More examples</span><h3>Partners on the job</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A wheelchair ramp makes a <span class="tex">12^\circ</span> angle with the flat ground. What angle does it make with a straight-up post?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The ground and the post make a right angle: complementary. <span class="tex">90^\circ-12^\circ=78^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) A door on a straight wall is opened <span class="tex">65^\circ</span>. What angle does the door make with the wall on its other side?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The wall is a straight line: supplementary. <span class="tex">180^\circ-65^\circ=115^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c) A ladder leans on a straight-up wall. It makes <span class="tex">70^\circ</span> with the flat floor. What angle does it make with the wall?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The wall and the floor make a right angle: complementary. <span class="tex">90^\circ-70^\circ=20^\circ</span></div></div></div>
+  </div>
+</section>
+
+<!-- ================= 3. Complementary, supplementary or neither? ================= -->
+<section class="card" data-ink="s3" data-section="3. Complementary, Supplementary or Neither?">
+  <div class="sec-h"><span class="badge">3</span><h2>Complementary, Supplementary or Neither?</h2></div>
+  <p>Adjacent angles are <b>not always</b> complementary or supplementary. Add them to find out:</p>
+  <div class="def"><b>Key idea</b>
+    <ul class="u5l6-list">
+      <li><b>Sum is <span class="tex">90^\circ</span></b> <span class="tex">\rightarrow</span> complementary (the outside arms make a square corner).</li>
+      <li><b>Sum is <span class="tex">180^\circ</span></b> <span class="tex">\rightarrow</span> supplementary (the outside arms make a straight line).</li>
+      <li><b>Any other sum</b> <span class="tex">\rightarrow</span> <b>neither</b>.</li>
+    </ul></div>
+  <div class="explainer" data-explainer="verdict"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Find the sum, then decide</h3></div>
+  <p class="u5l6-q">Each picture shows two adjacent angles. Find the sum. Then write <i>complementary</i>, <i>supplementary</i> or <i>neither</i>.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a)</div><div class="u5l6-fig" data-fig="e4a"></div>
+      <div class="u5l6-fill">Sum: <span class="u5l6-blank" data-reveal="&nbsp;"><span class="tex">90^\circ</span></span></div><div class="u5l6-fill"><span class="u5l6-blank w2" data-reveal="&nbsp;">complementary</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">42+48=90^\circ</span>: complementary</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u5l6-fig" data-fig="e4b"></div>
+      <div class="u5l6-fill">Sum: <span class="u5l6-blank" data-reveal="&nbsp;"><span class="tex">180^\circ</span></span></div><div class="u5l6-fill"><span class="u5l6-blank w2" data-reveal="&nbsp;">supplementary</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">125+55=180^\circ</span>: supplementary</div></div></div>
+    <div class="part"><div class="pl">(c)</div><div class="u5l6-fig" data-fig="e4c"></div>
+      <div class="u5l6-fill">Sum: <span class="u5l6-blank" data-reveal="&nbsp;"><span class="tex">105^\circ</span></span></div><div class="u5l6-fill"><span class="u5l6-blank w2" data-reveal="&nbsp;">neither</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">35+70=105^\circ</span>: neither</div></div></div>
+    <div class="part"><div class="pl">(d)</div><div class="u5l6-fig" data-fig="e4d"></div>
+      <div class="u5l6-fill">Sum: <span class="u5l6-blank" data-reveal="&nbsp;"><span class="tex">160^\circ</span></span></div><div class="u5l6-fill"><span class="u5l6-blank w2" data-reveal="&nbsp;">neither</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">100+60=160^\circ</span>: neither</div></div></div>
+  </div>
+  <p class="u5l6-note">(c) and (d) are adjacent (same vertex, a shared arm, no overlap), but their sums are not <span class="tex">90^\circ</span> or <span class="tex">180^\circ</span>.</p>
+  <div class="part"><div class="pl">(e) Can two angles be supplementary if they are <b>not</b> adjacent? Give an example.</div><div class="work" style="--h:90px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> Supplementary only means the sum is <span class="tex">180^\circ</span>. For example, a <span class="tex">130^\circ</span> angle on one side of a room and a <span class="tex">50^\circ</span> angle on the other side are supplementary.</div></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s3m" data-section="3. Spot the Mistake">
+  <h3 class="sub">Spot the mistake: right or wrong?</h3>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) “The complement of <span class="tex">40^\circ</span> is <span class="tex">140^\circ</span>.”</div><div class="work" style="--h:70px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Wrong.</b> <span class="tex">140^\circ</span> is the <b>supplement</b>. The complement is <span class="tex">90^\circ-40^\circ=50^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) “A <span class="tex">95^\circ</span> angle has a supplement of <span class="tex">85^\circ</span>.”</div><div class="work" style="--h:70px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Right.</b> <span class="tex">95^\circ+85^\circ=180^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(c) “A <span class="tex">200^\circ</span> reflex angle and a <span class="tex">160^\circ</span> angle make a full turn.”</div><div class="work" style="--h:70px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Right.</b> <span class="tex">200^\circ+160^\circ=360^\circ</span>.</div></div></div>
+  </div>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Finding a Missing Angle">
+  <h3 class="sub">Finding a missing angle in a corner or on a straight line</h3>
+  <div class="def"><b>Key idea</b>
+    <ul class="u5l6-steps">
+      <li><b>Step 1:</b> Decide: is it a right angle (<span class="tex">90^\circ</span>), a straight line (<span class="tex">180^\circ</span>), or neither?</li>
+      <li><b>Step 2:</b> Write an equation: (missing angle) <span class="tex">+</span> (the angles you know) <span class="tex">=90^\circ</span> or <span class="tex">180^\circ</span>.</li>
+      <li><b>Step 3:</b> Subtract to find the missing angle.</li>
+      <li><b>Step 4:</b> Check by adding.</li>
+    </ul></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Don’t guess from how a picture looks. A corner is <span class="tex">90^\circ</span> only if it has the small <b>square mark</b> (or the question says so).</div></div>
+  <div class="explainer" data-explainer="missing"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Find the missing angle</h3></div>
+  <p class="u5l6-q">Find each missing angle <span class="tex">x</span>. Write the equation first.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a)</div><div class="u5l6-fig" data-fig="e5a"></div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Right angle:<br><span class="tex">x+33^\circ=90^\circ</span><br><span class="tex">x=90^\circ-33^\circ=57^\circ</span><br>Check: <span class="tex">57+33=90\ \checkmark</span></div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u5l6-fig" data-fig="e5b"></div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Straight line:<br><span class="tex">x+141^\circ=180^\circ</span><br><span class="tex">x=180^\circ-141^\circ=39^\circ</span><br>Check: <span class="tex">39+141=180\ \checkmark</span></div></div></div>
+    <div class="part"><div class="pl">(c)</div><div class="u5l6-fig" data-fig="e5c"></div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Straight line:<br><span class="tex">46^\circ+x+58^\circ=180^\circ</span><br><span class="tex">x=180^\circ-46^\circ-58^\circ=76^\circ</span><br>Check: <span class="tex">46+76+58=180\ \checkmark</span></div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Estimate first: in (c), <span class="tex">46+58</span> is about <span class="tex">100</span>, so <span class="tex">x</span> is about <span class="tex">80^\circ</span>. Then subtract both angles in one go: <span class="keys">180 <kbd>−</kbd> 46 <kbd>−</kbd> 58 <kbd>ENTER</kbd></span> shows <b>76</b>.</div>
+    <button class="pill" type="button" data-keys="180 − 46 − 58 =">Show me</button></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> In (c), why must you subtract <b>both</b> known angles from <span class="tex">180^\circ</span>?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">All <b>three</b> angles together make the straight line. So <span class="tex">x</span> is what is left of <span class="tex">180^\circ</span> after the <span class="tex">46^\circ</span> <b>and</b> the <span class="tex">58^\circ</span>.</div></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 6 · Questions 1–7</h2>
+  <p class="pr-t">Try these before we cross two lines.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Adjacent or not?</span>
+    <span><b>2</b>Complement and supplement</span>
+    <span><b>3</b>Work backwards</span>
+    <span><b>4</b>True or false</span>
+    <span><b>5</b>Complementary, supplementary or neither</span>
+    <span><b>6</b>Find <span class="tex">x</span></span>
+    <span><b>7</b>The laptop screen</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u5l6">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Vertically opposite angles and angles around a point ================= -->
+<section class="card" data-ink="s4" data-section="4. Vertically Opposite Angles">
+  <div class="sec-h"><span class="badge">4</span><h2>Vertically Opposite Angles and Angles Around a Point</h2></div>
+  <div class="u5l6-two">
+    <div>
+      <p>When two straight lines cross, they make four angles. The two angles <b>across</b> from each other are called <b>vertically opposite angles</b>.</p>
+      <p>(“Vertically” means they share a <i>vertex</i>. It does not mean up and down.)</p>
+      <div class="def u5l6-def-tight"><b>Key idea</b> &nbsp; Vertically opposite angles are always <b>equal</b>: <span class="tex">\angle 1=\angle 3</span> and <span class="tex">\angle 2=\angle 4</span>.</div>
+    </div>
+    <div class="u5l6-fig" data-fig="vo"></div>
+  </div>
+  <div class="explainer" data-explainer="scissors"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Two lines cross, and one of the four angles is <span class="tex">90^\circ</span>. What are the other three?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">All <span class="tex">90^\circ</span>: the angle across is equal (<span class="tex">90^\circ</span>), and the two beside it are <span class="tex">180^\circ-90^\circ=90^\circ</span>. Lines that cross at right angles are <b>perpendicular</b>.</div></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s4w" data-section="4. Why Are They Equal?">
+  <h3 class="sub">Why are vertically opposite angles equal?</h3>
+  <div class="u5l6-why">
+    <div><span class="tex">\angle 1+\angle 2=180^\circ</span> (they make a straight line)</div>
+    <div><span class="tex">\angle 3+\angle 2=180^\circ</span> (they also make a straight line)</div>
+    <div>So <span class="tex">\angle 1</span> and <span class="tex">\angle 3</span> are both “<span class="tex">180^\circ</span> minus <span class="tex">\angle 2</span>”. That means <span class="tex">\angle 1=\angle 3</span>. In the same way, <span class="tex">\angle 2=\angle 4</span>.</div>
+  </div>
+  <div class="explainer" data-explainer="why"></div>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. Angles Around a Point">
+  <h3 class="sub">Angles around a point</h3>
+  <p>A full turn is <span class="tex">360^\circ</span>, so all the angles <b>around a point</b> add up to <span class="tex">360^\circ</span>. Each angle needs to be next to the one before it, with no gaps and no overlaps.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>The four angle facts</b> (use these words as your reasons)
+    <table class="u5l6-facts">
+      <tr><td><b>Complementary angles</b></td><td>add up to <span class="tex">90^\circ</span> (a right angle)</td></tr>
+      <tr><td><b>Supplementary angles</b> (angles on a straight line)</td><td>add up to <span class="tex">180^\circ</span></td></tr>
+      <tr><td><b>Vertically opposite angles</b></td><td>are equal</td></tr>
+      <tr><td><b>Angles around a point</b></td><td>add up to <span class="tex">360^\circ</span></td></tr>
+    </table></div>
+  <div class="explainer" data-explainer="around"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Measure the four angles</h3></div>
+  <div class="u5l6-ex6">
+    <div class="u5l6-tool" id="u5l6-prot"></div>
+    <div>
+      <div class="part"><div class="pl">(a) Measure each angle with a protractor.</div>
+        <div class="u5l6-meas"><span><span class="tex">\angle a=</span> <span class="u5l6-blank" data-reveal="&nbsp;"><span class="tex">36^\circ</span></span></span><span><span class="tex">\angle b=</span> <span class="u5l6-blank" data-reveal="&nbsp;"><span class="tex">144^\circ</span></span></span><span><span class="tex">\angle c=</span> <span class="u5l6-blank" data-reveal="&nbsp;"><span class="tex">36^\circ</span></span></span><span><span class="tex">\angle d=</span> <span class="u5l6-blank" data-reveal="&nbsp;"><span class="tex">144^\circ</span></span></span></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle a=36^\circ,\ \angle b=144^\circ,\ \angle c=36^\circ,\ \angle d=144^\circ</span></div></div></div>
+      <div class="part"><div class="pl">(b) Which angles are equal? Why?</div><div class="work" style="--h:50px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle a=\angle c</span> and <span class="tex">\angle b=\angle d</span>: vertically opposite angles</div></div></div>
+      <div class="part"><div class="pl">(c) Add all four. What do you get? Why?</div><div class="work" style="--h:50px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">36+144+36+144=360^\circ</span>: angles around a point</div></div></div>
+    </div>
+  </div>
+  <div class="part"><div class="pl">(d) Suppose you only knew <span class="tex">\angle a=36^\circ</span>. How could you find the other three without a protractor?</div><div class="work" style="--h:110px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle c=36^\circ</span> (vertically opposite <span class="tex">\angle a</span>)<br><span class="tex">\angle b=180^\circ-36^\circ=144^\circ</span> (supplementary: angles on a straight line)<br><span class="tex">\angle d=144^\circ</span> (vertically opposite <span class="tex">\angle b</span>)</div></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>All the way around</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Find <span class="tex">x</span>.</div><div class="u5l6-fig" data-fig="e7a"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Angles around a point:<br><span class="tex">95^\circ+110^\circ+78^\circ+x=360^\circ</span><br><span class="tex">283^\circ+x=360^\circ</span><br><span class="tex">x=77^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) A ceiling fan has 5 blades, evenly spaced. What angle is between two blades that are next to each other?</div><div class="u5l6-fig" data-fig="e7b"></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The 5 equal angles go all the way around:<br><span class="tex">360^\circ\div5=72^\circ</span><br>There are <span class="tex">72^\circ</span> between blades.</div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">\angle AOB=130^\circ</span>. The <b>reflex</b> angle <span class="tex">AOB</span> goes the long way around. How big is it?</div><div class="u5l6-fig" data-fig="e7c"></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The two angles go all the way around:<br><span class="tex">360^\circ-130^\circ=230^\circ</span><br>The reflex angle is <span class="tex">230^\circ</span>.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>In (a), take all three angles away from <span class="tex">360</span>: <span class="keys">360 <kbd>−</kbd> 95 <kbd>−</kbd> 110 <kbd>−</kbd> 78 <kbd>ENTER</kbd></span> shows <b>77</b>. In (b): <span class="keys">360 <kbd>÷</kbd> 5 <kbd>ENTER</kbd></span> shows <b>72</b>.</div>
+    <div class="u5l6-pcol"><button class="pill" type="button" data-keys="360 − 95 − 110 − 78 =">(a)</button><button class="pill" type="button" data-keys="360 ÷ 5 =">(b)</button></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u5l6"></section>
+
+<!-- ================= 5. Missing angles with reasons ================= -->
+<section class="card" data-ink="s5" data-section="5. Finding Missing Angles with Reasons">
+  <div class="sec-h"><span class="badge">5</span><h2>Finding Missing Angles with Reasons</h2></div>
+  <p>In a bigger diagram, you find the angles <b>one at a time</b>. Each new angle you find helps you find the next one.</p>
+  <div class="def"><b>Key idea</b>
+    <ul class="u5l6-steps">
+      <li><b>Step 1:</b> Look for a missing angle that is next to or across from an angle you know.</li>
+      <li><b>Step 2:</b> Find it, and write the <b>reason</b> (one of the four angle facts).</li>
+      <li><b>Step 3:</b> Repeat with the new angle.</li>
+      <li><b>Check:</b> the angles around the point add up to <span class="tex">360^\circ</span>.</li>
+    </ul></div>
+  <div class="explainer" data-explainer="reasons"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Three lines through one point</h3></div>
+  <p class="u5l6-q">Three straight lines cross at one point. Find angles <span class="tex">a</span>, <span class="tex">b</span>, <span class="tex">c</span> and <span class="tex">d</span>. Give a reason for each.</p>
+  <div class="part">
+    <div class="u5l6-ex8">
+      <div class="u5l6-fig" data-fig="e8"></div>
+      <table class="u5l6-tbl u5l6-t8">
+        <tr><th>Angle</th><th>Work</th><th>Reason</th></tr>
+        <tr><td><span class="tex">a</span></td><td><span data-reveal="&nbsp;"><span class="tex">180-48-74=58^\circ</span></span></td><td><span data-reveal="&nbsp;">angles on a straight line</span></td></tr>
+        <tr><td><span class="tex">b</span></td><td><span data-reveal="&nbsp;"><span class="tex">48^\circ</span></span></td><td><span data-reveal="&nbsp;">vertically opposite the <span class="tex">48^\circ</span></span></td></tr>
+        <tr><td><span class="tex">c</span></td><td><span data-reveal="&nbsp;"><span class="tex">74^\circ</span></span></td><td><span data-reveal="&nbsp;">vertically opposite the <span class="tex">74^\circ</span></span></td></tr>
+        <tr><td><span class="tex">d</span></td><td><span data-reveal="&nbsp;"><span class="tex">58^\circ</span></span></td><td><span data-reveal="&nbsp;">vertically opposite <span class="tex">a</span></span></td></tr>
+      </table>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">a=58^\circ,\ b=48^\circ,\ c=74^\circ,\ d=58^\circ</span>. Check: <span class="tex">48+74+58+48+74+58=360^\circ\ \checkmark</span> (angles around a point)</div></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Could you find <span class="tex">b</span> and <span class="tex">c</span> before <span class="tex">a</span>? How?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> <span class="tex">b</span> is across from the <span class="tex">48^\circ</span> and <span class="tex">c</span> is across from the <span class="tex">74^\circ</span> (vertically opposite). Any order works, as long as each step uses an angle you already know.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Scissors and a pool table</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A pair of scissors is open. The angle between the blades is <span class="tex">26^\circ</span>. What is the angle between the handles? Why?</div>
+      <div class="u5l6-fig" data-fig="e9a"></div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The blades and the handles are vertically opposite angles, so they are equal.<br>The handles are open <span class="tex">26^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) In a pool game, a ball hits the straight cushion (edge) of the table and bounces off. It comes in at <span class="tex">40^\circ</span> to the cushion and leaves at <span class="tex">40^\circ</span> to the cushion. Find the angle <span class="tex">p</span> between its two paths.</div>
+      <div class="u5l6-fig" data-fig="e9b"></div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The cushion is a straight line (angles on a straight line):<br><span class="tex">40^\circ+p+40^\circ=180^\circ</span><br><span class="tex">p=180^\circ-80^\circ=100^\circ</span></div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex9x" data-section="More Examples: Crossing Tracks">
+  <div class="ex-head"><span class="ex-tag">More examples</span><h3>Crossing train tracks</h3></div>
+  <div class="part"><div class="pl">Two straight train tracks cross. One of the angles between them is <span class="tex">38^\circ</span>. Find the other three angles. Give a reason for each.</div>
+    <div class="u5l6-fig" data-fig="x9"></div><div class="work" style="--h:110px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Across from the <span class="tex">38^\circ</span>: <span class="tex">38^\circ</span> (vertically opposite). The two beside it: <span class="tex">180^\circ-38^\circ=142^\circ</span> each (angles on a straight line). Check: <span class="tex">38+142+38+142=360\ \checkmark</span></div></div></div>
+</section>
+
+<section class="card example" data-extra data-ink="ex10" data-section="More Examples: Around the Clock">
+  <div class="ex-head"><span class="ex-tag">More examples</span><h3>Around the clock</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A clock shows 2:00. The 12 numbers are evenly spaced. What is the angle between the hands? What is the reflex angle?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Each hour mark is <span class="tex">360^\circ\div12=30^\circ</span> apart. From 12 to 2 is 2 marks: <span class="tex">2\times30^\circ=60^\circ</span>. Reflex angle: <span class="tex">360^\circ-60^\circ=300^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) A pizza is cut into 8 equal slices from the centre. One slice is eaten. What angle is the gap? What angle do the slices that are left make?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One slice: <span class="tex">360^\circ\div8=45^\circ</span>. The slices that are left: <span class="tex">360^\circ-45^\circ=315^\circ</span> (or <span class="tex">7\times45^\circ=315^\circ</span>).</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Adjacent:</b> same vertex, one shared arm, no overlap. Adjacent angles <b>add</b>: <span class="tex">\angle PQS+\angle SQR=\angle PQR</span>.</div>
+    <div><b>Partners:</b> complementary add to <span class="tex">90^\circ</span> (a <b>C</b>orner), supplementary add to <span class="tex">180^\circ</span> (a <b>S</b>traight line). Complement <span class="tex">=90^\circ-</span> angle, supplement <span class="tex">=180^\circ-</span> angle.</div>
+    <div><b>Crossing lines:</b> vertically opposite angles are <b>equal</b>. Angles around a point add to <span class="tex">360^\circ</span>. A reflex angle <span class="tex">=360^\circ-</span> the angle.</div>
+    <div><b>Missing angles:</b> right angle, straight line or around a point? Write the equation, subtract, check by adding. Find angles <b>one at a time</b>, with a reason for each.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u5l6">
+    <div><div class="kicker">Your turn</div><b>Assignment 6 · Questions 8–18</b><div class="muted">Crossing lines, angles around a point, three lines through a point, Mia’s mistake, a hockey pass off the boards, a camp stool, a right angle at a crossing, and multiple choice. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l7/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 7 — Transversals: Naming the Angle Pairs</b><div class="muted">One line crossing two others makes 8 angles. Next we name the pairs that go together: corresponding (F), alternate (Z) and more.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u5l6.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u5l6', homeHref: '../../', title: '5.6 Angle Partners' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

@@ -184,3 +184,24 @@ Explainer tip: the stage height is `ex.def.height` (there is no `ex.H`); width i
 MC options: everything after the letter is wrapped in `.bk-otxt` automatically, so words and math flow on one line.
 Rotating/sliding SVG groups: blocks.css gives `g` `transform-box: fill-box; transform-origin: center`; to rotate about a
 point with `rotate(θ cx cy)` set `style.transformBox = 'view-box'; style.transformOrigin = '0 0'` on that group.
+
+## Geometry toolkit (Unit 5) — `js/geo.js`
+`import { Geo } from '../geo.js';` (it imports blocks.js and injects its own `geo-` styles). Demo + test bed:
+`dev/geo.html` (source `js/dev/geo-demo.js`). Same rules as above: `(host, opts)`; host = an `<svg>`/`<g>` (drawn into)
+or an HTML element/stage (a sized box is made; `x`, `y` place it); animating methods take `c` first; no `c` = static.
+**Directions and angles are math degrees** (0 = right, counterclockwise; 90 = up); positions are SVG px (y down).
+Bearings are true bearings. Everything draggable carries `data-tap` (no ink, no tap-to-Next) and works with finger,
+Pencil and mouse under lesson scaling and pinch zoom (screen-matrix coordinates, drags measured from their start).
+
+| Call | What you get |
+|---|---|
+| `Geo.protractor(host, {width 640, height 430, r 200, cx, cy, rot, angle: {vertex, a1, a2, names}, snap, readout, buttons, whichScale, hidden})` | draggable protractor (drag the body; turn with the round handles under the base), outer scale 0 on the LEFT, inner grey 0 on the RIGHT. Live 3-step readout; buttons Show me / Which scale? / Hide the reading / New angle / Snap (`buttons: false` or a list). API: `moveTo(c, {cx, cy, rot})`, `alignTo(arm, 'inner'\|'outer'\|'auto')` → pose, `place(c)`, `reading()` → `{centred, zero, value}`, `showScale('outer'\|'inner'\|'auto'\|null)`, `hide(on)`, `setAngle({...})`, `newAngle()` |
+| `Geo.angle(host, {vertex, a1, a2, len, label, arc, reflex, r, right, fill, names: ['A','B','C'], color})` | arms + arc (square when 90°) + label (`true` = measure); reflex arc in red. `→ {measure, start, span, mid, arms, arc, label, drawIn(c)}` |
+| `Geo.transversal(host, {w 560, h 340, parallel, tilt (= angle 2), skew, angles: {1: 70, 6: 'x'}, numbers, marks, names, highlight: [1, 5]})` | the booklet diagram: 1–4 at the top crossing, 5–8 at the bottom, each clockwise from upper-left; `>` marks when parallel. `highlight(c, [a, b], {shape, name})` (wedges + F/Z/C/X shape + name tag), `clearHighlight()`, `slide(c, k)` (copy of angle k slides to the other crossing), `measure(k)`, `setLabel(k, s)`, `corner(k)` |
+| `Geo.compassRose(host, {width 360, r, points 4\|8\|16, degrees, bearing})` | rose with N arrow; `turn(c, b)` sweeps the bearing ray clockwise from north (label counts up, 3 digits), `back(c)` dashed back bearing, `add(b, {color})`, `set(b)` |
+| `Geo.construct(host, steps, {width, height})` | compass-and-straightedge animation (compass tool sweeps light arcs; a ruler slides in for lines). `.steps` = explainer steps (`return K.steps`). Presets: `Geo.construct.bisect({vertex, a1, a2})`, `.copy({from: {vertex, a1, a2}, to: {vertex, dir}})`, `.perpBisector({a, b})`, `.perpAt({a, b, p})`, `.perpFrom({a, b, p})`. Ops for your own: `arc, line, point, angle, right, ticks, text, fn`; `given: true` steps are the starting picture |
+| `Geo.tangram(host, {unit 50, labels: 'area'\|'name', layout: 'scatter'\|'square'\|{…}, target: [[x,y]…], onChange})` | 7 pieces (`L1 L2 M S1 S2 SQ PA`): drag, **tap = turn 45°, double-tap = flip**, corners snap to other pieces and the grid. `solve(c)`, `scatter(c)`, `arrange(c, layout)`, `reset()`, `state()` |
+| `Geo.pentomino(host, {cell 36, letters 'FILNPTUVWXYZ' (repeats ok), board: {cols, rows, at}, onChange})` | pentominoes on a grid: drag, tap = 90°, double-tap = flip, snap to cells; `state().extra = {covered, cells, filled}`; `cellsOf(id)` |
+Also `Geo.PAIRS`, `PAIR_NAMES`, `pairName(a, b)`, `bearingText(45)` → `"045"`, `at(V, deg, r)`, `dirTo(V, Q)`, `arcD`, `text`, `ray`.
+Give an explainer whose picture is a protractor or puzzle `tap: false`. Practice-site figures and checkers with the same
+numbering and look are in `../js/geokit.js` (`HW.geo`).

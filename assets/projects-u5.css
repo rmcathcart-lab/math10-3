@@ -1,0 +1,204 @@
+/* Unit 5 project — Mini-Golf Designer (js/projects/u5.js): the hole on a grid, the draggable protractor, the bank-shot
+ * aiming tool, the park map, rails and a brace, border-board corners, the windmill, the pentomino pad and the printable
+ * hole design card. Loaded by js/projects/u5.js itself (or link it after assets/projects.css). Everything is pj-u5-. */
+
+/* ---- drawings ---- */
+.pj-u5-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.pj-u5-draw { position: relative; -webkit-user-select: none; user-select: none; background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; padding: 10px 12px 12px; touch-action: manipulation; }
+.pj-u5-draw > .pj-u5-svg { max-height: 560px; }
+.pj-u5-t, .pj-u5-sm, .pj-u5-ml, .pj-u5-al, .pj-u5-wl, .pj-u5-gl { font: 700 13px/1 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: #1f2937; text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
+.pj-u5-sm { font-size: 12px; font-weight: 600; fill: #475569; }
+.pj-u5-ml { font-size: 13px; font-weight: 800; fill: #0f172a; }
+.pj-u5-al { font-size: 15px; font-weight: 800; }
+.pj-u5-wl { font-size: 11px; font-weight: 800; letter-spacing: .08em; fill: #7c4a1e; }
+.pj-u5-gl { font-size: 11.5px; font-style: italic; fill: #64748b; font-weight: 600; }
+.pj-u5-tee { font: 800 10px/1 system-ui, sans-serif; fill: #fff; text-anchor: middle; letter-spacing: .1em; }
+.pj-u5-emo { text-anchor: middle; }
+.pj-u5-arc { fill: none; stroke: rgba(255, 255, 255, .9); stroke-width: 2.4; stroke-dasharray: 5 4; }
+.pj-u5-arc.rfx { stroke: #fde68a; stroke-width: 2.8; }
+.pj-u5-sq { fill: none; stroke: rgba(255, 255, 255, .9); stroke-width: 2; }
+.pj-u5-cl circle { fill: #fff; stroke: #0f172a; stroke-width: 2; }
+.pj-u5-cl rect { fill: #fff; stroke: #0f172a; stroke-width: 1.6; }
+.pj-u5-cl text { font: 800 15px/1 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: #0f172a; text-anchor: middle; }
+.pj-u5-cl.ang text { font-size: 13.5px; } .pj-u5-cl.ang .l { fill: var(--ucd, #1e3a8a); }
+.pj-u5-hole.sm { max-height: 92px; }
+
+/* ---- the protractor ---- */
+.pj-u5-prot { cursor: grab; outline: none; touch-action: none; }
+.pj-u5-prot.drag { cursor: grabbing; }
+.pj-u5-prot.static { cursor: default; pointer-events: none; }
+.pj-u5-pbody { fill: rgba(219, 234, 254, .62); stroke: #1e40af; stroke-width: 1.6; }
+.pj-u5-prot.on .pj-u5-pbody { fill: rgba(219, 234, 254, .5); }
+.pj-u5-prot:focus-visible .pj-u5-pbody { stroke: #f59e0b; stroke-width: 3; }
+.pj-u5-pwin { fill: none; stroke: rgba(30, 64, 175, .35); stroke-width: 1; }
+.pj-u5-ptick { stroke: #1e3a8a; stroke-width: 1; fill: none; }
+.pj-u5-pout, .pj-u5-pinr { font: 700 11.5px/1 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; fill: #0f172a; pointer-events: none; }
+.pj-u5-pinr { font-size: 9.5px; font-weight: 600; fill: #64748b; }
+.pj-u5-pout.hi, .pj-u5-pinr.hi { fill: #dc2626; font-weight: 800; }
+.pj-u5-pbase { stroke: #1e40af; stroke-width: 1.8; fill: none; }
+.pj-u5-pc { fill: #dc2626; stroke: #fff; stroke-width: 1.2; }
+.pj-u5-knob circle { fill: #1e40af; stroke: #fff; stroke-width: 2.5; cursor: alias; }
+.pj-u5-knob path { fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.pj-u5-ext line { stroke: rgba(15, 23, 42, .55); stroke-width: 1.4; stroke-dasharray: 3 4; pointer-events: none; }
+.pj-u5-ptools, .pj-u5-aimbar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-top: 8px; }
+.pj-u5-ptip { font-size: 13px; color: var(--muted, #6b7280); margin-right: 4px; }
+.pj-u5-ptools .btn, .pj-u5-aimbar .btn { min-height: 34px; }
+
+/* ---- checkpoint 1 ---- */
+.pj-u5-brief { display: flex; gap: 12px; align-items: center; background: var(--ucl, #eef3ff); border-radius: 14px; padding: 10px 14px; font-size: 15px; }
+.pj-u5-bi { font-size: 28px; }
+.pj-types.pj-u5-themes { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.pj-types.pj-u5-shapes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pj-u5-thumb { display: block; width: 100%; max-width: 190px; padding: 4px 2px 2px; }
+.pj-u5-name input { min-width: 280px; font-size: 17px; }
+.pj-u5-plan { background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; overflow: hidden; }
+.pj-u5-plan .pj-u5-draw { border: 0; border-radius: 0; }
+.pj-u5-plan-h { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: var(--ucl, #eef3ff); }
+.pj-u5-plan-h > span { font-size: 30px; } .pj-u5-plan-h small { display: block; font-size: 12px; font-weight: 700; color: var(--ucd, #1e3a8a); text-transform: uppercase; letter-spacing: .05em; }
+.pj-u5-plan-h b { font-size: 20px; } .pj-u5-plan-h em { margin-left: auto; font-style: normal; font-size: 13px; color: var(--muted, #6b7280); }
+
+/* ---- tables (corners, missing angles) ---- */
+.pj-u5-tbl { display: grid; gap: 2px; background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; padding: 10px 16px 12px; max-width: 640px; }
+.pj-u5-th, .pj-u5-tr { display: grid; grid-template-columns: 80px 150px minmax(200px, 1fr); gap: 14px; align-items: center; }
+.pj-u5-find .pj-u5-th, .pj-u5-find .pj-u5-tr { grid-template-columns: 70px 150px minmax(260px, 1fr); }
+.pj-u5-find { max-width: 720px; }
+.pj-u5-th { font-size: 12px; font-weight: 800; color: var(--muted, #6b7280); text-transform: uppercase; letter-spacing: .04em; padding: 2px 0 6px; }
+.pj-u5-tr { padding: 6px 0; border-top: 1px solid var(--line2, #f0ece3); }
+.pj-u5-tl b { font-size: 17px; }
+.pj-u5-dot { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; border: 2px solid #0f172a; font-weight: 800; }
+.pj-in.pj-u5-in { min-width: 0; } .pj-in.pj-u5-in .pj-post { white-space: nowrap; margin-left: 2px; }
+.pj-u5-tr .pj-in, .pj-u5-tr .pj-sel { width: 100%; }
+.pj-u5-one { max-width: 420px; } .pj-u5-one .pj-in { max-width: 180px; }
+.pj-u5-row { margin-top: 2px; }
+
+/* ---- checkpoint 3: the bank shot ---- */
+.pj-u5-wall { stroke: #fbbf24; stroke-width: 4; stroke-linecap: round; }
+.pj-u5-ghost { fill: rgba(17, 17, 17, .08); stroke: #64748b; stroke-width: 2; stroke-dasharray: 4 4; }
+.pj-u5-ball { fill: #fff; stroke: #334155; stroke-width: 1.5; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .35)); }
+.pj-u5-pre { fill: none; stroke: #fff; stroke-width: 2.4; stroke-dasharray: 7 6; opacity: .9; }
+.pj-u5-trc { fill: none; stroke: rgba(255, 255, 255, .7); stroke-width: 2.4; }
+.pj-u5-trc.in { stroke: #fde047; stroke-width: 3; }
+.pj-u5-arrow { stroke: #fff; stroke-width: 4; stroke-linecap: round; }
+.pj-u5-ahead { fill: #fff; }
+.pj-u5-handle { fill: #f59e0b; stroke: #fff; stroke-width: 3; cursor: grab; touch-action: none; }
+.pj-u5-putt { margin-left: auto; }
+.pj-u5-status { margin-top: 8px; font-size: 14.5px; color: var(--muted, #6b7280); min-height: 22px; }
+.pj-u5-status.good { color: #166534; } .pj-u5-status.miss { color: #9a3412; }
+.pj-u5-zoomrow { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+.pj-u5-zd .pj-u5-svg { max-width: 460px; }
+.pj-u5-wall2 { stroke: #fbbf24; stroke-width: 3; }
+.pj-u5-norm { stroke: #334155; stroke-width: 2; stroke-dasharray: 6 5; }
+.pj-u5-pin2, .pj-u5-pout2 { stroke: #0f172a; stroke-width: 3; }
+.pj-u5-pq { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; }
+.pj-u5-pq .pj-in { max-width: 170px; }
+.pj-u5-exsm .pj-u5-svg { max-width: 560px; margin: 0 auto; }
+
+/* ---- checkpoint 4: the map ---- */
+.pj-u5-map { max-width: 760px; }
+.pj-u5-narrow path { fill: #0f172a; } .pj-u5-narrow text { font: 800 16px/1 system-ui, sans-serif; text-anchor: middle; fill: #0f172a; }
+.pj-u5-nline { stroke: #0f172a; stroke-width: 2; stroke-dasharray: 7 5; }
+.pj-u5-hline { stroke: #b91c1c; stroke-width: 2.6; }
+.pj-u5-tent path { fill: #fde68a; stroke: #b45309; stroke-width: 2; stroke-linejoin: round; }
+.pj-u5-tent circle { fill: #fff; stroke: #b45309; stroke-width: 2; }
+.pj-u5-tent text { font: 800 13px/1 system-ui, sans-serif; text-anchor: middle; fill: #92400e; }
+.pj-u5-club rect { fill: #fff; stroke: #334155; stroke-width: 2; } .pj-u5-club path { fill: #64748b; }
+
+/* ---- checkpoint 5: rails ---- */
+.pj-u5-rails { max-width: 700px; }
+.pj-u5-rail { stroke: #8a5a2b; stroke-width: 9; stroke-linecap: round; }
+.pj-u5-par { fill: none; stroke: #fff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.pj-u5-brace { stroke: #475569; stroke-width: 6; stroke-linecap: round; }
+.pj-u5-harc { fill: rgba(220, 38, 38, .25); stroke: #dc2626; stroke-width: 1.5; }
+.pj-u5-an circle { fill: #fff; stroke: #334155; stroke-width: 1.5; }
+.pj-u5-an text { font: 800 12.5px/1 system-ui, sans-serif; text-anchor: middle; fill: #0f172a; }
+.pj-u5-an.hi circle { fill: #dc2626; stroke: #dc2626; } .pj-u5-an.hi text { fill: #fff; }
+.pj-u5-gv rect { fill: #0f172a; } .pj-u5-gv text { font: 800 13px/1 system-ui, sans-serif; text-anchor: middle; fill: #fff; }
+.pj-u5-pairs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 16px; }
+.pj-u5-pairs .pj-sel select, .pj-u5-tr .pj-sel select { width: 100%; }
+
+/* ---- checkpoint 6: boards, windmill, posts ---- */
+.pj-u5-cuts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.pj-u5-cut { background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; padding: 8px 12px 12px; display: grid; gap: 6px; }
+.pj-u5-cut .pj-in { max-width: 160px; }
+.pj-u5-cutpic .pj-u5-svg { max-width: 220px; margin: 0 auto; }
+.pj-u5-bd { fill: #c08a55; stroke: #7c4a1e; stroke-width: 1.5; } .pj-u5-bd.b2 { fill: #b37b47; }
+.pj-u5-cutl { stroke: #dc2626; stroke-width: 2.4; stroke-dasharray: 6 4; }
+.pj-u5-ex3 { display: flex; gap: 16px; justify-content: center; } .pj-u5-ex3 .pj-u5-svg { max-width: 220px; }
+.pj-u5-millbox .pj-u5-svg { max-width: 680px; margin: 0 auto; }
+.pj-u5-blade { fill: #fef3c7; stroke: #92400e; stroke-width: 2.4; stroke-linejoin: round; }
+.pj-u5-blade.todo { fill: none; stroke: #cbd5e1; stroke-dasharray: 6 6; }
+.pj-u5-blade.copy { fill: rgba(37, 99, 235, .14); stroke: #1d4ed8; stroke-width: 2; stroke-dasharray: 5 4; }
+.pj-u5-bl { font: 800 18px/1 system-ui, sans-serif; text-anchor: middle; fill: #92400e; }
+.pj-u5-edge { stroke: #1d4ed8; stroke-width: 3.5; stroke-linecap: round; }
+.pj-u5-millbox.ok { border-color: #3aa66a; box-shadow: 0 0 0 3px rgba(58, 166, 106, .15); }
+.pj-u5-millbox.bad { border-color: #d9534f; box-shadow: 0 0 0 3px rgba(217, 83, 79, .15); }
+.pj-u5-post { max-width: 600px; }
+.pj-u5-sq2 { fill: none; stroke: #0f172a; stroke-width: 2; }
+.pj-u5-bracel { stroke: #a16207; stroke-width: 7; stroke-linecap: round; }
+.pj-u5-postl { stroke: #64748b; stroke-width: 12; }
+.pj-u5-how .pj-opt { font-size: 14px; }
+
+/* ---- checkpoint 7: pentominoes, the card ---- */
+.pj-u5-tiler { background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; padding: 12px 14px; display: grid; gap: 10px; }
+.pj-u5-tiler.ok { border-color: #3aa66a; } .pj-u5-tiler.bad { border-color: #d9534f; }
+.pj-u5-pal { display: flex; flex-wrap: wrap; gap: 6px; }
+.pj-u5-pp { display: inline-grid; justify-items: center; align-content: center; gap: 3px; width: 66px; min-height: 70px; border: 1.5px solid #d6d0c3; background: #fff; border-radius: 12px; cursor: pointer; font: inherit; font-weight: 800; font-size: 12px; color: var(--ink, #1f2937); padding: 4px; }
+.pj-u5-pp:hover:not(:disabled) { border-color: var(--uc, #2563eb); }
+.pj-u5-pp.on { border-color: var(--uc, #2563eb); background: var(--ucl, #eef3ff); box-shadow: 0 0 0 3px rgba(37, 99, 235, .14); }
+.pj-u5-pp.used, .pj-u5-pp:disabled { opacity: .35; cursor: default; }
+.pj-u5-tmain { display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; }
+.pj-u5-board { flex: 0 1 300px; max-width: 320px; cursor: pointer; touch-action: manipulation; }
+.pj-u5-tside { flex: 1 1 200px; display: grid; gap: 8px; align-content: start; }
+.pj-u5-sel small { display: block; font-size: 12px; font-weight: 800; color: var(--muted, #6b7280); text-transform: uppercase; letter-spacing: .05em; }
+.pj-u5-selp { padding: 6px 0; }
+.pj-u5-selb { display: flex; gap: 6px; flex-wrap: wrap; }
+.pj-u5-tiptxt { margin: 0; font-size: 13.5px; color: var(--muted, #6b7280); }
+.pj-u5-clear { justify-self: start; }
+.pj-u5-cell { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 1; }
+.pj-u5-pcell { stroke: rgba(0, 0, 0, .18); stroke-width: 1; }
+.pj-u5-pl { font: 800 16px/1 system-ui, sans-serif; fill: #fff; text-anchor: middle; pointer-events: none; paint-order: stroke; stroke: rgba(0, 0, 0, .35); stroke-width: 2px; }
+.pj-u5-prev { fill: rgba(37, 99, 235, .35); stroke: #1d4ed8; stroke-width: 2; pointer-events: none; }
+.pj-u5-prev.no { fill: rgba(220, 38, 38, .3); stroke: #dc2626; }
+.pj-u5-errpad .pj-u5-svg, .pj-u5-expad .pj-u5-svg { max-width: 260px; }
+.pj-u5-expad { display: flex; gap: 18px; justify-content: center; }
+.pj-u5-errs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.pj-u5-errs .pj-opt { text-align: left; }
+
+/* the hole design card */
+.pj-u5-cardwrap { display: flex; justify-content: center; }
+.pj-u5-card { --cc: #3f9b4f; width: 860px; max-width: 100%; background: #fff; border-radius: 14px; box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 10px 26px rgba(20, 40, 30, .14); overflow: hidden; border: 1px solid #e5e7eb; color: #1f2937; }
+.pj-u5-c-top { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--cc); color: #fff; }
+.pj-u5-c-logo { width: 54px; height: 54px; flex: 0 0 54px; color: #fff; } .pj-u5-c-logo svg { width: 100%; height: 100%; }
+.pj-u5-c-id small { display: block; font-size: 12px; font-weight: 700; opacity: .9; letter-spacing: .03em; }
+.pj-u5-c-id b { display: block; font-size: 26px; line-height: 1.1; font-family: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif; }
+.pj-u5-c-id span { font-size: 13.5px; opacity: .95; }
+.pj-u5-c-no { margin-left: auto; text-align: center; display: grid; line-height: 1.1; }
+.pj-u5-c-no b { font-size: 11px; letter-spacing: .14em; } .pj-u5-c-no .n { font-size: 34px; font-weight: 900; } .pj-u5-c-no span:last-child { font-size: 11px; opacity: .9; }
+.pj-u5-c-body { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(220px, 1fr); gap: 6px 16px; padding: 12px 18px 6px; }
+.pj-u5-c-plan .pj-u5-svg { max-height: 420px; }
+.pj-u5-c-notes h5 { margin: 8px 0 2px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--cc); filter: brightness(.75); }
+.pj-u5-c-notes h5:first-child { margin-top: 0; }
+.pj-u5-cr { display: flex; justify-content: space-between; gap: 10px; font-size: 13.5px; padding: 2px 0; border-bottom: 1px dotted #e5e7eb; }
+.pj-u5-cr span { color: #6b7280; } .pj-u5-cr b { text-align: right; font-variant-numeric: tabular-nums; } .pj-u5-cr i { font-style: normal; font-weight: 600; color: #6b7280; font-size: 12px; }
+.pj-u5-c-foot { display: flex; gap: 18px; align-items: center; padding: 8px 18px 14px; border-top: 1px dashed #e5e7eb; }
+.pj-u5-c-pad { display: grid; gap: 4px; } .pj-u5-c-pad small { font-size: 12px; color: #6b7280; font-weight: 700; } .pj-u5-c-pad .pj-u5-svg { width: auto; max-width: 140px; }
+.pj-u5-c-tip { flex: 1; font-size: 15px; font-weight: 700; color: #334155; font-style: italic; }
+.pj-u5-cbrace { stroke: #e2e8f0; stroke-width: 7; stroke-linecap: round; }
+.pj-printsheet .pj-u5-card { box-shadow: none; margin: 0 auto; }
+
+/* ---- worked examples ---- */
+.pj-u5-exwrap { display: flex; justify-content: center; width: 620px; max-width: 100%; } .pj-u5-exwrap > .pj-u5-svg { max-width: 620px; }
+.pj-u5-exwrap.pj-u5-exsm { width: 540px; } .pj-u5-exwrap.pj-u5-ex3, .pj-u5-exwrap.pj-u5-expad { width: auto; }
+
+@media (max-width: 1060px) {
+  .pj-types.pj-u5-themes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pj-u5-zoomrow { grid-template-columns: 1fr; }
+  .pj-u5-pairs { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  .pj-types.pj-u5-shapes, .pj-u5-cuts { grid-template-columns: 1fr 1fr; }
+  .pj-u5-pairs, .pj-u5-errs, .pj-u5-pq { grid-template-columns: 1fr; }
+  .pj-u5-c-body { grid-template-columns: 1fr; }
+  .pj-u5-th, .pj-u5-tr, .pj-u5-find .pj-u5-th, .pj-u5-find .pj-u5-tr { grid-template-columns: 56px 120px minmax(0, 1fr); gap: 8px; }
+}
+@media print { .pj-u5-card { box-shadow: none; } }

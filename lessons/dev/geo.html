@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Geometry toolkit · Math 10-3 dev</title>
+<meta name="description" content="Demo and test bed for the Unit 5 geometry toolkit (js/geo.js): protractor, angles, transversals, compass rose and bearings, compass-and-straightedge constructions, tangrams and pentominoes.">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="icon" href="../assets/icon-192.png">
+<link rel="stylesheet" href="../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/calc.css">
+<script src="../../js/ns.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../js/calc.js"></script>
+<script src="../js/vendor/qrcode.js"></script>
+<style>
+  .demo-note { font-size: 16px; color: var(--muted); margin: 4px 0 10px; }
+  .demo-note code { background: #f3f1ea; border-radius: 5px; padding: 0 5px; font-size: 15px; }
+  .demo-out { font: 600 17px var(--round); color: var(--muted); min-height: 1.4em; margin-top: 6px; }
+</style>
+</head>
+<body>
+<main class="lesson screen">
+
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Developer page</div>
+  <h1>Geometry toolkit (Unit 5)</h1>
+  <p class="lede">Every piece of <b>js/geo.js</b>: a protractor to drag and turn, angle drawings, the numbered transversal, a compass rose for bearings, animated compass-and-straightedge constructions, and tangram and pentomino pieces. The reference for builders is <b>lessons/BLOCKS.md</b> (Geometry toolkit).</p>
+</section>
+
+<section class="card" data-ink="pt" data-section="Protractor">
+  <div class="sec-h"><span class="badge">1</span><h2>Protractor (drag it, turn it)</h2></div>
+  <p class="demo-note">Drag the protractor to move it; turn it with the round handles. <code>Geo.protractor(host, { angle: { a1, a2, names } })</code>. Try <b>Which scale?</b>, <b>Hide the reading</b>, <b>New angle</b>, <b>Show me</b>.</p>
+  <div id="demo-pt"></div>
+</section>
+
+<section class="card" data-ink="ang" data-section="Angles">
+  <div class="sec-h"><span class="badge">2</span><h2>Angle drawings</h2></div>
+  <p class="demo-note"><code>Geo.angle(svg, { vertex, a1, a2, label, reflex, names, fill })</code> — directions in math degrees (0 = right, counterclockwise).</p>
+  <div id="demo-angles"></div>
+</section>
+
+<section class="card" data-ink="tv" data-section="Transversals">
+  <div class="sec-h"><span class="badge">3</span><h2>Transversals</h2></div>
+  <p class="demo-note"><code>Geo.transversal(host, { parallel, tilt, angles, highlight, marks })</code>. Angles 1–4 at the top crossing and 5–8 at the bottom, each clockwise from the upper-left.</p>
+  <div class="bk-row" id="demo-tv"></div>
+  <div class="explainer" data-explainer="pairs"></div>
+  <div class="explainer" data-explainer="slide"></div>
+</section>
+
+<section class="card" data-ink="br" data-section="Bearings">
+  <div class="sec-h"><span class="badge">4</span><h2>Compass rose and bearings</h2></div>
+  <div class="bk-row" id="demo-rose"></div>
+  <div class="explainer" data-explainer="bearing"></div>
+</section>
+
+<section class="card" data-ink="ptx" data-section="Protractor explainer">
+  <div class="sec-h"><span class="badge">5</span><h2>Protractor routine (explainer)</h2></div>
+  <div class="explainer" data-explainer="measure"></div>
+</section>
+
+<section class="card" data-ink="con" data-section="Constructions">
+  <div class="sec-h"><span class="badge">6</span><h2>Constructions</h2></div>
+  <div class="explainer" data-explainer="construct"></div>
+</section>
+
+<section class="card" data-ink="tan" data-section="Tangram">
+  <div class="sec-h"><span class="badge">7</span><h2>Tangram</h2></div>
+  <p class="demo-note">Drag a piece; <b>tap</b> to turn it 45°; <b>double-tap</b> to flip it. Pieces snap to each other's corners. <code>Geo.tangram(host, { labels: 'area' })</code></p>
+  <div id="demo-tan"></div>
+  <div class="demo-out" id="demo-tan-out"></div>
+</section>
+
+<section class="card" data-ink="pen" data-section="Pentominoes">
+  <div class="sec-h"><span class="badge">8</span><h2>Pentominoes</h2></div>
+  <p class="demo-note">Tap to turn 90°, double-tap to flip; pieces snap to the grid. Fill the dashed 5 × 3 rectangle with I, P and P. <code>Geo.pentomino(host, { letters: 'IPP', board: { cols: 5, rows: 3 } })</code></p>
+  <div id="demo-pen"></div>
+  <div class="demo-out" id="demo-pen-out"></div>
+  <p class="demo-note" style="margin-top:16px">All twelve: <code>Geo.pentomino(host, { height: 470 })</code></p>
+  <div id="demo-pen12"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../js/ui.js';
+  import '../js/dev/geo-demo.js';
+  boot({ key: 'devgeo', homeHref: '../', title: 'Geometry toolkit (dev)' });
+</script>
+</body>
+</html>

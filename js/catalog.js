@@ -9,7 +9,7 @@
   /* lessons that have a lesson page under lessons/ (examples + the teacher's class notes); the home page and the
    * lesson sidebar link to it as lessons/u1/l7/?class=<block>. The coordinator switches lessons on here. */
   root.HW.TEACHING = { base: 'lessons/',
-    lessons: ['u1l0', 'u1l1', 'u1l2', 'u1l3', 'u1l4', 'u1l5', 'u1l6', 'u1l7', 'u1l8', 'u1l9', 'u1l10', 'u1l11', 'u2l1', 'u2l2', 'u2l3', 'u2l4', 'u2l5', 'u2l6', 'u2l7', 'u2l8', 'u2l9', 'u3l1', 'u3l2', 'u3l3', 'u3l4', 'u3l5', 'u3l6', 'u3l7', 'u3l8', 'u3l9', 'u3l10', 'u3l11', 'u3l12', 'u4l1', 'u4l2', 'u4l3', 'u4l4', 'u4l5', 'u4l6', 'u4l7'] };
+    lessons: ['u1l0', 'u1l1', 'u1l2', 'u1l3', 'u1l4', 'u1l5', 'u1l6', 'u1l7', 'u1l8', 'u1l9', 'u1l10', 'u1l11', 'u2l1', 'u2l2', 'u2l3', 'u2l4', 'u2l5', 'u2l6', 'u2l7', 'u2l8', 'u2l9', 'u3l1', 'u3l2', 'u3l3', 'u3l4', 'u3l5', 'u3l6', 'u3l7', 'u3l8', 'u3l9', 'u3l10', 'u3l11', 'u3l12', 'u4l1', 'u4l2', 'u4l3', 'u4l4', 'u4l5', 'u4l6', 'u4l7', 'u5l1', 'u5l2', 'u5l3', 'u5l4', 'u5l5', 'u5l6', 'u5l7', 'u5l8', 'u5l9'] };
   /* project: { id, title } = the unit's guided project (js/projects/u<N>.js, opened at #/project/<id>). The class calendar
      gives it a project work day ('p' + unit) right before the unit's review lesson (the last lesson listed). */
   root.HW.CATALOG = [
@@ -57,7 +57,7 @@
       { id: 'u4l5', num: '5', title: 'Converting Mass Between SI and Imperial' },
       { id: 'u4l6', num: '6', title: 'From Volume to Mass: Bushels, Tonnes and Conversion Factors' },
       { id: 'u4l7', num: '7', title: 'Unit 4 Review' }] },
-    { unit: 5, title: 'Angles, Parallel Lines and Spatial Puzzles', outcomes: 'G1 · G5 · G6', lessons: [
+    { unit: 5, title: 'Angles, Parallel Lines and Spatial Puzzles', outcomes: 'G1 · G5 · G6', project: { id: 'u5', title: 'Mini-Golf Designer' }, lessons: [
       { id: 'u5l1', num: '1', title: 'Spatial Puzzles: Tangrams and Pentominoes' },
       { id: 'u5l2', num: '2', title: 'Spatial Games and Strategies' },
       { id: 'u5l3', num: '3', title: 'Measuring, Drawing and Classifying Angles' },

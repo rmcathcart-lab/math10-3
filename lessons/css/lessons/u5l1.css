@@ -1,0 +1,70 @@
+/* Math 10-3 · Unit 5 · Lesson 1 — Spatial Puzzles: Tangrams and Pentominoes: styles used only on this page (prefix u5l1-).
+ * Tangram and pentomino colours match lessons/js/geo.js (TANGRAM, PENTO_COLORS). */
+.u5l1 .ans .katex, .u5l1 .pl .katex, .u5l1 .def .katex { font-size: 1.08em; }
+.u5l1 .ex-cap .katex { font-size: 1.06em; }
+.u5l1-gap { margin-top: 14px; }
+.u5l1-p { margin: 6px 0 8px; font-size: 19px; }
+.u5l1-how { margin: 4px 0 10px; font-size: 18px; }
+
+/* ---------- warm-up ---------- */
+.u5l1-wpoll .poll-opts { margin-left: 0; } .u5l1-wpoll > .pill, .u5l1-wpoll .poll-ans { margin-left: 0; }
+.u5l1-wpoll .opt { font-size: 21px; padding: 10px 14px; } .u5l1-wpoll .poll-ans { font-size: 19px; }
+
+/* ---------- tables ---------- */
+.u5l1-tbl { border-collapse: collapse; font-size: 19px; margin: 8px 0 4px; background: #fff; }
+.u5l1-tbl th, .u5l1-tbl td { border: 2px solid #b9ad97; padding: 6px 12px; text-align: center; height: 42px; }
+.u5l1-tbl th { background: var(--brand-soft, #f5ecdf); font: 800 17px var(--round); }
+.u5l1-strat { width: 100%; }
+.u5l1-strat td { text-align: left; height: 36px; padding: 4px 12px; }
+.u5l1-strat td:first-child { font-weight: 800; width: 260px; white-space: nowrap; }
+.u5l1-four { margin-top: 10px; font-size: 19px; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.u5l1-ctab td { width: 92px; font-weight: 700; } .u5l1-ctab th:first-child { text-align: left; }
+.u5l1-atab td:first-child { text-align: left; font-weight: 700; } .u5l1-atab th { font-size: 16px; }
+.u5l1-atab td { height: 46px; }
+
+/* ---------- figures ---------- */
+.u5l1-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; margin: 6px 0; }
+.u5l1-fig { display: block; }
+.u5l1-fig svg { display: block; max-width: 100%; height: auto; }
+.u5l1-fig text { font-family: var(--round, system-ui); }
+.u5l1-a { opacity: 0; transition: opacity .3s; }
+.part.shown .u5l1-a { opacity: 1; }
+.u5l1-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 6px 0; }
+.u5l1-cap { font-weight: 800; font-size: 19px; margin-bottom: 4px; }
+.u5l1-three .u5l1-fig { border: 2px dashed #d8cdb8; border-radius: 12px; background: #fff; }
+.u5l1-ex4 .u5l1-fig { margin: 8px auto; }
+.u5l1-same { margin-top: 10px; }
+.u5l1-names { margin: 6px 0; }
+.u5l1-howmany { font-size: 19px; margin: 10px 0 4px; }
+.u5l1-blank { display: inline-block; min-width: 80px; border-bottom: 2px solid #8a7a5c; text-align: center; font-size: 20px; }
+.u5l1-ex9 { display: flex; gap: 16px; align-items: flex-start; } .u5l1-ex9 .work { flex: 1; }
+
+/* ---------- hands-on tools ---------- */
+.u5l1-tool { position: relative; }
+.u5l1-tool .geo-pc { margin: 0 auto; }
+.u5l1-tbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 8px; }
+.u5l1-tbar .pill.on { background: var(--brand); color: #fff; }
+.u5l1-status { font: 800 19px var(--round); color: var(--brand); min-height: 26px; }
+.u5l1-status.ok { color: #12805a; } .u5l1-status.no { color: #c93a33; }
+.u5l1-trow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+
+/* the folding machine */
+.u5l1-fold { display: grid; grid-template-columns: 1fr 300px; gap: 16px; align-items: start; }
+.u5l1-fold svg { background: #fffdf8; border: 2px solid var(--line); border-radius: 14px; display: block; }
+.u5l1-letters { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 10px; }
+.u5l1-letters .pill { padding: 6px 0; font-size: 19px; justify-content: center; }
+.u5l1-letters .pill.on { background: var(--brand); color: #fff; }
+.u5l1-fside p { margin: 6px 0; font-size: 17px; }
+.u5l1-fcell { cursor: pointer; }
+
+/* ---------- explainer stages ---------- */
+.u5l1-svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.u5l1-fl { display: flex; align-items: center; justify-content: center; text-align: center; font: 700 19px/1.15 var(--font); color: var(--ink); pointer-events: none; }
+.u5l1-fl.sm { font-size: 16px; } .u5l1-fl.big { font-size: 24px; font-weight: 800; }
+.u5l1-fl.brand { color: var(--brand); } .u5l1-fl.red { color: #c93a33; } .u5l1-fl.green { color: #12805a; }
+.u5l1-fl.lft { justify-content: flex-start; text-align: left; }
+.u5l1-xt { position: absolute; border-collapse: collapse; background: #fff; font: 700 18px var(--font); }
+.u5l1-xt th, .u5l1-xt td { border: 2px solid #b9ad97; padding: 4px 10px; text-align: center; height: 40px; }
+.u5l1-xt th { background: #f5ecdf; font: 800 16px var(--round); }
+.u5l1-xt td.l { text-align: left; }
+.u5l1-xt .hl { background: #fff4d6; }

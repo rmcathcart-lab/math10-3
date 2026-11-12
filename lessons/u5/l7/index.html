@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Transversals: Naming the Angle Pairs · Math 10-3 5.7</title>
+<meta name="description" content="Math 10-3 Unit 5 Lesson 7: transversals. The eight numbered angles, interior and exterior, left and right of the transversal, corresponding (F), vertically opposite, alternate interior (Z), alternate exterior and same-side (C or U) angle pairs, finding the transversal in real pictures, and why the pairs are equal only when the lines are parallel. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u5l7.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u5l7">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Leaning Book Tower">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Leaning Book Tower</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">You have a pile of <b>identical books</b>. You stack them at the edge of a table, <b>one book on each layer</b>. Each book can stick out past the one under it.</p><p class="vw-ctx">No glue, no tape, nothing holding them.</p><p class="vw-ask">Can the top book stick out so that <u>none</u> of it is over the table? What is the fewest books you need?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="Two books on the edge of a table; the top book wobbles as if deciding how far it can slide out, with a question mark beside it">
+    <rect x="10" y="176" width="190" height="16" rx="3" fill="#b98a55" stroke="#7a5124" stroke-width="3"/>
+    <rect x="22" y="192" width="14" height="52" fill="#a37444" stroke="#7a5124" stroke-width="3"/>
+    <rect x="170" y="192" width="14" height="52" fill="#a37444" stroke="#7a5124" stroke-width="3"/>
+    <line x1="200" y1="34" x2="200" y2="176" stroke="#9a6a24" stroke-width="2.5" stroke-dasharray="7 6"/>
+    <text x="200" y="26" font-size="15" font-weight="800" fill="#9a6a24" text-anchor="middle">table edge</text>
+    <g stroke="#3a2a14" stroke-width="3" stroke-linejoin="round">
+      <rect x="92" y="146" width="130" height="30" rx="4" fill="#2f6fb5"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;22 0;22 0;0 0" keyTimes="0;0.45;0.7;1" dur="3.2s" repeatCount="indefinite"/>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 236 146;0 236 146;-3 236 146;2 236 146;0 236 146" keyTimes="0;0.45;0.55;0.65;1" dur="3.2s" repeatCount="indefinite"/>
+          <rect x="112" y="116" width="130" height="30" rx="4" fill="#c0573a"/></g></g>
+    </g>
+    <g fill="#fff" opacity=".85"><rect x="100" y="158" width="114" height="5" rx="2"/></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="290" y="110" font-size="50" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u5l7-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> It can’t be done</div>
+      <div class="opt"><b>B</b> 3 books</div>
+      <div class="opt right"><b>C</b> 4 books</div>
+      <div class="opt"><b>D</b> 10 books</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u5l7-wans"><div><b>C: 4 books, just barely!</b> Build it from the <b>top</b> down. The top book can stick out <b>half</b> a book past the one under it. The next one out a <b>quarter</b>, then a <b>sixth</b>, then an <b>eighth</b> past the table. <span class="tex">\tfrac12+\tfrac14+\tfrac16+\tfrac18=\tfrac{25}{24}</span>: a little <b>more than one whole book</b>. With 3 books you only get <span class="tex">\tfrac{11}{12}</span> of a book. <span class="muted">Try it with 4 (or 5) math textbooks!</span></div>
+      <svg viewBox="0 0 300 150" role="img" aria-label="Four books stacked, each sticking out further, the top one completely past the table edge"><rect x="0" y="120" width="140" height="12" fill="#b98a55" stroke="#7a5124" stroke-width="2"/><line x1="140" y1="6" x2="140" y2="120" stroke="#9a6a24" stroke-width="2" stroke-dasharray="6 5"/><g stroke="#3a2a14" stroke-width="2"><rect x="56" y="96" width="96" height="24" rx="3" fill="#3f8a5a"/><rect x="72" y="72" width="96" height="24" rx="3" fill="#2f6fb5"/><rect x="96" y="48" width="96" height="24" rx="3" fill="#c0573a"/><rect x="144" y="24" width="96" height="24" rx="3" fill="#e2a63a"/></g><text x="192" y="15" font-size="14" font-weight="800" fill="#9a6a24" text-anchor="middle">all past the edge</text></svg></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 5 Angles, Parallel Lines and Spatial Puzzles · Lesson 7</div>
+  <h1>Transversals: Naming the Angle Pairs</h1>
+  <p class="lede">When one line crosses two other lines, it makes <b>eight angles</b>. Today we number them, learn the names of the <b>angle pairs</b> (they make the letters <b>F</b>, <b>Z</b> and <b>C</b>), find them in real pictures like ladders, rails and streets, and see why the lines must be <b>parallel</b> before the pairs are equal.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>tell whether a line is a <b>transversal</b></li>
+      <li>number the <b>eight angles</b>, and say which are <b>interior</b> or <b>exterior</b>, and on the <b>left</b> or <b>right</b> of the transversal</li>
+      <li>name <b>corresponding</b> (F), <b>alternate interior</b> (Z), <b>alternate exterior</b> and <b>same-side</b> (C or U) angle pairs</li>
+      <li>find the transversal and name the pairs in <b>real pictures</b> and busy diagrams</li>
+      <li>explain why the pairs are equal <b>only when the lines are parallel</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G5</b> Solve problems that involve parallel, perpendicular and transversal lines, and pairs of angles formed between them.</div>
+</section>
+
+<!-- ================= 1. Transversals and the eight angles ================= -->
+<section class="card" data-ink="s1" data-section="1. Transversals and the Eight Angles">
+  <div class="sec-h"><span class="badge">1</span><h2>Transversals and the Eight Angles</h2></div>
+  <div class="def"><b>Transversal</b> &nbsp; A <b>transversal</b> is a line that crosses two (or more) other lines at <b>two different points</b>. In our diagrams, line <span class="tex">t</span> is the transversal, and <span class="tex">\ell_1</span> and <span class="tex">\ell_2</span> (say “line one” and “line two”) are the two lines it crosses. A line goes on forever: we only draw part of it.</div>
+  <div class="explainer" data-explainer="transversal"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Transversal or not?</h3></div>
+  <p class="u5l7-q">Is line <span class="tex">t</span> a transversal of lines <span class="tex">m</span> and <span class="tex">n</span>? Write yes or no, and give a reason.</p>
+  <div class="u5l7-four">
+    <div class="part"><div class="pl">(a)</div><div class="u5l7-fig" data-fig="ex1a"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> <span class="tex">t</span> crosses <span class="tex">m</span> and <span class="tex">n</span> at two different points.</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u5l7-fig" data-fig="ex1b"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> <span class="tex">t</span> goes through the point where <span class="tex">m</span> and <span class="tex">n</span> cross. It meets them at only one point.</div></div></div>
+    <div class="part"><div class="pl">(c)</div><div class="u5l7-fig" data-fig="ex1c"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> <span class="tex">t</span> is parallel to <span class="tex">n</span>, so it never crosses <span class="tex">n</span>. It crosses only <span class="tex">m</span>.</div></div></div>
+    <div class="part"><div class="pl">(d)</div><div class="u5l7-fig" data-fig="ex1d"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> <span class="tex">t</span> crosses both lines at two different points. (Parallel lines can have a transversal.)</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s1t" data-section="1. Think: One Crossing Point">
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Line <span class="tex">t</span> goes through the point where <span class="tex">\ell_1</span> and <span class="tex">\ell_2</span> cross, like in Example 1(b). How many angles do the three lines make there?</div>
+    <div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>6 angles</b>, all at one point (three lines make 6 “slices” around the point). A transversal makes <b>8</b> angles, 4 at each of its <b>two</b> crossings.</div></div></div>
+</section>
+
+<section class="card" data-ink="s1n" data-section="1. Numbering the Eight Angles">
+  <h3 class="sub">Numbering the eight angles</h3>
+  <div class="u5l7-split">
+    <div class="u5l7-fig" data-fig="band"></div>
+    <div>
+      <p style="margin-top:0">A transversal crossing two lines makes <b>eight angles</b>, four at each crossing.</p>
+      <div class="def"><b>Key idea</b> &nbsp; <b>How we number the eight angles</b> (every diagram in this unit)
+        <ul class="u5l7-steps">
+          <li>At the <b>top crossing</b>, angles 1, 2, 3, 4 go <b>clockwise</b>, starting at the <b>upper left</b>.</li>
+          <li>At the <b>bottom crossing</b>, angles 5, 6, 7, 8 go <b>clockwise</b>, starting at the <b>upper left</b>.</li>
+        </ul></div>
+      <p><b>Interior</b> angles are <i>between</i> the two lines (the shaded band): <span class="tex">\angle 3,\ \angle 4,\ \angle 5,\ \angle 6</span>.<br><b>Exterior</b> angles are <i>outside</i> the two lines: <span class="tex">\angle 1,\ \angle 2,\ \angle 7,\ \angle 8</span>.<br>Each angle is also on the <b>left</b> or the <b>right side</b> of the transversal.</p>
+    </div>
+  </div>
+  <div class="tip u5l7-know"><div class="tip-ic">i</div><div><b>Good to know.</b> The two lines do <b>not</b> have to be parallel. Here <span class="tex">\ell_1</span> and <span class="tex">\ell_2</span> are not parallel, but the names in this lesson still work. When lines are parallel, we mark them with matching arrows (<b>&gt;</b>), as in Example 1(c) and (d).</div></div>
+  <div class="explainer" data-explainer="number"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Describe all eight angles</h3></div>
+  <div class="part"><div class="pl">Use the diagram. Complete the table for all eight angles.</div>
+    <div class="u5l7-ex2">
+      <div class="u5l7-fig" data-fig="std-sm"></div>
+      <table class="u5l7-tbl u5l7-t8">
+        <tr><th>Angle</th><th><span class="tex">\angle 1</span></th><th><span class="tex">\angle 2</span></th><th><span class="tex">\angle 3</span></th><th><span class="tex">\angle 4</span></th><th><span class="tex">\angle 5</span></th><th><span class="tex">\angle 6</span></th><th><span class="tex">\angle 7</span></th><th><span class="tex">\angle 8</span></th></tr>
+        <tr><td>Top or bottom crossing?</td><td><span data-reveal="&nbsp;">top</span></td><td><span data-reveal="&nbsp;">top</span></td><td><span data-reveal="&nbsp;">top</span></td><td><span data-reveal="&nbsp;">top</span></td><td><span data-reveal="&nbsp;">bottom</span></td><td><span data-reveal="&nbsp;">bottom</span></td><td><span data-reveal="&nbsp;">bottom</span></td><td><span data-reveal="&nbsp;">bottom</span></td></tr>
+        <tr><td>Interior or exterior?</td><td><span data-reveal="&nbsp;">ext.</span></td><td><span data-reveal="&nbsp;">ext.</span></td><td><span data-reveal="&nbsp;">int.</span></td><td><span data-reveal="&nbsp;">int.</span></td><td><span data-reveal="&nbsp;">int.</span></td><td><span data-reveal="&nbsp;">int.</span></td><td><span data-reveal="&nbsp;">ext.</span></td><td><span data-reveal="&nbsp;">ext.</span></td></tr>
+        <tr><td>Left or right of <span class="tex">t</span>?</td><td><span data-reveal="&nbsp;">left</span></td><td><span data-reveal="&nbsp;">right</span></td><td><span data-reveal="&nbsp;">right</span></td><td><span data-reveal="&nbsp;">left</span></td><td><span data-reveal="&nbsp;">left</span></td><td><span data-reveal="&nbsp;">right</span></td><td><span data-reveal="&nbsp;">right</span></td><td><span data-reveal="&nbsp;">left</span></td></tr>
+      </table>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Top: 1, 2, 3, 4; bottom: 5, 6, 7, 8. Interior (between the lines): 3, 4, 5, 6; exterior: 1, 2, 7, 8. Left of <span class="tex">t</span>: 1, 4, 5, 8; right: 2, 3, 6, 7.</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Corresponding and vertically opposite ================= -->
+<section class="card" data-ink="s2" data-section="2. Corresponding and Vertically Opposite Angles">
+  <div class="sec-h"><span class="badge">2</span><h2>Corresponding and Vertically Opposite Angles</h2></div>
+  <div class="u5l7-split r">
+    <div>
+      <div class="def" style="margin-top:0"><b>Corresponding angles</b> are in the <b>same position</b> at the two crossings: both upper left, both upper right, both lower right or both lower left. They are on the same side of the transversal, and one is interior while the other is exterior.
+        <div class="eg">They make an <b>F shape</b>. The F can be backwards, upside down or tilted.</div>
+        <div class="eg">In our numbering the four pairs are easy to remember: <b>add 4</b>.<br><span class="tex">\angle 1</span> and <span class="tex">\angle 5</span>, &nbsp; <span class="tex">\angle 2</span> and <span class="tex">\angle 6</span>, &nbsp; <span class="tex">\angle 3</span> and <span class="tex">\angle 7</span>, &nbsp; <span class="tex">\angle 4</span> and <span class="tex">\angle 8</span>.</div></div>
+    </div>
+    <div class="u5l7-figcap"><div class="u5l7-fig" data-fig="F"></div><div><span class="tex">\angle 3</span> and <span class="tex">\angle 7</span> are corresponding.</div></div>
+  </div>
+  <div class="def"><b>Vertically opposite angles</b> (Lesson 6) are <b>across from each other at the same crossing</b>, like the opposite parts of an X. They are <b>always equal</b>. The pairs are <span class="tex">\angle 1</span> and <span class="tex">\angle 3</span>, &nbsp;<span class="tex">\angle 2</span> and <span class="tex">\angle 4</span>, &nbsp;<span class="tex">\angle 5</span> and <span class="tex">\angle 7</span>, &nbsp;<span class="tex">\angle 6</span> and <span class="tex">\angle 8</span>.</div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Corresponding angles are at <b>different</b> crossings. Vertically opposite angles are at the <b>same</b> crossing. Two angles that sit next to each other at one crossing (like <span class="tex">\angle 1</span> and <span class="tex">\angle 2</span>) make a straight line, so they are <b>supplementary</b> (they add to <span class="tex">180^\circ</span>).</div></div>
+  <div class="explainer" data-explainer="pairsA"></div>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Why “Add 4” Works">
+  <h3 class="sub">Why does “add 4” work?</h3>
+  <p>Slide the whole top crossing down the transversal. Every angle lands on the angle in the <b>same position</b> at the bottom crossing.</p>
+  <div class="explainer" data-explainer="slide4"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Which angle corresponds to <span class="tex">\angle 5</span>? Why do you <b>subtract</b> 4 this time?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle 1</span>. <span class="tex">\angle 5</span> is at the <b>bottom</b> crossing, so its partner is at the top crossing, where the numbers are 4 smaller: <span class="tex">5-4=1</span>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Corresponding or vertically opposite?</h3></div>
+  <div class="part"><div class="u5l7-ex3">
+    <div class="u5l7-fig" data-fig="std-sm2"></div>
+    <div class="u5l7-lines">
+      <div>(a) The angle corresponding to <span class="tex">\angle 2</span> is <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">\angle 6</span></span>.</div>
+      <div>(b) The angle corresponding to <span class="tex">\angle 8</span> is <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">\angle 4</span></span>.</div>
+      <div>(c) The angle vertically opposite <span class="tex">\angle 5</span> is <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">\angle 7</span></span>.</div>
+      <div>(d) The angle vertically opposite <span class="tex">\angle 2</span> is <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">\angle 4</span></span>.</div>
+      <div>(e) <span class="tex">\angle 6</span> and <span class="tex">\angle 8</span> are <span class="u5l7-blank w3" data-reveal="&nbsp;">vertically opposite angles</span>.</div>
+      <div>(f) <span class="tex">\angle 4</span> and <span class="tex">\angle 1</span> are next to each other on a straight line. Together they make <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">180^\circ</span></span>.</div>
+    </div>
+  </div>
+    <div class="work" style="--h:40px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <span class="tex">\angle 6</span> (both upper right) · (b) <span class="tex">\angle 4</span> (both lower left) · (c) <span class="tex">\angle 7</span> · (d) <span class="tex">\angle 4</span> · (e) vertically opposite angles · (f) <span class="tex">180^\circ</span></div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Alternate and same-side angles ================= -->
+<section class="card" data-ink="s3" data-section="3. Alternate Angles and Same-Side Angles">
+  <div class="sec-h"><span class="badge">3</span><h2>Alternate Angles and Same-Side Angles</h2></div>
+  <p><b>Alternate</b> means “one on each side”. Alternate angles are at <b>different crossings</b> and on <b>opposite sides</b> of the transversal.</p>
+  <ul class="u5l7-list">
+    <li><b>Alternate interior angles</b> are both <i>between</i> the lines, on opposite sides of <span class="tex">t</span>. They make a <b>Z shape</b>. &nbsp;Pairs: <span class="tex">\angle 3</span> and <span class="tex">\angle 5</span>, &nbsp;<span class="tex">\angle 4</span> and <span class="tex">\angle 6</span>.</li>
+    <li><b>Alternate exterior angles</b> are both <i>outside</i> the lines, on opposite sides of <span class="tex">t</span>. &nbsp;Pairs: <span class="tex">\angle 1</span> and <span class="tex">\angle 7</span>, &nbsp;<span class="tex">\angle 2</span> and <span class="tex">\angle 8</span>.</li>
+  </ul>
+  <p>Two more pairs are at different crossings and on the <b>same side</b> of the transversal.</p>
+  <ul class="u5l7-list">
+    <li><b>Interior angles on the same side of the transversal</b> are both between the lines, on the same side of <span class="tex">t</span>. They make a <b>C or U shape</b>. &nbsp;Pairs: <span class="tex">\angle 3</span> and <span class="tex">\angle 6</span>, &nbsp;<span class="tex">\angle 4</span> and <span class="tex">\angle 5</span>.</li>
+    <li><b>Exterior angles on the same side of the transversal</b> are both outside the lines, on the same side of <span class="tex">t</span>. &nbsp;Pairs: <span class="tex">\angle 1</span> and <span class="tex">\angle 8</span>, &nbsp;<span class="tex">\angle 2</span> and <span class="tex">\angle 7</span>.</li>
+  </ul>
+  <div class="u5l7-two">
+    <div class="u5l7-figcap"><div class="u5l7-fig" data-fig="Z"></div><div>alternate interior: <span class="tex">\angle 4</span> and <span class="tex">\angle 6</span></div></div>
+    <div class="u5l7-figcap"><div class="u5l7-fig" data-fig="C"></div><div>interior, same side: <span class="tex">\angle 3</span> and <span class="tex">\angle 6</span></div></div>
+  </div>
+  <div class="explainer" data-explainer="pairsB"></div>
+</section>
+
+<section class="card" data-ink="s3k" data-section="3. Naming a Pair: Three Questions">
+  <div class="def u5l7-three" style="margin-top:0"><b>Key idea</b> &nbsp; <b>Naming a pair of angles: ask three questions.</b>
+    <div class="u5l7-qs">
+      <div><b>1.</b> Are the angles at the <b>same crossing</b>? If yes: across from each other → <b>vertically opposite</b>; next to each other → they make a <b>straight line</b> (<span class="tex">180^\circ</span>).</div>
+      <div>If they are at <b>different crossings</b>, ask: &nbsp;<b>2.</b> Interior or exterior? &nbsp;&nbsp;<b>3.</b> Same side of <span class="tex">t</span> or opposite sides?</div>
+    </div>
+    <table class="u5l7-tbl u5l7-names">
+      <tr><th>Interior or exterior?</th><th>Side of <span class="tex">t</span></th><th>Name</th><th>Pairs in our diagram</th></tr>
+      <tr><td>one of each</td><td>same side</td><td><b>corresponding</b> (F)</td><td>1 &amp; 5, &nbsp;2 &amp; 6, &nbsp;3 &amp; 7, &nbsp;4 &amp; 8</td></tr>
+      <tr><td>both interior</td><td>opposite sides</td><td><b>alternate interior</b> (Z)</td><td>3 &amp; 5, &nbsp;4 &amp; 6</td></tr>
+      <tr><td>both exterior</td><td>opposite sides</td><td><b>alternate exterior</b></td><td>1 &amp; 7, &nbsp;2 &amp; 8</td></tr>
+      <tr><td>both interior</td><td>same side</td><td><b>interior angles on the same side</b> (C or U)</td><td>3 &amp; 6, &nbsp;4 &amp; 5</td></tr>
+      <tr><td>both exterior</td><td>same side</td><td><b>exterior angles on the same side</b></td><td>1 &amp; 8, &nbsp;2 &amp; 7</td></tr>
+      <tr><td>one of each</td><td>opposite sides</td><td>no special name</td><td>1 &amp; 6, &nbsp;2 &amp; 5, &nbsp;3 &amp; 8, &nbsp;4 &amp; 7</td></tr>
+    </table></div>
+  <div class="explainer" data-explainer="sorter"></div>
+</section>
+
+<section class="card" data-extra data-ink="s3x" data-section="3. Think: Which Angle Is It?">
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> An angle is at the <b>bottom</b> crossing, it is <b>interior</b>, and it is on the <b>left</b> of <span class="tex">t</span>. Which angle is it? Which angle is <b>alternate interior</b> to it?</div>
+    <div class="work" style="--h:60px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle 5</span> (bottom, between the lines, left). Its alternate interior partner is at the top crossing, between the lines, on the <b>right</b>: <span class="tex">\angle 3</span>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Use the three questions</h3></div>
+  <div class="u5l7-ex4">
+    <div class="u5l7-fig" data-fig="std-sm3"></div>
+    <div class="part"><div class="pl">(a) Use the three questions to name each pair.</div>
+      <table class="u5l7-tbl u5l7-t4">
+        <tr><th>Pair</th><th>Same or different crossings?</th><th>Interior or exterior?</th><th>Side of <span class="tex">t</span></th><th>Name</th></tr>
+        <tr><td>3 &amp; 5</td><td><span data-reveal="&nbsp;">different</span></td><td><span data-reveal="&nbsp;">both int.</span></td><td><span data-reveal="&nbsp;">opposite</span></td><td><span data-reveal="&nbsp;">alternate interior</span></td></tr>
+        <tr><td>2 &amp; 8</td><td><span data-reveal="&nbsp;">different</span></td><td><span data-reveal="&nbsp;">both ext.</span></td><td><span data-reveal="&nbsp;">opposite</span></td><td><span data-reveal="&nbsp;">alternate exterior</span></td></tr>
+        <tr><td>3 &amp; 6</td><td><span data-reveal="&nbsp;">different</span></td><td><span data-reveal="&nbsp;">both int.</span></td><td><span data-reveal="&nbsp;">same</span></td><td><span data-reveal="&nbsp;">interior, same side of <span class="tex">t</span></span></td></tr>
+        <tr><td>1 &amp; 8</td><td><span data-reveal="&nbsp;">different</span></td><td><span data-reveal="&nbsp;">both ext.</span></td><td><span data-reveal="&nbsp;">same</span></td><td><span data-reveal="&nbsp;">exterior, same side of <span class="tex">t</span></span></td></tr>
+        <tr><td>1 &amp; 5</td><td><span data-reveal="&nbsp;">different</span></td><td><span data-reveal="&nbsp;">one of each</span></td><td><span data-reveal="&nbsp;">same</span></td><td><span data-reveal="&nbsp;">corresponding</span></td></tr>
+        <tr><td>2 &amp; 3</td><td><span data-reveal="&nbsp;">same</span></td><td><span data-reveal="&nbsp;">—</span></td><td><span data-reveal="&nbsp;">—</span></td><td><span data-reveal="&nbsp;">next to each other: straight line</span></td></tr>
+        <tr><td>1 &amp; 6</td><td><span data-reveal="&nbsp;">different</span></td><td><span data-reveal="&nbsp;">one of each</span></td><td><span data-reveal="&nbsp;">opposite</span></td><td><span data-reveal="&nbsp;">no special name</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">3 &amp; 5 alternate interior · 2 &amp; 8 alternate exterior · 3 &amp; 6 interior, same side · 1 &amp; 8 exterior, same side · 1 &amp; 5 corresponding · 2 &amp; 3 same crossing, a straight line · 1 &amp; 6 no special name</div></div></div>
+  </div>
+  <div class="parts c2 u5l7-gap">
+    <div class="part"><div class="pl">(b) Name the angle that is:</div>
+      <div class="u5l7-lines sm">
+        <div>alternate interior to <span class="tex">\angle 4</span>: <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">\angle 6</span></span></div>
+        <div>exterior on the same side as <span class="tex">\angle 7</span>: <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">\angle 2</span></span></div>
+        <div>interior on the same side as <span class="tex">\angle 5</span>: <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">\angle 4</span></span></div>
+        <div>alternate exterior to <span class="tex">\angle 1</span>: <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">\angle 7</span></span></div>
+      </div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle 6</span>, <span class="tex">\angle 2</span>, <span class="tex">\angle 4</span>, <span class="tex">\angle 7</span></div></div></div>
+    <div class="part"><div class="pl">(c) Kai says, “<span class="tex">\angle 3</span> and <span class="tex">\angle 4</span> are alternate interior angles, because both are between the lines and they are on opposite sides of <span class="tex">t</span>.” What is wrong with Kai’s reasoning?</div>
+      <div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle 3</span> and <span class="tex">\angle 4</span> are at the <b>same</b> crossing. Alternate angles must be at <b>different</b> crossings. <span class="tex">\angle 3</span> and <span class="tex">\angle 4</span> sit next to each other on a straight line, so they add to <span class="tex">180^\circ</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3t" data-section="3. Try It: Name the Pair">
+  <h3 class="sub">Try it: name the pair</h3>
+  <p>Tap <b>two angles</b> in the diagram (or tap <b>New pair</b>). Tap <b>Hide the name</b> first, and let the class name the pair before you show it.</p>
+  <div class="u5l7-tool" id="u5l7-pairs"></div>
+</section>
+
+<section class="card" data-extra data-ink="s3s" data-section="3. Spot the Letter">
+  <h3 class="sub">Spot the letter: turned and flipped</h3>
+  <p>In real pictures the letters are turned, flipped or tilted. Name each pair <b>a</b> and <b>b</b>, and say what letter you see.</p>
+  <div class="u5l7-four">
+    <div class="part"><div class="pl">(i)</div><div class="u5l7-fig" data-fig="spot1"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Corresponding</b>: an F lying on its side.</div></div></div>
+    <div class="part"><div class="pl">(ii)</div><div class="u5l7-fig" data-fig="spot2"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Alternate interior</b>: a Z turned so it looks like an N.</div></div></div>
+    <div class="part"><div class="pl">(iii)</div><div class="u5l7-fig" data-fig="spot3"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Interior, same side</b>: the C is turned into a U.</div></div></div>
+    <div class="part"><div class="pl">(iv)</div><div class="u5l7-fig" data-fig="spot4"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Alternate exterior</b>: both outside the lines, on opposite sides of <span class="tex">t</span>.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u5l7"></section>
+
+<!-- ================= 4. Real pictures ================= -->
+<section class="card" data-ink="s4" data-section="4. Real Pictures and Busy Diagrams">
+  <div class="sec-h"><span class="badge">4</span><h2>Real Pictures and Busy Diagrams</h2></div>
+  <p>Real pictures are turned and tilted, and the angles may be numbered or lettered in any order. Look at <b>where</b> each angle is, not at its number.</p>
+  <div class="tip u5l7-know"><div class="tip-ic">i</div><div><b>How to find the transversal.</b> The transversal is the line that goes through the <b>vertices of both angles</b>. The other line at each vertex is one of “the two lines”. It can help to <b>turn your page</b> so the transversal goes up and down.</div></div>
+  <div class="explainer" data-explainer="real"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>A ladder and a railway crossing</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Part of a ladder. Its rungs are parallel.</div>
+      <div class="u5l7-fig" data-fig="ladder"></div>
+      <div class="pl">(i) For <span class="tex">\angle p,\ \angle q,\ \angle r</span> and <span class="tex">\angle s</span>, what are “the two lines” and what is the transversal?</div>
+      <div class="work" style="--h:60px"></div>
+      <div class="pl">(ii) Name each pair.</div>
+      <div class="u5l7-lines sm">
+        <div><span class="tex">\angle p</span> and <span class="tex">\angle r</span>: <span class="u5l7-blank w3" data-reveal="&nbsp;">corresponding</span></div>
+        <div><span class="tex">\angle p</span> and <span class="tex">\angle s</span>: <span class="u5l7-blank w3" data-reveal="&nbsp;">interior, same side</span></div>
+        <div><span class="tex">\angle q</span> and <span class="tex">\angle r</span>: <span class="u5l7-blank w3" data-reveal="&nbsp;">exterior, same side</span></div>
+      </div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(i) The two lines are the two <b>rungs</b>. The transversal is the <b>left rail</b> (it goes through both vertices). (ii) <span class="tex">\angle p</span> and <span class="tex">\angle r</span> are both above their rung, on the right of the rail: corresponding. <span class="tex">\angle p</span> and <span class="tex">\angle s</span> are both between the rungs, on the right: interior, same side. <span class="tex">\angle q</span> and <span class="tex">\angle r</span> are both outside the two rungs, on the right: exterior, same side.</div></div></div>
+    <div class="part"><div class="pl">(b) A road crosses two parallel railway rails.</div>
+      <div class="u5l7-fig" data-fig="road"></div>
+      <div class="pl">Name each pair of angles.</div>
+      <div class="u5l7-lines sm">
+        <div>(i) <span class="tex">\angle a</span> and <span class="tex">\angle g</span>: <span class="u5l7-blank w3" data-reveal="&nbsp;">corresponding</span></div>
+        <div>(ii) <span class="tex">\angle f</span> and <span class="tex">\angle g</span>: <span class="u5l7-blank w3" data-reveal="&nbsp;">alternate interior</span></div>
+        <div>(iii) <span class="tex">\angle e</span> and <span class="tex">\angle h</span>: <span class="u5l7-blank w3" data-reveal="&nbsp;">alternate exterior</span></div>
+        <div>(iv) <span class="tex">\angle b</span> and <span class="tex">\angle g</span>: <span class="u5l7-blank w3" data-reveal="&nbsp;">interior, same side</span></div>
+      </div>
+      <div class="work" style="--h:40px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The road edge is the transversal; the rails are the two lines. <span class="tex">\angle a</span> and <span class="tex">\angle g</span> are both upper right. <span class="tex">\angle f</span> and <span class="tex">\angle g</span> are both between the rails, on opposite sides of the road edge. <span class="tex">\angle e</span> and <span class="tex">\angle h</span> are both outside, on opposite sides. <span class="tex">\angle b</span> and <span class="tex">\angle g</span> are both between the rails, on the right.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Four streets on a map</h3></div>
+  <p class="u5l7-q">A map shows four streets. 1st Avenue (<span class="tex">p</span>) and 2nd Avenue (<span class="tex">q</span>) are parallel. Centre Street (<span class="tex">r</span>) and River Road (<span class="tex">s</span>) cross both avenues.</p>
+  <div class="u5l7-ex6">
+    <div class="u5l7-fig" data-fig="map"></div>
+    <div class="part"><div class="pl">For each pair, name the two lines and the transversal. Then name the pair.</div>
+      <table class="u5l7-tbl u5l7-t6">
+        <tr><th>Pair</th><th>Two lines</th><th>Transversal</th><th>Name</th></tr>
+        <tr><td><span class="tex">a</span> &amp; <span class="tex">b</span></td><td><span data-reveal="&nbsp;"><span class="tex">p</span> and <span class="tex">q</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">r</span></span></td><td><span data-reveal="&nbsp;">corresponding</span></td></tr>
+        <tr><td><span class="tex">c</span> &amp; <span class="tex">d</span></td><td><span data-reveal="&nbsp;"><span class="tex">p</span> and <span class="tex">q</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">s</span></span></td><td><span data-reveal="&nbsp;">interior, same side</span></td></tr>
+        <tr><td><span class="tex">b</span> &amp; <span class="tex">d</span></td><td><span data-reveal="&nbsp;"><span class="tex">r</span> and <span class="tex">s</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">p</span></span></td><td><span data-reveal="&nbsp;">alternate interior</span></td></tr>
+      </table>
+      <div class="pl u5l7-gap">(d) Using lines <span class="tex">r</span> and <span class="tex">s</span> with transversal <span class="tex">p</span>, which angle is alternate interior to <span class="tex">\angle e</span>? &nbsp;<span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">\angle f</span></span></div>
+      <div class="work" style="--h:50px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">For <span class="tex">\angle b</span> and <span class="tex">\angle d</span>, both vertices are on <span class="tex">p</span>, so <span class="tex">p</span> is the transversal and <span class="tex">r</span> and <span class="tex">s</span> are the two lines. <span class="tex">\angle b</span> is between <span class="tex">r</span> and <span class="tex">s</span> above <span class="tex">p</span>; <span class="tex">\angle d</span> is between them below <span class="tex">p</span>: alternate interior. (d) <span class="tex">\angle e</span> is between <span class="tex">r</span> and <span class="tex">s</span>, below <span class="tex">p</span>. Its partner is between them, above <span class="tex">p</span>, at the other crossing: <span class="tex">\angle f</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. One More: A Window Frame">
+  <h3 class="sub">One more: a window frame</h3>
+  <p class="u5l7-q">A window has two parallel bars, <span class="tex">k</span> and <span class="tex">m</span>, and two slanted bars, <span class="tex">u</span> and <span class="tex">v</span>. Each pair below uses a <b>different</b> transversal.</p>
+  <div class="u5l7-ex6">
+    <div class="u5l7-fig" data-fig="window"></div>
+    <div class="part"><div class="pl">Name the transversal and the pair.</div>
+      <table class="u5l7-tbl u5l7-t6">
+        <tr><th>Pair</th><th>Transversal</th><th>Name</th></tr>
+        <tr><td><span class="tex">w</span> &amp; <span class="tex">x</span></td><td><span data-reveal="&nbsp;"><span class="tex">u</span></span></td><td><span data-reveal="&nbsp;">corresponding</span></td></tr>
+        <tr><td><span class="tex">x</span> &amp; <span class="tex">y</span></td><td><span data-reveal="&nbsp;"><span class="tex">m</span></span></td><td><span data-reveal="&nbsp;">interior, same side</span></td></tr>
+        <tr><td><span class="tex">w</span> &amp; <span class="tex">z</span></td><td><span data-reveal="&nbsp;"><span class="tex">k</span></span></td><td><span data-reveal="&nbsp;">alternate interior</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">w,x</span>: both on <span class="tex">u</span>; both upper right: corresponding. <span class="tex">x,y</span>: both on <span class="tex">m</span>, so the two lines are <span class="tex">u</span> and <span class="tex">v</span>; both between them, above <span class="tex">m</span>: interior, same side. <span class="tex">w,z</span>: both on <span class="tex">k</span>; both between <span class="tex">u</span> and <span class="tex">v</span>, one above <span class="tex">k</span> and one below: alternate interior.</div></div></div>
+  </div>
+  <div class="part think u5l7-gap"><div class="pl"><span class="think-tag">Think</span> In Example 6, can <span class="tex">\angle a</span> and <span class="tex">\angle c</span> be a pair? Which line is the transversal, and what is the pair called?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Yes. Both vertices are on <span class="tex">q</span>, so <span class="tex">q</span> is the transversal and <span class="tex">r</span> and <span class="tex">s</span> are the two lines. Both angles are between <span class="tex">r</span> and <span class="tex">s</span>, above <span class="tex">q</span>: <b>interior angles on the same side</b>.</div></div></div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 7 · Questions 1–8</h2>
+  <p class="pr-t">Try these before we see what happens when the lines are not parallel.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Transversal or not?</span>
+    <span><b>2</b>Interior, exterior, left, right</span>
+    <span><b>3</b>Name the angle</span>
+    <span><b>4</b>Name the pair</span>
+    <span><b>5</b>A turned diagram</span>
+    <span><b>6</b>Mia’s mistake</span>
+    <span><b>7</b>A farm gate</span>
+    <span><b>8</b>Three lines, a triangle</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u5l7">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. When the lines are not parallel ================= -->
+<section class="card" data-ink="s5" data-section="5. When the Lines Are Not Parallel">
+  <div class="sec-h"><span class="badge">5</span><h2>When the Lines Are Not Parallel</h2></div>
+  <p>The names tell you <b>where</b> two angles are. They do <b>not</b> tell you that the angles are the same size. Measure to see what happens when the lines are parallel, and when they are not.</p>
+  <div class="explainer" data-explainer="tilt"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Parallel or not: measure and compare</h3></div>
+  <p class="u5l7-q">Measure the angles in each diagram with a protractor. (Extend the lines with a ruler if it helps.) Complete the table.</p>
+  <div class="u5l7-two">
+    <div class="u5l7-figcap"><div class="u5l7-fig" data-fig="diagA"></div><div><b>Diagram A</b></div></div>
+    <div class="u5l7-figcap"><div class="u5l7-fig" data-fig="diagB"></div><div><b>Diagram B</b></div></div>
+  </div>
+  <div class="part">
+    <table class="u5l7-tbl u5l7-t7">
+      <tr><th></th><th colspan="3">corresponding</th><th colspan="2">alternate interior</th><th>interior, same side</th></tr>
+      <tr><th></th><th><span class="tex">\angle 1</span></th><th><span class="tex">\angle 5</span></th><th>Equal?</th><th><span class="tex">\angle 4</span></th><th><span class="tex">\angle 6</span></th><th><span class="tex">\angle 4+\angle 5</span></th></tr>
+      <tr><td><b>A</b> (parallel)</td><td><span data-reveal="&nbsp;"><span class="tex">120^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">120^\circ</span></span></td><td><span data-reveal="&nbsp;">yes</span></td><td><span data-reveal="&nbsp;"><span class="tex">60^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">60^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">180^\circ</span></span></td></tr>
+      <tr><td><b>B</b> (not parallel)</td><td><span data-reveal="&nbsp;"><span class="tex">120^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">105^\circ</span></span></td><td><span data-reveal="&nbsp;">no</span></td><td><span data-reveal="&nbsp;"><span class="tex">60^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">75^\circ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">165^\circ</span></span></td></tr>
+    </table>
+    <div class="pl u5l7-gap">When the lines are parallel, corresponding angles are <span class="u5l7-blank" data-reveal="&nbsp;">equal</span>, alternate interior angles are <span class="u5l7-blank" data-reveal="&nbsp;">equal</span>, and interior angles on the same side add to <span class="u5l7-blank" data-reveal="&nbsp;"><span class="tex">180^\circ</span></span>. When the lines are <span class="u5l7-blank w2" data-reveal="&nbsp;">not parallel</span>, these pairs are not equal and the same-side pair does not add to <span class="tex">180^\circ</span>.</div>
+    <div class="work" style="--h:40px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: <span class="tex">120^\circ,\ 120^\circ</span>, yes; <span class="tex">60^\circ,\ 60^\circ</span>; <span class="tex">180^\circ</span>. B: <span class="tex">120^\circ,\ 105^\circ</span>, no; <span class="tex">60^\circ,\ 75^\circ</span>; <span class="tex">165^\circ</span>. Equal, equal, <span class="tex">180^\circ</span>, not parallel. (Measurements within <span class="tex">1^\circ</span> or <span class="tex">2^\circ</span> are fine.)</div></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5k" data-section="5. The Names Work for Any Two Lines">
+  <div class="def" style="margin-top:0"><b>Key idea</b> &nbsp; <b>The names work for any two lines.</b> The sizes depend on whether the lines are parallel.
+    <ul class="u5l7-steps">
+      <li><b>Always true:</b> vertically opposite angles are equal; two angles next to each other on a straight line add to <span class="tex">180^\circ</span>.</li>
+      <li><b>Only when the two lines are parallel</b> (Lesson 8): corresponding angles, alternate interior angles and alternate exterior angles are equal; interior angles on the same side and exterior angles on the same side add to <span class="tex">180^\circ</span>.</li>
+    </ul></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Never use the parallel-line rules unless you <i>know</i> the lines are parallel: the question says so, or the lines have arrow marks. Lines that only <i>look</i> parallel might not be.</div></div>
+  <h3 class="sub u5l7-gap">Try it: turn <span class="tex">\ell_2</span></h3>
+  <p>Drag the slider to turn <span class="tex">\ell_2</span>. Tap two angles to compare their sizes. At <b>0°</b> the lines are parallel.</p>
+  <div class="u5l7-tool" id="u5l7-tilt"></div>
+</section>
+
+<!-- sources: https://mathshistory.st-andrews.ac.uk/HistTopics/Non-Euclidean_geometry/ (Euclid's Elements about 300 BC;
+     the fifth postulate: if a straight line falling on two straight lines makes the interior angles on the same side less
+     than two right angles, the two lines, if produced indefinitely, meet on that side; many tried to prove it from the
+     other postulates (Ptolemy, Proclus, Wallis, Saccheri, Lambert, Legendre); Bolyai announced his discovery in 1823,
+     Lobachevsky published in 1829) -->
+<section class="card history" data-ink="hist" data-section="Math History: Euclid’s Fifth Rule">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">c. 300 BCE · 1820s</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">The rule nobody could prove</h3>
+      <p>About <b>300 BCE</b>, the Greek mathematician <b>Euclid</b> wrote the <i>Elements</i>, the most famous geometry book ever. It starts with five rules he took as true. The <b>fifth</b> one is about today’s angles:</p>
+      <p class="u5l7-quote">If the <b>interior angles on the same side</b> of a transversal add to <b>less than <span class="tex">180^\circ</span></b>, the two lines <b>meet on that side</b>.</p>
+      <p>For about <b>2000 years</b>, people tried to prove it from the other four rules, and failed. In the <b>1820s</b>, János Bolyai and Nikolai Lobachevsky found out why: there are other geometries where the rule is false.</p>
+      <div class="part hist-q"><div class="pl">Interior angles on the same side are <span class="tex">88^\circ</span> and <span class="tex">89^\circ</span>, on the right of <span class="tex">t</span>. Do the lines meet? On which side?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">88^\circ+89^\circ=177^\circ</span>, less than <span class="tex">180^\circ</span>. <b>Yes</b>, they meet on the <b>right</b> side of <span class="tex">t</span> (far away).</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u5l7-hist" viewBox="0 0 600 300" role="img" aria-label="Two lines cut by a transversal with same-side interior angles of 85 and 80 degrees: the lines are extended and meet on that side. Then with 90 and 90 degrees they never meet."></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s5w" data-section="5. Why Some Rules Are Always True">
+  <h3 class="sub">Why are vertically opposite angles <i>always</i> equal?</h3>
+  <p>They are at <b>one</b> crossing, so we only need straight lines. Nothing about the other crossing matters.</p>
+  <div class="explainer" data-explainer="whyAlways"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> In Diagram A, <span class="tex">\angle 1=\angle 5=120^\circ</span>. Suppose instead <span class="tex">\angle 1=120^\circ</span> and <span class="tex">\angle 5=121^\circ</span>. Are the lines parallel?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> Corresponding angles are only equal when the lines are parallel. Off by <span class="tex">1^\circ</span>, the lines look parallel but meet far away.</div></div></div>
+</section>
+
+<section class="card" data-ink="s5f" data-section="5. Finding Angles When Lines Are Not Parallel">
+  <h3 class="sub">Finding angles when the lines are not parallel</h3>
+  <p>Only the <b>always true</b> rules work. They stay at <b>one crossing</b>.</p>
+  <div class="explainer" data-explainer="fill"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Estimate first: <span class="tex">180-68</span> is a bit more than 110. Then check on the TI-30XIIS: <span class="keys">180 <kbd>−</kbd> 68 <kbd>ENTER</kbd></span> shows <b>112</b>.</div>
+    <div class="u5l7-pcol"><button class="pill" type="button" data-keys="180 − 68 =">180 − 68</button><button class="pill" type="button" data-keys="180 − 100 =">180 − 100</button></div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Two lines that are not parallel</h3></div>
+  <p class="u5l7-q">In this diagram, <span class="tex">\ell_1</span> and <span class="tex">\ell_2</span> are <b>not</b> parallel. <span class="tex">\angle 2=68^\circ</span> and <span class="tex">\angle 7=100^\circ</span>.</p>
+  <div class="u5l7-ex8">
+    <div class="u5l7-fig" data-fig="ex8"></div>
+    <div class="part"><div class="pl">(a) Find the other six angles. Give a reason for each one.</div>
+      <table class="u5l7-tbl u5l7-t8r">
+        <tr><th>Angle</th><th>Size</th><th>Reason</th></tr>
+        <tr><td><span class="tex">\angle 4</span></td><td><span data-reveal="&nbsp;"><span class="tex">68^\circ</span></span></td><td><span data-reveal="&nbsp;">vertically opposite <span class="tex">\angle 2</span></span></td></tr>
+        <tr><td><span class="tex">\angle 1</span></td><td><span data-reveal="&nbsp;"><span class="tex">112^\circ</span></span></td><td><span data-reveal="&nbsp;">straight line with <span class="tex">\angle 2</span>: <span class="tex">180^\circ-68^\circ</span></span></td></tr>
+        <tr><td><span class="tex">\angle 3</span></td><td><span data-reveal="&nbsp;"><span class="tex">112^\circ</span></span></td><td><span data-reveal="&nbsp;">vertically opposite <span class="tex">\angle 1</span></span></td></tr>
+        <tr><td><span class="tex">\angle 5</span></td><td><span data-reveal="&nbsp;"><span class="tex">100^\circ</span></span></td><td><span data-reveal="&nbsp;">vertically opposite <span class="tex">\angle 7</span></span></td></tr>
+        <tr><td><span class="tex">\angle 6</span></td><td><span data-reveal="&nbsp;"><span class="tex">80^\circ</span></span></td><td><span data-reveal="&nbsp;">straight line with <span class="tex">\angle 7</span>: <span class="tex">180^\circ-100^\circ</span></span></td></tr>
+        <tr><td><span class="tex">\angle 8</span></td><td><span data-reveal="&nbsp;"><span class="tex">80^\circ</span></span></td><td><span data-reveal="&nbsp;">vertically opposite <span class="tex">\angle 6</span></span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle 4=68^\circ,\ \angle 1=112^\circ,\ \angle 3=112^\circ,\ \angle 5=100^\circ,\ \angle 6=80^\circ,\ \angle 8=80^\circ</span>, with the reasons in the table.</div></div></div>
+  </div>
+  <div class="parts c2 u5l7-gap">
+    <div class="part"><div class="pl">(b) <span class="tex">\angle 2</span> and <span class="tex">\angle 6</span> are corresponding angles. Are they equal? What about the alternate interior angles <span class="tex">\angle 4</span> and <span class="tex">\angle 6</span>?</div>
+      <div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle 2=68^\circ</span> but <span class="tex">\angle 6=80^\circ</span>: <b>not equal</b>. <span class="tex">\angle 4=68^\circ</span> but <span class="tex">\angle 6=80^\circ</span>: <b>not equal</b>. (Also <span class="tex">\angle 3+\angle 6=112^\circ+80^\circ=192^\circ</span>, not <span class="tex">180^\circ</span>.)</div></div></div>
+    <div class="part"><div class="pl">(c) Why did we need one angle from <i>each</i> crossing to find all eight?</div>
+      <div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The lines are not parallel, so the angles at the top crossing do not tell us anything about the angles at the bottom crossing. Only “straight line” and “vertically opposite” work, and they stay at one crossing.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Transversal:</b> a line that crosses two lines at <b>two different points</b>. It makes 8 angles: 1–4 at the top crossing and 5–8 at the bottom, each <b>clockwise from the upper left</b>. Interior = between the lines.</div>
+    <div><b>Same crossing:</b> across = <b>vertically opposite</b> (always equal); next to each other = a <b>straight line</b> (always <span class="tex">180^\circ</span>). <b>Corresponding</b> = same position (F): add 4.</div>
+    <div><b>Three questions:</b> same crossing? interior or exterior? same side of <span class="tex">t</span>? <b>Alternate interior</b> (Z), <b>alternate exterior</b>, <b>interior/exterior on the same side</b> (C or U).</div>
+    <div><b>Real pictures:</b> the transversal goes through <b>both vertices</b>. <b>Not parallel?</b> The names still work, but the pairs are <b>not equal</b>. Only use the parallel rules with arrows or when told.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u5l7">
+    <div><div class="kicker">Your turn</div><b>Assignment 7 · Questions 9–16</b><div class="muted">Measuring when the lines are not parallel, finding angles with reasons, Jordan’s mistake, the four interior angles, and multiple choice. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l8/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 8 — Parallel Lines and Transversals: Finding Missing Angles</b><div class="muted">When the lines <b>are</b> parallel, one angle tells you all eight. Next we find them, with reasons.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u5l7.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u5l7', homeHref: '../../', title: '5.7 Transversals: Naming the Angle Pairs' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

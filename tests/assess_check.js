@@ -12,7 +12,7 @@ var fs = require('fs'), path = require('path'), vm = require('vm');
 var root = path.join(__dirname, '..');
 var ctx = { console: console, Math: Math, Date: Date, JSON: JSON, Number: Number, String: String, Array: Array, Object: Object, isFinite: isFinite, RegExp: RegExp };
 ctx.window = ctx; ctx.globalThis = ctx; vm.createContext(ctx);
-['assets/katex/katex.min.js', 'js/core.js', 'js/expr.js', 'js/kit.js', 'js/kitx.js', 'js/poly.js', 'js/factor.js', 'js/relfn.js', 'js/draw.js', 'js/draw2.js', 'js/lines.js', 'js/geom.js', 'js/testcore.js', 'js/partial.js'].forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(root, f), 'utf8'), ctx, { filename: f }); });
+['assets/katex/katex.min.js', 'js/core.js', 'js/expr.js', 'js/kit.js', 'js/kitx.js', 'js/poly.js', 'js/factor.js', 'js/relfn.js', 'js/draw.js', 'js/draw2.js', 'js/lines.js', 'js/geom.js', 'js/geokit.js', 'js/testcore.js', 'js/partial.js'].forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(root, f), 'utf8'), ctx, { filename: f }); });
 var files = fs.readdirSync(path.join(root, 'js/lessons')).filter(function (f) { return /\.js$/.test(f); }).sort().map(function (f) { return 'js/lessons/' + f; });
 if (fs.existsSync(path.join(root, 'js/exits'))) files = files.concat(fs.readdirSync(path.join(root, 'js/exits')).filter(function (f) { return /\.js$/.test(f); }).sort().map(function (f) { return 'js/exits/' + f; }));
 var loadErr = 0;

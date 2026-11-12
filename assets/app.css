@@ -353,6 +353,10 @@ math-field { --contains-highlight-background-color: hsl(212, 40%, 95%); --contai
 .w-fields { display: flex; flex-direction: column; gap: 10px; }
 .fld-label { min-width: 90px; font-weight: 600; color: var(--ink2); }
 .w-mc.cols-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.w-mc.cols-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.w-mc.cols-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.w-mc.cols-5 { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 560px) { .w-mc.cols-4, .w-mc.cols-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .katex-display { overflow-x: auto; overflow-y: hidden; padding: 2px 0; }
 .nw { white-space: nowrap; }
 .numlist { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 12px 0; font-size: 1.05em; }

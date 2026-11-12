@@ -1,0 +1,85 @@
+/* Math 10-3 · Unit 5 · Lesson 6 — Angle Partners: styles used only on this page (prefix u5l6-).
+ * Colours: first angle blue #1f5bd6, second amber #d08a12, complement green, supplement purple, answers red. */
+.u5l6 .ans .katex, .u5l6 .pl .katex, .u5l6 .def .katex { font-size: 1.06em; }
+.u5l6 .ex-cap .katex { font-size: 1.05em; }
+.u5l6-two { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 22px; align-items: center; }
+.u5l6-list { margin: 6px 0 4px; padding-left: 26px; display: grid; gap: 3px; }
+.u5l6-list li { font-size: 19px; }
+.u5l6-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 4px; }
+.u5l6-steps li { font-size: 19px; }
+.u5l6-key { margin-top: 10px; padding-top: 8px; border-top: 1.5px dashed #d9c7a6; font-size: 19px; }
+.u5l6-q { font-size: 19px; margin: 4px 0 10px; }
+.u5l6-note { font-size: 17px; color: var(--ink2); margin: -6px 0 12px; }
+.u5l6-formulas { display: flex; flex-wrap: wrap; gap: 14px 46px; font-size: 22px; margin: 8px 0 8px; }
+.u5l6-formulas .katex { font-size: 1.05em; }
+.u5l6-def-tight { margin-top: 10px; }
+.tip.u5l6-rem { background: #f5ecdf; } .tip.u5l6-rem .tip-ic { background: var(--brand2); color: #fff; font-family: Georgia, serif; }
+.u5l6-pcol { display: flex; gap: 8px; flex: none; flex-wrap: wrap; }
+
+/* ---------- static figures ---------- */
+.u5l6-fig { position: relative; margin: 4px auto; }
+.u5l6-fig svg { display: block; overflow: visible; }
+.u5l6-fa { visibility: hidden; }
+.part.shown .u5l6-fa { visibility: visible; }
+
+/* ---------- tables and blanks ---------- */
+.u5l6-tbl { border-collapse: collapse; font-size: 19px; margin: 8px 0 4px; background: #fff; width: 100%; }
+.u5l6-tbl th, .u5l6-tbl td { border: 2px solid #b9ad97; padding: 6px 12px; text-align: center; height: 46px; }
+.u5l6-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u5l6-tbl td:first-child { font-weight: 700; width: 120px; }
+.u5l6-t8 td:first-child { width: 70px; }
+.u5l6-fill { font-size: 19px; margin: 6px 0; text-align: center; }
+.u5l6-blank { display: inline-block; min-width: 76px; border-bottom: 2px solid #8b7d66; padding: 0 6px; text-align: center; }
+.u5l6-blank.w2 { min-width: 160px; }
+.u5l6-blank .bk-rv-q { border: 0; background: none; }
+.u5l6-facts { border-collapse: collapse; margin: 8px 0 2px; font-size: 19px; background: #fff; }
+.u5l6-facts td { border: 2px solid #e1d3b9; padding: 6px 14px; }
+.u5l6-why { display: grid; gap: 6px; font-size: 20px; margin: 4px 0 12px; }
+.u5l6-ex8 { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: center; }
+
+/* ---------- Example 6: the protractor ---------- */
+.u5l6-ex6 { display: grid; grid-template-columns: 640px minmax(0, 1fr); gap: 18px; align-items: start; }
+.u5l6-ex6 .part { margin-bottom: 10px; }
+.u5l6-tool { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 6px 0 10px; }
+.u5l6-tool .geo-pt-read { margin: 4px 10px 0; font-size: 17.5px; }
+.u5l6-tool .geo-btns { padding: 0 10px; }
+.u5l6-mrow { align-items: center; }
+.u5l6-mrow .pill[aria-pressed="true"] { background: #1f5bd6; color: #fff; }
+.u5l6-ml { font: 700 16px var(--round); color: var(--muted); }
+.u5l6-meas { display: grid; grid-template-columns: 1fr; gap: 10px 14px; font-size: 20px; margin: 8px 0 6px; }
+
+/* ---------- explainer pieces ---------- */
+.u5l6-svg { left: 0; top: 0; overflow: visible; }
+.u5l6-c { position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; }
+.u5l6-eq { background: #fff; border: 3px solid #9a6a24; border-radius: 12px; font-size: 23px; padding: 4px 12px; }
+.u5l6-eq .katex, .u5l6-step .katex { font-size: 1.12em; }
+.u5l6-res { background: #fff6e5; border-color: #e2a63a; font-weight: 700; }
+.u5l6-bad { background: #fdeeee; border-color: #c93a33; color: #8b2f1c; font-size: 19px; }
+.u5l6-ttl { font: 800 23px var(--round); color: #3a4254; }
+.u5l6-ttl .katex { font-size: 1.05em; }
+.u5l6-step { background: #fff; border: 2.5px solid #c9b48a; border-radius: 12px; font-size: 20px; padding: 4px 12px; justify-content: flex-start; text-align: left; }
+.u5l6-step.u5l6-res { border-color: #e2a63a; }
+.u5l6-step b { color: #6e4a1c; margin-right: 10px; }
+.u5l6-sum { font-size: 24px; }
+.u5l6-chk { position: absolute; display: grid; gap: 14px; align-content: start; }
+.u5l6-chkrow { display: flex; align-items: center; gap: 14px; background: #fff; border: 2.5px solid #c9b48a; border-radius: 14px; padding: 8px 14px; font-size: 22px; min-height: 66px; box-sizing: border-box; }
+.u5l6-vrow { position: absolute; font-size: 21px; min-height: 0; }
+.u5l6-mk { flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 2.5px dashed #c9b48a; font: 900 26px var(--round); color: transparent; }
+.u5l6-mk.ok { border: 0; background: #12805a; color: #fff; }
+.u5l6-mk.no { border: 0; background: #c93a33; color: #fff; }
+.u5l6-rtab { position: absolute; display: grid; gap: 6px; align-content: start; }
+.u5l6-rh, .u5l6-rr { display: grid; grid-template-columns: 62px 172px 1fr; gap: 8px; align-items: center; }
+.u5l6-rh { font: 800 16px var(--round); color: #6e4a1c; padding: 0 8px; }
+.u5l6-rr { background: #fff; border: 2.5px solid #c9b48a; border-radius: 12px; padding: 6px 8px; min-height: 56px; font-size: 17px; line-height: 1.2; }
+.u5l6-rr > span:first-child { font-size: 22px; text-align: center; }
+.u5l6-rr > span:nth-child(2) { font-size: 18px; }
+.u5l6-rr .katex { font-size: 1.08em; }
+
+/* ---------- warm-up ---------- */
+.u5l6-wpoll .poll-opts { margin-left: 0; grid-template-columns: repeat(4, 1fr); } .u5l6-wpoll > .pill, .u5l6-wpoll .poll-ans { margin-left: 0; }
+.u5l6-wpoll .opt { font-size: 22px; padding: 10px 14px; } .u5l6-wpoll .poll-ans { font-size: 19px; }
+.u5l6-wpoll .opt .katex { font-size: 1.1em; }
+.u5l6-wans { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 18px; align-items: center; }
+.u5l6-wroll { width: 210px; height: 210px; display: block; }
+.u5l6-eq.u5l6-sm { font-size: 19px; white-space: nowrap; }
+.u5l6-step .katex { font-size: 1.04em; }

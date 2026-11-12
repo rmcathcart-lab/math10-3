@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Referents and True Bearings · Math 10-3 5.4</title>
+<meta name="description" content="Math 10-3 Unit 5 Lesson 4: referent angles (22.5°, 30°, 45°, 60°, 90°, 180°) from folding paper and a clock, building angles from referents, estimating an angle before measuring it, choosing the right protractor scale, sketching angles, true bearings clockwise from north, drawing and measuring bearings on a map, and the bearing back. A folding sheet of paper, a clock, a ladder, a compass rose and a hiking map. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u5l4.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u5l4">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: What Colour Is the Bear?">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>What Colour Is the Bear?</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A hiker walks <b>1 km south</b>. Then she walks <b>1 km east</b>. Then she walks <b>1 km north</b>.</p><p class="vw-ctx">She is right back where she started!</p><p class="vw-ctx">Then she sees a bear.</p><p class="vw-ask">What colour is the bear?</p></div><div class="vw-art"><svg viewBox="0 0 330 270" role="img" aria-label="A hiker walking a path south, then east, then north, with a north arrow, a question mark, and the outline of a bear with a question mark on it">
+    <g stroke="#1c2230" stroke-width="3" stroke-linecap="round"><line x1="34" y1="70" x2="34" y2="22"/><path d="M26 32 L34 18 L42 32 Z" fill="#1c2230"/></g>
+    <text x="34" y="12" font-size="19" font-weight="900" fill="#c93a33" text-anchor="middle">N</text>
+    <path d="M128 38 V172 H244 V38" fill="none" stroke="#9a6a24" stroke-width="4" stroke-dasharray="10 8" stroke-linecap="round"/>
+    <circle cx="128" cy="38" r="8" fill="#12805a" stroke="#fff" stroke-width="2"/>
+    <text x="128" y="20" font-size="15" font-weight="800" fill="#12805a" text-anchor="middle">start</text>
+    <g font-size="15" font-weight="700" fill="#6e4a1c"><text x="100" y="110" text-anchor="middle">1 km</text><text x="186" y="196" text-anchor="middle">1 km</text><text x="272" y="110" text-anchor="middle">1 km</text></g>
+    <g><animateMotion path="M128 38 V172 H244 V38" dur="6s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.85;1" calcMode="linear"/>
+      <g stroke="#1c2230" stroke-width="3" stroke-linecap="round" fill="none"><circle cx="0" cy="-26" r="6" fill="#f2c9a5"/><path d="M0 -20 V-6 M0 -6 L-6 4 M0 -6 L6 4 M-7 -15 L7 -15"/></g>
+      <rect x="2" y="-21" width="9" height="12" rx="3" fill="#c93a33"/></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="244" y="26" font-size="34" font-weight="900" fill="#9a6a24" text-anchor="middle">?</text></g>
+    <g fill="none" stroke="#6a7182" stroke-width="3" stroke-dasharray="7 5"><circle cx="60" cy="220" r="34"/><circle cx="34" cy="186" r="11"/><circle cx="86" cy="186" r="11"/></g>
+    <text x="60" y="234" font-size="38" font-weight="900" fill="#6a7182" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="poll u5l4-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> brown</div>
+      <div class="opt"><b>B</b> black</div>
+      <div class="opt right"><b>C</b> white</div>
+      <div class="opt"><b>D</b> you can’t tell</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>C: white!</b> On flat paper the walk never closes up. But the Earth is round. Start at the <b>North Pole</b>: 1 km south, then 1 km east goes around the pole in a circle, and 1 km north takes you straight back to the pole. The only bears there are <b>polar bears</b>. <span class="muted">Bonus: there are also spots near the South Pole where this walk works, but there are no bears in Antarctica!</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 5 Angles, Parallel Lines and Spatial Puzzles · Lesson 4</div>
+  <h1>Estimating Angles with Referents, and True Bearings</h1>
+  <p class="lede">Carpenters, pilots and hunters often <b>picture</b> an angle instead of grabbing a protractor. Today we learn a few angles you can always see in your head, use them to <b>estimate</b> and <b>sketch</b> any angle, and then use angles measured from <b>north</b> to give directions on a map.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>make the <b>referent angles</b> 22.5°, 30°, 45°, 60°, 90° and 180° with a sheet of paper or a clock</li>
+      <li><b>build</b> an angle from referents and name its type</li>
+      <li><b>estimate</b> an angle before I measure it, and use my estimate to pick the right protractor scale</li>
+      <li><b>sketch</b> an angle without a protractor</li>
+      <li>write a direction as a <b>true bearing</b>, draw and measure bearings on a map, and find the <b>bearing back</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G6</b> Demonstrate an understanding of angles, including acute, right, obtuse, straight and reflex, by: drawing; replicating and constructing; bisecting; solving problems.<br><span class="muted">Today: estimating and sketching angles with referents, and angles as true bearings.</span></div>
+</section>
+
+<!-- ================= 1. Referent angles ================= -->
+<section class="card" data-ink="s1" data-section="1. Referent Angles">
+  <div class="sec-h"><span class="badge">1</span><h2>Referent Angles</h2></div>
+  <p>A <b>referent angle</b> is an angle you can picture easily because you know something that has that size. You can make every referent with a <b>sheet of paper</b> or a <b>clock</b>.</p>
+  <div class="u5l4-refgrid">
+    <div class="def u5l4-reftbl"><b>Key idea</b> &nbsp; Referent angles
+      <table class="u5l4-tbl">
+        <tr><td class="u5l4-deg">90°</td><td>the corner of a sheet of paper</td></tr>
+        <tr><td class="u5l4-deg">45°</td><td>fold the corner in half</td></tr>
+        <tr><td class="u5l4-deg">22.5°</td><td>fold it in half again</td></tr>
+        <tr><td class="u5l4-deg">30°</td><td>one hour mark on a clock</td></tr>
+        <tr><td class="u5l4-deg">60°</td><td>two hour marks on a clock</td></tr>
+        <tr><td class="u5l4-deg">180°</td><td>a straight line</td></tr>
+      </table></div>
+    <div class="u5l4-fig" id="u5l4-strip"></div>
+  </div>
+  <p>A clock has <b>12 hour marks</b> around a full turn of 360°, so each hour mark is <span class="tex">360^\circ\div12=30^\circ</span>.</p>
+  <div class="explainer" data-explainer="referents"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>One hour mark: <span class="keys">360 <kbd>÷</kbd> 12 <kbd>ENTER</kbd></span> gives 30. Four hour marks: <span class="keys">4 <kbd>×</kbd> 30 <kbd>ENTER</kbd></span> gives 120.</div>
+    <div class="u5l4-pcol"><button class="pill" type="button" data-keys="360 ÷ 12 =">360 ÷ 12</button><button class="pill" type="button" data-keys="4 × 30 =">4 × 30</button></div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> There are 30° between two <b>hour</b> marks. How many degrees are between two <b>minute</b> marks?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A clock has 60 minute marks around 360°: <span class="tex">360^\circ\div60=6^\circ</span>. So 5 minute marks make one hour mark: <span class="tex">5\times6^\circ=30^\circ</span>.</div></div></div>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Building Bigger Angles">
+  <h3 class="sub">Building bigger angles from referents</h3>
+  <p>Bigger angles are <b>built</b> from referents. Add pieces, or take a piece away from a straight line (180°) or a full turn (360°):</p>
+  <div class="eg u5l4-eg"><span class="tex">135^\circ=90^\circ+45^\circ</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class="tex">330^\circ=360^\circ-30^\circ</span></div>
+  <div class="explainer" data-explainer="build"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Build 330° a second way, using a different referent.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">For example <span class="tex">330^\circ=270^\circ+60^\circ</span>, where <span class="tex">270^\circ=180^\circ+90^\circ</span>. Or <span class="tex">330^\circ=180^\circ+90^\circ+60^\circ</span>. Many answers are right.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Clock angles, and building angles</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the smaller angle between the hands of a clock at each time.</div>
+      <table class="u5l4-tbl u5l4-grid">
+        <tr><th>Time</th><th>Work</th><th>Angle</th></tr>
+        <tr><td>1:00</td><td><span data-reveal="&nbsp;"><span class="tex">1\times30^\circ</span></span></td><td><span data-reveal="&nbsp;">30°</span></td></tr>
+        <tr><td>2:00</td><td><span data-reveal="&nbsp;"><span class="tex">2\times30^\circ</span></span></td><td><span data-reveal="&nbsp;">60°</span></td></tr>
+        <tr><td>3:00</td><td><span data-reveal="&nbsp;"><span class="tex">3\times30^\circ</span></span></td><td><span data-reveal="&nbsp;">90°</span></td></tr>
+        <tr><td>4:00</td><td><span data-reveal="&nbsp;"><span class="tex">4\times30^\circ</span></span></td><td><span data-reveal="&nbsp;">120°</span></td></tr>
+        <tr><td>6:00</td><td><span data-reveal="&nbsp;"><span class="tex">6\times30^\circ</span></span></td><td><span data-reveal="&nbsp;">180°</span></td></tr>
+        <tr><td>8:00</td><td><span data-reveal="&nbsp;"><span class="tex">4\times30^\circ</span> (short way)</span></td><td><span data-reveal="&nbsp;">120°</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Count the hour marks between the hands and multiply by 30°. At 8:00 the hands are 8 marks apart one way and <b>4 marks</b> apart the other way. The smaller angle uses 4: <span class="tex">4\times30^\circ=120^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) Build each angle from referents. Then name its type.</div>
+      <table class="u5l4-tbl u5l4-grid">
+        <tr><th>Angle</th><th>Built from</th><th>Type</th></tr>
+        <tr><td>135°</td><td><span data-reveal="&nbsp;"><span class="tex">90^\circ+45^\circ</span></span></td><td><span data-reveal="&nbsp;">obtuse</span></td></tr>
+        <tr><td>67.5°</td><td><span data-reveal="&nbsp;"><span class="tex">45^\circ+22.5^\circ</span></span></td><td><span data-reveal="&nbsp;">acute</span></td></tr>
+        <tr><td>150°</td><td><span data-reveal="&nbsp;"><span class="tex">180^\circ-30^\circ</span></span></td><td><span data-reveal="&nbsp;">obtuse</span></td></tr>
+        <tr><td>270°</td><td><span data-reveal="&nbsp;"><span class="tex">180^\circ+90^\circ</span></span></td><td><span data-reveal="&nbsp;">reflex</span></td></tr>
+        <tr><td>15°</td><td><span data-reveal="&nbsp;">half of 30°</span></td><td><span data-reveal="&nbsp;">acute</span></td></tr>
+        <tr><td>112.5°</td><td><span data-reveal="&nbsp;"><span class="tex">90^\circ+22.5^\circ</span></span></td><td><span data-reveal="&nbsp;">obtuse</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Other answers can be right too, for example <span class="tex">150^\circ=90^\circ+60^\circ</span> or <span class="tex">270^\circ=360^\circ-90^\circ</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Estimating ================= -->
+<section class="card" data-ink="s2" data-section="2. Estimating the Size of an Angle">
+  <div class="sec-h"><span class="badge">2</span><h2>Estimating the Size of an Angle</h2></div>
+  <p>To <b>estimate</b> means to make a good guess using what you know. Estimate an angle <b>before</b> you measure it. Then you can tell right away if your protractor reading is wrong.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Estimating an angle</b>
+    <ul class="u5l4-steps">
+      <li><b>Step 1.</b> Decide the type: less than 90° (<b>acute</b>), between 90° and 180° (<b>obtuse</b>), or more than 180° (<b>reflex</b>).</li>
+      <li><b>Step 2.</b> Find the <b>two referents</b> it is between, and decide which one it is closer to.</li>
+      <li><b>Step 3.</b> Write an estimate, such as “a little more than 60°, about 70°”.</li>
+    </ul></div>
+  <p>A good estimate is usually <b>within about 10°</b> of the measured angle. Turning the page does not change the size of an angle, so tilt your head or the page if it helps.</p>
+  <div class="explainer" data-explainer="estimate"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Mo estimates an angle as “about 80°”. It measures 87°. Is that a good estimate?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Yes. <span class="tex">87^\circ-80^\circ=7^\circ</span>, which is within about 10°.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Estimate, then measure</h3></div>
+  <div class="part"><div class="pl">Estimate each angle. Then measure it with a protractor.</div>
+    <div class="u5l4-fig" id="u5l4-ex2"></div>
+    <table class="u5l4-tbl u5l4-grid u5l4-t2">
+      <tr><th>Angle</th><th>Type</th><th>Between which referents? Closer to?</th><th>Estimate</th><th>Measure</th></tr>
+      <tr><td><b>A</b></td><td><span data-reveal="&nbsp;">acute</span></td><td><span data-reveal="&nbsp;">30° and 45°, closer to 30°</span></td><td><span data-reveal="&nbsp;">about 35°</span></td><td><span data-reveal="&nbsp;">35°</span></td></tr>
+      <tr><td><b>B</b></td><td><span data-reveal="&nbsp;">obtuse</span></td><td><span data-reveal="&nbsp;">90° and 135°, near the middle</span></td><td><span data-reveal="&nbsp;">about 115°</span></td><td><span data-reveal="&nbsp;">115°</span></td></tr>
+      <tr><td><b>C</b></td><td><span data-reveal="&nbsp;">acute</span></td><td><span data-reveal="&nbsp;">60° and 90°, closer to 60°</span></td><td><span data-reveal="&nbsp;">about 70°</span></td><td><span data-reveal="&nbsp;">70°</span></td></tr>
+      <tr><td><b>D</b></td><td><span data-reveal="&nbsp;">obtuse</span></td><td><span data-reveal="&nbsp;">150° and 180°, closer to 180°</span></td><td><span data-reveal="&nbsp;">about 160°</span></td><td><span data-reveal="&nbsp;">160°</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimates within about 10° are fine. Measurements within 1° or 2° are fine.</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Which Protractor Scale?">
+  <h3 class="sub">Your estimate picks the protractor scale</h3>
+  <p>A protractor has <b>two scales</b>, so an arm crosses two numbers. The two numbers always add to 180°. Your <b>estimate</b> tells you which number to read.</p>
+  <div class="explainer" data-explainer="scales"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Why do the two numbers an arm crosses always add to 180°?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The base line is a straight angle, 180°. The arm splits it into two parts. The outer scale counts one part from the left end, and the inner scale counts the other part from the right end. Together the two parts make the whole 180°.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Which number is the angle?</h3></div>
+  <p class="u5l4-q">Estimate each angle first. Then read the protractor. The arm crosses two numbers: which one is the angle?</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a)</div>
+      <div class="u5l4-fig u5l4-pfig" id="u5l4-ex3a"></div>
+      <div class="u5l4-lines"><div>Estimate: <span class="u5l4-blank w3" data-reveal="&nbsp;">acute, about 65°</span></div><div>The two numbers: <span class="u5l4-blank" data-reveal="&nbsp;">65</span> and <span class="u5l4-blank" data-reveal="&nbsp;">115</span></div><div>The angle is <span class="u5l4-blank" data-reveal="&nbsp;">65°</span>.</div></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The angle is acute, so it is <b>65°</b>, not 115°. The arm on the left sits on the outer 0.</div></div></div>
+    <div class="part"><div class="pl">(b)</div>
+      <div class="u5l4-fig u5l4-pfig" id="u5l4-ex3b"></div>
+      <div class="u5l4-lines"><div>Estimate: <span class="u5l4-blank w3" data-reveal="&nbsp;">obtuse, about 135°</span></div><div>The two numbers: <span class="u5l4-blank" data-reveal="&nbsp;">40</span> and <span class="u5l4-blank" data-reveal="&nbsp;">140</span></div><div>The angle is <span class="u5l4-blank" data-reveal="&nbsp;">140°</span>.</div></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The angle is obtuse, so it is <b>140°</b>, not 40°. The arm on the right sits on the inner 0.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2t" data-section="2. Try It: Estimate, Then Measure">
+  <h3 class="sub">Try it: estimate first, then measure</h3>
+  <p>The reading starts hidden. Have the class <b>estimate</b> the angle. Then drag the protractor onto the vertex, turn it with the round handles, and tap <b>Hide the reading</b> to check. <b>New angle</b> draws another one.</p>
+  <div class="u5l4-tool" id="u5l4-pt"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Is the ladder safe?</h3></div>
+  <div class="u5l4-ladrow">
+    <div class="u5l4-fig" id="u5l4-ex4"></div>
+    <div><p class="u5l4-q">A safety rule for an extension ladder is that it should make an angle of <b>about 75°</b> with the ground. Too steep and it can tip back; too flat and the bottom can slide out.</p>
+      <p class="u5l4-q">(a) Estimate the angle between each ladder and the ground.<br>(b) Which ladder is set up safely? Explain.</p></div>
+  </div>
+  <div class="part"><div class="work" style="--h:150px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) Ladder P: between 60° and 90°, about halfway, so <b>about 75°</b>. Ladder Q: a little less than 60°, <b>about 55°</b>.<br>(b) <b>Ladder P is safe</b>: it is close to 75°. Ladder Q is too flat, about 20° less than the rule, so its bottom could slide out.</div></div></div>
+  <div class="explainer u5l4-gap" data-explainer="ladder"></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u5l4"></section>
+
+<!-- ================= 3. Sketching ================= -->
+<section class="card" data-ink="s3" data-section="3. Sketching an Angle">
+  <div class="sec-h"><span class="badge">3</span><h2>Sketching an Angle</h2></div>
+  <p>A <b>sketch</b> is a quick drawing <b>without a protractor</b>. Sketch an angle by building it from referents.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Sketching an angle</b>
+    <ul class="u5l4-steps">
+      <li><b>Step 1.</b> Draw one arm and mark the vertex.</li>
+      <li><b>Step 2.</b> Picture the referents nearby (90° is an <b>L</b>, 45° is half of that, 180° is a <b>straight line</b>).</li>
+      <li><b>Step 3.</b> Draw the second arm where you think the angle is. Mark the angle with an arc.</li>
+      <li><b>Step 4.</b> Check with a protractor. Were you within about 10°?</li>
+    </ul></div>
+  <div class="explainer" data-explainer="sketch"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Sketch without a protractor</h3></div>
+  <p class="u5l4-q">Sketch each angle without a protractor. Write the referents you used. Then check with a protractor.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) 45°</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="u5l4-mini" data-sk="45"></span>Half of a right angle.</div></div></div>
+    <div class="part"><div class="pl">(b) 150°</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="u5l4-mini" data-sk="150"></span>A straight line less 30° (one hour mark).</div></div></div>
+    <div class="part"><div class="pl">(c) 20°</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="u5l4-mini" data-sk="20"></span>A bit less than 22.5°.</div></div></div>
+    <div class="part"><div class="pl">(d) 240°</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="u5l4-mini" data-sk="240"></span>A straight line plus 60° (a reflex angle).</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exs" data-section="Extra Example: Pizza Angles">
+  <div class="ex-head"><span class="ex-tag">Extra Example</span><h3>Pizza angles</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A pizza is cut into 8 equal slices. What is the angle at the tip of one slice?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The slices share a full turn: <span class="tex">360^\circ\div8=45^\circ</span>, the same as one fold of a paper corner.</div></div></div>
+    <div class="part"><div class="pl">(b) A bigger pizza is cut into 12 equal slices. What is the angle of one slice?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">360^\circ\div12=30^\circ</span>, like one hour mark on a clock.</div></div></div>
+    <div class="part"><div class="pl">(c) Which referents would you use to sketch 165°?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A straight line less half an hour mark: <span class="tex">180^\circ-15^\circ=165^\circ</span>. It is obtuse, just short of a straight line.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 4 · Questions 1–8</h2>
+  <p class="pr-t">Try these before we turn angles into directions.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Clock angles</span>
+    <span><b>2</b>Folding paper</span>
+    <span><b>3</b>Build from referents</span>
+    <span><b>4</b>Estimate, then measure</span>
+    <span><b>5</b>Which scale?</span>
+    <span><b>6</b>A reading mistake</span>
+    <span><b>7</b>Angles in pictures</span>
+    <span><b>8</b>Sketch angles</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u5l4">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. True bearings ================= -->
+<section class="card" data-ink="s4" data-section="4. True Bearings">
+  <div class="sec-h"><span class="badge">4</span><h2>True Bearings</h2></div>
+  <p>A <b>true bearing</b> gives a direction as an angle. It is measured <b>clockwise from north</b>. Pilots, ship captains, hunters, surveyors and orienteers use bearings because a number is more exact than “northeast”.</p>
+  <div class="u5l4-bgrid">
+    <div class="u5l4-fig" id="u5l4-rose"></div>
+    <div>
+      <div class="def u5l4-bdef"><b>Key idea</b> &nbsp; <b>True bearing:</b> the angle measured <b>clockwise from north</b>, written with <b>3 digits</b>.
+        <table class="u5l4-tbl u5l4-btbl">
+          <tr><td>N = 000°</td><td>E = 090°</td><td>S = 180°</td><td>W = 270°</td></tr>
+          <tr><td>NE = 045°</td><td>SE = 135°</td><td>SW = 225°</td><td>NW = 315°</td></tr>
+        </table>
+        Bearings go from 000° up to (but not including) 360°.</div>
+      <p class="u5l4-small">The <b>16-point compass</b> splits each 45° in half again, so the points are 22.5° apart. <b>NNE</b> (north-northeast) is halfway between N and NE: 022.5°.</p>
+    </div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Always start at <b>north</b> and turn <b>clockwise</b> (the way clock hands move). Write 3 digits: east is 090°, not 90°.</div></div>
+  <p class="u5l4-gap">A direction is often described as “20° south of east”. That means: <b>face east, then turn 20° toward south</b>. Make a quick sketch, start from the bearing of the main direction (east is 090°), and <b>add</b> if the turn is clockwise, <b>subtract</b> if it is counterclockwise.</p>
+  <div class="explainer" data-explainer="bearing"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Why is there no bearing of 360°?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Turning 360° is a full turn: you face north again. North is already 000°, so bearings stop just before 360°.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Directions as true bearings</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Write the true bearing of each compass direction.</div>
+      <table class="u5l4-tbl u5l4-grid u5l4-t6">
+        <tr><th>Dir.</th><th>Bearing</th><th>Dir.</th><th>Bearing</th></tr>
+        <tr><td>E</td><td><span data-reveal="&nbsp;">090°</span></td><td>NE</td><td><span data-reveal="&nbsp;">045°</span></td></tr>
+        <tr><td>S</td><td><span data-reveal="&nbsp;">180°</span></td><td>SW</td><td><span data-reveal="&nbsp;">225°</span></td></tr>
+        <tr><td>W</td><td><span data-reveal="&nbsp;">270°</span></td><td>NNE</td><td><span data-reveal="&nbsp;">022.5°</span></td></tr>
+        <tr><td>NW</td><td><span data-reveal="&nbsp;">315°</span></td><td>WSW</td><td><span data-reveal="&nbsp;">247.5°</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">WSW is halfway between W (270°) and SW (225°): <span class="tex">225^\circ+22.5^\circ=247.5^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) Write each direction as a true bearing.</div>
+      <div class="u5l4-lines u5l4-dirs">
+        <div>(i) 30° east of north <span class="u5l4-blank" data-reveal="&nbsp;">030°</span></div>
+        <div>(ii) 20° south of east <span class="u5l4-blank" data-reveal="&nbsp;">110°</span></div>
+        <div>(iii) 40° west of south <span class="u5l4-blank" data-reveal="&nbsp;">220°</span></div>
+        <div>(iv) 15° west of north <span class="u5l4-blank" data-reveal="&nbsp;">345°</span></div>
+      </div>
+      <div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(i) From N (000°) turn 30° clockwise: <span class="tex">000^\circ+30^\circ=030^\circ</span>. (ii) From E (090°) turn clockwise toward S: <span class="tex">090^\circ+20^\circ=110^\circ</span>. (iii) From S (180°) turn clockwise toward W: <span class="tex">180^\circ+40^\circ=220^\circ</span>. (iv) From N turn 15° counterclockwise toward W: <span class="tex">360^\circ-15^\circ=345^\circ</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4t" data-section="4. Try It: Point the Compass">
+  <h3 class="sub">Try it: point the compass</h3>
+  <p>Drag the red arrow around the compass. The bearing counts <b>clockwise from north</b>. Tap <b>Hide the bearing</b>, point the arrow somewhere, and let the class say the bearing first.</p>
+  <div class="u5l4-tool" id="u5l4-compass"></div>
+</section>
+
+<!-- ================= 5. Bearings on a map ================= -->
+<section class="card" data-ink="s5" data-section="5. Bearings on a Map">
+  <div class="sec-h"><span class="badge">5</span><h2>Bearings on a Map, and the Bearing Back</h2></div>
+  <p>A school protractor only goes to 180°. For a bearing <b>more than 180°</b>, measure the angle on the <b>west</b> side of the north line and subtract it from 360°.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Drawing or measuring a bearing from a point</b>
+    <ul class="u5l4-steps">
+      <li><b>Step 1.</b> Draw a <b>north line</b> through the point (straight up, the same way as the map’s north arrow).</li>
+      <li><b>Step 2.</b> Put the protractor’s <b>centre</b> on the point and its <b>0 line</b> on the north line.</li>
+      <li><b>Step 3.</b> If the path goes to the <b>east</b> (right) side: bearing = the angle you measure.<br><span class="u5l4-ind">If it goes to the <b>west</b> (left) side: bearing = 360° − the angle you measure.</span></li>
+    </ul>
+    <div class="u5l4-small">(To draw 250°: <span class="tex">360^\circ-250^\circ=110^\circ</span>, so mark 110° on the west side of north.)</div></div>
+  <div class="explainer" data-explainer="map"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>West side: you measure 105°, so the bearing is <span class="keys">360 <kbd>−</kbd> 105 <kbd>ENTER</kbd></span> = 255.</div>
+    <button class="pill" type="button" data-keys="360 − 105 =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Draw the bearing</h3></div>
+  <div class="part"><div class="pl">Draw a line from each point P in the direction of the bearing.</div>
+    <div class="u5l4-fig" id="u5l4-ex7"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a), (b): measure 60° and 135° clockwise (east side). (c) <span class="tex">360^\circ-250^\circ=110^\circ</span> on the west side. (d) <span class="tex">360^\circ-320^\circ=40^\circ</span> on the west side.</div></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A hiking map in Kananaskis</h3></div>
+  <div class="part"><div class="u5l4-maprow">
+    <div><p class="u5l4-q">A hiking map in Kananaskis shows a parking lot (P), a bridge (B), a lookout (L) and a lake (K). Use a protractor.</p>
+      <div class="u5l4-lines">
+        <div>(a) Find the bearing from P to B. <span class="u5l4-blank" data-reveal="&nbsp;">050°</span></div>
+        <div>(b) Find the bearing from B to L. <span class="u5l4-blank" data-reveal="&nbsp;">135°</span></div>
+        <div>(c) Find the bearing from L to K. <span class="u5l4-blank" data-reveal="&nbsp;">255°</span></div>
+        <div>(d) The hikers walk from the lake straight back to the parking lot. What bearing do they follow? <span class="u5l4-blank w2" data-reveal="&nbsp;">about 350°</span></div>
+      </div></div>
+    <div class="u5l4-fig" id="u5l4-ex8"></div>
+  </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) B is on the east side of P’s north line: measure 50°, bearing <b>050°</b>. (b) <b>135°</b>, east side. (c) K is on the west side of L’s north line: measure 105°, so <span class="tex">360^\circ-105^\circ=255^\circ</span>. (d) Draw a north line at K. P is just west of it: measure about 10°, so <span class="tex">360^\circ-10^\circ=350^\circ</span> (within 2° is fine).</div></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. The Bearing Back">
+  <h3 class="sub">The bearing back</h3>
+  <p>The <b>bearing back</b> (also called the back bearing) is the direction for the return trip. It points exactly the <b>opposite</b> way, so it differs by 180°.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Bearing back:</b>
+    <div class="u5l4-backrule"><div>bearing <b>less than 180°</b>: &nbsp;<b>add</b> 180°</div><div>bearing <b>180° or more</b>: &nbsp;<b>subtract</b> 180°</div></div>
+    Check: the answer must be between 000° and 359°.</div>
+  <div class="explainer" data-explainer="back"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>335° is more than 180°, so subtract: <span class="keys">335 <kbd>−</kbd> 180 <kbd>ENTER</kbd></span> gives 155.</div>
+    <button class="pill" type="button" data-keys="335 − 180 =">Show me</button></div>
+</section>
+
+<section class="card" data-extra data-ink="s5w" data-section="5. Why the Bearing Back Is 180° Off">
+  <h3 class="sub">Why is the bearing back always 180° different?</h3>
+  <p>Every point on a map has its own north line, and all the north lines are <b>parallel</b>. The way back runs along the same path, pointing the other way: half a turn.</p>
+  <div class="explainer" data-explainer="whyBack"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> In Example 8, the bearing from B to L is 135°. Without a protractor, find the bearing from L back to B.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">135° is less than 180°, so add: <span class="tex">135^\circ+180^\circ=315^\circ</span>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Find the bearing back</h3></div>
+  <div class="part"><div class="pl">(a) Find the bearing back for each bearing.</div>
+    <table class="u5l4-tbl u5l4-grid u5l4-t9">
+      <tr><th>Bearing</th><td>070°</td><td>145°</td><td>200°</td><td>315°</td><td>180°</td></tr>
+      <tr><th>Back</th><td><span data-reveal="&nbsp;">250°</span></td><td><span data-reveal="&nbsp;">325°</span></td><td><span data-reveal="&nbsp;">020°</span></td><td><span data-reveal="&nbsp;">135°</span></td><td><span data-reveal="&nbsp;">000°</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">070+180=250</span>; &nbsp;<span class="tex">145+180=325</span>; &nbsp;<span class="tex">200-180=020</span>; &nbsp;<span class="tex">315-180=135</span>; &nbsp;<span class="tex">180-180=000</span> (south and north are opposite).</div></div></div>
+  <div class="part u5l4-gap"><div class="pl">(b) A bush pilot flies from Fort McMurray to a fishing lodge on a bearing of 335°. On what bearing should she fly to get home?</div>
+    <div class="work" style="--h:140px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">335° is more than 180°, so subtract: <span class="tex">335^\circ-180^\circ=155^\circ</span>. She should fly home on a bearing of <b>155°</b>.</div></div></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example">
+  <div class="ex-head"><span class="ex-tag">Extra Example</span><h3>A snowmobile trip</h3></div>
+  <p class="u5l4-q">A snowmobile trail leaves a cabin on a bearing of 240°.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Is the trail closer to SW, WSW or W?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">SW = 225°, WSW = 247.5°, W = 270°. 240° is 7.5° from WSW and 15° from SW: closest to <b>WSW</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) On what bearing do they ride back to the cabin?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">240° is more than 180°: <span class="tex">240^\circ-180^\circ=060^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(c) They leave at 5:00. What angle do the clock hands make?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">5 hour marks: <span class="tex">5\times30^\circ=150^\circ</span>, an obtuse angle.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Referents:</b> paper corner 90°, fold it 45°, fold again 22.5°; one hour mark 30°, two 60°; a straight line 180°. Build others: <span class="tex">135^\circ=90^\circ+45^\circ</span>.</div>
+    <div><b>Estimate first:</b> the type, the two referents it is between, then a number. Within about 10° is good. The estimate picks the protractor scale.</div>
+    <div><b>True bearings:</b> clockwise from north, 3 digits. N 000°, E 090°, S 180°, W 270°. “20° south of east”: from 090° turn clockwise, 110°.</div>
+    <div><b>On a map:</b> north line, protractor 0 on it. West side: <span class="tex">360^\circ-</span> the angle. <b>Bearing back:</b> under 180°, add 180°; 180° or more, subtract 180°.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u5l4">
+    <div><div class="kicker">Your turn</div><b>Assignment 4 · Questions 9–20</b><div class="muted">Compass points, directions as bearings, drawing and measuring bearings on a map, orienteering, bearings back, a surveyor’s sightings, and multiple-choice and numerical-response questions. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l5/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 5 — Copying and Bisecting Angles; Perpendicular Lines</b><div class="muted">How does a carpenter split a corner exactly in half for a picture frame? Next we copy and bisect angles with a compass.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u5l4.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u5l4', homeHref: '../../', title: '5.4 Referents and True Bearings' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 5 Review · Math 10-3 5.9</title>
+<meta name="description" content="Math 10-3 Unit 5 Lesson 9: the Unit 5 review. Every skill from the unit on one page (spatial puzzles and games, measuring and classifying angles, referents and true bearings, copying and bisecting angles, angle partners, parallel lines and transversals), worked examples that mix the topics, and a practice unit test. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u5l9.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u5l9">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Fold Twice, Snip Once">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Fold Twice, Snip Once</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Take a square of paper. Fold it in half. Then fold it in half again, so it is a <b>small square</b>.</p><p class="vw-ctx">Snip off the <b>corner where the two folds meet</b> with one straight cut.</p><p class="vw-ask">Unfold the paper. What does it look like?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A square of paper folding in half twice, then scissors snipping one corner">
+    <!-- stage 1: the whole square, with the first fold line -->
+    <g>
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.24;0.27;0.97;1" dur="7s" repeatCount="indefinite"/>
+      <rect x="85" y="45" width="160" height="160" fill="#fffaf1" stroke="#9a6a24" stroke-width="3"/>
+      <line x1="165" y1="45" x2="165" y2="205" stroke="#9a6a24" stroke-width="2" stroke-dasharray="7 6"/>
+    </g>
+    <!-- stage 2: folded in half, with the second fold line -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.24;0.27;0.5;0.53;1" dur="7s" repeatCount="indefinite"/>
+      <rect x="91" y="51" width="80" height="160" fill="#efe2cc" stroke="#9a6a24" stroke-width="2"/>
+      <rect x="85" y="45" width="80" height="160" fill="#fffaf1" stroke="#9a6a24" stroke-width="3"/>
+      <line x1="85" y1="125" x2="165" y2="125" stroke="#9a6a24" stroke-width="2" stroke-dasharray="7 6"/>
+    </g>
+    <!-- stage 3: folded twice; the scissors snip the corner where the folds meet -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.5;0.53;0.96;1" dur="7s" repeatCount="indefinite"/>
+      <rect x="97" y="113" width="80" height="80" fill="#e7d6ba" stroke="#9a6a24" stroke-width="1.5"/>
+      <rect x="91" y="119" width="80" height="80" fill="#efe2cc" stroke="#9a6a24" stroke-width="2"/>
+      <rect x="85" y="125" width="80" height="80" fill="#fffaf1" stroke="#9a6a24" stroke-width="3"/>
+      <circle cx="165" cy="125" r="6" fill="#c93a33"/>
+      <line x1="141" y1="125" x2="165" y2="149" stroke="#c93a33" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="80 -60;80 -60;0 0;0 0" keyTimes="0;0.55;0.7;1" dur="7s" repeatCount="indefinite"/>
+        <g transform="translate(176 118) rotate(45)">
+          <g><animateTransform attributeName="transform" type="rotate" values="0;0;-16;0;-16;0" keyTimes="0;0.7;0.77;0.84;0.91;1" dur="7s" repeatCount="indefinite"/>
+            <path d="M-4 0 L-44 -6 L-44 2 Z" fill="#7a838d"/><circle cx="18" cy="-10" r="10" fill="none" stroke="#1f5bd6" stroke-width="5"/></g>
+          <g><animateTransform attributeName="transform" type="rotate" values="0;0;16;0;16;0" keyTimes="0;0.7;0.77;0.84;0.91;1" dur="7s" repeatCount="indefinite"/>
+            <path d="M-4 0 L-44 6 L-44 -2 Z" fill="#9aa0ab"/><circle cx="18" cy="10" r="10" fill="none" stroke="#1f5bd6" stroke-width="5"/></g>
+          <circle cx="0" cy="0" r="3.5" fill="#3a4254"/>
+        </g>
+      </g>
+      <text x="120" y="232" font-size="17" font-weight="700" fill="#6e4a1c" text-anchor="middle">folds meet here ↗</text>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.6s" repeatCount="indefinite"/><text x="288" y="70" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u5l9-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b><svg viewBox="0 0 100 100" aria-label="a square with one corner cut off"><path d="M10 10 H74 L90 26 V90 H10 Z" fill="#fffaf1" stroke="#6e4a1c" stroke-width="3"/></svg></div>
+      <div class="opt right"><b>B</b><svg viewBox="0 0 100 100" aria-label="a square with a diamond-shaped hole in the middle"><path d="M10 10 H90 V90 H10 Z M50 34 L34 50 L50 66 L66 50 Z" fill="#fffaf1" fill-rule="evenodd" stroke="#6e4a1c" stroke-width="3"/></svg></div>
+      <div class="opt"><b>C</b><svg viewBox="0 0 100 100" aria-label="a square with all four corners cut off"><path d="M26 10 H74 L90 26 V74 L74 90 H26 L10 74 V26 Z" fill="#fffaf1" stroke="#6e4a1c" stroke-width="3"/></svg></div>
+      <div class="opt"><b>D</b><svg viewBox="0 0 100 100" aria-label="a square with a small square hole in the middle"><path d="M10 10 H90 V90 H10 Z M39 39 H61 V61 H39 Z" fill="#fffaf1" fill-rule="evenodd" stroke="#6e4a1c" stroke-width="3"/></svg></div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>B: a diamond-shaped hole in the middle.</b> The corner where the folds meet is the <b>centre</b> of the paper. Your one cut goes through <b>4 layers</b>, so the hole has 4 sides, one from each layer. Each fold is a mirror line, so the hole is a square turned 45°: a diamond. <span class="muted">Try it with a sticky note. Bonus: snip the opposite corner instead (the 4 loose corners), and you cut all 4 corners of the paper: picture C.</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 5 Angles, Parallel Lines and Spatial Puzzles · Lesson 9</div>
+  <h1>Unit 5 Review</h1>
+  <p class="lede">Every rule from the unit on <b>one page</b>, then worked examples that <b>mix the topics</b>, set up like the unit test. Try each example on your own first. Then we check it together.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>name my <b>strategy</b> for a puzzle or game, and <b>work backward</b> to win</li>
+      <li><b>estimate</b>, <b>measure</b> and <b>classify</b> an angle, and find a <b>reflex</b> angle and a polygon’s <b>angle sum</b></li>
+      <li>write a <b>true bearing</b> (from north, clockwise, 3 digits) and the bearing <b>back</b></li>
+      <li><b>copy</b> and <b>bisect</b> an angle, and sort lines as <b>parallel</b>, <b>perpendicular</b> or neither</li>
+      <li>find <b>complements</b>, <b>supplements</b> and <b>vertically opposite</b> angles, with a reason</li>
+      <li>name the angle pairs on a <b>transversal</b>, and use <b>parallel lines</b> to find all 8 angles</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G1</b> Analyze puzzles and games that involve spatial reasoning, using problem-solving strategies.</div>
+  <div class="outcome"><b>G5</b> Solve problems that involve parallel, perpendicular and transversal lines, and pairs of angles formed between them.</div>
+  <div class="outcome"><b>G6</b> Demonstrate an understanding of angles, including acute, right, obtuse, straight and reflex, by: drawing; replicating and constructing; bisecting; solving problems.</div>
+</section>
+
+<!-- ================= 1. The unit on one page ================= -->
+<section class="card" data-ink="s1" data-section="1. The Unit on One Page">
+  <div class="sec-h"><span class="badge">1</span><h2>The Unit on One Page</h2></div>
+  <p>Use this page to study. Each row is one lesson: what to do, and a short example. The small tag shows the lesson it came from.</p>
+  <table class="u5l9-one">
+    <tr><th>Skill</th><th>What to do</th><th>Example</th></tr>
+    <tr><td><b>Spatial puzzles</b><i>5.1</i></td><td>Name your strategy: draw or model, make a <b>systematic list</b>, guess and check, eliminate possibilities. <b>Tangram</b> (7 pieces): small triangle = 1 unit; square, parallelogram and medium triangle = 2 each; large triangle = 4; the whole square = 16. <b>Pentominoes</b>: 12 different shapes made of 5 squares (a flip or a turn is not a new one).</td><td>The whole tangram is 80 cm²:<br>a small triangle is <span class="tex">80\div16=5</span> cm²</td></tr>
+    <tr><td><b>Spatial games</b><i>5.2</i></td><td>Play small cases, look for a pattern, and <b>work backward</b> from the end of the game. Take 1, 2 or 3 counters, last counter wins: leave a <b>multiple of 4</b>. Tower of Hanoi with <span class="tex">n</span> discs: <span class="tex">2^n-1</span> moves.</td><td>Pile of 10: take 2, leave 8.<br>3 discs: <span class="tex">2^3-1=7</span> moves</td></tr>
+    <tr><td><b>Measuring and classifying angles</b><i>5.3</i></td><td><b>Acute</b>: less than 90°. <b>Right</b>: 90°. <b>Obtuse</b>: between 90° and 180°. <b>Straight</b>: 180°. <b>Reflex</b>: between 180° and 360°. <b>Protractor</b>: centre on the vertex, 0 line on one arm, read the scale that starts at 0 on that arm. Reflex angle = 360° − the angle you measure. A polygon with <span class="tex">n</span> sides: angle sum <span class="tex">=(n-2)\times180^\circ</span>.</td><td>Reflex partner of 100°:<br><span class="tex">360^\circ-100^\circ=260^\circ</span><br>Quadrilateral:<br><span class="tex">(4-2)\times180^\circ=360^\circ</span></td></tr>
+    <tr><td><b>Referents and true bearings</b><i>5.4</i></td><td>Referents: 22.5°, 30°, 45°, 60°, 90°, 180° (fold a square of paper; a clock is 30° per hour mark). <b>True bearing</b>: start at north, turn <b>clockwise</b>, write 3 digits. Back bearing: <b>add</b> 180° if the bearing is less than 180°; <b>subtract</b> 180° if it is 180° or more.</td><td>Due east = 090°<br>Back bearing of 070°:<br><span class="tex">070^\circ+180^\circ=250^\circ</span></td></tr>
+    <tr><td><b>Copying and bisecting; perpendicular lines</b><i>5.5</i></td><td>Copy an angle with a protractor, by tracing or a Mira, or with compass and straightedge. <b>Bisect</b>: cut into two equal angles (halve it with a protractor, fold it, or use compass arcs). <b>Perpendicular</b> lines meet at 90° (square mark). <b>Parallel</b> lines never meet (arrow marks).</td><td>Bisect 110°: two angles of<br><span class="tex">110^\circ\div2=55^\circ</span></td></tr>
+    <tr><td><b>Angle partners</b><i>5.6</i></td><td><b>Complementary</b>: add to 90°. <b>Supplementary</b>: add to 180° (angles on a straight line). <b>Vertically opposite</b> angles are equal. Angles <b>around a point</b> add to 360°. <b>Adjacent</b> angles share a vertex and an arm.</td><td>40°: complement 50°,<br>supplement 140°</td></tr>
+    <tr><td><b>Naming angle pairs</b><i>5.7</i></td><td>Angles 1–4 at the top crossing and 5–8 at the bottom, clockwise from the upper left (see the picture).<br><b>Corresponding</b> (F): 1 &amp; 5, 2 &amp; 6, 3 &amp; 7, 4 &amp; 8. <b>Alternate interior</b> (Z): 3 &amp; 5, 4 &amp; 6. <b>Alternate exterior</b>: 1 &amp; 7, 2 &amp; 8. <b>Interior, same side</b> (C): 4 &amp; 5, 3 &amp; 6. <b>Exterior, same side</b>: 1 &amp; 8, 2 &amp; 7.</td><td><div id="u5l9-tvmini" class="u5l9-tvmini"></div></td></tr>
+    <tr><td><b>Parallel lines and a transversal</b><i>5.8</i></td><td>If <span class="tex">\ell_1\parallel\ell_2</span>: corresponding, alternate interior and alternate exterior angles are <b>equal</b>; interior and exterior angles on the same side <b>add to 180°</b>. If the lines are not parallel, these rules do not work. If corresponding angles are equal, the lines <b>are</b> parallel.</td><td><span class="tex">\angle1=118^\circ</span>:<br><span class="tex">\angle5=118^\circ</span> (corresponding),<br><span class="tex">\angle2=62^\circ</span> (supplementary)</td></tr>
+  </table>
+  <div class="def u5l9-rem"><b>Remember.</b> Give a <b>reason</b> for every angle you find (“vertically opposite”, “corresponding”). Check that the answer fits the picture: an angle that looks acute must be less than 90°. The transversal rules need <b>parallel</b> lines (arrow marks or the words “is parallel to”). Bearings: from north, clockwise, 3 digits.</div>
+</section>
+
+<section class="card" data-extra data-ink="s1c" data-section="1. Check Yourself: Which Rule?">
+  <h3 class="sub">Check yourself: which rule do you need?</h3>
+  <p>Name the row of the table first, then tap a card to check.</p>
+  <div class="bk-flips" style="--bk-cols:4">
+    <div class="bk-flip"><div class="bk-front">A ladder rests against a wall. Find the angle on the other side of the ladder, on the ground.</div><div class="bk-back"><b>Angle partners</b><br>supplementary: <span class="tex">180^\circ-x</span></div></div>
+    <div class="bk-flip"><div class="bk-front">A hiker walks due south-west. Write the direction as a bearing.</div><div class="bk-back"><b>True bearings</b><br><span class="tex">180^\circ+45^\circ=225^\circ</span></div></div>
+    <div class="bk-flip"><div class="bk-front">What is the sum of the angles of a stop sign (8 sides)?</div><div class="bk-back"><b>Polygon angle sum</b><br><span class="tex">(8-2)\times180^\circ</span></div></div>
+    <div class="bk-flip"><div class="bk-front">Two railway rails are crossed by a road. One angle is 70°. Find the angle in the same corner at the other rail.</div><div class="bk-back"><b>Parallel lines</b><br>corresponding angles: equal</div></div>
+    <div class="bk-flip"><div class="bk-front">A carpenter needs a 45° cut from a 90° corner.</div><div class="bk-back"><b>Bisecting</b><br><span class="tex">90^\circ\div2</span></div></div>
+    <div class="bk-flip"><div class="bk-front">Two players take 1, 2 or 3 sticks from 21. Who wins?</div><div class="bk-back"><b>Spatial games</b><br>work backward: leave a multiple of 4</div></div>
+    <div class="bk-flip"><div class="bk-front">A protractor reads 40 on one scale and 140 on the other. The angle looks wide open.</div><div class="bk-back"><b>Measuring angles</b><br>obtuse, so <b>140°</b></div></div>
+    <div class="bk-flip"><div class="bk-front">The clock shows 2:00. What angle do the hands make?</div><div class="bk-back"><b>Referents</b><br><span class="tex">2\times30^\circ=60^\circ</span></div></div>
+  </div>
+</section>
+
+<!-- ================= 2. Puzzles and games ================= -->
+<section class="card example" data-ink="ex1" data-section="2. Puzzles and Games: Example 1">
+  <div class="sec-h"><span class="badge">2</span><h2>Puzzles and Games</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Take-away games and the Tower of Hanoi</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Two players take turns removing 1, 2 or 3 counters from a pile of 15. Whoever takes the last counter wins. You go first. How many should you take? What do you do after that?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Work backward. If you leave 4, the other player takes 1, 2 or 3, and you take the rest. So leaving 4 wins, and so does leaving 8 or 12: <b>multiples of 4</b>.<br><span class="tex">15-12=3</span>, so <b>take 3 and leave 12</b>.<br>After that, take 4 minus what the other player took (they take 1, you take 3), so every round removes 4.</div></div></div>
+    <div class="part"><div class="pl">(b) Change the rule: still take 1, 2 or 3, but whoever takes the last counter <b>loses</b>. The pile has 18. What should the first player do now?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Now you want the <b>other</b> player to be left with 1 counter. Work backward: leave 1, and before that 5, 9, 13, 17 (one more than a multiple of 4).<br><span class="tex">18-17=1</span>: <b>take 1 and leave 17</b>. Then take 4 minus what the other player took.</div></div></div>
+    <div class="part u5l9-wide"><div class="pl">(c) In the Tower of Hanoi puzzle, you move a stack of discs to another peg, one disc at a time, never putting a bigger disc on a smaller one. Fill in the table. Then find the fewest moves for 6 discs.
+      <table class="u5l9-tab u5l9-hanoi"><tr><th>Discs</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th>Fewest moves</th><td>1</td><td>3</td><td>7</td><td>15</td><td class="bl"><span data-reveal>31</span></td><td class="bl"><span data-reveal>63</span></td></tr></table></div>
+      <div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Pattern: each number is double the one before, plus 1: <span class="tex">15\times2+1=31</span>, <span class="tex">31\times2+1=63</span>.<br>Rule: <span class="tex">2^n-1</span>. Check: <span class="tex">2^6-1=64-1=63</span> ✓ <b>6 discs take 63 moves.</b></div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Powers on the TI-30XIIS:</b> <span class="keys">2<kbd>^</kbd>6<kbd>−</kbd>1<kbd>ENTER</kbd></span> gives 63.</div>
+    <div class="u5l9-pcol"><button class="pill" type="button" data-keys="2 ^ 6 − 1 =">Show me</button></div></div>
+  <p class="small muted" data-extra><b>Think:</b> in (a), what if the pile had 16? (16 is a multiple of 4, so whatever you take, the other player can leave 12. Go second if you can!)</p>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex1c" data-section="2. Check Example 1">
+  <h3 class="sub">Check Example 1: play it, then watch the tower</h3>
+  <div class="explainer" data-explainer="games"></div>
+</section>
+
+<!-- ================= 3. Measuring, classifying and estimating ================= -->
+<section class="card example" data-ink="ex2" data-section="3. Measuring Angles: Example 2">
+  <div class="sec-h"><span class="badge">3</span><h2>Measuring, Classifying and Estimating Angles</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Estimate, then measure ∠PQR</h3></div>
+  <div class="u5l9-ex2">
+    <div class="u5l9-fig" id="u5l9-ex2fig"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Estimate <span class="tex">\angle PQR</span> first, using referents.</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">It is more than 90° and a bit less than <span class="tex">90^\circ+45^\circ=135^\circ</span>. <b>About 130°.</b></div></div></div>
+      <div class="part"><div class="pl">(b) Measure <span class="tex">\angle PQR</span>. Which scale did you use, and why?</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Arm <span class="tex">QP</span> is on the 0 of the <b>inner</b> scale, so read the inner scale: <span class="tex">\angle PQR=129^\circ</span>. (The outer 51 cannot be right: the angle is obtuse.)</div></div></div>
+      <div class="part"><div class="pl">(c) Classify <span class="tex">\angle PQR</span>. &nbsp; (d) Find the reflex angle at <span class="tex">Q</span>.</div><div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">(c) <b>Obtuse</b> (between 90° and 180°).<br>(d) <span class="tex">360^\circ-129^\circ=231^\circ</span></div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex2c" data-section="3. Check Example 2">
+  <h3 class="sub">Check Example 2: referents first, then the protractor</h3>
+  <div class="explainer" data-explainer="protr"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>The loonie and the building lot</h3></div>
+  <div class="u5l9-ex3">
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) A loonie has 11 equal sides and 11 equal angles. Find the sum of its angles. Then find the size of each angle, to the nearest tenth of a degree.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Sum: <span class="tex">(n-2)\times180^\circ=(11-2)\times180^\circ=9\times180^\circ=1\,620^\circ</span><br>Each angle: <span class="tex">1\,620^\circ\div11\approx147.3^\circ</span> (obtuse, as it looks)</div></div></div>
+      <div class="part"><div class="pl">(b) A four-sided building lot has angles of 83°, 96° and 112°. Find the fourth angle, <span class="tex">x</span>. (The sketch is not to scale.)</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A quadrilateral splits into 2 triangles: <span class="tex">(4-2)\times180^\circ=360^\circ</span><br><span class="tex">x=360^\circ-83^\circ-96^\circ-112^\circ=69^\circ</span></div></div></div>
+    </div>
+    <div class="u5l9-fig"><svg viewBox="0 0 240 240" role="img" aria-label="A four-sided lot with angles 83, 96, 112 degrees and x">
+      <path d="M20 220 L200 220 L211.4 112.6 L44 23.8 Z" fill="#f1f1ee" stroke="#1c2230" stroke-width="2.5"/>
+      <text x="47" y="203" class="u5l9-ft">83°</text><text x="174" y="203" class="u5l9-ft">96°</text>
+      <text x="180" y="119" class="u5l9-ft">112°</text><text x="54" y="58" class="u5l9-ft u5l9-it">x</text>
+    </svg></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Brackets first:</b> <span class="keys"><kbd>(</kbd>11<kbd>−</kbd>2<kbd>)</kbd><kbd>×</kbd>180<kbd>ENTER</kbd></span> gives 1620. Then <span class="keys"><kbd>÷</kbd>11<kbd>ENTER</kbd></span> gives 147.2727…, about 147.3°.</div>
+    <div class="u5l9-pcol"><button class="pill" type="button" data-keys="( 11 − 2 ) × 180 =">Sum</button><button class="pill" type="button" data-keys="1620 ÷ 11 =">Each</button></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex3c" data-section="3. Check Example 3">
+  <h3 class="sub">Check Example 3: split the shape into triangles</h3>
+  <div class="explainer" data-explainer="poly"></div>
+</section>
+
+<!-- ================= 4. True bearings ================= -->
+<section class="card example" data-ink="ex4" data-section="4. True Bearings: Example 4">
+  <div class="sec-h"><span class="badge">4</span><h2>True Bearings</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>The float plane</h3></div>
+  <p class="q">A float plane is tied up at a dock, <span class="tex">D</span>, on a lake in northern Alberta. <span class="tex">A</span> is a fishing camp and <span class="tex">B</span> is a cabin.</p>
+  <div class="u5l9-ex4">
+    <div class="u5l9-fig"><svg viewBox="0 0 300 290" role="img" aria-label="From the dock D: A is 62 degrees clockwise from north; B is 25 degrees past south">
+      <defs><marker id="u5l9-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#1c2230"/></marker></defs>
+      <line x1="150" y1="150" x2="150" y2="42" stroke="#1c2230" stroke-width="3" marker-end="url(#u5l9-ah)"/><text x="150" y="26" class="u5l9-ft">N</text>
+      <line x1="150" y1="150" x2="150" y2="258" stroke="#1c2230" stroke-width="2" stroke-dasharray="7 6"/><text x="150" y="278" class="u5l9-ft">S</text>
+      <line x1="150" y1="150" x2="260.4" y2="91.3" stroke="#1c2230" stroke-width="3"/><text x="274" y="86" class="u5l9-ft u5l9-it">A</text>
+      <line x1="150" y1="150" x2="101.4" y2="254.2" stroke="#1c2230" stroke-width="3"/><text x="88" y="262" class="u5l9-ft u5l9-it">B</text>
+      <path d="M150 108 A42 42 0 0 1 187.1 130.3" fill="none" stroke="#1c2230" stroke-width="2"/><text x="183" y="95" class="u5l9-ft sm">62°</text>
+      <path d="M150 192 A42 42 0 0 1 132.3 188.1" fill="none" stroke="#1c2230" stroke-width="2"/><text x="128" y="232" class="u5l9-ft sm">25°</text>
+      <circle cx="150" cy="150" r="5" fill="#1c2230"/><text x="132" y="146" class="u5l9-ft u5l9-it">D</text>
+    </svg></div>
+    <div class="parts c2">
+      <div class="part"><div class="pl">(a) What is the true bearing of the camp, <span class="tex">A</span>, from the dock?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Measured clockwise from north: <b>062°</b>.</div></div></div>
+      <div class="part"><div class="pl">(b) What is the true bearing of the cabin, <span class="tex">B</span>, from the dock?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">From north clockwise to south is 180°, then 25° more: <span class="tex">180^\circ+25^\circ=205^\circ</span>.</div></div></div>
+      <div class="part"><div class="pl">(c) The plane flies to the camp. On what bearing does it fly back to the dock?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">062° is less than 180°, so add: <span class="tex">062^\circ+180^\circ=242^\circ</span>.</div></div></div>
+      <div class="part"><div class="pl">(d) On what bearing does it fly from the cabin back to the dock?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">205° is more than 180°, so subtract: <span class="tex">205^\circ-180^\circ=025^\circ</span>.</div></div></div>
+    </div>
+  </div>
+  <div class="part u5l9-ex4e"><div><div class="pl">(e) Sketch a bearing of 300° on the north arrow. Which referent helps?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">300^\circ=360^\circ-60^\circ</span>, so the line is 60° to the <b>west</b> of north (two referents of 30°, or one of 60°).</div></div></div>
+    <div class="u5l9-fig u5l9-n300"><svg viewBox="0 0 180 160" role="img" aria-label="A north arrow from a point, for sketching a bearing">
+      <line x1="90" y1="130" x2="90" y2="34" stroke="#1c2230" stroke-width="3" marker-end="url(#u5l9-ah)"/><text x="90" y="18" class="u5l9-ft">N</text>
+      <circle cx="90" cy="130" r="5" fill="#1c2230"/>
+      <g class="u5l9-n300a"><line x1="90" y1="130" x2="7.7" y2="82.5" stroke="#c93a33" stroke-width="3"/><path d="M90 96 A34 34 0 0 0 60.6 113" fill="none" stroke="#c93a33" stroke-width="2"/><text x="62" y="80" class="u5l9-ft sm" fill="#c93a33">60°</text></g>
+    </svg></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex4c" data-section="4. Check Example 4">
+  <h3 class="sub">Check Example 4 on the compass rose</h3>
+  <div class="explainer" data-explainer="bear"></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u5l9"></section>
+
+<!-- ================= 5. Copying and bisecting; perpendicular lines ================= -->
+<section class="card example" data-ink="ex5" data-section="5. Copying and Bisecting: Example 5">
+  <div class="sec-h"><span class="badge">5</span><h2>Copying and Bisecting Angles; Perpendicular Lines</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>The goalie, the carpenter and a 58° angle</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A goalie stands on the line that bisects the angle between the puck and the two goal posts. From the puck, the lines to the two posts make a 14° angle. What angle does the goalie’s line make with each post line?</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Bisect means cut into two equal angles:<br><span class="tex">14^\circ\div2=7^\circ</span> on each side.</div></div></div>
+    <div class="part"><div class="pl">(b) A carpenter must copy the angle where a sloped ceiling meets a wall onto a board. Name two ways to copy the angle.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Any two: measure it with a protractor and draw the same size on the board; set a sliding T-bevel on the angle, lock it and trace it; trace it on paper; or copy it with a compass and straightedge.</div></div></div>
+  </div>
+  <div class="u5l9-ex5c">
+    <div class="u5l9-fig"><svg viewBox="0 0 320 250" role="img" aria-label="A 58 degree angle at vertex B">
+      <line x1="40" y1="230" x2="305" y2="230" stroke="#1c2230" stroke-width="3"/><line x1="40" y1="230" x2="172.5" y2="18" stroke="#1c2230" stroke-width="3"/>
+      <circle cx="40" cy="230" r="4.5" fill="#1c2230"/><text x="24" y="240" class="u5l9-ft u5l9-it">B</text>
+    </svg></div>
+    <div class="part"><div class="pl">(c) Bisect this 58° angle with a compass and a straightedge. Write your steps. Check with a protractor.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1. Compass point on <span class="tex">B</span>: draw an arc that crosses both arms, at <span class="tex">P</span> and <span class="tex">Q</span>.<br>2. Compass point on <span class="tex">P</span>: draw an arc inside the angle. Keep the same width and do the same from <span class="tex">Q</span>. The arcs cross at <span class="tex">R</span>.<br>3. Draw a ray from <span class="tex">B</span> through <span class="tex">R</span>. It bisects the angle.<br>Check: each half measures <span class="tex">58^\circ\div2=29^\circ</span>.</div></div></div>
+  </div>
+  <div class="part u5l9-sort"><div class="pl">(d) Sort each pair of lines as <b>parallel</b>, <b>perpendicular</b> or <b>neither</b>. Give a reason.</div>
+    <div class="u5l9-sortg">
+      <div><b>the two side rails of a ladder</b><span data-reveal>Parallel: they never meet.</span></div>
+      <div><b>a wall and the floor</b><span data-reveal>Perpendicular: they meet at 90°.</span></div>
+      <div><b>the two straight edges of a pizza slice</b><span data-reveal>Neither: they meet at the tip, but at a small angle, not 90°.</span></div>
+    </div>
+    <div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Ladder rails: <b>parallel</b>. Wall and floor: <b>perpendicular</b>. Pizza edges: <b>neither</b>.</div></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex5c" data-section="5. Check Example 5">
+  <h3 class="sub">Check Example 5: compass and straightedge</h3>
+  <div class="explainer" data-explainer="bisect"></div>
+</section>
+
+<!-- ================= 6. Angle partners ================= -->
+<section class="card example" data-ink="ex6" data-section="6. Angle Partners: Example 6">
+  <div class="sec-h"><span class="badge">6</span><h2>Angle Partners</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Complements, supplements and angles around a point</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Fill in the table. If there is no such angle, write “none” and say why.
+      <table class="u5l9-tab u5l9-cs"><tr><th>Angle</th><th>Type</th><th>Complement</th><th>Supplement</th></tr>
+        <tr><td>41°</td><td><span data-reveal>acute</span></td><td><span data-reveal>49°</span></td><td><span data-reveal>139°</span></td></tr>
+        <tr><td>86°</td><td><span data-reveal>acute</span></td><td><span data-reveal>4°</span></td><td><span data-reveal>94°</span></td></tr>
+        <tr><td>111°</td><td><span data-reveal>obtuse</span></td><td><span data-reveal>none</span></td><td><span data-reveal>69°</span></td></tr></table></div>
+      <div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Complement = 90° − angle; supplement = 180° − angle.<br>111° has <b>no complement</b>: it is already more than 90°.</div></div></div>
+    <div class="part"><div class="pl">(b) Find <span class="tex">a</span>, <span class="tex">b</span> and <span class="tex">c</span>. Give a reason for each.
+      <div class="u5l9-fig u5l9-ex6b"><svg viewBox="0 0 300 260" role="img" aria-label="A straight line, a second line crossing it at 53 degrees, and a ray at right angles to the second line">
+        <line x1="20" y1="135" x2="280" y2="135" stroke="#1c2230" stroke-width="3"/>
+        <line x1="80.8" y1="226.8" x2="225.2" y2="35.2" stroke="#1c2230" stroke-width="3"/>
+        <line x1="150" y1="135" x2="54.2" y2="62.8" stroke="#1c2230" stroke-width="3"/>
+        <path d="M159.6 122.2 L146.8 112.6 L137.2 125.4" fill="none" stroke="#1c2230" stroke-width="2"/>
+        <circle cx="150" cy="135" r="4" fill="#1c2230"/>
+        <text x="205.5" y="107.3" class="u5l9-ft sm">53°</text><text x="95" y="116.6" class="u5l9-ft u5l9-it">a</text>
+        <text x="99.9" y="160" class="u5l9-ft u5l9-it">b</text><text x="171.4" y="178" class="u5l9-ft u5l9-it">c</text>
+      </svg></div></div>
+      <div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">a=180^\circ-53^\circ-90^\circ=37^\circ</span> (angles on a straight line)<br><span class="tex">b=53^\circ</span> (vertically opposite the 53° angle)<br><span class="tex">c=180^\circ-53^\circ=127^\circ</span> (supplementary to <span class="tex">b</span>)<br>Check: <span class="tex">53+90+37+53+127=360</span> ✓</div></div></div>
+  </div>
+  <p class="small muted" data-extra><b>Think:</b> can two angles be both complementary <b>and</b> supplementary to the same angle? (No. The complement is 90° − x and the supplement is 180° − x, so the supplement is always exactly 90° bigger.)</p>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex6c" data-section="6. Check Example 6">
+  <h3 class="sub">Check Example 6: fill to 90°, fill to 180°, go around the point</h3>
+  <div class="explainer" data-explainer="partners"></div>
+</section>
+
+<!-- ================= 7. Parallel lines and transversals ================= -->
+<section class="card example" data-ink="ex7" data-section="7. Parallel Lines: Example 7">
+  <div class="sec-h"><span class="badge">7</span><h2>Parallel Lines and Transversals</h2></div>
+  <p>In every numbered diagram, angles 1–4 are at the top crossing and 5–8 at the bottom crossing, going clockwise from the upper left.</p>
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>All eight from one</h3></div>
+  <p class="q">In the diagram, <span class="tex">\ell_1\parallel\ell_2</span> and <span class="tex">\angle7=101^\circ</span>.</p>
+  <div class="u5l9-ex7">
+    <div class="u5l9-fig" id="u5l9-ex7fig"></div>
+    <div class="part"><div class="pl">(a) Name each pair. Then say whether the angles are equal or add to 180°.
+      <table class="u5l9-tab u5l9-pairs"><tr><th>Pair</th><th>Name</th><th>Equal or 180°?</th></tr>
+        <tr><td><span class="tex">\angle2,\ \angle6</span></td><td><span data-reveal>corresponding</span></td><td><span data-reveal>equal</span></td></tr>
+        <tr><td><span class="tex">\angle3,\ \angle5</span></td><td><span data-reveal>alternate interior</span></td><td><span data-reveal>equal</span></td></tr>
+        <tr><td><span class="tex">\angle1,\ \angle7</span></td><td><span data-reveal>alternate exterior</span></td><td><span data-reveal>equal</span></td></tr>
+        <tr><td><span class="tex">\angle4,\ \angle5</span></td><td><span data-reveal>interior, same side</span></td><td><span data-reveal>add to 180°</span></td></tr>
+        <tr><td><span class="tex">\angle1,\ \angle8</span></td><td><span data-reveal>exterior, same side</span></td><td><span data-reveal>add to 180°</span></td></tr></table></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Corresponding, alternate interior and alternate exterior angles are <b>equal</b>; interior and exterior angles on the same side <b>add to 180°</b> (the lines are parallel).</div></div></div>
+  </div>
+  <div class="part"><div class="pl">(b) Find the other seven angles. Give a reason for each.
+    <table class="u5l9-tab u5l9-seven"><tr><th>Angle</th><th>Size</th><th>Reason</th></tr>
+      <tr><td><span class="tex">\angle5</span></td><td><span data-reveal>101°</span></td><td><span data-reveal>vertically opposite ∠7</span></td></tr>
+      <tr><td><span class="tex">\angle6</span></td><td><span data-reveal>79°</span></td><td><span data-reveal>supplementary to ∠7 (180° − 101°)</span></td></tr>
+      <tr><td><span class="tex">\angle8</span></td><td><span data-reveal>79°</span></td><td><span data-reveal>vertically opposite ∠6</span></td></tr>
+      <tr><td><span class="tex">\angle3</span></td><td><span data-reveal>101°</span></td><td><span data-reveal>corresponding to ∠7</span></td></tr>
+      <tr><td><span class="tex">\angle1</span></td><td><span data-reveal>101°</span></td><td><span data-reveal>alternate exterior to ∠7</span></td></tr>
+      <tr><td><span class="tex">\angle2</span></td><td><span data-reveal>79°</span></td><td><span data-reveal>corresponding to ∠6</span></td></tr>
+      <tr><td><span class="tex">\angle4</span></td><td><span data-reveal>79°</span></td><td><span data-reveal>alternate interior to ∠6</span></td></tr></table></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Only two sizes: <b>101°</b> (∠1, ∠3, ∠5, ∠7) and <b>79°</b> (∠2, ∠4, ∠6, ∠8). Other good reasons work too (for example ∠4 = 79°, corresponding to ∠8).</div></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex7c" data-section="7. Check Example 7">
+  <h3 class="sub">Check Example 7: one angle fills in all eight</h3>
+  <div class="explainer" data-explainer="fill8"></div>
+</section>
+
+<section class="card" data-extra data-ink="s7x" data-section="7. Why Only Two Sizes?">
+  <h3 class="sub">Why only two sizes? Slide the crossing</h3>
+  <p>When the lines are parallel, the bottom crossing is an exact copy of the top crossing. Watch what happens when they are not.</p>
+  <div class="explainer" data-explainer="whyTwo"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>The pool table and the two streets</h3></div>
+  <p class="q">On a pool table, the two long cushions are parallel and the end cushions are perpendicular to them. A ball leaves the bottom cushion at 32° and rolls straight into the top right corner pocket.</p>
+  <div class="u5l9-ex8">
+    <div class="u5l9-fig"><svg viewBox="0 0 320 194" role="img" aria-label="A pool table; the ball's path leaves the bottom cushion at 32 degrees and ends in the top right pocket">
+      <rect x="20" y="20" width="280" height="154" fill="#e9f5ec" stroke="#1c2230" stroke-width="3"/>
+      <path d="M195 167 L203 174 L195 181 M195 13 L203 20 L195 27" fill="none" stroke="#1c2230" stroke-width="2.5"/>
+      <circle cx="300" cy="20" r="8.4" fill="#fff" stroke="#1c2230" stroke-width="2"/>
+      <line x1="53.5" y1="174" x2="300" y2="20" stroke="#1c2230" stroke-width="2.5" stroke-dasharray="8 6"/>
+      <circle cx="53.5" cy="174" r="4" fill="#1c2230"/>
+      <text x="108" y="160" class="u5l9-ft sm">32°</text><text x="46" y="152" class="u5l9-ft u5l9-it">z</text>
+      <text x="250" y="36" class="u5l9-ft u5l9-it">x</text><text x="282" y="58" class="u5l9-ft u5l9-it">y</text>
+    </svg></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Find <span class="tex">x</span>, the angle between the ball’s path and the top cushion.</div><div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">x=32^\circ</span>: alternate interior angles are equal (the long cushions are parallel).</div></div></div>
+      <div class="part"><div class="pl">(b) Find <span class="tex">y</span>, the angle between the path and the end cushion.</div><div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The end cushion meets the top cushion at 90°. <span class="tex">y=90^\circ-32^\circ=58^\circ</span> (complementary to <span class="tex">x</span>).</div></div></div>
+      <div class="part"><div class="pl">(c) Find <span class="tex">z</span>.</div><div class="work" style="--h:50px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">z=180^\circ-32^\circ=148^\circ</span> (supplementary: a straight line)</div></div></div>
+    </div>
+  </div>
+  <div class="part"><div class="pl">(d) Two streets are crossed by a diagonal road. At one corner the angle is 86°. At the other street, the corresponding angle is 88°. Are the two streets parallel? Explain.</div><div class="work" style="--h:100px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> If the streets were parallel, the corresponding angles would be equal. <span class="tex">86^\circ\ne88^\circ</span>, so the streets are <b>not</b> parallel (they will meet somewhere, far away).</div></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex8c" data-section="7. Check Example 8">
+  <h3 class="sub">Check Example 8: roll the ball, then zoom out on the streets</h3>
+  <div class="explainer" data-explainer="pool"></div>
+</section>
+
+<!-- ================= 8. Practice test: multiple choice traps ================= -->
+<section class="card" data-extra data-ink="s8x" data-section="8. Practice Test: Spot the Trap">
+  <div class="sec-h"><span class="badge">8</span><h2>Practice Test: Spot the Trap</h2></div>
+  <p>On a multiple-choice test, the wrong answers are often the answers you get from a <b>common mistake</b>. Work it out first, then find the mistake behind each wrong choice.</p>
+  <div class="explainer" data-explainer="traps"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Puzzles and games.</b> Name your strategy. Work backward from the end: leave a multiple of 4 (last one wins). Tower of Hanoi: <span class="tex">2^n-1</span> moves. A flip or a turn is not a new shape.</div>
+    <div><b>Angles.</b> Estimate with referents first. Protractor: centre on the vertex, 0 on one arm, read the scale that starts at 0. Reflex = 360° − angle. Polygon sum: <span class="tex">(n-2)\times180^\circ</span>.</div>
+    <div><b>Bearings and constructions.</b> From north, clockwise, 3 digits. Back bearing: ± 180°. Bisect: two equal halves. Perpendicular: exactly 90°. Parallel: never meet.</div>
+    <div><b>Partners and parallel lines.</b> Complements add to 90°, supplements to 180°, around a point to 360°. Vertically opposite: equal. With <b>parallel</b> lines: F, Z and alternate exterior angles are equal; same-side angles add to 180°. Always give a <b>reason</b>.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u5l9">
+    <div><div class="kicker">Your turn</div><b>Assignment 9 · Unit 5 Review · Questions 1–25</b><div class="muted">A practice unit test: written response (1–13), multiple choice (14–21) and numerical response (22–25). Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+<!-- ================= up next: the unit test ================= -->
+<section class="card u5l9-next" data-ink="next" data-section="Up next: Unit 5 Test">
+  <div class="u5l9-next-h"><span class="kicker">Up next</span><b>Unit 5 test</b> <span class="muted">Shaky on an idea today? Go back to its lesson.</span></div>
+  <div class="u5l9-next-grid">
+    <a href="../l1/"><span class="rn">5.1</span>Spatial puzzles: tangrams and pentominoes <small>the one-page table</small></a>
+    <a href="../l2/"><span class="rn">5.2</span>Spatial games and strategies <small>Example 1</small></a>
+    <a href="../l3/"><span class="rn">5.3</span>Measuring, drawing and classifying angles <small>Examples 2, 3</small></a>
+    <a href="../l4/"><span class="rn">5.4</span>Referents and true bearings <small>Examples 2(a), 4</small></a>
+    <a href="../l5/"><span class="rn">5.5</span>Copying and bisecting angles; perpendicular lines <small>Example 5</small></a>
+    <a href="../l6/"><span class="rn">5.6</span>Complementary, supplementary and opposite angles <small>Example 6</small></a>
+    <a href="../l7/"><span class="rn">5.7</span>Transversals: naming the angle pairs <small>Example 7(a)</small></a>
+    <a href="../l8/"><span class="rn">5.8</span>Parallel lines: finding missing angles <small>Examples 7(b), 8</small></a>
+    <div class="test"><span class="rn">Test</span>Unit 5 test: G1, G5, G6 <small>protractor, compass and ruler allowed · set up like today’s practice test · give a reason for every angle</small></div>
+  </div>
+  <div class="space" id="next-space" style="min-height:80px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u5l9.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u5l9', homeHref: '../../', title: '5.9 Unit 5 Review' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

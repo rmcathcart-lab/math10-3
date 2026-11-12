@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spatial Games and Strategies · Math 10-3 5.2</title>
+<meta name="description" content="Math 10-3 Unit 5 Lesson 2: spatial games and problem-solving strategies. The take-away game (work backward, leave a multiple of 4), tic-tac-toe (win, block, fork), dots and boxes (never draw the third side), the tower puzzle (2^n − 1 moves) and a hidden-ships grid game (hunt with a checkerboard, eliminate possibilities). Five mini-games to play against the computer. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u5l2.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u5l2">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Nine Dots, Four Lines">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Nine Dots, Four Lines</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Nine dots make a square: <b>3 dots by 3 dots</b>.</p><p class="vw-ctx">Draw <b>4 straight lines</b> that go through <b>all 9 dots</b>. Your pencil may <b>never leave the paper</b>, and you can’t go over a line twice.</p><p class="vw-ask">Can you join all nine dots?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="Nine dots in a 3 by 3 square, and a pencil bobbing above them">
+    <g fill="#1c2230">
+      <circle cx="95" cy="80" r="11"><animate attributeName="r" values="11;14;11" dur="2.7s" begin="0s" repeatCount="indefinite"/></circle>
+      <circle cx="165" cy="80" r="11"><animate attributeName="r" values="11;14;11" dur="2.7s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <circle cx="235" cy="80" r="11"><animate attributeName="r" values="11;14;11" dur="2.7s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <circle cx="95" cy="150" r="11"><animate attributeName="r" values="11;14;11" dur="2.7s" begin="0.9s" repeatCount="indefinite"/></circle>
+      <circle cx="165" cy="150" r="11"><animate attributeName="r" values="11;14;11" dur="2.7s" begin="1.2s" repeatCount="indefinite"/></circle>
+      <circle cx="235" cy="150" r="11"><animate attributeName="r" values="11;14;11" dur="2.7s" begin="1.5s" repeatCount="indefinite"/></circle>
+      <circle cx="95" cy="220" r="11"><animate attributeName="r" values="11;14;11" dur="2.7s" begin="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="165" cy="220" r="11"><animate attributeName="r" values="11;14;11" dur="2.7s" begin="2.1s" repeatCount="indefinite"/></circle>
+      <circle cx="235" cy="220" r="11"><animate attributeName="r" values="11;14;11" dur="2.7s" begin="2.4s" repeatCount="indefinite"/></circle>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;-6 -10;0 0" dur="2s" repeatCount="indefinite"/>
+      <g transform="translate(292 18) rotate(35)">
+        <rect x="-9" y="0" width="18" height="70" fill="#f3b23c" stroke="#8a5a0a" stroke-width="2.5"/>
+        <rect x="-9" y="-14" width="18" height="14" rx="3" fill="#e58a9a" stroke="#8a5a0a" stroke-width="2.5"/>
+        <path d="M-9 70 L0 92 L9 70 Z" fill="#f6dfb8" stroke="#8a5a0a" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M-3.5 84 L0 92 L3.5 84 Z" fill="#1c2230"/>
+      </g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="42" y="44" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="bk-wq u5l2-wq"><div class="q-line"><div class="q-num">?</div><div>Try it on the dots or on paper. Then compare with your neighbour: how close did you get?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><div class="u5l2-wsol"><svg viewBox="0 -14 300 284" role="img" aria-label="The four lines go outside the square of dots: up the left column and past the top, down a diagonal past the bottom-right, back along the bottom row, then up the other diagonal">
+      <rect x="45" y="75" width="150" height="150" fill="none" stroke="#c9c2b4" stroke-width="2" stroke-dasharray="6 6"/>
+      <path class="u5l2-wline" pathLength="100" d="M45 225 L45 0 L270 225 L45 225 L195 75" fill="none" stroke="#c93a33" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <g fill="#1c2230"><circle cx="45" cy="75" r="9"/><circle cx="120" cy="75" r="9"/><circle cx="195" cy="75" r="9"/><circle cx="45" cy="150" r="9"/><circle cx="120" cy="150" r="9"/><circle cx="195" cy="150" r="9"/><circle cx="45" cy="225" r="9"/><circle cx="120" cy="225" r="9"/><circle cx="195" cy="225" r="9"/></g>
+      <g font-size="17" font-weight="800" fill="#c93a33"><text x="22" y="140">1</text><text x="246" y="186">2</text><text x="150" y="252">3</text><text x="210" y="100">4</text></g>
+    </svg></div>
+    <div><b>Yes, but the lines must go outside the square!</b> Nothing in the rules says a line has to stop at a dot. Most people add that rule in their head without noticing. Go up the left column and past the top <b>(1)</b>, down a diagonal past the corner <b>(2)</b>, back along the bottom row <b>(3)</b>, then up the other diagonal <b>(4)</b>. People often link this puzzle to the saying “think outside the box.” <span class="muted">Today: games where a good strategy beats luck.</span></div></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 5 Angles, Parallel Lines and Spatial Puzzles · Lesson 2</div>
+  <h1>Spatial Games and Strategies</h1>
+  <p class="lede">Simple games on piles, boards and grids. We find a <b>strategy</b> that wins, explain <b>why</b> it works, fix a strategy that doesn’t, and change the rules to see what happens. Then you get to play the computer.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>use problem-solving strategies: <b>work backward</b>, <b>look for a pattern</b>, <b>make a systematic list</b>, <b>eliminate possibilities</b> and more</li>
+      <li>win the take-away game by leaving a <b>multiple of 4</b>, and change my strategy when a rule changes</li>
+      <li>use the tic-tac-toe checklist: <b>win, block, fork</b></li>
+      <li>play dots and boxes without giving boxes away</li>
+      <li>find the fewest moves for the tower puzzle, <span class="tex">2^n-1</span>, and hunt hidden ships with a checkerboard</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G1</b> Analyze puzzles and games that involve spatial reasoning, using problem-solving strategies.</div>
+</section>
+
+<!-- ================= 1. Take-away games ================= -->
+<section class="card" data-ink="s1" data-section="1. Take-Away Games: Work Backward">
+  <div class="sec-h"><span class="badge">1</span><h2>Take-Away Games: Work Backward</h2></div>
+  <p>A <b>strategy</b> is a plan for solving a puzzle or winning a game. Good players do not just hope. They use problem-solving strategies like the ones in this toolbox. You will use all of them in this lesson.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Strategy toolbox</b>
+    <div class="u5l2-tools">
+      <div><span class="u5l2-ti">1</span><b>Guess and check:</b> try something, see what happens, then adjust.</div>
+      <div><span class="u5l2-ti">2</span><b>Look for a pattern:</b> solve small cases and see what repeats.</div>
+      <div><span class="u5l2-ti">3</span><b>Make a systematic list:</b> list every possibility in an order, so none is missed or counted twice.</div>
+      <div><span class="u5l2-ti">4</span><b>Draw or model:</b> use a sketch, coins, counters or a real board.</div>
+      <div><span class="u5l2-ti">5</span><b>Eliminate possibilities:</b> cross out what cannot work.</div>
+      <div><span class="u5l2-ti">6</span><b>Simplify the problem:</b> try a smaller version first.</div>
+      <div><span class="u5l2-ti">7</span><b>Work backward:</b> start at the end (the win) and go back one step at a time.</div>
+      <div><span class="u5l2-ti">8</span><b>Try another approach:</b> if one way gets stuck, use a different strategy.</div>
+    </div></div>
+  <div class="u5l2-rule"><div class="u5l2-rule-art" id="u5l2-pileart"></div><div><b>The take-away game.</b> Put a pile of counters (coins, paper clips, beans) on the table. Two players take turns. On your turn you must take <b>1, 2 or 3</b> counters. The player who takes the <b>last</b> counter wins.</div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Ana and Ben play with 10 counters</h3></div>
+  <p class="q">Ana and Ben play with 10 counters. Ana goes first. Here is their game.</p>
+  <div class="u5l2-ex1">
+    <table class="u5l2-tbl u5l2-c">
+      <tr><th>Turn</th><th>Player</th><th>Takes</th><th>Left</th></tr>
+      <tr><td>1</td><td>Ana</td><td>2</td><td>8</td></tr>
+      <tr><td>2</td><td>Ben</td><td>3</td><td>5</td></tr>
+      <tr><td>3</td><td>Ana</td><td>1</td><td>4</td></tr>
+      <tr><td>4</td><td>Ben</td><td>2</td><td>2</td></tr>
+      <tr><td>5</td><td>Ana</td><td>2</td><td>0</td></tr>
+    </table>
+    <div class="u5l2-col">
+      <div class="part"><div class="pl">(a) Who won?</div><div class="work" style="--h:40px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Ana</b>: she took the last 2 counters.</div></div></div>
+      <div class="part"><div class="pl">(b) At turn 4, Ben had 4 counters in front of him. Show that Ben could <b>not</b> win from there, whatever he took.</div><div class="work" style="--h:110px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">If Ben takes 1, Ana takes the last 3. If Ben takes 2, Ana takes the last 2. If Ben takes 3, Ana takes the last 1. Every choice leaves 1, 2 or 3 for Ana, so she wins.</div></div></div>
+    </div>
+  </div>
+  <div class="part u5l2-gap"><div class="pl">(c) <b>Work backward.</b> Start with small piles. For each number of counters in front of you, decide: can you win (W) or will you lose (L) if the other player plays well? If you can win, write how many to take.</div>
+    <table class="u5l2-tbl u5l2-wl">
+      <tr><th>Counters on your turn</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      <tr><th>Win or lose?</th><td><span data-reveal="&nbsp;">W</span></td><td><span data-reveal="&nbsp;">W</span></td><td><span data-reveal="&nbsp;">W</span></td><td class="u5l2-L"><span data-reveal="&nbsp;">L</span></td><td><span data-reveal="&nbsp;">W</span></td><td><span data-reveal="&nbsp;">W</span></td><td><span data-reveal="&nbsp;">W</span></td><td class="u5l2-L"><span data-reveal="&nbsp;">L</span></td><td><span data-reveal="&nbsp;">W</span></td><td><span data-reveal="&nbsp;">W</span></td><td><span data-reveal="&nbsp;">W</span></td><td class="u5l2-L"><span data-reveal="&nbsp;">L</span></td></tr>
+      <tr><th>Take</th><td><span data-reveal="&nbsp;">1</span></td><td><span data-reveal="&nbsp;">2</span></td><td><span data-reveal="&nbsp;">3</span></td><td><span data-reveal="&nbsp;">–</span></td><td><span data-reveal="&nbsp;">1</span></td><td><span data-reveal="&nbsp;">2</span></td><td><span data-reveal="&nbsp;">3</span></td><td><span data-reveal="&nbsp;">–</span></td><td><span data-reveal="&nbsp;">1</span></td><td><span data-reveal="&nbsp;">2</span></td><td><span data-reveal="&nbsp;">3</span></td><td><span data-reveal="&nbsp;">–</span></td></tr>
+    </table>
+    <div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1, 2 or 3: take them all and win. 4: you lose (part (b)). 5, 6, 7: take 1, 2 or 3 to <b>leave 4</b> for the other player, and you win. 8: anything you take leaves 5, 6 or 7, and the other player leaves you 4. You lose. The pattern repeats every 4.</div></div></div>
+  <div class="part u5l2-gap"><div class="pl">(d) Finish the sentence. The losing numbers are <span class="u5l2-blank" data-reveal="&nbsp;">4, 8, 12, 16, …</span>, the <span class="u5l2-blank" data-reveal="&nbsp;">multiples of 4</span>.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">4, 8, 12, 16, …: the <b>multiples of 4</b>.</div></div></div>
+  <div class="explainer u5l2-gap" data-explainer="workBack"></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1k" data-section="1. The Winning Strategy">
+  <div class="def"><b>Key idea</b> &nbsp; <b>Winning strategy</b> (take 1, 2 or 3; last counter wins): always <b>leave a multiple of 4</b> (4, 8, 12, 16, 20, …) for the other player.
+    <div class="u5l2-kl"><b>How many to take:</b> count down from the pile to the next multiple of 4 below it. (21 counters: the next multiple of 4 below is 20, so take 1.)</div>
+    <div class="u5l2-kl">If the pile is already a multiple of 4 on your turn, you cannot force a win. Take 1 and hope the other player makes a mistake.</div></div>
+  <h3 class="sub">Play the computer: the take-away game</h3>
+  <p class="u5l2-how">Tap <b>Take 1</b>, <b>Take 2</b> or <b>Take 3</b>. The computer knows the strategy, so watch which numbers it leaves you (they get a <b>ring</b>). Can you beat it? Change the rules to try the games in Example 3.</p>
+  <div class="u5l2-game" id="u5l2-g1" data-tap></div>
+</section>
+
+<section class="card" data-extra data-ink="s1w" data-section="1. Why the Pattern Repeats Every 4">
+  <h3 class="sub">Why do the losing numbers repeat every 4?</h3>
+  <p>Put every pile size on a number line. A move is a hop down of 1, 2 or 3. A good player always hops onto an L.</p>
+  <div class="explainer" data-explainer="hops4"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> You and a friend play with 100 counters (take 1, 2 or 3, last counter wins). Should you go first or second?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">100 is a multiple of 4 (<span class="tex">4\times25</span>), so the first player is stuck. Go <b>second</b>, and always leave 96, 92, 88, …</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Use the strategy</h3></div>
+  <p class="q">You play the take-away game (take 1, 2 or 3, last counter wins) against a friend.</p>
+  <div class="part"><div class="pl">(a) The pile has 21 counters and you go first. Use the strategy to fill in the game.</div>
+    <table class="u5l2-tbl u5l2-game2">
+      <tr><th>Who</th><td>You</td><td>Friend</td><td>You</td><td>Friend</td><td>You</td><td>Friend</td></tr>
+      <tr><th>Takes</th><td><span data-reveal="&nbsp;">1</span></td><td>3</td><td><span data-reveal="&nbsp;">1</span></td><td>2</td><td><span data-reveal="&nbsp;">2</span></td><td>1</td></tr>
+      <tr><th>Left</th><td><span data-reveal="&nbsp;">20</span></td><td><span data-reveal="&nbsp;">17</span></td><td><span data-reveal="&nbsp;">16</span></td><td><span data-reveal="&nbsp;">14</span></td><td><span data-reveal="&nbsp;">12</span></td><td><span data-reveal="&nbsp;">11</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">You take 1 (leave 20), friend takes 3 (17), you take 1 (16), friend takes 2 (14), you take 2 (12), friend takes 1 (11).</div></div></div>
+  <div class="parts c2 u5l2-gap">
+    <div class="part"><div class="pl">(b) With 11 left, how many do you take? Explain why you are sure to win from here.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Take <b>3</b> to leave 8. Whatever your friend takes (1, 2 or 3), you take the rest of 4 (3, 2 or 1). Each round removes exactly 4, so the pile goes 8, 4, 0, and you take the last counter.</div></div></div>
+    <div class="part"><div class="pl">(c) A new game starts with 24 counters. Should you go first or second? Explain.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Go <b>second</b>. 24 is a multiple of 4, so the first player is stuck. Whatever they take, you take enough to leave 20, then 16, and so on down to 0.</div></div></div>
+  </div>
+  <div class="explainer" data-explainer="pileGame"></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Change a rule, and fix a strategy</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) <b>Variation 1:</b> you may take 1, 2, 3 <b>or 4</b> counters. Last counter still wins. Which numbers should you leave now? How many should you take first from a pile of 23?</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">With 5 counters on your turn you lose: you leave 1, 2, 3 or 4, and the other player takes them all. So leave <b>multiples of 5</b> (5, 10, 15, 20, …). From 23, the next multiple of 5 below is 20. Take <b>3</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) <b>Variation 2:</b> take 1, 2 or 3, but the player who takes the last counter <b>loses</b>. Work backward. Which numbers should you leave? How many should you take first from 15?</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">With 1 counter on your turn you lose (you must take it). So leave 1. From 2, 3 or 4 you can leave 1. From 5 you cannot. So leave 1, 5, 9, 13, … (one more than a multiple of 4). From 15, leave 13: take <b>2</b>.</div></div></div>
+  </div>
+  <div class="part"><div class="pl">(c) Jordan says, “In the 1, 2 or 3 game (last counter wins), always take 3. It makes the pile go down fastest.” Show that Jordan’s strategy can lose when there are 6 counters on his turn. What should he do instead?</div><div class="work" style="--h:110px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">With 6 counters, Jordan takes 3 and leaves 3. The other player takes all 3 and wins. Correct strategy: take enough to leave a multiple of 4. From 6, take <b>2</b> and leave 4. Then Jordan wins.</div></div></div>
+  <div class="explainer u5l2-gap" data-explainer="variations"></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Tic-tac-toe ================= -->
+<section class="card" data-ink="s2" data-section="2. Tic-Tac-Toe: Win, Block, Fork">
+  <div class="sec-h"><span class="badge">2</span><h2>Tic-Tac-Toe: Win, Block, Fork</h2></div>
+  <div class="u5l2-tttintro">
+    <div>
+      <p>Two players take turns on a <span class="tex">3\times3</span> grid. <b>X goes first.</b> Each player puts a mark in an empty square. <b>Three of your marks in a row</b> (across, up and down, or diagonally) wins. If the grid fills up with no three in a row, the game is a <b>tie</b> (a draw). In this lesson the squares are numbered 1 to 9, like this:</p>
+      <p>A <b>fork</b> is a move that makes <b>two</b> threats (two in a row with the third square empty) at the same time. The other player can block only one of them, so you win next turn.</p>
+    </div>
+    <div class="u5l2-xo" data-xo='{"nums":true,"size":190}'></div>
+  </div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Tic-tac-toe checklist</b> (check every empty square, in this order, before you move):
+    <ol class="u5l2-check">
+      <li><b>Win.</b> If you have two in a row and the third square is empty, take it.</li>
+      <li><b>Block.</b> If the other player has two in a row and the third square is empty, take it.</li>
+      <li><b>Fork.</b> If one move gives you two threats at once, take it.</li>
+      <li><b>Otherwise</b> take the centre; if it is taken, take a corner. (One exception: if you are O and X holds two <i>opposite</i> corners, take an edge, or X can fork.)</li>
+    </ol></div>
+  <div class="explainer" data-explainer="ttt"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Use the checklist</h3></div>
+  <p class="q">Use the checklist. Where should the player whose turn it is play? Give the square number and the reason.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) X to play.</div><div class="u5l2-xo" data-xo='{"x":[4,5],"o":[1,9],"ax":6}'></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Square <b>6</b>. Step 1: X has 4 and 5, so 6 makes three in a row across the middle. X wins.</div></div></div>
+    <div class="part"><div class="pl">(b) O to play.</div><div class="u5l2-xo" data-xo='{"x":[1,3],"o":[5],"ao":2}'></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Square <b>2</b>. O cannot win yet. Step 2: X has 1 and 3, so O must block the top row at 2.</div></div></div>
+    <div class="part"><div class="pl">(c) X to play.</div><div class="u5l2-xo" data-xo='{"x":[1,9],"o":[3,5],"ax":7}'></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Square <b>7</b>. X cannot win yet, and O has 3 and 5, so X must block at 7. This block is also a fork: X now threatens 4 (1-4-7) and 8 (7-8-9). O can stop only one.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Why good players always tie</h3></div>
+  <p class="q">Mateo (X) plays the centre. Sofia (O) answers on an edge, square 2. Mateo plays 1.</p>
+  <div class="u5l2-ex5">
+    <div class="u5l2-xo" data-xo='{"x":[5,1],"o":[2],"ao":9,"ax":7}'></div>
+    <div class="u5l2-col">
+      <div class="part"><div class="pl">(a) Why must Sofia play 9 now?</div><div class="work" style="--h:60px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Mateo has 1 and 5. He threatens to win at 9 (the diagonal 1-5-9), so she must block.</div></div></div>
+      <div class="part"><div class="pl">(b) Mateo then plays 7. Show that he will win on his next turn.</div><div class="work" style="--h:80px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Mateo has 1, 5, 7. He threatens 4 (1-4-7) and 3 (3-5-7): a fork. Sofia has no threat of her own and can block only one square, so Mateo wins with the other.</div></div></div>
+    </div>
+  </div>
+  <div class="part u5l2-gap"><div class="pl">(c) Sofia’s first move was the mistake. People have checked every possible game (a systematic list): after X takes the centre, O must answer in a <b>corner</b>. Then, if both players use the checklist, the game always ends in a tie. Priya says, “If I go first and take the centre, I will always win.” Correct her statement.</div><div class="work" style="--h:100px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Priya will win only if the other player makes a mistake (like Sofia’s edge move). If O answers the centre with a corner and then always blocks, nobody can win: the game is a tie. A good player never loses at tic-tac-toe, but cannot force a win against another good player.</div></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="g2" data-section="2. Play the Computer: Tic-Tac-Toe">
+  <h3 class="sub">Play the computer: tic-tac-toe</h3>
+  <p class="u5l2-how">Tap a square to play. <b>Hint</b> shows what the checklist says. The <b>Checklist</b> computer follows the four steps exactly. The <b>Perfect</b> computer has checked every possible game. Can you ever beat it?</p>
+  <div class="u5l2-game" id="u5l2-g2" data-tap></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Play X against the <b>Checklist</b> computer. Start in corner 1, then take the opposite corner, 9. What happens? Is the checklist perfect?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The computer takes the centre, then (step 4) a corner, and you block its threat with a <b>fork</b>: you win! After X 1, O 5, X 9, the safe move for O is an <b>edge</b>. The checklist is a great start, but it isn’t perfect.</div></div></div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 2 · Questions 1–7</h2>
+  <p class="pr-t">Try these before we play dots and boxes.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Strategy toolbox</span>
+    <span><b>2</b>Leave a multiple of 4</span>
+    <span><b>3</b>Take 1 or 2</span>
+    <span><b>4</b>Ravi’s strategy</span>
+    <span><b>5</b>Win, block, fork</span>
+    <span><b>6</b>Different first moves</span>
+    <span><b>7</b>Ella and Noor</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u5l2">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Dots and boxes ================= -->
+<section class="card" data-ink="s3" data-section="3. Dots and Boxes: Don’t Draw the Third Side">
+  <div class="sec-h"><span class="badge">3</span><h2>Dots and Boxes: Don’t Draw the Third Side</h2></div>
+  <p>Start with a grid of dots. Players take turns drawing one short line that joins two dots next to each other (across or up and down). If your line finishes the <b>fourth</b> side of a box, write your initial in the box and <b>take another turn</b>. When every line is drawn, the player with more boxes wins.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Dots and boxes strategy</b>
+    <ol class="u5l2-check">
+      <li>If a box has 3 sides, take it (draw the fourth side).</li>
+      <li>Never draw the <b>third</b> side of a box if you can help it: the other player will take that box and move again.</li>
+      <li>Near the end, every line may give boxes away. Then give away the <b>smallest</b> group of boxes.</li>
+    </ol></div>
+  <div class="explainer" data-explainer="dots"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Take a box, then play safe</h3></div>
+  <p class="q">It is your turn. The boxes are named A to I. The dashed lines <span class="tex">q</span>, <span class="tex">r</span> and <span class="tex">s</span> have <b>not</b> been drawn yet.</p>
+  <div class="u5l2-ex6">
+    <div class="u5l2-dfig" id="u5l2-ex6fig"></div>
+    <div class="u5l2-col">
+      <div class="part"><div class="pl">(a) Which box can you take right now? Which line do you draw?</div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Box <b>E</b> has 3 sides (top, bottom, left). Draw its right side, the line between E and F. You take E and get another turn.</div></div></div>
+      <div class="part"><div class="pl">(b) Now you must draw one more line. For each of <span class="tex">q</span>, <span class="tex">r</span> and <span class="tex">s</span>, say whether it is safe or which boxes it gives away.</div><div class="work" style="--h:90px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">q</span>: box A would have 3 sides, so it gives away A. <span class="tex">r</span>: box C would have only 2 sides. <b>Safe.</b> <span class="tex">s</span>: after (a), F and I each have 2 sides, so <span class="tex">s</span> gives away F <b>and</b> I. Draw <span class="tex">r</span>.</div></div></div>
+    </div>
+  </div>
+  <div class="part u5l2-gap"><div class="pl">(c) Leo says, “I like to draw a side on a box that already has two sides. Then I’m closer to finishing it.” What is wrong with Leo’s strategy?</div><div class="work" style="--h:90px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">His line is the box’s <b>third</b> side. The other player draws the fourth side and takes the box, then gets another turn. Leo should draw sides on boxes with 0 or 1 sides instead.</div></div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> How many lines are drawn in a whole game on this grid (4 dots by 4 dots)? How did you count them?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>24</b>: 4 rows of 3 lines across (12) and 4 columns of 3 lines up and down (12). A systematic list, row by row.</div></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="g3" data-section="3. Play the Computer: Dots and Boxes">
+  <h3 class="sub">Play the computer: dots and boxes</h3>
+  <p class="u5l2-how">Tap between two dots to draw a line. Your lines are <b class="u5l2-cy">blue</b>, the computer’s are <b class="u5l2-cc">red</b>. Turn on <b>Count the sides</b> to see how many sides each box has, so you never draw a third side.</p>
+  <div class="u5l2-game" id="u5l2-g3" data-tap></div>
+</section>
+
+<!-- ================= 4. Tower puzzle ================= -->
+<section class="card" data-ink="s4" data-section="4. The Tower Puzzle">
+  <div class="sec-h"><span class="badge">4</span><h2>The Tower Puzzle: Simplify and Look for a Pattern</h2></div>
+  <p>The <b>tower puzzle</b> has three pegs, A, B and C, and some discs of different sizes stacked on peg A, biggest at the bottom. The goal is to move the whole tower to peg C.</p>
+  <div class="u5l2-towerintro">
+    <div class="def"><b>Rules</b>
+      <ol class="u5l2-check">
+        <li>Move one disc at a time: the top disc of a peg.</li>
+        <li>Never put a disc on top of a smaller disc.</li>
+      </ol>
+      <div class="u5l2-kl"><b>Model it</b> with coins: a toonie, a loonie, a quarter, a nickel and a dime are five different sizes (biggest to smallest).</div></div>
+    <div class="u5l2-tfig" id="u5l2-towerfig"></div>
+  </div>
+  <h3 class="sub">Try it: the tower puzzle</h3>
+  <p class="u5l2-how">Tap a peg to pick up its top disc, then tap the peg to put it on. Start with 1 disc, then 2, then 3: <b>simplify the problem</b>. Count your moves. <b>Solve it for me</b> shows the fewest moves.</p>
+  <div class="u5l2-game" id="u5l2-g4" data-tap></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>What is the fewest number of moves?</h3></div>
+  <p class="q">What is the fewest number of moves for the tower puzzle? <b>Simplify the problem</b>: start with 1 disc, then 2, then 3.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many moves does 1 disc take? List the moves for 2 discs (S = small, L = large).</div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 disc: 1 move (A to C). 2 discs: S A<span class="tex">\to</span>B, L A<span class="tex">\to</span>C, S B<span class="tex">\to</span>C. That is 3 moves.</div></div></div>
+    <div class="part"><div class="pl">(b) Model 3 discs (S, M, L) and list the 7 moves. The first is done.</div>
+      <table class="u5l2-tbl u5l2-mv">
+        <tr><th>Move</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+        <tr><th>Disc</th><td>S</td><td><span data-reveal="&nbsp;">M</span></td><td><span data-reveal="&nbsp;">S</span></td><td><span data-reveal="&nbsp;">L</span></td><td><span data-reveal="&nbsp;">S</span></td><td><span data-reveal="&nbsp;">M</span></td><td><span data-reveal="&nbsp;">S</span></td></tr>
+        <tr><th>From</th><td>A</td><td><span data-reveal="&nbsp;">A</span></td><td><span data-reveal="&nbsp;">C</span></td><td><span data-reveal="&nbsp;">A</span></td><td><span data-reveal="&nbsp;">B</span></td><td><span data-reveal="&nbsp;">B</span></td><td><span data-reveal="&nbsp;">A</span></td></tr>
+        <tr><th>To</th><td>C</td><td><span data-reveal="&nbsp;">B</span></td><td><span data-reveal="&nbsp;">B</span></td><td><span data-reveal="&nbsp;">C</span></td><td><span data-reveal="&nbsp;">A</span></td><td><span data-reveal="&nbsp;">C</span></td><td><span data-reveal="&nbsp;">C</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">S A→C, M A→B, S C→B, L A→C, S B→A, M B→C, S A→C: 7 moves.</div></div></div>
+  </div>
+  <div class="part"><div class="pl">(c) Look at moves 1 to 3 in your table: they move the top <span class="u5l2-blank u5l2-bs" data-reveal="&nbsp;">2</span> discs out of the way (onto B). Move 4 moves the <span class="u5l2-blank" data-reveal="&nbsp;">largest</span> disc. Moves 5 to 7 move the 2 discs back on top. So for 4 discs: move the top 3 off, move the largest, move the 3 back on. Complete the table.</div>
+    <table class="u5l2-tbl u5l2-pat">
+      <tr><th>Discs</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+      <tr><th>Fewest moves</th><td>1</td><td>3</td><td>7</td><td><span data-reveal="&nbsp;"><span class="tex">7+1+7=15</span></span></td><td><span data-reveal="&nbsp;">31</span></td><td><span data-reveal="&nbsp;">63</span></td></tr>
+    </table>
+    <div class="work" style="--h:60px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Each new number is <b>double the one before, plus 1</b>: <span class="tex">2\times15+1=31</span>, <span class="tex">2\times31+1=63</span>. Also, each number is one less than a power of 2: <span class="tex">2-1,\ 4-1,\ 8-1,\ 16-1,\ 32-1,\ 64-1</span>.</div></div></div>
+  <div class="explainer u5l2-gap" data-explainer="tower"></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4k" data-section="4. The Tower Rule">
+  <div class="def"><b>Key idea</b> &nbsp; <b>Tower puzzle:</b> &nbsp; fewest moves for <span class="tex">n</span> discs <span class="tex">=2\times(\text{moves for }n-1\text{ discs})+1\ =\ 2^n-1</span>
+    <div class="u5l2-kl"><b>Why:</b> move the smaller discs out of the way, move the biggest disc once, then move the smaller discs back on top of it.</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For 8 discs: <span class="keys">2 <kbd>^</kbd> 8 <kbd>−</kbd> 1 <kbd>ENTER</kbd></span> shows <b>255</b>.</div>
+    <button class="pill" type="button" data-keys="2 ^ 8 − 1 =">Show me</button></div>
+  <div class="explainer" data-explainer="towerPattern"></div>
+  <div class="part think u5l2-gap" data-extra><div class="pl"><span class="think-tag">Think</span> When can the biggest disc move? Why does it move only <b>once</b> in the fewest moves?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Only when every other disc is stacked on the third peg (nothing on top of it, nothing on its target). Moving it again would mean moving all the others out of the way again: wasted moves.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Big towers, a wrong pattern, and a new rule</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A science centre has a tower puzzle with 8 discs. A visitor makes 1 move every second and never makes a mistake. How long does the puzzle take? Give minutes and seconds.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2^8-1=256-1=255</span> moves, so 255 seconds. <span class="tex">255\div60=4</span> remainder 15 (<span class="tex">4\times60=240</span>). It takes <b>4 min 15 s</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Kai says, “1 disc takes 1 move and 2 discs take 3 moves, so each disc adds 2 moves. 5 discs take 9 moves.” Find his error and correct it.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Kai looked at only two cases. With 3 discs the count is 7, not 5, so “add 2” is wrong. The moves double and add 1: 1, 3, 7, 15, 31. 5 discs take <b>31</b> moves.</div></div></div>
+  </div>
+  <div class="part"><div class="pl">(c) <b>Variation:</b> a disc may move only to a peg <b>next to</b> its peg (A to B, B to C, C to B, B to A, but never straight between A and C). Model the puzzle. How many moves do 1 disc and 2 discs take? Does the rule <span class="tex">2^n-1</span> still work?</div><div class="work" style="--h:130px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 disc: A→B, B→C: <b>2 moves</b>. 2 discs: S A→B, S B→C, L A→B, S C→B, S B→A, L B→C, S A→B, S B→C: <b>8 moves</b>. No. <span class="tex">2^1-1=1</span> and <span class="tex">2^2-1=3</span>, but the counts are 2 and 8. Changing a rule changes the pattern.</div></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- sources: https://mathshistory.st-andrews.ac.uk/Extras/Hanoi/ (Lucas, published in Paris in 1883 under the name
+     "N Claus de Siam", an anagram of "Lucas d'Amiens"; the legend: 64 gold discs, priests, no disc on a smaller one);
+     https://en.wikipedia.org/wiki/Tower_of_Hanoi (Lucas 1883, N. Claus (de Siam) = Lucas d'Amiens; the legend of the
+     Tower of Brahma with 64 golden disks, the world ends when it is finished; 2^64 − 1 moves at one per second take about
+     585 billion years, about 42 times the age of the universe). 2^64 − 1 = 18 446 744 073 709 551 615 (checked in Python);
+     ÷ 31 556 952 s per year ≈ 5.85 × 10^11 years. -->
+<section class="card history" data-ink="hist" data-section="Math History: A Tower to End the World">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1883</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">A tower to end the world</h3>
+      <p>In <b>1883</b>, the French mathematician <b>Édouard Lucas</b> sold a new puzzle in Paris: our tower puzzle. He used a made-up name, “N. Claus de Siam”. Its letters are a scramble of “Lucas d’Amiens”.</p>
+      <p>The puzzle came with a legend. The story goes that in a temple, priests move a tower of <b>64 gold discs</b>, one disc at a time, never a bigger disc on a smaller one. When they finish, the world will end.</p>
+      <div class="part hist-q"><div class="pl">Should we worry? 64 discs take <span class="tex">2^{64}-1</span> moves (the picture counts them). At 1 move per second, about how many years is that? A year is about 31.6 million seconds.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2^{64}-1=18\,446\,744\,073\,709\,551\,615</span> seconds <span class="tex">\div\ 31\,600\,000\approx584\,000\,000\,000</span>: about <b>584 billion years</b>, about 40 times as long as the universe has existed. We’re safe!</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u5l2-hist" viewBox="0 0 600 300" role="img" aria-label="A tall tower of 64 thin gold discs on the first of three needles; the top three discs move to the third needle in 7 moves while a counter shows how many moves are still left"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u5l2"></section>
+
+<!-- ================= 5. Hidden ships ================= -->
+<section class="card" data-ink="s5" data-section="5. Hidden Ships: Eliminate Possibilities">
+  <div class="sec-h"><span class="badge">5</span><h2>A Hidden-Ships Grid Game: Eliminate Possibilities</h2></div>
+  <p>Each player has a secret <span class="tex">6\times6</span> grid, with columns A to F across and rows 1 to 6 up. A square is named by its column, then its row, like a map: C4. Each player hides a <b>2-ship</b> (2 squares in a line) and a <b>3-ship</b> (3 squares in a line), across or up and down, never diagonal. Players take turns calling a square. The other player answers “hit” or “miss”, and “sunk” when every square of a ship has been hit. The first player to sink all the other player’s ships wins.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Hidden-ships strategy</b>
+    <ul class="u5l2-check u5l2-ul">
+      <li><b>Hunt:</b> call only the squares of one colour in a checkerboard pattern. Two squares side by side always have different colours, so every ship covers at least one shaded square. You need at most half the squares (18 of the 36).</li>
+      <li><b>Target:</b> after a hit, call the squares next to it (up, down, left, right). After two hits in a line, keep going along that line.</li>
+      <li><b>Eliminate:</b> cross off any position that would use a square you know is a miss.</li>
+    </ul></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> In how many different places can a 2-ship hide on the <span class="tex">6\times6</span> grid?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Across: 5 places in each of the 6 rows, 30. Up and down: 5 in each of the 6 columns, 30. In all, <b>60</b> places. That is why a good hunting plan matters!</div></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s5w" data-section="5. Why the Checkerboard Works">
+  <h3 class="sub">Why does the checkerboard always find every ship?</h3>
+  <div class="explainer" data-explainer="checker"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Where is the 3-ship?</h3></div>
+  <div class="u5l2-ex9">
+    <div><div class="u5l2-sfig" id="u5l2-ex9fig"></div><div class="u5l2-key">X = hit, ○ = miss. The 2-ship at E5–E6 is sunk.</div></div>
+    <div class="u5l2-col">
+      <p class="q" style="margin:0">You hit the 3-ship at C3. Your next two calls, C4 and D3, were misses.</p>
+      <div class="part"><div class="pl">(a) <b>Make a systematic list</b> of every place a 3-ship that covers C3 could be: 3 across, then 3 up and down. Then cross out the ones that use a miss.</div><div class="work" style="--h:120px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Across: A3–C3, <s>B3–D3</s> (D3 miss), <s>C3–E3</s> (D3 miss). Up and down: C1–C3, <s>C2–C4</s> (C4 miss), <s>C3–C5</s> (C4 miss). Only <b>A3–C3</b> and <b>C1–C3</b> are left.</div></div></div>
+    </div>
+  </div>
+  <div class="parts c2 u5l2-gap">
+    <div class="part"><div class="pl">(b) Which square should you call next? What will each answer tell you?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Call B3 (or C2). If B3 is a hit, the ship is A3–C3; call A3 to sink it. If B3 is a miss, the ship must be C1–C3; call C2 and C1.</div></div></div>
+    <div class="part"><div class="pl">(c) Mia says, “The ship could still be C3, D3 and E3.” What is her error?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">D3 was a miss, so no ship can cover D3. Any position that uses D3 is eliminated.</div></div></div>
+  </div>
+  <div class="explainer" data-explainer="ships"></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="g5" data-section="5. Play the Computer: Hidden Ships">
+  <h3 class="sub">Play the computer: find its hidden ships</h3>
+  <p class="u5l2-how">The computer has hidden a 2-ship and a 3-ship. Tap a square to call it. Turn on the <b>Checkerboard</b> to hunt, and use <b>Hint</b> after a hit. How few calls do you need?</p>
+  <div class="u5l2-game" id="u5l2-g5" data-tap></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Take-away (1, 2 or 3; last wins):</b> <b>work backward</b> from small piles. Leave a <b>multiple of 4</b>. Change a rule and the numbers change: take 1 to 4 → leave multiples of 5; last loses → leave 1, 5, 9, 13, …</div>
+    <div><b>Tic-tac-toe:</b> check in order: <b>win, block, fork</b>, then centre, then a corner. A fork makes two threats at once. Two good players always tie.</div>
+    <div><b>Dots and boxes:</b> take any box with 3 sides. Never draw a box’s <b>third</b> side. If you must give boxes away, give the <b>smallest</b> group.</div>
+    <div><b>Tower puzzle:</b> <b>simplify</b> and <b>look for a pattern</b>: 1, 3, 7, 15, … double and add 1, so <span class="tex">2^n-1</span>. <b>Hidden ships:</b> hunt on a checkerboard, target next to a hit, <b>eliminate</b> positions that use a miss.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u5l2">
+    <div><div class="kicker">Your turn</div><b>Assignment 2 · Questions 8–18</b><div class="muted">Dots and boxes, the tower puzzle, hidden ships, invent your own game variation, and multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l3/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 3 — Measuring, Drawing and Classifying Angles</b><div class="muted">From games to geometry: next we name angles, measure them with a protractor in any direction, and draw our own.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u5l2.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u5l2', homeHref: '../../', title: '5.2 Spatial Games and Strategies' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

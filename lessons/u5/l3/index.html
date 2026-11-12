@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Measuring, Drawing and Classifying Angles · Math 10-3 5.3</title>
+<meta name="description" content="Math 10-3 Unit 5 Lesson 3: the parts of an angle and its names, acute, right, obtuse, straight and reflex angles, measuring and drawing angles with a protractor (even when the angle is turned), reflex angles as 360° minus the smaller angle, and the sum of the angles in a polygon, (n − 2) × 180°, by inductive reasoning. A protractor you drag and turn. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u5l3.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u5l3">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Sliding Ladder">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Sliding Ladder</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A ladder leans against a wall. There is a <b>dot of paint</b> at the exact <b>middle</b> of the ladder.</p><p class="vw-ctx">The bottom of the ladder slips. It slides out along the floor, and the top slides down the wall, until the ladder lies flat.</p><p class="vw-ask">What path does the dot of paint follow?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="A ladder leaning on a wall, its foot slipping a little back and forth on the floor, with a red dot of paint at its middle">
+    <rect x="280" y="14" width="24" height="218" fill="#d9cdb8" stroke="#7a5124" stroke-width="3"/>
+    <g stroke="#b9ab92" stroke-width="2"><line x1="280" y1="60" x2="304" y2="60"/><line x1="280" y1="110" x2="304" y2="110"/><line x1="280" y1="160" x2="304" y2="160"/><line x1="280" y1="210" x2="304" y2="210"/></g>
+    <rect x="10" y="230" width="296" height="14" rx="3" fill="#b98a55" stroke="#7a5124" stroke-width="3"/>
+    <g><animateTransform attributeName="transform" type="translate" values="224.9 230;214.9 230;205.1 230;195.5 230;186.1 230;195.5 230;205.1 230;214.9 230;224.9 230" dur="4s" repeatCount="indefinite"/>
+      <g><animateTransform attributeName="transform" type="rotate" values="-74;-71;-68;-65;-62;-65;-68;-71;-74" dur="4s" repeatCount="indefinite"/>
+        <g stroke="#8a5a1c" stroke-width="5" stroke-linecap="round"><line x1="0" y1="-8" x2="200" y2="-8"/><line x1="0" y1="8" x2="200" y2="8"/></g>
+        <g stroke="#a8763a" stroke-width="3.5"><line x1="22" y1="-8" x2="22" y2="8"/><line x1="47" y1="-8" x2="47" y2="8"/><line x1="72" y1="-8" x2="72" y2="8"/><line x1="128" y1="-8" x2="128" y2="8"/><line x1="153" y1="-8" x2="153" y2="8"/><line x1="178" y1="-8" x2="178" y2="8"/></g>
+        <circle cx="100" cy="0" r="9" fill="#d23a2e" stroke="#7a1f16" stroke-width="2.5"/>
+      </g>
+    </g>
+    <g stroke="#9a6a24" stroke-width="3" stroke-linecap="round" opacity=".8"><line x1="150" y1="222" x2="168" y2="222"><animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/></line><line x1="140" y1="212" x2="160" y2="212"><animate attributeName="opacity" values="0;1;0" dur="2s" begin=".3s" repeatCount="indefinite"/></line></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="58" y="70" font-size="52" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u5l3-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> a straight line, slanting down</div>
+      <div class="opt right"><b>B</b> a curve that bulges out, away from the corner</div>
+      <div class="opt"><b>C</b> a curve that dips in, toward the corner</div>
+      <div class="opt"><b>D</b> straight down, then straight across</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u5l3-wans"><div><b>B: part of a circle!</b> The middle of the ladder always stays the <b>same distance</b> from the corner where the wall meets the floor: half the ladder’s length. Points that are all the same distance from one centre make a <b>circle</b>, so the dot draws a quarter circle. <span class="muted">Try it: slide a ruler down a book standing on your desk and watch its middle. On the way down, the ladder makes every angle with the floor, from almost 90° to 0°.</span></div><div class="u5l3-fig" data-fig="wans"></div></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 5 Angles, Parallel Lines and Spatial Puzzles · Lesson 3</div>
+  <h1>Measuring, Drawing and Classifying Angles</h1>
+  <p class="lede">Angles are everywhere: a laptop screen, a ladder on the floor, a slice of pizza, the corners of a stop sign. Today we name angles, sort them by size, <b>measure and draw</b> them with a protractor (even when they are turned), find <b>reflex</b> angles, and discover the rule for the angles inside <b>any polygon</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>name the <b>vertex</b> and <b>arms</b> of an angle, and name an angle three ways (<span class="tex">\angle ABC</span>, <span class="tex">\angle B</span>, <span class="tex">\angle 1</span>)</li>
+      <li>sort angles by size: <b>acute, right, obtuse, straight</b> and <b>reflex</b></li>
+      <li><b>measure</b> an angle with a protractor, using the scale that has its 0 on an arm</li>
+      <li><b>draw</b> an angle of a given size, and find or draw a reflex angle: <span class="tex">360^\circ-</span> the smaller angle</li>
+      <li>use inductive reasoning to find the sum of the angles in a polygon: <span class="tex">(n-2)\times180^\circ</span></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G6</b> Demonstrate an understanding of angles, including acute, right, obtuse, straight and reflex, by: drawing; replicating and constructing; bisecting; solving problems.<br><span class="muted">Today: measuring, drawing and classifying angles, and solving problems with them.</span></div>
+</section>
+
+<!-- ================= 1. Parts and names ================= -->
+<section class="card" data-ink="s1" data-section="1. The Parts of an Angle">
+  <div class="sec-h"><span class="badge">1</span><h2>The Parts of an Angle, and Its Name</h2></div>
+  <p>An <b>angle</b> is made by two <b>arms</b> (rays) that start at the same point. That point is the <b>vertex</b>. The size of an angle is the amount of <b>turn</b> from one arm to the other. We measure it in <b>degrees</b> (°). One full turn is 360°, a half turn is 180° and a quarter turn is 90°.</p>
+  <div class="u5l3-two">
+    <div class="u5l3-fig" data-fig="parts" style="width:330px;height:250px"></div>
+    <div class="def"><b>Key idea</b> &nbsp; Three ways to name an angle
+      <ol class="u5l3-steps">
+        <li><b>1.</b> Three letters, with the <b>vertex in the middle</b>: <span class="tex">\angle ABC</span> or <span class="tex">\angle CBA</span>.</li>
+        <li><b>2.</b> The vertex letter alone: <span class="tex">\angle B</span>. Use this only when there is just <b>one</b> angle at that vertex.</li>
+        <li><b>3.</b> A small number or letter written inside the angle: <span class="tex">\angle 1</span>.</li>
+      </ol>
+      <div class="u5l3-note">The symbol <span class="tex">\angle</span> means “angle”.</div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The length of the arms does <b>not</b> change the size of an angle. Long arms or short arms, the turn between them is the same. If the arms are too short to measure, make them longer with a ruler.</div></div>
+  <div class="explainer u5l3-gap" data-explainer="turn"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Name the angles</h3></div>
+  <div class="u5l3-ex1">
+    <div class="u5l3-fig" data-fig="ex1" style="width:330px;height:270px"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Name <span class="tex">\angle 1</span> in two other ways.</div><div class="work" style="--h:50px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle PQR</span> or <span class="tex">\angle RQP</span> (the vertex <span class="tex">Q</span> in the middle)</div></div></div>
+      <div class="part"><div class="pl">(b) Name the vertex and the two arms of <span class="tex">\angle 2</span>.</div><div class="work" style="--h:50px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">vertex <span class="tex">Q</span>; arms <span class="tex">QR</span> and <span class="tex">QS</span></div></div></div>
+      <div class="part"><div class="pl">(c) Why is it not clear to call <span class="tex">\angle 1</span> “<span class="tex">\angle Q</span>”?</div><div class="work" style="--h:60px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Three angles have their vertex at <span class="tex">Q</span>: <span class="tex">\angle 1</span>, <span class="tex">\angle 2</span>, and the big angle <span class="tex">\angle PQS</span>. The name <span class="tex">\angle Q</span> could mean any of them.</div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Types ================= -->
+<section class="card" data-ink="s2" data-section="2. Types of Angles">
+  <div class="sec-h"><span class="badge">2</span><h2>Types of Angles</h2></div>
+  <p>We sort angles into types by their size. Every type has a name you need to know.</p>
+  <div class="u5l3-types">
+    <div><b class="u5l3-tn">Acute</b><div class="u5l3-fig" data-fig="t-acute"></div><b>less than 90°</b><span>a sharp corner</span></div>
+    <div><b class="u5l3-tn">Right</b><div class="u5l3-fig" data-fig="t-right"></div><b>exactly 90°</b><span>a square corner (a small square marks 90°)</span></div>
+    <div><b class="u5l3-tn">Obtuse</b><div class="u5l3-fig" data-fig="t-obtuse"></div><b>between 90° and 180°</b><span>wider than a square corner</span></div>
+    <div><b class="u5l3-tn">Straight</b><div class="u5l3-fig" data-fig="t-straight"></div><b>exactly 180°</b><span>a straight line</span></div>
+    <div><b class="u5l3-tn u5l3-red">Reflex</b><div class="u5l3-fig" data-fig="t-reflex"></div><b>between 180° and 360°</b><span>more than a half turn</span></div>
+  </div>
+  <p class="u5l3-gap">Every pair of arms really makes <b>two</b> angles: the small one inside, and the big one going the long way around. Together they make a full turn, 360°. When we say “the angle” we mean the smaller one, unless it is marked the long way around. Then it is a <b>reflex</b> angle.</p>
+  <p>Angles are all around us: the corner of a page, a door swinging open, a car’s seat back, the slope of a roof. An angle can also be made where a <b>line meets a flat surface</b> (a <b>plane</b>), like a fence post standing in the ground or a ladder leaning on the floor. A fence post that is straight up meets the ground at 90°. A leaning ladder makes an acute angle with the floor.</p>
+  <div class="explainer" data-explainer="types"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Name the type</h3></div>
+  <div class="part"><div class="pl">Write the type of each angle: acute, right, obtuse, straight or reflex.</div>
+    <table class="u5l3-tbl u5l3-t8">
+      <tr><th>Angle</th><td>47°</td><td>90°</td><td>163°</td><td>181°</td><td>300°</td><td>89.5°</td><td>180°</td><td>112°</td></tr>
+      <tr><th>Type</th><td><span data-reveal="&nbsp;">acute</span></td><td><span data-reveal="&nbsp;">right</span></td><td><span data-reveal="&nbsp;">obtuse</span></td><td><span data-reveal="&nbsp;">reflex</span></td><td><span data-reveal="&nbsp;">reflex</span></td><td><span data-reveal="&nbsp;">acute</span></td><td><span data-reveal="&nbsp;">straight</span></td><td><span data-reveal="&nbsp;">obtuse</span></td></tr>
+    </table>
+    <div class="work" style="--h:40px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">acute, right, obtuse, reflex, reflex, acute, straight, obtuse. 89.5° is just under 90°, so it is still <b>acute</b>. 181° is just over 180°, so it is <b>reflex</b>.</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Angles in real life</h3></div>
+  <div class="part"><div class="pl">Write the type of the marked angle in each picture.</div>
+    <div class="u5l3-pics">
+      <div><div class="u5l3-fig" data-fig="ex3a"></div><p>(a) A laptop screen and its keyboard.</p><span class="u5l3-blank" data-reveal="&nbsp;">obtuse</span></div>
+      <div><div class="u5l3-fig" data-fig="ex3b"></div><p>(b) The pizza that is left after one slice of 8 is eaten (the angle at the centre).</p><span class="u5l3-blank" data-reveal="&nbsp;">reflex</span></div>
+      <div><div class="u5l3-fig" data-fig="ex3c"></div><p>(c) A ladder and the floor it stands on.</p><span class="u5l3-blank" data-reveal="&nbsp;">acute</span></div>
+      <div><div class="u5l3-fig" data-fig="ex3d"></div><p>(d) A flagpole standing straight up and the ground.</p><span class="u5l3-blank" data-reveal="&nbsp;">right</span></div>
+    </div>
+    <div class="work" style="--h:40px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>obtuse</b> · (b) <b>reflex</b>: the eaten slice was <span class="tex">360^\circ\div8=45^\circ</span> (acute), so the pizza left makes <span class="tex">360^\circ-45^\circ=315^\circ</span> · (c) <b>acute</b> · (d) <b>right</b>. (c) and (d) are angles where a line meets a flat surface (the floor or the ground).</div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exc" data-section="Extra Example: Clock Hands">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>Clock hands</h3></div>
+  <p class="u5l3-p">A clock face is a full turn, 360°, split into 12 equal spaces. So each space between two numbers is <span class="tex">360^\circ\div12=30^\circ</span>. Find the smaller angle between the hands at each time, and its type.</p>
+  <div class="parts c5">
+    <div class="part"><div class="pl">(a) 1:00</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 space: <b>30°</b>, acute</div></div></div>
+    <div class="part"><div class="pl">(b) 3:00</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">3 spaces: <b>90°</b>, right</div></div></div>
+    <div class="part"><div class="pl">(c) 5:00</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">5 spaces: <b>150°</b>, obtuse</div></div></div>
+    <div class="part"><div class="pl">(d) 6:00</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">6 spaces: <b>180°</b>, straight</div></div></div>
+    <div class="part"><div class="pl">(e) 10:00</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 spaces: <b>60°</b>, acute. The long way around is <span class="tex">360^\circ-60^\circ=300^\circ</span>, reflex.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= 3. Measuring ================= -->
+<section class="card" data-ink="s3" data-section="3. Measuring with a Protractor">
+  <div class="sec-h"><span class="badge">3</span><h2>Measuring an Angle with a Protractor</h2></div>
+  <p>A <b>protractor</b> measures angles. It has <b>two scales</b> of numbers that run in opposite directions. The <b>outer</b> (black) scale starts at 0 on the <b>left</b>. The <b>inner</b> (grey) scale starts at 0 on the <b>right</b>. The <b>centre mark</b> goes on the vertex, and the <b>base line</b> (the 0 line) goes along one arm.</p>
+  <div class="u5l3-two u5l3-two-p">
+    <div class="u5l3-fig" data-fig="protparts" style="width:440px;height:300px"></div>
+    <div class="def"><b>Key idea</b> &nbsp; Measuring an angle: 3 steps
+      <ol class="u5l3-steps">
+        <li><b>Step 1.</b> Put the <b>centre mark</b> exactly on the <b>vertex</b>.</li>
+        <li><b>Step 2.</b> Turn the protractor so the <b>base line</b> lies along <b>one arm</b>.</li>
+        <li><b>Step 3.</b> Find the <b>0</b> that sits on that arm. Follow <b>that</b> scale around to the other arm and read the number.</li>
+      </ol>
+      <div class="u5l3-note"><b>Check:</b> does the angle look acute or obtuse? Every mark has two numbers (like 50 and 130). Pick the one that matches.</div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The angle does not have to point to the right, and the protractor does not have to be level. Turn the protractor (or the page) so the base line lies on an arm. The 0 you start from can be on the left or on the right.</div></div>
+  <div class="explainer u5l3-gap" data-explainer="measure"></div>
+</section>
+
+<section class="card" data-ink="s3t" data-section="3. Try It: The Protractor">
+  <h3 class="sub">Try it: drag and turn the protractor</h3>
+  <p>Drag the protractor to move it. Turn it with the round handles. It snaps onto the vertex and onto an arm, and the box under it tells you each step. Tap <b>Hide the reading</b>, then <b>New angle</b> (it can point any way), and let the class read it first.</p>
+  <div class="u5l3-tool" id="u5l3-prot"></div>
+</section>
+
+<section class="card" data-extra data-ink="s3x" data-section="3. Why Two Numbers?">
+  <h3 class="sub">Why does every mark have two numbers that add to 180?</h3>
+  <p>The two scales count the same straight base line from opposite ends.</p>
+  <div class="explainer" data-explainer="twoNums"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> A classmate reads 155° for an angle that is clearly a sharp corner. What did they most likely do, and what is the right reading?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">They read the wrong scale (the one whose 0 is <b>not</b> on an arm). The two numbers at a mark add to 180, so the right reading is <span class="tex">180^\circ-155^\circ=25^\circ</span>, which is acute.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Read the protractor</h3></div>
+  <div class="pl">Read each protractor. Give the size of the angle and its type.</div>
+  <div class="parts c2 u5l3-p4">
+    <div class="part"><div class="u5l3-fig" data-fig="ex4a"></div><div class="pl">(a) Size <span class="u5l3-blank" data-reveal="&nbsp;">62°</span> &nbsp; Type <span class="u5l3-blank" data-reveal="&nbsp;">acute</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The arm on the right is on the inner 0. Inner scale: <b>62°</b>. (Not 118: the angle is acute.)</div></div></div>
+    <div class="part"><div class="u5l3-fig" data-fig="ex4b"></div><div class="pl">(b) Size <span class="u5l3-blank" data-reveal="&nbsp;">145°</span> &nbsp; Type <span class="u5l3-blank" data-reveal="&nbsp;">obtuse</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The arm on the left is on the outer 0. Outer scale: <b>145°</b>. (Not 35: the angle is obtuse.)</div></div></div>
+    <div class="part"><div class="u5l3-fig" data-fig="ex4c"></div><div class="pl">(c) Size <span class="u5l3-blank" data-reveal="&nbsp;">108°</span> &nbsp; Type <span class="u5l3-blank" data-reveal="&nbsp;">obtuse</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The protractor is turned, but one arm is still on the inner 0. Inner scale: <b>108°</b>.</div></div></div>
+    <div class="part"><div class="u5l3-fig" data-fig="ex4d"></div><div class="pl">(d) Size <span class="u5l3-blank" data-reveal="&nbsp;">35°</span> &nbsp; Type <span class="u5l3-blank" data-reveal="&nbsp;">acute</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One arm is on the outer 0. Count on the outer scale: <b>35°</b>. (Not 145: the angle is acute.)</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Measure with your own protractor</h3></div>
+  <div class="part"><div class="pl">Use your own protractor to measure each angle in your booklet (the pictures there are full size). Then write its type.</div>
+    <div class="u5l3-row3">
+      <div><div class="u5l3-fig" data-fig="ex5a"></div><div><span class="tex">\angle DEF=</span> <span class="u5l3-blank" data-reveal="&nbsp;">38°</span> <span class="u5l3-blank" data-reveal="&nbsp;">acute</span></div></div>
+      <div><div class="u5l3-fig" data-fig="ex5b"></div><div><span class="tex">\angle GHI=</span> <span class="u5l3-blank" data-reveal="&nbsp;">127°</span> <span class="u5l3-blank" data-reveal="&nbsp;">obtuse</span></div></div>
+      <div><div class="u5l3-fig" data-fig="ex5c"></div><div><span class="tex">\angle JKL=</span> <span class="u5l3-blank" data-reveal="&nbsp;">74°</span> <span class="u5l3-blank" data-reveal="&nbsp;">acute</span></div></div>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle DEF=38^\circ</span> (acute), <span class="tex">\angle GHI=127^\circ</span> (obtuse), <span class="tex">\angle JKL=74^\circ</span> (acute). Turn the protractor so its base line lies on one arm each time. Answers within 1° or 2° are fine.</div></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= 4. Drawing, and reflex angles ================= -->
+<section class="card" data-ink="s4" data-section="4. Drawing Angles">
+  <div class="sec-h"><span class="badge">4</span><h2>Drawing Angles, and Reflex Angles</h2></div>
+  <div class="def"><b>Key idea</b> &nbsp; Drawing an angle of a given size (for example, 70°)
+    <ol class="u5l3-steps">
+      <li><b>Step 1.</b> Use a ruler to draw one arm. Put a dot at one end for the vertex.</li>
+      <li><b>Step 2.</b> Put the centre mark on the vertex and the base line along the arm.</li>
+      <li><b>Step 3.</b> Start at the 0 on your arm. Follow that scale to 70 and make a small dot at the edge.</li>
+      <li><b>Step 4.</b> Take the protractor away. Join the vertex to the dot with a ruler. Label the angle 70°.</li>
+    </ol></div>
+  <div class="explainer u5l3-gap" data-explainer="draw"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Draw the angle</h3></div>
+  <div class="pl">Draw each angle on the arm given. Mark and label the angle.</div>
+  <div class="parts c3 u5l3-p6">
+    <div class="part"><div class="pl">(a) <span class="tex">\angle ABC=50^\circ</span></div><div class="u5l3-fig" data-fig="ex6a"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Inner scale: the 0 is on the right, on arm <span class="tex">BA</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">\angle DEF=135^\circ</span></div><div class="u5l3-fig" data-fig="ex6b"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Use the outer scale: the 0 is on the left, on arm <span class="tex">ED</span>. The new arm can go up (as shown) or down; both make 135°.</div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">\angle GHI=90^\circ</span></div><div class="u5l3-fig" data-fig="ex6c"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A right angle: mark it with a small square instead of an arc.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. Reflex Angles">
+  <h3 class="sub">Reflex angles</h3>
+  <p>A protractor only goes up to 180°. To find a <b>reflex</b> angle, measure the <b>small</b> angle that goes with it, then subtract from 360°.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Reflex angle <span class="tex">=360^\circ-</span> the smaller angle</b> &nbsp;&nbsp; <b>Check:</b> the answer must be between 180° and 360°.
+    <div class="u5l3-note">To <b>draw</b> a reflex angle, first find the smaller angle (<span class="tex">360^\circ-</span> reflex), draw it, and then mark the reflex angle with an arc going the long way around.</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>A smaller angle of 125°: <span class="keys">360 <kbd>−</kbd> 125 <kbd>ENTER</kbd></span> gives 235.</div>
+    <button class="pill" type="button" data-keys="360 − 125 =">Show me</button></div>
+  <div class="explainer u5l3-gap" data-explainer="reflex"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Reflex angles</h3></div>
+  <div class="part"><div class="pl">(a) The smaller angle between two arms is 125°. What is the reflex angle?</div><div class="work" style="--h:60px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">360^\circ-125^\circ=235^\circ</span>. The reflex angle is <b>235°</b>.</div></div></div>
+  <div class="parts c2 u5l3-gap">
+    <div class="part"><div class="pl">(b) Measure the marked reflex angle.</div><div class="u5l3-fig" data-fig="ex7b"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Small angle: 64°. Reflex: <span class="tex">360^\circ-64^\circ=296^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(c) Draw a reflex angle of 250° on the arm given.</div><div class="u5l3-fig" data-fig="ex7c"></div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">360^\circ-250^\circ=110^\circ</span>. Draw 110°, then mark the outside with an arc.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exr" data-section="Extra Example: More Reflex Angles">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More reflex angles</h3></div>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) The smaller angle is 40°. Find the reflex angle.</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">360^\circ-40^\circ=320^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) The smaller angle is a right angle. Find the reflex angle.</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">360^\circ-90^\circ=270^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c) The smaller angle is 172°. Find the reflex angle.</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">360^\circ-172^\circ=188^\circ</span>, just over 180°</div></div></div>
+    <div class="part"><div class="pl">(d) A reflex angle is 205°. What is the smaller angle?</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">360^\circ-205^\circ=155^\circ</span> (obtuse)</div></div></div>
+  </div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Why is a reflex angle always more than 180°?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The smaller angle is at most 180°, so <span class="tex">360^\circ-</span> the smaller angle is at least 180°. The two angles share the full turn, and the reflex one is the bigger share.</div></div></div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–9">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 3 · Questions 1–9</h2>
+  <p class="pr-t">Get your protractor and a ruler. Try these before we look inside polygons.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Vertex, arms, names</span>
+    <span><b>2</b>Type from the size</span>
+    <span><b>3</b>Type from a picture</span>
+    <span><b>4</b>Angles around us</span>
+    <span><b>5</b>Read the protractor</span>
+    <span><b>6</b>Mai’s mistake</span>
+    <span><b>7</b>Measure</span>
+    <span><b>8</b>Draw</span>
+    <span><b>9</b>Reflex angles</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 9.</span><a class="pill" href="../../../#/lesson/u5l3">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. Polygons ================= -->
+<section class="card" data-ink="s5" data-section="5. Angles Inside a Polygon">
+  <div class="sec-h"><span class="badge">5</span><h2>Angles Inside a Polygon</h2></div>
+  <p>A <b>polygon</b> is a closed shape made of straight sides. It is named by its number of sides, <span class="tex">n</span>: triangle (3), quadrilateral (4), pentagon (5), hexagon (6), heptagon (7), octagon (8), nonagon (9), decagon (10), dodecagon (12). The angles inside a polygon, at its corners, are its <b>interior angles</b>. A <b>regular</b> polygon has all sides equal and all angles equal.</p>
+  <div class="def"><b>Triangles first.</b> Cut out any paper triangle and tear off its three corners. Put the corners side by side: they always make a <b>straight line</b>. So the angles in <b>any</b> triangle add up to <b>180°</b>.</div>
+  <div class="explainer u5l3-gap" data-explainer="tear"></div>
+  <p class="u5l3-gap"><b>Inductive reasoning</b> means looking at several examples, finding a pattern, and using the pattern to make a general rule. We use it now to find a rule for any polygon.</p>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Find the pattern</h3></div>
+  <p class="u5l3-p">In each polygon, lines are drawn from <b>one</b> corner to the other corners. This splits the polygon into triangles.</p>
+  <div class="u5l3-fig" data-fig="ex8" style="width:960px;height:200px"></div>
+  <div class="part"><div class="pl">(a) Complete the table. For 7 and 10 sides, use the pattern instead of drawing.</div>
+    <table class="u5l3-tbl u5l3-t9">
+      <tr><th>Number of sides, <span class="tex">n</span></th><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>10</td><td><span class="tex">n</span></td></tr>
+      <tr><th>Number of triangles</th><td><span data-reveal="&nbsp;">1</span></td><td><span data-reveal="&nbsp;">2</span></td><td><span data-reveal="&nbsp;">3</span></td><td><span data-reveal="&nbsp;">4</span></td><td><span data-reveal="&nbsp;">5</span></td><td><span data-reveal="&nbsp;">8</span></td><td><span data-reveal="&nbsp;"><span class="tex">n-2</span></span></td></tr>
+      <tr><th>Sum of the angles</th><td><span data-reveal="&nbsp;">180°</span></td><td><span data-reveal="&nbsp;">360°</span></td><td><span data-reveal="&nbsp;">540°</span></td><td><span data-reveal="&nbsp;">720°</span></td><td><span data-reveal="&nbsp;">900°</span></td><td><span data-reveal="&nbsp;">1&#8239;440°</span></td><td><span data-reveal="&nbsp;"><span class="tex">(n-2)\times180^\circ</span></span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Triangles: 1, 2, 3, 4, 5, 8, <span class="tex">n-2</span>. Sums: 180°, 360°, 540°, 720°, 900°, 1&#8239;440°, <span class="tex">(n-2)\times180^\circ</span>.</div></div></div>
+  <div class="part u5l3-gap"><div class="pl">(b) Describe the pattern in words.</div><div class="work" style="--h:80px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The number of triangles is always <b>2 less</b> than the number of sides. Each triangle adds 180°, so the sum of the angles is (sides − 2) × 180°.</div></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. The Rule for Any Polygon">
+  <h3 class="sub">Watch the polygons split into triangles</h3>
+  <div class="explainer" data-explainer="split"></div>
+  <div class="def u5l3-gap"><b>Key idea</b> &nbsp; <b>Sum of the interior angles of a polygon with <span class="tex">n</span> sides:</b> &nbsp; <span class="tex">S=(n-2)\times180^\circ</span><br><b>Each angle of a regular polygon:</b> &nbsp; <span class="tex">S\div n</span></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Use brackets so the subtracting is done first. For 10 sides: <span class="keys"><kbd>(</kbd> 10 <kbd>−</kbd> 2 <kbd>)</kbd> <kbd>×</kbd> 180 <kbd>ENTER</kbd></span> gives 1&#8239;440.</div>
+    <button class="pill" type="button" data-keys="( 10 − 2 ) × 180 =">Show me</button></div>
+</section>
+
+<section class="card" data-extra data-ink="s5c" data-section="5. Another Way to See the Rule">
+  <h3 class="sub">Why <span class="tex">n-2</span>? Another way: triangles from a point inside</h3>
+  <div class="explainer" data-explainer="whyN2"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Without the brackets, the calculator does <span class="tex">10-2\times180</span>. What does it show, and why is that wrong?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">It multiplies first: <span class="tex">2\times180=360</span>, then <span class="tex">10-360=-350</span>. A sum of angles can’t be negative. The brackets make it subtract first: <span class="tex">(10-2)\times180=1\,440</span>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>The stop sign</h3></div>
+  <div class="u5l3-ex9">
+    <div class="parts c1">
+      <div class="part"><div class="pl">A stop sign is a regular octagon. (a) Find the sum of its interior angles.</div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">An octagon has <span class="tex">n=8</span> sides. <span class="tex">S=(8-2)\times180^\circ=6\times180^\circ=1\,080^\circ</span></div></div></div>
+      <div class="part"><div class="pl">(b) A sign maker cuts the corners of a stop sign from sheet metal. What angle is each corner?</div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The octagon is regular, so all 8 angles are equal. <span class="tex">1\,080^\circ\div8=135^\circ</span>. Each corner is <b>135°</b>.</div></div></div>
+      <div class="part"><div class="pl">(c) What type of angle is each corner? <span class="u5l3-blank" data-reveal="&nbsp;">obtuse</span></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Obtuse</b>: 135° is between 90° and 180°.</div></div></div>
+    </div>
+    <div class="u5l3-fig" data-fig="stop" style="width:220px;height:220px"></div>
+  </div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>All in one: <span class="keys"><kbd>(</kbd> 8 <kbd>−</kbd> 2 <kbd>)</kbd> <kbd>×</kbd> 180 <kbd>÷</kbd> 8 <kbd>ENTER</kbd></span> gives 135.</div>
+    <button class="pill" type="button" data-keys="( 8 − 2 ) × 180 ÷ 8 =">Show me</button></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u5l3"></section>
+
+<section class="card" data-ink="s5d" data-section="5. Finding a Missing Angle">
+  <h3 class="sub">Finding a missing angle</h3>
+  <p>Find the sum of all the angles first. Then take away the angles you know. What is left is the missing angle.</p>
+  <div class="explainer" data-explainer="missing"></div>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>Find the missing angle</h3></div>
+  <div class="pl">Find the missing angle <span class="tex">x</span> in each shape.</div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A quadrilateral.</div><div class="u5l3-fig" data-fig="ex10a"></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">n=4:\ S=(4-2)\times180^\circ=360^\circ</span><br>Known angles: <span class="tex">85+110+72=267^\circ</span><br><span class="tex">x=360^\circ-267^\circ=93^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) The end wall of a garden shed is a pentagon. Find the angle at the peak of the roof.</div><div class="u5l3-fig" data-fig="ex10b"></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">n=5:\ S=(5-2)\times180^\circ=540^\circ</span><br>Known angles: <span class="tex">90+90+125+125=430^\circ</span><br><span class="tex">x=540^\circ-430^\circ=110^\circ</span>. The peak is <b>110°</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exp" data-section="Extra Example: More Polygons">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More polygons</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A regular nonagon (9 sides). Find the sum of its angles and the size of each angle.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">S=(9-2)\times180^\circ=1\,260^\circ</span><br><span class="tex">1\,260^\circ\div9=140^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) The angles of a polygon add up to 1&#8239;620°. How many sides does it have? (Work backward.)</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1\,620^\circ\div180^\circ=9</span> triangles. Sides = triangles + 2 = <b>11</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) A hexagon has angles 130°, 110°, 125°, 140°, 95° and <span class="tex">x</span>. Find <span class="tex">x</span>.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">S=(6-2)\times180^\circ=720^\circ</span><br><span class="tex">130+110+125+140+95=600^\circ</span><br><span class="tex">x=720^\circ-600^\circ=120^\circ</span></div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Names:</b> two arms from a vertex. <span class="tex">\angle ABC</span> has the <b>vertex in the middle</b>; <span class="tex">\angle B</span> only when one angle is at <span class="tex">B</span>; or <span class="tex">\angle 1</span>. Arm length does not change the size.</div>
+    <div><b>Types:</b> acute <span class="tex">&lt;90^\circ</span> · right <span class="tex">=90^\circ</span> · obtuse between 90° and 180° · straight <span class="tex">=180^\circ</span> · reflex between 180° and 360°.</div>
+    <div><b>Protractor:</b> centre mark on the vertex, base line on one arm, read the scale whose <b>0 is on that arm</b>. Check acute or obtuse. <b>Reflex</b> <span class="tex">=360^\circ-</span> the smaller angle.</div>
+    <div><b>Polygons:</b> <span class="tex">n-2</span> triangles from one corner, so <span class="tex">S=(n-2)\times180^\circ</span>. Regular: each angle is <span class="tex">S\div n</span>. Missing angle: <span class="tex">S-</span> the known angles.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u5l3">
+    <div><div class="kicker">Your turn</div><b>Assignment 3 · Questions 10–18</b><div class="muted">Polygon angle sums, missing angles, a hexagon patio in Airdrie, Kai’s mistake, a regular polygon with 156° angles, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l4/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 4 — Estimating Angles with Referents, and True Bearings</b><div class="muted">No protractor? Fold a paper square or picture a clock to estimate any angle. Then use angles to find your way with a compass.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u5l3.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u5l3', homeHref: '../../', title: '5.3 Measuring, Drawing and Classifying Angles' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

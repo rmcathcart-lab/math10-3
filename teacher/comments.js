@@ -46,7 +46,10 @@
     u3l7: 'rearranging formulas to find a missing side', u3l8: 'finding the area of 2-D shapes', u3l9: 'finding the area of composite and irregular shapes',
     u3l10: 'finding the surface area of prisms', u3l11: 'finding the surface area of cylinders, pyramids and cones',
     u4l1: 'finding the volume of prisms and cylinders', u4l2: 'converting units of capacity', u4l3: 'converting between Celsius and Fahrenheit',
-    u4l4: 'converting units of mass', u4l5: 'converting mass between SI and imperial', u4l6: 'converting between volume and mass (bushels and tonnes)'
+    u4l4: 'converting units of mass', u4l5: 'converting mass between SI and imperial', u4l6: 'converting between volume and mass (bushels and tonnes)',
+    u5l1: 'solving tangram and pentomino puzzles with a strategy', u5l2: 'finding and explaining a winning game strategy', u5l3: 'measuring, drawing and classifying angles',
+    u5l4: 'estimating angles and using true bearings', u5l5: 'copying and bisecting angles and identifying perpendicular lines',
+    u5l6: 'finding complementary, supplementary and opposite angles', u5l7: 'naming the angle pairs made by a transversal', u5l8: 'finding missing angles with parallel lines'
   };
   var LADDER = ['NM', 'LIM', 'BEG', 'EMG', 'PRG', 'ADV', 'MAS'];
   var LNAME = { NM: 'Not Meeting', LIM: 'Limited', BEG: 'Beginning', EMG: 'Emerging', PRG: 'Progressing', ADV: 'Advancing', MAS: 'Mastery' };

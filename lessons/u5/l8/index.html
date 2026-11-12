@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parallel Lines and Transversals · Math 10-3 5.8</title>
+<meta name="description" content="Math 10-3 Unit 5 Lesson 8: parallel lines and transversals. Use the parallel-line rules (corresponding, alternate interior, alternate exterior, same-side angles) to find every missing angle with a reason, perpendicular transversals, and checking whether two lines really are parallel. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u5l8.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u5l8">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Which Cup Fills First?">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Which Cup Fills First?</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Juice is poured into the <b>top cup</b>. It flows out through the tubes into the cups below.</p><p class="vw-ctx">The <b>red plug</b> blocks one tube. Nothing can get past it.</p><p class="vw-ask">Which bottom cup fills up first: A, B, C or D?</p></div><div class="vw-art"><svg viewBox="0 0 340 262" role="img" aria-label="A jug pours juice into a top cup. Tubes lead from the top cup to two middle cups, and from those to four bottom cups A, B, C and D. One tube has a red plug.">
+    <defs>
+      <g id="u5l8-cup"><path d="M-28 0 L28 0 L21 40 L-21 40 Z" fill="#fbfdff" stroke="#3a4254" stroke-width="2.6" stroke-linejoin="round"/></g>
+    </defs>
+    <!-- tubes: dark outline, light inside -->
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g stroke="#5a6272" stroke-width="10">
+        <path d="M142 52 H85 V100"/><path d="M196 78 H255 V100"/>
+        <path d="M64 142 H40 V192"/><path d="M106 116 H125 V192"/>
+        <path d="M276 142 H300 V192"/><path d="M234 124 H215 V192"/>
+      </g>
+      <g stroke="#e8eef5" stroke-width="5.5">
+        <path d="M142 52 H85 V100"/><path d="M196 78 H255 V100"/>
+        <path d="M64 142 H40 V192"/><path d="M106 116 H125 V192"/>
+        <path d="M276 142 H300 V192"/><path d="M234 124 H215 V192"/>
+      </g>
+    </g>
+    <!-- the plug -->
+    <rect x="281" y="134" width="11" height="16" rx="2.5" fill="#d63a2f" stroke="#7d1e17" stroke-width="2"/>
+    <!-- cups -->
+    <use href="#u5l8-cup" x="170" y="44"/>
+    <use href="#u5l8-cup" x="85" y="108"/><use href="#u5l8-cup" x="255" y="108"/>
+    <use href="#u5l8-cup" x="40" y="200"/><use href="#u5l8-cup" x="125" y="200"/><use href="#u5l8-cup" x="215" y="200"/><use href="#u5l8-cup" x="300" y="200"/>
+    <!-- a little juice in the top cup -->
+    <path d="M150.5 76 L189.5 76 L188.3 84 L151.7 84 Z" fill="#f0a23a" opacity=".9"/>
+    <g font-size="19" font-weight="800" fill="#4a2c14" text-anchor="middle">
+      <text x="40" y="258">A</text><text x="125" y="258">B</text><text x="215" y="258">C</text><text x="300" y="258">D</text>
+    </g>
+    <!-- the jug, gently pouring -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 96 26;-4 96 26;0 96 26" dur="2.6s" repeatCount="indefinite"/>
+      <path d="M70 8 L112 8 L122 18 L112 22 L110 42 L72 42 Z" fill="#fff4e2" stroke="#6e4a1c" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M72 40 L74 26 L108 26 L110 40 Z" fill="#f0a23a" opacity=".85"/>
+      <path d="M70 14 C56 14 56 34 71 34" fill="none" stroke="#6e4a1c" stroke-width="2.6"/>
+    </g>
+    <path d="M122 19 C140 20 156 26 160 64" fill="none" stroke="#f0a23a" stroke-width="5" stroke-linecap="round" stroke-dasharray="9 6">
+      <animate attributeName="stroke-dashoffset" values="30;0" dur=".7s" repeatCount="indefinite"/>
+    </path>
+  </svg></div></div>
+  <div class="poll u5l8-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> cup A</div>
+      <div class="opt"><b>B</b> cup B</div>
+      <div class="opt right"><b>C</b> cup C</div>
+      <div class="opt"><b>D</b> cup D</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>Cup C!</b> Follow the juice one step at a time. The top cup’s <b>right</b> tube is lower, so the juice leaves there first and runs into the right cup. That cup’s low tube is plugged, so the juice rises until it reaches the side tube, which leads to <b>C</b>. Cups A, B and D get nothing (unless you pour really fast). <span class="muted">Today: find angles one step at a time, with a reason for each step.</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 5 Angles, Parallel Lines and Spatial Puzzles · Lesson 8</div>
+  <h1>Parallel Lines and Transversals: Finding Missing Angles</h1>
+  <p class="lede">When two lines are <b>parallel</b>, the angles a transversal makes follow rules. Today we use those rules to find every missing angle, give a <b>reason</b> for each step, and check whether two shelves, joists or stripes really are parallel.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>tell which angle pairs are <b>equal</b> and which <b>add to 180°</b> when the lines are parallel</li>
+      <li>find <b>all 8 angles</b> from just one, and give a reason for each one</li>
+      <li>find angles in <b>steps</b>, write an equation for a letter like <i>x</i>, and use a <b>perpendicular</b> transversal</li>
+      <li>use the angles to decide if two lines <b>are parallel</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G5</b> Solve problems that involve parallel, perpendicular and transversal lines, and pairs of angles formed between them.</div>
+</section>
+
+<!-- ================= 1. The parallel-line rules ================= -->
+<section class="card" data-ink="s1" data-section="1. The Parallel-Line Rules">
+  <div class="sec-h"><span class="badge">1</span><h2>The Parallel-Line Rules</h2></div>
+  <p>A <b>transversal</b> is a line that crosses two other lines. It makes 8 angles. As in Lesson 7, angles 1 to 4 are at the top crossing and angles 5 to 8 are at the bottom crossing. Each set is numbered <b>clockwise, starting at the upper-left</b>.</p>
+  <p>Two lines are <b>parallel</b> if they are always the same distance apart and never meet. Matching arrow marks (<b>&gt;</b>) on two lines mean they are parallel. We write <span class="tex">\ell_1\parallel\ell_2</span> (say “<span class="tex">\ell_1</span> is parallel to <span class="tex">\ell_2</span>”).</p>
+  <div class="u5l8-rules">
+    <div class="u5l8-fig" id="u5l8-f-rules"></div>
+    <div class="def u5l8-def"><b>Key idea</b> &nbsp; If <span class="tex">\ell_1\parallel\ell_2</span>, these pairs are <b>equal</b>:
+      <table class="u5l8-rt">
+        <tr><td><b class="u5l8-cF">corresponding</b> (F shape)</td><td><span class="tex">\angle1=\angle5,\ \angle2=\angle6,\ \angle3=\angle7,\ \angle4=\angle8</span></td></tr>
+        <tr><td><b class="u5l8-cZ">alternate interior</b> (Z shape)</td><td><span class="tex">\angle3=\angle5,\ \angle4=\angle6</span></td></tr>
+        <tr><td><b class="u5l8-cAE">alternate exterior</b></td><td><span class="tex">\angle1=\angle7,\ \angle2=\angle8</span></td></tr>
+      </table>
+      and these pairs are <b>supplementary</b> (add to 180°):
+      <table class="u5l8-rt">
+        <tr><td><b class="u5l8-cU">interior, same side</b> (U shape)</td><td><span class="tex">\angle3+\angle6=180^\circ,\ \angle4+\angle5=180^\circ</span></td></tr>
+        <tr><td><b class="u5l8-cES">exterior, same side</b></td><td><span class="tex">\angle1+\angle8=180^\circ,\ \angle2+\angle7=180^\circ</span></td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="def"><b>Always true</b>, parallel or not: <b>vertically opposite</b> angles are equal (<span class="tex">\angle1=\angle3</span>, <span class="tex">\angle2=\angle4</span>, <span class="tex">\angle5=\angle7</span>, <span class="tex">\angle6=\angle8</span>), and two angles side by side on a <b>straight line</b> add to 180° (for example <span class="tex">\angle1+\angle2=180^\circ</span>).</div>
+  <div class="explainer" data-explainer="rules"></div>
+  <div class="u5l8-tips">
+    <div class="tip u5l8-short"><div class="tip-ic">✓</div><div><b>Shortcut to check.</b> With parallel lines there are only <b>two sizes</b> of angle. All the small (acute) angles are equal, all the big (obtuse) angles are equal, and small + big = 180°. Use this to check, but still write the <b>name of the rule</b> as your reason.</div></div>
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Use the parallel-line rules only when you <b>know</b> the lines are parallel: arrow marks, or the question says so. Lesson 7 showed that the pairs are not equal when the lines are not parallel.</div></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. Why the Rules Work">
+  <h3 class="sub">Why are corresponding angles equal?</h3>
+  <p>Slide the top crossing down the transversal. If the lines are parallel, it lands exactly on the bottom crossing, so every angle lands on its partner.</p>
+  <div class="explainer" data-explainer="whyF"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Complete the table</h3></div>
+  <p class="q"><span class="tex">\ell_1\parallel\ell_2</span> and <span class="tex">\angle3=115^\circ</span>. Complete the table.</p>
+  <div class="u5l8-exg">
+    <div class="u5l8-fig" id="u5l8-f-ex1"></div>
+    <div class="part">
+      <table class="u5l8-tbl">
+        <tr><th>Angle</th><th>How is it paired with <span class="tex">\angle3</span>?</th><th>Equal, or add to 180°?</th><th>Size</th></tr>
+        <tr><td><span class="tex">\angle5</span></td><td><span data-reveal>alternate interior</span></td><td><span data-reveal>equal</span></td><td><span data-reveal>115°</span></td></tr>
+        <tr><td><span class="tex">\angle7</span></td><td><span data-reveal>corresponding</span></td><td><span data-reveal>equal</span></td><td><span data-reveal>115°</span></td></tr>
+        <tr><td><span class="tex">\angle1</span></td><td><span data-reveal>vertically opposite</span></td><td><span data-reveal>equal</span></td><td><span data-reveal>115°</span></td></tr>
+        <tr><td><span class="tex">\angle6</span></td><td><span data-reveal>interior, same side</span></td><td><span data-reveal>add to 180°</span></td><td><span data-reveal>65°</span></td></tr>
+        <tr><td><span class="tex">\angle4</span></td><td><span data-reveal>on a straight line</span></td><td><span data-reveal>add to 180°</span></td><td><span data-reveal>65°</span></td></tr>
+      </table>
+      <div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">180^\circ-115^\circ=65^\circ</span>. Check: the big angles are all 115°, the small ones 65°, and <span class="tex">115+65=180</span> ✓</div></div>
+    </div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>All 8 from one angle</h3></div>
+  <p class="q"><span class="tex">\ell_1\parallel\ell_2</span> and <span class="tex">\angle6=72^\circ</span>. Find the other 7 angles. Give a reason for each one.</p>
+  <div class="u5l8-exg">
+    <div class="u5l8-fig" id="u5l8-f-ex2"></div>
+    <div class="part">
+      <table class="u5l8-tbl">
+        <tr><th>Angle</th><th>Size</th><th>Reason</th></tr>
+        <tr><td><span class="tex">\angle8</span></td><td><span data-reveal>72°</span></td><td><span data-reveal>vertically opposite <span class="tex">\angle6</span></span></td></tr>
+        <tr><td><span class="tex">\angle2</span></td><td><span data-reveal>72°</span></td><td><span data-reveal>corresponding to <span class="tex">\angle6</span></span></td></tr>
+        <tr><td><span class="tex">\angle4</span></td><td><span data-reveal>72°</span></td><td><span data-reveal>alternate interior with <span class="tex">\angle6</span></span></td></tr>
+        <tr><td><span class="tex">\angle5</span></td><td><span data-reveal>108°</span></td><td><span data-reveal>on a straight line with <span class="tex">\angle6</span>: <span class="tex">180^\circ-72^\circ</span></span></td></tr>
+        <tr><td><span class="tex">\angle7</span></td><td><span data-reveal>108°</span></td><td><span data-reveal>vertically opposite <span class="tex">\angle5</span></span></td></tr>
+        <tr><td><span class="tex">\angle1</span></td><td><span data-reveal>108°</span></td><td><span data-reveal>corresponding to <span class="tex">\angle5</span></span></td></tr>
+        <tr><td><span class="tex">\angle3</span></td><td><span data-reveal>108°</span></td><td><span data-reveal>alternate interior with <span class="tex">\angle5</span></span></td></tr>
+      </table>
+      <div class="work" style="--h:50px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Other correct reasons are fine too, for example <span class="tex">\angle4=72^\circ</span> because it is vertically opposite <span class="tex">\angle2</span>. Check: four angles of 72°, four of 108°, and <span class="tex">72+108=180</span> ✓</div></div>
+    </div>
+  </div>
+  <div class="explainer" data-explainer="fill8"></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex2b" data-section="More Practice: All 8">
+  <div class="ex-head"><span class="ex-tag">More practice</span><h3>All 8 from one angle</h3></div>
+  <p class="q"><span class="tex">\ell_1\parallel\ell_2</span> and <span class="tex">\angle4=57^\circ</span>. Write the size of every other angle, with a reason.</p>
+  <div class="u5l8-exg">
+    <div class="u5l8-fig" id="u5l8-f-ex2b"></div>
+    <div class="part"><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Small angles, all 57°: <span class="tex">\angle2</span> (vertically opposite <span class="tex">\angle4</span>), <span class="tex">\angle8</span> (corresponding to <span class="tex">\angle4</span>), <span class="tex">\angle6</span> (alternate interior with <span class="tex">\angle4</span>).<br>Big angles, all <span class="tex">180^\circ-57^\circ=123^\circ</span>: <span class="tex">\angle1</span> and <span class="tex">\angle3</span> (straight line with <span class="tex">\angle4</span>), <span class="tex">\angle5</span> and <span class="tex">\angle7</span> (corresponding to <span class="tex">\angle1</span> and <span class="tex">\angle3</span>).</div></div></div>
+  </div>
+  <div class="space" id="ex2b-space"></div>
+  <button class="more" data-more="ex2b-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s1c" data-section="1. Think: Pairs">
+  <h3 class="sub">Think it through</h3>
+  <div class="parts c2">
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> <span class="tex">\ell_1\parallel\ell_2</span>. Can <span class="tex">\angle2</span> be 80° and <span class="tex">\angle7</span> be 80° at the same time?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> <span class="tex">\angle2</span> and <span class="tex">\angle7</span> are exterior angles on the same side, so they add to 180°. If <span class="tex">\angle2=80^\circ</span>, then <span class="tex">\angle7=100^\circ</span>. (Both would be 90° only for a perpendicular transversal.)</div></div></div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> The lines are <b>not</b> parallel and <span class="tex">\angle1=110^\circ</span>. Which other angles do you still know for sure?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Only the ones at the <b>same crossing</b>: <span class="tex">\angle3=110^\circ</span> (vertically opposite), and <span class="tex">\angle2=\angle4=70^\circ</span> (straight line). Angles 5 to 8 could be anything.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= 2. Finding angles in steps ================= -->
+<section class="card" data-ink="s2" data-section="2. Finding Angles in Steps">
+  <div class="sec-h"><span class="badge">2</span><h2>Finding Angles in Steps, With Reasons</h2></div>
+  <p>Many diagrams need two or three steps. Look for an angle you <b>can</b> find, write its size on the diagram, then use it to find the next one. The <b>order</b> matters, so write your steps in a table: the angle, its size and the reason.</p>
+  <div class="def"><b>Key idea</b> &nbsp; When an angle is named with a letter, such as <i>x</i>, write an <b>equation</b> and solve it. If <i>x</i> and 47° are on a straight line, then <span class="tex">x+47^\circ=180^\circ</span>, so <span class="tex">x=180^\circ-47^\circ=133^\circ</span>.</div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Two roads and a triangle</h3></div>
+  <p class="q"><span class="tex">\ell_1\parallel\ell_2</span>. Two straight roads meet at point <i>A</i> on <span class="tex">\ell_1</span> and make a triangle with <span class="tex">\ell_2</span>. Find <i>a</i>, <i>b</i> and <i>c</i>, in that order. Give a reason for each.</p>
+  <div class="u5l8-exg">
+    <div class="u5l8-fig"><svg id="u5l8-f-ex3" viewBox="0 0 380 230" role="img" aria-label="Two parallel lines. Two roads meet at A on the top line and reach the bottom line at B and C. At A, outside the triangle, are 48 degrees on the left and 57 degrees on the right, with c inside. a is inside at B and b is inside at C."></svg></div>
+    <div class="part">
+      <table class="u5l8-tbl">
+        <tr><th>Angle</th><th>Size</th><th>Reason</th></tr>
+        <tr><td><i>a</i></td><td><span data-reveal>48°</span></td><td><span data-reveal>alternate interior with the 48° angle (road <i>AB</i> is the transversal)</span></td></tr>
+        <tr><td><i>b</i></td><td><span data-reveal>57°</span></td><td><span data-reveal>alternate interior with the 57° angle (road <i>AC</i> is the transversal)</span></td></tr>
+        <tr><td><i>c</i></td><td><span data-reveal>75°</span></td><td><span data-reveal>the 3 angles at <i>A</i> make a straight line: <span class="tex">180^\circ-48^\circ-57^\circ</span></span></td></tr>
+      </table>
+      <div class="work" style="--h:70px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Check: the angles of triangle <i>ABC</i> are <span class="tex">48^\circ+57^\circ+75^\circ=180^\circ</span> ✓ (the angles in a triangle add to 180°).</div></div>
+    </div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Take both angles away in one line: <span class="keys">180 <kbd>−</kbd> 48 <kbd>−</kbd> 57 <kbd>ENTER</kbd></span> shows 75. Estimate first: about <span class="tex">180-50-60=70</span>.</div>
+    <button class="pill" type="button" data-keys="180 − 48 − 57 =">Show me</button></div>
+  <div class="explainer" data-explainer="roads"></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>A parking lot</h3></div>
+  <p class="q">In a parking lot, the stall lines are <b>parallel</b>. The curb is straight, and the painted line at the front of the stalls is parallel to the curb. Each stall line meets the curb at 62°.</p>
+  <div class="u5l8-fig u5l8-wide"><svg id="u5l8-f-ex4" viewBox="0 0 860 210" role="img" aria-label="Four parallel slanted stall lines between the curb at the bottom and the front line at the top. The first stall line makes 62 degrees with the curb on its right; a is on its left. b is to the right of the second stall line at the curb, and c is where the second stall line meets the front line, below it on the right."></svg></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Write an equation for <i>a</i>. Solve it.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><i>a</i> and 62° are on a straight line (the curb).<br><span class="tex">a+62^\circ=180^\circ</span><br><span class="tex">a=180^\circ-62^\circ=118^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) Find <i>b</i>. Give your reason.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">b=62^\circ</span>. The stall lines are parallel and the curb is a transversal, so <i>b</i> and 62° are <b>corresponding</b> angles.</div></div></div>
+    <div class="part"><div class="pl">(c) Find <i>c</i>. Give your reason.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The curb and the front line are parallel, and the stall line is a transversal. <i>b</i> and <i>c</i> are <b>interior angles on the same side</b>.<br><span class="tex">c=180^\circ-62^\circ=118^\circ</span></div></div></div>
+  </div>
+  <div class="parts c1"><div class="part"><div class="ansrow"><button class="reveal">Answer</button><div class="ans">So each stall is a <b>parallelogram</b> with angles 62°, 118°, 62° and 118°.</div></div></div></div>
+  <div class="explainer" data-explainer="parking"></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Think: Reasons First">
+  <h3 class="sub">Think it through</h3>
+  <div class="parts c2">
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> In Example 3, Mia says “<i>c</i> looks like about 70°, so <i>c</i> = 70°.” What is wrong with that?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A diagram may not be drawn to scale, and a guess is not a reason. Use the rules: <span class="tex">c=180^\circ-48^\circ-57^\circ=75^\circ</span>.</div></div></div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> Can a parallelogram have angles 70°, 110°, 80° and 100°? Why or why not?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> Both pairs of sides are parallel, so there are only <b>two sizes</b> of angle: if one is 70°, the angles are 70°, 110°, 70° and 110°.</div></div></div>
+  </div>
+</section>
+
+<section class="card example" data-extra data-ink="ex4b" data-section="More Practice: Steps">
+  <div class="ex-head"><span class="ex-tag">More practice</span><h3>Two more step-by-step angles</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A gate has two parallel rails and a diagonal brace. The brace makes 38° with the bottom rail. Find the angle <i>y</i> between the brace and the top rail, on the other side of the brace (a Z shape).</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The rails are parallel and the brace is a transversal. <i>y</i> and 38° are alternate interior angles, so <span class="tex">y=38^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">\ell_1\parallel\ell_2</span> and <span class="tex">\angle2=64^\circ</span>. Find <span class="tex">\angle7</span> in two steps, with a reason for each step.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle6=64^\circ</span> (corresponding to <span class="tex">\angle2</span>). <span class="tex">\angle7=180^\circ-64^\circ=116^\circ</span> (on a straight line with <span class="tex">\angle6</span>). Or in one step: exterior angles on the same side.</div></div></div>
+  </div>
+  <div class="space" id="ex4b-space"></div>
+  <button class="more" data-more="ex4b-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 8 · Questions 1–8</h2>
+  <p class="pr-t">Try these before we look at perpendicular transversals.</p>
+  <div class="pr-chips n3">
+    <span><b>1</b>Fill in the rules</span>
+    <span><b>2</b>Name each pair: equal or 180°?</span>
+    <span><b>3–4</b>Find angles from just one</span>
+    <span><b>5</b>Write an equation, solve for <i>x</i></span>
+    <span><b>6</b>Three steps, two pairs of parallel lines</span>
+    <span><b>7–8</b>A trapezoid window and a parallelogram tile</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u5l8">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Perpendicular transversals ================= -->
+<section class="card" data-ink="s3" data-section="3. Perpendicular Transversals">
+  <div class="sec-h"><span class="badge">3</span><h2>Perpendicular Transversals</h2></div>
+  <p>Two lines are <b>perpendicular</b> if they meet at a right angle (90°). A small square in the corner shows a right angle. We write <span class="tex">t\perp\ell_1</span>.</p>
+  <p>If a transversal is perpendicular to one of two parallel lines, it is perpendicular to the other one too. The corresponding angles are equal, so they are both 90°. In fact, all 8 angles are 90°.</p>
+  <div class="def"><b>Key idea</b> &nbsp; If <span class="tex">\ell_1\parallel\ell_2</span> and <span class="tex">t\perp\ell_1</span>, then <span class="tex">t\perp\ell_2</span>. All 8 angles are 90°.<div class="eg">Two angles that make a right angle together are <b>complementary</b>: they add to 90°.</div></div>
+  <p>Builders use this. The wall studs in a house are vertical, so they are parallel to each other and perpendicular to the level floor.</p>
+  <div class="explainer" data-explainer="perp"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Balusters on a staircase</h3></div>
+  <div class="u5l8-ex5">
+    <p class="q">A carpenter is putting the balusters (the upright posts) on a staircase. The balusters are vertical, so they are parallel to each other and perpendicular to the level floor and stair treads. The handrail rises at 36° from the horizontal.</p>
+    <div class="u5l8-fig"><svg id="u5l8-f-ex5" viewBox="0 0 440 280" role="img" aria-label="A staircase with four vertical balusters and a handrail rising at 36 degrees. a is where a baluster meets a tread, with a right-angle square. b and c are where the third baluster meets the handrail: b below the rail on the left, c below the rail on the right."></svg></div>
+  </div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) What is angle <i>a</i>, where a baluster meets a tread? Why?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">a=90^\circ</span>. The baluster is perpendicular to the level tread.</div></div></div>
+    <div class="part"><div class="pl">(b) Find <i>b</i> and <i>c</i>, the angles where a baluster meets the handrail.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Draw a horizontal line through the top of the baluster. It is parallel to the dashed line, so the rail makes 36° with it too (alternate interior angles).<br>The baluster is perpendicular to it, so <span class="tex">b+36^\circ=90^\circ</span> (complementary).<br><span class="tex">b=90^\circ-36^\circ=54^\circ</span><br><span class="tex">c=180^\circ-54^\circ=126^\circ</span> (straight line along the rail)</div></div></div>
+    <div class="part"><div class="pl">(c) Why can the carpenter cut the tops of <b>all</b> the balusters at the same angle?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The balusters are parallel and the handrail is a transversal. So every baluster meets the rail at corresponding angles, which are equal (54° and 126° at every baluster).</div></div></div>
+  </div>
+  <div class="explainer" data-explainer="stairs"></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. Think: Right Angles">
+  <h3 class="sub">Think it through</h3>
+  <div class="parts c2">
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> The rungs of a ladder are parallel. One rung is perpendicular to the left rail. Is every rung perpendicular to the left rail? How do you know?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> The left rail is a transversal of the parallel rungs. Corresponding angles are equal, so every rung meets it at 90°.</div></div></div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> Two complementary angles are equal. How big is each one?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">They add to 90°, so each one is <span class="tex">90^\circ\div2=45^\circ</span>. (A mitre cut on a picture frame!)</div></div></div>
+  </div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u5l8"></section>
+
+<!-- ================= 4. Are the lines parallel? ================= -->
+<section class="card" data-ink="s4" data-section="4. Are the Lines Parallel?">
+  <div class="sec-h"><span class="badge">4</span><h2>Are the Lines Parallel?</h2></div>
+  <p>The rules also work <b>backwards</b>. Measure a pair of angles made by a transversal. If the pair follows a parallel-line rule, the lines are parallel. If it does not, the lines are <b>not</b> parallel: if you made them longer, they would meet.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Two lines cut by a transversal <b>are parallel</b> if
+    <ul class="u5l8-ul">
+      <li>a pair of <b>corresponding</b> angles is equal, <b>or</b></li>
+      <li>a pair of <b>alternate interior</b> (or alternate exterior) angles is equal, <b>or</b></li>
+      <li>a pair of <b>interior</b> (or exterior) angles <b>on the same side</b> adds to 180°.</li>
+    </ul>
+    If the pair does not follow the rule, even by 1°, the lines are <b>not</b> parallel.</div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Vertically opposite angles are <b>always</b> equal, so they tell you nothing about whether the lines are parallel. Also, don’t trust your eyes: a diagram may not be drawn to scale. Use the angle sizes.</div></div>
+  <div class="explainer" data-explainer="shelf"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Leah’s leaning bookshelf</h3></div>
+  <p class="q">Leah is building a leaning bookshelf. The shelves are <span class="tex">\ell_1</span> and <span class="tex">\ell_2</span> and the slanted leg is the transversal <i>t</i>. She measures two angles. Are the shelves parallel? Give the rule you used. (The diagrams are not drawn to scale.)</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a)</div><div class="u5l8-fig" id="u5l8-f-ex6a"></div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The two 70° angles are <b>corresponding</b> angles. They are equal, so <b>yes</b>, the shelves are parallel.</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u5l8-fig" id="u5l8-f-ex6b"></div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">These are <b>interior angles on the same side</b>. <span class="tex">112^\circ+66^\circ=178^\circ</span>, not 180°, so <b>no</b>, the shelves are not parallel.</div></div></div>
+    <div class="part"><div class="pl">(c)</div><div class="u5l8-fig" id="u5l8-f-ex6c"></div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The two 75° angles are <b>alternate interior</b> angles. They are equal, so <b>yes</b>, the shelves are parallel.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Owen’s deck joists</h3></div>
+  <div class="u5l8-ex5">
+    <p class="q">Owen is building a deck at an angle. Two floor joists are nailed across a beam, and they must be parallel. He measures the angles shown.</p>
+    <div class="u5l8-fig"><svg id="u5l8-f-ex7" viewBox="0 0 440 200" role="img" aria-label="A horizontal beam crossed by two slanted joists. At joist 1 the angle above the beam on the right is 60 degrees. At joist 2 the angle above the beam on the left is 117 degrees."></svg></div>
+  </div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Are the joists parallel? Explain.</div><div class="work" style="--h:180px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Find the upper-right angle at joist 2: <span class="tex">180^\circ-117^\circ=63^\circ</span> (straight line).<br>It corresponds to the 60° angle at joist 1. <span class="tex">63^\circ\ne60^\circ</span>, so <b>no</b>, the joists are not parallel.</div></div></div>
+    <div class="part"><div class="pl">(b) What should the 117° angle be, so that the joists are parallel?</div><div class="work" style="--h:180px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">At joist 1 the upper-left angle is <span class="tex">180^\circ-60^\circ=120^\circ</span>.<br>The matching (corresponding) angle at joist 2 must also be <b>120°</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) By how many degrees must Owen turn joist 2? Should the 117° angle get bigger or smaller?</div><div class="work" style="--h:180px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">120^\circ-117^\circ=3^\circ</span>.<br>He must turn joist 2 by <b>3°</b>, so that the 117° angle gets <b>bigger</b> (to 120°).</div></div></div>
+  </div>
+  <div class="explainer" data-explainer="joists"></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Think: Parallel or Not?">
+  <h3 class="sub">Think it through</h3>
+  <div class="parts c2">
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> Sam measures <span class="tex">\angle5=101^\circ</span> and <span class="tex">\angle7=101^\circ</span>. He says the lines must be parallel. Is he right?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> <span class="tex">\angle5</span> and <span class="tex">\angle7</span> are vertically opposite. They are always equal, parallel or not, so they prove nothing.</div></div></div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> Two interior angles on the same side add to 183°. Do the lines meet on that side of the transversal, or on the other side?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">On the <b>other</b> side. The two interior angles on the other side add to <span class="tex">360^\circ-183^\circ=177^\circ</span>, less than 180°, and the lines lean toward each other on the side with the smaller sum.</div></div></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s4c" data-section="4. Which Pairs Prove It?">
+  <h3 class="sub">Which pairs can prove the lines are parallel?</h3>
+  <p>Turn the bottom line and watch three angles. Vertically opposite angles always match, so they prove nothing. A corresponding pair matches only when the lines are parallel.</p>
+  <div class="explainer" data-explainer="proof"></div>
+</section>
+
+<section class="card example" data-extra data-ink="ex7b" data-section="More Practice: Parallel?">
+  <div class="ex-head"><span class="ex-tag">More practice</span><h3>Fence posts and ladder rungs</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Two fence posts stand on straight, sloping ground. Between the posts, the downhill post makes 88° with the ground and the uphill post makes 92°. Are the posts parallel?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Both angles are between the posts, on the same side of the ground line: interior angles on the same side. <span class="tex">88^\circ+92^\circ=180^\circ</span>, so <b>yes</b>, the posts are parallel.</div></div></div>
+    <div class="part"><div class="pl">(b) Two ladder rungs meet the left rail at 81° and 79°, both measured above the rung, on the right of the rail. Are the rungs parallel? By how many degrees is one off?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same corner at each crossing: corresponding angles. <span class="tex">81^\circ\ne79^\circ</span>, so <b>no</b>. One rung is off by <span class="tex">81^\circ-79^\circ=2^\circ</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex7b-space"></div>
+  <button class="more" data-more="ex7b-space">+ More space</button>
+</section>
+
+<!-- sources: https://www.britannica.com/science/non-Euclidean-geometry (Euclid about 300 BCE; the fifth postulate: same-side interior angles less than two right angles, the lines meet on that side; about 2000 years of attempts to prove it; Lobachevsky 1829 and Bolyai 1831 published a geometry without it)
+     https://mathcs.clarku.edu/~djoyce/elements/bookI/post5.html (the wording of Postulate 5; early 19th century: Bolyai, Lobachevsky, Gauss, hyperbolic geometry) -->
+<section class="card history" data-ink="hist" data-section="Math History: Euclid’s Fifth Rule">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">about 300 BCE · 1829</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">The rule nobody could prove</h3>
+      <p>About 2300 years ago, the Greek mathematician <b>Euclid</b> wrote down the basic rules of geometry. His <b>fifth rule</b> is today’s idea: if a transversal makes two interior angles on the same side that add to <b>less than 180°</b>, the two lines will <b>meet on that side</b> if you make them long enough.</p>
+      <p>For about <b>2000 years</b>, mathematicians tried to prove this rule from Euclid’s other rules, and failed. In 1829 and 1831, <b>Lobachevsky</b> (Russia) and <b>Bolyai</b> (Hungary) showed why: a whole different geometry works without it.</p>
+      <div class="part hist-q"><div class="pl">Owen’s joists: the two angles between them, above the beam, are 60° and 117°. Do the joists meet above the beam or below it?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">60^\circ+117^\circ=177^\circ</span>, less than 180°, so by Euclid’s rule they meet <b>above</b> the beam: very far up (about 15 times the gap between the joists), but they do meet.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u5l8-hist" viewBox="0 0 600 300" role="img" aria-label="Two lines cut by a transversal with same-side interior angles of 87 and 88 degrees, 175 in all. The picture zooms out as the lines are made longer until they meet far away."></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div>If <span class="tex">\ell_1\parallel\ell_2</span>: <b>corresponding</b> (F), <b>alternate interior</b> (Z) and <b>alternate exterior</b> angles are <b>equal</b>; angles on the <b>same side</b> (interior U, or exterior) <b>add to 180°</b>.</div>
+    <div><b>Always:</b> vertically opposite angles are equal, and angles on a straight line add to 180°. With parallel lines there are only <b>two sizes</b>: small + big = 180°.</div>
+    <div>Find angles in <b>steps</b>: angle, size, <b>reason</b>. Letters: write an equation (<span class="tex">x+47^\circ=180^\circ</span>). A transversal <b>⊥</b> one parallel line is ⊥ the other: all 8 angles are 90°.</div>
+    <div><b>Parallel?</b> Check a pair: corresponding or alternate angles <b>equal</b>, or same-side angles <b>add to 180°</b>. Off by even 1°: <b>not</b> parallel. Vertically opposite angles prove nothing.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u5l8">
+    <div><div class="kicker">Your turn</div><b>Assignment 8 · Questions 9–18</b><div class="muted">Railway tracks and a bike path, a bridge with braces, are the lines parallel, three lines and a transversal, Ella’s mistake, crosswalk stripes, and multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l9/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 9 — Unit 5 Review</b><div class="muted">Spatial puzzles, angles, bearings, constructions and parallel lines: get ready for the Unit 5 test.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u5l8.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u5l8', homeHref: '../../', title: '5.8 Parallel Lines and Transversals' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

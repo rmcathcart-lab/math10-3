@@ -1,0 +1,48 @@
+/* Math 10-3 · Unit 5 · Lesson 5 — Copying and Bisecting Angles; Perpendicular Lines: styles used only on this page
+ * (prefix u5l5-). */
+.u5l5 .ans .katex, .u5l5 .pl .katex, .u5l5 .def .katex { font-size: 1.06em; }
+.u5l5 .ex-cap .katex { font-size: 1.04em; }
+.u5l5-gap { margin-top: 14px; }
+.u5l5-pcol { display: flex; gap: 8px; flex: none; flex-wrap: wrap; }
+.u5l5-svg { overflow: visible; display: block; }
+.u5l5-fig { display: flex; justify-content: center; }
+.u5l5-fig .geo-box { margin: 0 auto; }
+
+/* warm-up poll */
+.u5l5-wpoll .poll-opts { margin-left: 0; } .u5l5-wpoll > .pill, .u5l5-wpoll .poll-ans { margin-left: 0; }
+.u5l5-wpoll .opt { font-size: 21px; padding: 10px 14px; } .u5l5-wpoll .poll-ans { font-size: 19px; }
+
+/* tables */
+.u5l5-tbl { border-collapse: collapse; font-size: 19px; margin: 8px 0 4px; background: #fff; width: 100%; }
+.u5l5-tbl th, .u5l5-tbl td { border: 2px solid #b9ad97; padding: 6px 12px; text-align: left; height: 42px; }
+.u5l5-tbl th { background: var(--brand-soft, #f5ecdf); font: 800 17px var(--round); }
+.u5l5-tools td:first-child { font-weight: 800; width: 230px; }
+.u5l5-half th, .u5l5-half td { text-align: center; width: 13%; font-weight: 700; font-size: 20px; }
+.u5l5-half tr > th:first-child { width: 18%; text-align: left; }
+.u5l5-sort td { font-size: 18px; } .u5l5-sort td:first-child { width: 90px; text-align: center; } .u5l5-sort td:nth-child(2) { width: 150px; font-weight: 700; }
+
+/* key ideas with a figure beside the steps */
+.u5l5-key { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: center; }
+.u5l5-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 5px; }
+.u5l5-steps li { font-size: 19px; }
+.u5l5-ol { margin: 8px 0 0; padding-left: 26px; display: grid; gap: 4px; font-size: 19px; }
+.u5l5-two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; margin: 12px 0; }
+.u5l5-two .def { margin: 0; }
+.u5l5-eqs { display: flex; gap: 34px; flex-wrap: wrap; margin-top: 8px; font: 700 21px var(--round); }
+.u5l5-ways { margin: 4px 0 12px; padding-left: 24px; display: grid; gap: 4px; font-size: 19px; }
+.u5l5-kl { margin-top: 6px; font-size: 19px; }
+
+/* tips */
+.tip.u5l5-job { background: #f5ecdf; } .tip.u5l5-job .tip-ic { background: var(--brand2); color: #fff; }
+
+/* example layouts */
+.u5l5-ex4 { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 16px; align-items: start; }
+.u5l5-ex7 { display: grid; grid-template-columns: 500px minmax(0, 1fr); gap: 14px; align-items: start; margin-top: 6px; }
+.u5l5-mitre { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 20px; align-items: center; }
+.u5l5-plane { display: grid; grid-template-columns: minmax(0, 1fr) 430px; gap: 16px; align-items: center; }
+.u5l5-plane p { margin: 0; }
+.u5l5-story { font-size: 19px; margin: 0 0 8px; }
+
+/* explainer read-outs */
+.u5l5-res { background: #fff; border: 2px solid #d7cbb4; border-radius: 12px; padding: 7px 14px; font: 600 20px/1.35 var(--round); color: var(--ink); box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.u5l5-res.u5l5-big { font-size: 28px; text-align: center; padding: 12px 14px; }

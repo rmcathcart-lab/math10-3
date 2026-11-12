@@ -1,0 +1,74 @@
+/* Math 10-3 · Unit 5 · Lesson 4 — Estimating Angles with Referents, and True Bearings: styles used only on this page
+ * (prefix u5l4-). */
+.u5l4 .ans .katex, .u5l4 .pl .katex, .u5l4 .def .katex { font-size: 1.08em; }
+.u5l4 .ex-cap .katex { font-size: 1.06em; }
+.u5l4-gap { margin-top: 14px; }
+.u5l4-pcol { display: flex; gap: 8px; flex: none; flex-wrap: wrap; }
+.u5l4-q { font-size: 20px; margin: 4px 0 10px; }
+.u5l4-small { font-size: 18px; color: var(--ink2); }
+.u5l4-eg { font-size: 22px; text-align: center; margin: 8px 0 12px; }
+.u5l4-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 4px; }
+.u5l4-steps li { font-size: 19px; }
+.u5l4-ind { display: inline-block; padding-left: 62px; }
+
+/* ---------- warm-up ---------- */
+.u5l4-wpoll .poll-opts { margin-left: 0; grid-template-columns: repeat(4, 1fr); } .u5l4-wpoll > .pill, .u5l4-wpoll .poll-ans { margin-left: 0; }
+.u5l4-wpoll .opt { font-size: 22px; padding: 10px 14px; } .u5l4-wpoll .poll-ans { font-size: 20px; }
+
+/* ---------- tables ---------- */
+.u5l4-tbl { border-collapse: collapse; font-size: 19px; background: #fff; }
+.u5l4-tbl td, .u5l4-tbl th { padding: 5px 12px; }
+.u5l4-grid { width: 100%; margin: 8px 0 4px; }
+.u5l4-grid th, .u5l4-grid td { border: 2px solid #b9ad97; text-align: center; height: 44px; }
+.u5l4-grid th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u5l4-reftbl .u5l4-tbl { margin-top: 6px; background: transparent; }
+.u5l4-reftbl .u5l4-tbl td { padding: 3px 10px 3px 0; }
+.u5l4-deg { font: 800 21px var(--round); color: var(--brand); text-align: right; width: 70px; }
+.u5l4-refgrid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 18px; align-items: center; }
+.u5l4-refgrid .def { margin: 0; }
+.u5l4-t2 td:nth-child(3) { width: 330px; }
+.u5l4-t6 td { width: 25%; }
+.u5l4-t9 th { width: 120px; }
+.u5l4-t9 td { width: 14%; font-size: 20px; }
+.u5l4-btbl { margin: 6px 0; background: transparent; }
+.u5l4-btbl td { padding: 3px 14px 3px 0; font-weight: 700; white-space: nowrap; }
+.u5l4-bgrid { display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: 20px; align-items: center; }
+.u5l4-bdef { margin: 0 0 8px; }
+.u5l4-backrule { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 8px 0; font-size: 20px; }
+.u5l4-backrule > div { background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 8px 12px; text-align: center; }
+
+/* ---------- blanks and answer lines ---------- */
+.u5l4-lines { display: grid; gap: 10px; font-size: 20px; margin: 8px 0; }
+.u5l4-dirs > div { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.u5l4-blank { display: inline-block; min-width: 86px; border-bottom: 2px solid #8b7d66; padding: 0 6px; text-align: center; }
+.u5l4-blank.w2 { min-width: 140px; } .u5l4-blank.w3 { min-width: 210px; }
+.u5l4-blank .bk-rv-q { border: 0; background: none; }
+
+/* ---------- figures ---------- */
+.u5l4-fig { position: relative; display: flex; justify-content: center; margin: 6px auto 4px; }
+.u5l4-fig svg { max-width: 100%; height: auto; }
+.u5l4-pfig { min-height: 270px; }
+.u5l4-ladrow { display: grid; grid-template-columns: 470px minmax(0, 1fr); gap: 18px; align-items: center; }
+.u5l4-maprow { display: grid; grid-template-columns: minmax(0, 1fr) 470px; gap: 18px; align-items: start; }
+.u5l4-mini { display: block; margin: 0 auto 4px; width: 150px; }
+.u5l4-mini svg { display: block; width: 150px; height: auto; }
+.u5l4-fa { visibility: hidden; }
+.part.shown .u5l4-fa { visibility: visible; }
+.u5l4-tool { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 12px 16px 14px; }
+.u5l4-ctool { display: grid; grid-template-columns: 430px minmax(0, 1fr); gap: 18px; align-items: center; }
+.u5l4-cread { font: 600 21px/1.4 var(--round); color: var(--ink2); background: #f7f5ef; border-radius: 14px; padding: 14px 18px; min-height: 150px; }
+.u5l4-cread b.u5l4-cbig { display: block; font-size: 54px; color: var(--ink); letter-spacing: 1px; }
+.u5l4-cread .u5l4-cpt { font-size: 22px; color: var(--brand); font-weight: 800; }
+.u5l4-cread .u5l4-cback { color: #1f5bd6; }
+
+/* ---------- explainer stage pieces ---------- */
+.u5l4-svg { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.u5l4-fl { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 19px; line-height: 1.15; white-space: nowrap; }
+.u5l4-panel { position: absolute; display: flex; flex-direction: column; gap: 10px; }
+.u5l4-pl { font-size: 21px; line-height: 1.3; background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 6px 12px; }
+.u5l4-pl.u5l4-res { background: #fff6e5; border: 3px solid #e2a63a; font-weight: 700; font-size: 23px; }
+.u5l4-pl.u5l4-big { font: 800 30px var(--round); text-align: center; color: var(--brand); }
+.u5l4-pl.u5l4-blue { border-color: #1f5bd6; } .u5l4-pl.u5l4-green { border-color: #12805a; } .u5l4-pl.u5l4-red { border-color: #c93a33; }
+.u5l4-pl .katex, .u5l4-fl .katex { font-size: 1.1em; }
+.u5l4-tag { font: 800 18px var(--round); color: #3a4254; }
+.u5l4-pill { background: #fff; border: 2px solid #9a6a24; border-radius: 10px; padding: 2px 8px; font: 800 19px var(--round); }

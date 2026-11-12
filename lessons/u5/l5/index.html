@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Copying and Bisecting Angles · Math 10-3 5.5</title>
+<meta name="description" content="Math 10-3 Unit 5 Lesson 5: copying an angle with a protractor, a compass and straightedge or a carpenter's tool; bisecting an angle by protractor, folding, Mira or compass; perpendicular lines and the perpendicular bisector; sorting lines as parallel, perpendicular or neither; mitre cuts and braces. Animated compass constructions. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u5l5.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u5l5">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Full-Length Mirror">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Full-Length Mirror</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">You want a mirror on your bedroom wall that shows <b>all of you</b>, from the top of your head down to your shoes.</p><p class="vw-ctx">You are <b>170 cm</b> tall. The mirror hangs flat on the wall, and you stand in front of it.</p><p class="vw-ask">What is the shortest mirror that can show your whole body?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="A person walks toward and away from a wall mirror whose height is a question mark">
+    <rect x="0" y="232" width="330" height="28" fill="#e9dcc6"/>
+    <rect x="18" y="8" width="16" height="224" fill="#d9cdb6"/>
+    <rect x="34" y="40" width="22" height="160" rx="4" fill="#cfe6f5" stroke="#5c7f99" stroke-width="3"/>
+    <path d="M40 60 L50 50 M40 90 L50 80" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+    <g stroke="#9a6a24" stroke-width="3" fill="none" stroke-linecap="round"><path d="M70 40 H80 V200 H70"/></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 -4;0 4;0 -4" dur="1.8s" repeatCount="indefinite"/>
+      <text x="100" y="134" font-size="44" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;90 0;0 0" dur="5s" repeatCount="indefinite"/>
+      <circle cx="170" cy="64" r="17" fill="#f2c9a0" stroke="#3a2a14" stroke-width="3"/>
+      <path d="M158 56 Q170 40 184 56" fill="#5a3b1c"/>
+      <circle cx="163" cy="63" r="2.4" fill="#1c2230"/>
+      <rect x="155" y="84" width="30" height="74" rx="10" fill="#2f6fb5" stroke="#1d3f66" stroke-width="3"/>
+      <path d="M160 158 L158 226 M180 158 L182 226" stroke="#3a4254" stroke-width="9" stroke-linecap="round"/>
+      <path d="M150 228 H164 M176 228 H192" stroke="#1c2230" stroke-width="7" stroke-linecap="round"/>
+      <path d="M157 96 L146 140 M183 96 L193 140" stroke="#2f6fb5" stroke-width="8" stroke-linecap="round"/>
+    </g>
+  </svg></div></div>
+  <div class="poll u5l5-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> 170 cm, as tall as you</div>
+      <div class="opt"><b>B</b> about 120 cm</div>
+      <div class="opt right"><b>C</b> 85 cm</div>
+      <div class="opt"><b>D</b> it depends how far back you stand</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>C: only 85 cm, half your height</b> (if it hangs at the right height). Light from your shoes hits the mirror and bounces up to your eyes. It bounces off at the <b>same angle</b> it came in, so it hits the mirror <b>halfway</b> between your shoes and your eyes. Light from the top of your head works the same way. So the mirror only needs half your height. <b>Stepping back doesn’t help</b>: you see the same part of yourself from anywhere. <span class="muted">Try it in a bathroom mirror! The line straight out from the mirror cuts that bounce angle exactly in half: today we cut angles in half.</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 5 Angles, Parallel Lines and Spatial Puzzles · Lesson 5</div>
+  <h1>Copying and Bisecting Angles; Perpendicular Lines</h1>
+  <p class="lede">Carpenters copy angles onto boards, cut corners exactly in half for picture frames, and check that posts stand at <b>90°</b>. Today we copy an angle, <b>bisect</b> it (cut it in half), draw <b>perpendicular</b> lines with a compass, and sort lines as parallel, perpendicular or neither.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li><b>copy</b> an angle with a protractor, or with only a <b>compass and straightedge</b></li>
+      <li><b>bisect</b> an angle (protractor, folding, Mira or compass), and find each half or the whole angle</li>
+      <li>construct a <b>perpendicular</b> line through a point, and the <b>perpendicular bisector</b> of a segment</li>
+      <li>sort two lines as <b>parallel, perpendicular or neither</b>, and give a reason</li>
+      <li>find the <b>mitre cut</b> for a frame, and the angle of a brace</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G6</b> Demonstrate an understanding of angles, including acute, right, obtuse, straight and reflex, by: drawing; replicating and constructing; bisecting; solving problems.<br><span class="muted">Today: replicating, constructing and bisecting.</span></div>
+  <div class="outcome"><b>G5</b> Solve problems that involve parallel, perpendicular and transversal lines, and pairs of angles formed between them.<br><span class="muted">Today: perpendicular and parallel lines.</span></div>
+</section>
+
+<!-- ================= 1. Copying an angle ================= -->
+<section class="card" data-ink="s1" data-section="1. Copying an Angle">
+  <div class="sec-h"><span class="badge">1</span><h2>Copying an Angle</h2></div>
+  <p>To <b>copy</b> (or <b>replicate</b>) an angle means to draw a new angle with exactly the same size. Two angles with the same size are called <b>congruent</b>. Carpenters copy angles all the time: the angle of a stair, a roof or a crooked wall has to be copied onto a board before it is cut.</p>
+  <table class="u5l5-tbl u5l5-tools">
+    <tr><th>Tool</th><th>How it copies an angle</th></tr>
+    <tr><td>Protractor</td><td>Measure the angle. Then draw a new angle with the same number of degrees.</td></tr>
+    <tr><td>Tracing paper or a Mira</td><td>Trace the angle and move the tracing. A <b>Mira</b> is a see-through red plastic mirror: you look through it, line up the reflection of the angle, and draw it.</td></tr>
+    <tr><td>Sliding T-bevel</td><td>A carpenter’s tool with a blade that swings and locks. Set the blade along both arms of the angle, lock it, then move it to the new board and draw.</td></tr>
+    <tr><td>Carpenter’s square</td><td>An L-shaped steel square. It only copies a <b>right angle</b> (90°). A <b>speed square</b> (a triangle) also marks 45° and has a degree scale.</td></tr>
+    <tr><td>Compass and straightedge</td><td>No numbers at all: the compass copies distances, and that copies the angle (steps below).</td></tr>
+    <tr><td>Geometry software</td><td>Many computer drawing programs can measure an angle and copy it exactly.</td></tr>
+  </table>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A Mira shows a <b>mirror image</b> of the angle: it opens the other way. Is the copy still the same size?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> Flipping an angle over doesn’t open or close its arms, so the copy is congruent. Only its direction changes.</div></div></div>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Copy with a Compass">
+  <div class="def u5l5-key"><div><b>Key idea</b> &nbsp; <b>Copy <span class="tex">\angle ABC</span> with a compass and straightedge</b>
+    <ul class="u5l5-steps">
+      <li><b>Step 1.</b> Put the compass point on the vertex <span class="tex">B</span>. Draw an arc that crosses both arms. Label the crossings <span class="tex">P</span> and <span class="tex">Q</span>.</li>
+      <li><b>Step 2.</b> Draw a ray from a new point <span class="tex">E</span>. <em>Keep the same compass width.</em> Put the point on <span class="tex">E</span> and draw a long arc that crosses the ray at <span class="tex">R</span>.</li>
+      <li><b>Step 3.</b> Set the compass to the distance from <span class="tex">Q</span> to <span class="tex">P</span>. Put the point on <span class="tex">R</span> and draw an arc that crosses the long arc at <span class="tex">S</span>.</li>
+      <li><b>Step 4.</b> Draw the ray from <span class="tex">E</span> through <span class="tex">S</span>. Now <span class="tex">\angle SER=\angle ABC</span>.</li>
+    </ul></div>
+    <div class="u5l5-fig u5l5-keyfig" data-fig="keyCopy"></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> In Steps 1 and 2 the compass width must be the <b>same</b>. Only in Step 3 do you change it, to the distance from <span class="tex">Q</span> to <span class="tex">P</span>. Hold the compass by the top so the width doesn’t slip.</div></div>
+  <div class="explainer" data-explainer="copyCompass"></div>
+</section>
+
+<section class="card" data-extra data-ink="s1w" data-section="1. Why the Compass Copy Works">
+  <h3 class="sub">Why does the compass copy work? It copies a triangle</h3>
+  <p>The compass copies three <b>distances</b>. Those three distances make a triangle, and a triangle with the same three sides has the same angles.</p>
+  <div class="explainer" data-explainer="whyCopy"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Copy with a protractor</h3></div>
+  <div class="part"><div class="pl">Measure <span class="tex">\angle KLM</span> with a protractor. Then use the protractor to copy it onto ray <span class="tex">ST</span>, with its vertex at <span class="tex">S</span>.</div>
+    <div class="u5l5-fig" data-fig="ex1"></div>
+    <div class="work" style="--h:40px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Centre on <span class="tex">L</span>, 0 line on <span class="tex">LM</span>, read the scale that starts at 0 on <span class="tex">LM</span>: <b><span class="tex">\angle KLM=64^\circ</span></b> (acute ✓). Then centre on <span class="tex">S</span>, 0 line on <span class="tex">ST</span>, mark a dot at 64° on the scale that starts at 0 on <span class="tex">ST</span>, and join <span class="tex">S</span> to the dot.</div></div></div>
+  <div class="explainer u5l5-gap" data-explainer="copyProt"></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Copy with a compass and straightedge</h3></div>
+  <div class="part"><div class="pl">Copy <span class="tex">\angle DEF</span> onto ray <span class="tex">GH</span> using only a compass and a straightedge. Then measure both angles to check.</div>
+    <div class="u5l5-fig" data-fig="ex2"></div>
+    <div class="work" style="--h:40px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Arc from <span class="tex">E</span> (crossing both arms), the same arc from <span class="tex">G</span>, then the distance between the crossings on <span class="tex">\angle DEF</span> marked from the crossing on <span class="tex">GH</span>. Draw the new arm. Check: both angles measure <b>112°</b>. <span class="muted">(Replay it: Example 2 check in the animation above.)</span></div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Bisecting an angle ================= -->
+<section class="card" data-ink="s2" data-section="2. Bisecting an Angle">
+  <div class="sec-h"><span class="badge">2</span><h2>Bisecting an Angle</h2></div>
+  <div class="def"><b>Key idea</b> &nbsp; To <b>bisect</b> means to cut into two equal parts. The <b>angle bisector</b> is the ray from the vertex that cuts an angle into two equal angles.
+    <div class="u5l5-eqs"><span>each half <span class="tex">=</span> the angle <span class="tex">\div 2</span></span><span>the whole angle <span class="tex">=</span> the half <span class="tex">\times 2</span></span></div></div>
+  <p class="u5l5-gap"><b>Ways to bisect an angle:</b></p>
+  <ul class="u5l5-ways">
+    <li><b>Protractor:</b> measure, divide by 2, and mark that many degrees from one arm.</li>
+    <li><b>Folding:</b> draw or trace the angle on thin paper. Fold through the vertex so one arm lies exactly on top of the other. The crease is the bisector.</li>
+    <li><b>Mira:</b> stand it on the vertex and turn it until the reflection of one arm lies on the other arm. Draw along its edge.</li>
+    <li><b>Compass and straightedge:</b> the steps below.</li>
+  </ul>
+  <div class="explainer" data-explainer="fold"></div>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Bisect with a Compass">
+  <div class="def u5l5-key"><div><b>Key idea</b> &nbsp; <b>Bisect <span class="tex">\angle ABC</span> with a compass and straightedge</b>
+    <ul class="u5l5-steps">
+      <li><b>Step 1.</b> Compass point on the vertex <span class="tex">B</span>. Draw an arc that crosses both arms at <span class="tex">P</span> and <span class="tex">Q</span>.</li>
+      <li><b>Step 2.</b> Compass point on <span class="tex">Q</span>. Draw an arc inside the angle.</li>
+      <li><b>Step 3.</b> <em>Same width.</em> Compass point on <span class="tex">P</span>. Draw an arc that crosses the Step 2 arc at <span class="tex">D</span>.</li>
+      <li><b>Step 4.</b> Draw the ray from <span class="tex">B</span> through <span class="tex">D</span>. Ray <span class="tex">BD</span> bisects <span class="tex">\angle ABC</span>, so <span class="tex">\angle ABD=\angle DBC</span>.</li>
+    </ul></div>
+    <div class="u5l5-fig u5l5-keyfig" data-fig="keyBisect"></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> In Steps 2 and 3, the compass must open to <b>more than half</b> the distance from <span class="tex">P</span> to <span class="tex">Q</span>, or the two arcs won’t cross. Don’t change the width between Step 2 and Step 3.</div></div>
+  <div class="explainer" data-explainer="bisectCompass"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> How could you bisect a <b>reflex</b> angle (more than 180°)?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Bisect the smaller angle on the other side of the arms. Then extend that bisector backward through the vertex. The new ray cuts the reflex angle in half.</div></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s2w" data-section="2. Why the Compass Bisector Works">
+  <h3 class="sub">Why does the compass bisector work? Two matching triangles</h3>
+  <div class="u5l5-plane">
+    <div>
+      <p>Steps 1 to 3 make a kite shape <span class="tex">BPDQ</span>:</p>
+      <ul class="u5l5-ways">
+        <li><span class="tex">BP=BQ</span> (one arc in Step 1),</li>
+        <li><span class="tex">PD=QD</span> (the same width in Steps 2 and 3),</li>
+        <li><span class="tex">BD</span> is a side of both triangles.</li>
+      </ul>
+      <p>So triangles <span class="tex">BPD</span> and <span class="tex">BQD</span> have the <b>same three sides</b>. They are identical, so their angles at <span class="tex">B</span> are equal: <span class="tex">\angle PBD=\angle QBD</span>.</p>
+    </div>
+    <div class="u5l5-fig" data-fig="whyBisect"></div>
+  </div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> What goes wrong if the compass slips wider between Step 2 and Step 3?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Then <span class="tex">PD\ne QD</span>. The crossing moves toward one arm, so the ray is not in the middle: one “half” is bigger than the other.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Each half, or the whole angle</h3></div>
+  <div class="part"><div class="pl">Each angle is bisected. Complete the table.</div>
+    <table class="u5l5-tbl u5l5-half">
+      <tr><th></th><th>(a)</th><th>(b)</th><th>(c)</th><th>(d)</th><th>(e)</th><th>(f)</th></tr>
+      <tr><th>Whole angle</th><td>90°</td><td>128°</td><td>75°</td><td>180°</td><td><span data-reveal="&nbsp;">68°</span></td><td><span data-reveal="&nbsp;">163°</span></td></tr>
+      <tr><th>Each half</th><td><span data-reveal="&nbsp;">45°</span></td><td><span data-reveal="&nbsp;">64°</span></td><td><span data-reveal="&nbsp;">37.5°</span></td><td><span data-reveal="&nbsp;">90°</span></td><td>34°</td><td>81.5°</td></tr>
+    </table>
+    <div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <span class="tex">90\div2=45</span> · (b) <span class="tex">128\div2=64</span> · (c) <span class="tex">75\div2=37.5</span> · (d) <span class="tex">180\div2=90</span>: half a straight angle is a right angle. · (e) <span class="tex">34\times2=68</span> · (f) <span class="tex">81.5\times2=163</span></div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Halves can be decimals: <span class="keys">75 <kbd>÷</kbd> 2 <kbd>ENTER</kbd></span> shows <b>37.5</b>. Going back: <span class="keys">81.5 <kbd>×</kbd> 2 <kbd>ENTER</kbd></span> shows <b>163</b>.</div>
+    <div class="u5l5-pcol"><button class="pill" type="button" data-keys="75 ÷ 2 =">75 ÷ 2</button><button class="pill" type="button" data-keys="81.5 × 2 =">81.5 × 2</button></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2h" data-section="2. Halves and Wholes, Animated">
+  <h3 class="sub">Halves and wholes: watch the angle split (and join)</h3>
+  <div class="explainer" data-explainer="halver"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Bisect, measure, fold</h3></div>
+  <div class="u5l5-ex4">
+    <div>
+      <div class="part"><div class="pl">(a) Bisect <span class="tex">\angle JKL</span> with a compass and straightedge.</div><div class="work" style="--h:40px"></div></div>
+      <div class="part"><div class="pl">(b) Measure the two halves with a protractor. What should each one be?</div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle JKL=70^\circ</span>, so each half is <span class="tex">70\div2=35^\circ</span>. Both measure <b>35°</b> ✓</div></div></div>
+      <div class="part"><div class="pl">(c) How could you check your bisector by folding?</div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Trace the angle on thin paper. Fold through <span class="tex">K</span> so arm <span class="tex">KJ</span> lies on arm <span class="tex">KL</span>. The crease should lie right on the bisector.</div></div></div>
+    </div>
+    <div class="u5l5-fig" data-fig="ex4"></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- sources: https://en.wikipedia.org/wiki/Angle_trisection (Greeks could bisect but not trisect with compass and
+     unmarked straightedge; a 90° angle can be trisected, a 60° angle cannot; Wantzel's proof, 1837);
+     https://en.wikipedia.org/wiki/Pierre_Wantzel (born 5 June 1814; proof published 1837);
+     https://www.maths.tcd.ie/~dwilkins/Euclid/Elements_Heath1908/BookI/EuclidElementsBk01Prop09_Heath1908.php
+     (Euclid, Elements I.9: to bisect a given rectilineal angle) -->
+<section class="card history" data-ink="hist" data-section="Math History: Cut in Three? Impossible!">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">c. 300 BCE – 1837</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">Halves are easy. Thirds are impossible.</h3>
+      <p>About 2300 years ago, the Greek mathematician <b>Euclid</b> wrote down today’s steps for bisecting an angle with only a compass and a straightedge.</p>
+      <p>Then people tried to cut <b>any</b> angle into <b>three</b> equal parts the same way. For over 2000 years, nobody could do it.</p>
+      <p>In <b>1837</b>, a 23-year-old French student, <b>Pierre Wantzel</b>, proved it can’t be done. Some angles work, but most don’t: not even 60°.</p>
+      <div class="part hist-q"><div class="pl">A 90° angle <b>can</b> be cut into three equal parts with a compass. How big is each part?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">90^\circ\div3=30^\circ</span>. (A 30° angle is easy to make with a compass: bisect the 60° corner of a triangle with three equal sides.)</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u5l5-hist" viewBox="0 0 600 300" role="img" aria-label="An angle is bisected into 2, then 4 equal parts; then dashed lines try to cut it into 3 parts and a stamp says impossible, 1837"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 3. Perpendicular lines ================= -->
+<section class="card" data-ink="s3" data-section="3. Perpendicular Lines">
+  <div class="sec-h"><span class="badge">3</span><h2>Perpendicular Lines and the Perpendicular Bisector</h2></div>
+  <p>Two lines are <b>perpendicular</b> if they meet at a right angle (90°). We mark the right angle with a small square, and write <span class="tex">AB\perp CD</span> (“<span class="tex">AB</span> is perpendicular to <span class="tex">CD</span>”). When two lines are perpendicular, all four angles where they cross are 90°.</p>
+  <p>A straight angle is 180°, and <span class="tex">180^\circ\div2=90^\circ</span>. So drawing a perpendicular line is the same as <b>bisecting a straight angle</b>. The <b>midpoint</b> of a segment cuts it into two equal parts. The <b>perpendicular bisector</b> of a segment goes through its midpoint at 90°.</p>
+  <div class="u5l5-two">
+    <div class="def"><b>Perpendicular through a point <span class="tex">P</span> on a line</b>
+      <div class="u5l5-fig" data-fig="keyPerpAt"></div>
+      <ol class="u5l5-ol">
+        <li>Compass point on <span class="tex">P</span>. Draw arcs that cross the line on both sides, at <span class="tex">X</span> and <span class="tex">Y</span>.</li>
+        <li>Open the compass wider. Point on <span class="tex">X</span>: draw an arc above <span class="tex">P</span>.</li>
+        <li>Same width, point on <span class="tex">Y</span>: draw an arc that crosses it at <span class="tex">Q</span>.</li>
+        <li>Draw line <span class="tex">PQ</span>. It is perpendicular to the first line.</li>
+      </ol></div>
+    <div class="def"><b>Perpendicular bisector of segment <span class="tex">AB</span></b>
+      <div class="u5l5-fig" data-fig="keyPerpBis"></div>
+      <ol class="u5l5-ol">
+        <li>Open the compass to <em>more than half</em> of <span class="tex">AB</span>. Point on <span class="tex">A</span>: draw arcs above and below <span class="tex">AB</span>.</li>
+        <li>Same width, point on <span class="tex">B</span>: draw arcs that cross the first two at <span class="tex">C</span> and <span class="tex">D</span>.</li>
+        <li>Draw line <span class="tex">CD</span>. It crosses <span class="tex">AB</span> at its midpoint <span class="tex">M</span>, at 90°. So <span class="tex">AM=MB</span>.</li>
+      </ol></div>
+  </div>
+  <div class="explainer" data-explainer="perp"></div>
+  <div class="tip u5l5-job"><div class="tip-ic">⚒</div><div><b>On the job.</b> A carpenter’s (framing) square has a perfect 90° corner. Hold one edge along a board and draw along the other edge: the line is perpendicular to the board’s edge. You can also fold a paper line onto itself: the crease is perpendicular to the line.</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Every point on the perpendicular bisector of <span class="tex">AB</span> is the <b>same distance</b> from <span class="tex">A</span> and from <span class="tex">B</span>. Where could that be useful?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Anywhere you want a spot that is fair to two places: a mailbox or a bus stop the same distance from two houses, or a hook centred between two nails.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Construct perpendiculars</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Construct the perpendicular bisector of segment <span class="tex">AB</span>. Label the midpoint <span class="tex">M</span>. Measure <span class="tex">AM</span> and <span class="tex">MB</span>.</div>
+      <div class="u5l5-fig" data-fig="ex5a"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">AB=6</span> cm, so <span class="tex">AM=MB=3</span> cm, and the angle at <span class="tex">M</span> is 90°.</div></div></div>
+    <div class="part"><div class="pl">(b) Construct a line through <span class="tex">P</span> that is perpendicular to line <span class="tex">n</span>.</div>
+      <div class="u5l5-fig" data-fig="ex5b"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The angle between the new line and <span class="tex">n</span> measures <b>90°</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3p" data-section="3. Perpendicular to a Surface">
+  <h3 class="sub">Perpendicular to a flat surface</h3>
+  <div class="u5l5-plane">
+    <p>A post, a pole or a table leg meets a flat surface (a <b>plane</b>), not just a line. It is perpendicular to the surface only if it makes 90° with <em>every</em> line on the surface through its foot. In practice, a builder checks with a square or a level in <b>two directions</b>: front-to-back and side-to-side.</p>
+    <div class="u5l5-fig" data-fig="plane"></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Mateo’s table leg</h3></div>
+  <p class="u5l5-story">Mateo is building a table. He checks one leg and finds that it makes an angle of <b>92.5°</b> with the underside of the tabletop.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Is the leg perpendicular to the tabletop? Explain.</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> Perpendicular means exactly 90°, and 92.5° is not 90°.</div></div></div>
+    <div class="part"><div class="pl">(b) By how many degrees must he move the leg?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">92.5^\circ-90^\circ=2.5^\circ</span>. He must move it <b>2.5°</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) The leg and the tabletop make two angles side by side, on a straight line. What is the other angle?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A straight angle is 180°. <span class="tex">180^\circ-92.5^\circ=87.5^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(d) The leg is now 90° from front to back. Why should Mateo also check it from side to side?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The tabletop is a flat surface. The leg could still lean sideways. It must be 90° in <b>both</b> directions.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Estimate first: 92.5 is a bit more than 90, so (b) is small and (c) is a bit less than 90. Then <span class="keys">180 <kbd>−</kbd> 92.5 <kbd>ENTER</kbd></span> shows <b>87.5</b>.</div>
+    <div class="u5l5-pcol"><button class="pill" type="button" data-keys="92.5 − 90 =">92.5 − 90</button><button class="pill" type="button" data-keys="180 − 92.5 =">180 − 92.5</button></div></div>
+  <div class="explainer u5l5-gap" data-explainer="post"></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u5l5"></section>
+
+<!-- ================= 4. Parallel, perpendicular or neither ================= -->
+<section class="card" data-ink="s4" data-section="4. Parallel, Perpendicular or Neither?">
+  <div class="sec-h"><span class="badge">4</span><h2>Parallel, Perpendicular or Neither?</h2></div>
+  <p><b>Parallel</b> lines lie on the same flat surface and <b>never meet</b>. They stay the same distance apart, like the two rails of a railway track. We mark parallel lines with matching arrows (<span class="tex">&gt;</span>) and write <span class="tex">AB\parallel CD</span>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Sorting two lines</b>
+    <ol class="u5l5-ol">
+      <li>Do the lines meet, or would they meet if you made them longer? If <b>no</b>, they are <b>parallel</b>. (Check: the distance between them, measured straight across, is the same in two places.)</li>
+      <li>If <b>yes</b>, measure the angle where they meet. 90° → <b>perpendicular</b>. Any other angle → <b>neither</b>.</li>
+    </ol></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A line goes on forever. Two lines that don’t touch <em>on the page</em> may still meet if you extend them with a ruler. Then they are not parallel.</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Are the two long edges of a ruler parallel? How could you check?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Yes. Measure the width of the ruler straight across in two places, near each end. If both widths are the same, the edges are parallel.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Sort the lines</h3></div>
+  <div class="part"><div class="pl">Use a ruler and protractor. Sort each pair of lines as parallel, perpendicular or neither, and give a reason.</div>
+    <div class="u5l5-ex7">
+      <div class="u5l5-fig" data-fig="ex7"></div>
+      <table class="u5l5-tbl u5l5-sort">
+        <tr><th>Pair</th><th>Sort</th><th>Reason</th></tr>
+        <tr><td><span class="tex">\ell_1,\ \ell_2</span></td><td><span data-reveal="&nbsp;">parallel</span></td><td><span data-reveal="&nbsp;">never meet; same gap</span></td></tr>
+        <tr><td><span class="tex">\ell_1,\ \ell_3</span></td><td><span data-reveal="&nbsp;">perpendicular</span></td><td><span data-reveal="&nbsp;">meet at 90°</span></td></tr>
+        <tr><td><span class="tex">\ell_2,\ \ell_3</span></td><td><span data-reveal="&nbsp;">perpendicular</span></td><td><span data-reveal="&nbsp;">meet at 90°</span></td></tr>
+        <tr><td><span class="tex">\ell_1,\ \ell_4</span></td><td><span data-reveal="&nbsp;">neither</span></td><td><span data-reveal="&nbsp;">meet at 60° (and 120°)</span></td></tr>
+        <tr><td><span class="tex">\ell_3,\ \ell_4</span></td><td><span data-reveal="&nbsp;">neither</span></td><td><span data-reveal="&nbsp;">meet at 30° (and 150°)</span></td></tr>
+        <tr><td><span class="tex">\ell_4,\ \ell_5</span></td><td><span data-reveal="&nbsp;">perpendicular</span></td><td><span data-reveal="&nbsp;">extend <span class="tex">\ell_5</span>: meet at 90°</span></td></tr>
+      </table>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\ell_4</span> and <span class="tex">\ell_5</span> don’t touch on the page, but extending <span class="tex">\ell_5</span> downward shows they meet at 90°.</div></div></div>
+  <div class="explainer u5l5-gap" data-explainer="sortLines"></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–11">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 5 · Questions 1–11</h2>
+  <p class="pr-t">Try these before we cut picture frames.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Fill in the words</span>
+    <span><b>2</b>Halves and wholes</span>
+    <span><b>3</b>Copy with a protractor</span>
+    <span><b>4</b>Copy with a compass</span>
+    <span><b>5</b>Bisect with a compass</span>
+    <span><b>6</b>Fold a square</span>
+    <span><b>7–8</b>Construct perpendiculars</span>
+    <span><b>9–10</b>Parallel, perpendicular or neither</span>
+    <span><b>11</b>A leaning fence post</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 11.</span><a class="pill" href="../../../#/lesson/u5l5">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. Mitre cuts and braces ================= -->
+<section class="card" data-ink="s5" data-section="5. On the Job: Mitre Cuts and Braces">
+  <div class="sec-h"><span class="badge">5</span><h2>On the Job: Mitre Cuts and Braces</h2></div>
+  <div class="u5l5-mitre">
+    <div class="u5l5-fig" data-fig="mitre"></div>
+    <div>
+      <p style="margin-top:0">A <b>mitre joint</b> joins two boards at a corner, like the corner of a picture frame. Each board end is cut on an angle. For a tight corner, the joint line must <b>bisect</b> the corner angle, so <b>each cut is half the corner angle</b>.</p>
+      <div class="def"><b>Key idea</b> &nbsp; <b>Mitre cut angle</b> <span class="tex">=</span> corner angle <span class="tex">\div 2</span>
+        <div class="u5l5-kl">Square or rectangular frame: <span class="tex">90^\circ\div2=45^\circ</span>.</div>
+        <div class="u5l5-kl">For a frame shaped like a regular polygon with <span class="tex">n</span> sides, find one corner first (Lesson 3): corner <span class="tex">=(n-2)\times180^\circ\div n</span>.</div></div>
+    </div>
+  </div>
+  <div class="tip u5l5-job"><div class="tip-ic">⚒</div><div><b>On the job.</b> A mitre saw’s scale shows how far the blade is turned away from a square (90°) cut. So the <b>saw setting</b> <span class="tex">=90^\circ-</span> the cut angle. For a 45° cut, the setting is also 45°.</div></div>
+  <p>A <b>brace</b> is a board nailed across a corner to keep a gate or shelf from sagging. On a square gate, a brace from corner to corner bisects the 90° corners.</p>
+  <div class="explainer" data-explainer="mitre"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A frame with very many sides looks almost like a circle. What happens to the cut angle and the saw setting as the number of sides grows?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The corners get closer to 180°, so the cut gets closer to <span class="tex">180^\circ\div2=90^\circ</span> (almost a square cut) and the saw setting gets closer to 0°.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Frames and a gate</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Ava is making a rectangular picture frame. At what angle does she cut the end of each piece?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Corner <span class="tex">=90^\circ</span>. <span class="tex">90^\circ\div2=45^\circ</span> for each cut.</div></div></div>
+    <div class="part"><div class="pl">(b) Jonah is making a frame for a mirror shaped like a regular hexagon (6 sides). Find the corner angle, the cut angle, and the mitre saw setting.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Angle sum <span class="tex">=(6-2)\times180^\circ=720^\circ</span>. Corner <span class="tex">=720^\circ\div6=120^\circ</span>. Cut <span class="tex">=120^\circ\div2=60^\circ</span>. Saw setting <span class="tex">=90^\circ-60^\circ=30^\circ</span>.</div></div></div>
+  </div>
+  <div class="part u5l5-gap"><div class="pl">(c) A square garden gate has a brace from the bottom hinge corner to the top latch corner. What angle does the brace make with the top rail? Why?</div><div class="work" style="--h:90px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The brace goes corner to corner of a square, so it bisects the 90° corner. <span class="tex">90^\circ\div2=45^\circ</span>. The brace makes <b>45°</b> with the top rail.</div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>One corner of a regular hexagon in one go: <span class="keys"><kbd>(</kbd> 6 <kbd>−</kbd> 2 <kbd>)</kbd> <kbd>×</kbd> 180 <kbd>÷</kbd> 6 <kbd>ENTER</kbd></span> shows <b>120</b>.</div>
+    <button class="pill" type="button" data-keys="( 6 − 2 ) × 180 ÷ 6 =">Show me</button></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example">
+  <div class="ex-head"><span class="ex-tag">Extra Example</span><h3>A corner that isn’t square</h3></div>
+  <p class="u5l5-story">Real walls are rarely perfect. Priya is putting baseboard in an inside corner. She copies the corner with a sliding T-bevel and measures it with a protractor: <b>94°</b>.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) At what angle should she cut the end of each baseboard?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The joint bisects the corner: <span class="tex">94^\circ\div2=47^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) What is the mitre saw setting?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">90^\circ-47^\circ=43^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c) Why not just cut 45° like a square corner?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Two 45° cuts make a 90° corner, but the wall is 94°. A <b>gap</b> would open at the joint.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Copy:</b> protractor (measure, then draw the same degrees), T-bevel, tracing or Mira, or compass: arc at <span class="tex">B</span>, the <b>same arc</b> at <span class="tex">E</span>, then the width <span class="tex">QP</span> from <span class="tex">R</span>. Same size = <b>congruent</b>.</div>
+    <div><b>Bisect:</b> each half = angle ÷ 2; whole = half × 2. Fold arm onto arm, use a Mira, or compass: arc at the vertex, then two equal arcs from the arms. Ray from the vertex through the crossing.</div>
+    <div><b>Perpendicular:</b> meet at 90° (<span class="tex">\perp</span>, a small square). The perpendicular bisector goes through the <b>midpoint</b> at 90°. A post must be 90° in <b>two directions</b>.</div>
+    <div><b>Sort lines:</b> never meet → <b>parallel</b> (<span class="tex">\parallel</span>, same gap); meet at 90° → <b>perpendicular</b>; any other angle → <b>neither</b>. Extend lines first! <b>Mitre cut</b> = corner ÷ 2; saw setting = 90° − cut.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u5l5">
+    <div><div class="kicker">Your turn</div><b>Assignment 5 · Questions 12–18</b><div class="muted">Picture frames and mitre saws, a mistake in a compass copy, bisecting puzzles, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l6/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 6 — Angle Partners: Complementary, Supplementary and Opposite Angles</b><div class="muted">Open a pair of scissors: two angles change, two stay equal. Next we find angles that come in pairs.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u5l5.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u5l5', homeHref: '../../', title: '5.5 Copying and Bisecting Angles' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

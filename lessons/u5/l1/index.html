@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tangrams and Pentominoes · Math 10-3 5.1</title>
+<meta name="description" content="Math 10-3 Unit 5 Lesson 1: spatial puzzles. Problem-solving strategies, counting squares with a systematic list, tangram pieces and their areas, building silhouettes with tangram pieces, finding all 12 pentominoes, testing which pentominoes fold into an open box, and tiling a rectangle. A draggable tangram, pentominoes that turn and flip, and a folding machine. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u5l1.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u5l1">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Gear Ring">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Gear Ring</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Five gears, <b>A to E</b>, sit in a ring. Each gear’s teeth fit into the teeth of the <b>two</b> gears beside it.</p><p class="vw-ctx">You turn gear A <b>clockwise</b> (the arrow).</p><p class="vw-ask">Which way does gear E turn?</p></div><div class="vw-art"><svg viewBox="0 -26 330 268" role="img" aria-label="Five gears labelled A to E in a ring, each touching its two neighbours. A curved arrow over gear A shows it turning clockwise. A question mark bobs beside gear E.">
+    <path d="M165.0 17.0 L168.4 9.1 L175.6 10.3 L176.4 18.8 L186.7 24.1 L186.7 24.1 L194.1 19.7 L199.3 24.9 L194.9 32.3 L200.2 42.6 L200.2 42.6 L208.7 43.4 L209.9 50.6 L202.0 54.0 L200.2 65.4 L200.2 65.4 L206.6 71.1 L203.3 77.6 L194.9 75.7 L186.7 83.9 L186.7 83.9 L188.6 92.3 L182.1 95.6 L176.4 89.2 L165.0 91.0 L165.0 91.0 L161.6 98.9 L154.4 97.7 L153.6 89.2 L143.3 83.9 L143.3 83.9 L135.9 88.3 L130.7 83.1 L135.1 75.7 L129.8 65.4 L129.8 65.4 L121.3 64.6 L120.1 57.4 L128.0 54.0 L129.8 42.6 L129.8 42.6 L123.4 36.9 L126.7 30.4 L135.1 32.3 L143.3 24.1 L143.3 24.1 L141.4 15.7 L147.9 12.4 L153.6 18.8 L165.0 17.0Z" fill="#e2a63a" stroke="#3a2a14" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="165.0" cy="54.0" r="17" fill="#fff" stroke="#3a2a14" stroke-width="2.5"/>
+    <text x="165.0" y="62.0" font-size="22" font-weight="900" fill="#3a2a14" text-anchor="middle">A</text>
+    <path d="M272.4 105.1 L280.3 108.5 L279.1 115.8 L270.6 116.6 L265.3 126.9 L265.3 126.9 L269.7 134.3 L264.5 139.4 L257.1 135.1 L246.8 140.3 L246.8 140.3 L246.0 148.9 L238.8 150.0 L235.4 142.1 L223.9 140.3 L223.9 140.3 L218.3 146.8 L211.7 143.4 L213.6 135.1 L205.4 126.9 L205.4 126.9 L197.1 128.8 L193.7 122.2 L200.2 116.6 L198.4 105.1 L198.4 105.1 L190.5 101.7 L191.7 94.5 L200.2 93.7 L205.4 83.4 L205.4 83.4 L201.1 76.0 L206.3 70.8 L213.6 75.2 L223.9 69.9 L223.9 69.9 L224.7 61.4 L232.0 60.3 L235.4 68.1 L246.8 69.9 L246.8 69.9 L252.5 63.5 L259.0 66.8 L257.1 75.2 L265.3 83.4 L265.3 83.4 L273.7 81.5 L277.0 88.0 L270.6 93.7 L272.4 105.1Z" fill="#8fb3f0" stroke="#3a2a14" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="235.4" cy="105.1" r="17" fill="#fff" stroke="#3a2a14" stroke-width="2.5"/>
+    <text x="235.4" y="113.1" font-size="22" font-weight="900" fill="#3a2a14" text-anchor="middle">B</text>
+    <path d="M230.2 217.8 L232.1 226.2 L225.6 229.5 L219.9 223.1 L208.5 224.9 L208.5 224.9 L205.1 232.7 L197.9 231.6 L197.1 223.1 L186.7 217.8 L186.7 217.8 L179.4 222.2 L174.2 217.0 L178.6 209.6 L173.3 199.3 L173.3 199.3 L164.8 198.5 L163.6 191.3 L171.5 187.9 L173.3 176.4 L173.3 176.4 L166.9 170.8 L170.2 164.2 L178.6 166.1 L186.7 157.9 L186.7 157.9 L184.9 149.6 L191.4 146.2 L197.1 152.7 L208.5 150.9 L208.5 150.9 L211.9 143.0 L219.1 144.1 L219.9 152.7 L230.2 157.9 L230.2 157.9 L237.6 153.6 L242.8 158.7 L238.4 166.1 L243.7 176.4 L243.7 176.4 L252.2 177.2 L253.4 184.5 L245.5 187.9 L243.7 199.3 L243.7 199.3 L250.1 205.0 L246.8 211.5 L238.4 209.6 L230.2 217.8Z" fill="#7cc4a4" stroke="#3a2a14" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="208.5" cy="187.9" r="17" fill="#fff" stroke="#3a2a14" stroke-width="2.5"/>
+    <text x="208.5" y="195.9" font-size="22" font-weight="900" fill="#3a2a14" text-anchor="middle">C</text>
+    <path d="M91.6 209.6 L83.2 211.5 L79.9 205.0 L86.3 199.3 L84.5 187.9 L84.5 187.9 L76.6 184.5 L77.8 177.2 L86.3 176.4 L91.6 166.1 L91.6 166.1 L87.2 158.7 L92.4 153.6 L99.8 157.9 L110.1 152.7 L110.1 152.7 L110.9 144.1 L118.1 143.0 L121.5 150.9 L132.9 152.7 L132.9 152.7 L138.6 146.2 L145.1 149.6 L143.3 157.9 L151.4 166.1 L151.4 166.1 L159.8 164.2 L163.1 170.8 L156.7 176.4 L158.5 187.9 L158.5 187.9 L166.4 191.3 L165.2 198.5 L156.7 199.3 L151.4 209.6 L151.4 209.6 L155.8 217.0 L150.6 222.2 L143.3 217.8 L132.9 223.1 L132.9 223.1 L132.1 231.6 L124.9 232.7 L121.5 224.9 L110.1 223.1 L110.1 223.1 L104.4 229.5 L97.9 226.2 L99.8 217.8 L91.6 209.6Z" fill="#ef8a5b" stroke="#3a2a14" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="121.5" cy="187.9" r="17" fill="#fff" stroke="#3a2a14" stroke-width="2.5"/>
+    <text x="121.5" y="195.9" font-size="22" font-weight="900" fill="#3a2a14" text-anchor="middle">D</text>
+    <path d="M59.4 93.7 L53.0 88.0 L56.3 81.5 L64.7 83.4 L72.9 75.2 L72.9 75.2 L71.0 66.8 L77.5 63.5 L83.2 69.9 L94.6 68.1 L94.6 68.1 L98.0 60.3 L105.3 61.4 L106.1 69.9 L116.4 75.2 L116.4 75.2 L123.7 70.8 L128.9 76.0 L124.6 83.4 L129.8 93.7 L129.8 93.7 L138.3 94.5 L139.5 101.7 L131.6 105.1 L129.8 116.6 L129.8 116.6 L136.3 122.2 L132.9 128.8 L124.6 126.9 L116.4 135.1 L116.4 135.1 L118.3 143.4 L111.7 146.8 L106.1 140.3 L94.6 142.1 L94.6 142.1 L91.2 150.0 L84.0 148.9 L83.2 140.3 L72.9 135.1 L72.9 135.1 L65.5 139.4 L60.3 134.3 L64.7 126.9 L59.4 116.6 L59.4 116.6 L50.9 115.8 L49.7 108.5 L57.6 105.1 L59.4 93.7Z" fill="#c39be8" stroke="#3a2a14" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="94.6" cy="105.1" r="17" fill="#fff" stroke="#3a2a14" stroke-width="2.5"/>
+    <text x="94.6" y="113.1" font-size="22" font-weight="900" fill="#3a2a14" text-anchor="middle">E</text>
+    <path d="M114.3 35.5 A54 54 0 0 1 215.7 35.5" fill="none" stroke="#c93a33" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 8"><animate attributeName="stroke-dashoffset" values="40;0" dur="1.1s" repeatCount="indefinite"/></path>
+    <path d="M206 30 L224 26 L221 46 Z" fill="#c93a33"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="26" y="64" font-size="46" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u5l1-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> clockwise</div>
+      <div class="opt"><b>B</b> counterclockwise</div>
+      <div class="opt right"><b>C</b> it can’t turn at all</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>C: the whole ring is stuck!</b> Two gears that touch always turn <b>opposite</b> ways. Go around the ring: A clockwise, B counter, C clockwise, D counter, so E clockwise. But E also touches A, and A is clockwise too. Two touching gears can’t turn the same way, so <b>nothing moves</b>. <span class="muted">With 4 or 6 gears in the ring, it works. Today: puzzles about shapes and space, where a quick sketch beats a guess.</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 5 Angles, Parallel Lines and Spatial Puzzles · Lesson 1</div>
+  <h1>Spatial Puzzles: Tangrams and Pentominoes</h1>
+  <p class="lede">Puzzles about shapes and space: fitting pieces together, <b>turning</b> them, <b>flipping</b> them and <b>folding</b> them. Today we pick a strategy, build shapes from the seven tangram pieces, find all twelve pentominoes, and test which ones fold into a box or fill a rectangle.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>choose a <b>strategy</b> for a puzzle (draw or model, systematic list, look for a pattern, …) and check my answer</li>
+      <li>find the <b>area</b> of each tangram piece in small triangles, and as a fraction of the whole square</li>
+      <li><b>build a shape</b> from tangram pieces: check the area, place the biggest pieces first, look at the corners</li>
+      <li>find all <b>12 pentominoes</b> with a systematic list, and tell when two are the same (a turn or a flip)</li>
+      <li>test whether a pentomino <b>folds into an open box</b>, and <b>tile</b> a rectangle with pentominoes</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G1</b> Analyze puzzles and games that involve spatial reasoning, using problem-solving strategies.</div>
+</section>
+
+<!-- ================= 1. Strategies ================= -->
+<section class="card" data-ink="s1" data-section="1. Strategies for Spatial Puzzles">
+  <div class="sec-h"><span class="badge">1</span><h2>Strategies for Spatial Puzzles</h2></div>
+  <p>A <b>spatial puzzle</b> is a puzzle about shapes and space: fitting pieces together, turning them, flipping them or folding them. A <b>strategy</b> is a plan for solving a problem. Good puzzle solvers know several strategies and pick the one that fits.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Problem-solving strategies
+    <table class="u5l1-tbl u5l1-strat">
+      <tr><td>Draw or model</td><td>Sketch the puzzle, or use real pieces that you can move around.</td></tr>
+      <tr><td>Guess and check</td><td>Try something. If it does not work, change it a little and try again.</td></tr>
+      <tr><td>Make a systematic list</td><td>List every case in an order, so you do not miss one or count one twice.</td></tr>
+      <tr><td>Look for a pattern</td><td>Solve small cases, see how the answers grow, and use that to predict.</td></tr>
+      <tr><td>Simplify the problem</td><td>Solve a smaller or easier version first.</td></tr>
+      <tr><td>Eliminate possibilities</td><td>Rule out the choices that cannot work, so fewer are left to try.</td></tr>
+      <tr><td>Work backward</td><td>Start from the end and undo the steps (you will use this for games in Lesson 2).</td></tr>
+      <tr><td>Try another approach</td><td>Solve it a second way to check (<b>verify</b>) your answer.</td></tr>
+    </table>
+    <div class="u5l1-four"><b>Four steps for any puzzle:</b> <span>1. Understand the rules.</span> <span>2. Plan: pick a strategy.</span> <span>3. Solve.</span> <span>4. Check that your answer follows the rules.</span></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>How many squares?</h3></div>
+  <div class="part"><div class="pl">How many squares of <b>any</b> size are in this 3 by 3 grid? (a) Make a systematic list by the size of the square.</div>
+    <div class="u5l1-row">
+      <div class="u5l1-fig" data-fig="ex1"></div>
+      <table class="u5l1-tbl u5l1-ctab">
+        <tr><th>Size of square</th><td>1 by 1</td><td>2 by 2</td><td>3 by 3</td><th>Total</th></tr>
+        <tr><th>How many</th><td><span data-reveal="&nbsp;">9</span></td><td><span data-reveal="&nbsp;">4</span></td><td><span data-reveal="&nbsp;">1</span></td><td><span data-reveal="&nbsp;"><b>14</b></span></td></tr>
+      </table>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">9 small, 4 of size 2 by 2, 1 big: <b>14 squares</b>. A 2 by 2 square can start in 2 places across and 2 places down: <span class="tex">2\times2=4</span> (one is shown in red).</div></div></div>
+  <div class="parts c2 u5l1-gap">
+    <div class="part"><div class="pl">(b) Simplify the problem: how many squares are in a 2 by 2 grid? Does the list in (a) look like it follows a pattern?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 by 2 grid: 4 small <span class="tex">+</span> 1 big <span class="tex">=5</span> squares. Pattern: 1 by 1 grid: 1; 2 by 2: <span class="tex">1+4=5</span>; 3 by 3: <span class="tex">1+4+9=14</span>. Each grid adds the <b>next square number</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) Which strategies did you use?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A <b>systematic list</b> (sorted by size), <b>simplifying the problem</b> (a smaller grid), and <b>looking for a pattern</b>.</div></div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Most people answer 9 because they only count the small squares. The bigger squares overlap the small ones, and they count too. A systematic list makes sure you get every size.</div></div>
+  <div class="explainer u5l1-gap" data-explainer="countSquares"></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. The tangram ================= -->
+<section class="card" data-ink="s2" data-section="2. The Tangram">
+  <div class="sec-h"><span class="badge">2</span><h2>The Tangram</h2></div>
+  <p>A <b>tangram</b> is a very old puzzle from China. A square is cut into 7 pieces: <b>2 large triangles</b>, <b>1 medium triangle</b>, <b>2 small triangles</b>, <b>1 square</b> and <b>1 parallelogram</b>. (A <b>parallelogram</b> is a four-sided shape whose opposite sides are parallel, like a slanted rectangle.) The goal is to use the pieces to make a given shape. Its outline, filled in, is called a <b>silhouette</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Tangram rules:</b> &nbsp; Lay the pieces flat. &nbsp; Pieces touch but do not overlap. &nbsp; You may turn and flip any piece. &nbsp; Use exactly the pieces the puzzle asks for.</div>
+  <h3 class="sub u5l1-gap">Try it: the 7 pieces</h3>
+  <p class="u5l1-how">Drag a piece to move it. <b>Tap</b> it to turn it 45°. <b>Double-tap</b> it to flip it over. Corners snap together.</p>
+  <div class="u5l1-tool" id="u5l1-tan"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>The area of each piece</h3></div>
+  <div class="part"><div class="pl">Use a <b>small triangle</b> as 1 unit of area. Imagine covering each piece with small triangles (draw them on the picture). (a) Complete the table.</div>
+    <div class="u5l1-row">
+      <div class="u5l1-fig" data-fig="ex2"></div>
+      <table class="u5l1-tbl u5l1-atab">
+        <tr><th>Piece</th><th>How many in the set</th><th>Area of one (small triangles)</th><th>Fraction of the whole square</th></tr>
+        <tr><td>large triangle</td><td>2</td><td><span data-reveal="&nbsp;">4</span></td><td><span data-reveal="&nbsp;"><span class="tex">\dfrac4{16}=\dfrac14</span></span></td></tr>
+        <tr><td>medium triangle</td><td>1</td><td><span data-reveal="&nbsp;">2</span></td><td><span data-reveal="&nbsp;"><span class="tex">\dfrac2{16}=\dfrac18</span></span></td></tr>
+        <tr><td>small triangle</td><td>2</td><td>1</td><td><span data-reveal="&nbsp;"><span class="tex">\dfrac1{16}</span></span></td></tr>
+        <tr><td>square</td><td>1</td><td><span data-reveal="&nbsp;">2</span></td><td><span data-reveal="&nbsp;"><span class="tex">\dfrac2{16}=\dfrac18</span></span></td></tr>
+        <tr><td>parallelogram</td><td>1</td><td><span data-reveal="&nbsp;">2</span></td><td><span data-reveal="&nbsp;"><span class="tex">\dfrac2{16}=\dfrac18</span></span></td></tr>
+      </table>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">4 small triangles cover a large triangle; 2 cover the medium triangle, the square and the parallelogram. Fraction = area <span class="tex">\div 16</span>.</div></div></div>
+  <div class="parts c2 u5l1-gap">
+    <div class="part"><div class="pl">(b) What is the area of the whole square, in small triangles? Check by adding all 7 pieces.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Whole square: <b>16</b> small triangles. Check: <span class="tex">4+4+2+1+1+2+2=16</span> ✓ (Fractions check too: <span class="tex">\tfrac14+\tfrac14+\tfrac18+\tfrac1{16}+\tfrac1{16}+\tfrac18+\tfrac18=1</span>.)</div></div></div>
+    <div class="part"><div class="pl">(c) A tangram is cut from a square of card 20 cm by 20 cm. Find the area of each kind of piece.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Whole square: <span class="tex">20\times20=400</span> cm². Small triangle: <span class="tex">400\div16=25</span> cm². Medium triangle, square, parallelogram: <span class="tex">2\times25=50</span> cm² each. Large triangle: <span class="tex">4\times25=100</span> cm².</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Estimate first: 400 cut into 16 equal parts is a bit more than 400 ÷ 20 = 20. On the TI-30XIIS: <span class="keys">20 <kbd>x²</kbd> <kbd>÷</kbd> 16 <kbd>ENTER</kbd></span> gives <b>25</b>.</div>
+    <button class="pill" type="button" data-keys="20 x² ÷ 16 =">Show me</button></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The square, the medium triangle and the parallelogram look very different, but they have the <b>same area</b> (2 small triangles each). Same area does not mean same shape.</div></div>
+  <div class="explainer u5l1-gap" data-explainer="tanAreas"></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Making shapes ================= -->
+<section class="card" data-ink="s3" data-section="3. Making Shapes with Tangram Pieces">
+  <div class="sec-h"><span class="badge">3</span><h2>Making Shapes with Tangram Pieces</h2></div>
+  <p>Use your cut-out pieces (the cut-out page is at the end of the lesson in your booklet). These tips use the strategies from Section 1.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Tangram tips
+    <ol class="u5l1-steps">
+      <li><b>Check the area first</b> (eliminate possibilities). The pieces you use must add up to the area of the silhouette.</li>
+      <li><b>Place the biggest pieces first.</b> They fit in the fewest places, so there are fewer guesses to try.</li>
+      <li><b>Look at the corners.</b> A square corner (90°) of the silhouette needs the square corner of a triangle, a corner of the square piece, or two sharp (45°) corners side by side.</li>
+      <li><b>Guess and check.</b> If a gap is left that no piece fits, move one piece and try again. Remember you may flip pieces.</li>
+    </ol></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Two small triangles</h3></div>
+  <div class="part"><div class="pl">Use only the <b>two small triangles</b>. Make each shape and sketch how the two triangles fit.</div>
+    <div class="u5l1-three">
+      <div><div class="u5l1-cap">(a) a square</div><div class="u5l1-fig" data-fig="ex3a"></div></div>
+      <div><div class="u5l1-cap">(b) a bigger triangle</div><div class="u5l1-fig" data-fig="ex3b"></div></div>
+      <div><div class="u5l1-cap">(c) a parallelogram</div><div class="u5l1-fig" data-fig="ex3c"></div></div>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) Put the two long sides together. (b) Put two short sides together, side by side. (c) Put two short sides together, one triangle turned.</div></div></div>
+  <div class="part u5l1-gap"><div class="pl">(d) Each shape you made has the same size and shape as one of the other tangram pieces. Which piece matches each one?</div><div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) the <b>square</b> piece &nbsp; (b) the <b>medium triangle</b> &nbsp; (c) the <b>parallelogram</b>. All three have an area of 2 small triangles.</div></div></div>
+  <div class="explainer u5l1-gap" data-explainer="twoSmall"></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Fill the silhouette</h3></div>
+  <div class="parts c2 u5l1-ex4">
+    <div class="part"><div class="pl">(a) Make this square with 5 pieces: both small triangles, the medium triangle, the square and the parallelogram. Then draw the lines.</div>
+      <div class="u5l1-fig" data-fig="ex4a"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The medium triangle along the bottom, the square in the top-left corner, a small triangle in the top-right corner, then the other small triangle and the parallelogram fill the sides.</div></div></div>
+    <div class="part"><div class="pl">(b) Make this triangle with <b>all 7</b> pieces. Draw the lines.</div>
+      <div class="u5l1-fig" data-fig="ex4b"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Area check: the whole set is 16 units, and the triangle is made of all 7 pieces ✓. Biggest first: the two large triangles along the bottom, one in each corner. The gap in the middle is a square turned on its corner: it is the square from part (a), so build it with the other 5 pieces. (We used a puzzle we had already solved: <b>simplify the problem</b>.)</div></div></div>
+  </div>
+  <div class="explainer u5l1-gap" data-explainer="bigTriangle"></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3t" data-section="3. Try It: Fill a Silhouette">
+  <h3 class="sub">Try it: fill a silhouette</h3>
+  <p class="u5l1-how">Pick a puzzle. Drag the pieces onto the grey silhouette (tap = turn, double-tap = flip). <b>Show me</b> slides every piece into place.</p>
+  <div class="u5l1-tbar" id="u5l1-silbar"></div>
+  <div class="u5l1-tool" id="u5l1-sil"></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u5l1"></section>
+
+<!-- ================= 4. Pentominoes ================= -->
+<section class="card" data-ink="s4" data-section="4. Pentominoes: Finding All 12">
+  <div class="sec-h"><span class="badge">4</span><h2>Pentominoes: Finding All 12</h2></div>
+  <p>A <b>polyomino</b> is a shape made of equal squares joined <b>along full sides</b>. A domino has 2 squares. A shape made of <b>5</b> squares is a <b>pentomino</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Two pentominoes are the <b>same</b> if one can be turned (<b>rotated</b>) or flipped over (<b>reflected</b>) to fit exactly on top of the other. So all four of these are the same pentomino:
+    <div class="u5l1-fig u5l1-same" data-fig="same"></div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Pentomino or not? Same or different?</h3></div>
+  <div class="part"><div class="pl">(a) Is each shape a pentomino? Write yes or no. If no, say why.</div>
+    <div class="u5l1-fig" data-fig="ex5a"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(i) <b>yes</b> &nbsp; (ii) <b>no</b>: it has only 4 squares &nbsp; (iii) <b>no</b>: two squares touch only at a corner &nbsp; (iv) <b>no</b>: the top squares sit on half a side &nbsp; (v) <b>yes</b></div></div></div>
+  <div class="part u5l1-gap"><div class="pl">(b) Is each pair the same pentomino or different? If they are the same, say whether you turn or flip it.</div>
+    <div class="u5l1-fig" data-fig="ex5b"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(i) <b>same: turn</b>. Turn the first one halfway around (a half turn) and it fits on the second. (ii) <b>different</b>. The bump is on the second square in one and on the end square in the other. No turn or flip fixes that. (iii) <b>same: flip</b>. Flip the first one over (like a mirror image) and it fits on the second.</div></div></div>
+  <div class="explainer u5l1-gap" data-explainer="turnFlip"></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. One Pentomino, Many Looks">
+  <h3 class="sub">One pentomino, many looks</h3>
+  <p>Turn a pentomino 4 ways, then flip it and turn it 4 more ways. That is 8 ways to lay it on a grid, but it is still <b>one</b> pentomino. Some pentominoes look the same after a turn or a flip, so they have fewer looks.</p>
+  <div class="explainer" data-explainer="orientations"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> The I pentomino is 5 squares in a row. How many different looks does it have?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>2</b>: lying across or standing up. A half turn or a flip gives the same picture again.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Find all the pentominoes</h3></div>
+  <div class="part"><div class="pl">Find all the different pentominoes with a <b>systematic list</b>.</div>
+    <p class="u5l1-p"><b>Simplify first.</b> With 3 squares there are only 2 shapes: 3 in a row, or a bent one. (With 4 squares there are 5. You will find them in the assignment.)</p>
+    <p class="u5l1-p"><b>Sort by the longest straight row.</b> Start with all 5 in a row, then 4 in a row, then 3, then 2. Before you draw a new one, check that it is not a turn or flip of one you already have. Draw each one on a grid below. The number of grids tells you how many to find.</p>
+    <div class="u5l1-fig" data-fig="ex6"></div>
+    <div class="u5l1-howmany">How many pentominoes are there in all? <span class="u5l1-blank" data-reveal="&nbsp;"><b>12</b></span></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1+2+8+1=12</span> different pentominoes. A pentomino can never have only 1 in a row (the squares would only touch at corners), so the list is complete.</div></div></div>
+  <p class="u5l1-gap">Each pentomino is named by a capital letter that it looks a bit like. Draw your 12 on the grid paper on the cut-out page, write their letters, and cut them out.</p>
+  <div class="u5l1-fig u5l1-names" data-fig="names"></div>
+  <div class="explainer u5l1-gap" data-explainer="allTwelve"></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4t" data-section="4. Try It: The 12 Pentominoes">
+  <h3 class="sub">Try it: the 12 pentominoes</h3>
+  <p class="u5l1-how">Drag a pentomino to move it. <b>Tap</b> it to turn it a quarter turn. <b>Double-tap</b> it to flip it over. Find the one that looks the same after any turn or flip.</p>
+  <div class="u5l1-tool" id="u5l1-pen12"></div>
+</section>
+
+<!-- sources: https://en.wikipedia.org/wiki/Tetris (Pajitnov bought a pentomino puzzle set and played with it at work; he tried
+     to turn pentomino tiling into a computer game and scaled it down to tetrominoes because pentominoes seemed needlessly
+     complicated; Elektronika 60; "Tetris" = tetra (four) + tennis, his favourite sport; sources date it June 1984 or 1985);
+     https://www.museumofplay.org/blog/russian-born-tetris-illustrates-good-design/ (1984, computer centre of the Academy of
+     Sciences in Moscow; pentominoes "12 different shapes made of 5 units each"; reduced from 5 units to 4).
+     Standard Tetris field: 10 squares wide, 20 tall (Tetris Guideline). -->
+<section class="card history" data-ink="hist" data-section="Math History: Tetris Began as a Pentomino Puzzle">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1984</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">Tetris began as a pentomino puzzle</h3>
+      <p>In <b>1984</b>, Alexey Pajitnov worked at a computer lab in Moscow. He loved a store-bought <b>pentomino</b> puzzle and tried to turn it into a computer game.</p>
+      <p>Twelve pieces of 5 squares were too complicated for a fast game. So he <b>simplified the problem</b>: pieces of <b>4</b> squares. He named the game <b>Tetris</b>, from <i>tetra</i> (Greek for four) and <i>tennis</i>, his favourite sport.</p>
+      <div class="part hist-q"><div class="pl">A Tetris field is usually 10 squares wide and 20 squares tall. Each piece covers 4 squares. How many pieces fill it exactly?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Check the area: <span class="tex">10\times20=200</span> squares. <span class="tex">200\div4=50</span> pieces.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u5l1-hist" viewBox="0 0 600 300" role="img" aria-label="A pentomino made of 5 squares loses one square and becomes a 4-square Tetris piece, then Tetris pieces fall into a well and fill a row"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–10">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 1 · Questions 1–10</h2>
+  <p class="pr-t">Try these before we fold pentominoes into boxes.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Pick the strategy</span>
+    <span><b>2</b>Squares in a 4 by 4 grid</span>
+    <span><b>3</b>Tangram areas</span>
+    <span><b>4</b>A foam-board tangram</span>
+    <span><b>5</b>Three pieces, three shapes</span>
+    <span><b>6</b>A rectangle with all 7</span>
+    <span><b>7</b>Eliminate by area</span>
+    <span><b>8</b>Pentomino or not?</span>
+    <span><b>9</b>Sort into pairs</span>
+    <span><b>10</b>All the tetrominoes</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 10.</span><a class="pill" href="../../../#/lesson/u5l1">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. Open boxes ================= -->
+<section class="card" data-ink="s5" data-section="5. Pentomino Puzzles: Open Boxes">
+  <div class="sec-h"><span class="badge">5</span><h2>Pentomino Puzzles: Open Boxes and Rectangles</h2></div>
+  <p>An <b>open box</b> is a cube with no top. It has 5 faces, so a pentomino might be a <b>net</b> for it (a flat pattern that folds up into the box, as in Unit 3, Lesson 10). But not every pentomino works.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Will it fold into an open box?</b> (draw or model)
+    <ol class="u5l1-steps">
+      <li><b>Step 1.</b> Pick one square to be the bottom.</li>
+      <li><b>Step 2.</b> Fold the squares that touch it straight up: they are sides.</li>
+      <li><b>Step 3.</b> Fold any other squares up against the sides.</li>
+      <li><b>Step 4.</b> If two squares land on the same face, it does not work. Try a different bottom square before you give up.</li>
+    </ol>
+    <div class="eg"><b>Quick eliminations:</b> a 2 by 2 block of squares never folds (four squares meet at one point, but only three faces of a cube meet at a corner). Five in a row wraps all the way around and overlaps.</div></div>
+  <h3 class="sub u5l1-gap">Try it: the folding machine</h3>
+  <p class="u5l1-how">Pick a pentomino. <b>Tap a square</b> to make it the bottom. Then press <b>Fold it</b>.</p>
+  <div class="u5l1-tool" id="u5l1-fold"></div>
+</section>
+
+<section class="card" data-extra data-ink="s5x" data-section="5. Why a 2 by 2 Block Never Folds">
+  <h3 class="sub">Why does a 2 by 2 block never fold?</h3>
+  <p>Look at the point in the middle of a 2 by 2 block. Four squares meet there. At a corner of a cube, only three faces meet.</p>
+  <div class="explainer" data-explainer="cubeCorner"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Why does 5 in a row never fold into an open box, no matter which square is the bottom?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A row folds up like a belt. Four squares already go all the way around, so with 5 in a row one square always lands on a face that is already used. Try the I in the folding machine.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Will it fold into an open box?</h3></div>
+  <div class="part"><div class="pl">Does each pentomino fold into an open box? Write yes or no. If yes, shade the square that becomes the bottom. Check with your cut-out pieces.</div>
+    <div class="u5l1-fig" data-fig="ex7"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) X <b>yes</b>: the middle square is the bottom and the four arms fold up as the sides. (b) L <b>yes</b>: the column of 4 wraps around to make the 4 sides, and the extra square closes one end: it is the bottom. (c) U <b>no</b>: put the bottom in the middle of the long row. The two end squares fold up as the left and right sides, and the two tips both land on the back. They overlap and the front is missing. (d) P <b>no</b>: it has a 2 by 2 block, so it is eliminated right away.</div></div></div>
+  <div class="explainer u5l1-gap" data-explainer="foldBox"></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s6" data-section="5. Tiling a Rectangle">
+  <h3 class="sub">Tiling a rectangle</h3>
+  <p>To <b>tile</b> a rectangle means to cover it completely with pieces, with no gaps and no overlaps. Pieces may be turned and flipped.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Tiling tips
+    <ol class="u5l1-steps">
+      <li><b>Check the area:</b> each pentomino covers 5 squares.</li>
+      <li><b>Fill a corner or an edge first</b>, where pieces fit in fewer ways.</li>
+      <li><b>Eliminate:</b> if you close off a gap whose number of squares is not a multiple of 5 (5, 10, 15, …), that try cannot work. Undo the last piece and try again.</li>
+    </ol></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Tile a 3 by 5 rectangle</h3></div>
+  <div class="part"><div class="pl">Tile this 3 by 5 rectangle with the <b>L</b>, <b>T</b> and <b>Y</b> pentominoes. Draw the pieces on the rectangle and label them.</div>
+    <div class="u5l1-fig" data-fig="ex8"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Area check: <span class="tex">3\times5=15</span> squares <span class="tex">=3\times5</span>, so 3 pentominoes is the right number. The T is 3 long in both directions, so it fits standing up at the right end. The L and Y are 4 long, so they must lie along the long sides: the <b>L across the top</b>, the <b>Y across the bottom</b>. Guess and check the flips until they lock together.</div></div></div>
+  <h3 class="sub u5l1-gap">Try it: tile the rectangle</h3>
+  <p class="u5l1-how">Drag the three pieces into the dashed rectangle (tap = turn, double-tap = flip).</p>
+  <div class="u5l1-tool" id="u5l1-tile"></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Owen’s box, and a closed box</h3></div>
+  <p class="u5l1-p">Owen says: “The P pentomino has 5 squares and an open box has 5 faces, so P must fold into an open box.”</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Identify and correct Owen’s error.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Having 5 squares is needed, but it is <b>not enough</b>: the squares must also land on 5 <b>different</b> faces. P has a 2 by 2 block, and when you fold it, two squares land on the same face. So P does <b>not</b> fold into an open box (Example 7).</div></div></div>
+    <div class="part"><div class="pl">(b) Create a variation: a <b>closed</b> box (a cube) has 6 faces. Add one square to the X pentomino to make a net of a closed cube. Describe your strategy.</div>
+      <div class="u5l1-ex9"><div class="u5l1-fig" data-fig="ex9"></div><div class="work" style="--h:130px"></div></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">X folds into an open box with the middle square as the bottom. The open top is across from the bottom, so the new square must fold over to be the <b>lid</b>: add it to the end of any arm (shown on top).</div></div></div>
+  </div>
+  <div class="explainer u5l1-gap" data-explainer="lid"></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Strategies:</b> draw or model, guess and check, systematic list, look for a pattern, simplify, eliminate, work backward, try another approach. Then <b>check</b> the answer follows the rules.</div>
+    <div><b>Tangram areas</b> (small triangle = 1): large 4, medium 2, square 2, parallelogram 2, small 1. Whole square = 16, so a large triangle is <span class="tex">\tfrac14</span> of it.</div>
+    <div><b>Building shapes:</b> check the area first, place the biggest pieces first, look at the corners, guess and check (flips allowed). Reuse a puzzle you already solved.</div>
+    <div><b>Pentominoes:</b> 12 of them (a turn or flip is not new). An open box needs 5 <b>different</b> faces: a 2 by 2 block never folds. Tiling: the area must be a multiple of 5.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u5l1">
+    <div><div class="kicker">Your turn</div><b>Assignment 1 · Questions 11–18</b><div class="muted">Open-box nets, a mistake about rows of 4, tiling with P, U and V, make your own tangram puzzle, and quick tangram and pattern checks. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l2/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 2 — Spatial Games and Strategies</b><div class="muted">Take-away games, tic-tac-toe, dots and boxes and a tower puzzle: next we play games and find the winning strategy.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u5l1.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u5l1', homeHref: '../../', title: '5.1 Tangrams and Pentominoes' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

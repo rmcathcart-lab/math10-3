@@ -7,7 +7,7 @@ var fs = require('fs'), path = require('path'), vm = require('vm');
 var root = path.join(__dirname, '..');
 var ctx = { console: console, Math: Math, Date: Date, JSON: JSON, Number: Number, String: String, Array: Array, Object: Object, isFinite: isFinite, RegExp: RegExp };
 ctx.window = ctx; ctx.globalThis = ctx; vm.createContext(ctx);
-['assets/katex/katex.min.js', 'js/core.js', 'js/expr.js', 'js/kit.js', 'js/kitx.js', 'js/poly.js', 'js/factor.js', 'js/relfn.js', 'js/draw.js', 'js/draw2.js', 'js/lines.js', 'js/geom.js'].forEach(function (f) { if (fs.existsSync(path.join(root, f))) vm.runInContext(fs.readFileSync(path.join(root, f), 'utf8'), ctx, { filename: f }); });
+['assets/katex/katex.min.js', 'js/core.js', 'js/expr.js', 'js/kit.js', 'js/kitx.js', 'js/poly.js', 'js/factor.js', 'js/relfn.js', 'js/draw.js', 'js/draw2.js', 'js/lines.js', 'js/geom.js', 'js/geokit.js'].forEach(function (f) { if (fs.existsSync(path.join(root, f))) vm.runInContext(fs.readFileSync(path.join(root, f), 'utf8'), ctx, { filename: f }); });
 fs.readdirSync(path.join(root, 'js/lessons')).filter(function (f) { return /test\.js$/.test(f); }).sort().forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(root, 'js/lessons', f), 'utf8'), ctx, { filename: f }); });
 var HW = ctx.HW, only = process.argv[2] && process.argv[2][0] !== '-' ? process.argv[2] : null, list = process.argv.indexOf('--list') > 0;
 var MIN = [1.5, 3, 5], problems = 0;
