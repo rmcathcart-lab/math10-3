@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Geometry toolkit · Math 10-3 dev</title>
-<meta name="description" content="Demo and test bed for the Unit 5 geometry toolkit (js/geo.js): protractor, angles, transversals, compass rose and bearings, compass-and-straightedge constructions, tangrams and pentominoes.">
+<meta name="description" content="Demo and test bed for the geometry toolkit (js/geo.js): Unit 5 (protractor, angles, transversals, bearings, constructions, tangrams, pentominoes) and Units 6–7 (similar figures, grid drawing, scales and maps, right triangles, Pythagoras, trig ratios, elevation, clinometer, shadows and mirrors).">
 <meta name="theme-color" content="#6e4a1c">
 <link rel="icon" href="../assets/icon-192.png">
 <link rel="stylesheet" href="../../assets/katex/katex.min.css">
@@ -25,8 +25,8 @@
 
 <section class="card hero" data-ink="hero" data-section="Start">
   <div class="kicker">Math 10-3 · Developer page</div>
-  <h1>Geometry toolkit (Unit 5)</h1>
-  <p class="lede">Every piece of <b>js/geo.js</b>: a protractor to drag and turn, angle drawings, the numbered transversal, a compass rose for bearings, animated compass-and-straightedge constructions, and tangram and pentomino pieces. The reference for builders is <b>lessons/BLOCKS.md</b> (Geometry toolkit).</p>
+  <h1>Geometry toolkit (Units 5–7)</h1>
+  <p class="lede">Every piece of <b>js/geo.js</b>: a protractor to drag and turn, angle drawings, the numbered transversal, a compass rose for bearings, animated compass-and-straightedge constructions, and tangram and pentomino pieces. Units 6–7 add similar figures, a grid to draw enlargements on, bar scales and a map tape, right triangles with opp/adj/hyp, the Pythagoras squares and proof, nested similar right triangles, angles of elevation and depression, a clinometer, shadows and mirrors (sections 9–16). The reference for builders is <b>lessons/BLOCKS.md</b> (Geometry toolkit).</p>
 </section>
 
 <section class="card" data-ink="pt" data-section="Protractor">
@@ -79,6 +79,61 @@
   <div class="demo-out" id="demo-pen-out"></div>
   <p class="demo-note" style="margin-top:16px">All twelve: <code>Geo.pentomino(host, { height: 470 })</code></p>
   <div id="demo-pen12"></div>
+</section>
+
+<section class="card" data-ink="sim" data-section="Similar figures">
+  <div class="sec-h"><span class="badge">9</span><h2>Similar figures (Unit 6)</h2></div>
+  <p class="demo-note"><code>Geo.similar(host, { shape: 'trap', k: 1.5, names: ['ABCD', 'PQRS'], units: 'cm', ratios: true })</code> — matching sides in the same colour, k = new ÷ original. Projection from a point: <code>mode: 'centre'</code>.</p>
+  <div class="bk-row" id="demo-sim"></div>
+  <div class="explainer" data-explainer="similar"></div>
+</section>
+
+<section class="card" data-ink="gd" data-section="Grid drawing">
+  <div class="sec-h"><span class="badge">10</span><h2>Draw an enlargement on a grid</h2></div>
+  <p class="demo-note">Tap grid points; tap the first corner to close; <b>Check</b> compares with k. <code>Geo.gridDraw(host, { shape: 'L', k: 2, names: ['ABCDEF'] })</code></p>
+  <div id="demo-gd"></div>
+</section>
+
+<section class="card" data-ink="map" data-section="Scales and maps">
+  <div class="sec-h"><span class="badge">11</span><h2>Bar scales and the map tape</h2></div>
+  <p class="demo-note"><code>Geo.scaleBar(host, { scale: '1 cm : 2 m' })</code> · <code>Geo.mapTape(host, { scale: '1 cm : 5 km', places })</code> — drag the round ends.</p>
+  <div class="bk-row" id="demo-bars"></div>
+  <div id="demo-tape"></div>
+</section>
+
+<section class="card" data-ink="rt" data-section="Right triangles">
+  <div class="sec-h"><span class="badge">12</span><h2>Right triangles: opp, adj, hyp (Unit 7)</h2></div>
+  <p class="demo-note"><code>Geo.rightTri(host, { a: 3, b: 4, theta: 'A', sides: { a: '3', b: '4', c: '?' } })</code>; squares on the sides: <code>squares: 'grid'</code>; the rearrangement proof: <code>Geo.pythagProof</code>.</p>
+  <div class="bk-row" id="demo-rt"></div>
+  <div class="explainer" data-explainer="roles"></div>
+  <div class="explainer" data-explainer="pythag"></div>
+</section>
+
+<section class="card" data-ink="srt" data-section="Similar right triangles">
+  <div class="sec-h"><span class="badge">13</span><h2>Similar right triangles: the trig ratios</h2></div>
+  <p class="demo-note">Move the slider: every triangle gives the same ratios. <code>Geo.similarRights(host, { theta: 35, sizes: [3, 5, 7] })</code></p>
+  <div id="demo-srt"></div>
+  <div class="explainer" data-explainer="discover"></div>
+</section>
+
+<section class="card" data-ink="elev" data-section="Elevation and depression">
+  <div class="sec-h"><span class="badge">14</span><h2>Angles of elevation and depression</h2></div>
+  <p class="demo-note"><code>Geo.elevation(host, { kind: 'elevation', angle: 38, dist: 25, eye: 1.6, target: 'tree' })</code> · <code>kind: 'depression', observer: 'lighthouse', target: 'boat', alt: true</code></p>
+  <div class="bk-row" id="demo-elev"></div>
+  <div class="explainer" data-explainer="elev"></div>
+</section>
+
+<section class="card" data-ink="clino" data-section="Clinometer">
+  <div class="sec-h"><span class="badge">15</span><h2>Clinometer (drag to tilt)</h2></div>
+  <p class="demo-note">The string always hangs straight down. <code>Geo.clinometer(host, { angle: 30 })</code> (protractor scale: elevation = 90° − reading) or <code>scale: 'direct'</code>.</p>
+  <div class="bk-row" id="demo-clino"></div>
+</section>
+
+<section class="card" data-ink="shm" data-section="Shadows and mirrors">
+  <div class="sec-h"><span class="badge">16</span><h2>Shadows and mirrors</h2></div>
+  <p class="demo-note"><code>Geo.shadow(host, { small: { h: 1.8, shadow: 2.4 }, big: { shadow: 18, kind: 'tower', label: { h: 'h' } } })</code> · <code>Geo.mirror(host, { eye: 1.6, d1: 2.1, d2: 12.5, labels: { h: 'h' } })</code></p>
+  <div class="explainer" data-explainer="shadow"></div>
+  <div class="explainer" data-explainer="mirror"></div>
 </section>
 
 </main>

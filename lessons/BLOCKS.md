@@ -205,3 +205,38 @@ Pencil and mouse under lesson scaling and pinch zoom (screen-matrix coordinates,
 Also `Geo.PAIRS`, `PAIR_NAMES`, `pairName(a, b)`, `bearingText(45)` → `"045"`, `at(V, deg, r)`, `dirTo(V, Q)`, `arcD`, `text`, `ray`.
 Give an explainer whose picture is a protractor or puzzle `tap: false`. Practice-site figures and checkers with the same
 numbering and look are in `../js/geokit.js` (`HW.geo`).
+
+## Geometry toolkit (Units 6–7) — `js/geo.js`
+Same import, same rules as Unit 5 (`(host, opts)`, `c` first, no `c` = static, math degrees, draggables carry `data-tap`).
+Demo: `dev/geo.html` sections 9–16. **Shapes for `similar` / `gridDraw` are in grid units, math coordinates (y up)**; world
+pictures (`elevation`, `shadow`, `mirror`) are in metres (y up), scaled to fit. Conventions from the book brief: similar figures
+named in matching order (`names: ['ABCD', 'PQRS']`), **k = new ÷ original**; right triangle ABC with the **right angle at C**,
+side a opposite A, b opposite B, c = hypotenuse; opp/adj/hyp relative to θ (opp red, adj blue, hyp brown — `Geo.ROLE_COLORS`).
+HTML hosts get a wrapper: the figure box plus a `.geo-panel` under it (ratio chips, readouts, tables, buttons).
+
+| Call | What you get |
+|---|---|
+| `Geo.similar(host, {shape, pts, k 2, mode: 'side'\|'centre', centre, names, labels true\|[[orig…],[image…]], units, angles, matchColors true, ratios, image true, grid})` | original + image (side by side, or projected from a point O with dashed rays); matching sides/angles in the same colour. `grow(c)` (the image grows out of a copy; start with `image: false`), `showRatios(c)` (chips "PQ ÷ AB = 7.5 ÷ 5 = 1.5"), `hideRatios()`, `highlight(c, i)` (side pair i), `setK(k)`, `showImage(on)`, `ratios`, `lens`. Shapes: `tri right iso rect square L trap para kite house pent arrow` (`Geo.SHAPES`) |
+| `Geo.gridDraw(host, {cols 20, rows 12, cell 32, shape\|pts, at: [col,row], k 2 (null = any k), imageAt, names, buttons, onCheck})` | students tap grid points to draw the image (tap the first corner to close, the last to undo); **Check** compares with k (same orientation; reports a wrong k, a flipped k, "added instead of multiplied", count of right sides, wrong sides in red); Show me, Undo, Clear. API `check()` → `{ok, code, msg, k, bad}`, `set(pts, closed)`, `points()`, `show(c)`, `clear()`. Pure checker: `Geo.similarOnGrid(drawn, pts, k)` |
+| `Geo.scaleBar(host, {scale: '1 cm : 2 m'\|'1:50 000'\|{draw, real, units}, segments 4, cmPx 40})` | alternating bar scale with its "1 cm represents 2 m" title. `Geo.parseScale(s)` → `{draw, drawUnit, real, realUnit, ratio, perCm, text, toReal(cm), toDraw(real)}` |
+| `Geo.mapTape(host, {width, height, scale, cmPx 40, a, b, places: [{name, at}], map: (g, W, H) => …, grid, bar, dp 1})` | a map (your own drawing, 1-cm grid, places) with a measuring tape: drag the two round ends (they snap to places); the readout gives "Drawing: 4.9 cm → real: 4.9 × 5 km = 24.5 km". `reading()`, `set(a, b)`, `moveTo(c, a, b)` |
+| `Geo.rightTri(host, {a, b, c (any two), right 'br'\|'bl'\|'tr'\|'tl', rot, flip, names, sides: {a: '3', c: '?'}\|true, theta 'A'\|'B', thetaLabel 'θ', angles: {A: '35°'}, show ['opp','adj','hyp'], long, labels: {opp, adj, hyp}, squares false\|true\|'grid', roomForSquares})` | right triangle, true proportions, right-angle square at C; with θ the sides take role colours and **opp/adj/hyp tags sit beyond the length labels** (inside when squares are on). `setTheta(c, 'B')` (tags glide to their new sides, θ arc moves), `highlight(c, 'opp'\|'a')`, `showSquares(c, 'grid')` (squares outward, unit grid when the side is whole; the length moves into the square: "3² = 9"), `roles()`, `V`, `sides` |
+| `Geo.pythagProof(host, {a 3, b 4})` | two (a + b) squares with four copies of the triangle: c² left; `play(c)` slides three triangles in the right copy to leave a² and b². `reset()` |
+| `Geo.similarRights(host, {theta 35, sizes [3,5,7], by 'adj'\|'hyp', ratios ['opp/adj','opp/hyp','adj/hyp'], slider true, calc true, reveal: [], dp 1, rdp 2})` | nested right triangles sharing θ + a live table (opp, adj, hyp, each ratio; a "calculator (DEG)" row). Slider changes θ. `grow(c)` (triangles and rows one by one), `highlightCol(c, 'opp/adj')`, `name(c, 'opp/adj')` (heading becomes "= tan θ"), `set(θ)`, `values()` |
+| `Geo.elevation(host, {kind 'elevation'\|'depression', angle, dist, height, eye 1.6, observer, target, labels: {angle, dist, height, eye, sight, alt}, alt, units 'm'})` | horizontal (dashed, labelled) from the eye, line of sight, angle arc, right angle, eye height and the part above eye level as dimension lines. Targets: tree building tower flag pole elevator plane; depression: observer cliff/lighthouse/building/plane, target boat/person/car, `alt: true` marks the equal angle of elevation at the target. `drawIn(c)`, `setAngle(c, deg)`, `showAlt(c)`, `parts` |
+| `Geo.clinometer(host, {angle 30, scale 'protractor'\|'direct', interactive, sight, readout})` | protractor + straw + weighted string: drag to tilt, the string stays vertical; readout "string crosses 60° → angle of elevation = 90° − 60° = 30°" (`'direct'` scale reads the angle itself). `set(deg)`, `tiltTo(c, deg)`, `reading()` |
+| `Geo.shadow(host, {small: {h, shadow, kind, label: {h, s}}, big: {h, shadow, kind, label}, sunLabel, split})` | parallel sun rays, two objects and shadows, the two right triangles shaded; two panels when the heights differ a lot. `play(c)` (rays, shadows, triangles), `highlight(c)` |
+| `Geo.mirror(host, {eye 1.6, d1, d2, h, kind, labels: {eye, d1, d2, h}, angleLabel})` | eye – mirror – top of the object, equal angles at the mirror, two similar triangles. `play(c)` |
+Also `Geo.rightSides({a, c})` → `{a, b, c, A, B}`, `Geo.rolesFor('A')` → `{opp: 'a', adj: 'b', hyp: 'c'}`, `Geo.fmtLen(v, dp)`, `Geo.MATCH_COLORS`.
+
+**Practice site (`js/geokit.js`, `HW.geo`), same conventions, static SVG strings:** `similarSVG({shape|pts, k, drawK, names, labels,
+units, angles, matchColors, rot, flip})`, `rightTriSVG({a, b, c | A + a side, right, rot (any), flip, names, sides, angles, theta,
+roles, long, unknown: 'a'|'b'|'c'|'A'|'B' (red ?), squares})`, `elevationSVG`, `shadowSVG`, `mirrorSVG`, `gridSVG({shape, k, image})`,
+`scaleMapSVG({scale, w, h, places, routes})`, `parseScale`. Checkers: `lenChk(v, {dp 1, trig: {fn, deg, side, op: 'mul'|'div'},
+pyth: {legs: [a, b]} | {hyp, leg}, scale: {len, k, op}, prop: {given, num, den}, alts, radTrap})` — **describe the set-up and the
+traps come for free**: RAD mode ("Press DRG until DEG shows"), × vs ÷, the wrong ratio, ratio ÷ side, rounding the ratio early
+(a nudge), Pythagoras with no √ / a² − b² for c / the hypotenuse used as a leg / adding the sides / 2a for a², adding k, a flipped
+proportion. `angleRatioChk(deg, {ratio: {fn, num, den}})` — the other acute angle 90° − θ (checked first: it is also what a flipped
+tan or the co-function gives), RAD mode, no inverse key, the wrong inverse. `kChk(k, {from: {new, orig}})` — fraction or decimal
+(≥ 2 places when k doesn't end), upside-down k, new − original, "3 : 2", "150%". Parts: `P.len`, `P.trigAngle`, `P.k(prompt, [p, q])`,
+`P.ratioMC(r, prompt, 'sin'|'cos'|'tan'|'pyth')`. Tests: `node tests/geokit_test.js`; look: `python3 tests/geokit_shots.py`.

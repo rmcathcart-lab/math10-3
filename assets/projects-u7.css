@@ -1,0 +1,130 @@
+/* Unit 7 project — Ramp It Up (js/projects/u7.js): the building, the landing slab with its 3-4-5 triangle, the ramp,
+ * the stairs and handrail, the light pole with its guy wires, the roof camera, the other crew's card and the printable
+ * build card. Loaded by js/projects/u7.js itself (or link it after assets/projects.css). Everything is pj-u7-. */
+
+/* ---- drawings ---- */
+.pj-u7-svg { display: block; width: 100%; height: auto; overflow: visible; margin: 0 auto; }
+.pj-u7-draw { position: relative; background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; padding: 10px 12px 12px; }
+.pj-u7-draw.pj-u7-sm { max-width: 600px; }
+.pj-u7-draw > .pj-u7-svg { max-height: 560px; }
+.pj-u7-svg text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+.pj-u7-gnd { fill: #e7efdc; } .pj-u7-gl { stroke: #6b8f4e; stroke-width: 2.5; }
+.pj-u7-sky { fill: #f3f8fd; }
+.pj-u7-wall { fill: #e9e4d8; stroke: #b9b09c; stroke-width: 1.5; }
+.pj-u7-door { fill: #5b6b7d; stroke: #374151; stroke-width: 1.5; }
+.pj-u7-land { fill: #cfd6df; stroke: #8792a2; stroke-width: 1.5; }
+.pj-u7-rampf { fill: #dfe5ec; stroke: none; }
+.pj-u7-ramp.old .pj-u7-rampf { fill: #fde2e1; }
+.pj-u7-surf { stroke: #475569; stroke-width: 4; stroke-linecap: round; }
+.pj-u7-ramp.old .pj-u7-surf { stroke: #dc2626; stroke-dasharray: 10 6; }
+.pj-u7-surf.hypc { stroke: #15803d; }
+.pj-u7-rail, .pj-u7-rail2 { stroke: #8a5a2b; stroke-width: 3.5; stroke-linecap: round; }
+.pj-u7-post { stroke: #8a5a2b; stroke-width: 2; }
+.pj-u7-sq { fill: none; stroke: #0f172a; stroke-width: 1.6; }
+.pj-u7-vx { font-size: 13px; font-weight: 800; fill: #0f172a; paint-order: stroke; stroke: #fff; stroke-width: 3px; }
+.pj-u7-arc { fill: none; stroke: #7c3aed; stroke-width: 2.4; }
+.pj-u7-note { font-size: 11.5px; font-weight: 600; fill: #64748b; text-anchor: middle; font-style: italic; paint-order: stroke; stroke: #fff; stroke-width: 3px; }
+.pj-u7-thl { font-size: 14px; font-weight: 800; fill: #7c3aed; paint-order: stroke; stroke: #fff; stroke-width: 3px; }
+.pj-u7-wl { font-size: 11px; font-weight: 800; letter-spacing: .1em; fill: #475569; text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 4px; }
+/* dimension lines and labels (opp orange, adj blue, hyp green, angles purple) */
+.pj-u7-dim line { stroke: #475569; stroke-width: 1.4; }
+.pj-u7-dim.oppc line { stroke: #ea580c; stroke-width: 1.8; } .pj-u7-dim.adjc line { stroke: #2563eb; stroke-width: 1.8; }
+.pj-u7-tg rect { fill: #fff; stroke: #475569; stroke-width: 1.5; }
+.pj-u7-tg text { font-size: 13px; font-weight: 700; fill: #1f2937; text-anchor: middle; }
+.pj-u7-tg.opp rect { stroke: #ea580c; fill: #fff7ed; } .pj-u7-tg.opp text { fill: #9a3412; }
+.pj-u7-tg.adj rect { stroke: #2563eb; fill: #eff6ff; } .pj-u7-tg.adj text { fill: #1e3a8a; }
+.pj-u7-tg.hyp rect { stroke: #15803d; fill: #f0fdf4; } .pj-u7-tg.hyp text { fill: #14532d; }
+.pj-u7-tg.th rect { stroke: #7c3aed; fill: #f5f3ff; } .pj-u7-tg.th text { fill: #5b21b6; }
+.pj-u7-tg.bad rect { stroke: #dc2626; fill: #fef2f2; } .pj-u7-tg.bad text { fill: #991b1b; }
+.pj-u7-tg.sm text { font-size: 12px; } .pj-u7-tg.m1 rect { stroke: #15803d; } .pj-u7-tg.m2 rect { stroke: #0891b2; }
+.pj-u7-c { display: inline-block; padding: 1px 8px; border-radius: 999px; font-weight: 800; font-size: 13px; }
+.pj-u7-c.opp { background: #ffedd5; color: #9a3412; } .pj-u7-c.adj { background: #dbeafe; color: #1e3a8a; } .pj-u7-c.hyp { background: #dcfce7; color: #14532d; }
+/* the slab */
+.pj-u7-slabf { fill: #d9dee5; stroke: #64748b; stroke-width: 2; }
+.pj-u7-door2 { fill: #5b6b7d; }
+.pj-u7-trif { fill: rgba(250, 204, 21, .22); }
+.pj-u7-t4 { stroke: #2563eb; stroke-width: 3; } .pj-u7-t3 { stroke: #ea580c; stroke-width: 3; } .pj-u7-t5 { stroke: #15803d; stroke-width: 3; stroke-dasharray: 8 5; }
+.pj-u7-mk { fill: #fff; stroke: #0f172a; stroke-width: 2; }
+.pj-u7-dg { stroke: #15803d; stroke-width: 2; stroke-dasharray: 3 4; } .pj-u7-dg2 { stroke: #0891b2; stroke-width: 2; stroke-dasharray: 3 4; }
+/* stairs */
+.pj-u7-stepf { fill: #e8d7bd; stroke: #8a5a2b; stroke-width: 1.8; stroke-linejoin: round; }
+.pj-u7-strg { stroke: #15803d; stroke-width: 4; stroke-linecap: round; }
+/* pole, wires, camera */
+.pj-u7-man circle { fill: #fcd9b6; stroke: #334155; stroke-width: 2; } .pj-u7-man line { stroke: #334155; stroke-width: 3; stroke-linecap: round; }
+.pj-u7-polel { stroke: #64748b; stroke-width: 6; stroke-linecap: round; } .pj-u7-arm { stroke: #64748b; stroke-width: 3.5; stroke-linecap: round; }
+.pj-u7-lamp { fill: #334155; }
+.pj-u7-glow { fill: rgba(253, 224, 71, .28); }
+.pj-u7-hz { stroke: #64748b; stroke-width: 1.4; stroke-dasharray: 5 4; }
+.pj-u7-sight { stroke: #7c3aed; stroke-width: 2; stroke-dasharray: 8 5; }
+.pj-u7-wire { stroke: #15803d; stroke-width: 2.2; } .pj-u7-wire.w2 { stroke-dasharray: 6 4; }
+.pj-u7-anc { fill: #0f172a; }
+.pj-u7-camb { fill: #1f2937; }
+/* the scene */
+.pj-u7-roof { stroke: none; }
+.pj-u7-win { fill: #cfe8fb; stroke-width: 2; }
+.pj-u7-signt { font-size: 14px; font-weight: 800; letter-spacing: .08em; fill: #fff; text-anchor: middle; }
+.pj-u7-riser { stroke: #8792a2; stroke-width: 1.5; }
+.pj-u7-oldf { fill: rgba(220, 38, 38, .14); } .pj-u7-olds { stroke: #dc2626; stroke-width: 3.5; stroke-linecap: round; }
+.pj-u7-oldf.gone { fill: none; } .pj-u7-olds.gone { stroke: #dc2626; stroke-opacity: .45; stroke-width: 2; stroke-dasharray: 4 5; }
+.pj-u7-ghost { fill: rgba(21, 128, 61, .07); } .pj-u7-ghostl { stroke: #15803d; stroke-width: 2.5; stroke-dasharray: 8 6; }
+
+/* ---- checkpoint 1 ---- */
+.pj-u7-brief { display: flex; gap: 12px; align-items: center; background: var(--ucl, #eef3ff); border-radius: 14px; padding: 10px 14px; font-size: 15px; }
+.pj-u7-bi { font-size: 28px; }
+.pj-types.pj-u7-blds { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pj-u7-name input { min-width: 280px; font-size: 17px; }
+.pj-u7-plan { background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; overflow: hidden; }
+.pj-u7-plan > .pj-u7-draw { border: 0; border-radius: 0; }
+.pj-u7-plan .pj-u7-plan-h { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: var(--ucl, #eef3ff); border: 0; border-radius: 0; }
+.pj-u7-plan-h > span { font-size: 30px; } .pj-u7-plan-h small { display: block; font-size: 12px; font-weight: 700; color: var(--ucd, #1e3a8a); text-transform: uppercase; letter-spacing: .05em; }
+.pj-u7-plan-h b { font-size: 20px; } .pj-u7-plan-h em { margin-left: auto; font-style: normal; font-size: 13px; color: var(--muted, #6b7280); }
+.pj-u7-facts { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 10px 16px 12px; border-top: 1px solid var(--line2, #eee9df); font-size: 14px; color: var(--muted, #6b7280); }
+.pj-u7-facts b { color: var(--ink, #1f2937); }
+
+/* ---- inputs ---- */
+.pj-in.pj-u7-in { width: auto; max-width: 220px; } .pj-u7-in input { width: 100px; }
+.pj-u7-one { max-width: 420px; }
+.pj-u7-opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.pj-u7-opts .pj-opt { text-align: left; }
+.pj-u7-ratios .pj-opt b { font-size: 15px; }
+.pj-u7-work { font-size: 13px; color: var(--muted, #6b7280); }
+.pj-u7-row .pj-field { max-width: 320px; }
+.pj-u7-row .pj-sel select { min-width: 190px; }
+
+/* ---- the other crew's card (spot the slip) ---- */
+.pj-u7-slip { max-width: 560px; background: #fffdf7; border: 1.5px dashed #c9b98f; border-radius: 14px; padding: 10px 14px 12px; }
+.pj-u7-slip-h { font-weight: 800; font-size: 15px; margin-bottom: 6px; } .pj-u7-slip-h small { font-weight: 600; color: var(--muted, #6b7280); }
+.pj-u7-slip-r { display: flex; gap: 10px; align-items: center; padding: 6px 0; border-top: 1px solid #efe7d2; font-size: 15px; }
+.pj-u7-slip-l { width: 26px; height: 26px; border-radius: 50%; background: #1f2937; color: #fff; font-weight: 800; display: grid; place-items: center; font-size: 13px; flex: none; }
+
+/* ---- the build card ---- */
+.pj-u7-cardwrap { padding: 0; border: 0; background: transparent; }
+.pj-u7-card { --cc: var(--uc, #2563eb); background: #fff; border: 2px solid #1f2937; border-radius: 16px; overflow: hidden; max-width: 820px; box-shadow: 0 6px 18px rgba(20, 24, 33, .08); }
+.pj-u7-c-top { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: #1f2937; color: #fff; }
+.pj-u7-c-logo { width: 46px; height: 46px; color: #fde047; flex: none; } .pj-u7-c-logo svg { width: 100%; height: 100%; }
+.pj-u7-c-id small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #cbd5e1; }
+.pj-u7-c-id b { display: block; font-size: 21px; line-height: 1.15; } .pj-u7-c-id span { font-size: 13px; color: #fde047; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.pj-u7-c-date { margin-left: auto; font-size: 13px; color: #cbd5e1; }
+.pj-u7-c-draw { padding: 8px 10px 0; border-bottom: 1px solid #e5e7eb; }
+.pj-u7-c-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 18px; padding: 8px 16px 10px; }
+.pj-u7-c-grid h5 { margin: 10px 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: #475569; }
+.pj-u7-cr { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; padding: 3px 0; border-bottom: 1px dotted #e2e8f0; }
+.pj-u7-cr span { color: #64748b; } .pj-u7-cr b { text-align: right; font-variant-numeric: tabular-nums; }
+.pj-u7-c-foot { padding: 9px 16px; background: #fef9c3; font-size: 13.5px; font-weight: 600; color: #713f12; border-top: 1px solid #fde68a; }
+
+/* ---- the worked examples ---- */
+.pj-u7-exwrap { width: 680px; max-width: 100%; }
+.pj-u7-exwrap.pj-u7-exsm { width: 500px; }
+
+/* ---- narrow screens ---- */
+@media (max-width: 900px) {
+  .pj-u7-c-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .pj-types.pj-u7-blds { grid-template-columns: 1fr; }
+  .pj-u7-c-grid { grid-template-columns: 1fr; }
+}
+/* print */
+.pj-print .pj-u7-card { box-shadow: none; margin: 0 auto; break-inside: avoid; }
+.pj-print .pj-u7-card, .pj-print .pj-u7-card * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.pj-ro .pj-u7-name input { min-width: 0; }

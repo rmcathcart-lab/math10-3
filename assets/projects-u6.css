@@ -1,0 +1,200 @@
+/* Unit 6 project — Scale It (js/projects/u6.js): the real build with its sizes, the labelled logo versions, the drawing
+ * grid, the floor-plan paper with draggable pieces, the shadow and mirror scenes, and the printable plan sheet.
+ * Loaded by js/projects/u6.js itself (or link it after assets/projects.css). Everything is pj-u6-. */
+
+/* ---- drawings ---- */
+.pj-u6-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.pj-u6-draw { position: relative; -webkit-user-select: none; user-select: none; background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; padding: 10px 12px 12px; }
+.pj-u6-draw.flat { border: 0; border-radius: 0; padding: 4px 0; background: none; }
+.pj-u6-draw > .pj-u6-svg { max-height: 420px; }
+.pj-u6-t, .pj-u6-dl, .pj-u6-al, .pj-u6-sl, .pj-u6-vn, .pj-u6-axis, .pj-u6-plab, .pj-u6-small, .pj-u6-pn, .pj-u6-view, .pj-u6-elevt { font: 700 13px/1 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: #1f2937; text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
+.pj-u6-dl { font-size: 13.5px; font-weight: 800; fill: #0f172a; }
+.pj-u6-dim.ask .pj-u6-dl { fill: #dc2626; font-size: 16px; }
+.pj-u6-view { font-size: 11px; font-weight: 800; letter-spacing: .1em; fill: #64748b; }
+.pj-u6-al { font-size: 12.5px; font-weight: 800; fill: #9a3412; }
+.pj-u6-sl { font-size: 12.5px; font-weight: 700; fill: #1e3a8a; }
+.pj-u6-vn { font-size: 14px; font-weight: 800; fill: #0f172a; }
+.pj-u6-axis { font-size: 10.5px; font-weight: 600; fill: #94a3b8; stroke-width: 0; }
+.pj-u6-plab { font-size: 12.5px; font-weight: 700; fill: #475569; }
+.pj-u6-small { font-size: 11.5px; font-weight: 600; fill: #64748b; font-style: italic; }
+.pj-u6-pn { font-size: 11.5px; font-weight: 800; fill: #0f172a; } .pj-u6-pn.sm { font-size: 9px; stroke-width: 2.5px; }
+.pj-u6-dim line, .pj-u6-dim path { stroke: #334155; stroke-width: 1.4; fill: none; }
+.pj-u6-dim .pj-u6-dimx { stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 2 3; }
+.pj-u6-dim.ask line, .pj-u6-dim.ask path { stroke: #dc2626; }
+.pj-u6-ground { stroke: #8b6b4a; stroke-width: 3; stroke-linecap: round; }
+
+/* the builds */
+.pj-u6-body { stroke: rgba(15, 23, 42, .55); stroke-width: 1.5; }
+.pj-u6-roof { fill: #334155; }
+.pj-u6-trailer { fill: #475569; } .pj-u6-hitch { stroke: #475569; stroke-width: 4; stroke-linecap: round; }
+.pj-u6-wheel { fill: #1f2937; stroke: #94a3b8; stroke-width: 3; } .pj-u6-tire { fill: #1f2937; }
+.pj-u6-door { fill: #7c4a1e; stroke: rgba(0, 0, 0, .35); stroke-width: 1; }
+.pj-u6-win { fill: #e0f2fe; stroke: #fff; stroke-width: 2; }
+.pj-u6-cab { fill: #e5e7eb; stroke: rgba(15, 23, 42, .55); stroke-width: 1.5; }
+.pj-u6-serve { fill: #fef3c7; stroke: #fff; stroke-width: 2; }
+.pj-u6-awn { fill: #f59e0b; stroke: #b45309; stroke-width: 1.2; }
+.pj-u6-slab { fill: #d6d3d1; stroke: #a8a29e; stroke-width: 2; }
+.pj-u6-qp, .pj-u6-fun { opacity: .85; } .pj-u6-funtop { fill: rgba(255, 255, 255, .55); }
+.pj-u6-rail { stroke: #334155; stroke-width: 4; stroke-linecap: round; }
+.pj-u6-bowl { fill: #a8a29e; stroke: #78716c; stroke-width: 2; }
+.pj-u6-qpside { stroke: rgba(15, 23, 42, .5); stroke-width: 1.5; }
+.pj-u6-elev { fill: #b91c1c; stroke: #7f1d1d; stroke-width: 1.5; } .pj-u6-elevr { fill: #475569; }
+.pj-u6-elevt { fill: #fff; stroke: none; font-size: 12px; letter-spacing: .12em; }
+
+/* labelled polygons */
+.pj-u6-pf { stroke: #1e293b; stroke-width: 2.2; stroke-linejoin: round; }
+.pj-u6-arc, .pj-u6-sq { fill: none; stroke: #9a3412; stroke-width: 1.5; }
+.pj-u6-star { fill: #f59e0b; stroke: #fff; stroke-width: 2; }
+
+/* the sun, shadows, the mirror */
+.pj-u6-sun { fill: #fde047; stroke: #f59e0b; stroke-width: 3; }
+.pj-u6-grass { fill: #dcfce7; }
+.pj-u6-tri { fill: rgba(59, 130, 246, .12); stroke: none; }
+.pj-u6-shadow { stroke: #475569; stroke-width: 6; stroke-linecap: round; opacity: .55; }
+.pj-u6-ray { stroke: #f59e0b; stroke-width: 2; stroke-dasharray: 6 4; }
+.pj-u6-trunk { fill: #7c4a1e; } .pj-u6-crown { fill: #15803d; }
+.pj-u6-pole { stroke: #b91c1c; stroke-width: 4; stroke-linecap: round; }
+.pj-u6-lpole { stroke: #475569; stroke-width: 5; stroke-linecap: round; } .pj-u6-lamp { fill: #fde047; stroke: #475569; stroke-width: 1.5; }
+.pj-u6-person circle, .pj-u6-person path { fill: none; stroke: #1f2937; stroke-width: 2.6; stroke-linecap: round; }
+.pj-u6-eye { fill: #dc2626; }
+.pj-u6-mirror { fill: #7dd3fc; stroke: #0369a1; stroke-width: 1.5; }
+
+/* grids */
+.pj-u6-gl { stroke: #dbe4ee; stroke-width: 1; } .pj-u6-gl.mj { stroke: #b6c6d8; }
+.pj-u6-paper { fill: #fff; }
+.pj-u6-shape { fill: rgba(37, 99, 235, .22); stroke: #1e293b; stroke-width: 2.4; stroke-linejoin: round; }
+.pj-u6-shape.mine { stroke: #0f172a; stroke-width: 2.8; }
+.pj-u6-open { fill: none; stroke: #0f172a; stroke-width: 2.6; stroke-dasharray: 7 5; stroke-linejoin: round; }
+.pj-u6-vx { fill: #0f172a; } .pj-u6-vx.mine { fill: #fff; stroke: #0f172a; stroke-width: 2.4; }
+.pj-u6-hit { fill: transparent; cursor: crosshair; }
+.pj-u6-hit:hover { fill: rgba(37, 99, 235, .18); }
+.pj-u6-grid .pj-u6-vn { font-size: 13px; }
+
+/* ---- checkpoint 1 ---- */
+.pj-u6-exwrap { background: #fff; border: 1px solid #f0dcc0; border-radius: 14px; padding: 8px 12px; max-width: 520px; }
+.pj-u6-exwrap .pj-u6-svg { max-height: 230px; }
+.pj-u6-ex3 { display: flex; gap: 10px; align-items: flex-end; max-width: 720px; }
+.pj-u6-ex3 figure { margin: 0; flex: 1 1 0; text-align: center; } .pj-u6-ex3 figcaption { font-size: 12.5px; font-weight: 700; color: var(--muted, #6b7280); }
+.pj-u6-ex3 .pj-u6-svg { max-height: 190px; }
+.pj-u6-ex2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 760px; align-items: end; }
+.pj-u6-brief { display: flex; gap: 12px; align-items: center; background: var(--ucl, #eef3ff); border-radius: 14px; padding: 10px 14px; font-size: 15px; }
+.pj-u6-bi { font-size: 28px; }
+.pj-types.pj-u6-builds { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 760px; }
+.pj-u6-name input { min-width: 280px; font-size: 17px; }
+.pj-u6-sheet { background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; overflow: hidden; }
+.pj-u6-sheet-h { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: var(--ucl, #eef3ff); flex-wrap: wrap; }
+.pj-u6-sheet-h > span { font-size: 30px; } .pj-u6-sheet-h small { display: block; font-size: 12px; font-weight: 700; color: var(--ucd, #1e3a8a); text-transform: uppercase; letter-spacing: .05em; }
+.pj-u6-sheet-h b { font-size: 20px; } .pj-u6-sheet-h em { margin-left: auto; font-style: normal; font-size: 13.5px; color: var(--ink2, #374151); }
+.pj-u6-sheet-b { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 8px 18px; align-items: center; padding: 8px 16px 4px; }
+.pj-u6-facts { margin: 0; display: grid; grid-template-columns: auto; gap: 2px; font-size: 14px; }
+.pj-u6-facts dt { font-size: 12px; font-weight: 700; color: var(--muted, #6b7280); text-transform: uppercase; letter-spacing: .03em; margin-top: 6px; }
+.pj-u6-facts dd { margin: 0; font-size: 20px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.pj-u6-sheet-f { margin: 0; padding: 4px 16px 14px; font-size: 14.5px; color: var(--ink2, #374151); }
+
+/* ---- checkpoint 2: the logos ---- */
+.pj-u6-logos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.pj-u6-logo { margin: 0; background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 14px; padding: 6px 6px 8px; display: flex; flex-direction: column; justify-content: space-between; }
+.pj-u6-logo.orig { background: #fffaf0; border-color: #f0d9b5; }
+.pj-u6-logo .pj-u6-svg { max-height: 200px; }
+.pj-u6-logo figcaption { text-align: center; font-weight: 800; font-size: 15px; } .pj-u6-logo figcaption small { font-weight: 600; color: var(--muted, #6b7280); }
+.pj-u6-tbl { display: grid; gap: 2px; background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; padding: 10px 16px 12px; max-width: 860px; }
+.pj-u6-th, .pj-u6-tr { display: grid; gap: 12px; align-items: center; }
+.pj-u6-rt .pj-u6-th, .pj-u6-rt .pj-u6-tr { grid-template-columns: 130px 80px repeat(3, minmax(0, 1fr)); }
+.pj-u6-pt .pj-u6-th, .pj-u6-pt .pj-u6-tr { grid-template-columns: 170px 130px minmax(0, 1fr) minmax(0, 1fr); }
+.pj-u6-th { font-size: 12px; font-weight: 800; color: var(--muted, #6b7280); text-transform: uppercase; letter-spacing: .04em; padding: 2px 0 6px; }
+.pj-u6-tr { padding: 7px 0; border-top: 1px solid var(--line2, #f0ece3); }
+.pj-u6-tl { font-size: 14.5px; display: flex; align-items: center; gap: 8px; font-variant-numeric: tabular-nums; }
+.pj-u6-tr .pj-in { width: 100%; min-width: 0; }
+.pj-u6-mini-l { font-size: 12px; color: var(--muted, #6b7280); font-variant-numeric: tabular-nums; }
+.pj-u6-sw { width: 14px; height: 14px; border-radius: 4px; display: inline-block; flex: 0 0 14px; }
+.pj-u6-verdicts { display: grid; gap: 10px; }
+.pj-u6-verd { gap: 6px; } .pj-u6-verd .pj-opt { padding: 8px 12px; font-size: 14px; }
+.pj-u6-in.wide { min-width: 160px; }
+
+/* ---- checkpoint 3 ---- */
+.pj-u6-two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pj-u6-cap { position: absolute; top: 8px; left: 12px; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--ucd, #1e3a8a); background: var(--ucl, #eef3ff); padding: 3px 9px; border-radius: 999px; }
+.pj-u6-two .pj-u6-svg { max-height: 220px; }
+
+/* ---- checkpoint 4: the drawing grid ---- */
+.pj-u6-origbox { max-width: 360px; }
+.pj-u6-origbox .pj-u6-svg { max-height: 260px; }
+.pj-u6-ks .pj-opt { display: inline-grid; justify-items: center; min-width: 96px; font-size: 16px; } .pj-u6-ks small { font-weight: 500; font-size: 12px; color: var(--muted, #6b7280); }
+.pj-u6-drawtool, .pj-u6-plantool { background: var(--card, #fff); border: 1px solid var(--line, #e6e1d6); border-radius: 16px; padding: 10px 12px 12px; display: grid; gap: 8px; }
+.pj-u6-drawtool.ok, .pj-u6-plantool.ok { border-color: #86c5a0; box-shadow: 0 0 0 3px rgba(22, 163, 74, .12); }
+.pj-u6-drawtool.bad, .pj-u6-plantool.bad { border-color: #e7a19c; box-shadow: 0 0 0 3px rgba(220, 38, 38, .1); }
+.pj-u6-drawtool.empty, .pj-u6-plantool.empty { animation: pjFlash .8s ease 3; }
+.pj-u6-board { -webkit-user-select: none; user-select: none; touch-action: manipulation; }
+.pj-u6-board .pj-u6-svg { max-height: 480px; }
+.pj-u6-plantool .pj-u6-board .pj-u6-svg { max-height: 700px; }
+.pj-u6-plan .pj-u6-small { font-size: 13px; font-style: normal; font-weight: 700; letter-spacing: .04em; }
+.pj-u6-plan .pj-u6-plab { font-size: 14px; }
+.pj-u6-dbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pj-u6-dtip { font-size: 13px; color: var(--muted, #6b7280); }
+.pj-u6-status { font-size: 14.5px; padding: 8px 12px; border-radius: 10px; background: #f8fafc; border: 1px solid #e2e8f0; }
+.pj-u6-status.good { background: #effaf3; border-color: #a7dcbc; color: #14532d; }
+.pj-u6-status.miss { background: #fff5f4; border-color: #f2c1bd; color: #8a2a24; }
+
+/* ---- checkpoint 5: the plan ---- */
+.pj-u6-scales { gap: 8px; } .pj-u6-scales .pj-opt { font-variant-numeric: tabular-nums; }
+.pj-u6-page { fill: #fff; stroke: #cbd5e1; stroke-width: 1.5; }
+.pj-u6-floor { fill: rgba(148, 163, 184, .08); stroke-width: 4; }
+.pj-u6-tray { fill: #f8f5ef; stroke: #e6dccb; stroke-width: 1.5; stroke-dasharray: 6 4; }
+.pj-u6-piece { cursor: grab; outline: none; touch-action: none; }
+.pj-u6-piece rect { stroke: rgba(15, 23, 42, .6); stroke-width: 1.5; }
+.pj-u6-piece.drag { cursor: grabbing; opacity: .85; }
+.pj-u6-piece:focus-visible rect { stroke: #f59e0b; stroke-width: 3; }
+.pj-u6-cline { stroke: #0f172a; stroke-width: 1.6; stroke-dasharray: 4 3; }
+.pj-u6-plan .pj-u6-pn { font-size: 11px; }
+
+/* ---- checkpoint 6 ---- */
+.pj-u6-why .pj-opt, .pj-u6-sets .pj-opt { text-align: left; font-weight: 500; }
+.pj-u6-why { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 860px; }
+.pj-u6-sets .pj-opt { padding: 6px 16px; font-size: 17px; }
+.pj-u6-frac { display: inline-grid; vertical-align: middle; text-align: center; font-size: .86em; line-height: 1.2; margin: 0 2px; }
+.pj-u6-frac i { font-style: normal; padding: 0 4px; } .pj-u6-frac i:first-child { border-bottom: 1.5px solid currentColor; }
+.pj-u6-scene { max-height: 300px; }
+
+/* ---- the plan sheet ---- */
+.pj-u6-cardwrap { display: flex; justify-content: center; }
+.pj-u6-card { --cc: #2563eb; width: 860px; max-width: 100%; background: #fff; border-radius: 14px; box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 10px 26px rgba(20, 30, 50, .14); overflow: hidden; border: 1px solid #e5e7eb; color: #1f2937; }
+.pj-u6-c-top { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--cc); color: #fff; }
+.pj-u6-c-logo { width: 48px; height: 48px; flex: 0 0 48px; color: #fff; } .pj-u6-c-logo svg { width: 100%; height: 100%; }
+.pj-u6-c-id { min-width: 0; } .pj-u6-c-id small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .85; }
+.pj-u6-c-id b { display: block; font-size: 24px; line-height: 1.15; } .pj-u6-c-id span { font-size: 13.5px; opacity: .92; }
+.pj-u6-c-no { margin-left: auto; display: grid; justify-items: end; font-size: 12px; } .pj-u6-c-no b { letter-spacing: .14em; font-size: 11px; opacity: .85; } .pj-u6-c-no .n { font-size: 24px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.pj-u6-c-body { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(230px, 1fr); gap: 6px 18px; padding: 14px 18px 6px; }
+.pj-u6-c-plan { align-self: start; }
+.pj-u6-c-plan .pj-u6-svg { max-height: 240px; }
+.pj-u6-c-cap { font-size: 12px; color: #64748b; font-weight: 700; margin-top: 2px; }
+.pj-u6-c-notes h5 { margin: 8px 0 2px; font-size: 13px; letter-spacing: .01em; color: var(--cc); }
+.pj-u6-c-notes h5:first-child { margin-top: 0; }
+.pj-u6-cr { display: flex; justify-content: space-between; gap: 10px; font-size: 13.5px; padding: 2px 0; border-bottom: 1px dotted #e5e7eb; } .pj-u6-cr span { color: #475569; } .pj-u6-cr b { font-variant-numeric: tabular-nums; }
+.pj-u6-c-foot { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(230px, 1fr); gap: 12px 18px; padding: 8px 18px 16px; align-items: end; }
+.pj-u6-c-logos { display: flex; gap: 22px; align-items: flex-end; margin-top: 14px; }
+.pj-u6-c-notes .pj-u6-c-note { margin-top: 12px; }
+.pj-u6-mini .pj-u6-dl { font-size: 11.5px; } .pj-u6-mini .pj-u6-pn.sm { font-size: 9.5px; }
+.pj-u6-c-logos > div { display: grid; justify-items: center; gap: 2px; } .pj-u6-c-logos .pj-u6-svg { width: auto; max-width: 130px; max-height: 90px; }
+.pj-u6-c-logos small { font-size: 11px; color: #64748b; font-weight: 700; text-align: center; }
+.pj-u6-c-note { font-size: 13.5px; font-style: italic; color: #334155; padding: 8px 12px; background: #f8fafc; border-left: 4px solid var(--cc); border-radius: 6px; }
+.pj-printsheet .pj-u6-card { box-shadow: none; margin: 0 auto; }
+.pj-print .pj-u6-c-top, .pj-print .pj-u6-floor, .pj-print .pj-u6-card rect { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+/* ---- narrower screens ---- */
+@media (max-width: 1060px) {
+  .pj-u6-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pj-u6-sheet-b { grid-template-columns: minmax(0, 1fr); }
+  .pj-u6-facts { grid-template-columns: repeat(3, auto); justify-content: start; column-gap: 26px; }
+  .pj-u6-facts dt { grid-row: 1; margin-top: 0; } .pj-u6-facts dd { grid-row: 2; }
+}
+@media (max-width: 760px) {
+  .pj-u6-two, .pj-u6-ex2, .pj-u6-why { grid-template-columns: minmax(0, 1fr); }
+  .pj-u6-c-body, .pj-u6-c-foot { grid-template-columns: 1fr; }
+  .pj-u6-rt .pj-u6-th, .pj-u6-rt .pj-u6-tr { grid-template-columns: 90px 60px repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .pj-u6-pt .pj-u6-th, .pj-u6-pt .pj-u6-tr { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .pj-u6-name input { min-width: 0; width: 100%; }
+}
+@media print { .pj-u6-card { box-shadow: none; } }
+/* two drawings side by side are drawn smaller: bigger labels in the drawing's own units */
+.pj-u6-two .pj-u6-dl { font-size: 21px; stroke-width: 5px; } .pj-u6-two .pj-u6-view { font-size: 16px; }
+.pj-u6-draw > .pj-u6-scene { max-height: 330px; }

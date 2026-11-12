@@ -192,7 +192,7 @@ export class Explainer {
   async runStep(i, c) { const s = this.steps[i]; if (typeof s.cap === 'function') s.capText = s.cap(); if (s.run) await s.run(c); }
   showCap(html) { this.cap.innerHTML = html; }
   async next() {
-    if (this.k >= this.steps.length) return false;
+    if (!this.steps || this.k >= this.steps.length) return false; // e.g. an `ask` explainer before a choice is made
     if (this.running) { await this.build(this.k + 1); return true; }
     const g = this.gen, i = this.k; this.running = true; this.sync();
     if (typeof this.steps[i].cap === 'function') this.steps[i].capText = this.steps[i].cap();
@@ -205,6 +205,7 @@ export class Explainer {
   stop() { if (this.auto) { this.auto = false; this.sync(); } }
   async togglePlay() {
     if (this.auto) { this.stop(); return; }
+    if (!this.steps) return;
     if (this.k >= this.steps.length) await this.build(0);
     this.auto = true; this.sync();
     while (this.auto && this.k < this.steps.length) {

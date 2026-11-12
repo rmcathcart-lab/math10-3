@@ -1,4 +1,5 @@
-/* Unit 5 geometry kit for the practice site (angles, protractors, parallel lines and transversals, bearings, polygons).
+/* Geometry kit for the practice site: Unit 5 (angles, protractors, parallel lines and transversals, bearings, polygons) and
+ * Units 6–7 (similar figures, scale diagrams, right triangles, Pythagoras, trig ratios, elevation, shadows, mirrors).
  * Needs js/kit.js and js/kitx.js. Load after js/geom.js, before the lesson files. Everything is on HW.geo.
  *
  * FIGURES — static SVG strings in the booklet's look (class "fig-svg", like HW.fig). Positions are worked out for you;
@@ -35,6 +36,21 @@
  *     'int-same' | 'ext-same' | 'vert-opp' (| 'linear'). Accepts reasonable spellings and synonyms ("alt int",
  *     "co-interior", "same-side interior", "consecutive interior", "vertical angles", small typos).
  *   HW.geo.pairOf(text) → { id } | { ambiguous: 'alt'|'int'|'ext'|'letter' } | { unknown: true } | { empty: true }
+ *
+ * UNITS 6–7 (similarity, scale, right triangles; lengths are numbers, labels plain text):
+ *   HW.geo.similarSVG({ shape | pts, k, drawK, names: ['ABCD', 'PQRS'], labels true | [[…], […]], units, angles, matchColors, rot, flip })
+ *   HW.geo.rightTriSVG({ a, b, c (any two), right 'br', rot (any degrees), flip, names, sides: { a: '12 cm', c: '?' } | true, angles: { A: '35°' },
+ *       theta 'A'|'B', thetaLabel, roles true | ['opp','hyp'], long, highlight, unknown 'a'|'b'|'c'|'A'|'B', squares })   right angle at C
+ *   HW.geo.elevationSVG({ kind 'elevation'|'depression', angle, dist, height, eye, labels: { angle, dist, height, eye }, observer, target, alt })
+ *   HW.geo.shadowSVG({ small: { h, shadow, kind, label }, big: { h, shadow, kind, label: { h: '?' } }, sunLabel })
+ *   HW.geo.mirrorSVG({ eye, d1, d2, h, kind, labels: { eye, d1, d2, h }, angleLabel })
+ *   HW.geo.gridSVG({ cols, rows, cell, shape | pts, at, k, imageAt, image true, names })   ·   HW.geo.scaleMapSVG({ scale, w, h, places, routes, bar })
+ *   HW.geo.parseScale('1 cm : 2 m' | '1:200' | {…}) → { draw, drawUnit, real, realUnit, ratio, perCm, text }; rightSides({a, b, c}); rolesFor('A')
+ *   HW.geo.lenChk(v, { dp 1, unit, trig: { fn, deg, side, op 'mul'|'div' }, pyth: { legs: [a, b] } | { hyp, leg }, scale: { len, k, op },
+ *       prop: { given, num, den }, alts, radTrap true }) — nearest tenth; RAD mode, × vs ÷, wrong ratio, no √, a² − b², hyp as a leg, …
+ *   HW.geo.angleRatioChk(deg, { dp 0, ratio: { fn, num, den }, alts, radTrap, complementTrap }) — RAD mode, no inverse, wrong ratio, 90° − θ
+ *   HW.geo.kChk(k, { flipTrap true, from: { new, orig }, dp 2 }) — fraction or decimal; 1/k, new − orig, 3 : 2, 150% traps
+ *   Parts: P.len(prompt, v, o), P.trigAngle(prompt, deg, o), P.k(prompt, k | [p, q], o), P.ratioMC(r, prompt, 'sin'|'cos'|'tan'|'pyth', o)
  *
  * PART BUILDERS (same part objects as K.P): HW.geo.P.angle(prompt, deg, o), .bearing(prompt, deg, o),
  *   .pair(prompt, target, o) (a text box), .pairMC(r, prompt, target, o) (the six names), .classify(r, prompt, deg, o)
@@ -471,6 +487,423 @@
     return part;
   };
 
+  /* ======================================== Units 6–7: similarity, scale, right triangles ======================================== */
+  var OPP = RED, ADJ = BLUE, HYP = '#9a6a24', ROLE_COL = { opp: OPP, adj: ADJ, hyp: HYP }, MATCH = [BLUE, RED, GREEN, AMBER, PURPLE, '#0f8ea8', '#b8457a', '#5b6b2e'];
+  G.ROLE_COLORS = ROLE_COL;
+  function fmtN(v, dp) { dp = dp == null ? 1 : dp; var p = Math.pow(10, dp), r = Math.round(v * p + (v >= 0 ? 1e-9 : -1e-9)) / p; return String(r === 0 ? 0 : r); }
+  G.fmtLen = fmtN;
+  function bbox(P) { var b = [Infinity, Infinity, -Infinity, -Infinity]; P.forEach(function (p) { b[0] = Math.min(b[0], p[0]); b[1] = Math.min(b[1], p[1]); b[2] = Math.max(b[2], p[0]); b[3] = Math.max(b[3], p[1]); }); return b; }
+  function dirTo(V, Q) { return n360(Math.atan2(-(Q[1] - V[1]), Q[0] - V[0]) / RAD); }
+  function mid(a, b) { return [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2]; }
+  function cen(P) { var x = 0, y = 0; P.forEach(function (p) { x += p[0] / P.length; y += p[1] / P.length; }); return [x, y]; }
+  function polyD(P) { return 'M' + P.map(function (p) { return f(p[0]) + ' ' + f(p[1]); }).join('L') + 'Z'; }
+  function isRed(s) { return s === '?' || /^[a-zA-Zθ]$/.test(String(s)); }
+  /* a label beside segment PQ away from C; size, color, stack (extra px further out). Returns the distance used (for stacking) */
+  function sideLab(cv, P, Q, C, s, o) {
+    o = o || {}; var M = mid(P, Q), n = at([0, 0], dirTo(P, Q) + 90, 1);
+    if ((C[0] - M[0]) * n[0] + (C[1] - M[1]) * n[1] > 0) n = [-n[0], -n[1]];
+    if (o.inside) n = [-n[0], -n[1]];
+    var size = o.size || 15, ext = Math.abs(n[0]) * (String(s).length * size * 0.3 + 3) + Math.abs(n[1]) * size * 0.58, d = (o.gap == null ? 7 : o.gap) + (o.stack || 0) + ext;
+    cv.text(M[0] + n[0] * d, M[1] + n[1] * d, s, { size: size, color: o.color || (isRed(s) && o.redUnknown !== false && s === '?' ? RED : INK), weight: o.weight || 700 });
+    return d + ext;
+  }
+  /* interior wedge of polygon P (screen) at vertex i */
+  function ccwScr(P) { var s = 0; for (var i = 0; i < P.length; i++) { var p = P[i], q = P[(i + 1) % P.length]; s += p[0] * -q[1] - q[0] * -p[1]; } return s > 0; }
+  function cornerAt(P, i) { var n = P.length, V = P[i], dn = dirTo(V, P[(i + 1) % n]), dp = dirTo(V, P[(i + n - 1) % n]); return ccwScr(P) ? { start: dn, span: n360(dp - dn) } : { start: dp, span: n360(dn - dp) }; }
+  function rightSq(cv, V, start, s, colr) { var u = at([0, 0], start, 1), v = at([0, 0], start + 90, 1); cv.path('M' + f(V[0] + u[0] * s) + ' ' + f(V[1] + u[1] * s) + 'L' + f(V[0] + (u[0] + v[0]) * s) + ' ' + f(V[1] + (u[1] + v[1]) * s) + 'L' + f(V[0] + v[0] * s) + ' ' + f(V[1] + v[1] * s), { stroke: colr || INK, width: 1.5, cap: 'butt' }); }
+  /* world (metres, y up) → px, fitted to w × h px */
+  function world(P, w, h) { var b = bbox(P), s = Math.min(w / Math.max(b[2] - b[0], 1e-6), h / Math.max(b[3] - b[1], 1e-6)); var W = { s: s, X: function (x) { return (x - b[0]) * s; }, Y: function (y) { return (b[3] - y) * s; } }; W.P = function (p) { return [W.X(p[0]), W.Y(p[1])]; }; return W; }
+  function ground(cv, W, x0, x1) { var y = W.Y(0); cv.line([W.X(x0), y], [W.X(x1), y], { color: '#8a6f4d', width: 2.4 }); var d = ''; for (var x = W.X(x0) + 4; x < W.X(x1); x += 11) d += 'M' + f(x) + ' ' + f(y + 1) + 'l-6 7'; cv.path(d, { stroke: '#8a6f4d', width: 1, opacity: 0.6 }, [[W.X(x0), y + 8]]); }
+  /* a dimension line (arrows both ends) off world segment PQ by off px (+ = left of P→Q) with a label */
+  function dim(cv, W, P, Q, s, off, colr) {
+    var p = W.P(P), q = W.P(Q), th = dirTo(p, q), n = at([0, 0], th + 90, 1), A = [p[0] + n[0] * off, p[1] + n[1] * off], B = [q[0] + n[0] * off, q[1] + n[1] * off];
+    colr = colr || '#3a4254'; cv.line(A, B, { color: colr, width: 1.2 }); arrow(cv, A, th + 180, { color: colr, L: 7, w: 3.2 }); arrow(cv, B, th, { color: colr, L: 7, w: 3.2 });
+    if (s == null || s === '' || s === false) return;
+    var sg = off < 0 ? -1 : 1, M = mid(A, B), ext = Math.abs(n[0]) * (String(s).length * 15 * 0.3 + 3) + Math.abs(n[1]) * 15 * 0.6 + 2;
+    cv.text(M[0] + n[0] * ext * sg, M[1] + n[1] * ext * sg, s, { size: 15, weight: 700, color: isRed(s) ? RED : colr });
+  }
+  /* small pictures (world coords): person (eye height h), tree, building, tower, pole, flag, stick, lighthouse, cliff, boat */
+  function thing(cv, W, kind, x, h, o) {
+    o = o || {}; var s = W.s, P = W.P;
+    if (kind === 'person') {
+      var tot = h / 0.93, hr = tot * 0.075, lw = Math.max(1.6, tot * 0.03 * s);
+      cv.path('M' + f(W.X(x)) + ' ' + f(W.Y(tot - 2 * hr)) + 'L' + f(W.X(x)) + ' ' + f(W.Y(tot * 0.47)) + 'M' + f(W.X(x - tot * 0.12)) + ' ' + f(W.Y(0)) + 'L' + f(W.X(x)) + ' ' + f(W.Y(tot * 0.47)) + 'L' + f(W.X(x + tot * 0.12)) + ' ' + f(W.Y(0)) + 'M' + f(W.X(x - tot * 0.16)) + ' ' + f(W.Y(tot * 0.58)) + 'L' + f(W.X(x)) + ' ' + f(W.Y(tot * 0.76)) + 'L' + f(W.X(x + tot * 0.16)) + ' ' + f(W.Y(tot * 0.58)), { stroke: '#3a4254', width: lw }, [P([x - tot * 0.16, 0]), P([x + tot * 0.16, tot])]);
+      cv.raw('<circle cx="' + f(W.X(x)) + '" cy="' + f(W.Y(tot - hr)) + '" r="' + f(Math.max(2.5, hr * s)) + '" fill="#fff" stroke="#3a4254" stroke-width="' + f(Math.max(1.2, lw * 0.8)) + '"/>', [P([x, tot])]);
+      return { xr: tot * 0.16 };
+    }
+    if (kind === 'tree') { var tw = Math.max(h * 0.07, 0.15); cv.raw('<rect x="' + f(W.X(x - tw / 2)) + '" y="' + f(W.Y(h * 0.45)) + '" width="' + f(tw * s) + '" height="' + f(h * 0.45 * s) + '" fill="#8a5a2b"/><ellipse cx="' + f(W.X(x)) + '" cy="' + f(W.Y(h * 0.67)) + '" rx="' + f(h * 0.24 * s) + '" ry="' + f(h * 0.33 * s) + '" fill="#7fb36f" stroke="#3f7535" stroke-width="1.2"/>', [P([x - h * 0.24, 0]), P([x + h * 0.24, h])]); return { xr: h * 0.24 }; }
+    if (kind === 'building' || kind === 'elevator') { var bw = o.w || h * 0.4, x0 = (o.side || 1) > 0 ? x : x - bw; cv.raw('<rect x="' + f(W.X(x0)) + '" y="' + f(W.Y(h)) + '" width="' + f(bw * s) + '" height="' + f(h * s) + '" fill="#dde1e8" stroke="#6a7182" stroke-width="1.2"/>', [P([x0, 0]), P([x0 + bw, h])]); return { xr: (o.side || 1) > 0 ? bw : 0 }; }
+    if (kind === 'tower') { var b2 = h * 0.1, d = 'M' + f(W.X(x - b2 / 2)) + ' ' + f(W.Y(0)) + 'L' + f(W.X(x)) + ' ' + f(W.Y(h)) + 'L' + f(W.X(x + b2 / 2)) + ' ' + f(W.Y(0)); for (var i = 1; i < 5; i++) { var y1 = h * i / 5, w1 = b2 / 2 * (1 - i / 5), y0 = h * (i - 1) / 5, w0 = b2 / 2 * (1 - (i - 1) / 5); d += 'M' + f(W.X(x - w0)) + ' ' + f(W.Y(y0)) + 'L' + f(W.X(x + w1)) + ' ' + f(W.Y(y1)) + 'M' + f(W.X(x + w0)) + ' ' + f(W.Y(y0)) + 'L' + f(W.X(x - w1)) + ' ' + f(W.Y(y1)); } cv.path(d, { stroke: PURPLE, width: 1.5 }, [P([x - b2 / 2, 0]), P([x + b2 / 2, h])]); return { xr: b2 / 2 }; }
+    if (kind === 'lighthouse') { var lw2 = h * 0.16; cv.path(polyD([P([x - lw2 / 2, 0]), P([x - lw2 * 0.3, h]), P([x + lw2 * 0.3, h]), P([x + lw2 / 2, 0])]), { stroke: '#6a7182', width: 1.2, fill: '#fff' }, [P([x - lw2 / 2, 0]), P([x + lw2 / 2, h])]); cv.path(polyD([P([x - lw2 * 0.4, h * 0.4]), P([x - lw2 * 0.36, h * 0.6]), P([x + lw2 * 0.36, h * 0.6]), P([x + lw2 * 0.4, h * 0.4])]), { fill: RED }); return { xr: lw2 / 2 }; }
+    if (kind === 'cliff') { var cw = o.w || h * 0.6; cv.path(polyD([P([x - cw, 0]), P([x - cw, h]), P([x, h]), P([x + h * 0.05, h * 0.5]), P([x, 0])]), { stroke: '#7a6248', width: 1.2, fill: '#d7c29e' }, [P([x - cw, 0]), P([x, h])]); return { xr: 0 }; }
+    if (kind === 'boat') { var L = o.size || 4; cv.path(polyD([P([x - L / 2, L * 0.22]), P([x + L / 2, L * 0.22]), P([x + L * 0.35, 0]), P([x - L * 0.35, 0])]), { stroke: '#6a4a2a', width: 1.2, fill: '#b98552' }, [P([x - L / 2, 0]), P([x + L / 2, L * 0.8])]); cv.line(P([x, L * 0.22]), P([x, L * 0.8]), { color: '#3a4254', width: 1.4 }); return { xr: L / 2 }; }
+    if (kind === 'plane') { var L2 = o.size || 6; cv.path(polyD([P([x - L2 / 2, h]), P([x + L2 / 2, h + L2 * 0.06]), P([x + L2 / 2, h - L2 * 0.06])]), { stroke: '#3a4254', width: 1.2, fill: '#dfe3ea' }, [P([x - L2 / 2, h - L2 * 0.3]), P([x + L2 / 2, h + L2 * 0.3])]); cv.path('M' + f(W.X(x)) + ' ' + f(W.Y(h)) + 'L' + f(W.X(x - L2 * 0.18)) + ' ' + f(W.Y(h + L2 * 0.3)) + 'M' + f(W.X(x)) + ' ' + f(W.Y(h)) + 'L' + f(W.X(x - L2 * 0.18)) + ' ' + f(W.Y(h - L2 * 0.3)), { stroke: '#3a4254', width: 1.6 }); return { xr: 0 }; }
+    // pole, flag, stick, post, ladder top…
+    cv.line(P([x, 0]), P([x, h]), { color: kind === 'stick' ? '#8a5a2b' : '#3a4254', width: kind === 'stick' ? 3 : 2.4 });
+    if (kind === 'flag') { var fl = (o.side || 1) * Math.min(h * 0.22, 2.2); cv.path(polyD([P([x, h]), P([x + fl, h * 0.95]), P([x, h * 0.9])]), { fill: RED }, [P([x + fl, h])]); return { xr: Math.max(0, fl) }; }
+    return { xr: 0 };
+  }
+
+  /* ---------------- similar figures ---------------- */
+  var SHAPES = G.SHAPES = {
+    tri: [[0, 0], [4, 0], [1, 3]], right: [[0, 0], [4, 0], [0, 3]], iso: [[0, 0], [4, 0], [2, 3]], rect: [[0, 0], [4, 0], [4, 2], [0, 2]], square: [[0, 0], [3, 0], [3, 3], [0, 3]],
+    L: [[0, 0], [3, 0], [3, 1], [1, 1], [1, 3], [0, 3]], trap: [[0, 0], [5, 0], [4, 2], [1, 2]], para: [[0, 0], [4, 0], [5, 2], [1, 2]], kite: [[2, 0], [3.5, 2.5], [2, 4], [0.5, 2.5]],
+    house: [[0, 0], [4, 0], [4, 2], [2, 4], [0, 2]], pent: [[0, 0], [3, 0], [4, 2], [1.5, 3.5], [-1, 2]], arrow: [[0, 1], [3, 1], [3, 0], [5, 2], [3, 4], [3, 3], [0, 3]]
+  };
+  function shapeOf(o) { return (o.pts || SHAPES[o.shape] || SHAPES.tri).map(function (p) { return [p[0], p[1]]; }); }
+  function names(x, n) { if (!x) return null; var a = Array.isArray(x) ? x.slice() : (String(x).match(/[A-Za-z][′'’″]*/g) || []); return a.slice(0, n); }
+  function sideLens(P) { return P.map(function (p, i) { return dist(p, P[(i + 1) % P.length]); }); }
+  /* one polygon (math coords) drawn at scale u with its top-left at (x0, y0) after rotation / flip; returns screen points */
+  function placePoly(P, u, x0, yBase, rot, flip) {
+    var c = Math.cos((rot || 0) * RAD), s = Math.sin((rot || 0) * RAD);
+    var Q = P.map(function (p) { var x = flip ? -p[0] : p[0], y = p[1]; return [x * c - y * s, x * s + y * c]; }), b = bbox(Q);
+    return Q.map(function (p) { return [x0 + (p[0] - b[0]) * u, yBase - (p[1] - b[1]) * u]; });
+  }
+  function drawPolyFig(cv, Sp, o, which, lens) {
+    var n = Sp.length, ccw = ccwScr(Sp), nm = o.nm, size = o.size || 15;
+    cv.path(polyD(Sp), { fill: which ? '#fbf1de' : '#e9edf4' }, Sp);
+    Sp.forEach(function (p, i) { cv.line(p, Sp[(i + 1) % n], { color: o.match ? MATCH[i % MATCH.length] : INK, width: 2.4 }); });
+    Sp.forEach(function (p, i) {
+      var lab = o.labels === false || o.labels == null ? null : Array.isArray(o.labels) ? (o.labels[which] || [])[i] : fmtN(lens[i], o.dp) + (o.units ? ' ' + o.units : '');
+      var inPt = at(mid(p, Sp[(i + 1) % n]), dirTo(p, Sp[(i + 1) % n]) + (ccw ? 90 : -90), 10);   // a point just inside this side (works for concave shapes too)
+      if (lab != null && lab !== '') sideLab(cv, p, Sp[(i + 1) % n], inPt, String(lab), { size: size, color: lab === '?' ? RED : o.match ? MATCH[i % MATCH.length] : INK });
+    });
+    var angs = o.angles === true ? null : Array.isArray(o.angles) ? o.angles[which] : null;
+    var shortest = Math.min.apply(null, Sp.map(function (p, i) { return dist(p, Sp[(i + 1) % n]); }));
+    if (o.angles) Sp.forEach(function (p, i) { var cn = cornerAt(Sp, i), lab = angs ? angs[i] : (shortest >= 44 ? fmtDeg(cn.span) + '°' : null); if (o.angles === true || (lab != null && lab !== '')) mark(cv, p, cn.start, cn.start + cn.span, { label: lab, size: 13, color: o.match ? MATCH[(i + 3) % MATCH.length] : INK, r: Math.max(8, Math.min(16, shortest * 0.3)), rs: Math.max(6, Math.min(11, shortest * 0.2)) }); });
+    if (nm) Sp.forEach(function (p, i) { if (!nm[i]) return; var cn = cornerAt(Sp, i), q = at(p, cn.start + cn.span / 2 + 180, 13); cv.text(q[0], q[1], nm[i], { size: size + 1, weight: 700, italic: false }); });
+  }
+  /* HW.geo.similarSVG({ shape | pts, k 2, drawK (drawn size; default k), names: ['ABCD', 'PQRS'], labels true | [[orig…], [image…]],
+   *   units, dp 1, angles false | true | [[…], […]], matchColors false, rot 0 / flip false (the image turned or mirrored, to practise
+   *   naming in matching order), unit (px per unit), gap, width 420 }) */
+  G.similarSVG = function (o) {
+    o = o || {}; var P = shapeOf(o), n = P.length, k = o.k == null ? 2 : o.k, dk = o.drawK || k, cv = new Canvas();
+    var b = bbox(P), w0 = b[2] - b[0], h0 = b[3] - b[1], u = o.unit || Math.min(34, 150 / Math.max(w0, h0), 300 / (w0 * (1 + dk)));
+    var lmax = 0; if (o.labels === true) L0max(); else if (Array.isArray(o.labels)) o.labels.forEach(function (arr) { (arr || []).forEach(function (x) { lmax = Math.max(lmax, String(x == null ? '' : x).length); }); });
+    function L0max() { sideLens(P).forEach(function (l) { lmax = Math.max(lmax, (fmtN(l * Math.max(1, k), o.dp) + (o.units ? ' ' + o.units : '')).length); }); }
+    var lw = lmax * (o.size || 15) * 0.62, gap = o.gap == null ? 28 + 2 * lw : o.gap, base = Math.max(h0, h0 * dk) * u;
+    var A = placePoly(P, u, 0, base, 0, false), B = placePoly(P, u * dk, w0 * u + gap, base, o.rot, o.flip);
+    var opt = { match: !!o.matchColors, labels: o.labels, units: o.units, dp: o.dp, angles: o.angles, size: o.size };
+    var L0 = sideLens(P);
+    drawPolyFig(cv, A, Object.assign({}, opt, { nm: names(o.names && o.names[0], n) }), 0, L0);
+    drawPolyFig(cv, B, Object.assign({}, opt, { nm: names(o.names && o.names[1], n) }), 1, L0.map(function (l) { return l * k; }));
+    return cv.svg({ width: o.width || 420, aria: o.aria || 'two similar figures' });
+  };
+
+  /* ---------------- right triangles ---------------- */
+  G.rightSides = function (o) {
+    var a = o.a, b = o.b, c = o.c;
+    if (a != null && b != null) c = Math.sqrt(a * a + b * b); else if (a != null && c != null) b = Math.sqrt(Math.max(0, c * c - a * a)); else if (b != null && c != null) a = Math.sqrt(Math.max(0, c * c - b * b));
+    else if (o.A != null && (a != null || b != null || c != null)) { var tt = o.A * RAD; if (a != null) { b = a / Math.tan(tt); c = a / Math.sin(tt); } else if (b != null) { a = b * Math.tan(tt); c = b / Math.cos(tt); } else { a = c * Math.sin(tt); b = c * Math.cos(tt); } }
+    else { a = a == null ? 3 : a; b = b == null ? 4 : b; c = Math.sqrt(a * a + b * b); }
+    return { a: a, b: b, c: c, A: Math.atan2(a, b) / RAD, B: Math.atan2(b, a) / RAD };
+  };
+  G.rolesFor = function (theta) { return theta === 'B' ? { opp: 'b', adj: 'a', hyp: 'c' } : { opp: 'a', adj: 'b', hyp: 'c' }; };
+  /* HW.geo.rightTriSVG({ a, b, c (any two, or one side and A), right 'br'|'bl'|'tr'|'tl', rot 0 (any degrees), flip, names ['A','B','C'] |
+   *   false, sides: { a: '12 cm', b: 'x', c: '?' } | true (lengths), units, dp 1, angles: { A: '35°', B: '?' }, theta 'A'|'B',
+   *   thetaLabel 'θ', roles false | true | ['opp','hyp'] (opp/adj/hyp tags beyond the length labels), long false (words),
+   *   highlight (colour the sides by role; default on with roles), unknown 'a'|'b'|'c'|'A'|'B' ('?' in red), squares false,
+   *   size 15, px 200 (longest extent), width 300 }) — any orientation, the right-angle square at C. */
+  G.rightTriSVG = function (o) {
+    o = o || {}; var sd = G.rightSides(o), cv = new Canvas(), R = o.right || 'br', sx = R[1] === 'l' ? 1 : -1, sy = R[0] === 'b' ? 1 : -1;
+    var V = { C: [0, 0], A: [sx * sd.b, 0], B: [0, sy * sd.a] }, rot = (o.rot || 0) * RAD, cr = Math.cos(rot), sr = Math.sin(rot);
+    Object.keys(V).forEach(function (key) { var x = V[key][0], y = V[key][1]; if (o.flip) x = -x; V[key] = [x * cr - y * sr, x * sr + y * cr]; });
+    var b0 = bbox([V.A, V.B, V.C]), u = (o.px || (o.squares ? 110 : 200)) / Math.max(b0[2] - b0[0], b0[3] - b0[1]);
+    Object.keys(V).forEach(function (key) { V[key] = [V[key][0] * u, -V[key][1] * u]; });
+    var C0 = cen([V.A, V.B, V.C]), ends = { a: ['B', 'C'], b: ['A', 'C'], c: ['A', 'B'] }, size = o.size || 15, theta = o.theta || null;
+    var roles = o.roles === true ? ['opp', 'adj', 'hyp'] : Array.isArray(o.roles) ? o.roles : [], RL = theta ? G.rolesFor(theta) : null, hl = o.highlight == null ? roles.length > 0 : o.highlight;
+    var roleOf = {}; if (RL) Object.keys(RL).forEach(function (r) { roleOf[RL[r]] = r; });
+    if (o.squares) [['a', 'B', 'C', 'A'], ['b', 'A', 'C', 'B'], ['c', 'A', 'B', 'C']].forEach(function (z, i) {
+      var P = V[z[1]], Q = V[z[2]], Rr = V[z[3]], d = [Q[0] - P[0], Q[1] - P[1]], nn = [-d[1], d[0]], M = mid(P, Q); if ((Rr[0] - M[0]) * nn[0] + (Rr[1] - M[1]) * nn[1] > 0) nn = [d[1], -d[0]];
+      var Sq = [P, Q, [Q[0] + nn[0], Q[1] + nn[1]], [P[0] + nn[0], P[1] + nn[1]]], colr = [OPP, ADJ, HYP][i]; cv.path(polyD(Sq), { stroke: colr, width: 1.6, fill: colr, fillOpacity: 0.1 }, Sq);
+      var cc = cen(Sq); cv.text(cc[0], cc[1], z[0] + '²', { size: size, color: colr, italic: false });
+    });
+    cv.path(polyD([V.A, V.B, V.C]), { fill: '#f6f2ea' }, [V.A, V.B, V.C]);
+    ['a', 'b', 'c'].forEach(function (s) { cv.line(V[ends[s][0]], V[ends[s][1]], { color: hl && RL && roleOf[s] && (roles.indexOf(roleOf[s]) >= 0 || o.highlight === true) ? ROLE_COL[roleOf[s]] : INK, width: 2.6 }); });
+    var dA = dirTo(V.C, V.A), dB = dirTo(V.C, V.B); rightSq(cv, V.C, n360(dB - dA) < 180 ? dA : dB, 12);
+    var nm = o.names === false ? null : (o.names || ['A', 'B', 'C']);
+    if (nm) ['A', 'B', 'C'].forEach(function (v, i) { if (!nm[i]) return; var P = V[v], q = at(P, dirTo(C0, P), 15); cv.text(q[0], q[1], nm[i], { size: size + 1, weight: 700, italic: false }); });
+    var angLab = Object.assign({}, o.angles || {}); if (o.unknown === 'A' || o.unknown === 'B') angLab[o.unknown] = angLab[o.unknown] || '?';
+    if (theta) angLab[theta] = angLab[theta] || o.thetaLabel || 'θ';
+    Object.keys(angLab).forEach(function (v) { if (v === 'C') return; var others = ['A', 'B', 'C'].filter(function (x) { return x !== v; }); mark(cv, V[v], dirTo(V[v], V[others[0]]), dirTo(V[v], V[others[1]]), { label: angLab[v], size: size, color: angLab[v] === '?' ? RED : (v === theta ? AMBER : INK), r: 24 }); });
+    var sideTxt = {};
+    ['a', 'b', 'c'].forEach(function (s) { var want = o.sides === true ? true : (o.sides || {})[s]; if (o.unknown === s && want == null) want = '?'; if (want == null || want === false) return; sideTxt[s] = want === true ? fmtN(sd[s], o.dp) + (o.units ? ' ' + o.units : '') : String(want); });
+    var tagTxt = o.long ? { opp: 'opposite', adj: 'adjacent', hyp: 'hypotenuse' } : { opp: 'opp', adj: 'adj', hyp: 'hyp' };
+    ['a', 'b', 'c'].forEach(function (s) {
+      var P = V[ends[s][0]], Q = V[ends[s][1]], used = 0;
+      if (sideTxt[s]) used = sideLab(cv, P, Q, C0, sideTxt[s], { size: size + 1, color: sideTxt[s] === '?' || (o.unknown === s) ? RED : INK, gap: o.squares ? 4 : 7 }) - 7;
+      var r = RL && roleOf[s]; if (r && roles.indexOf(r) >= 0) sideLab(cv, P, Q, C0, tagTxt[r], { size: 13, color: ROLE_COL[r], weight: 800, stack: o.squares ? 0 : used + 4, inside: !!o.squares });
+    });
+    return cv.svg({ width: o.width || 300, aria: o.aria || 'right triangle' });
+  };
+
+  /* ---------------- angles of elevation / depression ---------------- */
+  /* HW.geo.elevationSVG({ kind 'elevation'|'depression', angle, dist, height, eye 1.6 (0 = from the ground), labels: { angle, dist,
+   *   height, eye }, observer 'person'|'none'|'cliff'|'lighthouse'|'building', target 'tree'|'building'|'tower'|'flag'|'pole'|'plane'|'boat',
+   *   units 'm', alt false, horizontal true, width 360 }) */
+  G.elevationSVG = function (o) {
+    o = o || {}; var dep = o.kind === 'depression', D = o.dist == null ? 20 : o.dist, eye = o.eye == null ? (dep ? 0 : 1.6) : o.eye, lb = o.labels || {}, units = o.units == null ? 'm' : o.units;
+    var ang = o.angle != null ? o.angle : Math.atan2(dep ? (o.height == null ? 30 : o.height) : (o.height == null ? 15 : o.height) - eye, D) / RAD;
+    var rise = D * Math.tan(ang * RAD), eyeY = dep ? rise : eye, topY = dep ? 0 : eye + rise, obs = o.observer || (dep ? 'cliff' : 'person'), tgt = o.target || (dep ? 'boat' : 'tree');
+    var W = world([[-D * 0.1, 0], [D * 1.1, 0], [0, Math.max(eyeY, topY) * 1.06]], 300, 190), cv = new Canvas(), us = function (v) { return fmtN(v) + (units ? ' ' + units : ''); };
+    if (dep && obs === 'cliff') thing(cv, W, 'cliff', 0, eyeY - eye, { w: D * 0.1 });
+    if (dep && obs === 'lighthouse') thing(cv, W, 'lighthouse', 0, eyeY - eye);
+    if (dep && obs === 'building') thing(cv, W, 'building', 0, eyeY - eye, { side: -1, w: D * 0.1 });
+    ground(cv, W, -D * 0.1, D * 1.1);
+    if (!dep && obs === 'person') thing(cv, W, 'person', 0, eye);
+    var xr = 0; if (!dep) xr = thing(cv, W, tgt, D, topY, { side: 1, size: D * 0.1 }).xr; else thing(cv, W, tgt === 'boat' ? 'boat' : tgt, D, tgt === 'boat' ? 0 : 1.6, { size: Math.max(1.5, D * 0.05) });
+    var E = W.P([0, eyeY]), T = W.P([D, topY]), Hz = W.P([D, eyeY]);
+    if (o.horizontal !== false) { cv.line(E, Hz, { color: '#3a4254', width: 1.6, dash: '6 4' }); }
+    cv.line(E, T, { color: AMBER, width: 2.4 }); arrow(cv, T, dirTo(E, T), { color: AMBER, L: 9, w: 4 });
+    cv.dot(E, { r: 2.6 });
+    if (!dep) { cv.line(T, W.P([D, 0]), { color: INK, width: 1.4, dash: '3 3', opacity: 0.6 }); rightSq(cv, Hz, 90, 9); } else { cv.line(W.P([0, 0]), E, { color: INK, width: 1.4, dash: '3 3', opacity: 0.6 }); rightSq(cv, W.P([0, 0]), 0, 9); }
+    var dd = dirTo(E, T), aL = lb.angle == null ? fmtDeg(ang) + '°' : lb.angle;
+    mark(cv, E, dep ? dd : 0, dep ? 0 : dd, { label: aL, size: 15, color: AMBER, r: 30 });
+    if (dep && o.alt) { var tv = W.P([D, 0]); mark(cv, tv, dirTo(tv, E), 180, { label: lb.alt == null ? aL : lb.alt, size: 15, color: GREEN, r: 30 }); }
+    if (lb.dist !== false) dim(cv, W, [0, 0], [D, 0], lb.dist == null ? us(D) : lb.dist, -18);
+    if (!dep) { if (lb.height !== false) dim(cv, W, [D, eyeY], [D, topY], lb.height == null ? us(rise) : lb.height, -(10 + xr * W.s), RED); if (eye > 0 && lb.eye !== false) dim(cv, W, [0, 0], [0, eyeY], lb.eye == null ? us(eye) : lb.eye, 16); }
+    else if (lb.height !== false) dim(cv, W, [0, 0], [0, eyeY], lb.height == null ? us(eyeY) : lb.height, 18, RED);
+    return cv.svg({ width: o.width || 360, aria: o.aria || ('angle of ' + (dep ? 'depression' : 'elevation')) });
+  };
+  /* HW.geo.shadowSVG({ small: { h, shadow, kind 'person'|'stick'|'pole', label: { h, s } }, big: { h, shadow, kind 'tree'|'pole'|'flag'|'tower'|
+   *   'building', label: { h: '?', s } }, units 'm', sunLabel, width 420 }) — two panels, parallel sun rays, the similar triangles shaded */
+  G.shadowSVG = function (o) {
+    o = o || {}; var sm = Object.assign({ h: 1.8, shadow: 2.4, kind: 'person' }, o.small || {}), bg = Object.assign({ shadow: 15, kind: 'tree' }, o.big || {});
+    if (bg.h == null) bg.h = bg.shadow * sm.h / sm.shadow; var units = o.units == null ? 'm' : o.units, cv = new Canvas(), sun = Math.atan2(sm.h, sm.shadow) / RAD;
+    var x = 0;
+    [[sm, 120], [bg, 220]].forEach(function (pr, i) {
+      var ob = pr[0], W0 = world([[0, 0], [ob.shadow, 0], [0, ob.h]], pr[1], 150), W = { s: W0.s, X: function (v) { return W0.X(v) + x; }, Y: function (v) { return W0.Y(v) + (150 - ob.h * W0.s); } }; W.P = function (p) { return [W.X(p[0]), W.Y(p[1])]; };
+      var top = [0, ob.h], tip = [ob.shadow, 0], base = [0, 0];
+      cv.path(polyD([W.P(base), W.P(top), W.P(tip)]), { fill: AMBER, fillOpacity: 0.16 });
+      ground(cv, W, -ob.shadow * 0.08, ob.shadow * 1.08);
+      if (ob.kind === 'person') thing(cv, W, 'person', 0, ob.h * 0.93); else thing(cv, W, ob.kind, 0, ob.h, { side: 1 });
+      cv.line(W.P(base), W.P(tip), { color: '#4b4f5a', width: 4, opacity: 0.5 });
+      var back = [-ob.shadow * 0.25, ob.h * 1.25]; cv.line(W.P(back), W.P(tip), { color: '#e0a100', width: 1.8 }); arrow(cv, mid(W.P(back), W.P(top)), dirTo(W.P(back), W.P(tip)), { color: '#e0a100', L: 8, w: 3.5 });
+      rightSq(cv, W.P(base), 0, 8);
+      if (o.sunLabel) mark(cv, W.P(tip), 180 - sun, 180, { label: o.sunLabel, size: 14, color: AMBER, r: 22 });
+      var lb = ob.label || {};
+      dim(cv, W, base, tip, lb.s == null ? fmtN(ob.shadow) + (units ? ' ' + units : '') : lb.s, -16);
+      dim(cv, W, base, top, lb.h == null ? fmtN(ob.h) + (units ? ' ' + units : '') : lb.h, 14 + (ob.kind === 'person' ? ob.h * 0.17 * W.s : 0));
+      x += pr[1] + 60; void i;
+    });
+    return cv.svg({ width: o.width || 420, aria: o.aria || 'two objects and their shadows' });
+  };
+  /* HW.geo.mirrorSVG({ eye 1.6, d1 2, d2 10, h, kind 'flag'|'pole'|'tree'|'building', labels: { eye, d1, d2, h }, units 'm', angleLabel, width 400 }) */
+  G.mirrorSVG = function (o) {
+    o = o || {}; var eye = o.eye == null ? 1.6 : o.eye, d1 = o.d1 == null ? 2 : o.d1, d2 = o.d2 == null ? 10 : o.d2, h = o.h == null ? eye * d2 / d1 : o.h, lb = o.labels || {}, units = o.units == null ? 'm' : o.units;
+    var W = world([[-0.3, 0], [d1 + d2 * 1.05, 0], [0, Math.max(eye, h)]], 330, 170), cv = new Canvas(), us = function (v) { return fmtN(v) + (units ? ' ' + units : ''); };
+    cv.path(polyD([W.P([0, 0]), W.P([0, eye]), W.P([d1, 0])]), { fill: BLUE, fillOpacity: 0.12 }); cv.path(polyD([W.P([d1, 0]), W.P([d1 + d2, h]), W.P([d1 + d2, 0])]), { fill: BLUE, fillOpacity: 0.12 });
+    ground(cv, W, -0.3, d1 + d2 * 1.05); thing(cv, W, 'person', 0, eye); thing(cv, W, o.kind || 'flag', d1 + d2, h, { side: -1 });
+    var M = W.P([d1, 0]), E = W.P([0, eye]), T = W.P([d1 + d2, h]);
+    cv.raw('<rect x="' + f(M[0] - 9) + '" y="' + f(M[1] - 3) + '" width="18" height="5" rx="1.5" fill="#7fb3f0" stroke="' + BLUE + '" stroke-width="1.2"/>', [[M[0] - 9, M[1]], [M[0] + 9, M[1]]]);
+    cv.line(T, M, { color: '#e0a100', width: 2 }); cv.line(M, E, { color: '#e0a100', width: 2 }); arrow(cv, mid(T, M), dirTo(T, M), { color: '#e0a100', L: 8, w: 3.5 }); arrow(cv, mid(M, E), dirTo(M, E), { color: '#e0a100', L: 8, w: 3.5 });
+    mark(cv, M, 0, dirTo(M, T), { label: o.angleLabel || '', color: GREEN, r: 20, size: 14 }); mark(cv, M, dirTo(M, E), 180, { label: o.angleLabel || '', color: GREEN, r: 20, size: 14 });
+    rightSq(cv, W.P([0, 0]), 0, 8); rightSq(cv, W.P([d1 + d2, 0]), 90, 8);
+    dim(cv, W, [0, 0], [d1, 0], lb.d1 == null ? us(d1) : lb.d1, -26); dim(cv, W, [d1, 0], [d1 + d2, 0], lb.d2 == null ? us(d2) : lb.d2, -26);
+    dim(cv, W, [0, 0], [0, eye], lb.eye == null ? us(eye) : lb.eye, 18); dim(cv, W, [d1 + d2, h], [d1 + d2, 0], lb.h == null ? us(h) : lb.h, 14);
+    cv.text(M[0], M[1] + 12, 'mirror', { size: 12, color: BLUE, weight: 600 });
+    return cv.svg({ width: o.width || 400, aria: o.aria || 'mirror method' });
+  };
+
+  /* ---------------- grid with a shape and its image; scale maps ---------------- */
+  /* HW.geo.gridSVG({ cols 16, rows 9, cell 18, shape | pts (grid units, y up), at [1, 1], k 2, imageAt (default right of it), image true,
+   *   names: ['ABC', 'A′B′C′'], width 380 }) */
+  G.gridSVG = function (o) {
+    o = o || {}; var cols = o.cols || 16, rows = o.rows || 9, cs = o.cell || 18, P = shapeOf(o), b = bbox(P), at0 = o.at || [1, 1], k = o.k == null ? 2 : o.k, cv = new Canvas();
+    var T = function (q) { return [q[0] * cs, (rows - q[1]) * cs]; }, d = '';
+    for (var i = 0; i <= cols; i++) d += 'M' + i * cs + ' 0V' + rows * cs; for (var j = 0; j <= rows; j++) d += 'M0 ' + j * cs + 'H' + cols * cs;
+    cv.path(d, { stroke: '#d5dae3', width: 0.8 }, [[0, 0], [cols * cs, rows * cs]]);
+    var orig = P.map(function (p) { return T([p[0] - b[0] + at0[0], p[1] - b[1] + at0[1]]); });
+    var nm0 = names(o.names && o.names[0], P.length), nm1 = names(o.names && o.names[1], P.length);
+    cv.path(polyD(orig), { stroke: INK, width: 2.2, fill: '#e9edf4' }, orig);
+    var lab = function (S, nm) { if (nm) S.forEach(function (p, i) { var cn = cornerAt(S, i), q = at(p, cn.start + cn.span / 2 + 180, 10); cv.text(q[0], q[1], nm[i], { size: 13, weight: 700, italic: false }); }); };
+    lab(orig, nm0);
+    if (o.image !== false) {
+      var ia = o.imageAt || [Math.min(cols - (b[2] - b[0]) * k, at0[0] + (b[2] - b[0]) + 2), at0[1]];
+      var img = P.map(function (p) { return T([(p[0] - b[0]) * k + ia[0], (p[1] - b[1]) * k + ia[1]]); });
+      cv.path(polyD(img), { stroke: BLUE, width: 2.2, fill: '#dbe7fb', fillOpacity: 0.7 }, img); lab(img, nm1);
+    }
+    return cv.svg({ width: o.width || 380, aria: o.aria || 'shapes on a grid', pad: 10 });
+  };
+  var UNIT_CM = { mm: 0.1, cm: 1, m: 100, km: 100000 };
+  G.parseScale = function (sc) {
+    var r;
+    if (sc && typeof sc === 'object') r = { draw: sc.draw == null ? 1 : sc.draw, drawUnit: sc.drawUnit || 'cm', real: sc.real, realUnit: sc.realUnit || sc.units || 'm' };
+    else {
+      var s = String(sc || '1 cm : 1 m').replace(/(\d)[\s,](?=\d{3}\b)/g, '$1').trim(), m = /^([\d.]+)\s*(mm|cm|m|km)\s*(?::|=|represents|to|→)\s*([\d.]+)\s*(mm|cm|m|km)$/i.exec(s);
+      if (m) r = { draw: +m[1], drawUnit: m[2].toLowerCase(), real: +m[3], realUnit: m[4].toLowerCase() };
+      else if ((m = /^([\d.]+)\s*:\s*([\d.]+)$/.exec(s))) { var ratio = +m[2] / +m[1], ru = ratio >= 100000 ? 'km' : ratio >= 100 ? 'm' : 'cm'; r = { draw: 1, drawUnit: 'cm', real: ratio / UNIT_CM[ru], realUnit: ru, pure: true }; }
+      else throw new Error('HW.geo.parseScale: cannot read ' + s);
+    }
+    r.ratio = (r.real * UNIT_CM[r.realUnit]) / (r.draw * UNIT_CM[r.drawUnit]); r.perCm = r.real / (r.draw * UNIT_CM[r.drawUnit]);
+    r.text = r.pure ? '1 : ' + fmtN(r.ratio, 3).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') : fmtN(r.draw, 3) + ' ' + r.drawUnit + ' represents ' + fmtN(r.real, 3) + ' ' + r.realUnit;
+    return r;
+  };
+  /* HW.geo.scaleMapSVG({ scale '1 cm : 5 km', cmPx 30, w 10, h 6 (map size, cm), places: [{ name, at: [x, y] (cm from the lower left) }],
+   *   routes: [{ from, to, label, dash, color }], bar true, title true, grid true, north true, width 380 }) */
+  G.scaleMapSVG = function (o) {
+    o = o || {}; var sc = G.parseScale(o.scale), u = o.cmPx || 30, Wc = o.w || 10, Hc = o.h || 6, cv = new Canvas(), byName = {};
+    var T = function (q) { return [q[0] * u, (Hc - q[1]) * u]; };
+    cv.raw('<rect x="0" y="0" width="' + Wc * u + '" height="' + Hc * u + '" rx="6" fill="#f6f3ea" stroke="#cfc6b0" stroke-width="1.2"/>', [[0, 0], [Wc * u, Hc * u]]);
+    if (o.grid !== false) { var d = ''; for (var i = 1; i < Wc; i++) d += 'M' + i * u + ' 0V' + Hc * u; for (var j = 1; j < Hc; j++) d += 'M0 ' + j * u + 'H' + Wc * u; cv.path(d, { stroke: '#e3dccb', width: 0.8 }); }
+    (o.places || []).forEach(function (p) { byName[p.name] = T(p.at); });
+    (o.routes || []).forEach(function (rt) { var A = byName[rt.from], B = byName[rt.to]; if (!A || !B) return; cv.line(A, B, { color: rt.color || '#a07d3b', width: 2.4, dash: rt.dash }); if (rt.label) { var M = mid(A, B), n = at([0, 0], dirTo(A, B) + 90, 12); cv.text(M[0] + n[0], M[1] + n[1], rt.label, { size: 13, weight: 700, color: isRed(rt.label) ? RED : INK }); } });
+    (o.places || []).forEach(function (p) { var q = byName[p.name]; cv.dot(q, { r: 4, color: RED }); cv.text(q[0] + (p.dx || 0), q[1] + (p.dy == null ? -13 : p.dy), p.name, { size: 13, weight: 700, italic: false }); });
+    if (o.north !== false) { var N0 = [u * 0.6, u * 1.3], N1 = [u * 0.6, u * 0.45]; cv.line(N0, N1, { width: 1.8 }); arrow(cv, N1, 90, { L: 8, w: 3.5 }); cv.text(N1[0], N1[1] - 9, 'N', { size: 12, weight: 800, italic: false }); }
+    if (o.bar !== false) {
+      var seg = sc.draw * UNIT_CM[sc.drawUnit] * u, ns = Math.max(1, Math.min(4, Math.floor((Wc * u * 0.45) / seg))), x0 = Wc * u - ns * seg - 34, y0 = Hc * u - 22;
+      for (var s2 = 0; s2 < ns; s2++) cv.raw('<rect x="' + f(x0 + s2 * seg) + '" y="' + f(y0) + '" width="' + f(seg) + '" height="6" fill="' + (s2 % 2 ? '#fff' : INK) + '" stroke="' + INK + '" stroke-width="1"/>', [[x0, y0], [x0 + ns * seg, y0 + 6]]);
+      for (var s3 = 0; s3 <= ns; s3++) cv.text(x0 + s3 * seg, y0 + 14, fmtN(s3 * sc.real, 2) + (s3 === ns ? ' ' + sc.realUnit : ''), { size: 10.5, weight: 600, halo: 2.5 });
+    }
+    if (o.title !== false) cv.text(8, Hc * u + 12, 'Scale: ' + sc.text, { size: 13, weight: 600, anchor: 'start', color: '#3a4254' });
+    return cv.svg({ width: o.width || 380, aria: o.aria || 'scale map', pad: 6 });
+  };
+
+  /* ======================================== checkers (Units 6–7) ======================================== */
+  var TR = { sin: function (d) { return Math.sin(d * RAD); }, cos: function (d) { return Math.cos(d * RAD); }, tan: function (d) { return Math.tan(d * RAD); } };
+  var TRR = { sin: Math.sin, cos: Math.cos, tan: Math.tan };   // what a calculator in RAD mode gives for "sin 35"
+  var INV = { sin: function (v) { return Math.asin(v) / RAD; }, cos: function (v) { return Math.acos(v) / RAD; }, tan: function (v) { return Math.atan(v) / RAD; } };
+  var INVR = { sin: Math.asin, cos: Math.acos, tan: Math.atan };
+  var PAIRS3 = { sin: 'opp and hyp', cos: 'adj and hyp', tan: 'opp and adj' }, MNEM = { sin: 'SOH', cos: 'CAH', tan: 'TOA' };
+  var RAD_HINT = 'Your calculator is in <b>RAD</b> mode. Press <b>DRG</b> until <b>DEG</b> shows on the screen, then try again.';
+  G.RAD_HINT = RAD_HINT;
+  /* strip "x =", "θ =", a degree sign, so K.near sees a plain number */
+  function bare(resp, deg) {
+    var s = String(resp == null ? '' : resp).replace(/\\(?:text|mathrm|operatorname)\{([^{}]*)\}/g, '$1').replace(/\\theta|θ/g, 't');
+    s = s.replace(/^\s*(?:\\angle\s*)?[A-Za-z]{1,3}\s*(?:=|≈|\\approx|\\doteq)\s*/, '');
+    if (deg) s = s.replace(/\^\{?\\circ\}?|\\circ|\\degree|°|º|˚/g, '').replace(/\s*deg(?:rees?)?\.?\s*$/i, '');
+    return s.trim();
+  }
+  function ok3(v) { return typeof v === 'number' && isFinite(v); }
+  /* the value of a length set up as side × fn(deg) (mul) or side ÷ fn(deg) (div) */
+  function trigLen(t, fns) { var F = (fns || TR)[t.fn](t.deg); return t.op === 'div' ? t.side / F : t.side * F; }
+  G.trigLen = function (t) { return trigLen(t); };
+  /* HW.geo.lenChk(v, { dp 1, unit, trig: { fn: 'sin'|'cos'|'tan', deg, side, op: 'mul'|'div' }, pyth: { legs: [a, b] } | { hyp, leg },
+   *   scale: { len, k, op: 'mul'|'div' }, prop: { given, num, den } (answer = given × num ÷ den), alts: [{ v, code, hint }], radTrap true |
+   *   false | { fn, deg, side, op }, early true (rounding the trig ratio too soon → a nudge) })
+   *   A length to the nearest tenth (dp). Traps from the set-up: RAD mode, × instead of ÷ (and back), the wrong ratio, the ratio ÷ the side,
+   *   Pythagoras with no √, a² − b² for the hypotenuse, the hypotenuse used as a leg, adding the sides, 2a for a², adding k, a flipped
+   *   proportion. A correct value with more decimals gets "now round it"; "x = 12.3" and a unit after the number are fine. */
+  G.lenChk = function (v, o) {
+    o = o || {}; var dp = o.dp == null ? 1 : o.dp, alts = [], early = [];
+    var add = function (val, code, hint) { if (ok3(val)) alts.push({ v: val, code: code, hint: hint }); };
+    var tr = o.trig, rt = o.radTrap == null ? true : o.radTrap;
+    if (rt && typeof rt === 'object') add(trigLen(rt, TRR), 'trig-rad', RAD_HINT);
+    if (tr) {
+      if (rt === true) add(trigLen(tr, TRR), 'trig-rad', RAD_HINT);
+      add(trigLen({ fn: tr.fn, deg: tr.deg, side: tr.side, op: tr.op === 'div' ? 'mul' : 'div' }), 'trig-mul-div', tr.op === 'div' ? 'The unknown is on the <b>bottom</b> of the ratio, so <b>divide</b>: side ÷ ' + tr.fn + ' θ. (You multiplied.)' : 'The unknown is on <b>top</b> of the ratio, so <b>multiply</b>: side × ' + tr.fn + ' θ. (You divided.)');
+      if (tr.op === 'div') add(TR[tr.fn](tr.deg) / tr.side, 'trig-upside', 'Divide the <b>side</b> by ' + tr.fn + ' θ, not ' + tr.fn + ' θ by the side.');
+      ['sin', 'cos', 'tan'].forEach(function (g) { if (g !== tr.fn) add(trigLen({ fn: g, deg: tr.deg, side: tr.side, op: tr.op }), 'trig-wrong-ratio', 'Check the ratio: label opp, adj and hyp from θ. With ' + PAIRS3[tr.fn] + ' it is <b>' + tr.fn + '</b> (' + MNEM[tr.fn] + '), not ' + g + '.'); });
+      if (o.early !== false) [1, 2].forEach(function (d) { var F = Math.round(TR[tr.fn](tr.deg) * Math.pow(10, d)) / Math.pow(10, d); if (F) early.push(tr.op === 'div' ? tr.side / F : tr.side * F); });
+    }
+    var py = o.pyth;
+    if (py && py.legs) {
+      var a = py.legs[0], b = py.legs[1];
+      add(a * a + b * b, 'pyth-no-root', 'That is c². Take the <b>square root</b> (2nd x²) to find c.');
+      add(Math.sqrt(Math.abs(a * a - b * b)), 'pyth-subtract', 'To find the <b>hypotenuse</b>, <b>add</b> the squares: c² = a² + b².');
+      add(a + b, 'pyth-add-sides', 'Square the sides first: c² = a² + b², then take the square root.');
+      add(Math.sqrt(2 * a + 2 * b), 'pyth-double', 'a² means a × a, not 2 × a.');
+    } else if (py && py.hyp != null) {
+      var c = py.hyp, l = py.leg;
+      add(c * c - l * l, 'pyth-no-root', 'That is the leg <b>squared</b>. Take the <b>square root</b> (2nd x²).');
+      add(Math.sqrt(c * c + l * l), 'pyth-hyp-leg', fmtN(c, 3) + ' is the <b>hypotenuse</b> (the longest side, across from the right angle), so <b>subtract</b>: leg² = c² − a².');
+      add(c - l, 'pyth-sub-sides', 'Square the sides first: leg² = c² − a², then take the square root.');
+      add(Math.sqrt(Math.abs(2 * c - 2 * l)), 'pyth-double', 'c² means c × c, not 2 × c.');
+    }
+    var sc = o.scale;
+    if (sc) {
+      add(sc.op === 'div' ? sc.len * sc.k : sc.len / sc.k, 'k-mul-div', sc.op === 'div' ? 'Going back to the original: <b>divide</b> by k (original = new ÷ k).' : 'New length = original × k: <b>multiply</b> by k.');
+      add(sc.len + sc.k, 'k-added', 'A scale factor <b>multiplies</b> every length; don’t add it.');
+    }
+    var pr = o.prop;
+    if (pr) { add(pr.given * pr.den / pr.num, 'prop-flip', 'Keep matching sides in the same order: new ÷ original = new ÷ original. Your ratio is upside down.'); add(pr.given + pr.num - pr.den, 'prop-add', 'Similar figures <b>multiply</b> by the same factor; they don’t add the same amount.'); }
+    (o.alts || []).forEach(function (x) { alts.push(x); });
+    var near = K.near(v, dp, { alts: alts, unit: o.unit, nr: o.nr, diag: o.diag || (py && py.hyp != null ? function (w) { return w >= py.hyp ? { code: 'pyth-too-long', hint: 'A leg is always <b>shorter</b> than the hypotenuse.' } : null; } : null) });
+    var want = K.roundTo(v, dp);
+    return function (resp) {
+      var s = bare(resp, false), p = HW.parse.number(s);
+      var chop = Math.trunc(v * Math.pow(10, dp)) / Math.pow(10, dp);
+      if (p.ok && early.length && Math.abs(K.roundTo(p.value, dp) - want) > 1e-9 && Math.abs(p.value - chop) > 1e-9) for (var i = 0; i < early.length; i++) if (Math.abs(K.roundTo(p.value, dp) - K.roundTo(early[i], dp)) < 1e-9) return form('round-early', 'Nearly! Keep the <b>full</b> calculator value of ' + tr.fn + ' ' + fmtDeg(tr.deg) + '° — round only the final answer.');
+      return near(s);
+    };
+  };
+  /* HW.geo.angleRatioChk(deg, { dp 0, ratio: { fn, num, den } (θ = fn⁻¹(num ÷ den)), alts, radTrap true, complementTrap true })
+   *   An angle from an inverse trig ratio, to the nearest degree. Traps: RAD mode (an answer in radians), no inverse (sin of the ratio), the
+   *   wrong inverse, the ratio upside down, the other acute angle (90° − θ). The ° sign and "θ =" are fine. */
+  G.angleRatioChk = function (deg, o) {
+    o = o || {}; var dp = o.dp == null ? 0 : o.dp, alts = [], r = o.ratio;
+    var add = function (val, code, hint) { if (ok3(val) && !alts.some(function (x) { return Math.abs(K.roundTo(x.v, dp + 2) - K.roundTo(val, dp + 2)) < 1e-9; })) alts.push({ v: val, code: code, hint: hint }); };
+    // first: the other acute angle (the same number as the flipped tan ratio, or sin⁻¹ ↔ cos⁻¹ of the same ratio)
+    if (o.complementTrap !== false && deg > 0 && deg < 90) add(90 - deg, 'trig-complement', 'That is the <b>other</b> acute angle (90° − θ). Label opp, adj and hyp from the angle you are asked for' + (r ? ', then check the ratio: ' + r.fn + ' θ = ' + { sin: 'opp ÷ hyp', cos: 'adj ÷ hyp', tan: 'opp ÷ adj' }[r.fn] + '.' : '.'));
+    if (r) {
+      var q = r.num / r.den;
+      if (o.radTrap !== false) add(INVR[r.fn](q), 'trig-rad', RAD_HINT);
+      add(TR[r.fn](q), 'trig-no-inverse', 'To get an <b>angle</b> from a ratio, use the <b>inverse</b>: 2nd then ' + r.fn + ' (' + r.fn + '⁻¹).');
+      ['sin', 'cos', 'tan'].forEach(function (g) { if (g !== r.fn) add(INV[g](q), 'trig-wrong-ratio', 'Check the ratio: you know the ' + PAIRS3[r.fn] + ', so use <b>' + r.fn + '⁻¹</b> (' + MNEM[r.fn] + '), not ' + g + '⁻¹.'); });
+    }
+    (o.alts || []).forEach(function (x) { alts.unshift(x); });
+    var near = K.near(deg, dp, { alts: alts });
+    return function (resp) { return near(bare(resp, true)); };
+  };
+  /* HW.geo.kChk(k, { flipTrap true, from: { new, orig } (for the difference trap), dp 2 (decimal places needed when k does not end) })
+   *   A scale factor as a fraction (3/2, \frac{3}{2}) or a decimal (1.5); "k =", "×1.5", "1.5x" are fine. 1/k gets "new ÷ original";
+   *   new − original gets "a scale factor divides"; 3 : 2 and 150% get a nudge. */
+  G.kChk = function (k, o) {
+    o = o || {}; var dpNeed = o.dp == null ? 2 : o.dp;
+    var exact = function (v) { return Math.abs(v - k) < 1e-9 * Math.max(1, Math.abs(k)); };
+    var ends = (function () { var x = k; for (var i = 0; i < 6; i++) { if (Math.abs(x - Math.round(x)) < 1e-9) return true; x *= 10; } return false; })();
+    function close(v, places, target) { return Math.abs(v - target) <= (places >= 3 ? 1.01 : 0.5) * Math.pow(10, -places) + 1e-9; }
+    return function (resp) {
+      var raw = String(resp == null ? '' : resp).replace(/\\(?:text|mathrm)\{([^{}]*)\}/g, '$1').replace(/\\left|\\right/g, '').replace(/\\times|×|\\cdot/g, ' ').replace(/^\s*k\s*=\s*/i, '').replace(/\s*(?:x|times)\s*$/i, '').replace(/^\s*x\s*(?=[\d.])/i, '').trim();
+      if (!raw) return form('empty', 'Type the scale factor.');
+      var rm = /^([\d.]+)\s*:\s*([\d.]+)$/.exec(raw); if (rm) return form('k-ratio', 'Write k as one number: ' + rm[1] + ' : ' + rm[2] + ' → ' + t('\\frac{' + rm[1] + '}{' + rm[2] + '}') + '.');
+      if (/%\s*$|\\%\s*$/.test(raw)) return form('k-percent', 'Write k as a number, not a percent (150% → 1.5).');
+      var a = K.read(raw); if (a.res) return a.res;
+      var v = a.val; if (!ok3(v)) return form('notnumber', 'Type the scale factor as a fraction or a decimal.');
+      var places = (String(raw).split('.')[1] || '').replace(/\D.*$/, '').length, dec = /\./.test(raw) && !/\\frac|\//.test(raw);
+      if (exact(v) || (dec && !ends && places >= dpNeed && close(v, places, k))) return ok();
+      if (dec && !ends && places < dpNeed && close(v, places, k)) return form('k-round', 'Close — give at least ' + dpNeed + ' decimal places, or write it as a fraction.');
+      if (o.flipTrap !== false && Math.abs(k - 1) > 1e-9 && (Math.abs(v * k - 1) < 1e-9 || (dec && close(v, Math.max(places, 1), 1 / k)))) return wrong('k-flip', 'Upside down: <b>k = new ÷ original</b> (the image’s length on top).');
+      if (o.from && Math.abs(v - (o.from.new - o.from.orig)) < 1e-9) return wrong('k-subtract', 'A scale factor is a <b>division</b>, not a difference: k = new ÷ original.');
+      if (v <= 0) return wrong('sign', 'A scale factor is always positive.');
+      if ((k > 1 && v < 1) || (k < 1 && v > 1)) return wrong('k-direction', k > 1 ? 'The new figure is <b>bigger</b> (an enlargement), so k > 1.' : 'The new figure is <b>smaller</b> (a reduction), so k < 1.');
+      return wrong('value', null);
+    };
+  };
+
+  /* ---------------- part builders (Units 6–7) ---------------- */
+  /* P.len(prompt, v, o): o = lenChk options + { unit, sol, hints, text, nr } */
+  P.len = function (prompt, v, o) {
+    o = o || {}; var dp = o.dp == null ? 1 : o.dp, part = K.P.near(prompt, v, dp, { unit: o.unit, nr: o.nr }, o.sol, o.hints, o.text);
+    part.check = G.lenChk(v, o); return part;
+  };
+  /* P.trigAngle(prompt, deg, o): o = angleRatioChk options + { sol, hints, text, nr } */
+  P.trigAngle = function (prompt, deg, o) {
+    o = o || {}; var dp = o.dp == null ? 0 : o.dp, want = K.roundTo(deg, dp).toFixed(dp);
+    return { prompt: prompt, input: { type: 'number', after: '°', nr: !!o.nr }, check: G.angleRatioChk(deg, o), key: want, answer: t(want + '^\\circ'), solution: o.sol, hints: o.hints || [], text: o.text };
+  };
+  /* P.k(prompt, k, o): k a number or [p, q]; o = kChk options + { sol, hints, text } */
+  P.k = function (prompt, k, o) {
+    o = o || {}; var pq = Array.isArray(k) ? k : null, kv = pq ? pq[0] / pq[1] : k, g = pq ? HW.ex.gcd(pq[0], pq[1]) : 1, fr = pq && pq[1] / g !== 1;
+    var short = Math.abs(kv * 100 - Math.round(kv * 100)) < 1e-9, frTex = fr ? '\\frac{' + pq[0] / g + '}{' + pq[1] / g + '}' : '';
+    var keyTex = fr ? frTex : fmtN(kv, 4), ans = t('k=' + (fr ? frTex + (short ? '=' + fmtN(kv, 2) : '\\approx ' + fmtN(kv, 2)) : fmtN(kv, 4)));
+    return { prompt: prompt, input: { type: 'math', keys: 'fraction', before: o.before || t('k=') }, check: G.kChk(kv, o), key: keyTex, answer: ans, solution: o.sol, hints: o.hints || [], text: o.text };
+  };
+  /* P.ratioMC(r, prompt, want, o): want 'sin'|'cos'|'tan'|'pyth'. o.sides: the two sides involved, e.g. ['opp', 'hyp'] (default from want);
+   *   o.keepOrder true; sol, hints, text. Options: the three ratios and the Pythagorean theorem. */
+  P.ratioMC = function (r, prompt, want, o) {
+    o = o || {}; var have = o.sides || ({ sin: ['opp', 'hyp'], cos: ['adj', 'hyp'], tan: ['opp', 'adj'] })[want] || null;
+    var HT = { sin: '\\(\\sin\\theta=\\dfrac{\\text{opp}}{\\text{hyp}}\\)', cos: '\\(\\cos\\theta=\\dfrac{\\text{adj}}{\\text{hyp}}\\)', tan: '\\(\\tan\\theta=\\dfrac{\\text{opp}}{\\text{adj}}\\)', pyth: 'the Pythagorean theorem, \\(a^2+b^2=c^2\\)' };
+    var why = function (id) {
+      if (want === 'pyth') return 'There is no angle to use here: two sides and the third side → the <b>Pythagorean theorem</b>.';
+      if (id === 'pyth') return 'An angle is involved, so use a <b>trig ratio</b>. (Pythagoras links three sides, no angles.)';
+      return '<b>' + id + '</b> uses ' + PAIRS3[id] + '. Here the sides are the ' + (have ? have.join(' and ') : PAIRS3[want]) + ': ' + MNEM[want] + '.';
+    };
+    var opts = ['sin', 'cos', 'tan', 'pyth'].map(function (id) { return { html: HT[id], right: id === want, why: id === want ? null : why(id), code: 'ratio-' + id }; });
+    var part = K.P.mc(r, prompt, opts, o.sol, o.hints, o.text, o.keepOrder !== false);
+    part.input.columns = o.columns || 2; return part;
+  };
+
   if (HW.addCodes) HW.addCodes({
     'geo-other-scale': 'Read the other protractor scale (180° − the angle)', 'geo-supplement': 'Gave the supplement (180° − the angle)', 'geo-reflex-small': 'Gave the small angle, not the reflex angle',
     'geo-reflex-big': 'Gave the reflex angle, not the small angle', 'geo-too-big': 'Angle far too big', 'geo-comma': 'Decimal comma', 'geo-alt': 'A known wrong angle',
@@ -481,6 +914,14 @@
     'geo-pair-alt': 'Said "alternate" without interior/exterior', 'geo-pair-int': 'Said "interior" without same side/alternate', 'geo-pair-ext': 'Said "exterior" without same side/alternate',
     'geo-pair-letter': 'Gave the letter shape, not the name', 'geo-pair-unknown': 'Unrecognised pair name', 'geo-pair-corresponding': 'Called them corresponding', 'geo-pair-alt-int': 'Called them alternate interior',
     'geo-pair-alt-ext': 'Called them alternate exterior', 'geo-pair-int-same': 'Called them interior on the same side', 'geo-pair-ext-same': 'Called them exterior on the same side', 'geo-pair-vert-opp': 'Called them vertically opposite',
-    'geo-pair-linear': 'Called them supplementary/adjacent', 'geo-pair-complementary': 'Called them complementary'
+    'geo-pair-linear': 'Called them supplementary/adjacent', 'geo-pair-complementary': 'Called them complementary',
+    'trig-rad': 'Calculator in RAD mode', 'trig-mul-div': 'Multiplied instead of dividing by the trig ratio (or the reverse)', 'trig-upside': 'Ratio upside down',
+    'trig-wrong-ratio': 'Used the wrong trig ratio', 'trig-no-inverse': 'Forgot the inverse key (sin⁻¹ …)', 'trig-complement': 'Gave the other acute angle (90° − θ)',
+    'round-early': 'Rounded the trig ratio too early', 'pyth-no-root': 'Pythagoras: forgot the square root', 'pyth-subtract': 'Pythagoras: subtracted to find the hypotenuse',
+    'pyth-add-sides': 'Pythagoras: added the sides without squaring', 'pyth-double': 'Doubled instead of squaring', 'pyth-hyp-leg': 'Used the hypotenuse as a leg (added the squares)',
+    'pyth-sub-sides': 'Pythagoras: subtracted the sides without squaring', 'pyth-too-long': 'A leg longer than the hypotenuse', 'k-mul-div': 'Multiplied by k instead of dividing (or the reverse)',
+    'k-added': 'Added the scale factor', 'prop-flip': 'Proportion set up upside down', 'prop-add': 'Added a difference instead of using a scale factor', 'k-flip': 'Scale factor upside down (original ÷ new)',
+    'k-subtract': 'Scale factor as a difference', 'k-direction': 'Scale factor on the wrong side of 1', 'k-ratio': 'Wrote the scale factor as a ratio', 'k-percent': 'Wrote the scale factor as a percent',
+    'k-round': 'Scale factor rounded to too few places', 'ratio-sin': 'Chose sine', 'ratio-cos': 'Chose cosine', 'ratio-tan': 'Chose tangent', 'ratio-pyth': 'Chose the Pythagorean theorem'
   });
 })(window);
