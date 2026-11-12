@@ -14,7 +14,7 @@
     ['Maya Patel', 0.82, 0.58, 0.65, 1.05], ['Ethan Wilson', 0.46, 0.52, 0.05, 0.7], ['Sophie Nguyen', 0.36, 0.42, 0, 0.6],
     ['Jack Thompson', 0.52, 0.24, 0, 0.85], ['Zoe Campbell', 0, 0, 0, 1]
   ].map(function (p) { return { name: p[0], skill: p[1], effort: p[2], home: p[3], speed: p[4], never: p[2] === 0 }; });
-  var PACE = ['u4l1', 'u4l2', 'u4l3', 'u4l4', 'u4l5', 'u4l6', 'u4l7']; // one lesson a school day, the last is today
+  var PACE = ['u1l3', 'u1l4', 'u1l5', 'u1l6', 'u1l7', 'u1l8', 'u1l9']; // one lesson a school day, the last is today
   var M = null; // the built class (rebuilt once per page load)
 
   function rnd(seed) { return HW.rng(HW.hashStr('demo|' + seed)); }
@@ -166,8 +166,8 @@
   var T = { sessions: null, live: null, n: 0 };
   function testable(l, it) { try { return !TC.NO_TEST[HW.makeInstance(l, it, 1, 1).input.type]; } catch (e) { return false; } }
   function exitDef(id, num) {
-    var b = HW.DashTests && HW.DashTests.builtin((id || 'u4l6') + 'x'); if (b) return b.def; // the built exit slip for that lesson
-    var l = HW.lessons[id || 'u4l6'], want = ['BEG', 'EMG', 'PRG', 'ADV'], items = [];
+    var b = HW.DashTests && HW.DashTests.builtin((id || 'u1l8') + 'x'); if (b) return b.def; // the built exit slip for that lesson
+    var l = HW.lessons[id || 'u1l8'], want = ['BEG', 'EMG', 'PRG', 'ADV'], items = [];
     want.forEach(function (lv) { var it = l.items.filter(function (x) { return !x.extra && x.level === lv && testable(l, x) && items.indexOf(x) < 0; })[0]; if (it) items.push(it); });
     return { title: 'Exit slip ' + (num || '2.2'), kind: 'exit', unit: 2, minutes: 10, calc: true, shuffle: false, levels: true, items: items.map(function (it) { return { l: l.id, i: it.id }; }) };
   }
@@ -206,10 +206,10 @@
     var m = model(), days = m.dayList, out = [];
     var ti = PACE.indexOf('#u1test'), ud = unitTestDef();
     if (ud && ti >= 0) { var s1 = at(days[ti], 10, 40); out.push({ id: 'DEMO-T1', test: 'B-u1test', title: ud.title, kind: 'test', launched: s1, closed: s1 + 78 * 60000, released: 0, def: ud, rows: finishedRows(ud, 'DEMO-T1', s1 + 60000) }); }
-    var ed = exitDef(), s2 = at(days[PACE.indexOf('u4l6')], 11, 45);
-    var e0 = exitDef('u4l5', '4.5'), s0 = at(days[PACE.indexOf('u4l5')], 11, 45);
-    if (e0.items.length) out.push({ id: 'DEMO-X0', test: 'B-u4l5x', title: e0.title, kind: 'exit', launched: s0, closed: s0 + 11 * 60000, released: s0 + 3 * 3600000, def: e0, rows: finishedRows(e0, 'DEMO-X0', s0 + 30000) });
-    if (ed.items.length) out.push({ id: 'DEMO-X1', test: 'B-u4l6x', title: ed.title, kind: 'exit', launched: s2, closed: s2 + 11 * 60000, released: s2 + 3 * 3600000, def: ed, rows: finishedRows(ed, 'DEMO-X1', s2 + 30000) });
+    var ed = exitDef(), s2 = at(days[PACE.indexOf('u1l8')], 11, 45);
+    var e0 = exitDef('u1l7', '1.7'), s0 = at(days[PACE.indexOf('u1l7')], 11, 45);
+    if (e0.items.length) out.push({ id: 'DEMO-X0', test: 'B-u1l7x', title: e0.title, kind: 'exit', launched: s0, closed: s0 + 11 * 60000, released: s0 + 3 * 3600000, def: e0, rows: finishedRows(e0, 'DEMO-X0', s0 + 30000) });
+    if (ed.items.length) out.push({ id: 'DEMO-X1', test: 'B-u1l8x', title: ed.title, kind: 'exit', launched: s2, closed: s2 + 11 * 60000, released: s2 + 3 * 3600000, def: ed, rows: finishedRows(ed, 'DEMO-X1', s2 + 30000) });
     return (T.sessions = out);
   }
   function sessionList() { return sessions().slice().sort(function (a, b) { return b.launched - a.launched; }).map(function (s) { return { id: s.id, test: s.test, title: s.title, kind: s.kind, launched: s.launched, closed: s.closed, released: s.released, results: s.rows.length }; }); }

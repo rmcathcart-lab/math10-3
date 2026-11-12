@@ -788,7 +788,7 @@
     var c = st.D && st.D['class'];
     if (c && isDemo()) {
       var pd = el('div', 'panel'); pd.appendChild(el('h3', '', esc(c.label)));
-      pd.appendChild(el('p', '', 'The demo class is made up so you can see how the ledger looks with a class in it: eleven students from strong to struggling, one who does a lot at home, one who rarely works and one who never signed in. Their work follows the real lessons (Unit 4, up to Lesson 7 today), with the questions’ real numbers and the typical mistakes the checkers recognize.'));
+      pd.appendChild(el('p', '', 'The demo class is made up so you can see how the ledger looks with a class in it: eleven students from strong to struggling, one who does a lot at home, one who rarely works and one who never signed in. Their work follows the real lessons (Unit 1, up to Lesson 9 today), with the questions’ real numbers and the typical mistakes the checkers recognize.'));
       pd.appendChild(el('p', 'small muted', 'It’s built in this browser and never touches your spreadsheet. Under Exit slips it has two released exit slips; launch any test to it and the made-up students write it on a clock (one leaves and gets locked) so you can try the live monitor, unlocking, closing and marking. Reload the page to start the demo over.'));
       var hd = el('button', 'btn btn-small', 'Hide the demo class'); hd.type = 'button'; hd.addEventListener('click', function () { ls('hw:nodemo', '1'); st.klass = ''; st.D = null; loadClasses(); }); pd.appendChild(hd);
       body.appendChild(pd); c = null;
