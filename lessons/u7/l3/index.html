@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finding a Leg, and Squaring a Corner · Math 10-3 7.3</title>
+<meta name="description" content="Math 10-3 Unit 7 Lesson 3: the Pythagorean theorem rearranged to find a missing leg (a² = c² − b²), real problems with ladders, kites and two triangles that share a side, testing whether a triangle is a right triangle, and the 3-4-5 method and equal diagonals for squaring a corner. Squares whose tiles move, a sliding ladder, a balance that weighs a² + b² against c², and a tape measure squaring a deck corner. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u7l3.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u7l3">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Flip the Coin Triangle">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Flip the Coin Triangle</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx"><b>10 coins</b> make a triangle that points <b>up</b>: 1 coin on top, then rows of 2, 3 and 4.</p><p class="vw-ctx">You may slide coins to new spots. Grab some coins (or erasers) and try it.</p><p class="vw-ask">Move only 3 coins so the triangle points down.</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="Ten gold coins in a triangle pointing up: rows of 1, 2, 3 and 4. A finger hovers above them.">
+    <defs><radialGradient id="u7l3-gold" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffe9a3"/><stop offset=".6" stop-color="#e9b73f"/><stop offset="1" stop-color="#b9861d"/></radialGradient></defs>
+    <g stroke="#8a6212" stroke-width="2.5">
+      <circle cx="150" cy="62" r="22" fill="url(#u7l3-gold)"/>
+      <circle cx="126" cy="104" r="22" fill="url(#u7l3-gold)"/><circle cx="174" cy="104" r="22" fill="url(#u7l3-gold)"/>
+      <circle cx="102" cy="146" r="22" fill="url(#u7l3-gold)"/><circle cx="150" cy="146" r="22" fill="url(#u7l3-gold)"/><circle cx="198" cy="146" r="22" fill="url(#u7l3-gold)"/>
+      <circle cx="78" cy="188" r="22" fill="url(#u7l3-gold)"/><circle cx="126" cy="188" r="22" fill="url(#u7l3-gold)"/><circle cx="174" cy="188" r="22" fill="url(#u7l3-gold)"/><circle cx="222" cy="188" r="22" fill="url(#u7l3-gold)"/>
+    </g>
+    <g fill="none" stroke="#c9961f" stroke-width="2"><circle cx="150" cy="62" r="15"/><circle cx="126" cy="104" r="15"/><circle cx="174" cy="104" r="15"/><circle cx="102" cy="146" r="15"/><circle cx="150" cy="146" r="15"/><circle cx="198" cy="146" r="15"/><circle cx="78" cy="188" r="15"/><circle cx="126" cy="188" r="15"/><circle cx="174" cy="188" r="15"/><circle cx="222" cy="188" r="15"/></g>
+    <g fill="#fffbe8">
+      <path d="M0 -7L2 -2L7 0L2 2L0 7L-2 2L-7 0L-2 -2Z" transform="translate(141 52)"><animate attributeName="opacity" values="0;1;0;0;0;0" dur="3.6s" repeatCount="indefinite"/></path>
+      <path d="M0 -7L2 -2L7 0L2 2L0 7L-2 2L-7 0L-2 -2Z" transform="translate(189 136)"><animate attributeName="opacity" values="0;0;0;1;0;0" dur="3.6s" repeatCount="indefinite"/></path>
+      <path d="M0 -7L2 -2L7 0L2 2L0 7L-2 2L-7 0L-2 -2Z" transform="translate(69 178)"><animate attributeName="opacity" values="0;0;1;0;0;0" dur="3.6s" repeatCount="indefinite"/></path>
+      <path d="M0 -7L2 -2L7 0L2 2L0 7L-2 2L-7 0L-2 -2Z" transform="translate(165 178)"><animate attributeName="opacity" values="0;0;0;0;1;0" dur="3.6s" repeatCount="indefinite"/></path>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;-10 6;0 0" dur="2.4s" repeatCount="indefinite"/>
+      <g transform="translate(276 70) rotate(-28)">
+        <rect x="-12" y="0" width="24" height="64" rx="12" fill="#f4c9a6" stroke="#8a5a34" stroke-width="2.5"/>
+        <rect x="-7" y="5" width="14" height="13" rx="5" fill="#fbe4d3" stroke="#c99a7a" stroke-width="1.5"/>
+        <path d="M-12 50 Q0 58 12 50 L12 90 L-12 90Z" fill="#5a8fd8" stroke="#2f5d9c" stroke-width="2.5"/>
+      </g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="42" y="58" font-size="46" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+    <g stroke="#9a6a24" stroke-width="3.5" stroke-linecap="round" fill="none" opacity=".75"><path d="M288 168 L288 222"/><path d="M278 210 L288 224 L298 210"/></g>
+  </svg></div></div>
+  <div class="bk-wq u7l3-wq"><div class="q-line"><div class="q-num">?</div><div>Try it with a partner. Which 3 coins did you move, and where did they go?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><div class="u7l3-wsol"><svg viewBox="0 0 300 250" role="img" aria-label="The top coin slides down below the bottom row. The two bottom corner coins slide up to the ends of the second row.">
+      <g fill="none" stroke="#c9c2b4" stroke-width="2.5" stroke-dasharray="5 5"><circle cx="150" cy="40" r="20"/><circle cx="78" cy="166" r="20"/><circle cx="222" cy="166" r="20"/></g>
+      <g fill="#e9b73f" stroke="#8a6212" stroke-width="2.5">
+        <circle cx="126" cy="82" r="20"/><circle cx="174" cy="82" r="20"/>
+        <circle cx="102" cy="124" r="20"/><circle cx="150" cy="124" r="20"/><circle cx="198" cy="124" r="20"/>
+        <circle cx="126" cy="166" r="20"/><circle cx="174" cy="166" r="20"/>
+      </g>
+      <g fill="#d23a2e" stroke="#7a1f16" stroke-width="2.5">
+        <circle class="u7l3-wc u7l3-wc1" cx="150" cy="40" r="20"/>
+        <circle class="u7l3-wc u7l3-wc2" cx="78" cy="166" r="20"/>
+        <circle class="u7l3-wc u7l3-wc3" cx="222" cy="166" r="20"/>
+      </g>
+      <g font-size="18" font-weight="800" fill="#fff" text-anchor="middle" dominant-baseline="central"><text class="u7l3-wc u7l3-wc1" x="150" y="40">1</text><text class="u7l3-wc u7l3-wc2" x="78" y="166">2</text><text class="u7l3-wc u7l3-wc3" x="222" y="166">3</text></g>
+    </svg></div>
+    <div><b>Move the three corner coins!</b> Slide the <b>top</b> coin down, under the middle of the bottom row <b>(1)</b>. Slide the two <b>bottom corner</b> coins up to the two ends of the second row <b>(2, 3)</b>. Now the rows go 4, 3, 2, 1 from the top: the triangle points down. The 7 coins in the middle never move. <span class="muted">Today: more right triangles, and how builders use one to make a perfect square corner.</span></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 7 Right Triangles and Trigonometry · Lesson 3</div>
+  <h1>The Pythagorean Theorem: Finding a Leg, and Squaring a Corner</h1>
+  <p class="lede">Last lesson we knew the two legs and found the hypotenuse. Today we turn the formula around to find a <b>missing leg</b>: how high a ladder reaches, how high a kite flies. Then we use the theorem as a <b>test</b>: is a corner really 90°? That is how carpenters square a deck with just a tape measure.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find a <b>missing leg</b> of a right triangle: <span class="tex">a^2=c^2-b^2</span> (big square minus small square)</li>
+      <li>decide whether the missing side is a <b>leg</b> or the <b>hypotenuse</b>, even when the letters and the picture are different</li>
+      <li>solve real problems with ladders, kites and <b>two triangles</b> that share a side</li>
+      <li><b>test</b> whether a triangle is a right triangle by comparing <span class="tex">a^2+b^2</span> with <span class="tex">c^2</span></li>
+      <li>use the <b>3-4-5 method</b> and equal <b>diagonals</b> to check that a corner is square</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G2</b> Demonstrate an understanding of the Pythagorean theorem by: identifying situations that involve right triangles; verifying the formula; applying the formula; solving problems.</div>
+  <div class="outcome"><b>A1</b> Solve problems that require the manipulation and application of formulas related to: perimeter; area; the Pythagorean theorem; primary trigonometric ratios; income.<br><span class="muted">Today: rearranging the Pythagorean theorem to find a leg.</span></div>
+</section>
+
+<!-- ================= 1. Missing leg ================= -->
+<section class="card" data-ink="s1" data-section="1. Finding a Missing Leg">
+  <div class="sec-h"><span class="badge">1</span><h2>Finding a Missing Leg</h2></div>
+  <p>In a right triangle, the two sides that make the right angle are the <b>legs</b> (<span class="tex">a</span> and <span class="tex">b</span>). The side across from the right angle is the <b>hypotenuse</b> (<span class="tex">c</span>). It is always the longest side. The <b>Pythagorean theorem</b> says <span class="tex">a^2+b^2=c^2</span>.</p>
+  <p>In Lesson 2 you knew both legs and found the hypotenuse. Now you know the hypotenuse and <b>one</b> leg, and you want the other leg.</p>
+  <div class="u7l3-two">
+    <div class="u7l3-fig" data-fig="sq" style="width:300px;height:290px"></div>
+    <div>
+      <p>The squares on the sides of this right triangle have areas 9, 16 and 25.</p>
+      <p>The two small squares together make the big one: <span class="tex">9+16=25</span>.</p>
+      <p>So if you take one small square away from the big one, the other small square is left:</p>
+      <p class="u7l3-c"><span class="tex">25-16=9</span> &nbsp; and &nbsp; <span class="tex">25-9=16</span></p>
+      <p>To find a leg, <b>subtract</b>: (hypotenuse)<sup>2</sup> − (the other leg)<sup>2</sup>.</p>
+    </div>
+  </div>
+  <div class="explainer u7l3-gap" data-explainer="takeAway"></div>
+  <p class="u7l3-gap" data-extra><b>Rearranging the formula.</b> Start with <span class="tex">a^2+b^2=c^2</span>. To get <span class="tex">a^2</span> by itself, subtract <span class="tex">b^2</span> from both sides: <span class="tex">a^2=c^2-b^2</span>.</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u7l3-kv"><div><b>Missing hypotenuse:</b> <span class="tex">c^2=a^2+b^2</span> (<b>add</b> the squares)</div><div><b>Missing leg:</b> <span class="tex">a^2=c^2-b^2</span> or <span class="tex">b^2=c^2-a^2</span> (<b>subtract</b> the squares)</div></div>
+    <ol class="u7l3-steps u7l3-steps2">
+      <li><b>Step 1.</b> Find the hypotenuse: it is across from the right angle.</li>
+      <li><b>Step 2.</b> Write the formula for the side you want.</li>
+      <li><b>Step 3.</b> Substitute and square.</li>
+      <li><b>Step 4.</b> Subtract (or add).</li>
+      <li><b>Step 5.</b> Take the square root.</li>
+      <li><b>Step 6.</b> Check: the hypotenuse is the longest side.</li>
+    </ol></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> When you find a leg, always do <b>big square minus small square</b> (hypotenuse<sup>2</sup> first). A leg is always <b>shorter</b> than the hypotenuse. If your leg is longer than the hypotenuse, you added when you should have subtracted.</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>On the TI-30XIIS, <span class="tex">\sqrt{\ }</span> is the second job of the <kbd>x²</kbd> key. To find <span class="tex">\sqrt{10.6^2-5.6^2}</span> in one go, press <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd> 10.6 <kbd>x²</kbd> <kbd>−</kbd> 5.6 <kbd>x²</kbd> <kbd>)</kbd> <kbd>ENTER</kbd></span>. The screen shows 9.</div>
+    <button class="pill" type="button" data-keys="√ 10.6 x² − 5.6 x² ) =">Show me</button></div>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Step by Step">
+  <h3 class="sub">Leg or hypotenuse? Six steps</h3>
+  <div class="explainer" data-explainer="leg"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Can a leg ever be longer than the hypotenuse? Use the squares to explain.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. The square on the hypotenuse is made of <b>both</b> small squares together, so it is bigger than either one. A bigger square has a longer side, so the hypotenuse is always the longest side.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Find the missing leg</h3></div>
+  <div class="pl">Find the missing leg in each right triangle.</div>
+  <div class="parts c2">
+    <div class="part"><div class="u7l3-prow"><div class="pl">(a)</div><div class="u7l3-fig" data-fig="ex1a" style="width:200px;height:250px"></div></div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The hypotenuse is 17 cm. The legs are 8 cm and <span class="tex">a</span>.<br><span class="tex">a^2=c^2-b^2</span><br><span class="tex">a^2=17^2-8^2=289-64=225</span><br><span class="tex">a=\sqrt{225}=15</span><br>The missing leg is <b>15 cm</b>. (15 is less than 17 ✓)</div></div></div>
+    <div class="part"><div class="u7l3-prow"><div class="pl">(b)</div><div class="u7l3-fig" data-fig="ex1b" style="width:330px;height:250px"></div></div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The hypotenuse is 10.6 cm.<br><span class="tex">b^2=c^2-a^2</span><br><span class="tex">b^2=10.6^2-5.6^2=112.36-31.36=81</span><br><span class="tex">b=\sqrt{81}=9</span><br>The missing leg is <b>9 cm</b>. (9 is less than 10.6 ✓)</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Different letters, different turns</h3></div>
+  <p class="u7l3-p">Right triangles are not always labelled <span class="tex">a</span>, <span class="tex">b</span> and <span class="tex">c</span>, and the right angle is not always at the bottom. Find the right angle first: the side across from it is the hypotenuse.</p>
+  <div class="u7l3-ex2">
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) In <span class="tex">\triangle PQR</span>, the right angle is at <span class="tex">Q</span>. Each side is named by the small letter of the corner across from it.</div>
+        <div class="u7l3-qrow"><span>(i) Which side is the hypotenuse?</span><span class="u7l3-blank" data-reveal="&nbsp;"><span class="tex">q</span> (side <span class="tex">PR</span>)</span></div>
+        <div class="u7l3-qrow"><span>(ii) Write the Pythagorean theorem for <span class="tex">\triangle PQR</span>.</span><span class="u7l3-blank" data-reveal="&nbsp;"><span class="tex">p^2+r^2=q^2</span></span></div>
+        <div class="u7l3-qrow"><span>(iii) Rearrange it to find <span class="tex">r</span>.</span><span class="u7l3-blank" data-reveal="&nbsp;"><span class="tex">r^2=q^2-p^2</span></span></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">q</span> is across from the right angle at <span class="tex">Q</span>, so <span class="tex">q</span> is the hypotenuse: <span class="tex">p^2+r^2=q^2</span>. Subtract <span class="tex">p^2</span> from both sides: <span class="tex">r^2=q^2-p^2</span>.</div></div></div>
+    </div>
+    <div class="u7l3-fig" data-fig="ex2a" style="width:250px;height:220px"></div>
+  </div>
+  <p class="u7l3-p u7l3-gap">For (b) and (c), first decide: is the missing side a <b>leg</b> or the <b>hypotenuse</b>? Then find it to the nearest tenth.</p>
+  <div class="parts c2">
+    <div class="part"><div class="u7l3-prow"><div class="pl">(b)</div><div class="u7l3-fig" data-fig="ex2b" style="width:290px;height:190px"></div></div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">x</span> is across from the right angle: it is the <b>hypotenuse</b>. Add.<br><span class="tex">x^2=7^2+4^2=49+16=65</span><br><span class="tex">x=\sqrt{65}=8.062\ldots</span><br><span class="tex">x\approx8.1</span> m</div></div></div>
+    <div class="part"><div class="u7l3-prow"><div class="pl">(c)</div><div class="u7l3-fig" data-fig="ex2c" style="width:330px;height:190px"></div></div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The 11 ft side is across from the right angle, so <span class="tex">y</span> is a <b>leg</b>. Subtract.<br><span class="tex">y^2=11^2-6^2=121-36=85</span><br><span class="tex">y=\sqrt{85}=9.219\ldots</span><br><span class="tex">y\approx9.2</span> ft (less than 11 ✓)</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exm" data-section="Extra Example: More Missing Sides">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More missing sides</h3></div>
+  <p class="u7l3-p">Each triangle is a right triangle. Is the missing side a leg or the hypotenuse? Find it (to the nearest tenth when it does not come out even).</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) hypotenuse 26 cm, one leg 10 cm</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Leg: <span class="tex">26^2-10^2=676-100=576</span>, <span class="tex">\sqrt{576}=24</span> cm</div></div></div>
+    <div class="part"><div class="pl">(b) legs 2.5 m and 6 m</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Hypotenuse: <span class="tex">2.5^2+6^2=6.25+36=42.25</span>, <span class="tex">\sqrt{42.25}=6.5</span> m</div></div></div>
+    <div class="part"><div class="pl">(c) hypotenuse 9.7 ft, one leg 6.1 ft</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Leg: <span class="tex">9.7^2-6.1^2=94.09-37.21=56.88</span>, <span class="tex">\sqrt{56.88}=7.541\ldots\approx7.5</span> ft</div></div></div>
+  </div>
+</section>
+
+<!-- ================= 2. Real problems ================= -->
+<section class="card" data-ink="s2" data-section="2. Ladders, Kites and Other Real Problems">
+  <div class="sec-h"><span class="badge">2</span><h2>Ladders, Kites and Other Real Problems</h2></div>
+  <p>Many real problems hide a right triangle: a wall and the ground, a pole and its rope, a screen and its diagonal. <b>Draw a sketch</b>, mark the right angle, and label what you know. Then ask: is the missing side a <b>leg</b> or the <b>hypotenuse</b>?</p>
+  <div class="def amber"><b>Ladder safety.</b> A common safety rule for a straight or extension ladder is the <b>4-to-1 rule</b>: for every 4 m of height up the wall, move the foot of the ladder 1 m out from the wall. So the distance out should be about the <b>height ÷ 4</b>. (This makes an angle of about 75° with the ground.)</div>
+  <div class="explainer" data-explainer="ladder"></div>
+  <div class="part think u7l3-gap" data-extra><div class="pl"><span class="think-tag">Think</span> Jordan has a 6 m ladder. Can it reach a window 6 m up the wall? Explain.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. The ladder is the <b>hypotenuse</b>, so it is always longer than the height it reaches. Its foot has to be out from the wall, so it reaches less than 6 m. (With the foot 1.5 m out: <span class="tex">\sqrt{6^2-1.5^2}=\sqrt{33.75}\approx5.8</span> m.)</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Jordan’s ladder</h3></div>
+  <div class="u7l3-exfig">
+    <div>
+      <p class="u7l3-p">Jordan leans a 7.3 m extension ladder against the wall of a house in Red Deer. The foot of the ladder is 1.8 m from the wall.</p>
+      <div class="part"><div class="pl">(a) How high up the wall does the ladder reach, to the nearest tenth of a metre?</div><div class="work" style="--h:150px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The ladder is across from the right angle (wall meets ground), so the ladder is the hypotenuse. The height <span class="tex">h</span> is a leg.<br><span class="tex">h^2=7.3^2-1.8^2=53.29-3.24=50.05</span><br><span class="tex">h=\sqrt{50.05}=7.074\ldots</span><br>The ladder reaches about <b>7.1 m</b> up the wall.</div></div></div>
+    </div>
+    <div class="u7l3-fig" data-fig="ex3" style="width:230px;height:300px"></div>
+  </div>
+  <div class="part u7l3-gap"><div class="pl">(b) Does Jordan’s ladder follow the 4-to-1 rule? Explain.</div><div class="work" style="--h:80px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">By the rule, the foot should be about <span class="tex">7.1\div4\approx1.8</span> m from the wall. It is 1.8 m out, so <b>yes</b>, the ladder follows the rule.</div></div></div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>All in one: <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd> 7.3 <kbd>x²</kbd> <kbd>−</kbd> 1.8 <kbd>x²</kbd> <kbd>)</kbd> <kbd>ENTER</kbd></span> gives 7.074…</div>
+    <button class="pill" type="button" data-keys="√ 7.3 x² − 1.8 x² ) =">Show me</button></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Amara’s kite</h3></div>
+  <div class="u7l3-exfig">
+    <div>
+      <p class="u7l3-p">Amara is flying a kite at Nose Hill Park. She holds the string 1.2 m above the ground. The string is 45 m long and pulled straight. The kite is directly above a spot that is 28 m from Amara.</p>
+      <div class="part"><div class="pl">How high is the kite above the ground, to the nearest tenth of a metre?</div><div class="work" style="--h:190px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The right triangle is at the height of her hand. The string (45 m) is the hypotenuse. The height <span class="tex">h</span> above her hand is a leg.<br><span class="tex">h^2=45^2-28^2=2\,025-784=1\,241</span><br><span class="tex">h=\sqrt{1\,241}=35.227\ldots</span> m above her hand<br>Add the height of her hand: <span class="tex">35.227\ldots+1.2=36.427\ldots</span><br>The kite is about <b>36.4 m</b> above the ground.</div></div></div>
+    </div>
+    <div class="u7l3-fig" data-fig="ex4" style="width:330px;height:300px"></div>
+  </div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>All in one, hand included: <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd> 45 <kbd>x²</kbd> <kbd>−</kbd> 28 <kbd>x²</kbd> <kbd>)</kbd> <kbd>+</kbd> 1.2 <kbd>ENTER</kbd></span> gives 36.427…</div>
+    <button class="pill" type="button" data-keys="√ 45 x² − 28 x² ) + 1.2 =">Show me</button></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2k" data-section="2. The Kite, Step by Step">
+  <h3 class="sub">Read the question again</h3>
+  <div data-extra><div class="explainer" data-explainer="kite"></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Read the question again at the end. The triangle gave the height above Amara’s <b>hand</b>, but the question asked for the height above the <b>ground</b>.</div></div>
+</section>
+
+<section class="card" data-ink="s2c" data-section="2. Two Triangles That Share a Side">
+  <h3 class="sub">Two triangles that share a side</h3>
+  <p>Some diagrams have <b>two</b> right triangles that share a side. Find the shared side from the first triangle, then use it in the second.</p>
+  <div class="def amber"><b>Keep the full value.</b> Keep the full calculator value of the shared side (or its square) for the next step. Round only at the very end. Rounding in the middle can change your final answer.</div>
+  <div class="explainer" data-explainer="two"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Find x, then y</h3></div>
+  <div class="u7l3-exfig">
+    <div class="part"><div class="pl">Find <span class="tex">x</span> and <span class="tex">y</span>, to the nearest tenth of a centimetre.</div><div class="work" style="--h:220px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Left triangle: 9.5 cm is the hypotenuse, <span class="tex">x</span> is a leg.<br><span class="tex">x^2=9.5^2-4.1^2=90.25-16.81=73.44</span>, so <span class="tex">x=\sqrt{73.44}=8.569\ldots\approx8.6</span> cm<br>Right triangle: the legs are <span class="tex">x</span> and 6.3 cm, and <span class="tex">y</span> is the hypotenuse. Use <span class="tex">x^2=73.44</span> (the full value).<br><span class="tex">y^2=73.44+6.3^2=73.44+39.69=113.13</span>, so <span class="tex">y=\sqrt{113.13}=10.636\ldots\approx10.6</span> cm<br><span class="muted">(If you used the rounded 8.6: <span class="tex">8.6^2+6.3^2=113.65</span> and <span class="tex">y\approx10.7</span>, which is a little off.)</span></div></div></div>
+    <div class="u7l3-fig" data-fig="ex5" style="width:360px;height:300px"></div>
+  </div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>First <span class="keys">9.5 <kbd>x²</kbd> <kbd>−</kbd> 4.1 <kbd>x²</kbd> <kbd>ENTER</kbd></span> gives <span class="tex">x^2=73.44</span>. Then <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd> 73.44 <kbd>+</kbd> 6.3 <kbd>x²</kbd> <kbd>)</kbd> <kbd>ENTER</kbd></span> gives <span class="tex">y=10.636\ldots</span></div>
+    <div class="u7l3-pcol"><button class="pill" type="button" data-keys="9.5 x² − 4.1 x² =">x²</button><button class="pill" type="button" data-keys="√ 73.44 + 6.3 x² ) =">y</button></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exr" data-section="Extra Example: More Real Problems">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More real problems</h3></div>
+  <p class="u7l3-p">Draw a sketch for each one. Leg or hypotenuse? Answer to the nearest tenth.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A 12 ft ladder leans on a wall with its foot 3 ft out. How high does it reach? Does it follow the 4-to-1 rule?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The ladder is the hypotenuse. <span class="tex">h^2=12^2-3^2=144-9=135</span>, <span class="tex">h=\sqrt{135}=11.618\ldots\approx11.6</span> ft. Rule: <span class="tex">11.6\div4\approx2.9</span> ft out. 3 ft is close, so yes.</div></div></div>
+    <div class="part"><div class="pl">(b) A wire 15 m long runs from the top of a 12 m flagpole to a stake in the ground. How far is the stake from the bottom of the pole?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The wire is the hypotenuse. <span class="tex">d^2=15^2-12^2=225-144=81</span>, <span class="tex">d=\sqrt{81}=9</span> m.</div></div></div>
+    <div class="part"><div class="pl">(c) A ramp is 6.1 m long and rises 0.5 m. How far along the ground does it go?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The ramp is the hypotenuse. <span class="tex">g^2=6.1^2-0.5^2=37.21-0.25=36.96</span>, <span class="tex">g=\sqrt{36.96}=6.079\ldots\approx6.1</span> m. (Almost the same as the ramp: a gentle ramp is nearly flat.)</div></div></div>
+  </div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–9">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 3 · Questions 1–9</h2>
+  <p class="pr-t">Get your calculator. Draw a sketch for every word problem, and ask: leg or hypotenuse?</p>
+  <div class="pr-chips">
+    <span><b>1</b>Name the hypotenuse</span>
+    <span><b>2</b>Missing legs</span>
+    <span><b>3</b>Legs to the tenth</span>
+    <span><b>4</b>Leg or hypotenuse?</span>
+    <span><b>5</b>Tyler’s mistake</span>
+    <span><b>6</b>A TV screen</span>
+    <span><b>7</b>The painter’s ladder</span>
+    <span><b>8</b>Kai’s drone</span>
+    <span><b>9</b>The tent pole</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 9.</span><a class="pill" href="../../../#/lesson/u7l3">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Is it a right triangle? ================= -->
+<section class="card" data-ink="s3" data-section="3. Is It a Right Triangle?">
+  <div class="sec-h"><span class="badge">3</span><h2>Is It a Right Triangle?</h2></div>
+  <p>The Pythagorean theorem works <b>only</b> for right triangles. So we can use it as a test. Square the two shorter sides and add them. Compare the total with the square of the <b>longest</b> side.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Right triangle test.</b> Let <span class="tex">c</span> be the <b>longest</b> side, and <span class="tex">a</span> and <span class="tex">b</span> the two shorter sides.
+    <table class="u7l3-rt">
+      <tr><td>If <span class="tex">a^2+b^2=c^2</span>:</td><td>the triangle <b>is</b> a right triangle. The right angle is across from <span class="tex">c</span>.</td></tr>
+      <tr><td>If <span class="tex">a^2+b^2&gt;c^2</span>:</td><td>not a right triangle. The biggest angle is <b>less</b> than 90° (the corner is too closed).</td></tr>
+      <tr><td>If <span class="tex">a^2+b^2&lt;c^2</span>:</td><td>not a right triangle. The biggest angle is <b>more</b> than 90° (the corner is too open).</td></tr>
+    </table></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The longest side must be <span class="tex">c</span>, even when it is not written last. For sides 13, 5 and 12, test <span class="tex">5^2+12^2</span> against <span class="tex">13^2</span>.</div></div>
+  <div class="explainer u7l3-gap" data-explainer="test"></div>
+</section>
+
+<section class="card" data-extra data-ink="s3x" data-section="3. The Longest Side Trap">
+  <h3 class="sub">What goes wrong when <span class="tex">c</span> is not the longest side</h3>
+  <div class="explainer" data-explainer="trap"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Why can’t <span class="tex">a^2+b^2=c^2</span> work if <span class="tex">c</span> is not the longest side?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The square on <span class="tex">c</span> is supposed to hold both of the other squares. If another side is longer than <span class="tex">c</span>, its square alone is already bigger than <span class="tex">c^2</span>, so the two sides can never balance.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Right triangle or not?</h3></div>
+  <div class="part"><div class="pl">Is each triangle a right triangle? Complete the table.</div>
+    <table class="u7l3-tbl">
+      <tr><th>Sides</th><th>Shorter sides: <span class="tex">a^2+b^2</span></th><th>Longest side: <span class="tex">c^2</span></th><th>Equal?</th><th>Right triangle?</th></tr>
+      <tr><td>(a) 9 cm, 40 cm, 41 cm</td><td><span data-reveal="&nbsp;"><span class="tex">81+1\,600=1\,681</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">41^2=1\,681</span></span></td><td><span data-reveal="&nbsp;">yes</span></td><td><span data-reveal="&nbsp;">yes</span></td></tr>
+      <tr><td>(b) 7 m, 9 m, 12 m</td><td><span data-reveal="&nbsp;"><span class="tex">49+81=130</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">12^2=144</span></span></td><td><span data-reveal="&nbsp;">no (less)</span></td><td><span data-reveal="&nbsp;">no, angle <span class="tex">&gt;90^\circ</span></span></td></tr>
+      <tr><td>(c) 3.3 ft, 5.6 ft, 6.5 ft</td><td><span data-reveal="&nbsp;"><span class="tex">10.89+31.36=42.25</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">6.5^2=42.25</span></span></td><td><span data-reveal="&nbsp;">yes</span></td><td><span data-reveal="&nbsp;">yes</span></td></tr>
+      <tr><td>(d) 15 in, 9 in, 13 in</td><td><span data-reveal="&nbsp;"><span class="tex">81+169=250</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">15^2=225</span></span></td><td><span data-reveal="&nbsp;">no (more)</span></td><td><span data-reveal="&nbsp;">no, angle <span class="tex">&lt;90^\circ</span></span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">In (d), the longest side is 15 in, so <span class="tex">c=15</span> (not 13, the last one written).</div></div></div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For (c): <span class="keys">3.3 <kbd>x²</kbd> <kbd>+</kbd> 5.6 <kbd>x²</kbd> <kbd>ENTER</kbd></span> gives 42.25, and <span class="keys">6.5 <kbd>x²</kbd> <kbd>ENTER</kbd></span> gives 42.25. Equal!</div>
+    <div class="u7l3-pcol"><button class="pill" type="button" data-keys="3.3 x² + 5.6 x² =">a² + b²</button><button class="pill" type="button" data-keys="6.5 x² =">c²</button></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Harjit’s shelf bracket</h3></div>
+  <div class="u7l3-exfig">
+    <div>
+      <p class="u7l3-p">In shop class, Harjit welds a steel shelf bracket. The part on the wall is 30 cm long, the part under the shelf is 40 cm long, and the brace between their ends is 49 cm long.</p>
+      <div class="part"><div class="pl">(a) Is the corner between the wall and the shelf a right angle? Show how you know.</div><div class="work" style="--h:120px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">30^2+40^2=900+1\,600=2\,500</span> and <span class="tex">49^2=2\,401</span><br><span class="tex">2\,500\ne2\,401</span>, so it is <b>not</b> a right triangle. The corner is not 90°.<br><span class="muted">(<span class="tex">a^2+b^2</span> is bigger, so the corner is less than 90°: the shelf would tilt down.)</span></div></div></div>
+    </div>
+    <div class="u7l3-fig" data-fig="ex7" style="width:300px;height:270px"></div>
+  </div>
+  <div class="part u7l3-gap"><div class="pl">(b) How long should the brace be to make a right angle?</div><div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">c=\sqrt{2\,500}=50</span> cm. The brace should be <b>50 cm</b> long.</div></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ext" data-section="Extra Example: More Right-Triangle Tests">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More right-triangle tests</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) 16 cm, 30 cm, 34 cm</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">16^2+30^2=256+900=1\,156</span> and <span class="tex">34^2=1\,156</span>. Equal: <b>yes</b>, a right triangle.</div></div></div>
+    <div class="part"><div class="pl">(b) 6 m, 8 m, 11 m</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6^2+8^2=36+64=100</span> and <span class="tex">11^2=121</span>. 100 is less: <b>no</b>, the biggest angle is more than 90°.</div></div></div>
+    <div class="part"><div class="pl">(c) 6.5 ft, 2.5 ft, 6 ft</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Longest: 6.5. <span class="tex">2.5^2+6^2=6.25+36=42.25</span> and <span class="tex">6.5^2=42.25</span>. Equal: <b>yes</b>.</div></div></div>
+  </div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> A triangle has three equal sides, 5 cm each. Without any math, can it be a right triangle?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. In a right triangle the hypotenuse is always <b>longer</b> than each leg. With three equal sides, no side is the longest. (Check: <span class="tex">5^2+5^2=50</span>, but <span class="tex">5^2=25</span>.)</div></div></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u7l3"></section>
+
+<!-- ================= 4. Squaring a corner ================= -->
+<section class="card" data-ink="s4" data-section="4. Squaring a Corner: 3-4-5">
+  <div class="sec-h"><span class="badge">4</span><h2>Squaring a Corner: the 3-4-5 Method</h2></div>
+  <p>A <b>square corner</b> is a 90° corner. Builders need square corners for decks, sheds, foundations, fences and garden beds. A carpenter’s square is too small for a big job, but a tape measure and the Pythagorean theorem work for any size.</p>
+  <div class="u7l3-two">
+    <div class="u7l3-fig" data-fig="corner" style="width:300px;height:250px"></div>
+    <div class="def"><b>The 3-4-5 method</b>
+      <ol class="u7l3-steps">
+        <li><b>Step 1.</b> Measure 3 units along one side from the corner and make a mark.</li>
+        <li><b>Step 2.</b> Measure 4 units along the other side and make a mark.</li>
+        <li><b>Step 3.</b> Measure the diagonal between the two marks. If it is exactly 5 units, the corner is square, because <span class="tex">3^2+4^2=9+16=25=5^2</span>.</li>
+      </ol>
+      <div class="u7l3-note">If the diagonal is <b>too long</b>, the corner is more than 90°: push the sides closer together. If it is <b>too short</b>, the corner is less than 90°: open the sides up.</div></div>
+  </div>
+  <div class="explainer u7l3-gap" data-explainer="deck"></div>
+  <div class="def u7l3-gap"><b>Key idea</b> &nbsp; <b>Multiples of 3-4-5 also work</b>: multiply all three numbers by the same number.
+    <div class="u7l3-mult"><span><b>× 2:</b> 6-8-10</span><span><b>× 3:</b> 9-12-15</span><span><b>× 4:</b> 12-16-20</span><span><b>× 0.5:</b> 1.5-2-2.5</span><span class="muted">(any unit: ft, m, …)</span></div>
+    Use the <b>biggest</b> triangle that fits the job: a small measuring error matters less on a big triangle.</div>
+  <p>Builders have used this idea for thousands of years. Today framers, landscapers and concrete crews still use it, along with laser tools.</p>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Why Bigger Is Better">
+  <h3 class="sub">Why a bigger triangle gives a better check</h3>
+  <div class="explainer" data-explainer="bigger"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Does the 3-4-5 method work in metres too? In inches?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Yes. <span class="tex">3^2+4^2=5^2</span> is true for any unit, as long as all three measurements use the <b>same</b> unit: 3 m, 4 m, 5 m or 3 in, 4 in, 5 in.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Mateo’s deck</h3></div>
+  <p class="u7l3-p">Mateo is building a deck frame in his backyard in Airdrie. He measures 6 ft along one rim board from the corner and 8 ft along the other, and marks both spots. The diagonal between the marks is 10 ft 2 in.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) What should the diagonal be? Why?</div><div class="work" style="--h:140px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6^2+8^2=36+64=100=10^2</span><br>For a square corner the diagonal should be exactly <b>10 ft</b> (6-8-10 is 3-4-5 times 2).</div></div></div>
+    <div class="part"><div class="pl">(b) Is the corner square? What should Mateo do?</div><div class="work" style="--h:140px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> 10 ft 2 in is too long, so the corner is more than 90°.<br>Mateo should push the boards a little closer together until the diagonal is 10 ft.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. Checking a Rectangle">
+  <h3 class="sub">Checking a rectangle with its diagonals</h3>
+  <p>A rectangle has two <b>diagonals</b> (corner to opposite corner), and in a rectangle they are <b>equal</b>. If one diagonal is longer than the other, the corners are not square: the shape has been pushed over.</p>
+  <div class="explainer" data-explainer="diag"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Noor’s garden bed</h3></div>
+  <div class="u7l3-exfig">
+    <div>
+      <p class="u7l3-p">Noor builds a frame for a raised garden bed. It should be a rectangle 1.2 m wide and 2.4 m long.</p>
+      <div class="part"><div class="pl">(a) How long should each diagonal be, to the nearest centimetre?</div><div class="work" style="--h:120px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The diagonal is the hypotenuse of a right triangle with legs 1.2 m and 2.4 m.<br><span class="tex">d^2=1.2^2+2.4^2=1.44+5.76=7.2</span><br><span class="tex">d=\sqrt{7.2}=2.683\ldots\approx2.68</span> m</div></div></div>
+    </div>
+    <div class="u7l3-fig" data-fig="ex9" style="width:320px;height:200px"></div>
+  </div>
+  <div class="part u7l3-gap"><div class="pl">(b) Noor measures the two diagonals: 2.71 m and 2.65 m. Is her frame a rectangle with square corners? What should she do?</div><div class="work" style="--h:90px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> In a rectangle the diagonals are equal, and these are not. She should push the two corners at the ends of the longer diagonal (2.71 m) toward each other until both diagonals measure about 2.68 m.</div></div></div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys"><kbd>2nd</kbd><kbd>x²</kbd> 1.2 <kbd>x²</kbd> <kbd>+</kbd> 2.4 <kbd>x²</kbd> <kbd>)</kbd> <kbd>ENTER</kbd></span> gives 2.683…</div>
+    <button class="pill" type="button" data-keys="√ 1.2 x² + 2.4 x² ) =">Show me</button></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exq" data-section="Extra Example: Square It Up">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>Square it up</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A fence crew uses a 3-4-5 triangle times 1.5. What are its three sides, in metres?</div><div class="work" style="--h:100px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3\times1.5=4.5</span>, <span class="tex">4\times1.5=6</span>, <span class="tex">5\times1.5=7.5</span>: <b>4.5 m, 6 m, 7.5 m</b></div></div></div>
+    <div class="part"><div class="pl">(b) Marks at 9 ft and 12 ft. The diagonal reads 14 ft 9 in. Square? What should you do?</div><div class="work" style="--h:100px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">It should be 15 ft (9-12-15). 14 ft 9 in is too <b>short</b>: the corner is less than 90°. <b>Open</b> the sides up.</div></div></div>
+    <div class="part"><div class="pl">(c) A shed floor should be 8 ft by 10 ft. How long should each diagonal be, to the nearest tenth of a foot?</div><div class="work" style="--h:100px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">d^2=8^2+10^2=64+100=164</span>, <span class="tex">d=\sqrt{164}=12.806\ldots\approx12.8</span> ft</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Missing leg:</b> subtract. <span class="tex">a^2=c^2-b^2</span>, big square minus small square, then <span class="tex">\sqrt{\ }</span>. Missing hypotenuse: add. A leg is always <b>shorter</b> than the hypotenuse.</div>
+    <div><b>Real problems:</b> sketch, mark the right angle, ask “leg or hypotenuse?”. Read the question again at the end (hand height!). With two triangles, keep the <b>full value</b> of the shared side.</div>
+    <div><b>Right triangle test:</b> <span class="tex">c</span> = the longest side. <span class="tex">a^2+b^2=c^2</span>: right. Bigger: the angle is less than 90°. Smaller: more than 90°.</div>
+    <div><b>Square corners:</b> 3-4-5 (or 6-8-10, 9-12-15…). Diagonal too long: push in. Too short: open up. A rectangle’s two <b>diagonals are equal</b>.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u7l3">
+    <div><div class="kicker">Your turn</div><b>Assignment 3 · Questions 10–17</b><div class="muted">Right triangle or not, Ana’s mistake, Wei’s garden shed, a soccer field in Lethbridge, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l4/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 4 — Similar Right Triangles and the Tangent Ratio</b><div class="muted">Triangles with the same angle have sides in the same ratio. That ratio gets a name, and the calculator has a key for it.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+</main>
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u7l3.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u7l3', homeHref: '../../', title: '7.3 Finding a Leg, and Squaring a Corner' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

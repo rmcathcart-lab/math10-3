@@ -9,7 +9,7 @@
   /* lessons that have a lesson page under lessons/ (examples + the teacher's class notes); the home page and the
    * lesson sidebar link to it as lessons/u1/l7/?class=<block>. The coordinator switches lessons on here. */
   root.HW.TEACHING = { base: 'lessons/',
-    lessons: ['u1l0', 'u1l1', 'u1l2', 'u1l3', 'u1l4', 'u1l5', 'u1l6', 'u1l7', 'u1l8', 'u1l9', 'u1l10', 'u1l11', 'u2l1', 'u2l2', 'u2l3', 'u2l4', 'u2l5', 'u2l6', 'u2l7', 'u2l8', 'u2l9', 'u3l1', 'u3l2', 'u3l3', 'u3l4', 'u3l5', 'u3l6', 'u3l7', 'u3l8', 'u3l9', 'u3l10', 'u3l11', 'u3l12', 'u4l1', 'u4l2', 'u4l3', 'u4l4', 'u4l5', 'u4l6', 'u4l7', 'u5l1', 'u5l2', 'u5l3', 'u5l4', 'u5l5', 'u5l6', 'u5l7', 'u5l8', 'u5l9'] };
+    lessons: ['u1l0', 'u1l1', 'u1l2', 'u1l3', 'u1l4', 'u1l5', 'u1l6', 'u1l7', 'u1l8', 'u1l9', 'u1l10', 'u1l11', 'u2l1', 'u2l2', 'u2l3', 'u2l4', 'u2l5', 'u2l6', 'u2l7', 'u2l8', 'u2l9', 'u3l1', 'u3l2', 'u3l3', 'u3l4', 'u3l5', 'u3l6', 'u3l7', 'u3l8', 'u3l9', 'u3l10', 'u3l11', 'u3l12', 'u4l1', 'u4l2', 'u4l3', 'u4l4', 'u4l5', 'u4l6', 'u4l7', 'u5l1', 'u5l2', 'u5l3', 'u5l4', 'u5l5', 'u5l6', 'u5l7', 'u5l8', 'u5l9', 'u6l1', 'u6l2', 'u6l3', 'u6l4', 'u6l5', 'u6l6', 'u6l7', 'u7l1', 'u7l2', 'u7l3', 'u7l4', 'u7l5', 'u7l6', 'u7l7', 'u7l8', 'u7l9', 'u7l10'] };
   /* project: { id, title } = the unit's guided project (js/projects/u<N>.js, opened at #/project/<id>). The class calendar
      gives it a project work day ('p' + unit) right before the unit's review lesson (the last lesson listed). */
   root.HW.CATALOG = [
@@ -67,7 +67,7 @@
       { id: 'u5l7', num: '7', title: 'Transversals: Naming the Angle Pairs' },
       { id: 'u5l8', num: '8', title: 'Parallel Lines and Transversals: Finding Missing Angles' },
       { id: 'u5l9', num: '9', title: 'Unit 5 Review' }] },
-    { unit: 6, title: 'Similarity and Scale', outcomes: 'G3', lessons: [
+    { unit: 6, title: 'Similarity and Scale', outcomes: 'G3', project: { id: 'u6', title: 'Scale It' }, lessons: [
       { id: 'u6l1', num: '1', title: 'Similar Polygons and Scale Factor' },
       { id: 'u6l2', num: '2', title: 'Are They Similar? Checking Angles and Side Ratios' },
       { id: 'u6l3', num: '3', title: 'Drawing Enlargements and Reductions' },
@@ -75,7 +75,7 @@
       { id: 'u6l5', num: '5', title: 'Similar Triangles' },
       { id: 'u6l6', num: '6', title: 'Indirect Measurement: Shadows and Mirrors' },
       { id: 'u6l7', num: '7', title: 'Unit 6 Review' }] },
-    { unit: 7, title: 'Right Triangles and Trigonometry', outcomes: 'G2 · G4 · A1', lessons: [
+    { unit: 7, title: 'Right Triangles and Trigonometry', outcomes: 'G2 · G4 · A1', project: { id: 'u7', title: 'Ramp It Up' }, lessons: [
       { id: 'u7l1', num: '1', title: 'Squares, Square Roots and Triangle Basics' },
       { id: 'u7l2', num: '2', title: 'The Pythagorean Theorem: Finding the Hypotenuse' },
       { id: 'u7l3', num: '3', title: 'The Pythagorean Theorem: Finding a Leg, and Squaring a Corner' },

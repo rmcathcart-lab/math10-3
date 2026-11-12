@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 6 Review · Math 10-3 6.7</title>
+<meta name="description" content="Math 10-3 Unit 6 Lesson 7: the Unit 6 review. Every skill from the unit on one page (similar polygons and scale factor, testing for similarity, drawing enlargements and reductions, maps and floor plans, similar triangles, shadows and mirrors), worked examples that mix the topics, and a practice unit test. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u6l7.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u6l7">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Birthday Bet">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Birthday Bet</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">There are <b>23 people</b> in a room. There are 365 days in a year.</p><p class="vw-ctx">Two people “match” if they have the <b>same birthday</b> (same month and day, any year).</p><p class="vw-ask">What is the chance that at least two of the 23 people match?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A calendar flipping through the months beside a birthday cake with flickering candles">
+    <!-- the calendar: the month flips over and over -->
+    <rect x="22" y="44" width="132" height="150" rx="12" fill="#fffaf1" stroke="#9a6a24" stroke-width="3"/>
+    <rect x="22" y="44" width="132" height="40" rx="12" fill="#c93a33"/><rect x="22" y="70" width="132" height="14" fill="#c93a33"/>
+    <circle cx="56" cy="44" r="6" fill="#6e4a1c"/><circle cx="120" cy="44" r="6" fill="#6e4a1c"/>
+    <g font-size="21" font-weight="800" fill="#fff" text-anchor="middle">
+      <text x="88" y="72" opacity="0">JAN<animate attributeName="opacity" values="1;1;0;0;0;0;0;0" keyTimes="0;0.12;0.125;0.25;0.5;0.75;0.875;1" dur="6s" repeatCount="indefinite"/></text>
+      <text x="88" y="72" opacity="0">APR<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.125;0.13;0.25;0.255;1" dur="6s" repeatCount="indefinite"/></text>
+      <text x="88" y="72" opacity="0">JUL<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25;0.255;0.375;0.38;1" dur="6s" repeatCount="indefinite"/></text>
+      <text x="88" y="72" opacity="0">SEP<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.375;0.38;0.5;0.505;1" dur="6s" repeatCount="indefinite"/></text>
+      <text x="88" y="72" opacity="0">OCT<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5;0.505;0.625;0.63;1" dur="6s" repeatCount="indefinite"/></text>
+      <text x="88" y="72" opacity="0">NOV<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.625;0.63;0.75;0.755;1" dur="6s" repeatCount="indefinite"/></text>
+      <text x="88" y="72" opacity="0">DEC<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.75;0.755;0.875;0.88;1" dur="6s" repeatCount="indefinite"/></text>
+      <text x="88" y="72" opacity="0">MAY<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.875;0.88;1" dur="6s" repeatCount="indefinite"/></text>
+    </g>
+    <g fill="#e2d3b9"><rect x="36" y="98" width="16" height="13" rx="3"/><rect x="58" y="98" width="16" height="13" rx="3"/><rect x="80" y="98" width="16" height="13" rx="3"/><rect x="102" y="98" width="16" height="13" rx="3"/><rect x="124" y="98" width="16" height="13" rx="3"/>
+      <rect x="36" y="119" width="16" height="13" rx="3"/><rect x="58" y="119" width="16" height="13" rx="3"/><rect x="80" y="119" width="16" height="13" rx="3"/><rect x="102" y="119" width="16" height="13" rx="3"/><rect x="124" y="119" width="16" height="13" rx="3"/>
+      <rect x="36" y="140" width="16" height="13" rx="3"/><rect x="58" y="140" width="16" height="13" rx="3"/><rect x="80" y="140" width="16" height="13" rx="3"/><rect x="102" y="140" width="16" height="13" rx="3"/><rect x="124" y="140" width="16" height="13" rx="3"/>
+      <rect x="36" y="161" width="16" height="13" rx="3"/><rect x="58" y="161" width="16" height="13" rx="3"/><rect x="80" y="161" width="16" height="13" rx="3"/></g>
+    <!-- a day lights up here and there on the calendar -->
+    <rect x="80" y="119" width="16" height="13" rx="3" fill="#e8a01e" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/></rect>
+    <rect x="124" y="140" width="16" height="13" rx="3" fill="#e8a01e" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="0.75s" repeatCount="indefinite"/></rect>
+    <!-- the cake -->
+    <rect x="186" y="150" width="120" height="50" rx="8" fill="#f2c9d6" stroke="#9a6a24" stroke-width="3"/>
+    <path d="M186 164 q15 12 30 0 t30 0 t30 0 t30 0" fill="none" stroke="#fffaf1" stroke-width="5"/>
+    <rect x="200" y="122" width="92" height="30" rx="6" fill="#fffaf1" stroke="#9a6a24" stroke-width="3"/>
+    <g fill="#1f5bd6"><rect x="218" y="96" width="7" height="26" rx="2"/><rect x="243" y="96" width="7" height="26" rx="2"/><rect x="268" y="96" width="7" height="26" rx="2"/></g>
+    <g fill="#e8a01e">
+      <path d="M221.5 80 q6 9 0 15 q-6 -6 0 -15z"><animateTransform attributeName="transform" type="scale" values="1 1;1.08 0.9;0.95 1.1;1 1" dur="0.9s" additive="sum" repeatCount="indefinite"/></path>
+      <path d="M246.5 80 q6 9 0 15 q-6 -6 0 -15z"><animateTransform attributeName="transform" type="translate" values="0 0;0.8 -0.8;-0.6 0.5;0 0" dur="0.7s" repeatCount="indefinite"/></path>
+      <path d="M271.5 80 q6 9 0 15 q-6 -6 0 -15z"><animateTransform attributeName="transform" type="translate" values="0 0;-0.8 -0.6;0.6 0.6;0 0" dur="0.8s" repeatCount="indefinite"/></path>
+    </g>
+    <rect x="176" y="198" width="140" height="8" rx="4" fill="#9a6a24"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.6s" repeatCount="indefinite"/><text x="290" y="52" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u6l7-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b><span>about 6%</span></div>
+      <div class="opt"><b>B</b><span>about 25%</span></div>
+      <div class="opt right"><b>C</b><span>about 50%</span></div>
+      <div class="opt"><b>D</b><span>about 99%</span></div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>C: about 50%. It is a coin flip!</b> It feels too high because we think “does someone match <b>me</b>?” But <b>any two</b> people can match. 23 people make <span class="tex">23\times22\div2=253</span> pairs, and that is a lot of chances. With 30 people the chance is about 70%; with 57 people it is 99%. <span class="muted">Let’s test it: call out birthday months, then days. Do we have a match?</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 6 Similarity and Scale · Lesson 7</div>
+  <h1>Unit 6 Review</h1>
+  <p class="lede">Every rule from the unit on <b>one page</b>, then worked examples that <b>mix the topics</b>, set up like the unit test. Try each example on your own first. Then we check it together.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>match the parts of <b>similar</b> figures, find the <b>scale factor</b> <span class="tex">k</span>, and find missing sides and angles</li>
+      <li>decide if two figures are similar with <b>both tests</b>: angles and side ratios</li>
+      <li>draw an <b>enlargement</b> or a <b>reduction</b> on a grid or by projection</li>
+      <li>use a <b>scale</b> to go between a map or floor plan and real life</li>
+      <li>show two triangles are similar (<b>AA</b>) and find a missing side</li>
+      <li>find a height I can’t reach with <b>shadows</b> or a <b>mirror</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G3</b> Demonstrate an understanding of similarity of convex polygons, including regular and irregular polygons.</div>
+</section>
+
+<!-- ================= 1. The unit on one page ================= -->
+<section class="card" data-ink="s1" data-section="1. The Unit on One Page">
+  <div class="sec-h"><span class="badge">1</span><h2>The Unit on One Page</h2></div>
+  <p>Use this page to study. Each row is one lesson: what to do, and a short example. The small tag shows the lesson it came from.</p>
+  <table class="u6l7-one">
+    <tr><th>Skill</th><th>What to do</th><th>Example</th></tr>
+    <tr><td><b>Similar polygons and scale factor</b><i>6.1</i></td><td><b>Similar</b> figures have the same shape: matching (<b>corresponding</b>) angles are equal and matching sides are in the same ratio. Name them in matching order: <span class="tex">ABCD\sim PQRS</span> means <span class="tex">A\leftrightarrow P</span>, <span class="tex">B\leftrightarrow Q</span>, … <b>Scale factor</b> <span class="tex">k=\text{new length}\div\text{original length}</span>. New <span class="tex">=k\times</span> original; original <span class="tex">=</span> new <span class="tex">\div\,k</span>. <span class="tex">k&gt;1</span>: enlargement; <span class="tex">k&lt;1</span>: reduction; <span class="tex">k=1</span>: same size (congruent).</td><td>A 4 cm side becomes 10 cm:<br><span class="tex">k=10\div4=2.5</span> (enlargement)<br>A 6 cm side becomes<br><span class="tex">2.5\times6=15</span> cm</td></tr>
+    <tr><td><b>Are they similar?</b><i>6.2</i></td><td>Check <b>both</b>: (1) every pair of corresponding angles is equal, and (2) every side ratio (new ÷ original) is the same number. One different ratio or one different angle means <b>not similar</b>. Regular polygons with the same number of sides are always similar.</td><td>3 × 5 and 6 × 9 rectangles:<br><span class="tex">6\div3=2</span>, <span class="tex">9\div5=1.8</span><br>Ratios differ: not similar</td></tr>
+    <tr><td><b>Drawing enlargements and reductions</b><i>6.3</i></td><td>Multiply <b>every</b> length by <span class="tex">k</span> and keep <b>every</b> angle the same. Grid method: multiply each side (in squares) by <span class="tex">k</span>. Projection method: from a point <span class="tex">O</span>, <span class="tex">OA'=k\times OA</span> along each ray.</td><td><span class="tex">k=1.5</span>: a 4-square side becomes <span class="tex">1.5\times4=6</span> squares; a 90° corner stays 90°</td></tr>
+    <tr><td><b>Scale diagrams: maps and floor plans</b><i>6.4</i></td><td>A scale can be written in words (1 cm represents 5 m), as a ratio with the <b>same units</b> on both sides (<span class="tex">1:500</span>), or as a bar scale. Real = diagram × scale number; diagram = real ÷ scale number. Change to the same unit first (1 m = 100 cm, 1 km = 100&#8239;000 cm).</td><td>Plan at <span class="tex">1:500</span>, a wall 3.2 cm long:<br><span class="tex">3.2\times500=1\,600</span> cm = 16 m</td></tr>
+    <tr><td><b>Similar triangles</b><i>6.5</i></td><td>Two triangles are similar if <b>two pairs of angles</b> are equal (AA): the third angles match because each triangle adds to 180°. Right triangles that share an acute angle are similar. A small triangle cut off by a line parallel to one side is similar to the big one. Then (side in big) ÷ (matching side in small) is the same number <span class="tex">k</span> for every pair.</td><td>Small: 3 cm and 5 cm; big: 4.5 cm and <span class="tex">x</span><br><span class="tex">k=4.5\div3=1.5</span><br><span class="tex">x=1.5\times5=7.5</span> cm</td></tr>
+    <tr><td><b>Indirect measurement</b><i>6.6</i></td><td><b>Shadows</b>: at the same time of day, height ÷ shadow is the same for every object. <b>Mirror</b>: the angle in equals the angle out, so eye height ÷ (you to mirror) = object height ÷ (mirror to object).</td><td>1.6 m person, 2 m shadow; a tree’s shadow is 15 m:<br><span class="tex">h=1.6\div2\times15=12</span> m</td></tr>
+  </table>
+  <div class="def u6l7-rem"><b>Remember.</b> Match the sides in the <b>same order</b> as the names (<span class="tex">AB\leftrightarrow PQ</span>). Put the same figure on top in every ratio (big over small, or small over big). Lengths change by <span class="tex">k</span>; angles <b>never</b> change. Change to the same unit before you use a scale. Check: an enlargement must give bigger lengths, a reduction smaller ones.</div>
+  <div class="tip u6l7-bonus"><div class="tip-ic">★</div><div><b>Bonus fact.</b> When the lengths are multiplied by <span class="tex">k</span>, the <b>area</b> is multiplied by <span class="tex">k\times k</span>. Double every side of a 3 m by 4 m patio and you get 6 m by 8 m: <span class="tex">48\div12=4</span> times the area, not 2 times.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s1x" data-section="1. Why k × k for Area?">
+  <h3 class="sub">Why is the area <span class="tex">k\times k</span> times as big? Count the copies</h3>
+  <div class="explainer" data-explainer="area"></div>
+</section>
+
+<section class="card" data-extra data-ink="s1c" data-section="1. Check Yourself: Which Rule?">
+  <h3 class="sub">Check yourself: which rule do you need?</h3>
+  <p>Name the row of the table first, then tap a card to check.</p>
+  <div class="bk-flips" style="--bk-cols:4">
+    <div class="bk-flip"><div class="bk-front">A 4 in by 6 in photo is printed as a poster 24 in wide. How tall is the poster?</div><div class="bk-back"><b>Scale factor</b><br><span class="tex">k=24\div4=6</span>, then <span class="tex">6\times6</span></div></div>
+    <div class="bk-flip"><div class="bk-front">Is a 2 by 3 rectangle similar to a 4 by 5 rectangle?</div><div class="bk-back"><b>Are they similar?</b><br>ratios <span class="tex">2</span> and <span class="tex">1.67</span>: no</div></div>
+    <div class="bk-flip"><div class="bk-front">Make a logo 3 times as big on graph paper.</div><div class="bk-back"><b>Drawing an enlargement</b><br>every side × 3, same angles</div></div>
+    <div class="bk-flip"><div class="bk-front">On a map, 1 cm represents 10 km. Two towns are 3.5 cm apart.</div><div class="bk-back"><b>Scale diagrams</b><br><span class="tex">3.5\times10=35</span> km</div></div>
+    <div class="bk-flip"><div class="bk-front">Two triangles each have a 40° angle and a 75° angle.</div><div class="bk-back"><b>Similar triangles</b><br>AA: they are similar</div></div>
+    <div class="bk-flip"><div class="bk-front">How tall is the flagpole? It is sunny, and you have a metre stick.</div><div class="bk-back"><b>Shadows</b><br>height ÷ shadow is the same</div></div>
+    <div class="bk-flip"><div class="bk-front">A room is 4 m long. How long is it on a <span class="tex">1:100</span> plan?</div><div class="bk-back"><b>Scale diagrams</b><br><span class="tex">400\div100=4</span> cm</div></div>
+    <div class="bk-flip"><div class="bk-front">Every angle of a square equals every angle of a rectangle. Similar?</div><div class="bk-back"><b>Are they similar?</b><br>not always: check the side ratios too</div></div>
+  </div>
+</section>
+
+<!-- ================= 2. Similar polygons and scale factor ================= -->
+<section class="card example" data-ink="ex1" data-section="2. Scale Factor: Example 1">
+  <div class="sec-h"><span class="badge">2</span><h2>Similar Polygons and Scale Factor</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>ABCD ∼ WXYZ</h3></div>
+  <p class="q"><span class="tex">ABCD\sim WXYZ</span>. (The diagrams are not to scale.)</p>
+  <div class="u6l7-fig u6l7-ex1fig" id="u6l7-ex1fig"></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Write the side of <span class="tex">WXYZ</span> that matches each side of <span class="tex">ABCD</span>, and the angle that matches <span class="tex">\angle B</span>.
+      <div class="u6l7-match"><span><span class="tex">AB\leftrightarrow</span> <span data-reveal><span class="tex">WX</span></span></span><span><span class="tex">BC\leftrightarrow</span> <span data-reveal><span class="tex">XY</span></span></span><span><span class="tex">CD\leftrightarrow</span> <span data-reveal><span class="tex">YZ</span></span></span><span><span class="tex">DA\leftrightarrow</span> <span data-reveal><span class="tex">ZW</span></span></span><span><span class="tex">\angle B\leftrightarrow</span> <span data-reveal><span class="tex">\angle X</span></span></span></div></div>
+      <div class="work" style="--h:50px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Match the letters in order: the 2nd letters are <span class="tex">B</span> and <span class="tex">X</span>, so <span class="tex">\angle B\leftrightarrow\angle X</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) Find the scale factor from <span class="tex">ABCD</span> to <span class="tex">WXYZ</span>. Is it an enlargement or a reduction?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Use a pair of sides where both lengths are known: <span class="tex">AB=6</span> and <span class="tex">WX=9</span>.<br><span class="tex">k=\text{new}\div\text{original}=9\div6=1.5</span><br><span class="tex">k&gt;1</span>, so it is an <b>enlargement</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) Find <span class="tex">XY</span>, <span class="tex">ZW</span> and <span class="tex">\angle X</span>.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">New <span class="tex">=k\times</span> original:<br><span class="tex">XY=1.5\times4=6</span> cm, <span class="tex">ZW=1.5\times8=12</span> cm<br>Angles do not change: <span class="tex">\angle X=\angle B=81^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(d) Find <span class="tex">CD</span>.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">CD</span> is on the original, so divide:<br><span class="tex">CD=YZ\div k=7.5\div1.5=5</span> cm<br>Check: <span class="tex">1.5\times5=7.5</span> ✓</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>New ÷ original:</b> <span class="keys">9<kbd>÷</kbd>6<kbd>ENTER</kbd></span> gives 1.5. Going back to the original: <span class="keys">7.5<kbd>÷</kbd>1.5<kbd>ENTER</kbd></span> gives 5.</div>
+    <div class="u6l7-pcol"><button class="pill" type="button" data-keys="9 ÷ 6 =">k</button><button class="pill" type="button" data-keys="7.5 ÷ 1.5 =">CD</button></div></div>
+  <p class="small muted" data-extra><b>Think:</b> what is the scale factor from <span class="tex">WXYZ</span> back to <span class="tex">ABCD</span>? (<span class="tex">6\div9\approx0.67</span>: a reduction. Going the other way flips the division.)</p>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex1c" data-section="2. Check Example 1">
+  <h3 class="sub">Check Example 1: match the colours, then multiply or divide by <span class="tex">k</span></h3>
+  <div class="explainer" data-explainer="simk"></div>
+</section>
+
+<!-- ================= 3. Are they similar? ================= -->
+<section class="card example" data-ink="ex2" data-section="3. Are They Similar? Example 2">
+  <div class="sec-h"><span class="badge">3</span><h2>Are They Similar?</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Flower beds, a photo print, a square and a rhombus</h3></div>
+  <div class="part u6l7-ex2a"><div><div class="pl">(a) Two flower beds are shaped like trapezoids. Are they similar? Show both tests.</div>
+      <div class="u6l7-fig" id="u6l7-ex2fig"></div></div>
+    <div><table class="u6l7-tab"><tr><th>Sides (Bed 2 ÷ Bed 1)</th><th>Ratio</th></tr>
+      <tr><td>bottom: <span class="tex">7.5\div5</span></td><td><span data-reveal>1.5</span></td></tr>
+      <tr><td>top: <span class="tex">4.5\div3</span></td><td><span data-reveal>1.5</span></td></tr>
+      <tr><td>left: <span class="tex">3\div2</span></td><td><span data-reveal>1.5</span></td></tr>
+      <tr><td>right: <span class="tex">3\div2</span></td><td><span data-reveal>1.5</span></td></tr></table>
+      <div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Angles: both beds have 60°, 60°, 120°, 120° in the same places, so the angles match.<br>Sides: every ratio is 1.5. Both tests pass, so the beds are <b>similar</b> (<span class="tex">k=1.5</span>).</div></div></div></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(b) Bree orders a 10 in by 12 in print of a 6 in by 9 in photo. Are the two rectangles similar? What will happen to her picture?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">All the angles are 90°. Check the sides:<br>short: <span class="tex">10\div6\approx1.67</span>; long: <span class="tex">12\div9\approx1.33</span><br>The ratios are different, so they are <b>not</b> similar. The print has a different shape, so part of the photo will be cut off (cropped).</div></div></div>
+    <div class="part"><div class="pl">(c) A square and a rhombus both have 5 cm sides. The rhombus has angles of 60° and 120°. Are they similar? Explain.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The sides pass: every ratio is <span class="tex">5\div5=1</span>.<br>The angles fail: the square’s angles are 90°, the rhombus’s are 60° and 120°.<br>So they are <b>not</b> similar: both tests are needed.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Compare the ratios:</b> <span class="keys">10<kbd>÷</kbd>6<kbd>ENTER</kbd></span> gives 1.666666667 and <span class="keys">12<kbd>÷</kbd>9<kbd>ENTER</kbd></span> gives 1.333333333. Different numbers: not similar.</div>
+    <div class="u6l7-pcol"><button class="pill" type="button" data-keys="10 ÷ 6 =">short</button><button class="pill" type="button" data-keys="12 ÷ 9 =">long</button></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex2c" data-section="3. Check Example 2">
+  <h3 class="sub">Check Example 2: the similarity tester</h3>
+  <div class="explainer" data-explainer="tester"></div>
+</section>
+
+<!-- ================= 4. Drawing enlargements and reductions ================= -->
+<section class="card example" data-ink="ex3" data-section="4. Drawing: Example 3">
+  <div class="sec-h"><span class="badge">4</span><h2>Drawing Enlargements and Reductions</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>A sign on a grid, and a triangle by projection</h3></div>
+  <div class="part"><div class="pl">(a) Enlarge the sign on the left with a scale factor of 2. Draw it on the grid on the right. <span class="muted small">(Tap the grid points to draw it, then press Check.)</span></div>
+    <div class="u6l7-gd" id="u6l7-gd"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Count each side in squares and multiply by 2: bottom <span class="tex">2\to4</span>, left side <span class="tex">2\to4</span>, top <span class="tex">2\to4</span>. The point of the arrow is 1 right and 1 up from a corner, so it becomes 2 right and 2 up.<br>Check: every angle is the same as before (90° at the two left corners and at the tip, 135° at the other two corners). Only the lengths changed.</div></div></div>
+  <div class="part u6l7-ex3b"><div><div class="pl">(b) Use the projection method from point <span class="tex">O</span> with <span class="tex">k=2.5</span>. Find <span class="tex">OA'</span>, <span class="tex">OB'</span> and <span class="tex">OC'</span>, then draw <span class="tex">\triangle A'B'C'</span>. Here <span class="tex">OA=2</span> cm, <span class="tex">OB=3</span> cm and <span class="tex">OC=2.4</span> cm.</div>
+      <div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Multiply each distance from <span class="tex">O</span> by <span class="tex">k</span>:<br><span class="tex">OA'=2.5\times2=5</span> cm<br><span class="tex">OB'=2.5\times3=7.5</span> cm<br><span class="tex">OC'=2.5\times2.4=6</span> cm<br>Mark each point on its ray and join them. Check: each side of <span class="tex">\triangle A'B'C'</span> should measure 2.5 times the matching side of <span class="tex">\triangle ABC</span>.</div></div></div>
+    <div class="u6l7-fig" id="u6l7-ex3fig"></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex3c" data-section="4. Check Example 3">
+  <h3 class="sub">Check Example 3: the image appears corner by corner</h3>
+  <div class="explainer" data-explainer="draw"></div>
+</section>
+
+<!-- ================= 5. Scale diagrams ================= -->
+<section class="card example" data-ink="ex4" data-section="5. Scale Diagrams: Example 4">
+  <div class="sec-h"><span class="badge">5</span><h2>Scale Diagrams</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>A trail map in Kananaskis</h3></div>
+  <p class="q">The route goes from the trailhead <span class="tex">P</span> to <span class="tex">Q</span>, then <span class="tex">R</span>, then the lake shore at <span class="tex">S</span>. In the booklet the map is printed at real size, so you can measure it. <span class="muted">(Here, drag the ends of the yellow tape to measure.)</span></p>
+  <div class="u6l7-fig u6l7-ex4fig" id="u6l7-ex4fig"></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Write the scale in words and as a ratio.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">From the bar: 1 cm represents 0.2 km.<br>Same units: <span class="tex">0.2\text{ km}=0.2\times100\,000=20\,000</span> cm<br>Ratio: <span class="tex">1:20\,000</span></div></div></div>
+    <div class="part"><div class="pl">(b) Measure the route. <span class="tex">PQ=2.4</span> cm, <span class="tex">QR=3.1</span> cm and <span class="tex">RS=1.5</span> cm. How far is the hike from <span class="tex">P</span> to <span class="tex">S</span>?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Map total: <span class="tex">2.4+3.1+1.5=7</span> cm<br>Real: <span class="tex">7\times0.2=1.4</span> km<br>The hike is <b>1.4 km</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) A sign says the lake is 0.56 km long. How long should the lake be on the map? Measure to check.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Diagram = real ÷ scale: <span class="tex">0.56\div0.2=2.8</span> cm. The lake on the map measures 2.8 cm ✓</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex4c" data-section="5. Check Example 4">
+  <h3 class="sub">Check Example 4: measure each part of the trail</h3>
+  <div class="explainer" data-explainer="map"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>A bedroom and a garage on a floor plan</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A bedroom is 3.8 m by 4.4 m. Find its size on a floor plan with a scale of <span class="tex">1:50</span>.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same units: 3.8 m = 380 cm, 4.4 m = 440 cm<br>Diagram = real ÷ 50:<br><span class="tex">380\div50=7.6</span> cm, <span class="tex">440\div50=8.8</span> cm<br>The bedroom is <b>7.6 cm by 8.8 cm</b> on the plan.</div></div></div>
+    <div class="part"><div class="pl">(b) A garage is 12 m by 9 m. The space for the drawing is 20 cm by 15 cm. Which scale should you use: <span class="tex">1:50</span>, <span class="tex">1:100</span> or <span class="tex">1:200</span>? Explain.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">12 m = 1&#8239;200 cm, 9 m = 900 cm<br><span class="tex">1:50</span>: 24 cm by 18 cm (too big)<br><span class="tex">1:100</span>: 12 cm by 9 cm (fits)<br><span class="tex">1:200</span>: 6 cm by 4.5 cm (fits, but small)<br>Use <b><span class="tex">1:100</span></b>: it fits and is as large as possible.</div></div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A ratio scale like <span class="tex">1:50</span> has the <b>same units</b> on both sides. Change metres to centimetres <b>before</b> you divide by 50.</div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex5c" data-section="5. Check Example 5">
+  <h3 class="sub">Check Example 5: shrink the room onto the plan, then try three scales</h3>
+  <div class="explainer" data-explainer="plan"></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u6l7"></section>
+
+<!-- ================= 6. Similar triangles ================= -->
+<section class="card example" data-ink="ex6" data-section="6. Similar Triangles: Example 6">
+  <div class="sec-h"><span class="badge">6</span><h2>Similar Triangles</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Matching angles, and a shed roof</h3></div>
+  <div class="part"><div class="pl">(a) In <span class="tex">\triangle KLM</span>, <span class="tex">\angle K=47^\circ</span> and <span class="tex">\angle L=68^\circ</span>. In <span class="tex">\triangle PQR</span>, <span class="tex">\angle P=65^\circ</span> and <span class="tex">\angle R=47^\circ</span>. Are the triangles similar? If they are, name them in matching order.</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Find the third angles: <span class="tex">\angle M=180^\circ-47^\circ-68^\circ=65^\circ</span>; <span class="tex">\angle Q=180^\circ-65^\circ-47^\circ=68^\circ</span>.<br>The angles match: <span class="tex">K\leftrightarrow R</span> (47°), <span class="tex">L\leftrightarrow Q</span> (68°), <span class="tex">M\leftrightarrow P</span> (65°). Similar: <span class="tex">\triangle KLM\sim\triangle RQP</span>.</div></div></div>
+  <div class="u6l7-ex6">
+    <div class="u6l7-fig" id="u6l7-ex6fig"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(b) The side of a shed roof is a right triangle. A post <span class="tex">DE</span> stands straight up, so it is parallel to the end wall <span class="tex">BC</span>. Explain why <span class="tex">\triangle ADE\sim\triangle ACB</span>.</div><div class="work" style="--h:80px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Both have a right angle (<span class="tex">\angle D=\angle C=90^\circ</span>), and they share <span class="tex">\angle A</span>. Two pairs of equal angles, so they are similar (AA). (Also: <span class="tex">DE\parallel BC</span>, so <span class="tex">\angle AED=\angle ABC</span> as corresponding angles.)</div></div></div>
+      <div class="part"><div class="pl">(c) Find the height of the wall, <span class="tex">BC</span>.</div><div class="work" style="--h:80px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">k=AC\div AD=6\div2.4=2.5</span><br><span class="tex">BC=2.5\times1.5=3.75</span> m. The wall is 3.75 m tall.</div></div></div>
+    </div>
+  </div>
+  <div class="part"><div class="pl">(d) Another post will stand 4.2 m from <span class="tex">A</span>. How tall must it be, to the nearest tenth of a metre?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">This post makes another similar triangle: <span class="tex">\dfrac{\text{height}}{4.2}=\dfrac{1.5}{2.4}</span><br>height <span class="tex">=1.5\div2.4\times4.2=2.625\approx2.6</span> m. Check: it is between 1.5 m and 3.75 m ✓</div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>One line on the calculator:</b> <span class="keys">1.5<kbd>÷</kbd>2.4<kbd>×</kbd>4.2<kbd>ENTER</kbd></span> gives 2.625. Round only at the end: 2.6 m.</div>
+    <div class="u6l7-pcol"><button class="pill" type="button" data-keys="1.5 ÷ 2.4 × 4.2 =">Show me</button></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex6c" data-section="6. Check Example 6">
+  <h3 class="sub">Check Example 6: match the angles, then grow the small triangle</h3>
+  <div class="explainer" data-explainer="aa"></div>
+</section>
+
+<!-- ================= 7. Indirect measurement ================= -->
+<section class="card example" data-ink="ex7" data-section="7. Indirect Measurement: Example 7">
+  <div class="sec-h"><span class="badge">7</span><h2>Indirect Measurement: Shadows and Mirrors</h2></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Calculator:</b> to find <span class="tex">1.6\div2.4\times33</span>, press <span class="keys">1.6<kbd>÷</kbd>2.4<kbd>×</kbd>33<kbd>ENTER</kbd></span>. Keep the full value until the last step.</div>
+    <div class="u6l7-pcol"><button class="pill" type="button" data-keys="1.6 ÷ 2.4 × 33 =">Show me</button></div></div>
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>The grain elevator’s shadow</h3></div>
+  <p class="q">At 3:00 in the afternoon, Priya is 1.6 m tall and casts a shadow 2.4 m long. At the same time, a grain elevator casts a shadow 33 m long. How tall is the elevator?</p>
+  <div class="u6l7-ex7">
+    <div class="u6l7-fig" id="u6l7-ex7fig"></div>
+    <div class="part"><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The sun’s rays are parallel and both objects stand straight up, so the triangles are similar.<br><span class="tex">\dfrac{h}{33}=\dfrac{1.6}{2.4}</span><br><span class="tex">h=1.6\div2.4\times33=22</span> m<br>Check: the elevator’s shadow is longer than its height, just like Priya’s ✓ The elevator is <b>22 m</b> tall.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>The light pole and the mirror</h3></div>
+  <p class="q">Jordan wants the height of a light pole at the football field. He puts a mirror on the ground 12.6 m from the pole and steps back until he sees the top of the pole in the mirror. He is then 1.8 m from the mirror, and his eyes are 1.4 m above the ground.</p>
+  <div class="u6l7-ex7">
+    <div class="u6l7-fig" id="u6l7-ex8fig"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Why are the two triangles similar?</div><div class="work" style="--h:80px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Jordan and the pole both make right angles with the ground, and the angle in equals the angle out at the mirror. Two pairs of equal angles (AA).</div></div></div>
+      <div class="part"><div class="pl">(b) Find the height of the light pole.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{h}{12.6}=\dfrac{1.4}{1.8}</span><br><span class="tex">h=1.4\div1.8\times12.6=9.8</span> m. The light pole is <b>9.8 m</b> tall.</div></div></div>
+    </div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Same pattern:</b> <span class="keys">1.4<kbd>÷</kbd>1.8<kbd>×</kbd>12.6<kbd>ENTER</kbd></span> gives 9.8.</div>
+    <div class="u6l7-pcol"><button class="pill" type="button" data-keys="1.4 ÷ 1.8 × 12.6 =">Show me</button></div></div>
+  <p class="small muted" data-extra><b>Think:</b> Jordan steps a little farther back. Can he still see the top of the pole in the same spot of the mirror? (No. The angle out gets smaller, so he would see a point lower down. He must stand where the angles match.)</p>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex8c" data-section="7. Check Examples 7 and 8">
+  <h3 class="sub">Check Examples 7 and 8: two similar triangles, one proportion</h3>
+  <div class="explainer" data-explainer="indirect"></div>
+</section>
+
+<!-- ================= 8. Practice test: multiple choice traps ================= -->
+<section class="card" data-extra data-ink="s8x" data-section="8. Practice Test: Spot the Trap">
+  <div class="sec-h"><span class="badge">8</span><h2>Practice Test: Spot the Trap</h2></div>
+  <p>On a multiple-choice test, the wrong answers are often the answers you get from a <b>common mistake</b>. Work it out first, then find the mistake behind each wrong choice.</p>
+  <div class="explainer" data-explainer="traps"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Scale factor.</b> <span class="tex">k=\text{new}\div\text{original}</span>. New = <span class="tex">k\,\times</span> original; original = new ÷ <span class="tex">k</span>. <span class="tex">k&gt;1</span> enlarges, <span class="tex">k&lt;1</span> reduces. Match the parts in name order. Angles never change.</div>
+    <div><b>Similar or not?</b> Both tests: equal angles <b>and</b> equal side ratios. Draw an image by multiplying every side (grid) or every distance from <span class="tex">O</span> (projection) by <span class="tex">k</span>.</div>
+    <div><b>Scales.</b> Same units first. Real = diagram × scale number; diagram = real ÷ scale number. Choose the biggest scale that fits the paper.</div>
+    <div><b>Similar triangles.</b> Two equal angles (AA) is enough. Shadows at the same time and a mirror on the ground both make similar triangles: write the proportion, then solve.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u6l7">
+    <div><div class="kicker">Your turn</div><b>Assignment 7 · Unit 6 Review · Questions 1–26</b><div class="muted">A practice unit test: written response (1–14), multiple choice (15–22) and numerical response (23–26). Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+<!-- ================= up next: the unit test ================= -->
+<section class="card u6l7-next" data-ink="next" data-section="Up next: Unit 6 Test">
+  <div class="u6l7-next-h"><span class="kicker">Up next</span><b>Unit 6 test</b> <span class="muted">Shaky on an idea today? Go back to its lesson.</span></div>
+  <div class="u6l7-next-grid">
+    <a href="../l1/"><span class="rn">6.1</span>Similar polygons and scale factor <small>Example 1</small></a>
+    <a href="../l2/"><span class="rn">6.2</span>Are they similar? Checking angles and side ratios <small>Example 2</small></a>
+    <a href="../l3/"><span class="rn">6.3</span>Drawing enlargements and reductions <small>Example 3</small></a>
+    <a href="../l4/"><span class="rn">6.4</span>Scale diagrams: maps and floor plans <small>Examples 4, 5</small></a>
+    <a href="../l5/"><span class="rn">6.5</span>Similar triangles <small>Example 6</small></a>
+    <a href="../l6/"><span class="rn">6.6</span>Indirect measurement: shadows and mirrors <small>Examples 7, 8</small></a>
+    <div class="test"><span class="rn">Test</span>Unit 6 test: G3 <small>calculator allowed · set up like today’s practice test · write each proportion before you solve it</small></div>
+  </div>
+  <div class="space" id="next-space" style="min-height:80px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u6l7.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u6l7', homeHref: '../../', title: '6.7 Unit 6 Review' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

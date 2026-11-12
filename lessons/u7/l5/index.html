@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Sine Ratio · Math 10-3 7.5</title>
+<meta name="description" content="Math 10-3 Unit 7 Lesson 5: in similar right triangles, opposite ÷ hypotenuse stays the same; that ratio is the sine of the angle (SOH). Finding sin θ from a triangle and with the calculator (DEG mode), why sin θ is always less than 1, finding the opposite side (multiply) and the hypotenuse (divide), and word problems with ladders, ramps, a boom lift and a zipline. A sliding ladder with sin θ updating. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u7l5.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u7l5">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<!-- sources: https://www.guinnessworldrecords.com/news/2020/4/baldwin-street-in-new-zealand-reinstated-as-the-worlds-steepest-street-614287
+     (Baldwin Street, Dunedin, reinstated as the world's steepest street on 8 April 2020, gradient 34.8%; Ffordd Pen Llech 28.6%);
+     https://en.wikipedia.org/wiki/Baldwin_Street . 34.8% grade: tan⁻¹(0.348) = 19.2°. -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The World’s Steepest Street">
+  <div class="vw-strip"><svg viewBox="0 0 320 56" aria-hidden="true">
+    <path d="M0 44 C40 44 50 18 90 18 S140 44 180 44 S230 18 270 18 S310 44 320 44" fill="none" stroke="#8a6f4d" stroke-width="5" stroke-linecap="round"/>
+    <path d="M0 44 C40 44 50 18 90 18 S140 44 180 44 S230 18 270 18 S310 44 320 44" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="6 7"/>
+    <g><animateMotion dur="5s" repeatCount="indefinite" rotate="auto" path="M0 38 C40 38 50 12 90 12 S140 38 180 38 S230 12 270 12 S310 38 320 38"/>
+      <rect x="-13" y="-9" width="26" height="10" rx="3" fill="#c93a33"/><rect x="-7" y="-15" width="13" height="7" rx="2" fill="#c93a33"/>
+      <rect x="-5" y="-14" width="9" height="5" rx="1" fill="#dfe9f7"/><circle cx="-7" cy="2" r="3.6" fill="#1c2230"/><circle cx="7" cy="2" r="3.6" fill="#1c2230"/></g>
+  </svg></div>
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The World’s Steepest Street</h2></div>
+  <div class="vw-seq"><div class="vw-txt">
+    <p class="vw-ctx">Baldwin Street in Dunedin, New Zealand, is the <b>steepest street in the world</b> (Guinness World Records). Its steepest part has a <b>grade of about 35%</b>.</p>
+    <p class="vw-ctx">Stand up. Hold your arm out at the angle you think that street makes with flat ground.</p>
+    <p class="vw-ask">About how many degrees steep is the world’s steepest street?</p></div></div>
+  <div class="poll u7l5-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> about 10°</div>
+      <div class="opt right"><b>B</b> about 19°</div>
+      <div class="opt"><b>C</b> about 35°</div>
+      <div class="opt"><b>D</b> about 50°</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div><b>B: only about 19°!</b> A grade of 35% means the road goes <b>up about 35 m for every 100 m across</b>. That makes an angle of about 19°, much less than 35°. It is very steep for a road (people zig-zag to walk up it), but a <b>percent grade is not the same as degrees</b>. <span class="muted">Today we meet a new ratio that links an angle to the sides of a right triangle: the sine.</span></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 7 Right Triangles and Trigonometry · Lesson 5</div>
+  <h1>The Sine Ratio</h1>
+  <p class="lede">Lean a ladder on a wall. The steeper the ladder, the higher it reaches. For a given angle, the <b>opposite side ÷ the hypotenuse</b> is always the same number, whatever the size of the triangle. That number is the <b>sine</b> of the angle. Today we use it to find the side across from an angle, or the hypotenuse.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>label the <b>opp</b>, <b>adj</b> and <b>hyp</b> of a right triangle from the angle I am using</li>
+      <li>explain why <span class="tex">\text{opp}\div\text{hyp}</span> is the same in similar right triangles, and call it <span class="tex">\sin\theta</span></li>
+      <li>find <span class="tex">\sin\theta</span> from a triangle and with my calculator in <b>DEG</b> mode, and explain why it is <b>less than 1</b></li>
+      <li>find the <b>opposite side</b> (multiply) or the <b>hypotenuse</b> (divide) with the sine ratio</li>
+      <li>solve problems with ladders, ramps and lifts, and check that my answer makes sense</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G4</b> Demonstrate an understanding of primary trigonometric ratios (sine, cosine, tangent) by: applying similarity to right triangles; generalizing patterns from similar right triangles; applying the primary trigonometric ratios; solving problems.<br><span class="muted">Today: the sine ratio.</span></div>
+  <div class="outcome"><b>A1</b> Solve problems that require the manipulation and application of formulas related to: perimeter; area; the Pythagorean theorem; primary trigonometric ratios; income.<br><span class="muted">Today: rearranging <span class="tex">\sin\theta=\frac{\text{opp}}{\text{hyp}}</span> to find a side.</span></div>
+</section>
+
+<!-- ================= 1. opp ÷ hyp stays the same ================= -->
+<section class="card" data-ink="s1" data-section="1. Opposite ÷ Hypotenuse">
+  <div class="sec-h"><span class="badge">1</span><h2>Opposite ÷ Hypotenuse Stays the Same</h2></div>
+  <p>In Lesson 4 you named the sides of a right triangle from the angle you are using, <span class="tex">\theta</span> (“theta”).</p>
+  <div class="def"><b>Quick refresher</b> &nbsp; The labelling routine (Lesson 4)
+    <ol class="u7l5-steps">
+      <li><b>Step 1.</b> Find the right angle. The side across from it is the <b class="u7l5-hyp">hyp</b>. It is always the <b>longest</b> side.</li>
+      <li><b>Step 2.</b> Find <span class="tex">\theta</span>. The side across from <span class="tex">\theta</span> is the <b class="u7l5-opp">opp</b>. It does not touch <span class="tex">\theta</span>.</li>
+      <li><b>Step 3.</b> The last side is the <b class="u7l5-adj">adj</b>. It touches <span class="tex">\theta</span>, and it is not the hyp.</li>
+    </ol>
+    <div class="u7l5-note">If you switch to the other acute angle, opp and adj <b>swap</b>. The hyp never changes.</div></div>
+  <p class="u7l5-gap">In Lesson 4 you divided opp by adj and got the <b>tangent</b>. In this lesson you divide <b>opp by hyp</b>.</p>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Label the sides</h3></div>
+  <div class="pl">Label each side opp, adj or hyp for the marked angle.</div>
+  <div class="parts c4 u7l5-p4">
+    <div class="part"><div class="pl">(a)</div><div class="u7l5-fig" data-fig="ex1a"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">hyp: across from the right angle; opp: across from <span class="tex">\theta</span>; adj: touches <span class="tex">\theta</span>.</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u7l5-fig" data-fig="ex1b"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The triangle is turned, but the routine is the same.</div></div></div>
+    <div class="part"><div class="pl">(c) For <span class="tex">\angle A</span></div><div class="u7l5-fig" data-fig="ex1c"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">BC</span> opp, <span class="tex">AC</span> adj, <span class="tex">AB</span> hyp</div></div></div>
+    <div class="part"><div class="pl">(d) For <span class="tex">\angle B</span></div><div class="u7l5-fig" data-fig="ex1d"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">AC</span> opp, <span class="tex">BC</span> adj, <span class="tex">AB</span> hyp</div></div></div>
+  </div>
+  <p class="u7l5-p u7l5-gap">In (c) and (d) the hyp is the same side, <span class="tex">AB</span>. Side <span class="tex">BC</span> is opp for <span class="tex">\angle A</span> but adj for <span class="tex">\angle B</span>; side <span class="tex">AC</span> is adj for <span class="tex">\angle A</span> but opp for <span class="tex">\angle B</span>.</p>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s1x" data-section="1. The Labelling Routine">
+  <h3 class="sub">The labelling routine, step by step</h3>
+  <div class="explainer" data-explainer="labels"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Raj’s three triangles</h3></div>
+  <p class="u7l5-p">Raj drew three right triangles. Each one has a <b>40°</b> angle, so they are <b>similar</b> (Unit 6): same shape, different sizes. He measured every side to the nearest tenth of a centimetre.</p>
+  <div class="u7l5-raj">
+    <div class="u7l5-fig" data-fig="ex2s"></div><div class="u7l5-fig" data-fig="ex2m"></div><div class="u7l5-fig" data-fig="ex2l"></div>
+  </div>
+  <div class="u7l5-small">Lengths in cm. The drawings are smaller than real size.</div>
+  <div class="u7l5-ex2">
+    <div class="part"><div class="pl">(a) Fill in the table. Round the last column to 2 decimal places.</div>
+      <table class="u7l5-tbl">
+        <tr><th>Triangle</th><th>opp</th><th>hyp</th><th>opp ÷ hyp</th></tr>
+        <tr><td>Small</td><td>3.2</td><td>5.0</td><td><span data-reveal="&nbsp;">0.64</span></td></tr>
+        <tr><td>Medium</td><td>4.8</td><td>7.5</td><td><span data-reveal="&nbsp;">0.64</span></td></tr>
+        <tr><td>Large</td><td>6.4</td><td>10.0</td><td><span data-reveal="&nbsp;">0.64</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3.2\div5.0=0.64</span>, <span class="tex">4.8\div7.5=0.64</span>, <span class="tex">6.4\div10.0=0.64</span></div></div></div>
+    <div class="u7l5-ex2r">
+      <div class="part"><div class="pl">(b) What do you notice?</div><div class="work" style="--h:44px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp ÷ hyp is <b>0.64</b> every time.</div></div></div>
+      <div class="part"><div class="pl">(c) In <i>every</i> right triangle with a 40° angle, the opposite side is about <span class="u7l5-blank" data-reveal="&nbsp;">0.64</span> of the hypotenuse.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>0.64</b>, whatever the size of the triangle.</div></div></div>
+    </div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Sam measured Raj’s small triangle and got opp = 3.3 cm. Then opp ÷ hyp = 0.66, not 0.64. Does that mean the ratio is not always the same?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. Measurements are rounded (to the nearest tenth of a centimetre), so a ratio from a ruler is a little off. The calculator gives the exact value: <span class="tex">\sin40^\circ=0.6427\ldots</span></div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. The Sine Ratio">
+  <h3 class="sub">Same angle, same ratio</h3>
+  <p>The size of the triangle does not matter. Only the <b>angle</b> matters. This ratio has a name: the <b>sine</b> of the angle (say “sign”). We write <span class="tex">\sin 40^\circ</span>.</p>
+  <div class="explainer" data-explainer="similar"></div>
+  <div class="def u7l5-gap u7l5-key"><b>Key idea</b> &nbsp; The sine ratio. In a right triangle, for an acute angle <span class="tex">\theta</span>:
+    <div class="u7l5-big"><span class="tex">\sin\theta=\dfrac{\text{opp}}{\text{hyp}}=\dfrac{\text{length of the side opposite }\theta}{\text{length of the hypotenuse}}</span></div>
+    <div class="u7l5-note">Memory aid: <b class="u7l5-soh">SOH</b> = <b>S</b>ine is <b>O</b>pposite over <b>H</b>ypotenuse.</div></div>
+</section>
+
+<!-- ================= 2. Finding the sine ================= -->
+<section class="card" data-ink="s2" data-section="2. Finding the Sine of an Angle">
+  <div class="sec-h"><span class="badge">2</span><h2>Finding the Sine of an Angle</h2></div>
+  <p>There are two ways to find the sine of an angle.</p>
+  <ul class="u7l5-list">
+    <li><b>From a triangle:</b> divide the opposite side by the hypotenuse.</li>
+    <li><b>From the angle:</b> use the <span class="keys"><kbd>SIN</kbd></span> key on your calculator.</li>
+  </ul>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Your TI-30XIIS must be in <b>DEG</b> (degree) mode: look for DEG on the screen. If it shows RAD or GRAD, press <span class="keys"><kbd>DRG</kbd></span>, use the arrow keys to underline DEG, and press <span class="keys"><kbd>ENTER</kbd></span>. To find <span class="tex">\sin 40^\circ</span>: <span class="keys"><kbd>SIN</kbd> 40 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 0.642787… The <span class="keys"><kbd>SIN</kbd></span> key opens a bracket, so close it with <span class="keys"><kbd>)</kbd></span>. Round sine values to <b>4 decimal places</b>: <span class="tex">\sin 40^\circ\approx0.6428</span>. That matches Raj’s 0.64.</div>
+    <button class="pill" type="button" data-keys="sin 40 ) =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>sin θ from a triangle</h3></div>
+  <div class="pl">Write <span class="tex">\sin\theta</span> as a fraction. Then write it as a decimal to 4 decimal places.</div>
+  <div class="parts c3 u7l5-p3">
+    <div class="part"><div class="pl">(a)</div><div class="u7l5-fig" data-fig="ex3a"></div><div class="work" style="--h:70px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp <span class="tex">=5</span>, hyp <span class="tex">=13</span><br><span class="tex">\sin\theta=\dfrac{5}{13}\approx0.3846</span></div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u7l5-fig" data-fig="ex3b"></div><div class="work" style="--h:70px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp <span class="tex">=6.3</span>, hyp <span class="tex">=10.5</span><br><span class="tex">\sin\theta=\dfrac{6.3}{10.5}=0.6000</span></div></div></div>
+    <div class="part"><div class="pl">(c) Find <span class="tex">\sin A</span> and <span class="tex">\sin B</span>.</div><div class="u7l5-fig" data-fig="ex3c"></div><div class="work" style="--h:70px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\sin A=\dfrac{7}{25}=0.2800</span><br><span class="tex">\sin B=\dfrac{24}{25}=0.9600</span></div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Opp over Hyp">
+  <h3 class="sub">Opp over hyp, then divide</h3>
+  <div class="explainer" data-explainer="sinFrac"></div>
+  <div class="tip watch u7l5-gap"><div class="tip-ic">!</div><div><b>Watch out.</b> The hypotenuse always goes on the <b>bottom</b>. It is the longest side, so <span class="tex">\sin\theta</span> is always <b>less than 1</b> for an acute angle. If you get a sine bigger than 1, you used the wrong sides.</div></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>The sine of bigger and bigger angles</h3></div>
+  <div class="u7l5-ex4">
+    <div class="u7l5-ex4r"><div class="part"><div class="pl">(a) Use your calculator. Round to 4 decimal places.</div>
+      <table class="u7l5-tbl u7l5-t4">
+        <tr><th><span class="tex">\theta</span></th><th><span class="tex">\sin\theta</span></th><th><span class="tex">\theta</span></th><th><span class="tex">\sin\theta</span></th></tr>
+        <tr><td>5°</td><td><span data-reveal="&nbsp;">0.0872</span></td><td>45°</td><td><span data-reveal="&nbsp;">0.7071</span></td></tr>
+        <tr><td>20°</td><td><span data-reveal="&nbsp;">0.3420</span></td><td>70°</td><td><span data-reveal="&nbsp;">0.9397</span></td></tr>
+        <tr><td>30°</td><td><span data-reveal="&nbsp;">0.5000</span></td><td>89°</td><td><span data-reveal="&nbsp;">0.9998</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">For example, <span class="keys"><kbd>SIN</kbd> 5 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 0.087155…, so <span class="tex">\sin5^\circ\approx0.0872</span>.</div></div></div>
+      <div class="part"><div class="pl">(b) As the angle gets bigger, the sine gets <span class="u7l5-blank" data-reveal="&nbsp;">bigger</span>.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>bigger</b> (but it never passes 1)</div></div></div></div>
+    <div class="u7l5-ex4r">
+      <div class="part"><div class="pl">(c) <span class="tex">\sin30^\circ=0.5</span>. So with a 30° angle, the opposite side is <span class="u7l5-blank" data-reveal="&nbsp;">half</span> as long as the hypotenuse.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>half</b></div></div></div>
+      <div class="part"><div class="pl">(d) Find <span class="tex">\sin90^\circ</span>. <span class="u7l5-blank" data-reveal="&nbsp;">1</span> Why does this make sense?</div><div class="work" style="--h:50px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">As <span class="tex">\theta</span> gets close to 90°, the opposite side gets almost as long as the hypotenuse, so opp ÷ hyp gets close to 1.</div></div></div>
+    </div>
+  </div>
+  <div class="tip calc-tip u7l5-gap"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Try one: <span class="keys"><kbd>SIN</kbd> 89 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 0.999847…, very close to 1.</div>
+    <button class="pill" type="button" data-keys="sin 89 ) =">Show me</button></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exs" data-section="Extra Example: Finding Sines">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>Finding sines</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) For angle <span class="tex">\theta</span>, opp <span class="tex">=8</span> and hyp <span class="tex">=17</span>. Find <span class="tex">\sin\theta</span> to 4 decimal places.</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\sin\theta=\dfrac{8}{17}=0.470588\ldots\approx0.4706</span></div></div></div>
+    <div class="part"><div class="pl">(b) Find <span class="tex">\sin15^\circ</span> and <span class="tex">\sin75^\circ</span>. Which is closer to 1? Why?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\sin15^\circ\approx0.2588</span>, <span class="tex">\sin75^\circ\approx0.9659</span>. 75° is closer to 90°, so its opp is almost as long as the hyp.</div></div></div>
+    <div class="part"><div class="pl">(c) Ben says a right triangle has opp <span class="tex">=12</span> and hyp <span class="tex">=10</span>. How do you know he made a mistake?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The hyp is always the longest side, so it can’t be shorter than the opp. (It would make <span class="tex">\sin\theta=1.2</span>, more than 1.)</div></div></div>
+  </div>
+</section>
+
+<section class="card" data-ink="s2c" data-section="2. The Sliding Ladder">
+  <h3 class="sub">The sliding ladder: why sin θ grows, and never passes 1</h3>
+  <p>A 10 m ladder leans on a wall. The ladder is the <b class="u7l5-hyp">hyp</b> and the height it reaches is the <b class="u7l5-opp">opp</b>. So <span class="tex">\sin\theta=\text{height}\div10</span>. <span class="muted">Drag the foot of the ladder to try any angle.</span></p>
+  <div class="explainer" data-explainer="ladder"></div>
+  <div class="tip u7l5-gap"><div class="tip-ic">✓</div><div><b>Check.</b> Use <span class="tex">\sin30^\circ=0.5</span> to check answers in your head. For an angle a bit less than 30°, the opposite side is a bit less than half the hypotenuse. For a bigger angle, it is more than half.</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Can <span class="tex">\sin\theta</span> ever be 0? What would the ladder look like?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Only at 0°: the ladder lies flat on the floor and reaches a height of 0. For every acute angle, <span class="tex">\sin\theta</span> is between 0 and 1.</div></div></div>
+</section>
+
+<!-- ================= 3. Finding the opposite side ================= -->
+<section class="card" data-ink="s3" data-section="3. Finding the Opposite Side">
+  <div class="sec-h"><span class="badge">3</span><h2>Finding the Opposite Side</h2></div>
+  <p>If you know the hypotenuse and an angle, you can find the side across from the angle. The unknown is on <b>top</b> of the fraction, so you <b>multiply</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Finding a side with the sine ratio
+    <ol class="u7l5-steps">
+      <li><b>Step 1.</b> Label opp and hyp from the angle. Mark the side you know and the side you want (<span class="tex">x</span>).</li>
+      <li><b>Step 2.</b> Write <span class="tex">\sin\theta=\dfrac{\text{opp}}{\text{hyp}}</span> and substitute the numbers.</li>
+      <li><b>Step 3.</b> Solve. Unknown on top (opp): <b>multiply</b> both sides by the hyp. Unknown on the bottom (hyp): <b>divide</b> (Section 4).</li>
+      <li><b>Step 4.</b> Round at the end. Check: the hyp must be the longest side. Write the units (or a sentence).</li>
+    </ol></div>
+  <div class="explainer u7l5-gap" data-explainer="findOpp"></div>
+  <div class="tip calc-tip u7l5-gap"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For <span class="tex">x=12\times\sin34^\circ</span>, press <span class="keys">12 <kbd>×</kbd> <kbd>SIN</kbd> 34 <kbd>)</kbd> <kbd>ENTER</kbd></span>. It shows 6.710…</div>
+    <button class="pill" type="button" data-keys="12 × sin 34 ) =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Find the opposite side</h3></div>
+  <div class="pl">Find <span class="tex">x</span> to the nearest tenth.</div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a)</div><div class="u7l5-fig" data-fig="ex5a"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp <span class="tex">=x</span>, hyp <span class="tex">=12</span><br><span class="tex">\sin34^\circ=\dfrac{x}{12}</span><br><span class="tex">12\times\sin34^\circ=x</span> (multiply both sides by 12)<br><span class="tex">x=6.710\ldots\approx6.7</span> cm. Check: <span class="tex">6.7&lt;12</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u7l5-fig" data-fig="ex5b"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp <span class="tex">=x</span>, hyp <span class="tex">=8.5</span><br><span class="tex">\sin61^\circ=\dfrac{x}{8.5}</span><br><span class="tex">8.5\times\sin61^\circ=x</span><br><span class="tex">x=7.434\ldots\approx7.4</span> m. Check: <span class="tex">7.4&lt;8.5</span> ✓ (A big angle faces a long side.)</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Will Kai’s ladder reach?</h3></div>
+  <div class="u7l5-two">
+    <div class="part"><div class="pl">Ladder labels say to set a ladder at about <b>75°</b> to the ground. Kai has a <b>6.0 m</b> ladder. He needs to reach a gutter that is <b>5.5 m</b> above the ground. If he sets the ladder at 75°, will it reach the gutter?</div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The ladder is the hyp (across from the right angle at the wall). The height <span class="tex">h</span> is opp.<br><span class="tex">\sin75^\circ=\dfrac{h}{6.0}</span>, so <span class="tex">h=6.0\times\sin75^\circ=5.795\ldots\approx5.8</span> m<br><span class="tex">5.8\text{ m}&gt;5.5\text{ m}</span>, so <b>yes</b>, the ladder will reach the gutter (with about 0.3 m to spare).</div></div></div>
+    <div class="u7l5-fig" data-fig="ex6"></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–6">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 5 · Questions 1–6</h2>
+  <p class="pr-t">Calculator in DEG mode. Try these before we find the hypotenuse.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Label the sides</span>
+    <span><b>2</b>sin θ from a triangle</span>
+    <span><b>3</b>Calculator sines</span>
+    <span><b>4</b>Skatepark ramps</span>
+    <span><b>5</b>True or false?</span>
+    <span><b>6</b>Find the opposite side</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 6.</span><a class="pill" href="../../../#/lesson/u7l5">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Finding the hypotenuse ================= -->
+<section class="card" data-ink="s4" data-section="4. Finding the Hypotenuse">
+  <div class="sec-h"><span class="badge">4</span><h2>Finding the Hypotenuse</h2></div>
+  <p>If you know the opposite side and the angle, you can find the hypotenuse. Now the unknown is on the <b>bottom</b> of the fraction. Multiply both sides by the unknown to bring it up, then <b>divide</b> by the sine.</p>
+  <div class="u7l5-chain"><span class="tex">\sin27^\circ=\dfrac{4.5}{h}\quad\longrightarrow\quad h\times\sin27^\circ=4.5\quad\longrightarrow\quad h=\dfrac{4.5}{\sin27^\circ}</span></div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Unknown on top:</b> opp <span class="tex">=</span> hyp <span class="tex">\times\sin\theta</span> (multiply). &nbsp;&nbsp; <b>Unknown on the bottom:</b> hyp <span class="tex">=\dfrac{\text{opp}}{\sin\theta}</span> (divide).</div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For <span class="tex">h=4.5\div\sin27^\circ</span>, press <span class="keys">4.5 <kbd>÷</kbd> <kbd>SIN</kbd> 27 <kbd>)</kbd> <kbd>ENTER</kbd></span>. It shows 9.912…</div>
+    <button class="pill" type="button" data-keys="4.5 ÷ sin 27 ) =">Show me</button></div>
+  <div class="explainer u7l5-gap" data-explainer="findHyp"></div>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Why Multiply or Divide?">
+  <h3 class="sub">Why multiply on top, and divide on the bottom?</h3>
+  <div class="explainer" data-explainer="why"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> How can you tell whether to multiply or divide <b>before</b> you touch the calculator?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Look where the unknown sits in <span class="tex">\sin\theta=\frac{\text{opp}}{\text{hyp}}</span>. On top (the opp): multiply. On the bottom (the hyp): divide. A hyp answer must also come out <b>longer</b> than the opp.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Find the hypotenuse</h3></div>
+  <div class="pl">Find the hypotenuse <span class="tex">h</span> to the nearest tenth.</div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a)</div><div class="u7l5-fig" data-fig="ex7a"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp <span class="tex">=4.5</span>, hyp <span class="tex">=h</span><br><span class="tex">\sin27^\circ=\dfrac{4.5}{h}</span>, &nbsp;<span class="tex">h\times\sin27^\circ=4.5</span><br><span class="tex">h=\dfrac{4.5}{\sin27^\circ}=9.912\ldots\approx9.9</span> cm. Check: <span class="tex">9.9&gt;4.5</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u7l5-fig" data-fig="ex7b"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp <span class="tex">=15</span>, hyp <span class="tex">=h</span><br><span class="tex">\sin52^\circ=\dfrac{15}{h}</span><br><span class="tex">h=\dfrac{15}{\sin52^\circ}=19.035\ldots\approx19.0</span> ft. Check: <span class="tex">19.0&gt;15</span> ✓</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A wheelchair ramp in Okotoks</h3></div>
+  <div class="u7l5-two">
+    <div>
+      <p class="u7l5-p">A community hall in Okotoks needs a wheelchair ramp up to a door that is <b>0.45 m</b> above the ground. Accessibility guides suggest a ramp angle of about <b>4.8°</b> (a slope of about 1 : 12).</p>
+      <div class="part"><div class="pl">(a) How long must the ramp surface be? Round to the nearest tenth of a metre.</div><div class="work" style="--h:100px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The rise, 0.45 m, is opp. The ramp surface <span class="tex">r</span> is hyp.<br><span class="tex">\sin4.8^\circ=\dfrac{0.45}{r}</span>, &nbsp;<span class="tex">r=\dfrac{0.45}{\sin4.8^\circ}=5.377\ldots\approx5.4</span> m. The ramp must be about 5.4 m long.</div></div></div>
+      <div class="part"><div class="pl">(b) Check: the 1 : 12 rule says about 12 m of ramp for each 1 m of rise. Does your answer agree?</div><div class="work" style="--h:50px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.45\times12=5.4</span> m. Yes, it agrees.</div></div></div>
+    </div>
+    <div><div class="u7l5-fig" data-fig="ex8"></div><div class="u7l5-small u7l5-c">Not drawn to scale.</div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u7l5"></section>
+
+<!-- ================= 5. Solving problems ================= -->
+<section class="card" data-ink="s5" data-section="5. Solving Problems">
+  <div class="sec-h"><span class="badge">5</span><h2>Solving Problems and Checking Your Answer</h2></div>
+  <p>For a word problem, <b>sketch</b> a right triangle first. Put the angle in, label opp and hyp, and mark the side you want. Some problems need one more step at the end, such as <b>adding a height</b>.</p>
+  <div class="explainer" data-explainer="scenes"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>A boom lift and a zipline</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A boom lift at a construction site has an arm <b>9.5 m</b> long. The arm turns on a pivot <b>1.4 m</b> above the ground. The arm is raised to <b>62°</b> from the horizontal. How high above the ground is the worker’s bucket at the end of the arm?</div>
+      <div class="u7l5-fig" data-fig="ex9a"></div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The arm is hyp. The height of the bucket above the pivot is opp.<br><span class="tex">\sin62^\circ=\dfrac{x}{9.5}</span>, &nbsp;<span class="tex">x=9.5\times\sin62^\circ=8.388\ldots</span> m<br>Add the pivot height: <span class="tex">8.388\ldots+1.4=9.788\ldots\approx9.8</span> m. The bucket is about 9.8 m above the ground.</div></div></div>
+    <div class="part"><div class="pl">(b) A zipline at a summer camp starts on a tower and ends on a lower platform <b>18 m</b> below the start. The cable makes a <b>7°</b> angle with the horizontal. How long is the cable? (Treat it as straight.)</div>
+      <div class="u7l5-fig" data-fig="ex9b"></div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The drop, 18 m, is opp (across from the 7° angle). The cable <span class="tex">c</span> is hyp.<br><span class="tex">\sin7^\circ=\dfrac{18}{c}</span>, &nbsp;<span class="tex">c=\dfrac{18}{\sin7^\circ}=147.699\ldots\approx147.7</span> m<br>The cable is about 147.7 m long.</div></div></div>
+  </div>
+  <div class="tip watch u7l5-gap"><div class="tip-ic">!</div><div><b>Watch out.</b> Keep the full calculator value until the last step. In (a), add 1.4 to 8.388…, not to a rounded 8.4, and round only the final answer.</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Do (a) in one go, so nothing is rounded early: <span class="keys">9.5 <kbd>×</kbd> <kbd>SIN</kbd> 62 <kbd>)</kbd> <kbd>+</kbd> 1.4 <kbd>ENTER</kbd></span> shows 9.788…</div>
+    <button class="pill" type="button" data-keys="9.5 × sin 62 ) + 1.4 =">Show me</button></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>Spot the mistake</h3></div>
+  <div class="pl">Each student made one mistake. Explain how you can tell the answer is not reasonable, then fix it.</div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A right triangle has opp <span class="tex">=9</span> and hyp <span class="tex">=14</span>. Mia wrote <span class="tex">\sin\theta=\dfrac{14}{9}\approx1.56</span>.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A sine can’t be more than 1. She put the hyp on top.<br><span class="tex">\sin\theta=\dfrac{9}{14}\approx0.6429</span></div></div></div>
+    <div class="part"><div class="pl">(b) A right triangle has opp <span class="tex">=6</span> m and a 35° angle. Theo wrote hyp <span class="tex">=6\times\sin35^\circ\approx3.4</span> m.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The hyp can’t be shorter than the opp (<span class="tex">3.4&lt;6</span>). The unknown hyp is on the bottom, so divide.<br>hyp <span class="tex">=\dfrac{6}{\sin35^\circ}\approx10.5</span> m</div></div></div>
+    <div class="part"><div class="pl">(c) Zoe found opp <span class="tex">=10\times\sin50^\circ</span>. Her calculator showed <span class="tex">-2.6</span>.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A length can’t be negative. Her calculator was in RAD mode.<br>In DEG mode: <span class="tex">10\times\sin50^\circ=7.660\ldots\approx7.7</span></div></div></div>
+  </div>
+  <div class="explainer u7l5-gap" data-explainer="mistakes"></div>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s5x" data-section="5. Check: Put It Back In">
+  <h3 class="sub">Check a side: put it back into the ratio</h3>
+  <p>A quick check for any answer: divide the opp by the hyp with your answer in it. You should get the sine of the angle back.</p>
+  <div class="explainer" data-explainer="check"></div>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example: More Practice">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More practice</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A right triangle has a hypotenuse of 18 cm and a 41° angle. Find the side opposite the 41° angle.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">x=18\times\sin41^\circ=11.809\ldots\approx11.8</span> cm. Check: <span class="tex">11.8&lt;18</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(b) The side opposite a 37° angle is 9 m. Find the hypotenuse.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">h=\dfrac{9}{\sin37^\circ}=14.954\ldots\approx15.0</span> m. Check: <span class="tex">15.0&gt;9</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(c) A kite string is 45 m long and makes a 52° angle with the ground. Ava holds it 1.3 m above the ground. How high is the kite?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">45\times\sin52^\circ=35.460\ldots</span> m above her hand. Add 1.3: <span class="tex">35.460\ldots+1.3=36.760\ldots\approx36.8</span> m.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Labels:</b> the <b>hyp</b> is across from the right angle (the longest side). The <b>opp</b> is across from <span class="tex">\theta</span>. The <b>adj</b> touches <span class="tex">\theta</span>. Switch angles: opp and adj swap.</div>
+    <div><b>SOH:</b> <span class="tex">\sin\theta=\dfrac{\text{opp}}{\text{hyp}}</span>, the same in every right triangle with that angle. Calculator in <b>DEG</b>: <span class="keys"><kbd>SIN</kbd> 40 <kbd>)</kbd> <kbd>ENTER</kbd></span>. Round sines to 4 decimal places.</div>
+    <div><b>Less than 1:</b> the hyp is on the bottom and it is the longest side, so <span class="tex">\sin\theta&lt;1</span>. Bigger angle, bigger sine. <span class="tex">\sin30^\circ=0.5</span>: the opp is half the hyp.</div>
+    <div><b>Find a side:</b> unknown on top: opp <span class="tex">=</span> hyp <span class="tex">\times\sin\theta</span>. Unknown on the bottom: hyp <span class="tex">=</span> opp <span class="tex">\div\sin\theta</span>. Round at the end, add any extra height, check the hyp is longest.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u7l5">
+    <div><div class="kicker">Your turn</div><b>Assignment 5 · Questions 7–18</b><div class="muted">Finding the hypotenuse, a grain auger, a gravel conveyor, a parasailer, Dev’s mistake, a zipline, Nadia’s ladder, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l6/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 6 — The Cosine Ratio</b><div class="muted">Adjacent ÷ hypotenuse: the third ratio. Then choose sin, cos or tan for any right triangle.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u7l5.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u7l5', homeHref: '../../', title: '7.5 The Sine Ratio' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

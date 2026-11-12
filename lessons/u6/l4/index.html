@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scale Diagrams: Maps and Floor Plans · Math 10-3 6.4</title>
+<meta name="description" content="Math 10-3 Unit 6 Lesson 4: scale diagrams. A scale three ways (in words, as a ratio, as a bar scale), reductions and enlargements, real lengths from a diagram (multiply or a proportion), diagram lengths from real lengths, choosing a scale and drawing a floor plan, and route distances on a map. A map with a measuring tape you drag. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u6l4.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u6l4">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Ant on the Box">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Ant on the Box</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">An ant sits on a bottom corner of a closed box shaped like a cube. Every edge of the box is <b>10 cm</b> long.</p><p class="vw-ctx">A grain of sugar sits on the <b>opposite</b> corner: at the top, on the far side. The ant can only walk on the <b>outside</b> of the box.</p><p class="vw-ask">Which path to the sugar is the shortest?</p></div><div class="vw-art"><svg viewBox="0 0 320 270" role="img" aria-label="A cube-shaped box with a small ant wiggling at a bottom front corner and a sparkling grain of sugar at the opposite top back corner">
+    <polygon points="60,245 190,245 190,115 60,115" fill="#e9cfa2" stroke="#7a5124" stroke-width="3.5" stroke-linejoin="round"/>
+    <polygon points="60,115 190,115 262,55 132,55" fill="#f3e0bb" stroke="#7a5124" stroke-width="3.5" stroke-linejoin="round"/>
+    <polygon points="190,245 262,185 262,55 190,115" fill="#d6b582" stroke="#7a5124" stroke-width="3.5" stroke-linejoin="round"/>
+    <g stroke="#b48c55" stroke-width="2" opacity=".6"><line x1="96" y1="150" x2="154" y2="150"/><line x1="96" y1="160" x2="140" y2="160"/></g>
+    <g transform="translate(262 50)">
+      <rect x="-9" y="-12" width="17" height="15" rx="2" fill="#fff" stroke="#8a7a62" stroke-width="2" transform="rotate(-12)"/>
+      <g fill="#e2a91c"><path d="M18 -26l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"><animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/></path>
+        <path d="M-20 -24l2 4.5 4.5 2-4.5 2-2 4.5-2-4.5-4.5-2 4.5-2z"><animate attributeName="opacity" values="1;0;1" dur="1.8s" repeatCount="indefinite"/></path></g>
+    </g>
+    <g transform="translate(56 250)">
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;3 -1;0 0" dur=".9s" repeatCount="indefinite"/>
+        <g stroke="#2a1a0e" stroke-width="2.2" stroke-linecap="round" fill="none">
+          <path d="M-4 -3l-6 -6M0 -3l0 -8M4 -3l6 -6"><animateTransform attributeName="transform" type="rotate" values="-12;12;-12" dur=".45s" repeatCount="indefinite"/></path>
+          <path d="M-4 3l-6 6M0 3l0 8M4 3l6 6"><animateTransform attributeName="transform" type="rotate" values="12;-12;12" dur=".45s" repeatCount="indefinite"/></path>
+          <path d="M14 -3q6 -8 10 -6M14 3q6 -6 11 -9"/></g>
+        <ellipse cx="-9" cy="0" rx="7" ry="5" fill="#2a1a0e"/><ellipse cx="2" cy="0" rx="4.5" ry="3.6" fill="#2a1a0e"/><circle cx="11" cy="0" r="4.4" fill="#2a1a0e"/>
+      </g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="290" y="150" font-size="50" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u6l4-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> along three edges: across, back, then up</div>
+      <div class="opt"><b>B</b> slanting across the front face to its top corner, then along the top edge</div>
+      <div class="opt right"><b>C</b> one slanting path across the front and the top, crossing the edge between them at its middle</div>
+      <div class="opt"><b>D</b> they are all the same length</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u6l4-wans"><div><b>C!</b> <b>Unfold</b> the front and the top of the box so they lie flat. They make one rectangle, 10 cm by 20 cm. On flat paper the shortest path is a <b>straight line</b>, and it crosses the fold right at the middle of the edge. Path A is 30 cm, path B is about 24.1 cm, and path C is only about <b>22.4 cm</b>. <span class="muted">Laying a bumpy world flat so you can measure it with a ruler is exactly what a map does.</span></div><div class="u6l4-fig" data-fig="wans"></div></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 6 Similarity and Scale · Lesson 4</div>
+  <h1>Scale Diagrams: Maps and Floor Plans</h1>
+  <p class="lede">A road map of Alberta, the floor plan of an apartment, a blueprint for a garage, a model car: all of them are <b>scale diagrams</b>. Today we read the <b>scale</b> three ways, change lengths on a drawing into <b>real lengths</b> (and back), <b>choose a scale</b> so a drawing fits the paper, draw a <b>floor plan</b>, and measure a <b>route</b> on a map.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>write a scale <b>in words</b>, <b>as a ratio</b> and <b>as a bar scale</b>, and tell a reduction from an enlargement</li>
+      <li>use the scale to change a diagram length into a <b>real length</b> (multiply, or use a proportion)</li>
+      <li>use the scale to find the length to <b>draw</b> from a real length</li>
+      <li><b>choose</b> an easy scale so a drawing fits, and draw a <b>floor plan</b></li>
+      <li>measure a <b>route</b> on a map piece by piece, and compare it with the straight-line distance</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G3</b> Demonstrate an understanding of similarity of convex polygons, including regular and irregular polygons.<br><span class="muted">Today: a scale diagram (a map, a floor plan, a model) is similar to the real object, so every length changes by the same scale.</span></div>
+</section>
+
+<!-- ================= 1. What is a scale diagram? ================= -->
+<section class="card" data-ink="s1" data-section="1. What Is a Scale Diagram?">
+  <div class="sec-h"><span class="badge">1</span><h2>What Is a Scale Diagram?</h2></div>
+  <p>A <b>scale diagram</b> is an accurate drawing of a real object in which every length is changed by the same amount. Maps, floor plans, blueprints and model cars are smaller than the real thing: they are <b>reductions</b>. A drawing of an insect or a tiny machine part can be bigger than the real thing: an <b>enlargement</b>. A scale diagram is <b>similar</b> to the real object: it has the same shape and the same angles.</p>
+  <p>The <b>scale</b> tells you how a length on the diagram compares with the real length. A scale can be written three ways. All three below say the same thing.</p>
+  <table class="u6l4-tbl u6l4-ways">
+    <tr><th>In words</th><th>As a ratio</th><th>As a bar scale</th></tr>
+    <tr><td>1 cm represents 2 m</td><td><span class="tex">1:200</span></td><td><div class="u6l4-fig" data-fig="bar200"></div></td></tr>
+  </table>
+  <div class="def u6l4-gap"><b>Key idea</b> &nbsp; <b>Scale = diagram length : real length</b> &nbsp; (the diagram comes first)
+    <div class="u6l4-note">A <b>ratio scale</b> has no units, because both numbers are in the <b>same unit</b>. <span class="tex">1:200</span> means 1 cm on the plan is 200 cm in real life (or 1 mm is 200 mm, or 1 in is 200 in).</div>
+    <div class="u6l4-note"><b>Units:</b> &nbsp; 1 cm = 10 mm &nbsp;·&nbsp; 1 m = 100 cm &nbsp;·&nbsp; 1 km = 1000 m = 100&#8239;000 cm &nbsp;·&nbsp; 1 ft = 12 in</div></div>
+  <div class="u6l4-two2">
+    <div class="def"><b>Words to ratio:</b> change the real length to the <b>same unit</b> as the diagram length, then write diagram : real.</div>
+    <div class="def"><b>Ratio to words:</b> <span class="tex">1:n</span> means 1 cm represents <span class="tex">n</span> cm. Change <span class="tex">n</span> cm to metres or kilometres so it is easy to picture.</div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> <span class="tex">1:200</span> and <span class="tex">200:1</span> are very different. <span class="tex">1:200</span> is a <b>reduction</b> (a plan: the real room is bigger). <span class="tex">200:1</span> is an <b>enlargement</b> (the drawing is bigger). In Lesson 6.1 you met the scale factor: a scale of <span class="tex">1:200</span> means <span class="tex">k=\frac{1}{200}=0.005</span>.</div></div>
+  <div class="explainer u6l4-gap" data-explainer="ways"></div>
+  <div class="part think u6l4-gap" data-extra><div class="pl"><span class="think-tag">Think</span> A model train box says <span class="tex">1:87</span>. A poster of a flea says <span class="tex">30:1</span>. Which picture is bigger than the real thing? How can you tell from the ratio alone?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The flea poster. The diagram number comes first: in <span class="tex">30:1</span> the drawing number is bigger, so it is an <b>enlargement</b>. In <span class="tex">1:87</span> the real number is bigger, so the model is a <b>reduction</b>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Three ways to write a scale</h3></div>
+  <div class="part"><div class="pl">Complete the table.</div>
+    <table class="u6l4-tbl u6l4-t1">
+      <tr><th></th><th>Scale in words</th><th>As a ratio</th><th>Reduction or enlargement?</th></tr>
+      <tr><th>(a)</th><td>1 cm represents 5 m</td><td><span data-reveal="&nbsp;"><span class="tex">1:500</span></span></td><td><span data-reveal="&nbsp;">reduction</span></td></tr>
+      <tr><th>(b)</th><td>1 cm represents 3 km</td><td><span data-reveal="&nbsp;"><span class="tex">1:300\,000</span></span></td><td><span data-reveal="&nbsp;">reduction</span></td></tr>
+      <tr><th>(c)</th><td>1 in represents 8 ft</td><td><span data-reveal="&nbsp;"><span class="tex">1:96</span></span></td><td><span data-reveal="&nbsp;">reduction</span></td></tr>
+      <tr><th>(d)</th><td>2 cm represents 1 mm</td><td><span data-reveal="&nbsp;"><span class="tex">20:1</span></span></td><td><span data-reveal="&nbsp;">enlargement</span></td></tr>
+      <tr><th>(e)</th><td><span data-reveal="&nbsp;">1 cm represents 2.5 m</span></td><td><span class="tex">1:250</span></td><td><span data-reveal="&nbsp;">reduction</span></td></tr>
+      <tr><th>(f)</th><td><span data-reveal="&nbsp;">1 cm represents 400 m</span></td><td><span class="tex">1:40\,000</span></td><td><span data-reveal="&nbsp;">reduction</span></td></tr>
+    </table>
+    <div class="work" style="--h:40px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <span class="tex">5\text{ m}=5\times100=500</span> cm &nbsp;·&nbsp; (b) <span class="tex">3\text{ km}=3\times100\,000=300\,000</span> cm &nbsp;·&nbsp; (c) <span class="tex">8\text{ ft}=8\times12=96</span> in<br>(d) 1 mm and <span class="tex">2\text{ cm}=20</span> mm, so <span class="tex">20:1</span>. The drawing is bigger than the real object.<br>(e) 1 cm represents 250 cm <span class="tex">=250\div100=2.5</span> m &nbsp;·&nbsp; (f) 1 cm represents 40&#8239;000 cm <span class="tex">=400</span> m (or 0.4 km)</div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>A bar scale on a park map</h3></div>
+  <div class="u6l4-ex2">
+    <div><p class="u6l4-p">A park map has this bar scale. In your booklet, measure it with a ruler. Here, the ruler is drawn under it.</p>
+      <div class="u6l4-fig" data-fig="ex2bar"></div></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) How long is one block of the bar? Write the scale in words.</div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One block is 1 cm long and stands for 50 m. The scale is <b>1 cm represents 50 m</b>.</div></div></div>
+      <div class="part"><div class="pl">(b) Write the scale as a ratio.</div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">50\text{ m}=50\times100=5000</span> cm. The scale is <span class="tex">1:5000</span>.</div></div></div>
+    </div>
+  </div>
+  <div class="part u6l4-gap"><div class="pl">(c) Ana zooms in on the map on her phone, so everything is twice as long, including the bar. Is the bar scale still correct? Would a printed ratio “1 : 5000” still be correct? Explain.</div><div class="work" style="--h:90px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The bar grows with the map, so it still matches: the <b>bar scale is still correct</b>. A printed “1 : 5000” does not change, but now 2 cm on the screen stands for 50 m, so the real scale is <span class="tex">1:2500</span>. The printed ratio is <b>wrong</b>. This is why phone maps use a bar scale.</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exs" data-section="Extra Example: More Scales">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More scales</h3></div>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) Write “1 cm represents 25 km” as a ratio.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">25\times100\,000=2\,500\,000</span> cm, so <span class="tex">1:2\,500\,000</span></div></div></div>
+    <div class="part"><div class="pl">(b) Write “1 mm represents 2 m” as a ratio.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2\text{ m}=2000</span> mm, so <span class="tex">1:2000</span></div></div></div>
+    <div class="part"><div class="pl">(c) Write <span class="tex">1:1500</span> in words, in metres.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 cm represents 1500 cm <span class="tex">=15</span> m</div></div></div>
+    <div class="part"><div class="pl">(d) Is <span class="tex">4:1</span> a reduction or an enlargement? Write it in words.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">An <b>enlargement</b>: 4 cm on the drawing represents 1 cm of the real object.</div></div></div>
+  </div>
+</section>
+
+<section class="card" data-ink="s1z" data-section="1. Zooming In">
+  <h3 class="sub">Zoom in: which scale survives?</h3>
+  <div class="explainer" data-explainer="zoom"></div>
+</section>
+
+<!-- ================= 2. Real lengths ================= -->
+<section class="card" data-ink="s2" data-section="2. Real Lengths from a Diagram">
+  <div class="sec-h"><span class="badge">2</span><h2>Finding Real Lengths from a Diagram</h2></div>
+  <p>You can find a real length two ways. Both use what you learned about proportions in Unit 1.</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u6l4-note"><b>Method 1: proportion.</b> &nbsp; <span class="tex">\dfrac{\text{diagram}}{\text{real}}=\dfrac{\text{diagram}}{\text{real}}</span> &nbsp; Put the scale on one side and your length on the other. Units in the same position must match.</div>
+    <div class="u6l4-note"><b>Method 2: multiply.</b> &nbsp; real length = diagram length × (real length for 1 unit of the diagram)<br>If 1 cm represents 1.5 m, then 4 cm represents <span class="tex">4\times1.5=6</span> m. &nbsp;With a ratio <span class="tex">1:n</span>, multiply by <span class="tex">n</span>, then change the units.</div></div>
+  <div class="tip"><div class="tip-ic">i</div><div><b>Map shortcut.</b> To change centimetres to kilometres, divide by 100&#8239;000 (move the decimal point 5 places left). So <span class="tex">1:2\,000\,000</span> means 1 cm represents 20 km, and <span class="tex">1:50\,000</span> means 1 cm represents 0.5 km.</div></div>
+  <div class="explainer u6l4-gap" data-explainer="realLen"></div>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Two Methods, One Answer">
+  <h3 class="sub">Proportion or multiply: the same answer</h3>
+  <div class="explainer" data-explainer="twoWays"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> For the living room, Sam writes <span class="tex">\dfrac{1}{1.5}=\dfrac{x}{4.2}</span> and gets <span class="tex">x=2.8</span>. What went wrong?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">He put the plan length 4.2 cm on the <b>bottom</b>, where the real length goes. Keep plan on top and real on the bottom on <b>both</b> sides: <span class="tex">\dfrac{1}{1.5}=\dfrac{4.2}{x}</span> gives <span class="tex">x=6.3</span> m. Also, 2.8 m can’t be right: the real room must be longer than 4.2 m, because each plan cm is 1.5 m.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>An apartment floor plan</h3></div>
+  <p class="u6l4-p">This plan of an apartment is drawn to scale: <b>1 cm represents 1.5 m</b>. The plan lengths are shown.</p>
+  <div class="u6l4-ex3">
+    <div class="u6l4-fig" data-fig="apt"></div>
+    <div class="part"><div class="pl">(a) Use a proportion to find the real length and width of the living room.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\text{plan (cm)}}{\text{real (m)}}:\quad\dfrac{1}{1.5}=\dfrac{4.2}{x}</span>, so <span class="tex">x=1.5\times4.2=6.3</span><br><span class="tex">\dfrac{1}{1.5}=\dfrac{3}{y}</span>, so <span class="tex">y=1.5\times3=4.5</span><br>The living room is <b>6.3 m by 4.5 m</b>.</div></div></div>
+  </div>
+  <div class="part u6l4-gap"><div class="pl">(b) Use the multiply method to complete the table.</div>
+    <table class="u6l4-tbl u6l4-t3">
+      <tr><th>Room</th><th>Plan (cm)</th><th>Work</th><th>Real (m)</th></tr>
+      <tr><th>Kitchen</th><td><span class="tex">4.2\times2.2</span></td><td><span data-reveal="&nbsp;"><span class="tex">4.2\times1.5,\ \ 2.2\times1.5</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">6.3\times3.3</span></span></td></tr>
+      <tr><th>Bedroom</th><td><span class="tex">2.8\times3.6</span></td><td><span data-reveal="&nbsp;"><span class="tex">2.8\times1.5,\ \ 3.6\times1.5</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">4.2\times5.4</span></span></td></tr>
+      <tr><th>Bathroom</th><td><span class="tex">2.8\times1.6</span></td><td><span data-reveal="&nbsp;"><span class="tex">2.8\times1.5,\ \ 1.6\times1.5</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">4.2\times2.4</span></span></td></tr>
+      <tr><th>Whole apartment</th><td><span class="tex">7\times5.2</span></td><td><span data-reveal="&nbsp;"><span class="tex">7\times1.5,\ \ 5.2\times1.5</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">10.5\times7.8</span></span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Kitchen 6.3 m × 3.3 m · Bedroom 4.2 m × 5.4 m · Bathroom 4.2 m × 2.4 m · Whole apartment 10.5 m × 7.8 m</div></div></div>
+  <div class="part u6l4-gap"><div class="pl">(c) New flooring is going into the living room. Find the real area of its floor.</div><div class="work" style="--h:80px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Use the real lengths from (a): <span class="tex">A=6.3\times4.5=28.35\text{ m}^2</span>. The living room floor is <b>28.35 m²</b>.</div></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> For a real area, change the <b>lengths</b> to real lengths first, then multiply. The plan area is <span class="tex">4.2\times3=12.6\text{ cm}^2</span>, but <span class="tex">12.6\times1.5=18.9\text{ m}^2</span> is <b>wrong</b>. Areas do not grow by the scale. (Did you know? Here they grow by <span class="tex">1.5\times1.5=2.25</span>.)</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>The real area: <span class="keys">6.3 <kbd>×</kbd> 4.5 <kbd>ENTER</kbd></span> gives 28.35.</div>
+    <button class="pill" type="button" data-keys="6.3 × 4.5 =">Show me</button></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2a" data-section="2. Why Areas Grow More">
+  <h3 class="sub">Why the area does not grow by 1.5</h3>
+  <div class="explainer" data-explainer="area"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Maps, models and an ant</h3></div>
+  <div class="pl">Find each real length. Say whether you multiplied or divided, and why.</div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) An Alberta road map has a scale of <span class="tex">1:2\,000\,000</span>. Lethbridge and Medicine Hat are 7.9 cm apart on the map. How far apart are they really (in a straight line)?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 cm represents 2&#8239;000&#8239;000 cm = 20 km (shortcut).<br><span class="tex">7.9\times20=158</span><br>Multiply: the real distance is bigger. They are about <b>158 km</b> apart.</div></div></div>
+    <div class="part"><div class="pl">(b) A model car is built at a scale of <span class="tex">1:64</span>. The model is 7.5 cm long. How long is the real car, in metres?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 cm on the model is 64 cm on the car.<br><span class="tex">7.5\times64=480</span> cm<br><span class="tex">480\div100=4.8</span> m. The real car is <b>4.8 m</b> long.</div></div></div>
+    <div class="part"><div class="pl">(c) A science book shows an ant at a scale of <span class="tex">8:1</span>. The ant in the picture is 6 cm long. How long is the real ant, in millimetres?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\text{picture}}{\text{real}}:\ \dfrac{8}{1}=\dfrac{6}{x}</span><br><span class="tex">8x=6</span>, so <span class="tex">x=0.75</span> cm <span class="tex">=0.75\times10=7.5</span> mm<br>Divide: in an enlargement the real ant is smaller. It is <b>7.5 mm</b> long.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(a) <span class="keys">7.9 <kbd>×</kbd> 20 <kbd>ENTER</kbd></span> gives 158. &nbsp;(b) <span class="keys">7.5 <kbd>×</kbd> 64 <kbd>ENTER</kbd></span> gives 480. &nbsp;(c) <span class="keys">6 <kbd>÷</kbd> 8 <kbd>ENTER</kbd></span> gives 0.75.</div>
+    <span class="u6l4-btns"><button class="pill" type="button" data-keys="7.9 × 20 =">(a)</button><button class="pill" type="button" data-keys="7.5 × 64 =">(b)</button><button class="pill" type="button" data-keys="6 ÷ 8 =">(c)</button></span></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2m" data-section="2. Multiply or Divide?">
+  <h3 class="sub">Multiply or divide? Ask: is the real thing bigger or smaller?</h3>
+  <div class="explainer" data-explainer="multDiv"></div>
+</section>
+
+<section class="card example" data-extra data-ink="exm" data-section="Extra Example: More Real Lengths">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More real lengths</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A hiking map of Kananaskis has a scale of <span class="tex">1:50\,000</span>. Two campsites are 6.4 cm apart on the map. How far apart are they really?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 cm represents 0.5 km. <span class="tex">6.4\times0.5=3.2</span>. They are <b>3.2 km</b> apart.</div></div></div>
+    <div class="part"><div class="pl">(b) A dollhouse is built at <span class="tex">1:12</span>. Its front door is 17 cm tall. How tall is the real door, in metres?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">17\times12=204</span> cm <span class="tex">=2.04</span> m. Multiply: the real door is bigger.</div></div></div>
+    <div class="part"><div class="pl">(c) A poster shows a flea at <span class="tex">20:1</span>. The flea on the poster is 5 cm long. How long is the real flea, in mm?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5\div20=0.25</span> cm <span class="tex">=2.5</span> mm. Divide: the real flea is smaller.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= 3. Diagram lengths ================= -->
+<section class="card" data-ink="s3" data-section="3. Diagram Lengths from Real Lengths">
+  <div class="sec-h"><span class="badge">3</span><h2>Finding Diagram Lengths from Real Lengths</h2></div>
+  <p>Now go the other way: you know the real length and need the length to <b>draw</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Diagram length = real length ÷ (real length for 1 unit of the diagram)</b>, or use a proportion.
+    <div class="u6l4-note">With a ratio <span class="tex">1:n</span>: change the real length to the diagram’s unit (usually cm), then divide by <span class="tex">n</span>.</div>
+    <div class="u6l4-note"><b>Check:</b> for a reduction, the diagram length must be <b>smaller</b> than the real length.</div></div>
+  <div class="explainer u6l4-gap" data-explainer="toDraw"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>A garage blueprint</h3></div>
+  <p class="u6l4-p">Carpenters’ blueprints often use the scale <b>¼ in represents 1 ft</b>. Liam is drawing the blueprint for a garage that is 24 ft long and 22 ft wide, with a garage door 9 ft wide.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many feet does 1 in on the blueprint represent?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">¼ in represents 1 ft. There are 4 quarters in 1 in. So 1 in represents <span class="tex">4\times1=4</span> ft.</div></div></div>
+    <div class="part"><div class="pl">(b) Find the length, width and door width on the blueprint.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Divide each real length by 4 (or multiply by ¼):<br>length <span class="tex">24\div4=6</span> in &nbsp; width <span class="tex">22\div4=5\tfrac12</span> in &nbsp; door <span class="tex">9\div4=2\tfrac14</span> in<br>On the blueprint: <b>6 in by 5½ in</b>, door <b>2¼ in</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>At the hobby shop</h3></div>
+  <p class="u6l4-p">A hobby shop sells models at different scales. Find each model length to the nearest tenth of a centimetre.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A pickup truck is 5.9 m long. How long is a <span class="tex">1:64</span> model of it?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same units: <span class="tex">5.9\text{ m}=590</span> cm<br><span class="tex">590\div64=9.218\ldots</span><br>The model is about <b>9.2 cm</b> long.</div></div></div>
+    <div class="part"><div class="pl">(b) Model trains in “HO scale” are <span class="tex">1:87</span>. A real grain boxcar is 15.2 m long. How long is the HO model?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">15.2\text{ m}=1520</span> cm<br><span class="tex">1520\div87=17.47\ldots</span><br>The model boxcar is about <b>17.5 cm</b> long.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(a) <span class="keys">590 <kbd>÷</kbd> 64 <kbd>ENTER</kbd></span> gives 9.21875. &nbsp;(b) <span class="keys">1520 <kbd>÷</kbd> 87 <kbd>ENTER</kbd></span> gives 17.47126437. Then round to one decimal place.</div>
+    <span class="u6l4-btns"><button class="pill" type="button" data-keys="590 ÷ 64 =">(a)</button><button class="pill" type="button" data-keys="1520 ÷ 87 =">(b)</button></span></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Liam’s friend draws the 9 ft garage door 36 in wide on the blueprint. How can you tell right away it is wrong, and what did he do?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">36 in is 3 ft: the drawing of the door would be <b>bigger</b> than the whole real door, but a blueprint is a reduction. He multiplied by 4 instead of dividing: <span class="tex">9\div4=2\tfrac14</span> in.</div></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exd" data-section="Extra Example: More Drawing Lengths">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More drawing lengths</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) On a <span class="tex">1:50</span> plan, how long should a 6.5 m wall be drawn?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6.5\text{ m}=650</span> cm; <span class="tex">650\div50=13</span> cm</div></div></div>
+    <div class="part"><div class="pl">(b) On a <span class="tex">1:250\,000</span> map, two towns are 35 km apart. How far apart are they on the map?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 cm represents 250&#8239;000 cm = 2.5 km. <span class="tex">35\div2.5=14</span> cm</div></div></div>
+    <div class="part"><div class="pl">(c) A <span class="tex">1:18</span> model is made of a car that is 4.5 m long. How long is the model?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4.5\text{ m}=450</span> cm; <span class="tex">450\div18=25</span> cm</div></div></div>
+  </div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–9">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 4 · Questions 1–9</h2>
+  <p class="pr-t">Get a ruler and your calculator. Try these before we choose our own scales.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Words to ratio</span>
+    <span><b>2</b>Ratio to words</span>
+    <span><b>3</b>A trail map bar scale</span>
+    <span><b>4</b>A cabin plan</span>
+    <span><b>5</b>A workshop plan</span>
+    <span><b>6</b>An Alberta road map</span>
+    <span><b>7</b>A watch gear</span>
+    <span><b>8</b>A backyard deck</span>
+    <span><b>9</b>Models</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 9.</span><a class="pill" href="../../../#/lesson/u6l4">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Choosing a scale; floor plans ================= -->
+<section class="card" data-ink="s4" data-section="4. Choosing a Scale">
+  <div class="sec-h"><span class="badge">4</span><h2>Choosing a Scale and Drawing a Floor Plan</h2></div>
+  <p>Before you draw, choose a scale that makes the drawing <b>fit</b> the paper but is not tiny. Pick an easy number so the dividing is simple.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Choosing a scale
+    <ol class="u6l4-steps">
+      <li><b>Step 1.</b> Find the longest real length (and the longest real width).</li>
+      <li><b>Step 2.</b> Measure the space you have on the paper.</li>
+      <li><b>Step 3.</b> Divide: real length ÷ space. Do it for the length and the width, and use the <b>bigger</b> answer.</li>
+      <li><b>Step 4.</b> Round <b>up</b> to an easy number of real units for each 1 cm (such as 0.5, 1, 2, 2.5, 5 or 10). Rounding down would make the drawing too big.</li>
+      <li><b>Step 5.</b> Divide every real length by the scale, draw with a ruler, and write the scale on the drawing.</li>
+    </ol></div>
+  <div class="explainer u6l4-gap" data-explainer="choose"></div>
+  <div class="part think u6l4-gap" data-extra><div class="pl"><span class="think-tag">Think</span> Why do we round the scale <b>up</b>, and not to the nearest easy number?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Rounding down makes each centimetre stand for <b>less</b>, so you need <b>more</b> centimetres: the drawing gets bigger than the space. That is what happens with 1 cm represents 4 m in Example 7.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>A hockey rink on a handout</h3></div>
+  <p class="u6l4-p">Coach Diaz wants to draw a hockey rink, <b>61 m long and 26 m wide</b>, in a space on a whiteboard handout that is <b>15 cm long and 10 cm wide</b>.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Choose an easy scale so the rink fits.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Length: <span class="tex">61\div15=4.07</span> m per cm<br>Width: <span class="tex">26\div10=2.6</span> m per cm<br>Use the bigger, 4.07, and round up: <b>1 cm represents 5 m</b> (<span class="tex">1:500</span>).</div></div></div>
+    <div class="part"><div class="pl">(b) Find the length and width of the rink on the drawing. Why would “1 cm represents 4 m” not work?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">61\div5=12.2</span> cm and <span class="tex">26\div5=5.2</span> cm. Both fit.<br>With 4 m: <span class="tex">61\div4=15.25</span> cm, longer than the 15 cm space, so it would not fit.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exc" data-section="Extra Example: Choosing a Scale">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>Choosing a scale</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A soccer field is 100 m long and 64 m wide. Choose an easy scale to draw it in a space 22 cm by 14 cm, and find its size on the drawing.</div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">100\div22=4.55</span> and <span class="tex">64\div14=4.57</span> m per cm. Round up: 1 cm represents 5 m. Drawing: <span class="tex">100\div5=20</span> cm by <span class="tex">64\div5=12.8</span> cm.</div></div></div>
+    <div class="part"><div class="pl">(b) A classroom is 9.6 m by 7.2 m. Choose an easy scale for a space 20 cm by 15 cm, and find its size on the drawing.</div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">9.6\div20=0.48</span> and <span class="tex">7.2\div15=0.48</span> m per cm. Round up: 1 cm represents 0.5 m. Drawing: <span class="tex">19.2</span> cm by <span class="tex">14.4</span> cm.</div></div></div>
+  </div>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. Floor Plans">
+  <h3 class="sub">Floor plans</h3>
+  <p>A <b>floor plan</b> is a scale diagram of a building seen from above. These symbols are used on most plans:</p>
+  <div class="u6l4-fig" data-fig="symbols"></div>
+  <div class="explainer u6l4-gap" data-explainer="drawPlan"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Maya’s bedroom</h3></div>
+  <p class="u6l4-p">Draw a floor plan of Maya’s bedroom using the scale <b>1 cm represents 0.5 m</b>. The room is 4.5 m long and 3.6 m wide. It has a 0.9 m door near one corner of a long wall, a 1.5 m window in the middle of the other long wall, a bed 2.0 m by 1.5 m, and a dresser 1.2 m by 0.5 m.</p>
+  <div class="part u6l4-ex8">
+    <div>
+      <table class="u6l4-tbl u6l4-t8">
+        <tr><th>Item</th><th>Real (m)</th><th>Plan (cm)</th></tr>
+        <tr><th>Room length</th><td>4.5</td><td><span data-reveal="&nbsp;">9</span></td></tr>
+        <tr><th>Room width</th><td>3.6</td><td><span data-reveal="&nbsp;">7.2</span></td></tr>
+        <tr><th>Door</th><td>0.9</td><td><span data-reveal="&nbsp;">1.8</span></td></tr>
+        <tr><th>Window</th><td>1.5</td><td><span data-reveal="&nbsp;">3</span></td></tr>
+        <tr><th>Bed</th><td><span class="tex">2.0\times1.5</span></td><td><span data-reveal="&nbsp;"><span class="tex">4\times3</span></span></td></tr>
+        <tr><th>Dresser</th><td><span class="tex">1.2\times0.5</span></td><td><span data-reveal="&nbsp;"><span class="tex">2.4\times1</span></span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Divide each real length by 0.5 (the same as multiplying by 2). For example, <span class="tex">4.5\div0.5=9</span> cm. Other furniture places are fine if the sizes are right and nothing blocks the door’s swing.</div></div>
+    </div>
+    <div class="u6l4-fig" data-fig="ex8"></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u6l4"></section>
+
+<!-- ================= 5. Routes on a map ================= -->
+<section class="card" data-ink="s5" data-section="5. Distances Along a Route">
+  <div class="sec-h"><span class="badge">5</span><h2>Maps: Distances Along a Route</h2></div>
+  <p>The <b>straight-line distance</b> between two places is measured with a ruler from one point to the other. People usually travel along roads or trails, so the <b>route distance</b> is longer. For a route, measure each straight piece, <b>add</b> the pieces, then change the total to a real distance <b>once</b>. For a curved trail, lay a piece of string along it, then measure the string.</p>
+  <div class="tip"><div class="tip-ic">i</div><div><b>Measuring.</b> The maps and plans in your booklet are drawn to scale. Measure them on the printed page with a ruler, to the nearest millimetre (0.1 cm). Print the booklet at 100&nbsp;% (actual size, not “fit to page”) so your measurements match the answers. <b>On this screen</b>, the map below has a measuring tape: drag its two round ends.</div></div>
+  <div class="explainer u6l4-gap" data-explainer="route"></div>
+  <div class="part think u6l4-gap" data-extra><div class="pl"><span class="think-tag">Think</span> Can a route along roads ever be <b>shorter</b> than the straight-line distance?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. A straight line is the shortest path between two points. A route can only be <b>equal</b> to it, when the road itself is straight from start to finish.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Jada’s walk to school</h3></div>
+  <p class="u6l4-p">This map of a small town is drawn to scale. Streets run north–south and avenues run east–west. Drag the ends of the yellow tape to measure (they snap to the places and the corners).</p>
+  <div class="u6l4-ex9">
+    <div><div class="u6l4-tape" id="u6l4-tape"></div>
+      <div class="u6l4-tbtn no-ink"><button class="pill small" type="button" id="u6l4-hide">Hide the reading</button></div></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Write the scale in words and as a ratio.</div><div class="work" style="--h:90px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One block of the bar is 1 cm and represents 200 m. <b>1 cm represents 200 m.</b> <span class="tex">200\text{ m}=20\,000</span> cm, so <span class="tex">1:20\,000</span>.</div></div></div>
+      <div class="part"><div class="pl">(b) Jada walks from home to school along the streets: east on 1 Ave, then north on 3 St. Find her real walking distance.</div><div class="work" style="--h:110px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Measure: 4 cm east + 3 cm north = 7 cm<br><span class="tex">7\times200=1400</span> m = 1.4 km. Jada walks <b>1.4 km</b>.</div></div></div>
+    </div>
+  </div>
+  <div class="parts c3 u6l4-gap">
+    <div class="part"><div class="pl">(c) Find the straight-line distance from home to school.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Measure the straight line: 5 cm. <span class="tex">5\times200=1000</span> m = 1 km. The straight-line distance is <b>1 km</b>, shorter than the route.</div></div></div>
+    <div class="part"><div class="pl">(d) After school she walks to the rink: south on 3 St, then east on 2 Ave. How far is that?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1.5\text{ cm}+2\text{ cm}=3.5</span> cm<br><span class="tex">3.5\times200=700</span> m. It is <b>700 m</b> from school to the rink.</div></div></div>
+    <div class="part"><div class="pl">(e) Jada walks at about 5 km/h. About how many minutes does her walk from home to school take?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">time = distance ÷ speed = <span class="tex">1.4\div5=0.28</span> h<br><span class="tex">0.28\times60=16.8</span> min. Her walk takes about <b>17 minutes</b>.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(e) In one go: <span class="keys">1.4 <kbd>÷</kbd> 5 <kbd>×</kbd> 60 <kbd>ENTER</kbd></span> gives 16.8 minutes.</div>
+    <button class="pill" type="button" data-keys="1.4 ÷ 5 × 60 =">Show me</button></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ext" data-section="Extra Example: A Drive to the Lake">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>A drive to the lake</h3></div>
+  <p class="u6l4-p">On a map with a scale of <span class="tex">1:500\,000</span>, Sam’s route from Pine Ridge to Silver Lake goes north 3.2 cm, then east 4.6 cm, then north 1.8 cm.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) How long is the real route?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 cm represents 5 km. <span class="tex">3.2+4.6+1.8=9.6</span> cm; <span class="tex">9.6\times5=48</span> km</div></div></div>
+    <div class="part"><div class="pl">(b) Sam drives at about 80 km/h. About how many minutes does the drive take?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">48\div80=0.6</span> h; <span class="tex">0.6\times60=36</span> min</div></div></div>
+    <div class="part"><div class="pl">(c) A new highway is 5.5 cm long on the map. How many kilometres shorter is it than his route?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5.5\times5=27.5</span> km; <span class="tex">48-27.5=20.5</span> km shorter</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Scale = diagram : real.</b> Three ways: in words (1 cm represents 2 m), as a ratio with the <b>same units</b> (<span class="tex">1:200</span>), as a bar scale. <span class="tex">1:200</span> is a reduction; <span class="tex">200:1</span> is an enlargement.</div>
+    <div><b>Real length:</b> diagram length × (real length for 1 unit), or a proportion with plan on top on both sides. Then change units (÷ 100 for m, ÷ 100&#8239;000 for km). Area: use the <b>real lengths</b>.</div>
+    <div><b>Diagram length:</b> real length (in the diagram’s unit) ÷ the scale. Check: a reduction must be <b>smaller</b> than the real thing.</div>
+    <div><b>Choosing a scale:</b> real ÷ space for length and width, take the bigger, round <b>up</b> to an easy number. <b>Routes:</b> add the pieces, then change to real once; the straight line is shorter.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u6l4">
+    <div><div class="kicker">Your turn</div><b>Assignment 4 · Questions 10–17</b><div class="muted">Choosing a scale for a backyard, drawing a kitchen floor plan, Kai’s mistake, a trail map route and a hike, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l5/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 5 — Similar Triangles</b><div class="muted">Two matching angles are enough: spot similar triangles, even when one sits inside the other, and use them to find missing sides.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u6l4.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u6l4', homeHref: '../../', title: '6.4 Scale Diagrams: Maps and Floor Plans' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

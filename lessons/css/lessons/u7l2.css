@@ -1,0 +1,84 @@
+/* Math 10-3 · Unit 7 · Lesson 2 — The Pythagorean Theorem: Finding the Hypotenuse: styles used only on this page (prefix u7l2-).
+ * Squares: on leg a red, on leg b blue, on the hypotenuse brown (as in geo.js). Water in the hinge: light blue. */
+.u7l2 .ans .katex, .u7l2 .pl .katex, .u7l2 .def .katex { font-size: 1.08em; }
+.u7l2 .ex-cap .katex { font-size: 1.06em; }
+.u7l2-gap { margin-top: 14px; }
+.u7l2-p { margin: 0 0 8px; }
+
+/* ---------- warm-up ---------- */
+.u7l2-wq .bk-ans { font-size: 20px; line-height: 1.4; color: var(--ink); }
+.u7l2-wsol { display: grid; grid-template-columns: 210px 1fr; gap: 18px; align-items: center; }
+.u7l2-wq .bk-ans b { color: var(--red); }
+.u7l2-wsol svg { width: 210px; height: auto; display: block; }
+.u7l2-wrod { stroke-dasharray: 100; stroke-dashoffset: 100; }
+.u7l2-wq.shown .u7l2-wrod { animation: u7l2-draw 1.6s ease-in-out .2s forwards; }
+@keyframes u7l2-draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .u7l2-wq.shown .u7l2-wrod { animation: none; stroke-dashoffset: 0; } }
+
+/* ---------- figures ---------- */
+.u7l2-fig { position: relative; margin: 4px auto; flex: none; }
+.u7l2-fig svg, .u7l2-svg { display: block; overflow: visible; }
+.u7l2-two { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; margin-top: 8px; }
+.u7l2-two .def { margin: 0; }
+.u7l2-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 5px; }
+.u7l2-steps li { font-size: 19px; }
+.u7l2-steps2 { grid-template-columns: 1fr 1fr; column-gap: 24px; }
+.u7l2-key .u7l2-bigeq { text-align: center; font-size: 34px; margin: 8px 0 6px; }
+.u7l2-key .u7l2-bigeq .katex { font-size: 1em; }
+
+/* ---------- Example 1 ---------- */
+.u7l2-ex1 { display: grid; grid-template-columns: 360px 1fr; gap: 18px; align-items: start; }
+.u7l2-ex1 .parts { margin: 0; }
+.u7l2-ex1 .u7l2-fa { visibility: hidden; }
+.u7l2-ex1:has(.u7l2-pb.shown) .u7l2-fa { visibility: visible; }
+
+/* ---------- tables and blanks ---------- */
+.u7l2-tbl { border-collapse: collapse; font-size: 20px; margin: 8px 0 4px; background: #fff; width: 100%; }
+.u7l2-tbl th, .u7l2-tbl td { border: 2px solid #b9ad97; padding: 6px 10px; text-align: center; height: 48px; }
+.u7l2-tbl th { background: var(--brand-soft); font: 800 17px var(--round); white-space: nowrap; }
+.u7l2-tbl .u7l2-tl { border-left-width: 5px; }
+.u7l2-t7 td { width: 14%; }
+.u7l2-t5 td:last-child { width: 30%; }
+.u7l2-blank { display: inline-block; min-width: 70px; border-bottom: 2px solid #8b7d66; padding: 0 6px; text-align: center; font-weight: 700; }
+.u7l2-blank.u7l2-bs { min-width: 56px; }
+.u7l2-blank.u7l2-bw { min-width: 300px; }
+.u7l2-blank .bk-rv-q { border: 0; background: none; }
+.u7l2-fillin { line-height: 1.9; }
+
+/* ---------- example layouts ---------- */
+.u7l2-row3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; justify-items: center; margin: 4px 0 6px; }
+.u7l2-exs { display: grid; grid-template-columns: 1fr 310px; gap: 18px; align-items: start; }
+.u7l2-exs .parts { margin: 0; }
+.u7l2-pcol { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ---------- the hands-on hinge ---------- */
+.u7l2-tool { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 12px 16px 14px; }
+.u7l2-ht { display: grid; grid-template-columns: 520px 1fr; gap: 20px; align-items: center; }
+.u7l2-htp { display: grid; gap: 8px; font-size: 21px; }
+.u7l2-htr { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 10px; }
+.u7l2-htr > span { color: var(--muted); font-weight: 700; }
+.u7l2-htr > b { font: 800 24px var(--round); color: var(--ink); }
+.u7l2-hbars { display: grid; gap: 6px; margin: 4px 0; }
+.u7l2-hbars > div { display: flex; align-items: center; gap: 8px; height: 24px; }
+.u7l2-hbars i { display: block; height: 20px; border-radius: 5px; background: var(--red); transition: width .08s; }
+.u7l2-hbars > div + div i { background: #8a8f9a; }
+.u7l2-hbars em { font-style: normal; font-size: 17px; color: var(--muted); }
+.u7l2-htv { font-size: 19px; font-weight: 700; padding: 8px 12px; border-radius: 10px; min-height: 2.6em; display: flex; align-items: center; }
+.u7l2-htv.u7l2-ok { background: #e3f4ea; color: var(--green, #12805a); }
+.u7l2-htv.u7l2-no { background: #fdecea; color: var(--red); }
+.u7l2-htb { display: flex; gap: 8px; }
+
+/* ---------- explainer labels ---------- */
+.u7l2-hold { position: absolute; width: 0; height: 0; }
+.u7l2-lab { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap; font: 700 21px var(--round); color: var(--ink); text-align: center; }
+.u7l2-labl { position: absolute; left: 0; top: 0; transform: translateY(-50%); white-space: nowrap; font: 700 21px var(--round); color: var(--ink); }
+.u7l2-eq { font-size: 24px; font-weight: 600; padding: 3px 12px; background: #fff; border-radius: 10px; }
+.u7l2-eq.u7l2-eqk { border: 3px solid var(--brand2); }
+.u7l2-eq.u7l2-eqbig { font-size: 34px; border: 3px solid var(--brand2); padding: 6px 16px; }
+.u7l2-eq.u7l2-ca { color: #c93a33; } .u7l2-eq.u7l2-cb { color: #1f5bd6; } .u7l2-eq.u7l2-cc { color: #7a4a10; }
+.u7l2-eq.u7l2-red { color: var(--red); }
+.u7l2-big { font: 900 44px var(--round); color: var(--ink); }
+.u7l2-cnt { font: 800 19px var(--round); color: #1f5bd6; background: #fff; border: 2px solid #1f5bd6; border-radius: 9px; padding: 1px 8px; }
+
+/* ---------- Math History: more room for the story ---------- */
+.u7l2 .history .hist-grid { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; }

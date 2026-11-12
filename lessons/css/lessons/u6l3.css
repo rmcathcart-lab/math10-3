@@ -1,0 +1,79 @@
+/* Math 10-3 · Unit 6 · Lesson 3 — Drawing Enlargements and Reductions: styles used only on this page (prefix u6l3-).
+ * Original shapes grey-blue, images blue, original moves brown, measuring tapes amber, rays red (dashed). */
+.u6l3 .ans .katex, .u6l3 .pl .katex, .u6l3 .def .katex { font-size: 1.06em; }
+.u6l3-gap { margin-top: 14px; }
+.u6l3-p { margin: 0 0 8px; }
+.u6l3-red { color: var(--red); }
+
+/* ---------- warm-up ---------- */
+.u6l3-wpoll .poll-opts { grid-template-columns: 1fr 1fr; margin-left: 0; } .u6l3-wpoll > .pill, .u6l3-wpoll .poll-ans { margin-left: 0; }
+.u6l3-wpoll .opt { font-size: 21px; padding: 10px 14px; }
+.u6l3-wans { display: grid; grid-template-columns: 1fr 280px; gap: 18px; align-items: center; font-size: 19px; line-height: 1.4; }
+
+/* ---------- figures ---------- */
+.u6l3-fig { position: relative; margin: 4px auto; flex: none; }
+.u6l3-fig svg, .u6l3-svg { display: block; overflow: visible; }
+.u6l3 .card:not(:has(.part.shown)) .u6l3-fa { visibility: hidden; }
+.u6l3-two { display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; margin-top: 8px; }
+.u6l3-two .def { margin: 0; }
+.u6l3-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 5px; }
+.u6l3-steps li { font-size: 19px; }
+.u6l3-note { margin-top: 8px; font-size: 18px; }
+.u6l3-kgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; margin-top: 8px; font-size: 20px; }
+.u6l3-kgrid .u6l3-wide { grid-column: 1 / -1; }
+
+/* ---------- tables on the cards ---------- */
+.u6l3-tbl { border-collapse: collapse; font-size: 19px; margin: 8px 0 4px; background: #fff; }
+.u6l3-tbl th, .u6l3-tbl td { border: 2px solid #b9ad97; padding: 6px 10px; text-align: center; height: 44px; }
+.u6l3-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u6l3-t1 { width: 100%; } .u6l3-t1 td { width: 12%; } .u6l3-t1 td:nth-child(2) { width: 22%; }
+.u6l3-tj { width: 100%; } .u6l3-tj th { text-align: left; white-space: nowrap; width: 200px; }
+.u6l3-tm td { min-width: 130px; } .u6l3-tm td:first-child { min-width: 70px; white-space: nowrap; }
+.u6l3-ex3 .u6l3-tm { font-size: 18px; }
+.u6l3-tp td { min-width: 120px; white-space: nowrap; }
+
+/* ---------- examples ---------- */
+.u6l3-ex2 { display: grid; grid-template-columns: 1fr 260px; gap: 16px; align-items: start; }
+.u6l3-ex2 .parts { margin: 0; }
+.u6l3-ex3 { display: grid; grid-template-columns: 545px 1fr; gap: 10px; align-items: center; }
+.u6l3-ex5 { display: grid; grid-template-columns: 1fr 440px; gap: 16px; align-items: start; }
+.u6l3-ex5 .parts { margin: 0; }
+.u6l3-ex7 { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; }
+
+/* ---------- the hands-on grid ---------- */
+.u6l3-gdbar { display: flex; gap: 10px; flex-wrap: wrap; margin: 6px 0 10px; }
+.u6l3-gdbar .pill[aria-pressed="true"] { background: var(--brand); color: #fff; border-color: var(--brand); }
+.u6l3-tool { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 12px 10px 14px; display: flex; justify-content: center; }
+.u6l3-tool .geo-gd-msg { font-size: 19px; }
+
+/* ---------- explainer labels ---------- */
+.u6l3-hold { position: absolute; width: 0; height: 0; }
+.u6l3-lab { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap; font: 700 21px var(--round); color: var(--ink); text-align: center; }
+.u6l3-big { font: 900 40px var(--round); color: var(--ink); }
+.u6l3-tag { font: 800 23px var(--round); padding: 5px 16px; border: 3px solid var(--brand2); border-radius: 14px; background: #fff; color: var(--brand); }
+.u6l3-op { font: 800 24px var(--round); color: var(--red); }
+.u6l3-chip { font-size: 19px; padding: 6px 14px; background: #fff; border: 2px solid var(--line); border-radius: 12px; }
+.u6l3-col { display: flex; flex-direction: column; gap: 2px; }
+.u6l3-lines { position: absolute; display: flex; flex-direction: column; gap: 8px; }
+.u6l3-ln { font: 600 20px var(--font); padding: 6px 12px; background: #fff; border: 2px solid var(--line); border-radius: 12px; line-height: 1.35; }
+.u6l3-lines.u6l3-sm .u6l3-ln { font-size: 19px; padding: 4px 10px; }
+.u6l3-lines.u6l3-angs .u6l3-ln { font-size: 21px; border-color: var(--brand2); }
+
+/* ---------- move / distance tables inside explainers ---------- */
+.u6l3-mt { position: absolute; display: grid; border: 2px solid #b9ad97; border-radius: 10px; overflow: hidden; background: #fff; }
+.u6l3-mr { display: grid; grid-template-columns: 74px 1fr 1fr; border-top: 1.5px solid #e2dacb; }
+.u6l3-mr:first-child { border-top: 0; }
+.u6l3-mr > div { min-height: 40px; display: grid; place-items: center; padding: 2px 6px; font: 700 17px var(--round); text-align: center; line-height: 1.2; }
+.u6l3-mr > div + div { border-left: 1.5px solid #e2dacb; }
+.u6l3-mh > div { background: var(--brand-soft); font-size: 15px; }
+.u6l3-mo { color: var(--brand2); }
+.u6l3-mn { color: #1f5bd6; }
+.u6l3-pt .u6l3-mr { grid-template-columns: 70px 1fr 1fr; }
+
+/* ---------- Jada's check ---------- */
+.u6l3-jt { position: absolute; display: grid; grid-template-columns: 90px 120px 140px 180px 70px; border: 2px solid #b9ad97; border-radius: 10px; overflow: hidden; background: #fff; }
+.u6l3-jt > div { height: 50px; display: grid; place-items: center; font: 700 19px var(--round); border-right: 1.5px solid #e2dacb; border-bottom: 1.5px solid #e2dacb; }
+.u6l3-jt > .u6l3-jh { background: var(--brand-soft); font-size: 16px; height: 42px; }
+.u6l3-jt .bk-stamp { position: static; }
+.u6l3-nw { white-space: nowrap; }
+.u6l3-tight .u6l3-mr > div { min-height: 35px; }

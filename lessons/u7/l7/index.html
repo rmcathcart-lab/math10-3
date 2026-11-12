@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angles of Elevation and Depression · Math 10-3 7.7</title>
+<meta name="description" content="Math 10-3 Unit 7 Lesson 7: angles of elevation and depression, measured from the horizontal; why the angle of depression equals the angle of elevation (alternate interior angles); making and reading a clinometer; finding heights with tan, sin and cos and adding the eye height; finding distances from above. A clinometer you drag to sight a tree. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u7l7.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u7l7">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Hiker Up and Down">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Hiker Up and Down</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Kai hikes <b>up</b> a mountain trail, from <b>6&nbsp;a.m.</b> to <b>6&nbsp;p.m.</b> He rests whenever he likes.</p><p class="vw-ctx">The next day he hikes back <b>down</b> the same trail, also from <b>6&nbsp;a.m.</b> to <b>6&nbsp;p.m.</b></p><p class="vw-ask">Is there a spot on the trail that he passes at the same time on both days?</p></div><div class="vw-art"><svg viewBox="0 0 340 260" role="img" aria-label="A mountain with a zigzag trail; a little hiker walks up the trail and back down while the sun crosses the sky">
+    <rect x="0" y="0" width="340" height="260" rx="16" fill="#eef4fb"/>
+    <g><animateTransform attributeName="transform" type="rotate" values="-70 170 250;70 170 250;-70 170 250" dur="8s" repeatCount="indefinite"/>
+      <circle cx="170" cy="40" r="17" fill="#f6c343" stroke="#e0a100" stroke-width="3"/></g>
+    <path d="M10 236L120 92L156 128L196 62L330 236Z" fill="#9db58a" stroke="#5c7a4a" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M196 62L182 80L190 84L208 78Z" fill="#fff" stroke="#c9d3dc" stroke-width="1.5"/>
+    <path id="u7l7-trail" d="M70 232L150 206L112 184L182 160L148 136L200 112L178 92L198 66" fill="none" stroke="#7a5124" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+    <rect x="0" y="232" width="340" height="28" fill="#b98a55"/>
+    <g><animateMotion dur="8s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear" path="M70 232L150 206L112 184L182 160L148 136L200 112L178 92L198 66"/>
+      <g transform="translate(0 -20)"><circle cx="0" cy="-12" r="5" fill="#fff" stroke="#1c2230" stroke-width="2.4"/><path d="M0 -7V5M0 5L-5 15M0 5L5 15M-6 -1L6 -1" stroke="#1c2230" stroke-width="2.6" stroke-linecap="round" fill="none"/><rect x="-9" y="-6" width="6" height="9" rx="2" fill="#d23a2e"/></g></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="300" y="70" font-size="48" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u7l7-wpoll">
+    <div class="poll-opts">
+      <div class="opt right"><b>A</b> Yes, always.</div>
+      <div class="opt"><b>B</b> No, never.</div>
+      <div class="opt"><b>C</b> Only if his speed is the same both days.</div>
+      <div class="opt"><b>D</b> Only by luck: it depends on his rests.</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u7l7-wans"><div><b>A: yes, always!</b> Imagine both days happen on the <b>same</b> day. One Kai starts at the bottom at 6 a.m. and walks up. Another Kai starts at the top at 6 a.m. and walks down. They are on the same trail, coming toward each other, so they <b>must meet</b>. Where they meet, both see the same time on their watch. That spot works for the real Kai on both days. <span class="muted">We can’t say <i>where</i> it is, only that it must be there. Today we look up and down one line too: the line of sight from the top and from the bottom.</span></div><svg viewBox="0 0 250 170" role="img" aria-label="Two hikers on the same trail, one going up and one coming down, meeting at a star">
+      <path d="M8 160L120 22L242 160Z" fill="#cfe0c2" stroke="#5c7a4a" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M40 158L120 26" stroke="#7a5124" stroke-width="3" stroke-dasharray="7 6" fill="none"/>
+      <circle cx="58" cy="128" r="9" fill="#1f5bd6"/><path d="M70 120l14-20" stroke="#1f5bd6" stroke-width="4" stroke-linecap="round"/><path d="M84 100l-1 9M84 100l-8 4" stroke="#1f5bd6" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="112" cy="40" r="9" fill="#c93a33"/><path d="M104 52l-12 18" stroke="#c93a33" stroke-width="4" stroke-linecap="round"/><path d="M92 70l1-9M92 70l8-4" stroke="#c93a33" stroke-width="4" stroke-linecap="round"/>
+      <path d="M88 76l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1Z" fill="#f6c343" stroke="#b07a12" stroke-width="2"/>
+      <text x="168" y="70" font-size="17" font-weight="800" fill="#6e4a1c">they meet!</text></svg></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 7 Right Triangles and Trigonometry · Lesson 7</div>
+  <h1>Angles of Elevation and Depression</h1>
+  <p class="lede">Look <b>up</b> at the top of a flagpole, or <b>down</b> from a cliff at a canoe. The angle you look up or down tells you a lot. Today we measure that angle from a <b>level</b> line, make and read a <b>clinometer</b>, and use sin, cos and tan to find heights and distances you can’t measure with a tape.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>tell an angle of <b>elevation</b> from an angle of <b>depression</b>, both measured from the <b>horizontal</b></li>
+      <li>explain why the angle of depression from the top <b>equals</b> the angle of elevation from the bottom</li>
+      <li>read a <b>clinometer</b>: the angle is the difference between the reading and 90°</li>
+      <li>find a height with a trig ratio and <b>add the eye height</b></li>
+      <li>find a distance from above by moving the angle of depression to the bottom</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G4</b> Demonstrate an understanding of primary trigonometric ratios (sine, cosine, tangent) by: applying similarity to right triangles; generalizing patterns from similar right triangles; applying the primary trigonometric ratios; solving problems.<br><span class="muted">Today: applying the primary trigonometric ratios to angles of elevation and depression, and solving problems.</span></div>
+</section>
+
+<!-- ================= 1. Looking up and looking down ================= -->
+<section class="card" data-ink="s1" data-section="1. Looking Up and Looking Down">
+  <div class="sec-h"><span class="badge">1</span><h2>Looking Up and Looking Down</h2></div>
+  <p>When you look at something, the straight line from your eye to the object is your <b>line of sight</b>. The <b>horizontal</b> is a level line (flat, like the floor or a calm lake) going out from your eye.</p>
+  <ul class="u7l7-list">
+    <li>The <b>angle of elevation</b> is the angle between the horizontal and your line of sight when you look <b>up</b>.</li>
+    <li>The <b>angle of depression</b> is the angle between the horizontal and your line of sight when you look <b>down</b>.</li>
+  </ul>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Angle of elevation:</b> from the horizontal <b>up</b> to the line of sight. &nbsp;&nbsp; <b>Angle of depression:</b> from the horizontal <b>down</b> to the line of sight.<br>Both are always measured from the <b>horizontal</b> (level) line, never from a wall or a pole.</div>
+  <div class="explainer u7l7-gap" data-explainer="defs"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Elevation, depression, or neither?</h3></div>
+  <div class="part"><div class="pl">Is the marked angle <span class="tex">\theta</span> an angle of elevation, an angle of depression, or neither? Explain.</div>
+    <div class="u7l7-pics">
+      <div><div class="u7l7-fig" data-fig="ex1a"></div><p>(a) a drone</p><span class="u7l7-blank" data-reveal="&nbsp;">elevation</span></div>
+      <div><div class="u7l7-fig" data-fig="ex1b"></div><p>(b) a lifeguard</p><span class="u7l7-blank" data-reveal="&nbsp;">depression</span></div>
+      <div><div class="u7l7-fig" data-fig="ex1c"></div><p>(c) a rooftop</p><span class="u7l7-blank" data-reveal="&nbsp;">neither</span></div>
+      <div><div class="u7l7-fig" data-fig="ex1d"></div><p>(d) a lighthouse</p><span class="u7l7-blank" data-reveal="&nbsp;">elevation</span></div>
+    </div>
+    <div class="work" style="--h:50px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) Looking up, from the horizontal: <b>elevation</b>. (b) Looking down, from the horizontal: <b>depression</b>. (d) Looking up from the boat: <b>elevation</b>. (c) <span class="tex">\theta</span> is measured from the <b>vertical</b> (straight down the wall), not from the horizontal, so it is <b>neither</b>. The angle of depression is <span class="tex">90^\circ-\theta</span>.</div></div></div>
+  <div class="explainer u7l7-gap" data-explainer="which"></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Elevation = depression ================= -->
+<section class="card" data-ink="s2" data-section="2. Elevation Equals Depression">
+  <div class="sec-h"><span class="badge">2</span><h2>The Angle of Elevation Equals the Angle of Depression</h2></div>
+  <p>Jada stands on top of a cliff and looks down at a boat. Someone in the boat looks up at her. Both people use the <b>same line of sight</b>. The horizontal at the top and the horizontal at the bottom (the water) are <b>parallel</b>, and the line of sight is a <b>transversal</b>. So the two angles are <b>alternate interior angles</b> (Unit 5, the Z shape), and they are equal.</p>
+  <div class="explainer" data-explainer="zangle"></div>
+  <div class="u7l7-two u7l7-gap">
+    <div class="def"><b>Key idea</b> &nbsp; <b>Angle of depression = angle of elevation</b><br>The angle of depression from the top equals the angle of elevation from the bottom. (They are alternate interior angles between two parallel horizontal lines.)</div>
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> If an angle is measured from the <b>vertical</b> (a wall, a cliff face, a pole), it is not the angle of elevation or depression. Subtract it from 90°.</div></div>
+  </div>
+  <p class="u7l7-gap">This is very useful: an angle of depression is at the <b>top</b>, outside the triangle. The equal angle of elevation is at the <b>bottom</b>, inside the right triangle, where you can use it.</p>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Why They Are Equal">
+  <h3 class="sub">Another way to see it: turn the top corner half a turn</h3>
+  <div class="explainer" data-explainer="whyEqual"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> A student says the angle of depression from the cliff is 34°, so the angle of elevation from the boat must be <span class="tex">90^\circ-34^\circ=56^\circ</span>. What is wrong?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The two angles are <b>equal</b>, not complementary: the angle of elevation is also <b>34°</b>. <span class="tex">56^\circ</span> is the angle between the line of sight and the <b>vertical</b> cliff face.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>The same angle, from the other end</h3></div>
+  <div class="u7l7-ex2">
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) From the top of a grain elevator, Mia sees her truck at an angle of depression of 38°. What is the angle of elevation from the truck to Mia? &nbsp;<span class="u7l7-blank" data-reveal="&nbsp;">38°</span></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>38°</b>. The angle of elevation and the angle of depression along the same line of sight are equal (alternate interior angles).</div></div></div>
+      <div class="part"><div class="pl">(b) A drone pilot looks up at her drone at an angle of elevation of 41°. What is the angle of depression from the drone to the pilot? &nbsp;<span class="u7l7-blank" data-reveal="&nbsp;">41°</span></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>41°</b>, for the same reason: one line of sight, two equal angles.</div></div></div>
+      <div class="part"><div class="pl">(c) Ken looks down from the top of a cliff at a canoe. His line of sight makes an angle of 64° with the cliff face (the vertical). Find the angle of depression. &nbsp;<span class="u7l7-blank" data-reveal="&nbsp;">26°</span></div>
+        <div class="work" style="--h:50px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The vertical and the horizontal make 90°, so the angle of depression is <span class="tex">90^\circ-64^\circ=26^\circ</span>.</div></div></div>
+    </div>
+    <div class="u7l7-fig u7l7-fig2c" data-fig="ex2c"></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Clinometer ================= -->
+<section class="card" data-ink="s3" data-section="3. Making and Reading a Clinometer">
+  <div class="sec-h"><span class="badge">3</span><h2>Making and Reading a Clinometer</h2></div>
+  <p>A <b>clinometer</b> is a tool that measures an angle of elevation or depression. Surveyors and foresters use electronic ones, but you can make one in a few minutes.</p>
+  <div class="u7l7-make">
+    <div>
+      <p><b>Make your own:</b></p>
+      <ol class="u7l7-steps">
+        <li><b>1.</b> Tape a drinking straw along the straight edge of a protractor.</li>
+        <li><b>2.</b> Tie a string through the small hole at the centre.</li>
+        <li><b>3.</b> Tie a weight (a washer or a few paper clips) to the other end, so the string hangs below the curved edge.</li>
+      </ol>
+      <p><b>Use it:</b> Hold the protractor with the curved side down. Look through the straw at the top of the object. Let the string hang straight down, then pinch it against the protractor and read the number where it crosses the scale.</p>
+    </div>
+    <div class="u7l7-fig" data-fig="make"></div>
+  </div>
+  <p>When the straw is level, the string crosses at 90°. Tilt the straw up by 25° and the string crosses at 65° on one scale and 115° on the other. Either way, it is 25° away from 90°.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Reading a clinometer:</b> angle of elevation (or depression) = the difference between the reading and 90°<br>
+    <span class="u7l7-rule">reading less than 90°: angle <span class="tex">=90^\circ-</span> reading</span> <span class="u7l7-rule">reading more than 90°: angle = reading <span class="tex">-\,90^\circ</span></span></div>
+  <div class="explainer u7l7-gap" data-explainer="clino"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Why does the string cross at <span class="tex">90^\circ-\theta</span> when the straw tilts up by <span class="tex">\theta</span>?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">When the straw is level, the 90° mark points straight down, right on the string. Tilting the straw turns the whole protractor by <span class="tex">\theta</span>, so the 90° mark swings <span class="tex">\theta</span> away from the string. The string still hangs straight down, so it now crosses the scale <span class="tex">\theta</span> away from 90: at <span class="tex">90-\theta</span> on one scale and <span class="tex">90+\theta</span> on the other.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Read the clinometer</h3></div>
+  <div class="pl">(a), (b) Read each clinometer. Then find the angle of elevation.</div>
+  <div class="parts c2">
+    <div class="part"><div class="u7l7-fig" data-fig="ex3a"></div><div class="pl">(a) Reading <span class="u7l7-blank u7l7-bw" data-reveal="&nbsp;">65 (or 115)</span> &nbsp; Angle <span class="u7l7-blank" data-reveal="&nbsp;">25°</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">90^\circ-65^\circ=25^\circ</span> (or <span class="tex">115^\circ-90^\circ=25^\circ</span>)</div></div></div>
+    <div class="part"><div class="u7l7-fig" data-fig="ex3b"></div><div class="pl">(b) Reading <span class="u7l7-blank u7l7-bw" data-reveal="&nbsp;">50 (or 130)</span> &nbsp; Angle <span class="u7l7-blank" data-reveal="&nbsp;">40°</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">90^\circ-50^\circ=40^\circ</span> (or <span class="tex">130^\circ-90^\circ=40^\circ</span>)</div></div></div>
+  </div>
+  <div class="part u7l7-gap"><div class="pl">(c) Find the angle of elevation for each clinometer reading.</div>
+    <table class="u7l7-tbl">
+      <tr><th>Reading</th><td>72°</td><td>58°</td><td>113°</td><td>90°</td><td>134°</td></tr>
+      <tr><th>Angle of elevation</th><td><span data-reveal="&nbsp;">18°</span></td><td><span data-reveal="&nbsp;">32°</span></td><td><span data-reveal="&nbsp;">23°</span></td><td><span data-reveal="&nbsp;">0°</span></td><td><span data-reveal="&nbsp;">44°</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">90-72=18</span>; <span class="tex">90-58=32</span>; <span class="tex">113-90=23</span>; <span class="tex">90-90=0</span> (looking straight ahead, level); <span class="tex">134-90=44</span>.</div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–3">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 7 · Questions 1–3</h2>
+  <p class="pr-t">Name the angle, use “elevation = depression”, and read a clinometer. Then we put the angles to work.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Elevation, depression or neither?</span>
+    <span><b>2</b>Fill in the blanks</span>
+    <span><b>3</b>Read the clinometer</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 3.</span><a class="pill" href="../../../#/lesson/u7l7">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Finding a height ================= -->
+<section class="card" data-ink="s4" data-section="4. Finding a Height">
+  <div class="sec-h"><span class="badge">4</span><h2>Finding a Height: Don’t Forget Your Eyes</h2></div>
+  <p>Now put the angle into a right triangle and use the trig ratios from Lessons 4 to 6.</p>
+  <div class="tip u7l7-refresh"><div class="tip-ic">↺</div><div><b>Quick refresher.</b> <b>SOH CAH TOA</b>: <span class="tex">\sin\theta=\dfrac{\text{opp}}{\text{hyp}}</span>, <span class="tex">\cos\theta=\dfrac{\text{adj}}{\text{hyp}}</span>, <span class="tex">\tan\theta=\dfrac{\text{opp}}{\text{adj}}</span>. Label opp and adj from the angle you are using. If the unknown is on top, multiply. If it is on the bottom, divide.</div></div>
+  <div class="def"><b>Key idea</b> &nbsp; Solving an elevation or depression problem
+    <ol class="u7l7-steps">
+      <li><b>Step 1:</b> <b>Sketch</b> it. Draw the horizontal, the line of sight, and mark the angle.</li>
+      <li><b>Step 2:</b> Find the <b>right triangle</b>. For an angle of depression, use the equal angle of elevation at the bottom.</li>
+      <li><b>Step 3:</b> Label <b>opp, adj, hyp</b> from that angle. Mark the side you know and the side you want (<span class="tex">x</span>).</li>
+      <li><b>Step 4:</b> Choose the ratio that uses those two sides. Write it, substitute, solve.</li>
+      <li><b>Step 5:</b> If the angle was measured from your eyes (or hand), <b>add that height</b>. Check, then write a sentence.</li>
+    </ol></div>
+  <p class="u7l7-gap">An angle of elevation measured by a person starts at their <b>eyes</b>, not at the ground. The triangle only reaches up from eye level, so the tan or sin answer is the height <b>above your eyes</b>.</p>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Your TI-30XIIS must be in <b>DEG</b> (degree) mode: look for DEG on the screen. If it shows RAD or GRAD, press <span class="keys"><kbd>DRG</kbd></span>, move to DEG with the arrow keys, and press <span class="keys"><kbd>ENTER</kbd></span>. To find <span class="tex">24\times\tan31^\circ</span>: <span class="keys">24 <kbd>×</kbd> <kbd>tan</kbd> 31 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows <b>14.42065486</b>.</div>
+    <button class="pill" type="button" data-keys="24 × tan 31 ) =">Show me</button></div>
+  <div class="explainer u7l7-gap" data-explainer="height"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Noor’s flagpole</h3></div>
+  <div class="u7l7-exw">
+    <div class="part"><div class="pl">Noor stands 24 m from the base of the flagpole at her school. Her eyes are 1.6 m above the ground. The angle of elevation to the top of the pole is 31°. How tall is the flagpole, to the nearest tenth of a metre?</div>
+      <div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The 31° angle is at Noor’s eyes. From it, <span class="tex">h</span> (above her eyes) is opp and 24 m is adj: use tan.<br><span class="tex">\tan31^\circ=\dfrac{h}{24}</span>, &nbsp;<span class="tex">h=24\times\tan31^\circ\approx14.42</span> m (<span class="tex">h</span> is on top, so multiply)<br>Add her eye height: <span class="tex">14.42+1.6=16.02\approx16.0</span> m. Check: 31° is less than 45°, so <span class="tex">h</span> should be less than 24 m ✓.<br>The flagpole is about <b>16.0 m</b> tall.</div></div></div>
+    <div class="u7l7-fig" data-fig="ex4"></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. Check with 45°">
+  <div class="tip u7l7-t45"><div class="tip-ic">45°</div><div><b>Check with 45°.</b> At 45°, the height above your eyes <b>equals</b> your distance from the object (the triangle has two equal legs). If the angle is less than 45°, the height above your eyes is <b>less</b> than the distance. If the angle is more than 45°, it is <b>more</b>.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Why 45° Is the Check">
+  <h3 class="sub">Watch the angle grow: when does the height catch up to the distance?</h3>
+  <div class="explainer" data-explainer="check45"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Liam’s kite</h3></div>
+  <div class="u7l7-exw">
+    <div>
+      <p class="u7l7-p">Liam flies a kite on 60 m of string. He holds the string 1.2 m above the ground. The string makes an angle of elevation of 48°. Assume the string is straight. Round to the nearest tenth.</p>
+      <div class="parts c1">
+        <div class="part"><div class="pl">(a) How high is the kite above the ground?</div><div class="work" style="--h:120px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From 48°: the string is hyp (60 m), the height above his hand is opp. Opp and hyp: sin.<br><span class="tex">\sin48^\circ=\dfrac{x}{60}</span>, &nbsp;<span class="tex">x=60\times\sin48^\circ\approx44.59</span> m<br>Add his hand height: <span class="tex">44.59+1.2=45.79</span>. The kite is about <b>45.8 m</b> above the ground.</div></div></div>
+        <div class="part"><div class="pl">(b) How far is Liam from the spot on the ground right under the kite?</div><div class="work" style="--h:100px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Adj and hyp: cos. <span class="tex">\cos48^\circ=\dfrac{d}{60}</span>, &nbsp;<span class="tex">d=60\times\cos48^\circ\approx40.1</span> m. Liam is about <b>40.1 m</b> from that spot. (No hand height here: it is a distance along the ground.) Check: both legs are shorter than the 60 m string ✓.</div></div></div>
+      </div>
+    </div>
+    <div class="u7l7-fig" data-fig="ex5"></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(a) <span class="keys">60 <kbd>×</kbd> <kbd>sin</kbd> 48 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows <b>44.58868953</b>. &nbsp;(b) <span class="keys">60 <kbd>×</kbd> <kbd>cos</kbd> 48 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows <b>40.14783638</b>.</div>
+    <div class="u7l7-pcol"><button class="pill" type="button" data-keys="60 × sin 48 ) =">(a)</button><button class="pill" type="button" data-keys="60 × cos 48 ) =">(b)</button></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="act" data-section="Activity: Sight the Tree">
+  <h3 class="sub">Activity: measure a height with a clinometer</h3>
+  <p>Drag the clinometer to tilt it until the line of sight hits the <b>top of the tree</b>. Read the clinometer, then find the height. Tap <b>Hide the reading</b> and let the class read it first. <b>New tree</b> gives a new one.</p>
+  <div class="u7l7-tool" id="u7l7-tool"></div>
+  <p class="u7l7-gap"><b>Outside (optional):</b> work with a partner. Pick something tall at school (a wall, a light pole, a tree, the gym). Measure your distance from its base with a tape or by pacing, and measure your eye height. Sight the top through the straw, read the clinometer, and find the height.</p>
+  <table class="u7l7-tbl u7l7-act">
+    <tr><th>Object</th><th>Distance to base</th><th>Eye height</th><th>Clinometer reading</th><th>Angle of elevation</th><th>Height above eyes</th><th>Height of object</th></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="muted u7l7-note">Answers vary. Angle = the difference between the reading and 90°; height above eyes = distance × tan(angle); height of object = that + eye height. Two partners’ results should be close.</p>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u7l7"></section>
+
+<!-- ================= 5. Looking down ================= -->
+<section class="card" data-ink="s5" data-section="5. Looking Down: Distances from Above">
+  <div class="sec-h"><span class="badge">5</span><h2>Looking Down: Distances from Above</h2></div>
+  <p>For an angle of depression, the angle is at the top, <b>outside</b> the triangle. Move it to the bottom: the angle of elevation there is equal. Then the height is <b>opp</b>, and the distance along the ground is <b>adj</b>.</p>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> When the distance you want is adj and you know opp, <span class="tex">\tan\theta=\dfrac{\text{opp}}{x}</span> puts <span class="tex">x</span> on the <b>bottom</b>, so you <b>divide</b>: <span class="tex">x=\dfrac{\text{opp}}{\tan\theta}</span>.</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>On the calculator: <span class="keys">45 <kbd>÷</kbd> <kbd>tan</kbd> 17 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows <b>147.1883678</b>.</div>
+    <button class="pill" type="button" data-keys="45 ÷ tan 17 ) =">Show me</button></div>
+  <div class="explainer u7l7-gap" data-explainer="depress"></div>
+</section>
+
+<section class="card" data-extra data-ink="s5x" data-section="5. Multiply or Divide?">
+  <h3 class="sub">Multiply or divide? Check which answer makes sense</h3>
+  <div class="explainer" data-explainer="divide"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> A boat is seen from a cliff at an angle of depression of 60°. Without a calculator, is the boat closer to the cliff than the cliff is tall, or farther?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Closer.</b> At the boat the angle of elevation is 60°, more than 45°, so the height (opp) is <b>more</b> than the distance (adj).</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Ava’s canoe</h3></div>
+  <div class="part"><div class="pl">From a lookout on a cliff, Ava is 45 m above a lake. She sees a canoe at an angle of depression of 17°. How far is the canoe from the base of the cliff, to the nearest tenth of a metre? Sketch it first.</div>
+    <div class="u7l7-exw u7l7-exa">
+      <div class="work" style="--h:250px"></div>
+      <div class="u7l7-fig u7l7-fa" data-fig="ex6"></div>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The angle of elevation from the canoe is also 17° (alternate interior angles). From that angle: 45 m is opp, <span class="tex">x</span> is adj. Use tan.<br><span class="tex">\tan17^\circ=\dfrac{45}{x}</span>, &nbsp;<span class="tex">x=\dfrac{45}{\tan17^\circ}\approx147.2</span> m (<span class="tex">x</span> is on the bottom, so divide)<br>Check: 17° is much less than 45°, so <span class="tex">x</span> should be much more than 45 m ✓. The canoe is about <b>147.2 m</b> from the base of the cliff.</div></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Landing in Calgary</h3></div>
+  <p class="u7l7-p">A plane is 1&#8239;800 m above the runway when it starts its descent to the Calgary airport. It comes down in a straight line at an angle of depression of 4°. Round to the nearest tenth of a kilometre.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) What is the horizontal distance from the plane to the spot where it touches down? Sketch it first.</div><div class="u7l7-fig u7l7-fa" data-fig="ex7"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">At the touchdown spot the angle of elevation is 4°. 1&#8239;800 m is opp, <span class="tex">x</span> is adj: tan.<br><span class="tex">\tan4^\circ=\dfrac{1\,800}{x}</span>, &nbsp;<span class="tex">x=\dfrac{1\,800}{\tan4^\circ}\approx25\,741</span> m <span class="tex">\approx25.7</span> km</div></div></div>
+    <div class="part"><div class="pl">(b) How far does the plane fly along its path to touch down?</div><div class="work" style="--h:210px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The path <span class="tex">d</span> is hyp. Opp and hyp: sin.<br><span class="tex">\sin4^\circ=\dfrac{1\,800}{d}</span>, &nbsp;<span class="tex">d=\dfrac{1\,800}{\sin4^\circ}\approx25\,804</span> m <span class="tex">\approx25.8</span> km<br>Check: the path (hyp) is the longest side, a little longer than <span class="tex">x</span> ✓.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(a) <span class="keys">1800 <kbd>÷</kbd> <kbd>tan</kbd> 4 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows <b>25741.19926</b>. &nbsp;(b) <span class="keys">1800 <kbd>÷</kbd> <kbd>sin</kbd> 4 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows <b>25804.05665</b>. Divide by 1&#8239;000 for kilometres.</div>
+    <div class="u7l7-pcol"><button class="pill" type="button" data-keys="1800 ÷ tan 4 ) =">(a)</button><button class="pill" type="button" data-keys="1800 ÷ sin 4 ) =">(b)</button></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exc" data-section="Extra Example: The Calgary Tower">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>The Calgary Tower</h3></div>
+  <div class="part"><div class="pl">Sam stands 51 m from the base of the Calgary Tower. His eyes are 1.5 m above the ground. The angle of elevation to the top is 75°. How tall is the tower, to the nearest tenth of a metre?</div><div class="work" style="--h:150px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Opp = height above his eyes, adj = 51 m: tan. <span class="tex">h=51\times\tan75^\circ\approx190.33</span> m. Add his eye height: <span class="tex">190.33+1.5=191.83\approx191.8</span> m. Check: 75° is more than 45°, so <span class="tex">h</span> is more than 51 m ✓. (The real tower is about 191 m tall.)</div></div></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Measure from the horizontal:</b> elevation is <b>up</b> from the level line to the line of sight; depression is <b>down</b>. An angle from the vertical is neither: use <span class="tex">90^\circ-</span> it.</div>
+    <div><b>Depression = elevation:</b> one line of sight, two parallel horizontals, alternate interior angles (the Z). Move the angle to the bottom, inside the triangle.</div>
+    <div><b>Clinometer:</b> angle = the difference between the reading and 90° (<span class="tex">90-</span> reading, or reading <span class="tex">-\,90</span>).</div>
+    <div><b>Solve:</b> sketch, find the right triangle, label opp/adj/hyp, choose sin, cos or tan. Unknown on top: multiply; on the bottom: divide. <b>Add the eye height</b> for a height.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u7l7">
+    <div><div class="kicker">Your turn</div><b>Assignment 7 · Questions 4–16</b><div class="muted">A cell tower and a hot-air balloon, a spruce tree, a zipline, a fire lookout, a kite, a plane landing at Red Deer, two buildings, two mistakes to fix, a gym wall with a clinometer, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l8/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 8 — Finding Angles with Inverse Trig Ratios</b><div class="muted">You know two sides. What is the angle? The inverse keys on the calculator work it out.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u7l7.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u7l7', homeHref: '../../', title: '7.7 Angles of Elevation and Depression' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

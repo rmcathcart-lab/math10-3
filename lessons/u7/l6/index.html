@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Cosine Ratio · Math 10-3 7.6</title>
+<meta name="description" content="Math 10-3 Unit 7 Lesson 6: in similar right triangles adjacent ÷ hypotenuse never changes, the cosine ratio cos θ = adj ÷ hyp (CAH), cos on the TI-30XIIS in DEG mode, why cos θ is between 0 and 1, finding the adjacent side (multiply) and the hypotenuse (divide), and choosing sine, cosine or tangent with SOH CAH TOA. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u7l6.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u7l6">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Magic Triangle">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Magic Triangle</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Six circles sit on a triangle: one at each <b>corner</b> and one in the <b>middle of each side</b>.</p><p class="vw-ctx">Put the numbers <b>1, 2, 3, 4, 5 and 6</b> in the circles, one number in each circle.</p><p class="vw-ask">Can you make the three numbers on every side add up to 9?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="A triangle with six empty circles on it, a question mark glowing in each circle in turn, and number tiles 1 to 6 bobbing underneath">
+    <path d="M165 22 L292 196 L38 196 Z" fill="#fbf1de" stroke="#7a5124" stroke-width="4" stroke-linejoin="round"/>
+    <g fill="#fff" stroke="#9a6a24" stroke-width="3.5">
+      <circle cx="165" cy="26" r="21"/><circle cx="288" cy="194" r="21"/><circle cx="42" cy="194" r="21"/>
+      <circle cx="228" cy="110" r="21"/><circle cx="165" cy="196" r="21"/><circle cx="102" cy="110" r="21"/>
+    </g>
+    <g font-size="25" font-weight="800" fill="#9a6a24" text-anchor="middle">
+      <text x="165" y="35" opacity="0">?<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.08;.16;1" dur="4.8s" begin="0s" repeatCount="indefinite"/></text>
+      <text x="228" y="119" opacity="0">?<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.08;.16;1" dur="4.8s" begin=".8s" repeatCount="indefinite"/></text>
+      <text x="288" y="203" opacity="0">?<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.08;.16;1" dur="4.8s" begin="1.6s" repeatCount="indefinite"/></text>
+      <text x="165" y="205" opacity="0">?<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.08;.16;1" dur="4.8s" begin="2.4s" repeatCount="indefinite"/></text>
+      <text x="42" y="203" opacity="0">?<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.08;.16;1" dur="4.8s" begin="3.2s" repeatCount="indefinite"/></text>
+      <text x="102" y="119" opacity="0">?<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.08;.16;1" dur="4.8s" begin="4s" repeatCount="indefinite"/></text>
+    </g>
+    <g font-size="20" font-weight="800" fill="#1c2230" text-anchor="middle">
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.8s" begin="0s" repeatCount="indefinite"/><rect x="38" y="226" width="30" height="30" rx="6" fill="#f2c14e" stroke="#8a5a0a" stroke-width="2"/><text x="53" y="248">1</text></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.8s" begin=".3s" repeatCount="indefinite"/><rect x="85" y="226" width="30" height="30" rx="6" fill="#f2c14e" stroke="#8a5a0a" stroke-width="2"/><text x="100" y="248">2</text></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.8s" begin=".6s" repeatCount="indefinite"/><rect x="132" y="226" width="30" height="30" rx="6" fill="#f2c14e" stroke="#8a5a0a" stroke-width="2"/><text x="147" y="248">3</text></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.8s" begin=".9s" repeatCount="indefinite"/><rect x="179" y="226" width="30" height="30" rx="6" fill="#f2c14e" stroke="#8a5a0a" stroke-width="2"/><text x="194" y="248">4</text></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.8s" begin="1.2s" repeatCount="indefinite"/><rect x="226" y="226" width="30" height="30" rx="6" fill="#f2c14e" stroke="#8a5a0a" stroke-width="2"/><text x="241" y="248">5</text></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.8s" begin="1.5s" repeatCount="indefinite"/><rect x="273" y="226" width="30" height="30" rx="6" fill="#f2c14e" stroke="#8a5a0a" stroke-width="2"/><text x="288" y="248">6</text></g>
+    </g>
+  </svg></div></div>
+  <div class="bk-wq u7l6-wq"><div class="q-line"><div class="q-num">?</div><div>Try it on paper or on the board. Fast finishers: what is the <b>biggest</b> side total you can make?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><div class="u7l6-wsol"><svg viewBox="0 0 250 200" role="img" aria-label="One answer: 1, 2 and 3 in the corners; 6 between 1 and 2, 4 between 2 and 3, 5 between 3 and 1">
+      <path d="M125 18 L230 172 L20 172 Z" fill="#fbf1de" stroke="#7a5124" stroke-width="3.5" stroke-linejoin="round"/>
+      <g stroke-width="3"><circle cx="125" cy="20" r="18" fill="#fde9e7" stroke="#c93a33"/><circle cx="228" cy="170" r="18" fill="#fde9e7" stroke="#c93a33"/><circle cx="22" cy="170" r="18" fill="#fde9e7" stroke="#c93a33"/>
+        <circle cx="176" cy="95" r="18" fill="#fff" stroke="#9a6a24"/><circle cx="125" cy="172" r="18" fill="#fff" stroke="#9a6a24"/><circle cx="74" cy="95" r="18" fill="#fff" stroke="#9a6a24"/></g>
+      <g font-size="21" font-weight="800" text-anchor="middle"><text x="125" y="28" fill="#c93a33">1</text><text x="22" y="178" fill="#c93a33">2</text><text x="228" y="178" fill="#c93a33">3</text>
+        <text x="74" y="103" fill="#1c2230">6</text><text x="125" y="180" fill="#1c2230">4</text><text x="176" y="103" fill="#1c2230">5</text></g>
+    </svg></div>
+    <div><b>Yes!</b> Put the small numbers <b>1, 2, 3 in the corners</b>. Then 1 + 6 + 2, 2 + 4 + 3 and 3 + 5 + 1 all make <b>9</b>. The trick: each corner number is on <b>two</b> sides, so it gets counted twice. Small corners make small totals. <span class="muted">Biggest total: put 4, 5, 6 in the corners. Every side makes 12 (4 + 3 + 5, 5 + 1 + 6, 6 + 2 + 4). Today we also count sides of triangles, very carefully.</span></div></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 7 Right Triangles and Trigonometry · Lesson 6</div>
+  <h1>The Cosine Ratio</h1>
+  <p class="lede">You know two trig ratios: the <b>tangent</b> (opp ÷ adj) and the <b>sine</b> (opp ÷ hyp). Today you meet the third one, the <b>cosine</b>: <b>adj ÷ hyp</b>. You will use it to find how far a ladder sits from a wall and how long a roof rafter is. Then you will learn to pick the right ratio, sin, cos or tan, for any question.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>explain why <b>adj ÷ hyp</b> is the same in similar right triangles, and write <span class="tex">\cos\theta=\dfrac{\text{adj}}{\text{hyp}}</span></li>
+      <li>find the cosine of an angle from a triangle, or with the <b>cos</b> key in <b>DEG</b> mode, and tell if it is reasonable</li>
+      <li>find the <b>adjacent side</b> (multiply) or the <b>hypotenuse</b> (divide) with the cosine ratio</li>
+      <li>choose <b>sin</b>, <b>cos</b> or <b>tan</b> from the side I know and the side I want (SOH CAH TOA)</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G4</b> Demonstrate an understanding of primary trigonometric ratios (sine, cosine, tangent) by: applying similarity to right triangles; generalizing patterns from similar right triangles; applying the primary trigonometric ratios; solving problems.</div>
+  <div class="outcome"><b>A1</b> Solve problems that require the manipulation and application of formulas related to: perimeter; area; the Pythagorean theorem; primary trigonometric ratios; income.<br><span class="muted">Today: rearranging the cosine ratio to find a side.</span></div>
+</section>
+
+<!-- ================= 1. adj ÷ hyp stays the same ================= -->
+<section class="card" data-ink="s1" data-section="1. Adjacent ÷ Hypotenuse">
+  <div class="sec-h"><span class="badge">1</span><h2>Adjacent ÷ Hypotenuse Stays the Same</h2></div>
+  <p>In Lessons 4 and 5 you saw that <b>similar</b> right triangles (same shape, different size) keep the same ratio of sides. Opp ÷ adj gave the <b>tangent</b>, and opp ÷ hyp gave the <b>sine</b>. In this lesson you divide <b>adj by hyp</b>.</p>
+  <div class="u7l6-two">
+    <div class="u7l6-fig" data-fig="refresh"></div>
+    <div class="def u7l6-refr"><b>Quick refresher</b>
+      <ul class="u7l6-list">
+        <li><b class="u7l6-hyp">hyp</b> (hypotenuse): across from the right angle. It is always the <b>longest</b> side.</li>
+        <li><b class="u7l6-opp">opp</b> (opposite): across from <span class="tex">\theta</span>. It does not touch <span class="tex">\theta</span>.</li>
+        <li><b class="u7l6-adj">adj</b> (adjacent): next to <span class="tex">\theta</span>, but not the hyp.</li>
+        <li>If you change the angle, opp and adj <b>swap</b>. The hyp never changes.</li>
+      </ul></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Three triangles, one angle</h3></div>
+  <p class="u7l6-p">Three right triangles share the <span class="tex">25^\circ</span> angle at <span class="tex">A</span>, so they are similar. A student measured the sides.</p>
+  <div class="u7l6-ex1">
+    <div class="u7l6-fig" data-fig="ex1"></div>
+    <div class="part"><table class="u7l6-tbl">
+      <tr><th>Triangle</th><th><span class="u7l6-adj">adj</span> <span class="tex">AC</span> (cm)</th><th><span class="u7l6-hyp">hyp</span> <span class="tex">AB</span> (cm)</th><th>adj ÷ hyp<br><span class="u7l6-sm">(2 decimals)</span></th></tr>
+      <tr><td><span class="tex">AB_1C_1</span></td><td>2.7</td><td>3</td><td><span data-reveal="&nbsp;"><span class="tex">2.7\div3=0.90</span></span></td></tr>
+      <tr><td><span class="tex">AB_2C_2</span></td><td>4.5</td><td>5</td><td><span data-reveal="&nbsp;"><span class="tex">4.5\div5=0.90</span></span></td></tr>
+      <tr><td><span class="tex">AB_3C_3</span></td><td>6.3</td><td>7</td><td><span data-reveal="&nbsp;"><span class="tex">6.3\div7=0.90</span></span></td></tr>
+    </table>
+    <p class="u7l6-fill">For a <span class="tex">25^\circ</span> angle, adj ÷ hyp is always about <span class="u7l6-blank" data-reveal="&nbsp;">0.90</span>. The ratio does not depend on the <span class="u7l6-blank" data-reveal="&nbsp;">size</span> of the triangle. It depends only on the <span class="u7l6-blank" data-reveal="&nbsp;">angle</span>.</p>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">All three give <b>0.90</b>. The triangles are different sizes, but they have the same shape, so adj ÷ hyp is the same: about 0.90. It depends only on the <b>angle</b>.</div></div></div>
+  </div>
+  <div class="explainer u7l6-gap" data-explainer="discover"></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1k" data-section="1. The Cosine Ratio">
+  <div class="def u7l6-key"><b>Key idea</b> &nbsp; <b>The cosine ratio.</b> For an acute angle <span class="tex">\theta</span> in a right triangle:
+    <div class="u7l6-big"><span class="tex">\cos\theta=\dfrac{\text{adj}}{\text{hyp}}=\dfrac{\text{length of the side adjacent to }\theta}{\text{length of the hypotenuse}}</span></div>
+    Say “cos” (short for <b>cosine</b>). Memory aid: <b class="u7l6-cah">CAH</b> = <b>C</b>os is <b>A</b>dj over <b>H</b>yp.</div>
+  <h3 class="sub u7l6-gap">Try it: change the angle</h3>
+  <p>Drag the slider. The three triangles always share the angle <span class="tex">\theta</span>. Watch the adj ÷ hyp column: the three rows stay equal to each other, and they match <b>cos θ</b> on the calculator.</p>
+  <div class="u7l6-tool" id="u7l6-srt"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Cosine of each acute angle</h3></div>
+  <p class="u7l6-p">In <span class="tex">\triangle ABC</span>, <span class="tex">\angle C=90^\circ</span>. Complete the table for <span class="tex">\angle A</span> and for <span class="tex">\angle B</span>.</p>
+  <div class="u7l6-ex2">
+    <div class="u7l6-fig" data-fig="ex2"></div>
+    <div class="part"><table class="u7l6-tbl u7l6-t2">
+      <tr><th></th><th>For <span class="tex">\angle A</span></th><th>For <span class="tex">\angle B</span></th></tr>
+      <tr><th class="u7l6-hyp">hyp</th><td><span data-reveal="&nbsp;">41</span></td><td><span data-reveal="&nbsp;">41</span></td></tr>
+      <tr><th class="u7l6-adj">adj</th><td><span data-reveal="&nbsp;">40</span></td><td><span data-reveal="&nbsp;">9</span></td></tr>
+      <tr><th class="u7l6-opp">opp</th><td><span data-reveal="&nbsp;">9</span></td><td><span data-reveal="&nbsp;">40</span></td></tr>
+      <tr><th>cos as a fraction</th><td><span data-reveal="&nbsp;"><span class="tex">\cos A=\frac{40}{41}</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">\cos B=\frac{9}{41}</span></span></td></tr>
+      <tr><th>cos as a decimal (4 places)</th><td><span data-reveal="&nbsp;">0.9756</span></td><td><span data-reveal="&nbsp;">0.2195</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The hypotenuse is the same for both angles: 41. The adjacent side changes: the leg that touches <span class="tex">\angle A</span> is 40, and the leg that touches <span class="tex">\angle B</span> is 9. <span class="tex">40\div41\approx0.9756</span> and <span class="tex">9\div41\approx0.2195</span>.</div></div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> opp and adj depend on <b>which angle</b> you use. Always mark the angle first, then label. The hypotenuse never changes.</div></div>
+  <div class="explainer u7l6-gap" data-explainer="labels"></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Finding the cosine of an angle ================= -->
+<section class="card" data-ink="s2" data-section="2. Finding the Cosine">
+  <div class="sec-h"><span class="badge">2</span><h2>Finding the Cosine of an Angle</h2></div>
+  <p>You can find the cosine of an angle from a triangle (divide adj by hyp), or from the angle with the <b>cos</b> key on your calculator.</p>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Your TI-30XIIS must be in <b>DEG</b> (degree) mode: look for DEG on the screen. If it shows RAD or GRAD, press <span class="keys"><kbd>DRG</kbd></span>, move to DEG with the arrow keys, and press <span class="keys"><kbd>ENTER</kbd></span>. To find <span class="tex">\cos25^\circ</span>: <span class="keys"><kbd>cos</kbd> 25 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 0.906307787. Round cosine values to <b>4 decimal places</b>: <span class="tex">\cos25^\circ\approx0.9063</span>. That matches the 0.90 in Example 1. Quick mode test: <span class="tex">\cos60^\circ</span> is exactly 0.5.</div>
+    <div class="u7l6-btns"><button class="pill" type="button" data-keys="cos 25 ) =">Show me cos 25°</button><button class="pill" type="button" data-keys="cos 60 ) =">Mode test: cos 60°</button></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>The cosine as the angle grows</h3></div>
+  <div class="u7l6-ex3">
+    <div class="part"><div class="pl">(a) Find each value to 4 decimal places.</div>
+      <table class="u7l6-tbl u7l6-t3">
+        <tr><th><span class="tex">\theta</span></th><td>10°</td><td>25°</td><td>40°</td><td>55°</td><td>70°</td><td>85°</td></tr>
+        <tr><th><span class="tex">\cos\theta</span></th><td><span data-reveal="&nbsp;">0.9848</span></td><td><span data-reveal="&nbsp;">0.9063</span></td><td><span data-reveal="&nbsp;">0.7660</span></td><td><span data-reveal="&nbsp;">0.5736</span></td><td><span data-reveal="&nbsp;">0.3420</span></td><td><span data-reveal="&nbsp;">0.0872</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">0.9848, 0.9063, 0.7660, 0.5736, 0.3420, 0.0872 (keep the 0 at the end of 0.7660 and 0.3420: 4 places)</div></div></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(b) As the angle gets bigger, <span class="tex">\cos\theta</span> gets <span class="u7l6-blank" data-reveal="&nbsp;">smaller</span>.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>smaller</b> (from 0.9848 down to 0.0872)</div></div></div>
+      <div class="part"><div class="pl">(c) Every value is between <span class="u7l6-blank u7l6-bs" data-reveal="&nbsp;">0</span> and <span class="u7l6-blank u7l6-bs" data-reveal="&nbsp;">1</span>.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">between <b>0</b> and <b>1</b></div></div></div>
+    </div>
+  </div>
+  <div class="parts c2 u7l6-gap">
+    <div class="part"><div class="pl">(d) Why can <span class="tex">\cos\theta</span> never be more than 1?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">adj is a leg and hyp is the longest side, so adj is always smaller than hyp. A smaller number divided by a bigger number is less than 1.</div></div></div>
+    <div class="part"><div class="pl">(e) Find <span class="tex">\cos20^\circ</span> and <span class="tex">\sin70^\circ</span>. What do you notice? Use the triangle in Example 2 to explain.</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\cos20^\circ=0.9397</span> and <span class="tex">\sin70^\circ=0.9397</span>: they are equal. The two acute angles add to <span class="tex">90^\circ</span>. The side <i>adjacent</i> to one angle is <i>opposite</i> the other one (in Example 2, 40 is adj for <span class="tex">\angle A</span> and opp for <span class="tex">\angle B</span>).</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For (e): <span class="keys"><kbd>cos</kbd> 20 <kbd>)</kbd> <kbd>ENTER</kbd></span> and <span class="keys"><kbd>sin</kbd> 70 <kbd>)</kbd> <kbd>ENTER</kbd></span> show the same number: 0.9396926…</div>
+    <div class="u7l6-btns"><button class="pill" type="button" data-keys="cos 20 ) =">cos 20°</button><button class="pill" type="button" data-keys="sin 70 ) =">sin 70°</button></div></div>
+  <div class="explainer u7l6-gap" data-explainer="meter"></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Why cos 20° = sin 70°">
+  <h3 class="sub">Why is <span class="tex">\cos20^\circ</span> the same as <span class="tex">\sin70^\circ</span>?</h3>
+  <p>The two acute angles of a right triangle share the same three sides. One leg is adjacent to one angle and opposite the other.</p>
+  <div class="explainer" data-explainer="cofn"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> <span class="tex">\cos60^\circ=0.5</span>. Without a calculator, what is <span class="tex">\sin30^\circ</span>?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">60^\circ+30^\circ=90^\circ</span>, so the two angles are in the same right triangle. The side adjacent to 60° is opposite 30°. So <span class="tex">\sin30^\circ=\cos60^\circ=0.5</span>.</div></div></div>
+</section>
+
+<section class="card" data-ink="s2k" data-section="2. Is It Reasonable?">
+  <div class="def"><b>Key idea</b> &nbsp; <b>Is my answer reasonable?</b>
+    <ul class="u7l6-list">
+      <li><span class="tex">\cos\theta</span> is always between 0 and 1.</li>
+      <li>adj is always <b>shorter</b> than hyp.</li>
+      <li>For a small angle, adj is almost as long as hyp. For an angle close to <span class="tex">90^\circ</span>, adj is very short.</li>
+    </ul></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A classmate’s calculator says <span class="tex">\cos50^\circ=0.9649</span>. Is that reasonable?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. <span class="tex">\cos60^\circ=0.5</span> and <span class="tex">\cos40^\circ\approx0.77</span>, so <span class="tex">\cos50^\circ</span> must be between them (it is 0.6428). 0.9649 is what <span class="tex">\cos 50</span> gives in <b>RAD</b> mode: press DRG and choose DEG.</div></div></div>
+</section>
+
+<!-- ================= 3. Finding the adjacent side ================= -->
+<section class="card" data-ink="s3" data-section="3. Finding the Adjacent Side">
+  <div class="sec-h"><span class="badge">3</span><h2>Finding the Adjacent Side</h2></div>
+  <p>Use cosine when the question is about the <b>adj</b> and the <b>hyp</b>: you know one of them and you want the other one. If you want the adj, the unknown is on <b>top</b> of the fraction, so you <b>multiply</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Finding a side with the cosine ratio
+    <ol class="u7l6-steps">
+      <li><b>Step 1.</b> Label adj and hyp from the angle. Mark the side you know and the side you want (<span class="tex">x</span>).</li>
+      <li><b>Step 2.</b> Write <span class="tex">\cos\theta=\dfrac{\text{adj}}{\text{hyp}}</span> and substitute the numbers.</li>
+      <li><b>Step 3.</b> Solve. Unknown on top (adj): <b>multiply</b> both sides by the hyp. Unknown on the bottom (hyp): <b>divide</b> (Section 4).</li>
+      <li><b>Step 4.</b> Round at the end. Check: the adj must be shorter than the hyp. Write the units (or a sentence).</li>
+    </ol></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For <span class="tex">15\times\cos28^\circ</span> press <span class="keys">15 <kbd>×</kbd> <kbd>cos</kbd> 28 <kbd>)</kbd> <kbd>ENTER</kbd></span>. Keep all the digits until the last step.</div>
+    <button class="pill" type="button" data-keys="15 × cos 28 ) =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Find the adjacent side</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find <span class="tex">x</span> to the nearest tenth of a centimetre.</div><div class="u7l6-fig" data-fig="ex4a"></div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">x</span> touches the <span class="tex">28^\circ</span> angle, so <span class="tex">x</span> is adj. 15 cm is hyp.<br><span class="tex">\cos28^\circ=\dfrac{x}{15}</span><br><span class="tex">15\times\cos28^\circ=x</span><br><span class="tex">x=13.24\ldots\approx13.2</span> cm &nbsp; Check: <span class="tex">13.2&lt;15</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(b) A 24-foot ladder leans against a wall. It makes a <span class="tex">75^\circ</span> angle with the ground (a safe angle). How far from the wall is the bottom of the ladder? Round to the nearest tenth of a foot.</div><div class="u7l6-fig" data-fig="ex4b"></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The ladder is hyp (24 ft); the distance <span class="tex">d</span> along the ground is adj.<br><span class="tex">\cos75^\circ=\dfrac{d}{24}</span>, so <span class="tex">d=24\times\cos75^\circ=6.21\ldots</span><br>The bottom of the ladder is about <b>6.2 ft</b> from the wall.<br>Check: a safety rule says about <span class="tex">\tfrac14</span> of the ladder’s length: <span class="tex">24\div4=6</span> ft ✓</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(b): <span class="keys">24 <kbd>×</kbd> <kbd>cos</kbd> 75 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 6.211657082.</div>
+    <button class="pill" type="button" data-keys="24 × cos 75 ) =">Show me</button></div>
+  <div class="explainer u7l6-gap" data-explainer="findAdj"></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= 4. Finding the hypotenuse ================= -->
+<section class="card" data-ink="s4" data-section="4. Finding the Hypotenuse">
+  <div class="sec-h"><span class="badge">4</span><h2>Finding the Hypotenuse</h2></div>
+  <p>If the unknown side is the hyp, it is on the <b>bottom</b> of the fraction. Multiply both sides by the unknown to get it off the bottom, then divide by <span class="tex">\cos\theta</span>.</p>
+  <div class="u7l6-chain"><span class="tex">\cos41^\circ=\dfrac{8.5}{x}</span><span class="u7l6-arr">⟶</span><span class="tex">x\times\cos41^\circ=8.5</span><span class="u7l6-arr">⟶</span><span class="tex">x=\dfrac{8.5}{\cos41^\circ}</span></div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Unknown on top:</b> adj <span class="tex">=</span> hyp <span class="tex">\times\cos\theta</span> (multiply). &nbsp;&nbsp; <b>Unknown on the bottom:</b> hyp <span class="tex">=\dfrac{\text{adj}}{\cos\theta}</span> (divide).</div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For <span class="tex">x=8.5\div\cos41^\circ</span>, press <span class="keys">8.5 <kbd>÷</kbd> <kbd>cos</kbd> 41 <kbd>)</kbd> <kbd>ENTER</kbd></span>. It shows 11.262….</div>
+    <button class="pill" type="button" data-keys="8.5 ÷ cos 41 ) =">Show me</button></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> If you multiply by mistake, you get a hyp that is <i>shorter</i> than the adj. That is impossible: the hyp is the longest side. Check every answer this way.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Why Multiply? Why Divide?">
+  <h3 class="sub">Why multiply for the adj, but divide for the hyp?</h3>
+  <p>Think of <span class="tex">\cos\theta</span> as a <b>part</b> of the hypotenuse. For <span class="tex">28^\circ</span>, the adj is 0.88 (88%) of the hyp. A bar model shows which way to go.</p>
+  <div class="explainer" data-explainer="bars"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Find the hypotenuse</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find <span class="tex">x</span> to the nearest tenth of a metre.</div><div class="u7l6-fig" data-fig="ex5a"></div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">8.5 m touches the <span class="tex">41^\circ</span> angle (adj); <span class="tex">x</span> is across from the right angle (hyp).<br><span class="tex">\cos41^\circ=\dfrac{8.5}{x}</span><br><span class="tex">x\times\cos41^\circ=8.5</span><br><span class="tex">x=8.5\div\cos41^\circ=11.26\ldots\approx11.3</span> m &nbsp; Check: <span class="tex">11.3&gt;8.5</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(b) A garage is 7.2 m wide. Its roof rises from each wall to the middle at <span class="tex">26^\circ</span>. How long is each rafter <span class="tex">r</span> (from the top of the wall to the peak)? Round to the nearest tenth of a metre.</div><div class="u7l6-fig" data-fig="ex5b"></div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The middle is half of 7.2 m: adj <span class="tex">=7.2\div2=3.6</span> m. The rafter is hyp.<br><span class="tex">\cos26^\circ=\dfrac{3.6}{r}</span>, so <span class="tex">r=3.6\div\cos26^\circ=4.005\ldots</span><br>Each rafter is about <b>4.0 m</b> long. &nbsp; Check: <span class="tex">4.0&gt;3.6</span> ✓</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(b): <span class="keys">3.6 <kbd>÷</kbd> <kbd>cos</kbd> 26 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 4.005366986.</div>
+    <button class="pill" type="button" data-keys="3.6 ÷ cos 26 ) =">Show me</button></div>
+  <div class="explainer u7l6-gap" data-explainer="findHyp"></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example: More Sides">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>Multiply or divide?</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) The hyp is 20 m and the angle is <span class="tex">37^\circ</span>. Find the adj to the nearest tenth.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">adj on top: multiply.<br><span class="tex">20\times\cos37^\circ=15.97\ldots\approx16.0</span> m<br>Check: <span class="tex">16.0&lt;20</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(b) The adj is 12 cm and the angle is <span class="tex">58^\circ</span>. Find the hyp to the nearest tenth.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">hyp on the bottom: divide.<br><span class="tex">12\div\cos58^\circ=22.64\ldots\approx22.6</span> cm<br>Check: <span class="tex">22.6&gt;12</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(c) A 30 m rope runs from the top of a flagpole to a peg in the ground at <span class="tex">64^\circ</span> to the ground. How far is the peg from the pole?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The rope is hyp; the ground distance is adj.<br><span class="tex">30\times\cos64^\circ=13.15\ldots\approx13.2</span> m</div></div></div>
+  </div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–9">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 6 · Questions 1–9</h2>
+  <p class="pr-t">Calculator in DEG mode. Label adj and hyp first, then decide: multiply or divide?</p>
+  <div class="pr-chips">
+    <span><b>1</b>Label hyp, opp, adj</span>
+    <span><b>2</b>cos P and cos Q</span>
+    <span><b>3</b>Two similar triangles</span>
+    <span><b>4</b>cos values</span>
+    <span><b>5</b>Riley’s calculator</span>
+    <span><b>6</b>Find the adj</span>
+    <span><b>7</b>Find the hyp</span>
+    <span><b>8</b>Guy wire</span>
+    <span><b>9</b>Mila’s kite</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 9.</span><a class="pill" href="../../../#/lesson/u7l6">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. Choosing the ratio ================= -->
+<section class="card" data-ink="s5" data-section="5. Sine, Cosine or Tangent?">
+  <div class="sec-h"><span class="badge">5</span><h2>Sine, Cosine or Tangent? Choosing the Ratio</h2></div>
+  <p>You now know three ratios. To choose, look at the two sides in the question: the side you <b>know</b> and the side you <b>want</b>.</p>
+  <div class="def u7l6-key"><b>Key idea</b> &nbsp; <b>SOH CAH TOA</b>
+    <div class="u7l6-soh">
+      <div><b class="u7l6-l">SOH</b><span class="tex">\sin\theta=\dfrac{\text{opp}}{\text{hyp}}</span></div>
+      <div><b class="u7l6-l">CAH</b><span class="tex">\cos\theta=\dfrac{\text{adj}}{\text{hyp}}</span></div>
+      <div><b class="u7l6-l">TOA</b><span class="tex">\tan\theta=\dfrac{\text{opp}}{\text{adj}}</span></div>
+    </div>
+    Label the sides. Circle the side you know and the side you want. Use the ratio that has <b>both</b> of them.</div>
+  <div class="explainer u7l6-gap" data-explainer="chooser"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Choose the ratio</h3></div>
+  <p class="u7l6-p">For each triangle, name the side you know and the side you want (<span class="tex">x</span>). Then choose sin, cos or tan. Do not solve.</p>
+  <div class="parts c4 u7l6-p6">
+    <div class="part"><div class="u7l6-fig" data-fig="ex6a"></div><div class="u7l6-kw">(a) Know: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">hyp</span><br>Want: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">opp</span><br>Use: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">sin</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">12 is across from the right angle (hyp). <span class="tex">x</span> is across from <span class="tex">40^\circ</span> (opp). Opp and hyp: <b>SOH</b>, sin.</div></div></div>
+    <div class="part"><div class="u7l6-fig" data-fig="ex6b"></div><div class="u7l6-kw">(b) Know: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">adj</span><br>Want: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">opp</span><br>Use: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">tan</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">8 touches <span class="tex">25^\circ</span> (adj). <span class="tex">x</span> is across from it (opp). Opp and adj: <b>TOA</b>, tan.</div></div></div>
+    <div class="part"><div class="u7l6-fig" data-fig="ex6c"></div><div class="u7l6-kw">(c) Know: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">adj</span><br>Want: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">hyp</span><br>Use: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">cos</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">5 touches <span class="tex">62^\circ</span> (adj). <span class="tex">x</span> is the hyp. Adj and hyp: <b>CAH</b>, cos.</div></div></div>
+    <div class="part"><div class="u7l6-fig" data-fig="ex6d"></div><div class="u7l6-kw">(d) Know: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">opp</span><br>Want: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">hyp</span><br>Use: <span class="u7l6-blank u7l6-bm" data-reveal="&nbsp;">sin</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">7 is across from <span class="tex">33^\circ</span> (opp). <span class="tex">x</span> is the hyp. Opp and hyp: <b>SOH</b>, sin.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5t" data-section="5. Try It: The Ratio Chooser">
+  <h3 class="sub">Try it: the ratio chooser</h3>
+  <p>Tap the side you <b>know</b>, then the side you <b>want</b>. The chooser lights up the ratio that uses both. Tap <b>New triangle</b> for a new angle and a new turn, and let the class call it out first.</p>
+  <div class="u7l6-tool" id="u7l6-choose"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>The grain auger</h3></div>
+  <div class="u7l6-ex7">
+    <div class="u7l6-fig" data-fig="ex7"></div>
+    <p class="u7l6-p">A grain auger is 16 m long. It leans against a grain bin and makes a <span class="tex">32^\circ</span> angle with the ground.</p>
+  </div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) How far from the bin is the bottom of the auger? Round to the nearest tenth of a metre.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Know hyp (16), want adj (<span class="tex">d</span>): <b>cos</b>.<br><span class="tex">\cos32^\circ=\dfrac{d}{16}</span><br><span class="tex">d=16\times\cos32^\circ=13.56\ldots</span><br>About <b>13.6 m</b> from the bin.</div></div></div>
+    <div class="part"><div class="pl">(b) How high up the bin does the auger reach? Round to the nearest tenth of a metre.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Know hyp (16), want opp (<span class="tex">h</span>): <b>sin</b>.<br><span class="tex">\sin32^\circ=\dfrac{h}{16}</span><br><span class="tex">h=16\times\sin32^\circ=8.47\ldots</span><br>It reaches about <b>8.5 m</b> up.</div></div></div>
+    <div class="part"><div class="pl">(c) Check your answers with the Pythagorean theorem.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\sqrt{13.6^2+8.5^2}</span><br><span class="tex">=\sqrt{184.96+72.25}</span><br><span class="tex">=\sqrt{257.21}\approx16.04</span><br>This is about 16 m ✓ (not exact because of rounding)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(a) <span class="keys">16 <kbd>×</kbd> <kbd>cos</kbd> 32 <kbd>)</kbd> <kbd>ENTER</kbd></span> &nbsp; (b) <span class="keys">16 <kbd>×</kbd> <kbd>sin</kbd> 32 <kbd>)</kbd> <kbd>ENTER</kbd></span> &nbsp; (c) <span class="keys"><kbd>2nd</kbd><kbd>√</kbd> 13.6 <kbd>x²</kbd> <kbd>+</kbd> 8.5 <kbd>x²</kbd> <kbd>)</kbd> <kbd>ENTER</kbd></span></div>
+    <div class="u7l6-btns"><button class="pill" type="button" data-keys="16 × cos 32 ) =">(a)</button><button class="pill" type="button" data-keys="16 × sin 32 ) =">(b)</button><button class="pill" type="button" data-keys="√ 13.6 x² + 8.5 x² ) =">(c)</button></div></div>
+  <div class="explainer u7l6-gap" data-explainer="auger"></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u7l6"></section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>The ratio:</b> <span class="tex">\cos\theta=\dfrac{\text{adj}}{\text{hyp}}</span> (CAH). Similar right triangles with the same angle have the same adj ÷ hyp. Label from the angle: opp and adj swap when the angle changes; the hyp never does.</div>
+    <div><b>Calculator:</b> DEG mode (<span class="tex">\cos60^\circ=0.5</span>). <span class="keys"><kbd>cos</kbd> 25 <kbd>)</kbd> <kbd>ENTER</kbd></span>. Round to 4 places. <span class="tex">\cos\theta</span> is between 0 and 1, and gets smaller as the angle grows.</div>
+    <div><b>Finding a side:</b> adj on top: adj <span class="tex">=</span> hyp <span class="tex">\times\cos\theta</span>. Hyp on the bottom: hyp <span class="tex">=</span> adj <span class="tex">\div\cos\theta</span>. Check: the hyp is the longest side.</div>
+    <div><b>Choosing:</b> <b>SOH CAH TOA</b>. Label the sides, circle the side you know and the side you want, and use the ratio that has both.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u7l6">
+    <div><div class="kicker">Your turn</div><b>Assignment 6 · Questions 10–18</b><div class="muted">A 65-inch TV in a cabinet, a chairlift cable, an A-frame tent, choosing sin, cos or tan, Kai’s mistake, a wheelchair ramp, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l7/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 7 — Angles of Elevation and Depression</b><div class="muted">Look up at a treetop or down from a lighthouse. Measure the angle with a clinometer and use trig to find heights and distances you can’t reach.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u7l6.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u7l6', homeHref: '../../', title: '7.6 The Cosine Ratio' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* Math 10-3 · Unit 7 · Lesson 6 — The Cosine Ratio: styles used only on this page (prefix u7l6-).
+ * Role colours as in geo.js: opp red, adj blue, hyp brown. Know = green ring, want = purple dashed ring. */
+.u7l6 .ans .katex, .u7l6 .pl .katex, .u7l6 .def .katex { font-size: 1.08em; }
+.u7l6 .ex-cap .katex { font-size: 1.06em; }
+.u7l6-gap { margin-top: 14px; }
+.u7l6-p { margin: 0 0 8px; }
+.u7l6-sm { font-size: 15px; font-weight: 600; }
+.u7l6-opp { color: #c93a33; } .u7l6-adj { color: #1f5bd6; } .u7l6-hyp { color: #9a6a24; }
+.u7l6-list { margin: 6px 0 0; padding-left: 22px; display: grid; gap: 4px; }
+.u7l6-list li { font-size: 19px; }
+.u7l6-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 5px; }
+.u7l6-steps li { font-size: 19px; }
+.u7l6-btns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.u7l6-blank { display: inline-block; min-width: 96px; border-bottom: 2px solid #8b7d66; padding: 0 6px; text-align: center; font-weight: 700; }
+.u7l6-blank.u7l6-bs { min-width: 48px; } .u7l6-blank.u7l6-bm { min-width: 70px; }
+.u7l6-blank .bk-rv-q { border: 0; background: none; }
+
+/* ---------- warm-up ---------- */
+.u7l6-wq .bk-ans { display: grid; grid-template-columns: 250px 1fr; gap: 18px; align-items: center; font-size: 20px; color: var(--ink); }
+.u7l6-wsol svg { width: 250px; height: auto; display: block; }
+
+/* ---------- figures ---------- */
+.u7l6-fig { position: relative; margin: 4px auto; flex: none; }
+.u7l6-fig svg, .u7l6-svg { display: block; overflow: visible; }
+.u7l6-two { display: grid; grid-template-columns: 350px 1fr; gap: 22px; align-items: center; margin-top: 8px; }
+.u7l6-two .def { margin: 0; }
+.u7l6-key .u7l6-big { font-size: 24px; margin: 10px 0 8px; text-align: center; }
+.u7l6-cah { color: #1f5bd6; letter-spacing: .04em; }
+.u7l6-chain { display: flex; align-items: center; justify-content: center; gap: 18px; font-size: 23px; margin: 12px 0; }
+.u7l6-arr { font-size: 26px; color: var(--brand2); font-weight: 800; }
+.u7l6-soh { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0; }
+.u7l6-soh > div { background: #fff; border: 2px solid #e2d3b8; border-radius: 12px; padding: 8px 10px; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 21px; }
+.u7l6-l { font: 900 26px var(--round); color: var(--brand); letter-spacing: .08em; }
+
+/* ---------- tables ---------- */
+.u7l6-tbl { border-collapse: collapse; font-size: 20px; margin: 4px 0 6px; background: #fff; width: 100%; }
+.u7l6-tbl th, .u7l6-tbl td { border: 2px solid #b9ad97; padding: 6px 10px; text-align: center; height: 46px; }
+.u7l6-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u7l6-t2 th:first-child, .u7l6-t2 tr > th { text-align: left; }
+.u7l6-t2 td { width: 34%; }
+.u7l6-t3 td { width: 13%; }
+.u7l6-ex1 .u7l6-tbl td { white-space: nowrap; }
+.u7l6-ex1 .u7l6-tbl .katex { font-size: 1em; }
+.u7l6-fill { font-size: 19px; margin: 8px 0 6px; line-height: 1.7; }
+.u7l6-ex1 { display: grid; grid-template-columns: 480px 1fr; gap: 16px; align-items: center; }
+.u7l6-ex2 { display: grid; grid-template-columns: 410px 1fr; gap: 16px; align-items: center; }
+.u7l6-ex3 { display: grid; grid-template-columns: 1fr 330px; gap: 14px; align-items: start; }
+.u7l6-ex3 .parts { margin: 0; }
+.u7l6-ex7 { display: grid; grid-template-columns: 430px 1fr; gap: 18px; align-items: center; }
+.u7l6-ex7 .u7l6-p { font-size: 21px; }
+.u7l6-p6 .part { align-items: center; }
+.u7l6-kw { font-size: 19px; line-height: 2.1; align-self: stretch; }
+
+/* ---------- hands-on tools ---------- */
+.u7l6-tool { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 12px 16px 14px; display: flex; justify-content: center; }
+.u7l6-tool .geo-table { font-size: 19px; }
+.u7l6-ch { display: grid; grid-template-columns: 470px 1fr; gap: 18px; align-items: center; width: 100%; }
+.u7l6-ch-side { display: flex; flex-direction: column; gap: 12px; }
+.u7l6-ch-out { font-size: 20px; min-height: 2.6em; }
+.u7l6-ch .u7l6-btns { justify-content: flex-start; }
+.u7l6-hit { cursor: pointer; pointer-events: stroke; }
+
+/* ---------- explainer labels ---------- */
+.u7l6-hold { position: absolute; width: 0; height: 0; }
+.u7l6-lab { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap; font: 700 21px var(--round); color: var(--ink); text-align: center; }
+.u7l6-tag { font: 800 23px var(--round); padding: 6px 16px; border: 3px solid var(--brand2); border-radius: 14px; background: #fff; color: var(--brand); }
+.u7l6-eq { font-size: 23px; font-weight: 600; padding: 6px 14px; background: #fff; border: 2px solid var(--line); border-radius: 12px; }
+.u7l6-read { font: 800 30px var(--round); padding: 6px 18px; background: #fff; border: 2px solid var(--line); border-radius: 14px; }
+.u7l6-pct { font: 800 19px var(--round); color: #1f5bd6; }
+.u7l6-wl { font: 600 20px var(--round); color: var(--ink); white-space: nowrap; }
+.u7l6-wl .keys { font-size: 17px; }
+.u7l6-wbig { font-size: 24px; }
+.u7l6-wans { padding: 2px 10px; background: #e6f4ee; border-radius: 10px; }
+.u7l6-wrong { color: #c93a33; text-decoration: line-through; text-decoration-thickness: 2px; }
+.u7l6-wrong .katex { color: #c93a33; }
+.u7l6-scr { display: inline-block; margin-left: 10px; padding: 2px 10px; background: #dfe8d8; border: 2px solid #8fa384; border-radius: 6px; font: 700 18px ui-monospace, Menlo, monospace; color: #1f2a1a; }
+.u7l6-note { font: 700 16px var(--round); color: #5b6880; background: #eef1f6; border: 1.5px dashed #9aa6bb; border-radius: 999px; padding: 3px 12px; white-space: nowrap; }
+
+/* the little data tables inside the explainers */
+.u7l6-dt { display: grid; grid-template-columns: 110px 80px 80px 130px; border: 2px solid #b9ad97; border-radius: 10px; overflow: hidden; background: #fff; }
+.u7l6-dt > div { height: 44px; display: grid; place-items: center; font: 700 20px var(--round); border-right: 1.5px solid #e2dacb; border-bottom: 1.5px solid #e2dacb; }
+.u7l6-dt .u7l6-dth { background: var(--brand-soft); font-size: 17px; }
+.u7l6-dt .u7l6-r { color: var(--brand); }
+.u7l6-dt2 { grid-template-columns: 160px 120px 120px; }
+.u7l6-dt2 > div { height: 50px; }
+.u7l6-dt3 { grid-template-columns: 70px repeat(6, 70px); }
+.u7l6-dt3 > div { font-size: 17px; }
+
+/* the SOH CAH TOA cards */
+.u7l6-cards { display: flex; flex-direction: column; gap: 10px; width: 420px; }
+.u7l6-card { display: grid; grid-template-columns: 70px 1fr 120px; align-items: center; gap: 8px; padding: 6px 12px; background: #fff; border: 2.5px solid #d8cdb8; border-radius: 14px; font-size: 21px; transition: opacity .3s, border-color .3s, background .3s; }
+.u7l6-card > b { font: 900 24px var(--round); color: var(--brand); letter-spacing: .06em; }
+.u7l6-card .u7l6-mk { font: 800 16px var(--round); text-align: right; }
+.u7l6-card.u7l6-on { border-color: #12805a; background: #e6f4ee; }
+.u7l6-card.u7l6-on .u7l6-mk { color: #12805a; }
+.u7l6-card.u7l6-off { opacity: .45; }
+.u7l6-card.u7l6-off .u7l6-mk { color: #c93a33; }
+
+/* the bar model */
+.u7l6-bar { height: 52px; border-radius: 10px; display: flex; align-items: center; padding-left: 16px; font: 800 21px var(--round); color: #fff; white-space: nowrap; overflow: hidden; }
+.u7l6-barH { background: #9a6a24; } .u7l6-barA { background: #1f5bd6; }
+.u7l6-wl.u7l6-sm .keys { font-size: 14px; } .u7l6-wl.u7l6-sm .u7l6-scr { font-size: 15px; }

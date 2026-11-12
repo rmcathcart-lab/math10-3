@@ -1,0 +1,59 @@
+/* Math 10-3 · Unit 6 · Lesson 6 — Indirect Measurement: Shadows and Mirrors: styles used only on this page (prefix u6l6-).
+ * Colours: sun rays gold, shadow triangles amber, mirror triangles blue, matching sides red / blue. */
+.u6l6 .ans .katex, .u6l6 .pl .katex, .u6l6 .def .katex { font-size: 1.08em; }
+.u6l6 .ex-cap .katex { font-size: 1.06em; }
+.u6l6-gap { margin-top: 14px; }
+.u6l6-p { margin: 0 0 8px; }
+.u6l6-ul { margin: 4px 0 0; padding-left: 1.3em; display: grid; gap: 4px; }
+.u6l6-key { margin: 8px 0 6px; font-size: 21px; text-align: center; }
+.u6l6-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 5px 22px; }
+.u6l6-steps li { font-size: 19px; }
+.u6l6-note { margin-top: 8px; font-size: 18px; }
+
+/* ---------- warm-up ---------- */
+.u6l6-wpoll .poll-opts { grid-template-columns: 1fr 1fr; margin-left: 0; } .u6l6-wpoll > .pill, .u6l6-wpoll .poll-ans { margin-left: 0; }
+.u6l6-wpoll .opt { font-size: 21px; padding: 10px 14px; }
+.u6l6-wans { display: grid; grid-template-columns: 1fr 300px; gap: 18px; align-items: center; font-size: 19px; line-height: 1.4; }
+
+/* ---------- figures and layouts ---------- */
+.u6l6-fig { position: relative; margin: 4px auto; flex: none; }
+.u6l6-fig svg, .u6l6-svg { display: block; overflow: visible; }
+.part:not(.shown) .u6l6-fa { visibility: hidden; }
+.u6l6-fa { margin: 0 0 6px; }
+.u6l6-two { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; margin-top: 6px; }
+.u6l6-two .def { margin: 8px 0 0; }
+.u6l6-ex1 { display: grid; grid-template-columns: 410px 1fr; gap: 18px; align-items: start; }
+.u6l6-ex2 { display: grid; grid-template-columns: 1fr 430px; gap: 16px; align-items: center; margin-bottom: 10px; }
+.u6l6-ex4 { display: grid; grid-template-columns: 1fr 450px; gap: 16px; align-items: center; margin-bottom: 8px; }
+.u6l6-ex5 { display: grid; grid-template-columns: 1fr 450px; gap: 16px; align-items: center; margin-bottom: 8px; }
+.u6l6-ex5 .parts { margin: 0; }
+.u6l6-tbl { border-collapse: collapse; font-size: 20px; margin: 2px 0 8px; background: #fff; width: 100%; }
+.u6l6-tbl th, .u6l6-tbl td { border: 2px solid #b9ad97; padding: 6px 10px; text-align: center; height: 44px; }
+.u6l6-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u6l6-tbl tr > th:first-child { text-align: left; }
+.u6l6-blank { display: inline-block; min-width: 80px; border-bottom: 2px solid #8b7d66; padding: 0 6px; text-align: center; font-weight: 700; }
+.u6l6-blank .bk-rv-q { border: 0; background: none; }
+
+/* ---------- explainer labels ---------- */
+.u6l6-hold { position: absolute; width: 0; height: 0; }
+.u6l6-lab { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap; font: 700 20px var(--round); color: var(--ink); text-align: center; }
+.u6l6-lab.u6l6-l { transform: translate(0, -50%); text-align: left; }
+.u6l6-eq { font-size: 23px; font-weight: 600; padding: 3px 10px; background: rgba(255, 255, 255, .92); border-radius: 10px; }
+.u6l6-eq .u6l6-st { font: 800 15px var(--round); color: var(--brand2); margin-right: 8px; }
+.u6l6-ans { font: 800 25px var(--round); padding: 6px 16px; border: 3px solid var(--brand2); border-radius: 14px; background: #fff; color: var(--brand); }
+.u6l6-tag { font: 700 18px var(--round); padding: 5px 12px; border: 2px solid var(--line); border-radius: 12px; background: #fff; }
+.u6l6-tag b { color: var(--brand); }
+.u6l6-small { font: 700 16px var(--round); color: var(--muted); }
+.u6l6-bubble { font: 800 18px var(--round); padding: 5px 12px; background: #fff; border: 2px solid #c27a0e; border-radius: 14px; color: #8a5a10; }
+.u6l6-paper { position: absolute; box-sizing: border-box; width: 350px; padding: 10px 16px 12px; background: #fffdf4; border: 2px solid #d8cdb5; border-radius: 10px; box-shadow: 0 3px 10px rgba(60, 40, 10, .12); font-size: 20px; }
+.u6l6-paper .u6l6-who { font: 800 17px var(--round); color: var(--brand); margin-bottom: 4px; }
+.u6l6-paper .u6l6-line { margin: 4px 0; }
+.u6l6-fix { position: absolute; box-sizing: border-box; width: 350px; padding: 8px 14px; background: #eef8f2; border: 2px solid #9fd2b6; border-radius: 10px; font-size: 20px; }
+.u6l6-fix .u6l6-line { margin: 4px 0; }
+.u6l6-sun { cursor: grab; }
+.u6l6-cnt { font: 800 15px var(--round); fill: #8a5a10; }
+
+/* ---------- Math History animation ---------- */
+#u6l6-hist { width: 100%; height: auto; display: block; cursor: pointer; }
+.u6l6-h-t { font: 700 15px Georgia, 'Times New Roman', serif; fill: #4a2c14; }
+.u6l6-h-big { font: 700 18px Georgia, 'Times New Roman', serif; fill: #b07a12; }

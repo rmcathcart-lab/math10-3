@@ -1,0 +1,94 @@
+/* Math 10-3 · Unit 6 · Lesson 1 — Similar Polygons and Scale Factor: styles used only on this page (prefix u6l1-).
+ * Matching parts share a colour (blue, red, green, amber, …). Original figures are grey-blue, new figures cream. */
+.u6l1 .ans .katex, .u6l1 .pl .katex, .u6l1 .def .katex { font-size: 1.08em; }
+.u6l1 .ex-cap .katex { font-size: 1.06em; }
+.u6l1-gap { margin-top: 14px; }
+.u6l1-p { margin: 0 0 8px; }
+.u6l1-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 5px; }
+.u6l1-steps li { font-size: 19px; }
+.u6l1-note { margin-top: 8px; font-size: 18px; }
+.tip.u6l1-know { background: #f5ecdf; } .tip.u6l1-know .tip-ic { background: var(--brand2); color: #fff; font-family: Georgia, serif; }
+.u6l1-big.katex, .u6l1 .def .u6l1-big .katex { font-size: 1.2em; }
+
+/* ---------- warm-up ---------- */
+.u6l1-wpoll .poll-opts { grid-template-columns: repeat(4, 1fr); margin-left: 0; } .u6l1-wpoll > .pill, .u6l1-wpoll .poll-ans { margin-left: 0; }
+.u6l1-wpoll .opt { font-size: 26px; padding: 12px 16px; }
+.u6l1-wans { display: grid; grid-template-columns: 1fr 300px; gap: 18px; align-items: center; font-size: 19px; line-height: 1.4; }
+
+/* ---------- figures ---------- */
+.u6l1-fig { position: relative; margin: 4px auto; flex: none; }
+.u6l1-fig svg, .u6l1-svg { display: block; overflow: visible; }
+
+/* ---------- naming order ---------- */
+.u6l1-name { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; background: #fff; border: 2px solid var(--line); border-radius: 14px; padding: 12px 22px; margin-top: 8px; }
+.u6l1-cols { display: grid; grid-template-columns: repeat(4, 40px); justify-items: center; row-gap: 0; font: italic 600 28px/1.15 Georgia, 'Times New Roman', serif; }
+.u6l1-cols i { font-style: normal; font: 700 22px/1 var(--round); color: var(--brand2); }
+.u6l1-pairs { display: grid; gap: 8px; font-size: 19px; }
+.u6l1-eqs { margin-top: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+.u6l1-and { font-weight: 700; }
+
+/* ---------- Examples 2, 3, 6 ---------- */
+.u6l1-ex2 { display: grid; grid-template-columns: 410px 1fr; gap: 16px; align-items: center; }
+.u6l1-ex3 { display: grid; grid-template-columns: 450px 1fr; gap: 16px; align-items: center; }
+.u6l1-ex3 .parts { margin: 0; }
+.u6l1-ex6 { display: grid; grid-template-columns: 530px 1fr; gap: 14px; align-items: center; }
+.u6l1-blank { display: inline-block; min-width: 76px; border-bottom: 2px solid #8b7d66; padding: 0 6px; text-align: center; font-weight: 700; }
+.u6l1-blank .bk-rv-q { border: 0; background: none; }
+
+/* ---------- tables ---------- */
+.u6l1-tbl { border-collapse: collapse; font-size: 20px; margin: 8px 0 4px; background: #fff; width: 100%; }
+.u6l1-tbl th, .u6l1-tbl td { border: 2px solid #b9ad97; padding: 6px 10px; text-align: center; height: 48px; }
+.u6l1-tbl th { background: var(--brand-soft); font: 800 17px var(--round); white-space: nowrap; }
+.u6l1-t3 th { text-align: left; } .u6l1-t3 td { width: 22%; }
+.u6l1-t3 tr.u6l1-tsep th, .u6l1-t3 tr.u6l1-tsep td { border-top-width: 5px; }
+.u6l1-t4 td:nth-child(2), .u6l1-t4 td:nth-child(3) { width: 14%; } .u6l1-t4 td:nth-child(4) { width: 28%; }
+.u6l1-kinds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.u6l1-kinds > div { background: #fff; border-radius: 10px; padding: 8px 12px; font-size: 19px; }
+
+/* ---------- the hands-on tool ---------- */
+.u6l1-tool { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 12px 16px 14px; display: flex; justify-content: center; }
+.u6l1-tw { width: 960px; display: grid; gap: 8px; }
+.u6l1-tbtns { display: flex; gap: 6px; align-items: center; }
+.u6l1-tbtns .pill.small { margin-left: 0; font-size: 16px; padding: 6px 14px; }
+.u6l1-tbtns .pill[aria-pressed="true"] { background: var(--brand); color: #fff; border-color: var(--brand); }
+.u6l1-tctl { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+.u6l1-trow { display: flex; align-items: center; gap: 12px; font: 700 19px var(--round); }
+.u6l1-trow input { flex: 1; touch-action: none; accent-color: var(--brand2); height: 30px; }
+.u6l1-tl { white-space: nowrap; }
+.u6l1-tv { min-width: 62px; font-size: 22px; color: var(--brand); }
+.u6l1-tchips { display: flex; flex-wrap: wrap; gap: 6px 8px; min-height: 36px; }
+.u6l1-tchip { font: 700 17px/1.3 var(--round); color: var(--c, #1c2230); background: #fff; border: 2px solid var(--c, #9aa0ab); border-radius: 999px; padding: 3px 12px; }
+.u6l1-tverd { font: 600 20px/1.35 var(--round); border-radius: 12px; padding: 8px 14px; }
+.u6l1-tverd.u6l1-ok { background: #e3f4ea; color: #0f6a4a; } .u6l1-tverd.u6l1-no { background: #fbeceb; color: var(--red); }
+
+/* ---------- explainer labels ---------- */
+.u6l1-hold { position: absolute; width: 0; height: 0; }
+.u6l1-lab { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap; font: 700 21px var(--round); color: var(--ink); text-align: center; }
+.u6l1-line { position: absolute; left: 0; top: 0; transform: translateY(-50%); white-space: nowrap; font: 600 21px var(--round); color: var(--ink); }
+.u6l1-eq { font-size: 23px; font-weight: 600; padding: 4px 12px; background: #fff; border-radius: 10px; }
+.u6l1-eq.u6l1-sm { font-size: 20px; }
+.u6l1-eq.u6l1-big { font-size: 27px; }
+.u6l1-eq.u6l1-huge { font-size: 34px; }
+.u6l1-eq.u6l1-box { border: 3px solid var(--brand2); }
+.u6l1-eq.u6l1-tagb { font-size: 19px; color: var(--muted); }
+.u6l1-pill { font: 700 20px var(--round); padding: 5px 14px; border: 2.5px solid var(--c, var(--brand2)); border-radius: 999px; background: #fff; color: var(--c, var(--brand)); }
+.u6l1-pill.u6l1-blue { --c: #1f5bd6; } .u6l1-pill.u6l1-red { --c: #c93a33; }
+.u6l1-mut { font-size: 15px; color: var(--muted); font-weight: 600; }
+.u6l1-bn { font-size: 20px; line-height: 1.15; }
+.u6l1-op { font: 900 46px var(--round); color: var(--brand); background: #fff; border: 3px solid var(--brand2); border-radius: 14px; padding: 2px 18px; }
+.u6l1-card { font: 800 26px var(--round); background: #fff; border: 3px solid #1f5bd6; color: #1f5bd6; border-radius: 12px; padding: 8px 16px; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+.u6l1-card.u6l1-cout { border-color: #c93a33; color: #c93a33; }
+
+/* the names one above the other (inside explainers) */
+.u6l1-nc { position: absolute; display: grid; grid-template-columns: repeat(var(--n), 52px); gap: 6px; }
+.u6l1-ncc { display: grid; justify-items: center; padding: 4px 0; border-radius: 12px; border: 2.5px solid transparent; font: italic 600 28px/1.1 Georgia, 'Times New Roman', serif; }
+.u6l1-ncc i { font: 700 20px/1 var(--round); color: var(--brand2); font-style: normal; }
+.u6l1-ncc.u6l1-on { border-color: var(--c); background: color-mix(in srgb, var(--c) 12%, #fff); }
+
+/* the measuring table (Example 1 check) */
+.u6l1-mt { position: absolute; display: grid; grid-template-columns: 1.1fr 1fr 1fr 0.9fr; border: 2px solid #b9ad97; border-radius: 12px; overflow: hidden; background: #fff; }
+.u6l1-mt > div { height: 52px; display: grid; place-items: center; font: 700 22px var(--round); border-right: 1.5px solid #e2dacb; border-bottom: 1.5px solid #e2dacb; }
+.u6l1-mt .u6l1-mh { background: var(--brand-soft); font-size: 17px; height: 42px; }
+.u6l1-mt .u6l1-mn { font-size: 19px; }
+.u6l1-mt .u6l1-mk { color: var(--brand); }
+.u6l1-mt .u6l1-mk.u6l1-bad { color: var(--red); background: #fbeceb; }

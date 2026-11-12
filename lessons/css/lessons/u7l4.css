@@ -1,0 +1,90 @@
+/* Math 10-3 · Unit 7 · Lesson 4 — Similar Right Triangles and the Tangent Ratio: styles used only on this page (prefix u7l4-).
+ * Side roles (as in geo.js): opp red #c93a33, adj blue #1f5bd6, hyp brown #9a6a24; θ amber. */
+.u7l4 .ans .katex, .u7l4 .pl .katex, .u7l4 .def .katex { font-size: 1.08em; }
+.u7l4 .ex-cap .katex { font-size: 1.06em; }
+.u7l4-gap { margin-top: 14px; }
+.u7l4-p { margin: 0 0 8px; }
+.u7l4-nw { white-space: nowrap; }
+.u7l4-opp { color: #c93a33; } .u7l4-adj { color: #1f5bd6; } .u7l4-hyp { color: #9a6a24; }
+
+/* ---------- warm-up ---------- */
+.u7l4-wpoll .poll-opts { grid-template-columns: repeat(4, 1fr); margin-left: 0; } .u7l4-wpoll > .pill, .u7l4-wpoll .poll-ans { margin-left: 0; }
+.u7l4-wpoll .opt { font-size: 22px; padding: 10px 14px; }
+.u7l4-wans { display: grid; grid-template-columns: 1fr 170px; gap: 18px; align-items: center; font-size: 19px; line-height: 1.4; }
+.u7l4-wfig svg { width: 160px; height: auto; display: block; }
+
+/* ---------- figures ---------- */
+.u7l4-fig { position: relative; margin: 4px auto; flex: none; }
+.u7l4-fig svg, .u7l4-svg { display: block; overflow: visible; }
+.u7l4-two { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; margin-top: 8px; }
+.u7l4-two .def { margin: 0; }
+.u7l4-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 6px; }
+.u7l4-steps li { font-size: 19px; line-height: 1.45; }
+.u7l4-bul li { padding-left: 22px; position: relative; }
+.u7l4-bul li::before { content: '•'; position: absolute; left: 4px; font-weight: 900; color: var(--brand2); }
+.u7l4-ind { display: inline-block; padding-left: 4.4em; }
+/* role tags on geo.js right triangles: a bit bigger for the projector */
+.u7l4 g.geo-rt > g:nth-child(7) > text { font-size: 21px; }
+/* answer figures: the role labels and colours wait for the Answer (or Show all answers) */
+.part:not(.shown) .u7l4-pt g.geo-rt > g:nth-child(7) { visibility: hidden; }
+.part:not(.shown) .u7l4-pt g.geo-rt > g:nth-child(4) > path { stroke: #1c2230; }
+
+/* ---------- tables and blanks ---------- */
+.u7l4-tbl { border-collapse: collapse; font-size: 20px; margin: 8px 0 4px; background: #fff; }
+.u7l4-tbl th, .u7l4-tbl td { border: 2px solid #b9ad97; padding: 6px 12px; text-align: center; height: 46px; }
+.u7l4-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u7l4-t1d td { width: 190px; }
+.u7l4-t2 { width: 100%; } .u7l4-t2 th:first-child { width: 150px; text-align: left; } .u7l4-t2 td { width: 27%; }
+.u7l4-t3 { width: 100%; } .u7l4-t3 th { width: 90px; } .u7l4-t3 td { width: 12%; }
+.u7l4-t9 th { width: 80px; } .u7l4-t9 td { text-align: left; min-width: 330px; }
+.u7l4-blank { display: inline-block; min-width: 110px; border-bottom: 2px solid #8b7d66; padding: 0 6px; text-align: center; font-weight: 700; }
+.u7l4-blank.u7l4-wide { min-width: 210px; }
+.u7l4-blank .bk-rv-q { border: 0; background: none; }
+
+/* ---------- examples ---------- */
+.u7l4-p1 .part { align-items: center; }
+.u7l4-p1 .pl { align-self: stretch; }
+.u7l4-ex1d { display: grid; grid-template-columns: 300px 1fr; gap: 18px; align-items: center; }
+.u7l4-ex4 { display: grid; grid-template-columns: 330px 1fr; gap: 16px; align-items: center; }
+.u7l4-ex4 .parts { margin-top: 8px; }
+.u7l4-ex6 { display: grid; grid-template-columns: 1fr 300px; gap: 16px; align-items: center; }
+.u7l4-ex8 { display: grid; grid-template-columns: 1fr 380px; gap: 16px; align-items: center; }
+.u7l4-ex9 { display: grid; grid-template-columns: 1fr 320px; gap: 16px; align-items: center; }
+.u7l4-tandef { margin-top: 8px; }
+.u7l4-bigf { text-align: center; font-size: 24px; margin: 12px 0; }
+.u7l4-btns { display: flex; flex-direction: column; gap: 8px; flex: none; }
+
+/* ---------- quick-fire labelling ---------- */
+.u7l4-qf { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 10px 16px 14px; display: grid; grid-template-columns: 560px 1fr; gap: 18px; align-items: center; }
+.u7l4-qf-side { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.u7l4-qf-side .pill { font-size: 19px; }
+.u7l4-qf-msg { font: 600 19px/1.4 var(--round); color: var(--ink2, #3a4254); background: #f7f5ef; border-radius: 12px; padding: 8px 14px; min-height: 3em; }
+.u7l4-qf.u7l4-hid g.geo-rt > g:nth-child(7) { visibility: hidden; }
+.u7l4-qf.u7l4-hid g.geo-rt > g:nth-child(4) > path { stroke: #1c2230; }
+
+/* the similar-triangles table: the calculator row waits until the ratio is named */
+.u7l4-nocalc .geo-calc { visibility: hidden; }
+
+/* ---------- explainer labels ---------- */
+.u7l4-hold { position: absolute; width: 0; height: 0; }
+.u7l4-lab { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap; font: 700 21px var(--round); color: var(--ink); text-align: center; }
+.u7l4-labl { position: absolute; left: 0; top: 0; transform: translate(0, -50%); white-space: nowrap; font: 600 23px var(--round); color: var(--ink); }
+.u7l4-eq { font-size: 24px; font-weight: 600; padding: 3px 12px; background: #fff; border-radius: 10px; }
+.u7l4-eq.u7l4-key { border: 3px solid var(--brand2); }
+.u7l4-eq.u7l4-ok { border: 3px solid #12805a; background: #eef8f2; }
+.u7l4-note { font: 700 18px var(--round); color: #6a7182; }
+.u7l4-step { position: absolute; width: 360px; padding: 9px 14px; border: 2px solid #e2dacb; border-radius: 12px; background: #fff; font: 600 19px/1.35 var(--round); color: #9aa0ab; transition: color .3s, border-color .3s, background .3s; }
+.u7l4-step.on { color: var(--ink); border-color: var(--brand2); background: #fffaf1; }
+.u7l4-step b { font-weight: 800; }
+.u7l4-read { font: 800 26px var(--round); padding: 6px 16px; background: #fff; border: 2px solid var(--line); border-radius: 12px; }
+.u7l4-kid { position: absolute; width: 380px; padding: 8px 14px; border: 2px solid #e2dacb; border-radius: 12px; background: #fff; font: 600 21px/1.35 var(--round); }
+.u7l4-kid b { display: inline-block; min-width: 62px; }
+.u7l4-kid.u7l4-bad { border-color: #c93a33; background: #fdf1f0; }
+.u7l4-kid.u7l4-good { border-color: #12805a; background: #eef8f2; }
+.u7l4-kid .u7l4-why { display: block; font-size: 17px; color: #5a6070; margin-top: 2px; }
+
+/* ---------- the tan table inside the explainer ---------- */
+.u7l4-st { display: grid; grid-template-columns: 96px repeat(7, 74px); border: 2px solid #b9ad97; border-radius: 10px; overflow: hidden; background: #fff; }
+.u7l4-st > div { height: 44px; display: grid; place-items: center; font: 700 18px var(--round); border-right: 1.5px solid #e2dacb; border-bottom: 1.5px solid #e2dacb; }
+.u7l4-st .u7l4-sth { background: var(--brand-soft); font-size: 18px; }
+.u7l4-st .u7l4-now { background: #fff1d6; color: var(--brand); }

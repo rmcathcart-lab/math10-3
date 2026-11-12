@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Similar Triangles · Math 10-3 6.5</title>
+<meta name="description" content="Math 10-3 Unit 6 Lesson 5: similar triangles. The AA test, naming similar triangles in matching order, finding a missing side with the scale factor or a proportion, right triangles that share an acute angle (ramps), and nested and crossing triangles with parallel lines. A triangle that slides onto another, a ramp post that slides, a bow tie that turns. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u6l5.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u6l5">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: One Large or Two Mediums?">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>One Large or Two Mediums?</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A pizza place sells round pizzas by their size <b>across</b> (the diameter).</p><p class="vw-ctx">You and your friends can get <b>one 16-inch</b> pizza or <b>two 10-inch</b> pizzas. Same toppings, same thickness.</p><p class="vw-ask">Which choice gives you more pizza to eat?</p></div><div class="vw-art"><svg viewBox="0 0 300 290" role="img" aria-label="One big pizza on top and two smaller pizzas under it, slowly turning, with steam rising.">
+    <defs>
+      <g id="u6l5-pz">
+        <circle r="50" fill="#e3a857" stroke="#a8682a" stroke-width="2.5"/>
+        <circle r="42" fill="#f6d36b"/>
+        <path d="M0 -42V42M-42 0H42M-29.7 -29.7L29.7 29.7M-29.7 29.7L29.7 -29.7" stroke="#e0b24a" stroke-width="2"/>
+        <g fill="#c0392b"><circle cx="0" cy="-26" r="7"/><circle cx="23" cy="-9" r="6.5"/><circle cx="14" cy="22" r="7"/><circle cx="-17" cy="20" r="6.5"/><circle cx="-25" cy="-8" r="7"/><circle cx="0" cy="0" r="6"/></g>
+      </g>
+    </defs>
+    <g transform="translate(150 94) scale(1.6)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/><use href="#u6l5-pz"/></g></g>
+    <g transform="translate(88 228)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="20s" repeatCount="indefinite"/><use href="#u6l5-pz"/></g></g>
+    <g transform="translate(212 228)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="20s" repeatCount="indefinite"/><use href="#u6l5-pz"/></g></g>
+    <g fill="none" stroke="#b9ad97" stroke-width="3" stroke-linecap="round">
+      <path d="M262 70c-8-10 8-18 0-28s8-18 0-28"><animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 10;0 -6" dur="3s" repeatCount="indefinite"/></path>
+      <path d="M38 70c-8-10 8-18 0-28s8-18 0-28"><animate attributeName="opacity" values="0;1;0" dur="3s" begin="1.5s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 10;0 -6" dur="3s" begin="1.5s" repeatCount="indefinite"/></path>
+    </g>
+    <g font-family="system-ui, sans-serif" font-weight="800" text-anchor="middle">
+      <rect x="123" y="81" width="54" height="26" rx="13" fill="#fff" stroke="#6e4a1c" stroke-width="2"/><text x="150" y="100" font-size="17" fill="#6e4a1c">16 in</text>
+      <rect x="64" y="216" width="48" height="24" rx="12" fill="#fff" stroke="#6e4a1c" stroke-width="2"/><text x="88" y="234" font-size="15" fill="#6e4a1c">10 in</text>
+      <rect x="188" y="216" width="48" height="24" rx="12" fill="#fff" stroke="#6e4a1c" stroke-width="2"/><text x="212" y="234" font-size="15" fill="#6e4a1c">10 in</text>
+      <text x="150" y="234" font-size="20" fill="#9a6a24">or</text>
+    </g>
+  </svg></div></div>
+  <div class="poll u6l5-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> two 10-inch pizzas</div>
+      <div class="opt right"><b>B</b> one 16-inch pizza</div>
+      <div class="opt"><b>C</b> about the same</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u6l5-wans"><div><b>B: the one 16-inch pizza, by a lot!</b> Most people pick two pizzas because <span class="tex">10+10=20</span> is more than <span class="tex">16</span>. But you eat the <b>area</b>, not the width. The 16-inch pizza is about <b>201 square inches</b>. The two 10-inch pizzas together are about <span class="tex">79+79=157</span> square inches. The big one has about 44 square inches more: more than <b>half of another 10-inch pizza</b>! <span class="muted">When a shape gets wider, its area grows much faster.</span></div>
+      <svg viewBox="0 0 260 190" class="u6l5-wart" role="img" aria-label="The two small pizzas fit inside the big pizza with room left over">
+        <circle cx="130" cy="95" r="88" fill="#f6d36b" stroke="#a8682a" stroke-width="3"/>
+        <circle cx="86" cy="95" r="44" fill="#fff6e5" stroke="#9a6a24" stroke-width="2.5" stroke-dasharray="6 5"/>
+        <circle cx="174" cy="95" r="44" fill="#fff6e5" stroke="#9a6a24" stroke-width="2.5" stroke-dasharray="6 5"/>
+        <g font-family="system-ui, sans-serif" font-weight="800" text-anchor="middle" fill="#6e4a1c"><text x="86" y="101" font-size="16">10 in</text><text x="174" y="101" font-size="16">10 in</text><text x="130" y="32" font-size="15" fill="#c0392b">left over!</text><text x="130" y="172" font-size="15" fill="#c0392b">left over!</text></g>
+      </svg></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 6 Similarity and Scale · Lesson 5</div>
+  <h1>Similar Triangles</h1>
+  <p class="lede">Two pairs of equal angles are enough to show that two triangles are <b>similar</b>. Then a scale factor or a proportion finds any missing side: on a ramp, under a sign, or across a pond.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find the third angle of a triangle and use the <b>AA test</b> to decide if two triangles are similar</li>
+      <li>name similar triangles in <b>matching order</b> and list the matching angles and sides</li>
+      <li>find a <b>missing side</b> with the scale factor or a proportion, and check that it makes sense</li>
+      <li>spot similar <b>right triangles that share an acute angle</b>, like a ramp and its support post</li>
+      <li>spot <b>nested</b> and <b>crossing</b> triangles made by parallel lines, and find missing sides in them</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G3</b> Demonstrate an understanding of similarity of convex polygons, including regular and irregular polygons.</div>
+</section>
+
+<!-- ================= 1. The AA test ================= -->
+<section class="card" data-ink="s1" data-section="1. The AA Test">
+  <div class="sec-h"><span class="badge">1</span><h2>The AA Test for Similar Triangles</h2></div>
+  <p>Remember: two shapes are <b>similar</b> if they have the same shape. One is an enlargement or a reduction of the other. The parts that match are called <b>corresponding</b> parts: corresponding angles are <b>equal</b>, and corresponding sides are in the <b>same ratio</b>.</p>
+  <p>For most polygons you must check the angles <b>and</b> the sides. Triangles are easier. The three angles of any triangle add to <span class="tex">180^\circ</span>. So if two angles of one triangle match two angles of another triangle, the third angles must match too. And when all the angles match, the sides are always in the same ratio.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>AA test (angle–angle):</b> if <b>two angles</b> of one triangle are equal to two angles of another triangle, the triangles are <b>similar</b>.
+    <div class="u6l5-key">To find the third angle of a triangle: &nbsp; third angle <span class="tex">=180^\circ-(\text{first angle}+\text{second angle})</span></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The equal angles do not have to be in the same place on the page. A triangle can be <b>turned</b> or <b>flipped over</b> and still be similar. Match the angles by their <b>size</b>, not by where they are.</div></div>
+  <div class="explainer" data-explainer="aa"></div>
+</section>
+
+<section class="card" data-extra data-ink="s1x" data-section="1. Why Two Angles Are Enough">
+  <h3 class="sub">Why two angles are enough</h3>
+  <p>Fix two angles on a base. Now make the base longer or shorter. The third angle never changes, and every side grows by the same amount: the triangle keeps its shape.</p>
+  <div class="explainer" data-explainer="twoangles"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> One triangle has angles of <span class="tex">30^\circ</span> and <span class="tex">60^\circ</span>. Another has angles of <span class="tex">60^\circ</span> and <span class="tex">90^\circ</span>. Are they similar?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> The first one's third angle is <span class="tex">180^\circ-(30^\circ+60^\circ)=90^\circ</span>. The second one's is <span class="tex">180^\circ-(60^\circ+90^\circ)=30^\circ</span>. Both are <span class="tex">30^\circ,\ 60^\circ,\ 90^\circ</span>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Find the missing angles. Similar or not?</h3></div>
+  <p class="u6l5-q">Find the missing angles in each triangle. Then decide: are the two triangles similar? (In part (c), both triangles are <b>isosceles</b>: two equal sides, so the two angles at the base are equal.)</p>
+  <div class="u6l5-rows">
+    <div class="part u6l5-row"><div class="pl">(a)</div><div class="u6l5-fig" data-fig="e1a"></div><div class="u6l5-rw"><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Left: <span class="tex">180^\circ-(47^\circ+68^\circ)=65^\circ</span><br>Right: <span class="tex">180^\circ-(65^\circ+68^\circ)=47^\circ</span><br>Both have <span class="tex">47^\circ,\ 68^\circ,\ 65^\circ</span>, so <b>yes</b>, they are similar.</div></div></div></div>
+    <div class="part u6l5-row"><div class="pl">(b)</div><div class="u6l5-fig" data-fig="e1b"></div><div class="u6l5-rw"><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Left: <span class="tex">180^\circ-(90^\circ+34^\circ)=56^\circ</span><br>Right: <span class="tex">180^\circ-(90^\circ+58^\circ)=32^\circ</span><br><span class="tex">90^\circ,\ 34^\circ,\ 56^\circ</span> and <span class="tex">90^\circ,\ 58^\circ,\ 32^\circ</span> do not match, so <b>no</b>.</div></div></div></div>
+    <div class="part u6l5-row"><div class="pl">(c)</div><div class="u6l5-fig" data-fig="e1c"></div><div class="u6l5-rw"><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Left: base angles <span class="tex">(180^\circ-36^\circ)\div2=72^\circ</span> each.<br>Right: the other base angle is <span class="tex">36^\circ</span>, top <span class="tex">=180^\circ-72^\circ=108^\circ</span>.<br><span class="tex">36^\circ,\ 72^\circ,\ 72^\circ</span> and <span class="tex">36^\circ,\ 36^\circ,\ 108^\circ</span>: <b>no</b>.</div></div></div></div>
+  </div>
+  <p class="u6l5-note">Part (c) shows that two isosceles triangles are <b>not always</b> similar, even when both have a <span class="tex">36^\circ</span> angle.</p>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+
+<section class="card example" data-extra data-ink="ex1x" data-section="More Examples: Similar or Not?">
+  <div class="ex-head"><span class="ex-tag">More examples</span><h3>Similar or Not?</h3></div>
+  <p class="u6l5-q">Find the third angle of each triangle. Are the triangles similar?</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) <span class="tex">40^\circ</span> and <span class="tex">75^\circ</span>; &nbsp; <span class="tex">65^\circ</span> and <span class="tex">75^\circ</span></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Third angles <span class="tex">65^\circ</span> and <span class="tex">40^\circ</span>. Both are <span class="tex">40^\circ,\ 65^\circ,\ 75^\circ</span>: <b>yes</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">90^\circ</span> and <span class="tex">25^\circ</span>; &nbsp; <span class="tex">90^\circ</span> and <span class="tex">75^\circ</span></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Third angles <span class="tex">65^\circ</span> and <span class="tex">15^\circ</span>. <span class="tex">90^\circ,\ 25^\circ,\ 65^\circ</span> and <span class="tex">90^\circ,\ 75^\circ,\ 15^\circ</span>: <b>no</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">120^\circ</span> and <span class="tex">30^\circ</span>; &nbsp; <span class="tex">30^\circ</span> and <span class="tex">30^\circ</span></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Third angles <span class="tex">30^\circ</span> and <span class="tex">120^\circ</span>. Both are <span class="tex">30^\circ,\ 30^\circ,\ 120^\circ</span>: <b>yes</b>.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= 2. Naming in order ================= -->
+<section class="card" data-ink="s2" data-section="2. Naming Similar Triangles in Order">
+  <div class="sec-h"><span class="badge">2</span><h2>Naming Similar Triangles in Order</h2></div>
+  <p>We write <span class="tex">\triangle ABC\sim\triangle DEF</span> and say “triangle <span class="tex">ABC</span> is similar to triangle <span class="tex">DEF</span>.” The <b>order of the letters</b> tells you which parts match: the 1st letters match, the 2nd letters match and the 3rd letters match.</p>
+  <div class="u6l5-two">
+    <div class="u6l5-fig" data-fig="names"></div>
+    <div class="def"><b>Key idea</b> &nbsp; If <span class="tex">\triangle ABC\sim\triangle DEF</span>, then
+      <div class="u6l5-key"><b>equal angles:</b> &nbsp; <span class="tex">\angle A=\angle D,\quad \angle B=\angle E,\quad \angle C=\angle F</span></div>
+      <div class="u6l5-key"><b>equal ratios:</b> &nbsp; <span class="tex">\dfrac{DE}{AB}=\dfrac{EF}{BC}=\dfrac{DF}{AC}=k</span>, the <b>scale factor</b></div></div>
+  </div>
+  <p>Matching angles are often marked with the <b>same number of arcs</b>. A side and the angle <b>opposite</b> it (across the triangle) go together: if <span class="tex">\angle A</span> matches <span class="tex">\angle D</span>, then the side across from <span class="tex">A</span> (that is <span class="tex">BC</span>) matches the side across from <span class="tex">D</span> (that is <span class="tex">EF</span>).</p>
+  <div class="explainer" data-explainer="match"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> If <span class="tex">\triangle ABC\sim\triangle DEF</span>, is it also true that <span class="tex">\triangle BAC\sim\triangle EDF</span>?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> Both names were changed the same way (1st and 2nd letters swapped), so <span class="tex">B</span> still goes with <span class="tex">E</span>, <span class="tex">A</span> with <span class="tex">D</span> and <span class="tex">C</span> with <span class="tex">F</span>. What matters is that matching letters are in the <b>same place</b> in both names.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Match the letters</h3></div>
+  <p class="u6l5-q">The two triangles are similar. Matching angles have the same number of arcs.</p>
+  <div class="u6l5-ex2">
+    <div class="u6l5-fig" data-fig="e2"></div>
+    <div class="part">
+      <div class="u6l5-fl">(a) Complete: &nbsp; <span class="tex">\triangle ABC\sim\triangle</span> <span class="u6l5-blank w2" data-reveal="&nbsp;"><span class="tex">RPQ</span></span></div>
+      <div class="u6l5-fl">(b) <span class="tex">\angle A=\angle</span> <span class="u6l5-blank" data-reveal="&nbsp;"><span class="tex">R</span></span> &nbsp;&nbsp; <span class="tex">\angle B=\angle</span> <span class="u6l5-blank" data-reveal="&nbsp;"><span class="tex">P</span></span> &nbsp;&nbsp; <span class="tex">\angle C=\angle</span> <span class="u6l5-blank" data-reveal="&nbsp;"><span class="tex">Q</span></span></div>
+      <div class="u6l5-fl">(c) Complete the equal ratios: &nbsp; <span class="tex">\dfrac{RP}{AB}=</span> <span class="u6l5-frac"><span class="u6l5-blank" data-reveal="&nbsp;"><span class="tex">PQ</span></span><span class="u6l5-bar"></span><span class="tex">BC</span></span> <span class="tex">=</span> <span class="u6l5-frac"><span class="u6l5-blank" data-reveal="&nbsp;"><span class="tex">RQ</span></span><span class="u6l5-bar"></span><span class="tex">AC</span></span></div>
+      <div class="u6l5-fl">(d) Side <span class="tex">AB</span> is across from <span class="tex">\angle C</span>. The matching side is across from <span class="tex">\angle</span> <span class="u6l5-blank" data-reveal="&nbsp;"><span class="tex">Q</span></span>, so it is side <span class="u6l5-blank" data-reveal="&nbsp;"><span class="tex">RP</span></span>.</div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One arc: <span class="tex">A</span> and <span class="tex">R</span>. Two arcs: <span class="tex">B</span> and <span class="tex">P</span>. Three arcs: <span class="tex">C</span> and <span class="tex">Q</span>. So <span class="tex">A\to R,\ B\to P,\ C\to Q</span>: <span class="tex">\triangle ABC\sim\triangle RPQ</span>. (The order <span class="tex">RPQ</span> looks strange, but it is the order that matches.)</div></div>
+    </div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Finding a missing side ================= -->
+<section class="card" data-ink="s3" data-section="3. Finding a Missing Side">
+  <div class="sec-h"><span class="badge">3</span><h2>Finding a Missing Side</h2></div>
+  <p>Once you know two triangles are similar, you can find a missing side with the <b>scale factor</b> or with a <b>proportion</b> (Unit 1).</p>
+  <div class="def"><b>Key idea</b>
+    <ul class="u6l5-steps">
+      <li><b>Step 1:</b> Match the vertices (write <span class="tex">\triangle\,\_\_\_\sim\triangle\,\_\_\_</span>).</li>
+      <li><b>Step 2:</b> Find a pair of matching sides where you know <b>both</b> lengths.</li>
+      <li><b>Step 3:</b> Use the scale factor <span class="tex">k=\dfrac{\text{new side}}{\text{matching original side}}</span> (multiply by <span class="tex">k</span> to go to the new triangle, divide to come back), <b>or</b> write a proportion with the missing side on top and solve.</li>
+      <li><b>Step 4:</b> Check: the bigger triangle must have the bigger sides.</li>
+    </ul></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Calculator.</b> Do not round <span class="tex">k</span>. For a side of 9 cm and <span class="tex">k=\frac{10}{6}</span>, key in <span class="keys">9 <kbd>×</kbd> 10 <kbd>÷</kbd> 6 <kbd>ENTER</kbd></span>. It shows <b>15</b>. Round only the final answer.</div>
+    <button class="pill" type="button" data-keys="9 × 10 ÷ 6 =">Show me</button></div>
+  <div class="explainer" data-explainer="missing"></div>
+</section>
+
+<section class="card" data-extra data-ink="s3x" data-section="3. Every Side Times k">
+  <h3 class="sub">Every side times the same <span class="tex">k</span></h3>
+  <p>Grow <span class="tex">\triangle ABC</span> into <span class="tex">\triangle DEF</span> (Example 3). Every side is multiplied by the same scale factor, so every ratio new ÷ original is the same.</p>
+  <div class="explainer" data-explainer="kmach"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> <span class="tex">k=\frac{10}{6}</span> rounds to <span class="tex">1.67</span>. What do you get for <span class="tex">EF</span> if you use <span class="tex">1.67</span>? Why is that not quite right?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">9\times1.67=15.03</span> cm, but the true answer is <span class="tex">15</span> cm. Rounding <span class="tex">k</span> too early adds a small error. Key in <span class="tex">9\times10\div6</span> instead.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Use the scale factor</h3></div>
+  <div class="u6l5-two">
+    <div class="part"><div class="pl"><span class="tex">\triangle ABC\sim\triangle DEF</span>. Find the lengths of <span class="tex">EF</span> and <span class="tex">DF</span>.</div><div class="work" style="--h:230px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Matching sides with both lengths known: <span class="tex">AB=6</span> cm and <span class="tex">DE=10</span> cm.<br>Scale factor: <span class="tex">k=\dfrac{DE}{AB}=\dfrac{10}{6}\approx1.67</span> (an enlargement).<br><span class="tex">EF=BC\times k=9\times10\div6=15</span> cm<br><span class="tex">DF=AC\times k=7.5\times10\div6=12.5</span> cm<br>Check: <span class="tex">\triangle DEF</span> is bigger, and 15 and 12.5 are bigger than 9 and 7.5 <span class="tex">\checkmark</span></div></div></div>
+    <div class="u6l5-fig" data-fig="e3"></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>The second triangle is turned</h3></div>
+  <p class="u6l5-q"><span class="tex">\triangle LMN\sim\triangle STU</span>. The second triangle is turned. Find each length to the nearest tenth of a centimetre.</p>
+  <div class="u6l5-fig" data-fig="e4"></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find <span class="tex">x</span> (side <span class="tex">TU</span>).</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">TU</span> matches <span class="tex">MN</span>. <span class="tex">ST</span> matches <span class="tex">LM</span>.<br><span class="tex">\dfrac{x}{4.8}=\dfrac{11.0}{7.2}</span><br><span class="tex">x=4.8\times11.0\div7.2=7.333\ldots\approx7.3</span> cm<br>Check: <span class="tex">\triangle STU</span> is bigger, <span class="tex">7.3&gt;4.8\ \checkmark</span></div></div></div>
+    <div class="part"><div class="pl">(b) Find side <span class="tex">LN</span>.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">LN</span> matches <span class="tex">SU</span>. Put <span class="tex">LN</span> on top:<br><span class="tex">\dfrac{LN}{9.5}=\dfrac{7.2}{11.0}</span><br><span class="tex">LN=9.5\times7.2\div11.0=6.218\ldots\approx6.2</span> cm<br>Check: <span class="tex">\triangle LMN</span> is smaller, <span class="tex">6.2&lt;9.5\ \checkmark</span></div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Estimate first: in (a), <span class="tex">11.0</span> is about <span class="tex">1\tfrac12</span> times <span class="tex">7.2</span>, so <span class="tex">x</span> is about <span class="tex">1\tfrac12\times4.8\approx7</span>. Then <span class="keys">4.8 <kbd>×</kbd> 11 <kbd>÷</kbd> 7.2 <kbd>ENTER</kbd></span> shows <b>7.333…</b> In (b): <span class="keys">9.5 <kbd>×</kbd> 7.2 <kbd>÷</kbd> 11 <kbd>ENTER</kbd></span> shows <b>6.218…</b></div>
+    <div class="u6l5-pcol"><button class="pill" type="button" data-keys="4.8 × 11 ÷ 7.2 =">(a)</button><button class="pill" type="button" data-keys="9.5 × 7.2 ÷ 11 =">(b)</button></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+
+<section class="card example" data-extra data-ink="ex4x" data-section="More Examples: Two Garden Beds">
+  <div class="ex-head"><span class="ex-tag">More examples</span><h3>Two Garden Beds</h3></div>
+  <div class="part"><div class="pl">Two triangular garden beds are similar: <span class="tex">\triangle PQR\sim\triangle XYZ</span>. <span class="tex">PQ=4</span> m, <span class="tex">QR=5</span> m, <span class="tex">PR=6</span> m and <span class="tex">XY=6</span> m. Find <span class="tex">YZ</span> and <span class="tex">XZ</span>.</div><div class="work" style="--h:150px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">XY</span> matches <span class="tex">PQ</span>: <span class="tex">k=6\div4=1.5</span>.<br><span class="tex">YZ=5\times1.5=7.5</span> m, &nbsp; <span class="tex">XZ=6\times1.5=9</span> m. Check: <span class="tex">\triangle XYZ</span> is bigger <span class="tex">\checkmark</span></div></div></div>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Same Triangle on Top">
+  <h3 class="sub">Keep the triangles in the same places</h3>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Keep the triangles in the same places in a proportion: the <b>same triangle on top</b> on both sides. <span class="tex">\frac{x}{4.8}=\frac{11.0}{7.2}</span> is right (big over small on both sides). <span class="tex">\frac{x}{4.8}=\frac{7.2}{11.0}</span> mixes them up and gives 3.1 cm, which is too small for the bigger triangle.</div></div>
+  <div class="explainer" data-explainer="flip"></div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 5 · Questions 1–7</h2>
+  <p class="pr-t">Try these before we look at ramps and parallel lines.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Missing angle: similar or not?</span>
+    <span><b>2</b><span class="tex">\triangle GHJ\sim\triangle KLM</span>: fill in the blanks</span>
+    <span><b>3</b>Match the arcs</span>
+    <span><b>4</b>Scale factor table</span>
+    <span><b>5</b>Find <span class="tex">x</span></span>
+    <span><b>6</b>Mia's missing sides</span>
+    <span><b>7</b>Always, sometimes or never</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u6l5">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Right triangles sharing an acute angle ================= -->
+<section class="card" data-ink="s4" data-section="4. Right Triangles That Share an Acute Angle">
+  <div class="sec-h"><span class="badge">4</span><h2>Right Triangles That Share an Acute Angle</h2></div>
+  <p>Every right triangle has a <span class="tex">90^\circ</span> angle. If two right triangles also have one <b>acute</b> angle (less than <span class="tex">90^\circ</span>) that is the same, then two angles match, so the triangles are similar by the AA test.</p>
+  <p>This happens a lot in real life. A ramp, a roof or a slide makes a long, thin right triangle with the ground. A vertical post under it cuts off a smaller right triangle. The two triangles <b>share</b> the acute angle where the slope meets the ground.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Two right triangles that share an acute angle (or have equal acute angles) are <b>similar</b>: the right angles match, the shared angles match, so by AA the triangles are similar.</div>
+  <div class="explainer" data-explainer="ramp"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A ramp rises 1 m for every 12 m along the ground. How high is it 3 m from the start? 6 m?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Height <span class="tex">=\text{ground}\div12</span>: <span class="tex">3\div12=0.25</span> m and <span class="tex">6\div12=0.5</span> m. Twice as far, twice as high: every post makes a similar triangle.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>A wheelchair ramp</h3></div>
+  <p class="u6l5-q">A wheelchair ramp starts at point <span class="tex">A</span> on level ground and rises steadily to a door. A vertical support post <span class="tex">DE</span> is 2.16 m from <span class="tex">A</span> along the ground, and it is 0.18 m tall. (The diagram is not to scale.)</p>
+  <div class="u6l5-fig" data-fig="e5"></div>
+  <div class="part"><div class="pl">(a) Complete: <span class="tex">\triangle ADE</span> and <span class="tex">\triangle ABC</span> are similar because both have a <span class="u6l5-blank w2" data-reveal="&nbsp;">right</span> angle, and they share <span class="tex">\angle</span> <span class="u6l5-blank" data-reveal="&nbsp;"><span class="tex">A</span></span>.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Both have a <b>right</b> angle (at <span class="tex">D</span> and at <span class="tex">B</span>), and they share <span class="tex">\angle A</span>. Two pairs of equal angles: similar (AA).</div></div></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(b) The door is 0.46 m above the ground. How far from <span class="tex">A</span>, along the ground, must the ramp end (<span class="tex">AB</span>)? Round to the nearest hundredth of a metre.</div><div class="work" style="--h:160px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">AB</span> matches <span class="tex">AD</span>, and <span class="tex">BC</span> matches <span class="tex">DE</span>.<br><span class="tex">\dfrac{AB}{2.16}=\dfrac{0.46}{0.18}</span><br><span class="tex">AB=2.16\times0.46\div0.18=5.52</span> m<br>The ramp must end 5.52 m from <span class="tex">A</span>.</div></div></div>
+    <div class="part"><div class="pl">(c) A second post will stand 4.00 m from <span class="tex">A</span>. How tall must it be, to the nearest hundredth of a metre?</div><div class="work" style="--h:160px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The new post makes a third similar right triangle.<br><span class="tex">\dfrac{h}{0.18}=\dfrac{4.00}{2.16}</span><br><span class="tex">h=0.18\times4.00\div2.16=0.333\ldots</span><br>The post must be about 0.33 m (33 cm) tall.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(b) <span class="keys">2.16 <kbd>×</kbd> 0.46 <kbd>÷</kbd> 0.18 <kbd>ENTER</kbd></span> shows <b>5.52</b>. (c) <span class="keys">0.18 <kbd>×</kbd> 4 <kbd>÷</kbd> 2.16 <kbd>ENTER</kbd></span> shows <b>0.333…</b></div>
+    <div class="u6l5-pcol"><button class="pill" type="button" data-keys="2.16 × 0.46 ÷ 0.18 =">(b)</button><button class="pill" type="button" data-keys="0.18 × 4 ÷ 2.16 =">(c)</button></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex5x" data-section="More Examples: A Shed Roof">
+  <div class="ex-head"><span class="ex-tag">More examples</span><h3>A shed roof</h3></div>
+  <div class="part"><div class="pl">A shed roof rises steadily from the low edge. 1.2 m in from the low edge (measured level), the roof is 0.5 m above the low edge. How high above the low edge is the roof 3.0 m in?</div><div class="work" style="--h:130px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Both right triangles share the angle at the low edge, so they are similar (AA).<br><span class="tex">\dfrac{h}{0.5}=\dfrac{3.0}{1.2}</span> &nbsp; so &nbsp; <span class="tex">h=0.5\times3.0\div1.2=1.25</span> m. Check: 3.0 m is farther in than 1.2 m, so the roof is higher <span class="tex">\checkmark</span></div></div></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u6l5"></section>
+
+<!-- ================= 5. Nested and crossing triangles ================= -->
+<section class="card" data-ink="s5" data-section="5. Nested and Crossing Triangles">
+  <div class="sec-h"><span class="badge">5</span><h2>Nested Triangles and Crossing Triangles</h2></div>
+  <p><b>Nested triangles.</b> Draw a line inside a triangle <b>parallel</b> to one side. It cuts off a small triangle at the top. The small and big triangles share the top angle, and the parallel line makes <b>corresponding angles</b> that are equal (Unit 5). So the two triangles are similar by AA.</p>
+  <p><b>Crossing triangles.</b> Two line segments cross at a point and their ends are joined by two parallel lines. This makes two triangles point to point, like a bow tie. The angles where the lines cross are <b>vertically opposite</b> (equal), and the parallel lines make <b>alternate interior angles</b> (equal). So these triangles are similar by AA too.</p>
+  <div class="u6l5-fig" data-fig="nc"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> In nested triangles, the big triangle's side is the <b>whole</b> side, not just the bottom piece. If <span class="tex">AD=5</span> and <span class="tex">DB=3</span>, the big side <span class="tex">AB=5+3=8</span>. It helps to draw the two triangles <b>apart</b> and label each one.</div></div>
+  <div class="explainer" data-explainer="pullapart"></div>
+</section>
+
+<section class="card" data-extra data-ink="s5x" data-section="5. Why the Angles Are Equal">
+  <h3 class="sub">Why the angles are equal: F, Z and X</h3>
+  <p>The parallel-line angle pairs from Unit 5 give the equal angles. Look for the letter shapes.</p>
+  <div class="explainer" data-explainer="why"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Nested triangles</h3></div>
+  <p class="u6l5-q">In <span class="tex">\triangle ABC</span>, <span class="tex">DE\parallel BC</span>. &nbsp; <span class="tex">AD=5</span> cm, <span class="tex">DB=3</span> cm, <span class="tex">DE=6</span> cm and <span class="tex">AE=4.5</span> cm.</p>
+  <div class="u6l5-ex6">
+    <div class="u6l5-fig" data-fig="e6"></div>
+    <div>
+      <div class="part"><div class="pl">(a) Explain why <span class="tex">\triangle ADE\sim\triangle ABC</span>.</div><div class="work" style="--h:80px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Both triangles have <span class="tex">\angle A</span> (shared). <span class="tex">\angle ADE=\angle ABC</span> because they are corresponding angles (<span class="tex">DE\parallel BC</span>, with <span class="tex">AB</span> as the transversal). Two pairs of equal angles, so they are similar (AA).</div></div></div>
+      <div class="part"><div class="pl">(b) Label the two triangles, drawn apart. Put the side lengths you know on them.</div><div class="u6l5-fig" data-fig="e6b"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Small <span class="tex">\triangle ADE</span>: 5, 6, 4.5. Big <span class="tex">\triangle ABC</span>: <span class="tex">AB=5+3=8</span>, <span class="tex">BC</span> and <span class="tex">AC</span> unknown.</div></div></div>
+    </div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(c) Find the length of <span class="tex">BC</span>.</div><div class="work" style="--h:140px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">AB=5+3=8</span> cm. <span class="tex">AB</span> matches <span class="tex">AD</span>.<br><span class="tex">k=\dfrac{AB}{AD}=\dfrac{8}{5}=1.6</span><br><span class="tex">BC=DE\times k=6\times1.6=9.6</span> cm</div></div></div>
+    <div class="part"><div class="pl">(d) Find the length of <span class="tex">EC</span>.</div><div class="work" style="--h:140px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">First find the whole side <span class="tex">AC</span>: <span class="tex">AC=AE\times k=4.5\times1.6=7.2</span> cm.<br>Then <span class="tex">EC=AC-AE=7.2-4.5=2.7</span> cm.</div></div></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> In Example 6, compare <span class="tex">DB\div AD</span> with <span class="tex">EC\div AE</span>. What do you notice?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3\div5=0.6</span> and <span class="tex">2.7\div4.5=0.6</span>. They are equal! A line parallel to one side cuts the other two sides in the <b>same ratio</b>.</div></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+
+<section class="card example" data-extra data-ink="ex6x" data-section="More Examples: Going the Other Way">
+  <div class="ex-head"><span class="ex-tag">More examples</span><h3>Going the Other Way</h3></div>
+  <div class="part"><div class="pl">In <span class="tex">\triangle ABC</span>, <span class="tex">DE\parallel BC</span> (<span class="tex">D</span> on <span class="tex">AB</span>, <span class="tex">E</span> on <span class="tex">AC</span>). <span class="tex">AD=4</span> cm, the whole side <span class="tex">AB=10</span> cm and <span class="tex">BC=15</span> cm. Find <span class="tex">DE</span>.</div><div class="work" style="--h:150px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\triangle ADE\sim\triangle ABC</span>. Put <span class="tex">DE</span> on top: <span class="tex">\dfrac{DE}{15}=\dfrac{4}{10}</span>, so <span class="tex">DE=15\times4\div10=6</span> cm. Check: the small triangle has the smaller side, <span class="tex">6&lt;15\ \checkmark</span></div></div></div>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. Turn the Bow Tie">
+  <h3 class="sub">Crossing triangles: turn the bow tie</h3>
+  <p>Give the small triangle of a bow tie a half turn about the crossing point. It lands <b>inside</b> the big triangle, nested, with its side parallel. That is why crossing triangles are similar.</p>
+  <div class="explainer" data-explainer="bowtie"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> In a bow tie, why do we write <span class="tex">\triangle ABC\sim\triangle DEC</span> and not <span class="tex">\triangle ABC\sim\triangle EDC</span>?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The equal Z angles are at <span class="tex">A</span> and <span class="tex">D</span>, so <span class="tex">A</span> goes with <span class="tex">D</span> (and <span class="tex">B</span> with <span class="tex">E</span>). After the half turn, <span class="tex">D</span> lands on the line through <span class="tex">A</span>, not on the line through <span class="tex">B</span>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>How wide is the pond?</h3></div>
+  <div class="u6l5-two">
+    <div>
+      <p class="u6l5-q">Nadia wants to know the width <span class="tex">AB</span> of a pond on her farm. She puts a stake at <span class="tex">C</span>, so that she can walk in a straight line from <span class="tex">A</span> through <span class="tex">C</span> to <span class="tex">D</span>, and from <span class="tex">B</span> through <span class="tex">C</span> to <span class="tex">E</span>. She places <span class="tex">D</span> and <span class="tex">E</span> so that <span class="tex">DE</span> is parallel to <span class="tex">AB</span>. Then she measures: <span class="tex">AC=38</span> m, <span class="tex">CD=12</span> m and <span class="tex">DE=15.5</span> m.</p>
+      <div class="part"><div class="pl">(a) Give the reasons why <span class="tex">\triangle ABC\sim\triangle DEC</span>.</div><div class="work" style="--h:100px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle ACB=\angle DCE</span> (vertically opposite angles).<br><span class="tex">\angle CAB=\angle CDE</span> (alternate interior angles, because <span class="tex">AB\parallel DE</span>).<br>Two pairs of equal angles, so the triangles are similar (AA).</div></div></div>
+    </div>
+    <div class="u6l5-fig" data-fig="e7"></div>
+  </div>
+  <div class="part"><div class="pl">(b) Find the width of the pond, <span class="tex">AB</span>, to the nearest tenth of a metre.</div><div class="work" style="--h:140px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Match in order: <span class="tex">A\to D,\ B\to E,\ C\to C</span>. So <span class="tex">AB</span> matches <span class="tex">DE</span>, and <span class="tex">AC</span> matches <span class="tex">DC</span>.<br><span class="tex">\dfrac{AB}{15.5}=\dfrac{38}{12}\ \Rightarrow\ AB=15.5\times38\div12=49.083\ldots</span><br>The pond is about 49.1 m wide. Check: <span class="tex">AC</span> is about 3 times <span class="tex">CD</span>, and 49.1 is about 3 times 15.5 <span class="tex">\checkmark</span></div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">15.5 <kbd>×</kbd> 38 <kbd>÷</kbd> 12 <kbd>ENTER</kbd></span> shows <b>49.083…</b>, so about 49.1 m.</div>
+    <button class="pill" type="button" data-keys="15.5 × 38 ÷ 12 =">Show me</button></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+
+<section class="card example" data-extra data-ink="ex7x" data-section="More Examples: Across a River">
+  <div class="ex-head"><span class="ex-tag">More examples</span><h3>Across a River</h3></div>
+  <div class="part"><div class="pl">To measure across a river from <span class="tex">A</span> to <span class="tex">B</span>, a surveyor sets up a bow tie: <span class="tex">A</span>, <span class="tex">C</span>, <span class="tex">D</span> in a line, <span class="tex">B</span>, <span class="tex">C</span>, <span class="tex">E</span> in a line and <span class="tex">DE\parallel AB</span>. <span class="tex">AC=50</span> m, <span class="tex">CD=10</span> m and <span class="tex">DE=8</span> m. How wide is the river?</div><div class="work" style="--h:150px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\triangle ABC\sim\triangle DEC</span>: <span class="tex">\dfrac{AB}{8}=\dfrac{50}{10}</span>, so <span class="tex">AB=8\times50\div10=40</span> m. Check: <span class="tex">AC</span> is 5 times <span class="tex">CD</span>, and <span class="tex">40</span> is 5 times <span class="tex">8\ \checkmark</span></div></div></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>AA test:</b> two pairs of equal angles <span class="tex">\Rightarrow</span> similar triangles. Third angle <span class="tex">=180^\circ-(\text{the other two})</span>. Match angles by <b>size</b>, not by where they sit.</div>
+    <div><b>Name in order:</b> <span class="tex">\triangle ABC\sim\triangle DEF</span> means <span class="tex">A\to D,\ B\to E,\ C\to F</span>, and <span class="tex">\frac{DE}{AB}=\frac{EF}{BC}=\frac{DF}{AC}=k</span>.</div>
+    <div><b>Missing side:</b> match the vertices, find a pair you know both of, then <span class="tex">\times k</span> or a proportion with the <b>same triangle on top</b>. Check: bigger triangle, bigger sides.</div>
+    <div><b>Look for:</b> right triangles that <b>share an acute angle</b> (ramps), <b>nested</b> triangles (use the whole side!) and <b>crossing</b> bow ties with parallel ends.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u6l5">
+    <div><div class="kicker">Your turn</div><b>Assignment 5 · Questions 8–18</b><div class="muted">A conveyor belt, two ladders, nested triangles, a sandwich-board sign, a sawhorse, Jordan's mistake, and multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l6/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 6 — Indirect Measurement: Shadows and Mirrors</b><div class="muted">How tall is that tree? Similar triangles made by shadows and mirrors measure things that are too tall to reach.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u6l5.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u6l5', homeHref: '../../', title: '6.5 Similar Triangles' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

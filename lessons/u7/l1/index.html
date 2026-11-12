@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Squares, Square Roots and Triangle Basics · Math 10-3 7.1</title>
+<meta name="description" content="Math 10-3 Unit 7 Lesson 1 (refresher): squaring a number and perfect squares built from tiles, square roots with and without the √ key, estimating a square root between two perfect squares on a number line, the angles of a triangle add to 180°, naming triangles by their sides and angles, and the legs and hypotenuse of a right triangle. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u7l1.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u7l1">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Six Sticks, Four Triangles">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Six Sticks, Four Triangles</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">You have <b>6 pencils</b>, all the same length. Every side of a triangle must be one whole pencil. No breaking and no crossing.</p><p class="vw-ask">How can you make 4 triangles with only 6 pencils?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="Six yellow pencils lying in a loose pile, wiggling, with a bobbing question mark">
+    <defs>
+      <g id="u7l1-pencil"><rect x="-70" y="-8" width="122" height="16" rx="2" fill="#f2c14e" stroke="#8a5a1c" stroke-width="2.5"/><line x1="-70" y1="0" x2="52" y2="0" stroke="#d9a431" stroke-width="2"/><rect x="-84" y="-8" width="16" height="16" rx="3" fill="#e78fa0" stroke="#8a5a1c" stroke-width="2.5"/><path d="M52 -8 L74 0 L52 8 Z" fill="#f3dfbd" stroke="#8a5a1c" stroke-width="2.5" stroke-linejoin="round"/><path d="M67 -2.6 L74 0 L67 2.6 Z" fill="#3a4254"/></g>
+    </defs>
+    <g transform="translate(118 60) rotate(-18)"><g><animateTransform attributeName="transform" type="rotate" values="0;6;0;-4;0" dur="3.4s" repeatCount="indefinite"/><use href="#u7l1-pencil"/></g></g>
+    <g transform="translate(212 92) rotate(32)"><g><animateTransform attributeName="transform" type="rotate" values="0;-5;0;5;0" dur="3s" begin=".4s" repeatCount="indefinite"/><use href="#u7l1-pencil"/></g></g>
+    <g transform="translate(110 132) rotate(8)"><g><animateTransform attributeName="transform" type="rotate" values="0;4;0;-6;0" dur="3.8s" begin=".8s" repeatCount="indefinite"/><use href="#u7l1-pencil"/></g></g>
+    <g transform="translate(222 168) rotate(-40)"><g><animateTransform attributeName="transform" type="rotate" values="0;-6;0;4;0" dur="3.2s" begin=".2s" repeatCount="indefinite"/><use href="#u7l1-pencil"/></g></g>
+    <g transform="translate(100 204) rotate(-4)"><g><animateTransform attributeName="transform" type="rotate" values="0;5;0;-5;0" dur="3.6s" begin="1s" repeatCount="indefinite"/><use href="#u7l1-pencil"/></g></g>
+    <g transform="translate(240 226) rotate(12)"><g><animateTransform attributeName="transform" type="rotate" values="0;-4;0;6;0" dur="3.1s" begin=".6s" repeatCount="indefinite"/><use href="#u7l1-pencil"/></g></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.5s" repeatCount="indefinite"/><text x="300" y="44" font-size="48" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Try it with real pencils and a partner. Stuck flat on the desk? Think outside the desk.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><div class="u7l1-wans"><div><b>Go up!</b> Make one triangle flat on the desk with 3 pencils. Stand the other 3 up from its corners and lean them in until their tips meet at one point on top. That is a <b>pyramid</b> with 4 triangles: the bottom and 3 sides. Flat on the desk, 6 pencils only make 2 triangles. <b>The twist:</b> every one of the 4 triangles has 3 equal sides. Today you will learn its name: <b>equilateral</b>.</div><div class="u7l1-fig" data-fig="wans"></div></div></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 7 Right Triangles and Trigonometry · Lesson 1</div>
+  <h1>Squares, Square Roots and Triangle Basics</h1>
+  <p class="lede">A tiled floor, a square patio, a ladder against a house, a roof truss: this unit is about <b>right triangles</b> and how to measure them. First we review the tools you will need: <b>squaring</b> a number, finding and <b>estimating square roots</b>, the <b>three angles</b> of a triangle, the <b>names</b> of triangles, and the parts of a <b>right triangle</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li><b>square</b> a number and find the area of a square, like <span class="tex">6^2=6\times6=36</span></li>
+      <li>find a <b>square root</b> with and without a calculator, and check it by squaring</li>
+      <li><b>estimate</b> a square root by finding the two perfect squares it sits between</li>
+      <li>find a <b>missing angle</b> in a triangle: the three angles add up to <span class="tex">180^\circ</span></li>
+      <li><b>name</b> a triangle by its sides and by its angles</li>
+      <li>find the <b>legs</b> and the <b>hypotenuse</b> of a right triangle, and name its sides</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>Refresher</b> Skills from earlier grades that this unit uses (not marked as a unit outcome).</div>
+</section>
+
+<!-- ================= 1. Squares ================= -->
+<section class="card" data-ink="s1" data-section="1. Squares and Perfect Squares">
+  <div class="sec-h"><span class="badge">1</span><h2>Squares and Perfect Squares</h2></div>
+  <p>To <b>square</b> a number, multiply it by itself. We write a small 2 up high: <span class="tex">6^2</span> is read “6 squared” and means <span class="tex">6\times6=36</span>. The small 2 is called an <b>exponent</b>.</p>
+  <p>Why “squared”? A square that is 6 units long on each side is covered by <span class="tex">6\times6=36</span> small squares. So the <b>area of a square</b> is its side length squared.</p>
+  <p>A <b>perfect square</b> is what you get when you square a whole number: <span class="tex">1^2=1,\ 2^2=4,\ 3^2=9,\ 4^2=16,\ \dots</span> So 1, 4, 9 and 16 are perfect squares.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Squaring:</b> <span class="tex">n^2=n\times n</span> &emsp; <span class="tex">6^2=6\times6=36</span> &emsp; <b>Area of a square</b> <span class="tex">=(\text{side})^2</span></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> <span class="tex">6^2</span> means <span class="tex">6\times6=36</span>. It does <b>not</b> mean <span class="tex">6\times2=12</span>. The exponent tells you how many 6s to multiply.</div></div>
+  <div class="explainer u7l1-gap" data-explainer="tiles"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Squares from tiles, and the table of perfect squares</h3></div>
+  <div class="part"><div class="pl">(a) Each small square is 1 square unit. Write the area of each big square as a square number and as a number.</div>
+    <div class="u7l1-sqrow">
+      <div><div class="u7l1-fig" data-fig="sq2"></div><div>Side 2: <span class="tex">2^2=</span> <span class="u7l1-blank" data-reveal="&nbsp;">4</span></div></div>
+      <div><div class="u7l1-fig" data-fig="sq3"></div><div>Side 3: <span class="tex">3^2=</span> <span class="u7l1-blank" data-reveal="&nbsp;">9</span></div></div>
+      <div><div class="u7l1-fig" data-fig="sq4"></div><div>Side 4: <span class="tex">4^2=</span> <span class="u7l1-blank" data-reveal="&nbsp;">16</span></div></div>
+      <div><div class="u7l1-fig" data-fig="sq5"></div><div>Side 5: <span class="tex">5^2=</span> <span class="u7l1-blank" data-reveal="&nbsp;">25</span></div></div>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Count the small squares, or multiply the side by itself: <span class="tex">2\times2=4,\ 3\times3=9,\ 4\times4=16,\ 5\times5=25</span>.</div></div></div>
+  <div class="part u7l1-gap"><div class="pl">(b) Complete the table of perfect squares. Keep it: you will use it all unit.</div>
+    <table class="u7l1-tbl u7l1-t15">
+      <tr><th>Number <span class="tex">n</span></th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+      <tr><th>Square <span class="tex">n^2</span></th><td>1</td><td>4</td><td><span data-reveal="&nbsp;">9</span></td><td><span data-reveal="&nbsp;">16</span></td><td><span data-reveal="&nbsp;">25</span></td><td><span data-reveal="&nbsp;">36</span></td><td><span data-reveal="&nbsp;">49</span></td><td><span data-reveal="&nbsp;">64</span></td><td><span data-reveal="&nbsp;">81</span></td><td><span data-reveal="&nbsp;">100</span></td><td><span data-reveal="&nbsp;">121</span></td><td><span data-reveal="&nbsp;">144</span></td><td><span data-reveal="&nbsp;">169</span></td><td><span data-reveal="&nbsp;">196</span></td><td><span data-reveal="&nbsp;">225</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225. For example, <span class="tex">11^2=11\times11=121</span> and <span class="tex">14^2=14\times14=196</span>.</div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Find each square</h3></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Calculator.</b> To square a number, type the number, press <span class="keys"><kbd>x²</kbd></span>, then <span class="keys"><kbd>ENTER</kbd></span>. For <span class="tex">2.4^2</span>: <span class="keys">2.4 <kbd>x²</kbd> <kbd>ENTER</kbd></span> shows 5.76.</div>
+    <button class="pill" type="button" data-keys="2.4 x² =">Show me</button></div>
+  <div class="pl u7l1-gap">Find each square. Use your calculator for (d) to (f).</div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) <span class="tex">9^2</span></div><div class="work" style="--h:56px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">9\times9=81</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">12^2</span></div><div class="work" style="--h:56px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">12\times12=144</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">20^2</span></div><div class="work" style="--h:56px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">20\times20=400</span></div></div></div>
+    <div class="part"><div class="pl">(d) <span class="tex">1.5^2</span></div><div class="work" style="--h:56px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1.5\times1.5=2.25</span></div></div></div>
+    <div class="part"><div class="pl">(e) <span class="tex">0.3^2</span></div><div class="work" style="--h:56px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.3\times0.3=0.09</span> (smaller than 0.3!)</div></div></div>
+    <div class="part"><div class="pl">(f) <span class="tex">2.4^2</span></div><div class="work" style="--h:56px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2.4\times2.4=5.76</span></div></div></div>
+  </div>
+  <div class="part u7l1-gap"><div class="pl">(g) Jaspreet is laying a square patio that is 3.5 m long on each side. What is the area of the patio?</div><div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Area <span class="tex">=(\text{side})^2=3.5^2=3.5\times3.5=12.25</span>. The patio has an area of <b>12.25 m²</b>.</div></div></div>
+  <div class="tip u7l1-gap"><div class="tip-ic">i</div><div><b>Did you know?</b> When you square a number less than 1, the answer gets <b>smaller</b>: <span class="tex">0.3^2=0.09</span>. You are taking 0.3 of something that is already small.</div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s1x" data-section="1. Squares of Decimals">
+  <h3 class="sub">Why does <span class="tex">0.3^2</span> come out smaller?</h3>
+  <p>Draw the square. A square 1 unit on each side has an area of 1.</p>
+  <div class="explainer" data-explainer="small"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Which is bigger, <span class="tex">0.9^2</span> or <span class="tex">0.9</span>? What about <span class="tex">1.1^2</span> or <span class="tex">1.1</span>?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.9^2=0.81</span>, smaller than 0.9 (it is less than 1). <span class="tex">1.1^2=1.21</span>, bigger than 1.1 (it is more than 1). And <span class="tex">1^2=1</span> stays the same.</div></div></div>
+</section>
+
+<!-- ================= 2. Square roots ================= -->
+<section class="card" data-ink="s2" data-section="2. Square Roots">
+  <div class="sec-h"><span class="badge">2</span><h2>Square Roots</h2></div>
+  <p>Finding a <b>square root</b> is the opposite of squaring. It “undoes” the square. The square root of 49 is 7, because <span class="tex">7^2=49</span>. We write <span class="tex">\sqrt{49}=7</span>. The sign <span class="tex">\sqrt{\ }</span> is the <b>square root sign</b>.</p>
+  <p>If you know the <b>area</b> of a square, its <b>side length</b> is the square root of the area.</p>
+  <div class="u7l1-two">
+    <div class="u7l1-fig" data-fig="a49"></div>
+    <div class="u7l1-flow">
+      <div><b>square:</b> &nbsp; side 7 <span class="u7l1-arr">→</span> area <span class="tex">7^2=49</span></div>
+      <div><b>square root:</b> &nbsp; area 49 <span class="u7l1-arr">→</span> side <span class="tex">\sqrt{49}=7</span></div>
+    </div>
+  </div>
+  <div class="def"><b>Key idea</b> &nbsp; <span class="tex">\sqrt{49}=7</span> because <span class="tex">7^2=49</span>. &emsp; <b>Side of a square</b> <span class="tex">=\sqrt{\text{area}}</span><br>
+    A <b>perfect square</b> has a whole-number square root (<span class="tex">\sqrt{81}=9</span>). Any other whole number has a square root that is a decimal that never ends (<span class="tex">\sqrt{40}=6.324\,555\dots</span>). Round it as the question asks, often to the nearest tenth.</div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Calculator.</b> The <span class="tex">\sqrt{\ }</span> key is above <span class="keys"><kbd>x²</kbd></span>. Press <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd></span>. The screen shows <b>√(</b>. Type the number, then <span class="keys"><kbd>)</kbd></span> and <span class="keys"><kbd>ENTER</kbd></span>. For <span class="tex">\sqrt{40}</span>: <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd> 40 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 6.32455532.</div>
+    <button class="pill" type="button" data-keys="√ 40 ) =">Show me</button></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A square root is <b>not</b> half the number: <span class="tex">\sqrt{64}</span> is 8, not 32. Check any square root by squaring it: <span class="tex">8^2=64</span> ✓, but <span class="tex">32^2=1\,024</span>.</div></div>
+  <div class="explainer u7l1-gap" data-explainer="undo"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Find each square root</h3></div>
+  <div class="part"><div class="pl">(a) Find each square root without a calculator. Use the table of perfect squares.</div>
+    <div class="u7l1-row4 u7l1-big">
+      <div><span class="tex">\sqrt{36}=</span> <span class="u7l1-blank" data-reveal="&nbsp;">6</span></div>
+      <div><span class="tex">\sqrt{100}=</span> <span class="u7l1-blank" data-reveal="&nbsp;">10</span></div>
+      <div><span class="tex">\sqrt{169}=</span> <span class="u7l1-blank" data-reveal="&nbsp;">13</span></div>
+      <div><span class="tex">\sqrt{1}=</span> <span class="u7l1-blank" data-reveal="&nbsp;">1</span></div>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6^2=36,\ 10^2=100,\ 13^2=169,\ 1^2=1</span></div></div></div>
+  <div class="pl u7l1-gap">(b) Use your calculator. Round to the nearest tenth. Then check by squaring your answer.</div>
+  <div class="parts c4">
+    <div class="part"><div class="pl"><span class="tex">\sqrt{40}</span></div><div class="work" style="--h:76px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6.324\ldots\approx6.3</span><br>Check: <span class="tex">6.3^2=39.69</span>, close to 40 ✓</div></div></div>
+    <div class="part"><div class="pl"><span class="tex">\sqrt{12}</span></div><div class="work" style="--h:76px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3.464\ldots\approx3.5</span><br>Check: <span class="tex">3.5^2=12.25</span>, close to 12 ✓</div></div></div>
+    <div class="part"><div class="pl"><span class="tex">\sqrt{150}</span></div><div class="work" style="--h:76px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">12.247\ldots\approx12.2</span><br>Check: <span class="tex">12.2^2=148.84</span>, close to 150 ✓</div></div></div>
+    <div class="part"><div class="pl"><span class="tex">\sqrt{6.5}</span></div><div class="work" style="--h:76px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2.549\ldots\approx2.5</span><br>Check: <span class="tex">2.5^2=6.25</span>, close to 6.5 ✓</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>The garden and the rug</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A square vegetable garden has an area of 50 m². How long is each side, to the nearest tenth of a metre? How much fencing goes all the way around it?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Side <span class="tex">=\sqrt{50}=7.071\ldots\approx7.1</span> m<br>Fencing: 4 equal sides. Keep the full value: <span class="tex">4\times7.071\ldots=28.28\ldots\approx28.3</span> m<br>Each side is about <b>7.1 m</b>, and about <b>28.3 m</b> of fencing goes around it.</div></div></div>
+    <div class="part"><div class="pl">(b) A square rug covers an area of 5.76 m². How long is each side of the rug?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Side <span class="tex">=\sqrt{5.76}=2.4</span> m exactly.<br>Check: <span class="tex">2.4^2=5.76</span> ✓<br>Each side of the rug is <b>2.4 m</b> long.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Keep the full value: do the fencing in one go. <span class="keys">4 <kbd>×</kbd> <kbd>2nd</kbd><kbd>x²</kbd> 50 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 28.28427125.</div>
+    <button class="pill" type="button" data-keys="4 × √ 50 ) =">Show me</button></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Estimating ================= -->
+<section class="card" data-ink="s3" data-section="3. Estimating a Square Root">
+  <div class="sec-h"><span class="badge">3</span><h2>Estimating a Square Root</h2></div>
+  <p>Before you use a calculator, <b>estimate</b>. Then you can tell if the calculator answer makes sense. The trick: find the two perfect squares that the number sits between.</p>
+  <div class="u7l1-fig" data-fig="nl"></div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>To estimate</b> <span class="tex">\sqrt{50}</span>:
+    <ol class="u7l1-steps">
+      <li><b>Step 1.</b> Find the perfect squares just below and just above the number: <span class="tex">49&lt;50&lt;64</span>.</li>
+      <li><b>Step 2.</b> Take their square roots: <span class="tex">\sqrt{49}=7</span> and <span class="tex">\sqrt{64}=8</span>. So <span class="tex">\sqrt{50}</span> is <b>between 7 and 8</b>.</li>
+      <li><b>Step 3.</b> Which perfect square is the number closer to? 50 is much closer to 49, so <span class="tex">\sqrt{50}</span> is <b>a little more than 7</b>.</li>
+    </ol></div>
+  <div class="explainer u7l1-gap" data-explainer="zoom"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Estimate, then check</h3></div>
+  <div class="part"><div class="pl">Estimate each square root. Then use your calculator to check (round to the nearest tenth).</div>
+    <table class="u7l1-tbl u7l1-est">
+      <tr><th>Number</th><th>Between which perfect squares?</th><th>So the root is between</th><th>Closer to</th><th>Calculator</th></tr>
+      <tr><td><span class="tex">\sqrt{27}</span></td><td><span data-reveal="&nbsp;">25 and 36</span></td><td><span data-reveal="&nbsp;">5 and 6</span></td><td><span data-reveal="&nbsp;">5</span></td><td><span data-reveal="&nbsp;">5.2</span></td></tr>
+      <tr><td><span class="tex">\sqrt{62}</span></td><td><span data-reveal="&nbsp;">49 and 64</span></td><td><span data-reveal="&nbsp;">7 and 8</span></td><td><span data-reveal="&nbsp;">8</span></td><td><span data-reveal="&nbsp;">7.9</span></td></tr>
+      <tr><td><span class="tex">\sqrt{105}</span></td><td><span data-reveal="&nbsp;">100 and 121</span></td><td><span data-reveal="&nbsp;">10 and 11</span></td><td><span data-reveal="&nbsp;">10</span></td><td><span data-reveal="&nbsp;">10.2</span></td></tr>
+      <tr><td><span class="tex">\sqrt{8}</span></td><td><span data-reveal="&nbsp;">4 and 9</span></td><td><span data-reveal="&nbsp;">2 and 3</span></td><td><span data-reveal="&nbsp;">3</span></td><td><span data-reveal="&nbsp;">2.8</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">For example, 62 is 2 less than 64 but 13 more than 49, so <span class="tex">\sqrt{62}</span> is just under 8. The calculator gives <span class="tex">7.874\ldots\approx7.9</span> ✓. 8 is 1 less than 9 but 4 more than 4, so <span class="tex">\sqrt{8}</span> is closer to 3: <span class="tex">2.828\ldots\approx2.8</span> ✓</div></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Is It Reasonable?">
+  <h3 class="sub">Is it reasonable? Square it and see</h3>
+  <p>A quick estimate or a check by squaring catches a wrong key press.</p>
+  <div class="explainer" data-explainer="verdict"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Does the answer make sense?</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Ty pressed some keys and wrote <span class="tex">\sqrt{90}=45</span>. Is his answer reasonable? Explain, and find the right answer.</div><div class="work" style="--h:140px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> <span class="tex">45^2=2\,025</span>, not 90. Ty divided by 2.<br><span class="tex">81&lt;90&lt;100</span>, so <span class="tex">\sqrt{90}</span> is between 9 and 10.<br><span class="tex">\sqrt{90}=9.486\ldots\approx9.5</span></div></div></div>
+    <div class="part"><div class="pl">(b) A square window has an area of 1.2 m². Kara says each side is about 1.1 m. Is that reasonable?</div><div class="work" style="--h:140px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1^2=1</span> and <span class="tex">1.1^2=1.21</span>. 1.2 is very close to 1.21, so <b>1.1 m is reasonable</b>.<br>(Calculator: <span class="tex">\sqrt{1.2}=1.095\ldots\approx1.1</span> m ✓)</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exs" data-section="Extra Example: Squares and Roots at Work">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>Squares and roots at work</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A square tile is 0.6 m on each side. What area does one tile cover?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.6^2=0.36</span> m². (Less than 0.6: the side is less than 1.)</div></div></div>
+    <div class="part"><div class="pl">(b) A square sandbox needs 20 m² of space. Estimate each side, then find it to the nearest tenth.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">16&lt;20&lt;25</span>, so between 4 and 5 m (closer to 4).<br><span class="tex">\sqrt{20}=4.472\ldots\approx4.5</span> m</div></div></div>
+    <div class="part"><div class="pl">(c) Lee says <span class="tex">\sqrt{200}\approx100</span>. Show that this is not reasonable.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">100^2=10\,000</span>, not 200. <span class="tex">196&lt;200&lt;225</span>, so <span class="tex">\sqrt{200}</span> is just over 14: <span class="tex">14.142\ldots\approx14.1</span></div></div></div>
+  </div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 1 · Questions 1–8</h2>
+  <p class="pr-t">Get your calculator and your table of perfect squares. Try these before we look at triangles.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Find each square</span>
+    <span><b>2</b>Perfect squares?</span>
+    <span><b>3</b>Area of a square</span>
+    <span><b>4</b>Roots, no calculator</span>
+    <span><b>5</b>Roots with the √ key</span>
+    <span><b>6</b>Estimate, then check</span>
+    <span><b>7</b>The square lawn</span>
+    <span><b>8</b>Find the mistake</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u7l1">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Triangles ================= -->
+<section class="card" data-ink="s4" data-section="4. The Angles in a Triangle">
+  <div class="sec-h"><span class="badge">4</span><h2>Triangles: The Angle Sum, and Naming Triangles</h2></div>
+  <p>A <b>triangle</b> has 3 sides, 3 corners and 3 angles. Each corner is a <b>vertex</b> (plural: vertices) and is named with a capital letter. The triangle with vertices <span class="tex">A</span>, <span class="tex">B</span> and <span class="tex">C</span> is written <span class="tex">\triangle ABC</span>.</p>
+  <p>If you tear the three corners off any paper triangle and put them side by side, they always make a straight line. A straight line is <span class="tex">180^\circ</span> (Unit 5).</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>The angles in a triangle add up to <span class="tex">180^\circ</span>:</b> &nbsp; <span class="tex">\angle A+\angle B+\angle C=180^\circ</span><br>
+    <b>Missing angle</b> <span class="tex">=180^\circ-</span> (the two angles you know).<br>
+    In a <b>right triangle</b>, the right angle uses <span class="tex">90^\circ</span>, so the other two angles add up to <span class="tex">90^\circ</span> (they are <b>complementary</b>).</div>
+  <div class="explainer u7l1-gap" data-explainer="tear"></div>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. Naming Triangles">
+  <h3 class="sub">Naming triangles</h3>
+  <p>Triangles get names from their <b>sides</b> and from their <b>angles</b>. Small tick marks show sides that are the same length.</p>
+  <div class="def u7l1-names"><b>Key idea</b>
+    <div class="u7l1-ngrid">
+      <div class="u7l1-nh">By sides</div><div class="u7l1-nh">By angles</div>
+      <div><b>Equilateral:</b> all 3 sides equal. All 3 angles are <span class="tex">60^\circ</span>.</div><div><b>Acute:</b> all 3 angles are less than <span class="tex">90^\circ</span>.</div>
+      <div><b>Isosceles:</b> 2 sides equal. The 2 angles across from the equal sides are also equal.</div><div><b>Right:</b> one angle is exactly <span class="tex">90^\circ</span> (marked with a small square).</div>
+      <div><b>Scalene:</b> no sides equal, and no angles equal.</div><div><b>Obtuse:</b> one angle is more than <span class="tex">90^\circ</span>.</div>
+    </div></div>
+  <div class="u7l1-fig" data-fig="types"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Every triangle has at least two acute angles. The <b>biggest</b> angle decides the name: if it is <span class="tex">90^\circ</span> the triangle is right, if it is more than <span class="tex">90^\circ</span> it is obtuse. A triangle can never have two right angles or two obtuse angles (they would already use up <span class="tex">180^\circ</span> or more). A triangle gets one name of each kind, like a <b>right isosceles</b> triangle.</div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Find each missing angle</h3></div>
+  <div class="pl">Find each missing angle. Write the equation first.</div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a)</div><div class="u7l1-fig" data-fig="ex7a"></div><div class="work" style="--h:96px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">x+62^\circ+71^\circ=180^\circ</span><br><span class="tex">x=180^\circ-62^\circ-71^\circ=47^\circ</span><br>Check: <span class="tex">47+62+71=180</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u7l1-fig" data-fig="ex7b"></div><div class="work" style="--h:96px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Right triangle, so the other two angles add to <span class="tex">90^\circ</span>:<br><span class="tex">x=90^\circ-28^\circ=62^\circ</span><br>(Or <span class="tex">180^\circ-90^\circ-28^\circ=62^\circ</span>.)</div></div></div>
+    <div class="part"><div class="pl">(c)</div><div class="u7l1-fig" data-fig="ex7c"></div><div class="work" style="--h:96px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Isosceles: the angles across from the equal sides are equal, so <span class="tex">y=65^\circ</span>.<br><span class="tex">x=180^\circ-65^\circ-65^\circ=50^\circ</span></div></div></div>
+  </div>
+  <div class="part u7l1-gap"><div class="u7l1-ex7d"><div><div class="pl">(d) A roof truss is an isosceles triangle. The angle at the peak is <span class="tex">110^\circ</span>. What are the two equal angles at the bottom?</div><div class="work" style="--h:90px"></div></div><div class="u7l1-fig" data-fig="ex7d"></div></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The two bottom angles are equal and share what is left of <span class="tex">180^\circ</span>: <span class="tex">180^\circ-110^\circ=70^\circ</span>, then <span class="tex">70^\circ\div2=35^\circ</span>. Each bottom angle is <b>35°</b>. Check: <span class="tex">35+35+110=180</span> ✓</div></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u7l1"></section>
+
+<section class="card" data-ink="s4c" data-section="4. Name the Triangle">
+  <h3 class="sub">Name the triangle: count the equal sides, then look at the biggest angle</h3>
+  <div class="explainer" data-explainer="sorter"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Name each triangle</h3></div>
+  <div class="part"><div class="pl">Name each triangle by its sides and by its angles.</div>
+    <table class="u7l1-tbl u7l1-nm">
+      <tr><th></th><th>Side lengths</th><th>Angles</th><th>By sides</th><th>By angles</th></tr>
+      <tr><th>(a)</th><td>5 cm, 5 cm, 5 cm</td><td>60°, 60°, 60°</td><td><span data-reveal="&nbsp;">equilateral</span></td><td><span data-reveal="&nbsp;">acute</span></td></tr>
+      <tr><th>(b)</th><td>6 cm, 6 cm, 8.5 cm</td><td>45°, 45°, 90°</td><td><span data-reveal="&nbsp;">isosceles</span></td><td><span data-reveal="&nbsp;">right</span></td></tr>
+      <tr><th>(c)</th><td>4 cm, 7 cm, 9 cm</td><td>25°, 48°, 107°</td><td><span data-reveal="&nbsp;">scalene</span></td><td><span data-reveal="&nbsp;">obtuse</span></td></tr>
+      <tr><th>(d)</th><td>6 cm, 8 cm, 10 cm</td><td>37°, 53°, 90°</td><td><span data-reveal="&nbsp;">scalene</span></td><td><span data-reveal="&nbsp;">right</span></td></tr>
+      <tr><th>(e)</th><td>7 cm, 7 cm, 4.8 cm</td><td>70°, 70°, 40°</td><td><span data-reveal="&nbsp;">isosceles</span></td><td><span data-reveal="&nbsp;">acute</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">By sides: count the equal sides (3, 2 or none). By angles: look at the biggest angle (<span class="tex">90^\circ</span> is right, more than <span class="tex">90^\circ</span> is obtuse, less is acute).</div></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Why Only One Big Angle?">
+  <h3 class="sub">Why can’t a triangle have two right angles? Why is the hypotenuse the longest side?</h3>
+  <div class="explainer" data-explainer="why"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Can a right triangle also be equilateral? Explain.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> An equilateral triangle has three <span class="tex">60^\circ</span> angles, so none of them is <span class="tex">90^\circ</span>. (A right triangle <i>can</i> be isosceles: <span class="tex">45^\circ</span>, <span class="tex">45^\circ</span>, <span class="tex">90^\circ</span>.)</div></div></div>
+</section>
+
+<!-- ================= 5. Right triangles ================= -->
+<section class="card" data-ink="s5" data-section="5. The Parts of a Right Triangle">
+  <div class="sec-h"><span class="badge">5</span><h2>The Parts of a Right Triangle</h2></div>
+  <p>A <b>right triangle</b> has one right angle (<span class="tex">90^\circ</span>), shown by a small square in the corner. Its sides have special names:</p>
+  <ul class="u7l1-ul">
+    <li>The two sides that make the right angle are the <b>legs</b>.</li>
+    <li>The side across from (<b>opposite</b>) the right angle is the <b>hypotenuse</b> (say “hy-POT-en-use”). It is always the <b>longest</b> side.</li>
+  </ul>
+  <div class="u7l1-two">
+    <div class="u7l1-fig" data-fig="parts"></div>
+    <div class="def"><b>Key idea</b> &nbsp; <b>Naming the sides of <span class="tex">\triangle ABC</span></b>
+      <ol class="u7l1-steps">
+        <li><b>1.</b> With the <b>small letter</b> of the vertex across from it: side <span class="tex">a</span> is across from <span class="tex">\angle A</span>, side <span class="tex">b</span> across from <span class="tex">\angle B</span>, side <span class="tex">c</span> across from <span class="tex">\angle C</span>.</li>
+        <li><b>2.</b> With its <b>two end points</b>: side <span class="tex">a</span> is also side <span class="tex">BC</span>.</li>
+      </ol>
+      <div class="u7l1-note">In this unit the right angle is usually at <span class="tex">C</span>. Then the <b>hypotenuse is <span class="tex">c</span></b> (side <span class="tex">AB</span>), and the <b>legs are <span class="tex">a</span> and <span class="tex">b</span></b>.</div></div>
+  </div>
+  <div class="tip"><div class="tip-ic">i</div><div><b>Tip.</b> To find the hypotenuse, put your finger on the little square and slide straight across the triangle. The side you land on is the hypotenuse. A triangle can be turned any way, so the hypotenuse is not always the slanted side or the bottom side.</div></div>
+  <div class="explainer u7l1-gap" data-explainer="hyp"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Name the sides of a right triangle</h3></div>
+  <div class="part"><div class="u7l1-ex9">
+      <div class="u7l1-fig" data-fig="pqr"></div>
+      <div class="u7l1-ex9t">
+        <div><span class="tex">\triangle PQR</span> has its right angle at <span class="tex">Q</span>.</div>
+        <div>(a) Label each side with a small letter.</div>
+        <div>(b) The hypotenuse is side <span class="u7l1-blank u7l1-bs" data-reveal="&nbsp;"><span class="tex">q</span></span>, also called side <span class="u7l1-blank" data-reveal="&nbsp;"><span class="tex">PR</span></span>.</div>
+        <div>(c) The legs are sides <span class="u7l1-blank u7l1-bs" data-reveal="&nbsp;"><span class="tex">p</span></span> and <span class="u7l1-blank u7l1-bs" data-reveal="&nbsp;"><span class="tex">r</span></span>, also called <span class="u7l1-blank" data-reveal="&nbsp;"><span class="tex">QR</span></span> and <span class="u7l1-blank" data-reveal="&nbsp;"><span class="tex">PQ</span></span>.</div>
+      </div></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Each side gets the small letter of the vertex across from it. The right angle is at <span class="tex">Q</span>, so the hypotenuse is <span class="tex">q</span> (side <span class="tex">PR</span>).</div></div></div>
+  <div class="part u7l1-gap"><div class="pl">(d) Write the length of the hypotenuse of each right triangle. Check that it is the longest side.</div>
+    <div class="u7l1-row3">
+      <div><div class="u7l1-fig" data-fig="h1"></div><div>Hypotenuse: <span class="u7l1-blank" data-reveal="&nbsp;">10 m</span></div></div>
+      <div><div class="u7l1-fig" data-fig="h2"></div><div>Hypotenuse: <span class="u7l1-blank" data-reveal="&nbsp;">7.4 ft</span></div></div>
+      <div><div class="u7l1-fig" data-fig="h3"></div><div>Hypotenuse: <span class="u7l1-blank" data-reveal="&nbsp;">15 cm</span></div></div>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">In each one, the side across from the little square is the hypotenuse, and it is the longest side: <span class="tex">10&gt;8&gt;6</span>; <span class="tex">7.4&gt;5.5&gt;5</span>; <span class="tex">15&gt;13.4&gt;6.7</span>. In the last one the hypotenuse is on the bottom.</div></div></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>The ladder</h3></div>
+  <div class="u7l1-ex10">
+    <div class="parts c1">
+      <div class="part"><div class="pl">A ladder leans against the wall of a house. The ground is level and the wall goes straight up.<br>(a) Where is the right angle? Mark it on the picture.</div><div class="work" style="--h:44px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Where the wall meets the ground: the wall goes straight up from level ground, so that corner is <span class="tex">90^\circ</span>.</div></div></div>
+      <div class="part"><div class="pl">(b) Which part is the hypotenuse? Which parts are the legs?</div><div class="work" style="--h:44px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The <b>ladder</b> is across from the right angle, so it is the hypotenuse. The <b>legs</b> are the wall (from the ground to the top of the ladder) and the ground (from the wall to the foot of the ladder).</div></div></div>
+      <div class="part"><div class="pl">(c) The ladder makes a <span class="tex">75^\circ</span> angle with the ground. What angle does it make with the wall?</div><div class="work" style="--h:44px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Right triangle, so the two other angles add to <span class="tex">90^\circ</span>: <span class="tex">90^\circ-75^\circ=15^\circ</span>. The ladder makes a <b>15°</b> angle with the wall.</div></div></div>
+    </div>
+    <div class="u7l1-fig" data-fig="ladder"></div>
+  </div>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. The Sliding Ladder">
+  <h3 class="sub">The ladder, step by step</h3>
+  <div class="explainer" data-explainer="ladder"></div>
+  <div class="tip u7l1-gap"><div class="tip-ic">i</div><div><b>Coming next.</b> In Lesson 2 you will discover how the three sides of a right triangle are connected. You will need squares and square roots from this lesson, so keep your table of perfect squares handy.</div></div>
+</section>
+
+<section class="card example" data-extra data-ink="exa" data-section="Extra Example: Triangles at Work">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>Triangles at work</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A wheelchair ramp meets the level ground at <span class="tex">5^\circ</span>. A support post stands straight up under the high end. What angle does the ramp make with the post?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The post and the ground make a right angle: <span class="tex">90^\circ-5^\circ=85^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) A yield sign is an equilateral triangle. What is the angle at each corner? Name it by its angles.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">180^\circ\div3=60^\circ</span> each. All are less than <span class="tex">90^\circ</span>: <b>acute</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) A triangle has angles of <span class="tex">35^\circ</span> and <span class="tex">55^\circ</span>. Find the third angle and name the triangle by its angles.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">180^\circ-35^\circ-55^\circ=90^\circ</span>. It is a <b>right</b> triangle (and scalene: no angles are equal).</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Squares:</b> <span class="tex">n^2=n\times n</span>, not <span class="tex">n\times2</span>. Area of a square <span class="tex">=(\text{side})^2</span>. Perfect squares: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, …</div>
+    <div><b>Square roots</b> undo squaring: <span class="tex">\sqrt{49}=7</span> because <span class="tex">7^2=49</span>. Side <span class="tex">=\sqrt{\text{area}}</span>. Key: <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd></span>. Check by squaring.</div>
+    <div><b>Estimate first:</b> <span class="tex">49&lt;50&lt;64</span>, so <span class="tex">\sqrt{50}</span> is between 7 and 8, a little more than 7. A root is <b>not</b> half the number.</div>
+    <div><b>Triangles:</b> angles add to <span class="tex">180^\circ</span>. Names by sides (equilateral, isosceles, scalene) and by the biggest angle (acute, right, obtuse). The <b>hypotenuse</b> is across from the right angle; the <b>legs</b> make it.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u7l1">
+    <div><div class="kicker">Your turn</div><b>Assignment 1 · Questions 9–18</b><div class="muted">Missing angles, naming triangles, always, sometimes or never, the sides of right △DEF, sketches of a guy wire and a speed square, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l2/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 2 — The Pythagorean Theorem: Finding the Hypotenuse</b><div class="muted">Build squares on the three sides of a right triangle and find out how they fit together. Then find any hypotenuse.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u7l1.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u7l1', homeHref: '../../', title: '7.1 Squares, Square Roots and Triangle Basics' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

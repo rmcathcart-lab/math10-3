@@ -1,0 +1,105 @@
+/* Math 10-3 · Unit 6 · Lesson 7 — Unit 6 Review: styles used only on this page (prefix u6l7-).
+ * Colours: matching parts follow geo.js MATCH_COLORS; answers and images red; fits green; small amber. */
+.u6l7 .ex-cap .katex { font-size: 1.04em; }
+.u6l7 .ans .katex, .u6l7 .pl .katex { font-size: 1.06em; }
+.u6l7-pcol { display: flex; gap: 8px; flex: none; }
+.u6l7 .parts > .u6l7-wide { grid-column: 1 / -1; }
+
+/* ---------- warm-up ---------- */
+.u6l7-wpoll .poll-opts { margin-left: 0; grid-template-columns: repeat(4, 1fr); }
+.u6l7-wpoll > .pill, .u6l7-wpoll .poll-ans { margin-left: 0; }
+.u6l7-wpoll .opt { display: flex; align-items: center; gap: 12px; font-size: 22px; padding: 8px 14px; }
+.u6l7-wpoll .opt svg { width: 92px; height: 92px; flex: none; }
+.u6l7-wpoll .poll-ans { font-size: 19px; }
+
+/* ---------- the unit on one page ---------- */
+.u6l7-one { width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.32; margin: 6px 0 12px; background: #fff; }
+.u6l7-one th, .u6l7-one td { border: 2px solid #c9b697; padding: 6px 10px; vertical-align: middle; }
+.u6l7-one th { background: var(--brand-soft); font: 800 17px var(--round); text-align: center; }
+.u6l7-one td:first-child { width: 160px; background: #fbf6ee; }
+.u6l7-one td:first-child b { display: block; font: 800 17px/1.2 var(--round); color: var(--brand); }
+.u6l7-one td:first-child i { display: inline-block; margin-top: 3px; font: 700 13px var(--round); font-style: normal; color: #fff; background: var(--brand2); border-radius: 6px; padding: 0 6px; }
+.u6l7-one td:last-child { width: 250px; }
+.u6l7-rem { line-height: 1.45; }
+
+/* ---------- figures and tables on the example cards ---------- */
+.u6l7-fig { background: #fff; border: 2px solid var(--line); border-radius: 14px; padding: 8px; }
+.u6l7-fig > svg { width: 100%; height: auto; display: block; }
+.u6l7-ft { font: 700 19px var(--round); fill: #1c2230; text-anchor: middle; dominant-baseline: central; }
+.u6l7-ft.sm { font-size: 16px; }
+.u6l7-it { font-style: italic; font-family: "KaTeX_Math", "Times New Roman", serif; font-size: 22px; }
+
+.u6l7-tab { border-collapse: collapse; margin: 10px 0 4px; background: #fff; font-size: 18px; }
+.u6l7-tab th, .u6l7-tab td { border: 2px solid #c9b697; padding: 5px 12px; text-align: center; }
+.u6l7-tab th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u6l7-tab [data-reveal] { color: var(--red); font-weight: 700; }
+
+/* ---------- up next: the unit test ---------- */
+.u6l7-next-h { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin-bottom: 10px; font-size: 22px; }
+.u6l7-next-h .muted { font-size: 17px; }
+.u6l7-next-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.u6l7-next-grid a { display: block; text-decoration: none; color: var(--ink); background: #f6f1e8; border-radius: 10px; padding: 8px 12px; font-size: 17px; font-weight: 600; line-height: 1.3; }
+.u6l7-next-grid .rn { display: block; font-weight: 800; color: var(--brand2); font-size: 15px; }
+.u6l7-next-grid small { display: block; color: var(--muted); font-weight: 500; font-size: 15px; }
+.u6l7-next-grid .test { grid-column: 1 / -1; display: block; background: #fff8e6; border: 1.5px solid #e9cf8f; border-radius: 10px; padding: 8px 12px; font-size: 18px; font-weight: 700; line-height: 1.3; }
+.u6l7-next-grid .test .rn { color: var(--amber, #c27a0e); }
+
+/* =================== explainer pieces =================== */
+.u6l7-svg { overflow: visible; pointer-events: none; }
+.u6l7-svg.clip { overflow: hidden; }
+.u6l7-c { box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; }
+.u6l7-line { font-size: 22px; line-height: 1.3; white-space: nowrap; display: flex; align-items: center; }
+.u6l7-line.sm { font-size: 19px; }
+.u6l7-line b { color: var(--red); }
+.u6l7-res { box-sizing: border-box; background: #fff; border: 3px solid var(--red); border-radius: 14px; font-size: 22px; padding: 2px 12px; }
+.u6l7-res b { color: var(--red); }
+.u6l7-note { box-sizing: border-box; background: #fff; border: 2px dashed #9a6a24; border-radius: 12px; padding: 4px 12px; font-size: 19px; line-height: 1.35; }
+.u6l7-tag { font: 800 19px var(--round); color: #4a3010; background: rgba(255,255,255,.88); border-radius: 8px; padding: 1px 7px; white-space: nowrap; }
+.u6l7-tag.red { color: var(--red); }
+.u6l7-tag.blue { color: #1f5bd6; }
+.u6l7-tag.green { color: #12805a; }
+.u6l7-tag.sm { font-size: 15px; }
+.u6l7-tag.lg { font-size: 26px; }
+.u6l7-small { font: 700 17px var(--round); color: var(--muted); white-space: nowrap; }
+
+/* multiple choice */
+.u6l7-opt { box-sizing: border-box; display: flex; align-items: center; gap: 12px; background: #fff; border: 2.5px solid #c9b697; border-radius: 14px; padding: 6px 14px; transition: border-color .3s, background .3s, opacity .3s; }
+.u6l7-opt > b { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--brand-soft); font: 900 20px var(--round); color: var(--brand); }
+.u6l7-opt .ot { font: 700 22px var(--round); }
+.u6l7-opt .why { margin-left: auto; font: 700 16px/1.2 var(--round); color: var(--red); text-align: right; max-width: 260px; }
+.u6l7-opt.u6l7-ok { border-color: var(--ok); background: #eaf6ef; box-shadow: 0 0 0 3px #bfe3cf; }
+.u6l7-opt.u6l7-ok > b { background: var(--ok); color: #fff; }
+.u6l7-opt.u6l7-no { border-color: #e6b3ae; background: #fdf3f2; }
+
+/* ---------- this page ---------- */
+.u6l7-wpoll .opt { font-size: 24px; font-weight: 800; justify-content: center; }
+.u6l7-bonus { background: #fff6e2; }
+.u6l7-bonus .tip-ic { background: var(--brand2); color: #fff; }
+.u6l7-fsvg { width: 100%; height: auto; display: block; overflow: visible; }
+.u6l7-ex1fig { display: flex; justify-content: center; margin-bottom: 10px; }
+.u6l7-match { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; font-size: 19px; }
+.u6l7-match [data-reveal] { color: var(--red); font-weight: 700; }
+.u6l7-ex2a { display: grid; grid-template-columns: 1fr 330px; gap: 16px; align-items: start; margin-bottom: 12px; }
+.u6l7-ex2a .u6l7-fig { margin-top: 8px; }
+.u6l7-gd { margin: 8px 0 4px; }
+.u6l7-ex3b { display: grid; grid-template-columns: 1fr 420px; gap: 16px; align-items: start; margin-top: 12px; }
+.u6l7-hid { opacity: 0; transition: opacity .3s; }
+.part.shown .u6l7-hid { opacity: 1; }
+.u6l7-ex4fig { display: flex; justify-content: center; margin-bottom: 12px; }
+.u6l7-ex6 { display: grid; grid-template-columns: 420px 1fr; gap: 14px; align-items: start; margin: 12px 0; }
+.u6l7-ex7 { display: grid; grid-template-columns: 480px 1fr; gap: 14px; align-items: start; margin-bottom: 8px; }
+.u6l7-g { color: var(--ok, #12805a); font-weight: 800; }
+.u6l7-a { color: #c27a0e; font-weight: 800; }
+.u6l7-next-grid { grid-template-columns: repeat(3, 1fr); }
+
+/* the similarity tester */
+.u6l7-mach { box-sizing: border-box; background: #fbf6ee; border: 3px solid #c9b697; border-radius: 16px; padding: 8px 12px; display: flex; flex-direction: column; gap: 6px; }
+.u6l7-mach .mh { font: 900 19px var(--round); color: var(--brand); text-transform: uppercase; letter-spacing: .06em; text-align: center; border-bottom: 2px dashed #d8c7a6; padding-bottom: 4px; }
+.u6l7-mach .mrow { display: flex; align-items: center; gap: 10px; font: 800 20px var(--round); color: #4a3010; }
+.u6l7-mach .mn { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--brand2); color: #fff; font-size: 17px; flex: none; }
+.u6l7-mach .mres { margin-left: auto; font: 900 30px var(--round); width: 40px; text-align: center; }
+.u6l7-mach .mres.ok { color: var(--ok, #12805a); }
+.u6l7-mach .mres.no { color: var(--red); }
+.u6l7-mach .mchips { display: flex; flex-wrap: wrap; gap: 6px; min-height: 36px; }
+.u6l7-chip { display: inline-block; background: #fff; border: 2px solid #b9d9c6; border-radius: 10px; padding: 2px 9px; font: 700 18px var(--round); white-space: nowrap; }
+.u6l7-chip.bad { border-color: #e6b3ae; background: #fdf3f2; }

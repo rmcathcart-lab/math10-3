@@ -1,0 +1,66 @@
+/* Math 10-3 · Unit 7 · Lesson 9 — Solving Right Triangles: styles used only on this page (prefix u7l9-).
+ * Role colours match js/geo.js (ROLE_COLORS): opp red, adj blue, hyp brown. */
+.u7l9 .ans .katex, .u7l9 .pl .katex { font-size: 1.04em; }
+.u7l9-opp { color: #c93a33; } .u7l9-adj { color: #1f5bd6; } .u7l9-hyp { color: #9a6a24; }
+
+/* ---------- warm-up ---------- */
+.u7l9-wpoll .poll-opts { margin-left: 0; grid-template-columns: 1fr 1fr; }
+.u7l9-wpoll > .pill, .u7l9-wpoll .poll-ans { margin-left: 0; }
+.u7l9-wpoll .opt { font-size: 22px; padding: 10px 14px; display: flex; gap: 10px; align-items: baseline; }
+.u7l9-wpoll .poll-ans { font-size: 19px; }
+
+/* ---------- key ideas ---------- */
+.u7l9-key { font-size: 19.5px; }
+.u7l9-steps { margin: 6px 0 4px; padding-left: 1.5em; }
+.u7l9-steps > li { margin: 4px 0; }
+.u7l9-tool { border-collapse: collapse; margin: 8px 0 6px; font-size: 18.5px; background: #fff; }
+.u7l9-tool th, .u7l9-tool td { border: 2px solid #d8ccb4; padding: 5px 12px; text-align: left; vertical-align: middle; }
+.u7l9-tool th { background: #efe2cc; font-weight: 800; }
+.u7l9-tool td:first-child, .u7l9-tool td:nth-child(2) { white-space: nowrap; }
+.u7l9-soh { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; }
+.u7l9-soh > span { background: #fff; border: 2px solid #d8ccb4; border-radius: 12px; padding: 6px 12px; text-align: center; font-size: 19px; }
+.u7l9-soh > span > b { color: var(--brand); margin-right: 6px; }
+.u7l9-ul { margin: 6px 0 2px; padding-left: 1.4em; }
+.u7l9-ul li { margin: 3px 0; }
+.u7l9-leave { background: #fff6e3; } .u7l9-leave .tip-ic { background: #c27a0e; color: #fff; font-size: 18px; }
+
+/* ---------- card figures ---------- */
+.u7l9-fig { margin: 0 auto; text-align: center; }
+.u7l9-fig > svg { width: 100%; height: auto; max-width: 420px; display: block; margin: 0 auto; }
+.u7l9-fig > .geo-box, .u7l9-fig > div { margin: 0 auto; }
+.u7l9-wide > svg { max-width: 860px; }
+.u7l9-pfig { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; }
+.u7l9-tooln { font-size: 19px; font-weight: 700; white-space: nowrap; padding-right: 6px; }
+.u7l9-tooln [data-reveal] { color: var(--red); }
+.u7l9-exg { display: grid; grid-template-columns: 1fr 380px; gap: 18px; align-items: center; margin-bottom: 8px; }
+.u7l9-exg .q { margin: 0 0 10px; }
+.u7l9-blanks { border-collapse: separate; border-spacing: 0 8px; font-size: 21px; }
+.u7l9-blanks td { padding: 2px 28px 2px 0; white-space: nowrap; }
+.u7l9-blanks [data-reveal] { display: inline-block; min-width: 110px; border-bottom: 2px solid var(--ink2); text-align: center; color: var(--red); }
+.u7l9-keyrows { display: grid; gap: 6px; margin-top: 8px; }
+.u7l9-keyrows > div { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.u7l9-kl { font-weight: 700; min-width: 210px; }
+
+/* ---------- explainer pieces ---------- */
+.u7l9-svg { overflow: visible; }
+.u7l9-pn { font: 600 20px/1.35 var(--round); color: var(--ink); box-sizing: border-box; }
+.u7l9-pn.box { background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 7px 12px; }
+.u7l9-pn.eq { background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 6px 12px; font-size: 21px; }
+.u7l9-pn.res { background: #fdf0ec; border: 2px solid #e7b9ae; border-radius: 12px; padding: 6px 12px; font-size: 21px; color: #8b2f1c; }
+.u7l9-pn.chk { background: #eaf6ef; color: #0e5e41; border-radius: 10px; padding: 6px 12px; font-size: 19px; }
+.u7l9-pn.bad { background: #fff1ef; color: #9c2a22; border-radius: 10px; padding: 6px 12px; font-size: 19px; }
+.u7l9-pn.kw { background: #f7f2e8; border-radius: 10px; padding: 6px 12px; font-size: 19px; }
+.u7l9-pn.bigt { font-size: 26px; font-weight: 800; text-align: center; }
+.u7l9-pn.note { font-size: 16px; color: var(--muted); font-weight: 700; }
+.u7l9-card3 { display: grid; place-items: center; border: 3px solid #d8ccb4; border-radius: 14px; background: #fff; font: 800 30px var(--round); color: var(--brand); box-sizing: border-box; }
+.u7l9-card3 small { display: block; font: 600 17px var(--round); color: var(--ink2); }
+.u7l9-card3.on { border-color: #12805a; background: #eaf6ef; color: #0e5e41; box-shadow: 0 0 0 4px rgba(18,128,90,.18); }
+.u7l9-card3.dim { opacity: .35; }
+.u7l9-row { display: grid; grid-template-columns: 74px 1fr; align-items: center; gap: 8px; }
+.u7l9-row > b { font-size: 19px; color: var(--brand2); }
+.u7l9-meter { font: 700 18px var(--round); }
+
+/* ---------- Stand Up Break figures ---------- */
+.u7l9-sufig { display: block; margin: 10px auto 4px; max-width: 100%; height: auto; overflow: visible; }
+.u7l9 .bk-fc-node { font-size: 16px; padding: 4px 6px; }
+.u7l9-col { display: flex; flex-direction: column; }

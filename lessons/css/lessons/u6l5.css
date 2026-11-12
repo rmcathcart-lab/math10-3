@@ -1,0 +1,62 @@
+/* Math 10-3 · Unit 6 · Lesson 5 — Similar Triangles: styles used only on this page (prefix u6l5-).
+ * Colours: matching angles blue / amber / green (1, 2, 3 arcs), matching side pairs purple / teal / pink, answers red. */
+.u6l5 .ans .katex, .u6l5 .pl .katex, .u6l5 .def .katex { font-size: 1.06em; }
+.u6l5-two { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 22px; align-items: center; }
+.u6l5-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 4px; }
+.u6l5-steps li { font-size: 19px; }
+.u6l5-key { margin-top: 10px; padding-top: 8px; border-top: 1.5px dashed #d9c7a6; font-size: 19px; }
+.u6l5-q { font-size: 19px; margin: 4px 0 10px; }
+.u6l5-note { font-size: 17px; color: var(--ink2); margin: -2px 0 12px; }
+.u6l5-pcol { display: flex; gap: 8px; flex: none; flex-wrap: wrap; }
+
+/* ---------- static figures ---------- */
+.u6l5-fig { position: relative; margin: 4px auto; }
+.u6l5-fig svg { display: block; overflow: visible; }
+.u6l5-fa { visibility: hidden; }
+.part.shown .u6l5-fa { visibility: visible; }
+
+/* ---------- fill-in blanks (Examples 2 and 5) ---------- */
+.u6l5-ex2 { display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 18px; align-items: center; }
+.u6l5-fl { font-size: 20px; margin: 4px 0 12px; line-height: 2.3; }
+.u6l5-blank { display: inline-block; min-width: 56px; border-bottom: 2px solid #8b7d66; padding: 0 6px; text-align: center; }
+.u6l5-blank.w2 { min-width: 110px; }
+.u6l5-blank .bk-rv-q { border: 0; background: none; }
+.u6l5-frac { display: inline-grid; justify-items: center; gap: 3px; vertical-align: middle; }
+.u6l5-bar { display: block; width: 62px; height: 0; border-top: 1.6px solid var(--ink); }
+.u6l5-ex6 { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 20px; align-items: start; }
+
+/* ---------- explainer pieces ---------- */
+.u6l5-svg { left: 0; top: 0; overflow: visible; }
+.u6l5-c { position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; }
+.u6l5-eq { background: #fff; border: 3px solid #9a6a24; border-radius: 12px; font-size: 22px; padding: 4px 12px; }
+.u6l5-eq .katex, .u6l5-step .katex { font-size: 1.08em; }
+.u6l5-res { background: #fff6e5; border-color: #e2a63a; font-weight: 700; }
+.u6l5-bad { background: #fdeeee; border-color: #c93a33; color: #8b2f1c; }
+.u6l5-step { background: #fff; border: 2.5px solid #c9b48a; border-radius: 12px; font-size: 19px; padding: 4px 12px; justify-content: flex-start; text-align: left; line-height: 1.35; }
+.u6l5-step > div { display: block; }
+.u6l5-step b:first-child { color: #6e4a1c; margin-right: 10px; font: 800 22px var(--round); }
+.u6l5-step.u6l5-res { border-color: #e2a63a; }
+.u6l5-s3 { font-size: 18px; } .u6l5-s3 .katex { font-size: 1.04em; }
+.u6l5-dot { display: inline-block; vertical-align: -2px; width: 18px; height: 18px; border-radius: 50%; margin-right: 6px; }
+.u6l5-tab { background: #fff; border: 2.5px solid #c9b48a; border-radius: 14px; padding: 8px 14px; align-items: stretch; }
+.u6l5-tab > div { display: grid; gap: 4px; width: 100%; align-content: center; }
+.u6l5-trow { display: flex; justify-content: space-between; gap: 12px; font-size: 19px; padding: 3px 0; border-bottom: 1.5px dashed #e1d3b9; }
+.u6l5-trow:last-child { border-bottom: 0; }
+.u6l5-trow b { font: 800 21px var(--round); color: #6e4a1c; }
+.u6l5-big { font-size: 30px; }
+.u6l5-tagb { font-size: 19px; color: #3a4254; background: #f3f6fb; border-radius: 10px; }
+.u6l5-tagb.u6l5-bad { background: #fdeeee; }
+.u6l5-leg > div { display: flex; gap: 14px; justify-content: center; }
+.u6l5-pill { display: inline-block; border: 2.5px solid var(--c); color: var(--c); border-radius: 999px; padding: 4px 14px; font: 800 18px var(--round); background: #fff; }
+.u6l5-handle { cursor: grab; }
+
+/* ---------- warm-up ---------- */
+.u6l5-wpoll .poll-opts { margin-left: 0; grid-template-columns: repeat(3, 1fr); } .u6l5-wpoll > .pill, .u6l5-wpoll .poll-ans { margin-left: 0; }
+.u6l5-wpoll .opt { font-size: 22px; padding: 10px 14px; } .u6l5-wpoll .poll-ans { font-size: 19px; }
+.u6l5-wans { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 18px; align-items: center; }
+.u6l5-wart { width: 240px; height: auto; display: block; }
+.u6l5-nw > div { white-space: nowrap; }
+.u6l5-rows { display: grid; gap: 12px; margin-bottom: 10px; }
+.u6l5-row { display: grid; grid-template-columns: 470px minmax(0, 1fr); gap: 4px 18px; align-items: start; }
+.u6l5-row > .pl { grid-column: 1 / -1; margin-bottom: 0; }
+.u6l5-row .u6l5-fig { margin: 0; }

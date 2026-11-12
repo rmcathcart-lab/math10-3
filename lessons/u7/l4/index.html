@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Similar Right Triangles and the Tangent Ratio · Math 10-3 7.4</title>
+<meta name="description" content="Math 10-3 Unit 7 Lesson 4: naming the sides of a right triangle from an angle θ (opposite, adjacent, hypotenuse), similar right triangles have the same opposite ÷ adjacent, the tangent ratio and the tan key in DEG mode, finding the opposite side (multiply) and the adjacent side (divide), and checking that an answer is reasonable. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u7l4.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u7l4">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Block Staircase">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Block Staircase</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">You build a staircase out of cube blocks. <b>1 step</b> takes 1 block. <b>2 steps</b> take <span class="u7l4-nw">1 + 2 = 3</span> blocks. <b>3 steps</b> take 6 blocks.</p><p class="vw-ask">How many blocks do you need for a staircase with 10 steps?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="Cube blocks dropping in one at a time to build a staircase of 4 steps, then starting again">
+    <rect x="10" y="238" width="310" height="12" rx="3" fill="#b98a55" stroke="#7a5124" stroke-width="3"/>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.040;0.075;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.040;0.075;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="40" y="188" width="46" height="46" rx="5" fill="#c9813a" stroke="#7a4a1c" stroke-width="3"/><rect x="47" y="195" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.105;0.140;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.105;0.140;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="90" y="188" width="46" height="46" rx="5" fill="#e0a050" stroke="#7a4a1c" stroke-width="3"/><rect x="97" y="195" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.170;0.205;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.170;0.205;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="90" y="138" width="46" height="46" rx="5" fill="#b86d2a" stroke="#7a4a1c" stroke-width="3"/><rect x="97" y="145" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.235;0.270;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.235;0.270;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="140" y="188" width="46" height="46" rx="5" fill="#b86d2a" stroke="#7a4a1c" stroke-width="3"/><rect x="147" y="195" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.300;0.335;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.300;0.335;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="140" y="138" width="46" height="46" rx="5" fill="#d99545" stroke="#7a4a1c" stroke-width="3"/><rect x="147" y="145" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.365;0.400;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.365;0.400;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="140" y="88" width="46" height="46" rx="5" fill="#c9813a" stroke="#7a4a1c" stroke-width="3"/><rect x="147" y="95" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.430;0.465;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.430;0.465;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="190" y="188" width="46" height="46" rx="5" fill="#d99545" stroke="#7a4a1c" stroke-width="3"/><rect x="197" y="195" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.495;0.530;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.495;0.530;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="190" y="138" width="46" height="46" rx="5" fill="#c9813a" stroke="#7a4a1c" stroke-width="3"/><rect x="197" y="145" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.560;0.595;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.560;0.595;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="190" y="88" width="46" height="46" rx="5" fill="#e0a050" stroke="#7a4a1c" stroke-width="3"/><rect x="197" y="95" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.625;0.660;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -90;0 -90;0 0;0 0;0 0;0 0" keyTimes="0;0.625;0.660;0.9;0.96;1" dur="8s" repeatCount="indefinite"/><rect x="190" y="38" width="46" height="46" rx="5" fill="#b86d2a" stroke="#7a4a1c" stroke-width="3"/><rect x="197" y="45" width="14" height="6" rx="3" fill="#fff" opacity=".35"/></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="282" y="86" font-size="56" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+      <text x="282" y="120" font-size="19" font-weight="700" fill="#9a6a24" text-anchor="middle">10 steps</text></g>
+  </svg></div></div>
+  <div class="poll u7l4-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> 50 blocks</div>
+      <div class="opt right"><b>B</b> 55 blocks</div>
+      <div class="opt"><b>C</b> 100 blocks</div>
+      <div class="opt"><b>D</b> 110 blocks</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u7l4-wans"><div><b>B: 55 blocks.</b> <span class="u7l4-nw">1 + 2 + 3 + … + 10 = 55.</span> Here is a quick trick: build a <b>second</b> staircase and flip it on top of the first. Together they make a <b>rectangle</b> 10 blocks wide and 11 blocks tall: <span class="u7l4-nw">10 × 11 = 110</span> blocks. One staircase is half of that: <span class="u7l4-nw">110 ÷ 2 = 55</span>. <span class="muted">The story goes that young Carl Friedrich Gauss used this trick in school to add 1 to 100 in seconds: <span class="u7l4-nw">100 × 101 ÷ 2 = 5&#8239;050</span>. Every step goes 1 up and 1 across. Today: how do we measure how <b>steep</b> something is? We compare up ÷ across.</span></div>
+      <div class="u7l4-wfig"><svg viewBox="0 0 160 190" role="img" aria-label="A 4-step staircase in brown and a flipped copy in blue fit together into a rectangle 4 wide and 5 tall">
+      <rect x="20" y="132" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="20" y="102" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <rect x="20" y="72" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <rect x="20" y="42" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <rect x="20" y="12" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <rect x="50" y="132" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="50" y="102" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="50" y="72" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <rect x="50" y="42" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <rect x="50" y="12" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <rect x="80" y="132" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="80" y="102" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="80" y="72" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="80" y="42" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <rect x="80" y="12" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <rect x="110" y="132" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="110" y="102" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="110" y="72" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="110" y="42" width="27" height="27" rx="4" fill="#d99545" stroke="#7a4a1c" stroke-width="2"/>
+      <rect x="110" y="12" width="27" height="27" rx="4" fill="#7fa7e8" stroke="#1f5bd6" stroke-width="2"/>
+      <text x="73" y="178" font-size="16" font-weight="800" fill="#6e4a1c" text-anchor="middle">4 × 5 = 20, half is 10</text></svg></div></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 7 Right Triangles and Trigonometry · Lesson 4</div>
+  <h1>Similar Right Triangles and the Tangent Ratio</h1>
+  <p class="lede">Right triangles with the same acute angle are <b>similar</b>, so <b>opposite ÷ adjacent</b> is always the same number for that angle. That number is the angle’s <b>tangent</b>. Your calculator knows it for every angle, and you can use it to find a side you can’t measure, like the height of a cell-phone tower.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>label the <b>opposite</b>, <b>adjacent</b> and <b>hypotenuse</b> of a right triangle from an angle <span class="tex">\theta</span></li>
+      <li>explain why <b>opp ÷ adj</b> is the same in every right triangle with the same angle</li>
+      <li>use the <b>tan</b> key in <b>DEG</b> mode: <span class="tex">\tan\theta=\dfrac{\text{opp}}{\text{adj}}</span></li>
+      <li>find the <b>opposite</b> side (multiply) or the <b>adjacent</b> side (divide), and check that my answer makes sense</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G4</b> Demonstrate an understanding of primary trigonometric ratios (sine, cosine, tangent) by: applying similarity to right triangles; generalizing patterns from similar right triangles; applying the primary trigonometric ratios; solving problems.</div>
+  <div class="outcome"><b>A1</b> Solve problems that require the manipulation and application of formulas related to: perimeter; area; the Pythagorean theorem; primary trigonometric ratios; income.<br><span class="muted">Today: the tangent ratio, rearranged to find the opposite or the adjacent side.</span></div>
+</section>
+
+<!-- ================= 1. Naming the sides ================= -->
+<section class="card" data-ink="s1" data-section="1. Naming the Sides">
+  <div class="sec-h"><span class="badge">1</span><h2>Naming the Sides: Opposite, Adjacent and Hypotenuse</h2></div>
+  <p>In a right triangle, the side across from the right angle is the <b>hypotenuse</b> (<b>hyp</b>). It is always the longest side. The other two sides are the <b>legs</b>.</p>
+  <p><b>Trigonometry</b> means “triangle measurement”. It uses one <b>acute</b> angle (less than 90°) of a right triangle to find lengths you can’t measure directly. We often call that angle <span class="tex">\theta</span>. It is the Greek letter <b>theta</b>: just a name for an angle, the way <span class="tex">x</span> is a name for a number. The two legs get names that tell where they are <b>from <span class="tex">\theta</span></b>.</p>
+  <div class="u7l4-two">
+    <div class="u7l4-fig" data-fig="routine"></div>
+    <div class="def"><b>Key idea</b> &nbsp; Labelling routine (do it first, every time)
+      <ol class="u7l4-steps">
+        <li><b>Step 1.</b> Find the right angle. The side across from it is the <b class="u7l4-hyp">hyp</b>.</li>
+        <li><b>Step 2.</b> Find <span class="tex">\theta</span>. The side across from <span class="tex">\theta</span> is the <b class="u7l4-opp">opp</b> (<b>opposite</b> side). It does not touch <span class="tex">\theta</span>.</li>
+        <li><b>Step 3.</b> The last side is the <b class="u7l4-adj">adj</b> (<b>adjacent</b> side). It touches <span class="tex">\theta</span> and it is not the hyp. (Adjacent means “next to”.)</li>
+      </ol></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The hyp touches <span class="tex">\theta</span> too, but it is never called adj. And opp and adj depend on the angle you use: if you switch to the other acute angle, opp and adj <b>swap</b>. The hyp never changes.</div></div>
+  <div class="explainer u7l4-gap" data-explainer="labels"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Label the sides</h3></div>
+  <div class="pl">Write <b>opp</b>, <b>adj</b> or <b>hyp</b> beside each side. Use the angle marked <span class="tex">\theta</span>.</div>
+  <div class="parts c3 u7l4-p1">
+    <div class="part"><div class="pl">(a)</div><div class="u7l4-fig u7l4-pt" data-fig="ex1a"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The vertical side is <b>opp</b> (across from <span class="tex">\theta</span>), the bottom is <b>adj</b>, the slanted side is <b>hyp</b>.</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u7l4-fig u7l4-pt" data-fig="ex1b"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\theta</span> is at the top. The bottom is <b>opp</b>, the vertical side is <b>adj</b>, the slanted side is <b>hyp</b>.</div></div></div>
+    <div class="part"><div class="pl">(c)</div><div class="u7l4-fig u7l4-pt" data-fig="ex1c"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The right angle is at the top, so the <b>bottom</b> is the <b>hyp</b>. The right side is <b>opp</b>, the left side is <b>adj</b>.</div></div></div>
+  </div>
+  <div class="part u7l4-gap"><div class="u7l4-ex1d">
+    <div class="u7l4-fig" data-fig="ex1d"></div>
+    <div><div class="pl">(d) In <span class="tex">\triangle ABC</span>, <span class="tex">\angle C=90^\circ</span>. Complete the table.</div>
+      <table class="u7l4-tbl u7l4-t1d">
+        <tr><th>Side</th><th>From <span class="tex">\angle A</span>, it is the …</th><th>From <span class="tex">\angle B</span>, it is the …</th></tr>
+        <tr><th><span class="tex">BC</span></th><td><span data-reveal="&nbsp;">opp</span></td><td><span data-reveal="&nbsp;">adj</span></td></tr>
+        <tr><th><span class="tex">AC</span></th><td><span data-reveal="&nbsp;">adj</span></td><td><span data-reveal="&nbsp;">opp</span></td></tr>
+        <tr><th><span class="tex">AB</span></th><td><span data-reveal="&nbsp;">hyp</span></td><td><span data-reveal="&nbsp;">hyp</span></td></tr>
+      </table></div></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Opp and adj <b>swap</b> when you change angles. <span class="tex">AB</span> is across from the right angle, so it is the hyp for both.</div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1q" data-section="1. Quick-Fire: Label It">
+  <h3 class="sub">Quick-fire: label it</h3>
+  <p>A new right triangle, turned any way. The class says which side is the hyp, the opp and the adj, then tap <b>Show the labels</b>. <b>Switch θ</b> moves <span class="tex">\theta</span> to the other acute angle: watch opp and adj swap.</p>
+  <div class="u7l4-qf" id="u7l4-qf"></div>
+</section>
+
+<!-- ================= 2. Similar right triangles ================= -->
+<section class="card" data-ink="s2" data-section="2. Similar Right Triangles">
+  <div class="sec-h"><span class="badge">2</span><h2>Similar Right Triangles: opp ÷ adj Stays the Same</h2></div>
+  <p>In Unit 6 you learned that two triangles are <b>similar</b> if two pairs of angles are equal. So all right triangles with the same acute angle are similar: they share the 90° angle and <span class="tex">\theta</span>, and the third angle is <span class="tex">180^\circ-90^\circ-\theta</span> in each one. Similar triangles have the same shape. Let’s see what that does to opp and adj.</p>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Three triangles with a 35° angle</h3></div>
+  <p class="u7l4-p">Three right triangles each have a 35° angle. In your booklet they are drawn to <b>actual size</b>, so you can measure them with a ruler to check.</p>
+  <div class="u7l4-fig" data-fig="ex2"></div>
+  <div class="part"><div class="pl">(a) Why are the three triangles similar?</div><div class="work" style="--h:60px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Each one has a 90° angle and a 35° angle, so the third angle is <span class="tex">180^\circ-90^\circ-35^\circ=55^\circ</span> in each. The angles match, so the triangles are similar.</div></div></div>
+  <div class="part u7l4-gap"><div class="pl">(b) Label opp and adj from the 35° angle. Then complete the table. Round opp ÷ adj to 2 decimal places.</div>
+    <table class="u7l4-tbl u7l4-t2">
+      <tr><th></th><th>Triangle 1</th><th>Triangle 2</th><th>Triangle 3</th></tr>
+      <tr><th>opp (cm)</th><td><span data-reveal="&nbsp;">1.4</span></td><td><span data-reveal="&nbsp;">2.1</span></td><td><span data-reveal="&nbsp;">3.5</span></td></tr>
+      <tr><th>adj (cm)</th><td><span data-reveal="&nbsp;">2.0</span></td><td><span data-reveal="&nbsp;">3.0</span></td><td><span data-reveal="&nbsp;">5.0</span></td></tr>
+      <tr><th>opp ÷ adj</th><td><span data-reveal="&nbsp;"><span class="tex">1.4\div2.0=0.70</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">2.1\div3.0=0.70</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">3.5\div5.0=0.70</span></span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The vertical side is opp, the bottom is adj. All three ratios are <b>0.70</b>.</div></div></div>
+  <div class="part u7l4-gap"><div class="pl">(c) For <i>every</i> right triangle with a 35° angle, opp ÷ adj is about <span class="u7l4-blank" data-reveal="&nbsp;">0.70</span>. The size of the triangle <span class="u7l4-blank u7l4-wide" data-reveal="&nbsp;">does not matter</span>.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>0.70</b>; the size <b>does not matter</b>.</div></div></div>
+  <div class="part u7l4-gap"><div class="pl">(d) A ramp has a 35° angle with the ground and is 10&nbsp;m long along the ground (adj). Predict its height (opp).</div><div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp ÷ adj <span class="tex">=0.70</span>, so opp <span class="tex">=0.70\times10=7.0</span>. The ramp is about <b>7.0&nbsp;m</b> high.</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Same Angle, Same Ratio">
+  <h3 class="sub">Same angle, same ratio</h3>
+  <p>Grow the triangles, work out opp ÷ adj, and then change the angle.</p>
+  <div class="explainer" data-explainer="discover"></div>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Why It Works">
+  <h3 class="sub">Why it works</h3>
+  <p>Triangle 2 is Triangle 1 enlarged by the scale factor <span class="tex">k=1.5</span>, so <i>both</i> legs are multiplied by 1.5: <span class="tex">1.4\times1.5=2.1</span> and <span class="tex">2.0\times1.5=3.0</span>. Multiplying the top and the bottom of a ratio by the same number does not change it.</p>
+  <div class="explainer" data-explainer="whyK"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> A right triangle with a 35° angle has adj = 40&nbsp;cm. Without a calculator, about how long is opp?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp ÷ adj is about 0.70 for 35°, so opp <span class="tex">\approx0.70\times40=28</span>&nbsp;cm.</div></div></div>
+</section>
+
+<section class="card" data-ink="s2k" data-section="2. The Tangent Ratio">
+  <p>Each angle has its own value of opp ÷ adj, and it has a name.</p>
+  <div class="def u7l4-tandef"><b>Key idea</b> &nbsp; <b>The tangent ratio.</b> In a right triangle, for an acute angle <span class="tex">\theta</span>:
+    <div class="u7l4-bigf"><span class="tex">\tan\theta=\dfrac{\text{opp}}{\text{adj}}=\dfrac{\text{length of the side opposite }\theta}{\text{length of the side adjacent to }\theta}</span></div>
+    For one angle, <span class="tex">\tan\theta</span> is always the same number, however big or small the triangle is (the triangles are similar). We say “tan <span class="tex">\theta</span>”; tan is short for <b>tangent</b>. The hyp is not used.</div>
+</section>
+
+<!-- ================= 3. The tan key ================= -->
+<section class="card" data-ink="s3" data-section="3. The tan Key">
+  <div class="sec-h"><span class="badge">3</span><h2>The tan Key on Your Calculator</h2></div>
+  <p>You don’t have to draw and measure a triangle to find <span class="tex">\tan\theta</span>. Your calculator knows it for every angle.</p>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Angles in this unit are in degrees, so the calculator must be in <b>DEG</b> mode: look for DEG on the screen. If it shows RAD or GRAD, press <span class="keys"><kbd>DRG</kbd></span>, use the arrow keys to underline DEG, and press <span class="keys"><kbd>ENTER</kbd></span>. To find <span class="tex">\tan35^\circ</span>, press <span class="keys"><kbd>tan</kbd> 35 <kbd>)</kbd> <kbd>ENTER</kbd></span>. The screen shows 0.700207538. <b>Quick test of the mode:</b> <span class="tex">\tan45^\circ</span> must be exactly 1.</div>
+    <div class="u7l4-btns"><button class="pill" type="button" data-keys="tan 35 ) =">Show me tan 35°</button><button class="pill" type="button" data-keys="tan 45 ) =">Test: tan 45°</button></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Tangents on the calculator</h3></div>
+  <div class="part"><div class="pl">(a) Use your calculator. Round each value to 4 decimal places.</div>
+    <table class="u7l4-tbl u7l4-t3">
+      <tr><th><span class="tex">\theta</span></th><td>10°</td><td>20°</td><td>35°</td><td>45°</td><td>60°</td><td>70°</td><td>80°</td></tr>
+      <tr><th><span class="tex">\tan\theta</span></th><td><span data-reveal="&nbsp;">0.1763</span></td><td><span data-reveal="&nbsp;">0.3640</span></td><td><span data-reveal="&nbsp;">0.7002</span></td><td><span data-reveal="&nbsp;">1.0000</span></td><td><span data-reveal="&nbsp;">1.7321</span></td><td><span data-reveal="&nbsp;">2.7475</span></td><td><span data-reveal="&nbsp;">5.6713</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">0.1763, 0.3640, 0.7002, 1.0000, 1.7321, 2.7475, 5.6713</div></div></div>
+  <div class="part u7l4-gap"><div class="pl">(b) Does <span class="tex">\tan35^\circ</span> match what you found in Example 2? <span class="u7l4-blank u7l4-wide" data-reveal="&nbsp;">yes: 0.7002 ≈ 0.70</span></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes:</b> <span class="tex">0.7002\approx0.70</span>.</div></div></div>
+  <div class="part u7l4-gap"><div class="pl">(c) As <span class="tex">\theta</span> gets bigger, <span class="tex">\tan\theta</span> gets <span class="u7l4-blank" data-reveal="&nbsp;">bigger</span>. A steeper angle means the opp side is longer compared with the adj.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>bigger</b></div></div></div>
+  <div class="part u7l4-gap"><div class="pl">(d) <span class="tex">\tan45^\circ=1</span>, so at 45° opp and adj are <span class="u7l4-blank" data-reveal="&nbsp;">equal</span>. For angles less than 45°, opp is <span class="u7l4-blank" data-reveal="&nbsp;">shorter</span> than adj. For angles more than 45°, opp is <span class="u7l4-blank" data-reveal="&nbsp;">longer</span> than adj.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>equal</b>; <b>shorter</b>; <b>longer</b></div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Steeper Angle, Bigger tan">
+  <h3 class="sub">Steeper angle, bigger tan</h3>
+  <p>Keep the adj side the same length and make the angle steeper. Watch opp grow, and the table fill in.</p>
+  <div class="explainer" data-explainer="tanSweep"></div>
+</section>
+
+<!-- sources: https://en.wikipedia.org/wiki/Habash_al-Hasib (first table of tangents and cotangents, c. 860; the "shadow", umbra versa);
+     https://mathshistory.st-andrews.ac.uk/Biographies/Fincke/ (Geometriae rotundi, Basel 1583, introduces the terms tangent and secant);
+     https://mathshistory.st-andrews.ac.uk/Miller/mathword/t/ (TANGENT: Fincke 1583, Latin "tangens"; earlier name "umbra versa") -->
+<section class="card history" data-ink="hist" data-section="Math History: Tangent Began as a Shadow">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">c. 860 and 1583</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">Tangent began as a shadow</h3>
+      <p>Around the year <b>860</b>, the astronomer <b>Habash al-Hasib</b> made the first known table of the <b>“shadow”</b> for each angle of the sun. Today we call that number the <b>tangent</b>.</p>
+      <p>Picture a stick poking straight out of a wall in the sun. <b>Shadow ÷ stick</b> is the tangent of the sun’s angle: one more right triangle!</p>
+      <p>The name came in <b>1583</b>, from the Danish mathematician Thomas Fincke: <i>tangens</i>, Latin for “touching”.</p>
+      <div class="part hist-q"><div class="pl">A stick 1.0&nbsp;m long sticks straight out of a wall. The sun is 35° up. How far down the wall is the shadow of its tip?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Shadow ÷ stick <span class="tex">=\tan35^\circ</span>, so the shadow is <span class="tex">1.0\times\tan35^\circ=0.70</span>&nbsp;m. The same 0.70 as in Example 2!</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u7l4-hist" viewBox="0 0 600 300" role="img" aria-label="A stick sticks out of a wall. Sun rays hit it at different angles and its shadow on the wall grows and shrinks; shadow divided by stick equals tan of the sun's angle"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>tan A and tan B</h3></div>
+  <div class="u7l4-ex4">
+    <div class="u7l4-fig" data-fig="ex4"></div>
+    <div>
+      <div class="pl">In <span class="tex">\triangle ABC</span>, <span class="tex">\angle C=90^\circ</span>. Write each ratio as a fraction and as a decimal (to 4 decimal places).</div>
+      <div class="parts c2">
+        <div class="part"><div class="pl">(a) <span class="tex">\tan A</span></div><div class="work" style="--h:100px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From <span class="tex">\angle A</span>: opp <span class="tex">=BC=8</span>, adj <span class="tex">=AC=15</span>.<br><span class="tex">\tan A=\dfrac{8}{15}\approx0.5333</span></div></div></div>
+        <div class="part"><div class="pl">(b) <span class="tex">\tan B</span></div><div class="work" style="--h:100px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From <span class="tex">\angle B</span>: opp <span class="tex">=AC=15</span>, adj <span class="tex">=BC=8</span>.<br><span class="tex">\tan B=\dfrac{15}{8}=1.8750</span></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="part u7l4-gap"><div class="pl">(c) Which angle is bigger, <span class="tex">\angle A</span> or <span class="tex">\angle B</span>? How do you know?</div><div class="work" style="--h:60px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b><span class="tex">\angle B</span>.</b> Its tangent is bigger (<span class="tex">1.875&gt;0.5333</span>), and it is across from the longer leg. (<span class="tex">\tan B</span> is more than 1, so <span class="tex">\angle B</span> is more than 45°.)</div></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s3x" data-section="3. Example 4 Check">
+  <h3 class="sub">Example 4 check: from ∠A, then from ∠B</h3>
+  <div class="explainer" data-explainer="tanAB"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> How are <span class="tex">\tan A</span> and <span class="tex">\tan B</span> related in every right triangle?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One is the other turned upside down: <span class="tex">\dfrac{8}{15}</span> and <span class="tex">\dfrac{15}{8}</span>. Opp and adj swap when you change angles.</div></div></div>
+</section>
+
+<!-- ================= 4. Finding a missing side ================= -->
+<section class="card" data-ink="s4" data-section="4. Finding a Missing Side">
+  <div class="sec-h"><span class="badge">4</span><h2>Finding a Missing Side: Multiply or Divide</h2></div>
+  <p>If you know an acute angle and one leg, the tangent ratio gives you the other leg. Write the ratio, put in what you know, and solve for the unknown.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Finding a side with tan
+    <ol class="u7l4-steps">
+      <li><b>Step 1.</b> Label opp, adj and hyp from <span class="tex">\theta</span>. (You need opp and adj: one you know, one you want.)</li>
+      <li><b>Step 2.</b> Write <span class="tex">\tan\theta=\dfrac{\text{opp}}{\text{adj}}</span>. &nbsp; <b>Step 3.</b> Substitute the numbers you know.</li>
+      <li><b>Step 4.</b> Solve. <span class="tex">x</span> on the <b>top</b>: <b>multiply</b> both sides by the bottom number, so <span class="tex">x=\text{adj}\times\tan\theta</span>.<br><span class="u7l4-ind"><span class="tex">x</span> on the <b>bottom</b>: multiply both sides by <span class="tex">x</span>, then <b>divide</b> both sides by <span class="tex">\tan\theta</span>, so <span class="tex">x=\text{opp}\div\tan\theta</span>.</span></li>
+      <li><b>Step 5.</b> Round at the end, then check that the answer makes sense.</li>
+    </ol></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For <span class="tex">9.0\times\tan27^\circ</span>, press <span class="keys">9.0 <kbd>×</kbd> <kbd>tan</kbd> 27 <kbd>)</kbd> <kbd>ENTER</kbd></span>. For <span class="tex">6.3\div\tan40^\circ</span>, press <span class="keys">6.3 <kbd>÷</kbd> <kbd>tan</kbd> 40 <kbd>)</kbd> <kbd>ENTER</kbd></span>. The <kbd>tan</kbd> key opens a bracket, so close it with <kbd>)</kbd> before you type anything after the angle. Don’t round <span class="tex">\tan\theta</span> on the way: type it all in one go.</div>
+    <div class="u7l4-btns"><button class="pill" type="button" data-keys="9.0 × tan 27 ) =">Show me 9.0 × tan 27°</button><button class="pill" type="button" data-keys="6.3 ÷ tan 40 ) =">Show me 6.3 ÷ tan 40°</button></div></div>
+</section>
+
+<section class="card" data-ink="s4a" data-section="4. x on Top: Multiply">
+  <h3 class="sub"><span class="tex">x</span> on the top: multiply</h3>
+  <div class="explainer" data-explainer="solveMul"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Find the opposite side</h3></div>
+  <div class="pl">Find <span class="tex">x</span>, to the nearest tenth.</div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a)</div><div class="u7l4-fig u7l4-pt" data-fig="ex5a"></div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From 27°: <span class="tex">x</span> is opp, 9.0 is adj.<br><span class="tex">\tan27^\circ=\dfrac{x}{9.0}</span><br><span class="tex">9.0\times\tan27^\circ=x</span> &nbsp;(<span class="tex">x</span> on top: multiply)<br><span class="tex">x=4.5857\ldots\approx4.6</span>&nbsp;cm<br>Check: <span class="tex">27^\circ&lt;45^\circ</span>, so opp should be shorter than adj: <span class="tex">4.6&lt;9.0</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u7l4-fig u7l4-pt" data-fig="ex5b"></div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From 58°: <span class="tex">x</span> is opp, 3.5 is adj.<br><span class="tex">\tan58^\circ=\dfrac{x}{3.5}</span><br><span class="tex">3.5\times\tan58^\circ=x</span><br><span class="tex">x=5.6011\ldots\approx5.6</span>&nbsp;m<br>Check: <span class="tex">58^\circ&gt;45^\circ</span>, so opp should be longer than adj: <span class="tex">5.6&gt;3.5</span> ✓</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>How tall is the tower?</h3></div>
+  <div class="u7l4-ex6">
+    <div class="part"><div class="pl">A surveyor sets her angle tool on the ground, 45&nbsp;m from the base of a cell-phone tower. The tool measures a 63° angle between the ground and the line to the top of the tower. How tall is the tower, to the nearest tenth of a metre?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From the 63° angle: the tower <span class="tex">h</span> is opp, the 45&nbsp;m along the ground is adj.<br><span class="tex">\tan63^\circ=\dfrac{h}{45}</span><br><span class="tex">h=45\times\tan63^\circ=88.317\ldots</span><br>The tower is about <b>88.3&nbsp;m</b> tall. Check: <span class="tex">63^\circ&gt;45^\circ</span>, so the height should be more than 45&nbsp;m ✓</div></div></div>
+    <div class="u7l4-fig" data-fig="ex6"></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">45 <kbd>×</kbd> <kbd>tan</kbd> 63 <kbd>)</kbd> <kbd>ENTER</kbd></span> gives 88.31747275.</div>
+    <button class="pill" type="button" data-keys="45 × tan 63 ) =">Show me</button></div>
+  <div class="explainer u7l4-gap" data-explainer="tower"></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–5">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 4 · Questions 1–5</h2>
+  <p class="pr-t">Calculator in DEG mode, and label first every time. Then we learn what to do when <i>x</i> is on the bottom.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Label opp, adj, hyp</span>
+    <span><b>2</b>Name the sides; tan P and tan Q</span>
+    <span><b>3</b>Three triangles with a 50° angle</span>
+    <span><b>4</b>The tan key; tan D and tan E</span>
+    <span><b>5</b>Find the opposite side (×)</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 5.</span><a class="pill" href="../../../#/lesson/u7l4">Open the Practice site</a></div>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. x on the Bottom: Divide">
+  <h3 class="sub"><span class="tex">x</span> on the bottom: divide</h3>
+  <p>When <span class="tex">x</span> is the <b>adjacent</b> side, it ends up on the bottom of the ratio. Two moves get it out: multiply both sides by <span class="tex">x</span>, then divide both sides by <span class="tex">\tan\theta</span>.</p>
+  <div class="explainer" data-explainer="solveDiv"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Find the adjacent side</h3></div>
+  <div class="pl">Find <span class="tex">x</span>, to the nearest tenth. This time <span class="tex">x</span> is on the <b>bottom</b> of the ratio.</div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a)</div><div class="u7l4-fig u7l4-pt" data-fig="ex7a"></div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From 40°: 6.3 is opp, <span class="tex">x</span> is adj.<br><span class="tex">\tan40^\circ=\dfrac{6.3}{x}</span><br><span class="tex">x\times\tan40^\circ=6.3</span> &nbsp;(multiply both sides by <span class="tex">x</span>)<br><span class="tex">x=\dfrac{6.3}{\tan40^\circ}</span> &nbsp;(divide both sides by <span class="tex">\tan40^\circ</span>)<br><span class="tex">x=7.508\ldots\approx7.5</span>&nbsp;cm</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u7l4-fig u7l4-pt" data-fig="ex7b"></div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From 66°: 12 is opp, <span class="tex">x</span> is adj.<br><span class="tex">\tan66^\circ=\dfrac{12}{x}</span><br><span class="tex">x=\dfrac{12}{\tan66^\circ}=5.342\ldots\approx5.3</span>&nbsp;ft<br>Check with the other angle, <span class="tex">90^\circ-66^\circ=24^\circ</span>: from 24°, <span class="tex">x</span> is opp and 12 is adj, so <span class="tex">x=12\times\tan24^\circ=5.342\ldots</span> ✓</div></div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> <span class="tex">\tan40^\circ</span> is a number (<span class="tex">0.8391\ldots</span>), not 40. Never write <span class="tex">x=6.3\div40</span>. And when <span class="tex">x</span> is on the bottom, the answer is <i>not</i> <span class="tex">6.3\times\tan40^\circ</span>: that would be the answer if <span class="tex">x</span> were the opp side.</div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Check With the Other Angle">
+  <h3 class="sub">Example 7(b) check: use the other angle</h3>
+  <p>The other acute angle is <span class="tex">90^\circ-66^\circ=24^\circ</span>. From there, opp and adj swap, so <span class="tex">x</span> is on top and we multiply. Both ways must give the same answer.</p>
+  <div class="explainer" data-explainer="otherAngle"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A wheelchair ramp</h3></div>
+  <div class="u7l4-ex8">
+    <div>
+      <p class="u7l4-p">A wheelchair ramp must rise 0.48&nbsp;m to reach a doorway. Accessibility guides suggest a ramp angle of about 4.8° or less.</p>
+      <div class="part"><div class="pl">(a) How far along the ground must the ramp reach? Round to the nearest tenth of a metre.</div><div class="work" style="--h:130px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From 4.8°: the rise 0.48&nbsp;m is opp and <span class="tex">x</span> (along the ground) is adj.<br><span class="tex">\tan4.8^\circ=\dfrac{0.48}{x}</span><br><span class="tex">x=\dfrac{0.48}{\tan4.8^\circ}=5.716\ldots</span><br>The ramp must reach about <b>5.7&nbsp;m</b> along the ground.</div></div></div>
+    </div>
+    <div class="u7l4-fig u7l4-pt" data-fig="ex8"></div>
+  </div>
+  <div class="part u7l4-gap"><div class="pl">(b) Many guides say a ramp should go 12 units along for every 1 unit up (a slope of <span class="tex">1:12</span>). Does your answer to (a) agree?</div><div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">12\times0.48=5.76</span>&nbsp;m. That is very close to 5.7&nbsp;m, so <b>yes</b>: an angle of 4.8° is about a <span class="tex">1:12</span> slope.</div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">0.48 <kbd>÷</kbd> <kbd>tan</kbd> 4.8 <kbd>)</kbd> <kbd>ENTER</kbd></span> gives 5.716167547.</div>
+    <button class="pill" type="button" data-keys="0.48 ÷ tan 4.8 ) =">Show me</button></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u7l4"></section>
+
+<!-- ================= 5. Is it reasonable? ================= -->
+<section class="card" data-ink="s5" data-section="5. Is the Answer Reasonable?">
+  <div class="sec-h"><span class="badge">5</span><h2>Is the Answer Reasonable?</h2></div>
+  <p>A calculator does what you type, even when it is wrong. Use these checks before you write your final answer.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Quick checks for tan
+    <ul class="u7l4-steps u7l4-bul">
+      <li>A length is always <b>positive</b>. A negative answer usually means the calculator is in RAD mode.</li>
+      <li><b>The 45° check:</b> if <span class="tex">\theta&lt;45^\circ</span>, opp is shorter than adj. If <span class="tex">\theta&gt;45^\circ</span>, opp is longer than adj. If <span class="tex">\theta=45^\circ</span>, they are equal.</li>
+      <li>The hyp is the longest side, so each leg must be shorter than the hyp.</li>
+      <li>Check with the other acute angle, <span class="tex">90^\circ-\theta</span>: opp and adj swap, and you should get the same answer.</li>
+    </ul></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Who is correct?</h3></div>
+  <div class="u7l4-ex9">
+    <div>
+      <p class="u7l4-p">A right triangle has a 52° angle, and the side adjacent to it is 8&nbsp;m. Three students found the opposite side, <span class="tex">x</span>.</p>
+      <table class="u7l4-tbl u7l4-t9">
+        <tr><th>Ava</th><td><span class="tex">x=8\div\tan52^\circ=6.3</span>&nbsp;m</td></tr>
+        <tr><th>Ben</th><td><span class="tex">x=8\times\tan52^\circ=-48.4</span>&nbsp;m</td></tr>
+        <tr><th>Cole</th><td><span class="tex">x=8\times\tan52^\circ=10.2</span>&nbsp;m</td></tr>
+      </table>
+    </div>
+    <div class="u7l4-fig" data-fig="ex9"></div>
+  </div>
+  <div class="part u7l4-gap"><div class="pl">(a) Who is correct? Use a check from the box above to show that the other two answers are not reasonable.</div><div class="work" style="--h:110px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Cole</b> is correct: <span class="tex">x</span> is opp (on top), so multiply: <span class="tex">8\times\tan52^\circ=10.239\ldots\approx10.2</span>&nbsp;m.<br>Ava: <span class="tex">52^\circ&gt;45^\circ</span>, so opp must be <i>longer</i> than 8&nbsp;m. 6.3&nbsp;m is too short.<br>Ben: a length can’t be negative.</div></div></div>
+  <div class="part u7l4-gap"><div class="pl">(b) What did Ava and Ben each do wrong?</div><div class="work" style="--h:80px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Ava <b>divided</b>. That is only right when <span class="tex">x</span> is on the bottom (when <span class="tex">x</span> is the adj side).<br>Ben’s set-up is right, but his calculator was in <b>RAD</b> mode. In DEG mode he would get 10.2&nbsp;m.</div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>In DEG mode, <span class="keys">8 <kbd>×</kbd> <kbd>tan</kbd> 52 <kbd>)</kbd> <kbd>ENTER</kbd></span> gives 10.23953306.</div>
+    <button class="pill" type="button" data-keys="8 × tan 52 ) =">Show me</button></div>
+  <div class="explainer u7l4-gap" data-explainer="verdict"></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Label first:</b> <b class="u7l4-hyp">hyp</b> is across from the right angle (longest). <b class="u7l4-opp">opp</b> is across from <span class="tex">\theta</span>. <b class="u7l4-adj">adj</b> touches <span class="tex">\theta</span> and is not the hyp. Switch angles: opp and adj swap.</div>
+    <div><b>Same angle, same ratio:</b> right triangles with the same <span class="tex">\theta</span> are similar, so <span class="tex">\tan\theta=\dfrac{\text{opp}}{\text{adj}}</span> is the same number for every size.</div>
+    <div><b>Calculator in DEG:</b> <span class="keys"><kbd>tan</kbd> 35 <kbd>)</kbd> <kbd>ENTER</kbd></span> gives 0.7002. Test: <span class="tex">\tan45^\circ=1</span>. Bigger angle, bigger tan.</div>
+    <div><b>Solve:</b> <span class="tex">x</span> on top: <span class="tex">x=\text{adj}\times\tan\theta</span>. <span class="tex">x</span> on the bottom: <span class="tex">x=\text{opp}\div\tan\theta</span>. Check: positive, and the 45° check.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u7l4">
+    <div><div class="kicker">Your turn</div><b>Assignment 4 · Questions 6–18</b><div class="muted">Find the adjacent side, a shed roof, a slough on a farm, a photographer and a building, a loading-dock ramp, Zoe’s mistake, Malik’s tree, a roof pitch, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l5/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 5 — The Sine Ratio</b><div class="muted">When the hypotenuse is involved: opp ÷ hyp is the sine. A ladder slides down a wall and sin θ follows it.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u7l4.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u7l4', homeHref: '../../', title: '7.4 Similar Right Triangles and the Tangent Ratio' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

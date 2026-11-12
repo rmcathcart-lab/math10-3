@@ -49,7 +49,12 @@
     u4l4: 'converting units of mass', u4l5: 'converting mass between SI and imperial', u4l6: 'converting between volume and mass (bushels and tonnes)',
     u5l1: 'solving tangram and pentomino puzzles with a strategy', u5l2: 'finding and explaining a winning game strategy', u5l3: 'measuring, drawing and classifying angles',
     u5l4: 'estimating angles and using true bearings', u5l5: 'copying and bisecting angles and identifying perpendicular lines',
-    u5l6: 'finding complementary, supplementary and opposite angles', u5l7: 'naming the angle pairs made by a transversal', u5l8: 'finding missing angles with parallel lines'
+    u5l6: 'finding complementary, supplementary and opposite angles', u5l7: 'naming the angle pairs made by a transversal', u5l8: 'finding missing angles with parallel lines',
+    u6l1: 'finding scale factors and missing sides of similar polygons', u6l2: 'deciding whether polygons are similar', u6l3: 'drawing enlargements and reductions',
+    u6l4: 'using scale diagrams, maps and floor plans', u6l5: 'finding missing sides in similar triangles', u6l6: 'measuring heights with shadows and mirrors',
+    u7l1: 'squares, square roots and classifying triangles', u7l2: 'finding the hypotenuse with the Pythagorean theorem', u7l3: 'finding a leg and checking for a right angle',
+    u7l4: 'using the tangent ratio', u7l5: 'using the sine ratio', u7l6: 'using the cosine ratio', u7l7: 'solving angle of elevation and depression problems',
+    u7l8: 'finding angles with inverse trig ratios', u7l9: 'solving right triangles by choosing the right ratio'
   };
   var LADDER = ['NM', 'LIM', 'BEG', 'EMG', 'PRG', 'ADV', 'MAS'];
   var LNAME = { NM: 'Not Meeting', LIM: 'Limited', BEG: 'Beginning', EMG: 'Emerging', PRG: 'Progressing', ADV: 'Advancing', MAS: 'Mastery' };

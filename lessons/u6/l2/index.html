@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Are They Similar? · Math 10-3 6.2</title>
+<meta name="description" content="Math 10-3 Unit 6 Lesson 2: the two tests for similar polygons (equal corresponding angles and equal side ratios), rectangles (long ÷ short), 3-D boxes and cans, explaining why two polygons are not similar (square and rectangle, square and rhombus, adding a border), and why regular polygons with the same number of sides are always similar. A similarity tester with stamps, a photo that fits or gets cropped, and a print you resize. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u6l2.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u6l2">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Handshake Party">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Handshake Party</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx"><b>Ten friends</b> meet at Prince’s Island Park. Everyone shakes hands with <b>everyone else</b>, exactly <b>once</b>.</p><p class="vw-ask">How many handshakes is that?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="Ten people standing in a circle; one at a time, a person reaches out to shake hands with the others">
+    <g stroke="#9a6a24" stroke-width="3" stroke-linecap="round" opacity="0"><line x1="165" y1="30" x2="258.2" y2="158.3"/><line x1="165" y1="30" x2="165" y2="226"/><line x1="165" y1="30" x2="71.8" y2="97.7"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0;0" keyTimes="0;.05;.15;.4;.5;1" dur="6s" repeatCount="indefinite"/></g>
+    <g stroke="#1f5bd6" stroke-width="3" stroke-linecap="round" opacity="0"><line x1="107.4" y1="207.3" x2="222.6" y2="48.7"/><line x1="107.4" y1="207.3" x2="258.2" y2="97.7"/><line x1="107.4" y1="207.3" x2="107.4" y2="48.7"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0;0" keyTimes="0;.5;.6;.85;.95;1" dur="6s" repeatCount="indefinite"/></g>
+    <g fill="#f5ecdf" stroke="#6e4a1c" stroke-width="3"><circle cx="165" cy="30" r="16"/><circle cx="222.6" cy="48.7" r="16"/><circle cx="258.2" cy="97.7" r="16"/><circle cx="258.2" cy="158.3" r="16"/><circle cx="222.6" cy="207.3" r="16"/><circle cx="165" cy="226" r="16"/><circle cx="107.4" cy="207.3" r="16"/><circle cx="71.8" cy="158.3" r="16"/><circle cx="71.8" cy="97.7" r="16"/><circle cx="107.4" cy="48.7" r="16"/></g>
+    <g fill="#6e4a1c"><circle cx="159.5" cy="27" r="2.2"/><circle cx="170.5" cy="27" r="2.2"/><circle cx="217.1" cy="45.7" r="2.2"/><circle cx="228.1" cy="45.7" r="2.2"/><circle cx="252.7" cy="94.7" r="2.2"/><circle cx="263.7" cy="94.7" r="2.2"/><circle cx="252.7" cy="155.3" r="2.2"/><circle cx="263.7" cy="155.3" r="2.2"/><circle cx="217.1" cy="204.3" r="2.2"/><circle cx="228.1" cy="204.3" r="2.2"/><circle cx="159.5" cy="223" r="2.2"/><circle cx="170.5" cy="223" r="2.2"/><circle cx="101.9" cy="204.3" r="2.2"/><circle cx="112.9" cy="204.3" r="2.2"/><circle cx="66.3" cy="155.3" r="2.2"/><circle cx="77.3" cy="155.3" r="2.2"/><circle cx="66.3" cy="94.7" r="2.2"/><circle cx="77.3" cy="94.7" r="2.2"/><circle cx="101.9" cy="45.7" r="2.2"/><circle cx="112.9" cy="45.7" r="2.2"/></g>
+    <path fill="none" stroke="#6e4a1c" stroke-width="2.2" stroke-linecap="round" d="M159 35q6 5 12 0M216.6 53.7q6 5 12 0M252.2 102.7q6 5 12 0M252.2 163.3q6 5 12 0M216.6 212.3q6 5 12 0M159 231q6 5 12 0M101.4 212.3q6 5 12 0M65.8 163.3q6 5 12 0M65.8 102.7q6 5 12 0M101.4 53.7q6 5 12 0"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="165" y="146" font-size="52" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u6l2-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> 10</div>
+      <div class="opt"><b>B</b> 20</div>
+      <div class="opt right"><b>C</b> 45</div>
+      <div class="opt"><b>D</b> 90</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>C: 45 handshakes.</b> The first friend shakes 9 hands. The second friend already shook with the first, so only 8 are new. Then 7 new, 6, 5 … down to 1: <span class="tex">9+8+7+6+5+4+3+2+1=45</span>. <b>Why not 90?</b> Each of the 10 people shakes 9 hands, and <span class="tex">10\times9=90</span>. But every handshake has <b>two</b> people in it, so it got counted twice: <span class="tex">90\div2=45</span>. <span class="muted">Your turn: how many handshakes if everyone in this class shakes hands once?</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 6 Similarity and Scale · Lesson 2</div>
+  <h1>Are They Similar? Checking Angles and Side Ratios</h1>
+  <p class="lede">A photo shop, a flag maker and a sign shop all ask the same question: is the new one <b>exactly the same shape</b>? Today we learn the <b>two tests</b> that answer it, how to explain when two shapes are <b>not</b> similar, and why some shapes are <b>always</b> similar.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>match the <b>corresponding</b> angles and sides of two polygons, using the naming order</li>
+      <li>check <b>Test 1</b>: every pair of corresponding angles is equal</li>
+      <li>check <b>Test 2</b>: every pair of corresponding sides has the same ratio (the scale factor <span class="tex">k</span>)</li>
+      <li>explain why two polygons are <b>not</b> similar, naming the pair that fails</li>
+      <li>explain why two regular polygons with the same number of sides are <b>always</b> similar</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G3</b> Demonstrate an understanding of similarity of convex polygons, including regular and irregular polygons.<br><span class="muted">Today: deciding if two polygons are similar, explaining why or why not, and regular polygons.</span></div>
+</section>
+
+<!-- ================= 1. The two tests ================= -->
+<section class="card" data-ink="s1" data-section="1. The Two Tests">
+  <div class="sec-h"><span class="badge">1</span><h2>The Two Tests for Similar Polygons</h2></div>
+  <p>Two polygons are <b>similar</b> if they have exactly the same shape. One can be bigger or smaller than the other, or turned around, but nothing is stretched or squished. Matching parts are called <b>corresponding</b> angles and <b>corresponding</b> sides.</p>
+  <div class="def"><b>Key idea</b> &nbsp; The symbol <span class="tex">\sim</span> means “is similar to”. In <span class="tex">ABCD\sim PQRS</span> the letters are in <b>matching order</b>: <span class="tex">A\leftrightarrow P</span>, <span class="tex">B\leftrightarrow Q</span>, <span class="tex">C\leftrightarrow R</span>, <span class="tex">D\leftrightarrow S</span>. So side <span class="tex">AB\leftrightarrow PQ</span>, and so on.</div>
+  <div class="explainer u6l2-gap" data-explainer="match"></div>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Both Tests Must Pass">
+  <h3 class="sub">Both tests must pass</h3>
+  <div class="u6l2-keys">
+    <div class="def"><b>Key idea</b> &nbsp; <b>Two polygons are similar only if BOTH tests pass.</b>
+      <ol class="u6l2-steps">
+        <li><b>Test 1 (angles):</b> every pair of corresponding angles is <b>equal</b>.</li>
+        <li><b>Test 2 (sides):</b> every pair of corresponding sides has the <b>same ratio</b>. Divide (side of the new shape) <span class="tex">\div</span> (matching side of the original) for every pair. If you get the same number every time, that number is the <b>scale factor</b> <span class="tex">k</span>.</li>
+      </ol>
+      <div class="u6l2-note">If even <b>one</b> pair fails, the polygons are <b>not similar</b>.</div></div>
+    <div class="def"><b>Key idea</b> &nbsp; Checking, step by step
+      <ol class="u6l2-steps">
+        <li><b>Step 1.</b> Match the corresponding vertices (use the naming order, or match the angles).</li>
+        <li><b>Step 2.</b> Compare each pair of angles.</li>
+        <li><b>Step 3.</b> Divide each pair of sides, the same way every time.</li>
+        <li><b>Step 4.</b> Decide, and write a sentence: “The polygons are (not) similar because …”</li>
+      </ol></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Divide the same way every time: the <b>same shape’s</b> side always goes on top. If you flip one ratio (<span class="tex">6\div9</span> instead of <span class="tex">9\div6</span>) the numbers will not match, even when the shapes are similar.</div></div>
+  <div class="explainer u6l2-gap" data-explainer="tester"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Check both tests</h3></div>
+  <div class="pl">Is <span class="tex">ABCD\sim PQRS</span>? Check both tests.</div>
+  <div class="u6l2-fig" data-fig="ex1" style="width:900px;height:250px"></div>
+  <div class="part">
+    <div class="u6l2-tt">
+      <table class="u6l2-tbl">
+        <tr><th colspan="3" class="u6l2-thh">Test 1: angles</th></tr>
+        <tr><th>Pair</th><th>Sizes</th><th>Equal?</th></tr>
+        <tr><td><span class="tex">\angle A</span> and <span class="tex">\angle P</span></td><td><span data-reveal="&nbsp;">53° and 53°</span></td><td><span data-reveal="&nbsp;">yes</span></td></tr>
+        <tr><td><span class="tex">\angle B</span> and <span class="tex">\angle Q</span></td><td><span data-reveal="&nbsp;">90° and 90°</span></td><td><span data-reveal="&nbsp;">yes</span></td></tr>
+        <tr><td><span class="tex">\angle C</span> and <span class="tex">\angle R</span></td><td><span data-reveal="&nbsp;">90° and 90°</span></td><td><span data-reveal="&nbsp;">yes</span></td></tr>
+        <tr><td><span class="tex">\angle D</span> and <span class="tex">\angle S</span></td><td><span data-reveal="&nbsp;">127° and 127°</span></td><td><span data-reveal="&nbsp;">yes</span></td></tr>
+      </table>
+      <table class="u6l2-tbl">
+        <tr><th colspan="3" class="u6l2-thh">Test 2: sides</th></tr>
+        <tr><th>Pair</th><th><span class="tex">PQRS</span> side <span class="tex">\div</span> <span class="tex">ABCD</span> side</th><th>Ratio</th></tr>
+        <tr><td><span class="tex">PQ</span> and <span class="tex">AB</span></td><td><span data-reveal="&nbsp;"><span class="tex">9\div6</span></span></td><td><span data-reveal="&nbsp;">1.5</span></td></tr>
+        <tr><td><span class="tex">QR</span> and <span class="tex">BC</span></td><td><span data-reveal="&nbsp;"><span class="tex">6\div4</span></span></td><td><span data-reveal="&nbsp;">1.5</span></td></tr>
+        <tr><td><span class="tex">RS</span> and <span class="tex">CD</span></td><td><span data-reveal="&nbsp;"><span class="tex">4.5\div3</span></span></td><td><span data-reveal="&nbsp;">1.5</span></td></tr>
+        <tr><td><span class="tex">SP</span> and <span class="tex">DA</span></td><td><span data-reveal="&nbsp;"><span class="tex">7.5\div5</span></span></td><td><span data-reveal="&nbsp;">1.5</span></td></tr>
+      </table>
+    </div>
+    <div class="pl u6l2-gap">Similar? <span class="u6l2-blank" data-reveal="&nbsp;">Yes</span> &nbsp; Scale factor <span class="tex">k=</span> <span class="u6l2-blank" data-reveal="&nbsp;">1.5</span> &nbsp; Enlargement or reduction? <span class="u6l2-blank u6l2-wide" data-reveal="&nbsp;">enlargement</span></div>
+    <div class="work" style="--h:40px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">All four pairs of angles are equal, and all four side ratios are 1.5. So <span class="tex">ABCD\sim PQRS</span> with scale factor 1.5. Since <span class="tex">k&gt;1</span>, <span class="tex">PQRS</span> is an <b>enlargement</b> of <span class="tex">ABCD</span>.</div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s1x" data-section="1. Divide the Same Way">
+  <h3 class="sub">What goes wrong if you flip one ratio?</h3>
+  <div class="explainer" data-explainer="flip"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Ali divides <span class="tex">ABCD</span> sides by <span class="tex">PQRS</span> sides every time in Example 1. He gets 0.67 four times. Is he wrong?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No! He divided the <b>same way every time</b>, so all his ratios match: the shapes are similar. His 0.67 (that is <span class="tex">6\div9</span>) is the scale factor going the other way, from <span class="tex">PQRS</span> back down to <span class="tex">ABCD</span> (a reduction).</div></div></div>
+</section>
+
+<!-- ================= 2. Angles ================= -->
+<section class="card" data-ink="s2" data-section="2. Checking the Angles">
+  <div class="sec-h"><span class="badge">2</span><h2>Checking the Angles</h2></div>
+  <p>Making a shape bigger or smaller never changes its angles. So in similar polygons, corresponding angles are <b>equal</b>. You can measure the angles with a protractor, read them from the diagram, or work out a missing one.</p>
+  <div class="tip"><div class="tip-ic">↺</div><div><b>Quick refresher.</b> The angles inside a polygon with <span class="tex">n</span> sides add up to <span class="tex">(n-2)\times180^\circ</span> (Unit 5). A quadrilateral (4 sides): 360°. A pentagon (5 sides): 540°. A hexagon (6 sides): 720°.</div></div>
+  <div class="explainer u6l2-gap" data-explainer="angles"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>A square and a rhombus</h3></div>
+  <p class="u6l2-p">Square <span class="tex">ABCD</span> and rhombus <span class="tex">PQRS</span> are drawn <b>full size in your booklet</b>: measure them there with a ruler and a protractor. (A <b>rhombus</b> has four equal sides.)</p>
+  <div class="u6l2-ex2">
+    <div class="u6l2-fig" data-fig="ex2" style="width:420px;height:230px"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Measure one side of each shape to the nearest tenth of a centimetre. <span class="tex">AB=</span> <span class="u6l2-blank" data-reveal="&nbsp;">2.0 cm</span> <span class="tex">PQ=</span> <span class="u6l2-blank" data-reveal="&nbsp;">3.0 cm</span></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">AB=2.0</span> cm and <span class="tex">PQ=3.0</span> cm</div></div></div>
+      <div class="part"><div class="pl">(b) All the sides of each shape are equal. Find the ratio for every pair of sides.</div><div class="work" style="--h:44px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3.0\div2.0=1.5</span> for all four pairs: Test 2 passes.</div></div></div>
+      <div class="part"><div class="pl">(c) Measure the angles. <span class="tex">\angle A=</span> <span class="u6l2-blank u6l2-sm" data-reveal="&nbsp;">90°</span> <span class="tex">\angle P=</span> <span class="u6l2-blank u6l2-sm" data-reveal="&nbsp;">60°</span> <span class="tex">\angle Q=</span> <span class="u6l2-blank u6l2-sm" data-reveal="&nbsp;">120°</span> <span class="tex">\angle R=</span> <span class="u6l2-blank u6l2-sm" data-reveal="&nbsp;">60°</span> <span class="tex">\angle S=</span> <span class="u6l2-blank u6l2-sm" data-reveal="&nbsp;">120°</span></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The square: all 90°. The rhombus: <span class="tex">\angle P=60^\circ</span>, <span class="tex">\angle Q=120^\circ</span>, <span class="tex">\angle R=60^\circ</span>, <span class="tex">\angle S=120^\circ</span>.</div></div></div>
+    </div>
+  </div>
+  <div class="part"><div class="pl">(d) Are the square and the rhombus similar? Explain.</div><div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> The side ratios are all the same (1.5), but the angles are not equal: <span class="tex">\angle A=90^\circ</span> but <span class="tex">\angle P=60^\circ</span>. Test 1 fails, so they are not similar.</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Missing Angles First">
+  <h3 class="sub">When an angle is missing, find it first</h3>
+  <p>Use the angle sum to find any missing angle. Then compare the angles in pairs.</p>
+  <div class="explainer" data-explainer="missing"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Do the angles match?</h3></div>
+  <p class="u6l2-p">Quadrilaterals <span class="tex">EFGH</span> and <span class="tex">JKLM</span> have the angles shown. Their side lengths are not given.</p>
+  <div class="u6l2-fig" data-fig="ex3" style="width:900px;height:220px"></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find <span class="tex">\angle H</span> and <span class="tex">\angle L</span>.</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The angles of a quadrilateral add to 360°.<br><span class="tex">\angle H=360^\circ-75^\circ-105^\circ-80^\circ=100^\circ</span><br><span class="tex">\angle L=360^\circ-75^\circ-105^\circ-100^\circ=80^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) Do all the corresponding angles match?</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle E=\angle J=75^\circ</span>, <span class="tex">\angle F=\angle K=105^\circ</span>,<br><span class="tex">\angle G=\angle L=80^\circ</span>, <span class="tex">\angle H=\angle M=100^\circ</span>.<br>Yes: Test 1 passes.</div></div></div>
+  </div>
+  <div class="part u6l2-gap"><div class="pl">(c) Can you say <span class="tex">EFGH\sim JKLM</span>? Explain.</div><div class="work" style="--h:60px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Not yet.</b> The angles match, but we don’t know the side lengths, so we can’t do Test 2. (Look at the pictures: <span class="tex">JKLM</span> looks longer and flatter, so it may not be similar.)</div></div></div>
+  <div class="part u6l2-gap"><div class="pl">(d) Two pentagons have three pairs of equal angles: 100°, 120° and 95°. The other two angles of each pentagon are not given. All the side ratios are 2. Is that enough to say the pentagons are similar? Explain.</div><div class="work" style="--h:90px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> The angles of a pentagon add to 540°, so in each pentagon the other two angles add to <span class="tex">540^\circ-100^\circ-120^\circ-95^\circ=225^\circ</span>. But they could be split differently, for example <span class="tex">110^\circ+115^\circ</span> in one and <span class="tex">105^\circ+120^\circ</span> in the other. We need to know <b>every</b> pair of angles.</div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Side ratios ================= -->
+<section class="card" data-ink="s3" data-section="3. Checking the Side Ratios">
+  <div class="sec-h"><span class="badge">3</span><h2>Checking the Side Ratios</h2></div>
+  <p>Equal angles are not enough. The sides must all grow (or shrink) by the <b>same scale factor</b>. Divide each pair of corresponding sides. If all the ratios are the same, Test 2 passes.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Rectangles:</b> every rectangle has four 90° angles, so Test 1 always passes. Only the sides decide.
+    <ol class="u6l2-steps">
+      <li><b>Method 1 (between):</b> long <span class="tex">\div</span> long and short <span class="tex">\div</span> short. Similar if the two answers are equal (that is <span class="tex">k</span>).</li>
+      <li><b>Method 2 (within):</b> long side <span class="tex">\div</span> short side for <b>each</b> rectangle. Similar if the two answers are equal.</li>
+    </ol></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Match <b>short with short</b> and <b>long with long</b>, even if one rectangle is turned on its side. If the units are different (in and cm, or cm and m), convert first for Method 1. Method 2 works without converting, because both sides of one rectangle have the same units.</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>If a ratio does not come out even, round it to 2 decimal places. <span class="keys">10 <kbd>÷</kbd> 7 <kbd>ENTER</kbd></span> gives 1.428571… <span class="tex">\approx1.43</span>. If the rounded ratios are different, the shapes are not similar.</div>
+    <button class="pill" type="button" data-keys="10 ÷ 7 =">Show me</button></div>
+  <div class="explainer u6l2-gap" data-explainer="photo"></div>
+</section>
+
+<section class="card" data-ink="s3t" data-section="3. Try It: Will the Photo Fit?">
+  <h3 class="sub">Try it: will the photo fit?</h3>
+  <p>Kiara’s photo is 5 in by 7 in. Drag the <b>round corner</b> to change the print size (it snaps to half inches), or tap a size the photo shop sells. The photo is blown up to fill the print. Anything that hangs over the edge gets <b>cut off</b>.</p>
+  <div class="u6l2-tool" id="u6l2-print"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Kiara’s photo</h3></div>
+  <p class="u6l2-p">Kiara has a 5 in by 7 in photo. She wants a bigger copy that has <b>exactly</b> the same shape (nothing cut off). Which of these are similar to her photo? Use Method 2 (long <span class="tex">\div</span> short). Her photo: <span class="tex">7\div5=1.4</span>.</p>
+  <div class="part">
+    <table class="u6l2-tbl u6l2-t3">
+      <tr><th>Print size</th><th>Long <span class="tex">\div</span> short</th><th>Similar?</th></tr>
+      <tr><td>(a) 10 in by 14 in</td><td><span data-reveal="&nbsp;"><span class="tex">14\div10=1.4</span></span></td><td><span data-reveal="&nbsp;">yes</span></td></tr>
+      <tr><td>(b) 8 in by 10 in</td><td><span data-reveal="&nbsp;"><span class="tex">10\div8=1.25</span></span></td><td><span data-reveal="&nbsp;">no</span></td></tr>
+      <tr><td>(c) 0.5 m by 0.7 m (a poster)</td><td><span data-reveal="&nbsp;"><span class="tex">0.7\div0.5=1.4</span></span></td><td><span data-reveal="&nbsp;">yes</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) 1.4: <b>yes</b> · (b) 1.25: <b>no</b> · (c) 1.4: <b>yes</b>. For (c) Method 2 needs no converting: both sides of the poster are in metres.</div></div></div>
+  <div class="parts c2 u6l2-gap">
+    <div class="part"><div class="pl">(d) Check (a) with Method 1. What is the scale factor?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Short: <span class="tex">10\div5=2</span>. Long: <span class="tex">14\div7=2</span>. Both are 2, so the 10 in by 14 in print is similar, with <span class="tex">k=2</span>.</div></div></div>
+    <div class="part"><div class="pl">(e) What happens if Kiara orders the 8 in by 10 in print?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">It is not the same shape: <span class="tex">1.25\ne1.4</span>. Part of her photo would be <b>cut off</b> (cropped), or it would look <b>stretched</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>The odd flag out</h3></div>
+  <p class="u6l2-p">The Canadian flag is <b>twice as long as it is wide</b>. A school has four flags. Which flag is <b>not</b> similar to the others? Show your work.</p>
+  <div class="u6l2-ex5">
+    <div class="part">
+      <table class="u6l2-tbl u6l2-t2">
+        <tr><th>Flag</th><th>Long <span class="tex">\div</span> short</th></tr>
+        <tr><td>(a) 90 cm by 180 cm</td><td><span data-reveal="&nbsp;"><span class="tex">180\div90=2</span></span></td></tr>
+        <tr><td>(b) 1.5 m by 3 m</td><td><span data-reveal="&nbsp;"><span class="tex">3\div1.5=2</span></span></td></tr>
+        <tr><td>(c) 60 cm by 100 cm</td><td><span data-reveal="&nbsp;"><span class="tex">100\div60\approx1.67</span></span></td></tr>
+        <tr><td>(d) 2 ft by 4 ft</td><td><span data-reveal="&nbsp;"><span class="tex">4\div2=2</span></span></td></tr>
+      </table>
+      <div class="work" style="--h:40px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Flags (a), (b) and (d) are all similar (ratio 2). Flag <b>(c)</b> is not similar to the others, because <span class="tex">1.67\ne2</span>. It is too short for its width.</div></div></div>
+    <div class="u6l2-fig" data-fig="flags" style="width:330px;height:300px"></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Flag (c): <span class="keys">100 <kbd>÷</kbd> 60 <kbd>ENTER</kbd></span> gives 1.666666667, which rounds to 1.67.</div>
+    <button class="pill" type="button" data-keys="100 ÷ 60 =">Show me</button></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3c" data-section="3. Boxes and Cans">
+  <h3 class="sub">3-D objects: boxes and cans</h3>
+  <p>The same side test works for <b>3-D objects</b> such as boxes and cans: divide every pair of matching measurements (length, width, height, or radius and height).</p>
+</section>
+
+<section class="card" data-extra data-ink="s3x" data-section="3. Watch Boxes and Cans Grow">
+  <h3 class="sub">Watch a box and a can grow</h3>
+  <div class="explainer" data-explainer="boxes"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Boxes and cans</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Two shipping boxes measure 20 cm by 30 cm by 40 cm and 30 cm by 45 cm by 60 cm. Are they similar?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">30\div20=1.5</span>, <span class="tex">45\div30=1.5</span>, <span class="tex">60\div40=1.5</span><br>All three ratios are 1.5, so the boxes are <b>similar</b> (<span class="tex">k=1.5</span>).</div></div></div>
+    <div class="part"><div class="pl">(b) One soup can has a radius of 4 cm and a height of 10 cm. A bigger can has a radius of 6 cm and a height of 12 cm. Are the cans similar?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Radius: <span class="tex">6\div4=1.5</span>. Height: <span class="tex">12\div10=1.2</span>.<br><span class="tex">1.5\ne1.2</span>, so the cans are <b>not similar</b>. (The big can is too short.)</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 2 · Questions 1–8</h2>
+  <p class="pr-t">Get a ruler and a protractor for Question 5. Try these before we learn how to explain why shapes are <b>not</b> similar.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Matching parts</span>
+    <span><b>2</b>Pentagon side table</span>
+    <span><b>3</b>One ratio is off</span>
+    <span><b>4</b>Missing angles first</span>
+    <span><b>5</b>Measure and test</span>
+    <span><b>6</b>Which rectangles?</span>
+    <span><b>7</b>TV screens</span>
+    <span><b>8</b>Convert first</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u6l2">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Not similar ================= -->
+<section class="card" data-ink="s4" data-section="4. Why Not Similar?">
+  <div class="sec-h"><span class="badge">4</span><h2>Explaining Why Two Polygons Are Not Similar</h2></div>
+  <p>To show two polygons are <b>not</b> similar, you only need <b>one</b> pair of angles that are not equal, or <b>one</b> side ratio that does not match. Name it in your answer.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Three common traps</b>
+    <table class="u6l2-traps">
+      <tr><td><b>A square and a rectangle</b> (not a square)</td><td>angles all match (90°)</td><td>but the side ratios do <b>not</b></td></tr>
+      <tr><td><b>A square and a rhombus</b> (not a square)</td><td>side ratios all match</td><td>but the angles do <b>not</b></td></tr>
+      <tr><td><b>Adding the same amount to every side</b></td><td>(a frame, a border)</td><td>the side ratios change</td></tr>
+    </table>
+    <div class="u6l2-frame"><b>Sentence frame:</b> The polygons are not similar because <span class="u6l2-line"></span> is not equal to <span class="u6l2-line"></span>.</div></div>
+  <div class="tip"><div class="tip-ic">↺</div><div><b>Quick refresher.</b> In a <b>parallelogram</b>, opposite sides are parallel and equal. Opposite angles are equal, and two angles next to each other add to 180° (interior angles on the same side of a transversal, Unit 5).</div></div>
+  <div class="explainer u6l2-gap" data-explainer="frame"></div>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. The Tester on the Traps">
+  <h3 class="sub">The similarity tester on two more pairs</h3>
+  <div class="explainer" data-explainer="tester4"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Two parallelograms</h3></div>
+  <div class="pl">Are parallelograms <span class="tex">ABCD</span> and <span class="tex">WXYZ</span> similar? (Not drawn to scale.)</div>
+  <div class="u6l2-fig" data-fig="ex7" style="width:900px;height:200px"></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find all four angles of each parallelogram.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle A=\angle C=50^\circ</span> (opposite angles)<br><span class="tex">\angle B=\angle D=180^\circ-50^\circ=130^\circ</span><br>In the same way: <span class="tex">\angle W=\angle Y=50^\circ</span>, <span class="tex">\angle X=\angle Z=130^\circ</span>. All the corresponding angles match.</div></div></div>
+    <div class="part"><div class="pl">(b) Find the side ratios.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">WX\div AB=15\div10=1.5</span><br><span class="tex">XY\div BC=6.5\div4=1.625</span> (<span class="tex">BC=AD=4</span>, <span class="tex">XY=WZ=6.5</span>)<br>The ratios are not equal.</div></div></div>
+  </div>
+  <div class="part u6l2-gap"><div class="pl">(c) Use the sentence frame to answer the question.</div><div class="work" style="--h:60px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The parallelograms are not similar because the ratio <span class="tex">15\div10=1.5</span> is not equal to the ratio <span class="tex">6.5\div4=1.625</span>. (The angles match, but the sides do not grow by the same scale factor.)</div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">6.5 <kbd>÷</kbd> 4 <kbd>ENTER</kbd></span> gives 1.625. Estimate first: 6.5 is a bit more than <span class="tex">1.5\times4=6</span>, so the ratio is a bit more than 1.5.</div>
+    <button class="pill" type="button" data-keys="6.5 ÷ 4 =">Show me</button></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A mat, and Owen’s mistake</h3></div>
+  <div class="u6l2-ex8">
+    <div class="part"><div class="pl">(a) A 20 cm by 30 cm picture is put on a mat with a 5 cm border on every side. Find the outside size of the mat. Is the matted picture similar to the picture alone? Show your work.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Outside: <span class="tex">20+5+5=30</span> cm by <span class="tex">30+5+5=40</span> cm.<br>Short: <span class="tex">30\div20=1.5</span>. Long: <span class="tex">40\div30\approx1.33</span>. The ratios are not equal, so it is <b>not</b> similar. Adding 10 cm to both sides is not the same as multiplying both sides by the same number.</div></div></div>
+    <div class="u6l2-fig" data-fig="mat" style="width:230px;height:260px"></div>
+  </div>
+  <div class="part u6l2-gap"><div class="pl">(b) Owen checks if a 24 cm by 40 cm rectangle and a 50 cm by 30 cm rectangle are similar. Find his mistake, and fix it.</div>
+    <div class="u6l2-owen">Owen’s work: &nbsp; <span class="tex">50\div24\approx2.08</span> &nbsp; and &nbsp; <span class="tex">30\div40=0.75</span>. &nbsp; They are not equal, so they are not similar.</div>
+    <div class="work" style="--h:100px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Owen matched a short side with a long side (24 with 50). Match short with short and long with long:<br>Short: <span class="tex">30\div24=1.25</span>. Long: <span class="tex">50\div40=1.25</span>. They are equal, so the rectangles <b>are</b> similar, with <span class="tex">k=1.25</span>.</div></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u6l2"></section>
+
+<!-- ================= 5. Regular polygons ================= -->
+<section class="card" data-ink="s5" data-section="5. Regular Polygons">
+  <div class="sec-h"><span class="badge">5</span><h2>Regular Polygons</h2></div>
+  <p>A <b>regular polygon</b> has all its sides equal and all its angles equal: an equilateral triangle, a square, a regular pentagon, a regular hexagon (6 sides), a regular octagon (8 sides, like a stop sign), and so on.</p>
+  <p>Take two regular polygons with the <b>same number of sides</b>. Their angles are all the same size: each angle is <span class="tex">(n-2)\times180^\circ\div n</span>. And since all the sides of each shape are equal, every side ratio is the same number. Both tests pass every time!</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Two regular polygons with the same number of sides are always similar.</b>
+    <ol class="u6l2-steps">
+      <li><b>Always similar:</b> two squares, two equilateral triangles, two regular hexagons, …</li>
+      <li><b>Sometimes similar</b> (you must check): two rectangles, two rhombuses, two parallelograms, two pentagons that are not regular.</li>
+      <li><b>Never similar:</b> two polygons with a different number of sides (a square and a pentagon).</li>
+    </ol></div>
+  <div class="explainer u6l2-gap" data-explainer="regular"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Stop signs and tiles</h3></div>
+  <div class="u6l2-ex9">
+    <div class="part"><div class="pl">(a) A stop sign is a regular octagon with sides of 25 cm. A larger stop sign for a highway has sides of 32 cm. Are the signs similar? Find the size of each angle and the scale factor.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Both are regular octagons, so they are <b>similar</b>.<br>Each angle: <span class="tex">(8-2)\times180^\circ\div8=1\,080^\circ\div8=135^\circ</span> (in both signs).<br>Scale factor: <span class="tex">k=32\div25=1.28</span> (an enlargement).</div></div></div>
+    <div class="u6l2-fig" data-fig="stops" style="width:300px;height:170px"></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Each angle in one go: <span class="keys"><kbd>(</kbd> 8 <kbd>−</kbd> 2 <kbd>)</kbd> <kbd>×</kbd> 180 <kbd>÷</kbd> 8 <kbd>ENTER</kbd></span> gives 135.</div>
+    <button class="pill" type="button" data-keys="( 8 − 2 ) × 180 ÷ 8 =">Show me</button></div>
+  <div class="part u6l2-gap"><div class="pl">(b) A tile is a regular hexagon with sides of 10 cm. Another tile is a regular pentagon with sides of 10 cm. Are they similar? Explain.</div><div class="work" style="--h:80px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> They have a different number of sides, so the vertices can’t be matched. (Also, a hexagon’s angles are <span class="tex">720^\circ\div6=120^\circ</span>, but a regular pentagon’s are <span class="tex">540^\circ\div5=108^\circ</span>.) Having equal side lengths does not make shapes similar.</div></div></div>
+  <div class="part u6l2-gap"><div class="pl">(c) Write <i>always</i>, <i>sometimes</i> or <i>never</i>.</div>
+    <div class="u6l2-asn">
+      <div>Two squares are similar. <span class="u6l2-blank" data-reveal="&nbsp;">always</span></div>
+      <div>Two rectangles are similar. <span class="u6l2-blank" data-reveal="&nbsp;">sometimes</span></div>
+      <div>A square and an equilateral triangle are similar. <span class="u6l2-blank" data-reveal="&nbsp;">never</span></div>
+      <div>Two rhombuses are similar. <span class="u6l2-blank" data-reveal="&nbsp;">sometimes</span></div>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">always · sometimes · never · sometimes. Two squares are regular with 4 sides each. Rectangles must be checked (their side ratios can differ), and so must rhombuses (their angles can differ). A square has 4 sides and a triangle has 3, so they can never match.</div></div></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Similar:</b> same shape, any size, may be turned. Match the vertices by the naming order: in <span class="tex">ABCD\sim PQRS</span>, <span class="tex">A\leftrightarrow P</span>, side <span class="tex">AB\leftrightarrow PQ</span>.</div>
+    <div><b>Both tests:</b> (1) every pair of angles <b>equal</b>; (2) every side ratio, new <span class="tex">\div</span> original, the <b>same</b> (that is <span class="tex">k</span>). Divide the same way every time.</div>
+    <div><b>Rectangles:</b> long <span class="tex">\div</span> short for each one (no converting needed), or long <span class="tex">\div</span> long and short <span class="tex">\div</span> short. Boxes and cans: divide every matching measurement.</div>
+    <div><b>Not similar?</b> Name the <b>one</b> pair that fails. Traps: square and rectangle, square and rhombus, adding a border. Regular polygons with the same number of sides: <b>always</b> similar.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u6l2">
+    <div><div class="kicker">Your turn</div><b>Assignment 2 · Questions 9–18</b><div class="muted">A framed print, two parallelograms, Maya’s rectangle, regular polygons and a hexagon patio, cereal boxes, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l3/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 3 — Drawing Enlargements and Reductions</b><div class="muted">Now draw similar shapes yourself: on a grid, by measuring and multiplying, and by projecting from a point.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u6l2.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u6l2', homeHref: '../../', title: '6.2 Are They Similar?' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

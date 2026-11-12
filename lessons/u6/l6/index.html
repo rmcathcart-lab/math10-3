@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Indirect Measurement · Math 10-3 6.6</title>
+<meta name="description" content="Math 10-3 Unit 6 Lesson 6: indirect measurement with similar triangles. The shadow method (measure two shadows at the same time), the mirror method (angle in = angle out, use your eye height), a ruler at arm's length, stakes across a river, and checking that the answer is reasonable. A sun you can drag, a light ray that bounces off a mirror, and Thales measuring a pyramid. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u6l6.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u6l6">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: One Object, Three Shadows">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>One Object, Three Shadows</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A mystery object sits in the corner of a room. A flashlight shines on it from <b>above</b>, then from the <b>front</b>, then from the <b>side</b>.</p><p class="vw-ctx">The three shadows are a <b>circle</b>, a <b>square</b> and a <b>triangle</b>.</p><p class="vw-ask">Can ONE solid object make all three shadows? If you think so, sketch it.</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="A glowing question mark in the corner of a room, with flashlight beams from above, the front and the side, and a circle shadow on the floor, a square shadow on the back wall and a triangle shadow on the side wall">
+    <polygon points="20,40 120,10 120,170 20,226" fill="#efe6d6" stroke="#7a5124" stroke-width="2.5"/>
+    <polygon points="120,10 316,10 316,170 120,170" fill="#f6efe2" stroke="#7a5124" stroke-width="2.5"/>
+    <polygon points="20,226 120,170 316,170 250,240 20,240" fill="#e2d3b8" stroke="#7a5124" stroke-width="2.5"/>
+    <g fill="#3d3a44" fill-opacity=".72"><rect x="196" y="56" width="74" height="74"><animate attributeName="fill-opacity" values=".72;.45;.72" dur="3s" repeatCount="indefinite"/></rect>
+      <polygon points="44,190 96,160 70,82"><animate attributeName="fill-opacity" values=".45;.72;.45" dur="3s" repeatCount="indefinite"/></polygon>
+      <ellipse cx="176" cy="212" rx="48" ry="17"><animate attributeName="fill-opacity" values=".6;.35;.6" dur="3s" begin="1s" repeatCount="indefinite"/></ellipse></g>
+    <g fill="#ffd34d" opacity=".35"><polygon points="180,0 150,96 210,96"><animate attributeName="opacity" values=".15;.45;.15" dur="3s" repeatCount="indefinite"/></polygon>
+      <polygon points="330,250 190,118 220,96"><animate attributeName="opacity" values=".45;.15;.45" dur="3s" repeatCount="indefinite"/></polygon></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="2.4s" repeatCount="indefinite"/>
+      <circle cx="182" cy="128" r="34" fill="#fff6d6" stroke="#c27a0e" stroke-width="3"/>
+      <text x="182" y="146" font-size="50" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u6l6-wpoll">
+    <div class="poll-opts">
+      <div class="opt right"><b>A</b> Yes: one object can make all three</div>
+      <div class="opt"><b>B</b> No: that’s impossible</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u6l6-wans"><div><b>Yes!</b> Start with a can that is <b>as tall as it is wide</b>. From above its shadow is a circle, and from the front it is a square. Now slice off two pieces, from one line across the top down to the bottom edge on each side. From the front it is still a square, but from the side it is now a <b>triangle</b>. <span class="muted">The same object can look very different from different directions. Today we use shadows to measure things we can’t reach.</span></div><div class="u6l6-fig" data-fig="wans" style="width:300px;height:200px"></div></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 6 Similarity and Scale · Lesson 6</div>
+  <h1>Indirect Measurement: Shadows and Mirrors</h1>
+  <p class="lede">How tall is the school’s flagpole? How wide is the Bow River? You can’t climb the pole or stretch a tape across the water. Today we <b>measure what we can reach</b>, find two <b>similar triangles</b>, and solve a proportion.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>explain why an object, its shadow and the sun’s ray make a triangle that is <b>similar</b> to another one measured at the same time</li>
+      <li>use the <b>shadow method</b> to find a height (or a shadow) I can’t measure</li>
+      <li>use the <b>mirror method</b>, with my <b>eye height</b></li>
+      <li>use a <b>ruler at arm’s length</b>, or <b>stakes</b>, to find a height or the width of a river</li>
+      <li>check that my answer is <b>reasonable</b>, and spot common mistakes</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G3</b> Demonstrate an understanding of similarity of convex polygons, including regular and irregular polygons.<br><span class="muted">Today: similar triangles to measure heights and distances indirectly.</span></div>
+</section>
+
+<!-- ================= 1. The shadow method ================= -->
+<section class="card" data-ink="s1" data-section="1. The Shadow Method">
+  <div class="sec-h"><span class="badge">1</span><h2>Indirect Measurement and the Shadow Method</h2></div>
+  <p>Some lengths are too high or too far away to measure with a tape: a flagpole, a tree, a cell-phone tower, the width of a river. <b>Indirect measurement</b> means finding a length <b>without</b> measuring it directly. You measure lengths you can reach, find two <b>similar triangles</b> (Lesson 5), and solve a proportion.</p>
+  <div class="u6l6-two">
+    <div class="u6l6-fig" data-fig="sunrays" style="width:470px;height:250px"></div>
+    <div><p class="u6l6-p">On a sunny day, everything casts a shadow. The sun is so far away that its rays are <b>parallel</b>: at any moment, they come down at the same angle everywhere nearby.</p>
+      <p class="u6l6-p">An object standing straight up, its shadow and the sun ray make a <b>right triangle</b>. Two such triangles have</p>
+      <ul class="u6l6-ul"><li>a <b>right angle</b> at the bottom of the object (it stands straight up on level ground), and</li>
+        <li>the <b>same angle</b> at the tip of the shadow (the sun’s angle is the same for both).</li></ul></div>
+  </div>
+  <p class="u6l6-gap">Two pairs of equal angles, so the triangles are <b>similar</b> (AA). In general: <b>two right triangles that share the same acute angle are always similar.</b> So the heights and the shadows are in proportion.</p>
+  <div class="explainer" data-explainer="sun"></div>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. The Shadow Method: Steps">
+  <h3 class="sub">The shadow method</h3>
+  <div class="def"><b>Key idea</b> &nbsp; Measure the two shadows at the <b>same time</b>, then
+    <div class="u6l6-key"><span class="tex">\dfrac{\text{height of object}}{\text{shadow of object}}=\dfrac{\text{height of stick}}{\text{shadow of stick}}</span></div>
+    <ol class="u6l6-steps">
+      <li><b>Step 1.</b> Sketch and label both triangles.</li>
+      <li><b>Step 2.</b> Write the word proportion (heights on top, shadows on the bottom).</li>
+      <li><b>Step 3.</b> Put in the numbers (same units) and cross-multiply.</li>
+      <li><b>Step 4.</b> Check that it makes sense; write a sentence.</li>
+    </ol></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Shadows change all day: long in the morning, short around noon, long again in the evening. Both shadows must be measured within a few minutes of each other. The ground must be level and the objects must stand straight up.</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Is there ever a day in Calgary when you have <b>no</b> shadow at noon?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. The sun is only ever straight overhead in places close to the equator (between the tropics, 23.4° north and south). Calgary is about 51° north, so even at noon on the longest day of the year your shadow is about <b>half</b> as long as you are tall.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>The school flagpole</h3></div>
+  <p class="u6l6-p">At 3:00 p.m., an upright metre stick casts a shadow 1.60 m long. At the same time, the school’s flagpole casts a shadow 12.8 m long. How tall is the flagpole?</p>
+  <div class="u6l6-ex1">
+    <div>
+      <table class="u6l6-tbl"><tr><th></th><th>Height</th><th>Shadow</th></tr>
+        <tr><th>Metre stick</th><td>1.00 m</td><td>1.60 m</td></tr>
+        <tr><th>Flagpole</th><td><span class="tex">h</span></td><td>12.8 m</td></tr></table>
+      <div class="u6l6-fig" data-fig="ex1" style="width:400px;height:200px"></div>
+    </div>
+    <div class="part"><div class="pl">Find the height of the flagpole.</div><div class="work" style="--h:230px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\text{height}}{\text{shadow}}:\ \dfrac{h}{12.8}=\dfrac{1.00}{1.60}</span><br><span class="tex">1.60\times h=12.8\times1.00</span><br><span class="tex">h=12.8\div1.60=8</span><br>Check with the scale factor: the flagpole’s shadow is <span class="tex">12.8\div1.60=8</span> times as long, so the flagpole is 8 times as tall: <span class="tex">8\times1.00=8.00</span> m ✓<br>The flagpole is <b>8.0 m</b> tall.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1c" data-section="1. Watch the Shadow Method">
+  <h3 class="sub">The shadow method, step by step</h3>
+  <div class="explainer" data-explainer="shadowSolve"></div>
+</section>
+
+<section class="card" data-extra data-ink="s1x" data-section="1. The Scale Factor Shortcut">
+  <h3 class="sub">A shortcut: the scale factor</h3>
+  <p class="u6l6-p">If one shadow is <b>k times</b> as long as the other, the object is <b>k times</b> as tall. This is a quick estimate, and a check on the proportion.</p>
+  <div class="explainer" data-explainer="scaleK"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>The cell-phone tower</h3></div>
+  <div class="u6l6-ex2">
+    <div class="part"><div class="pl">Jasmine is 1.62 m tall. Late one afternoon near Airdrie, her shadow is 2.25 m long. At the same time, a cell-phone tower casts a shadow 63.0 m long.<br><br>(a) Estimate the height of the tower.</div><div class="work" style="--h:70px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The tower’s shadow is about <span class="tex">60\div2=30</span> times as long as Jasmine’s. So the tower is about <span class="tex">30\times1.6\approx48</span> m tall.</div></div></div>
+    <div class="u6l6-fig" data-fig="ex2" style="width:420px;height:250px"></div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(b) Find the height of the tower to the nearest tenth of a metre. Compare with your estimate.</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\text{height}}{\text{shadow}}:\ \dfrac{h}{63.0}=\dfrac{1.62}{2.25}</span><br><span class="tex">2.25\times h=63.0\times1.62</span><br><span class="tex">2.25h=102.06</span><br><span class="tex">h=102.06\div2.25=45.36</span><br>The tower is about <b>45.4 m</b> tall. This is close to the estimate of 48 m ✓</div></div></div>
+    <div class="part"><div class="pl">(c) A light standard in the same parking lot is 9.0 m tall. How long is its shadow at that moment?</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Now the shadow is missing: <span class="tex">\dfrac{9.0}{s}=\dfrac{1.62}{2.25}</span><br><span class="tex">9.0\times2.25=1.62\times s</span><br><span class="tex">20.25=1.62s</span><br><span class="tex">s=20.25\div1.62=12.5</span><br>The light standard’s shadow is <b>12.5 m</b> long. (Jasmine’s shadow is longer than she is, so this shadow should be longer than 9.0 m ✓)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>You can do the multiply and the divide in one line. For part (b): <span class="keys">63 <kbd>×</kbd> 1.62 <kbd>÷</kbd> 2.25 <kbd>ENTER</kbd></span> gives <b>45.36</b>. Round only at the end.</div>
+    <button class="pill" type="button" data-keys="63 × 1.62 ÷ 2.25 =">Show me</button></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>The grain elevator</h3></div>
+  <p class="u6l6-p">On a prairie farm, a fence post sticks up 6 ft out of the level ground. Its shadow is 4 ft 6 in long. At the same time, an old wooden grain elevator casts a shadow 52 ft long.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Sketch the two triangles. How tall is the grain elevator, to the nearest tenth of a foot?</div><div class="work" style="--h:230px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><div class="u6l6-fig u6l6-fa" data-fig="ex3" style="width:330px;height:170px"></div>Use the same units: 4 ft 6 in <span class="tex">=4\tfrac{6}{12}</span> ft <span class="tex">=4.5</span> ft.<br><span class="tex">\dfrac{h}{52}=\dfrac{6}{4.5}</span><br><span class="tex">4.5\times h=52\times6=312</span><br><span class="tex">h=312\div4.5=69.33\ldots</span><br>The elevator is about <b>69.3 ft</b> tall.</div></div></div>
+    <div class="part"><div class="pl">(b) About how tall is the elevator in metres? Use 1 ft = 0.3048 m and round to the nearest tenth.</div><div class="work" style="--h:230px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">69.33\ldots\times0.3048=21.13\ldots</span><br>The elevator is about <b>21.1 m</b> tall.<br>(Use the full calculator value, not the rounded 69.3.)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Keep the full value: <span class="keys">52 <kbd>×</kbd> 6 <kbd>÷</kbd> 4.5 <kbd>ENTER</kbd></span> gives 69.333…, then <span class="keys"><kbd>×</kbd> 0.3048 <kbd>ENTER</kbd></span> gives <b>21.13…</b></div>
+    <button class="pill" type="button" data-keys="52 × 6 ÷ 4.5 = × 0.3048 =">Show me</button></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u6l6"></section>
+
+<!-- ================= Math History box (brown) =================
+  sources: https://mathshistory.st-andrews.ac.uk/Biographies/Thales/ (born c. 624 BC, died c. 547 BC; Hieronymus and Pliny:
+  measured the pyramids by their shadows at the hour when a body's shadow equals its height; Plutarch: a stick at the end of
+  the pyramid's shadow, "a step towards similar triangles")
+  https://maa.org/book/export/html/692718 (MAA Convergence, "Some Original Sources for Modern Tales of Thales": Diogenes
+  Laertius quoting Hieronymus; Pliny, Natural History; Plutarch, Dinner of the Seven Sages: staff upright at the edge of the
+  pyramid's shadow, two triangles, pyramid : staff = shadow : shadow)
+  Great Pyramid of Khufu: about 146.6 m tall when built (now about 138.5 m), base about 230 m (Wikipedia, Great Pyramid of Giza).
+  The question's numbers are made up to fit: half base 115 m + 105 m = 220 m, 220 × 2 ÷ 3 = 146.7 m. -->
+<section class="card history" data-ink="hist" data-section="Math History: Thales and the Pyramid">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">about 600 BCE</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">A stick, a shadow, and the Great Pyramid</h3>
+      <p>Thales of Miletus was one of the first Greek mathematicians. Ancient writers say that on a visit to Egypt he found the height of a pyramid from its <b>shadow</b>. One version: he waited for the moment when a person’s shadow is exactly as long as the person is tall. At that moment, the pyramid’s shadow is as long as the pyramid is tall.</p>
+      <p>The writer Plutarch tells it with a <b>stick</b> stood up at the tip of the pyramid’s shadow: the sun’s rays make two triangles, so pyramid ÷ stick = pyramid’s shadow ÷ stick’s shadow. That is our shadow method, about 2600 years ago. The tricky part: the pyramid’s shadow really starts <b>under its top</b>, in the middle of the pyramid.</p>
+      <div class="part hist-q"><div class="pl">Thales’s stick is 2 m tall and casts a 3 m shadow. The pyramid’s shadow sticks out 105 m past its base, and half the base is 115 m. How tall is the pyramid?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The shadow from under the top: <span class="tex">115+105=220</span> m. <span class="tex">\dfrac{h}{220}=\dfrac{2}{3}</span>, so <span class="tex">h=220\times2\div3\approx146.7</span> m. The Great Pyramid was about <b>147 m</b> tall when it was built.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u6l6-hist" viewBox="0 0 600 300" role="img" aria-label="The sun's rays pass over the pyramid and over Thales's stick at the tip of its shadow, making two similar triangles; the hidden half of the base is added to the shadow"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+      <p class="hist-note">Nobody wrote it down in Thales’s time: the stories come from writers hundreds of years later. Today the pyramid is about 139 m tall: its top stones are gone.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 2. The mirror method ================= -->
+<section class="card" data-ink="s2" data-section="2. The Mirror Method">
+  <div class="sec-h"><span class="badge">2</span><h2>The Mirror Method</h2></div>
+  <p>On a cloudy day there are no shadows. You can use a small mirror instead. Lay the mirror flat on level ground between you and the object. Walk backwards (in a straight line away from the object) until you see the <b>top</b> of the object in the centre of the mirror. Then measure along the ground.</p>
+  <div class="u6l6-two">
+    <div class="u6l6-fig" data-fig="mirror0" style="width:470px;height:240px"></div>
+    <div><p class="u6l6-p">Light bounces off a mirror at the same angle it hits it: <b>angle in = angle out</b>. You and the object both stand straight up, so both triangles have a right angle. Two pairs of equal angles: the triangles are <b>similar</b>.</p>
+      <div class="def"><b>Key idea</b> &nbsp; The mirror method
+        <div class="u6l6-key"><span class="tex">\dfrac{\text{height of object}}{\text{object to mirror}}=\dfrac{\text{your eye height}}{\text{you to mirror}}</span></div>
+        <div class="u6l6-note">Measure to the <b>centre</b> of the mirror. Use the height of your <b>eyes</b>, not your full height: the light goes to your eyes, not the top of your head.</div></div></div>
+  </div>
+  <div class="explainer u6l6-gap" data-explainer="mirror"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Why do you measure to the <b>centre</b> of the mirror, not to its edge?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The light bounces at one point, where you see the top of the object: the centre. Both triangles have their corner at that point. Measuring to an edge makes one distance too long and the other too short.</div></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Why Angle In = Angle Out Works">
+  <h3 class="sub">Why the mirror triangles are similar: flip the flagpole</h3>
+  <div class="explainer" data-explainer="whyMirror"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Diego’s mirror</h3></div>
+  <div class="u6l6-ex4">
+    <p class="u6l6-p">Diego wants the height of the flagpole at his school. He puts a mirror on the ground 18.4 m from the base of the pole. He backs up until he sees the top of the pole in the mirror. His eyes are 1.50 m above the ground and he is 2.40 m from the mirror.</p>
+    <div class="u6l6-fig" data-fig="ex4" style="width:440px;height:230px"></div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How tall is the flagpole?</div><div class="work" style="--h:180px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\text{height}}{\text{to mirror}}:\ \dfrac{h}{18.4}=\dfrac{1.50}{2.40}</span><br><span class="tex">2.40\times h=18.4\times1.50=27.6</span><br><span class="tex">h=27.6\div2.40=11.5</span><br>The flagpole is <b>11.5 m</b> tall.</div></div></div>
+    <div class="part"><div class="pl">(b) Sara’s eyes are 1.70 m above the ground. Diego leaves the mirror in the same spot. How far from the mirror must Sara stand to see the top of the pole? Round to the nearest hundredth of a metre.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{11.5}{18.4}=\dfrac{1.70}{d}</span><br><span class="tex">11.5\times d=18.4\times1.70=31.28</span><br><span class="tex">d=31.28\div11.5=2.72</span><br>Sara must stand <b>2.72 m</b> from the mirror. (Her eyes are higher than Diego’s, so she stands farther back ✓)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Part (a) in one line: <span class="keys">18.4 <kbd>×</kbd> 1.5 <kbd>÷</kbd> 2.4 <kbd>ENTER</kbd></span> gives <b>11.5</b>. Part (b): <span class="keys">18.4 <kbd>×</kbd> 1.7 <kbd>÷</kbd> 11.5 <kbd>ENTER</kbd></span> gives <b>2.72</b>.</div>
+    <button class="pill" type="button" data-keys="18.4 × 1.5 ÷ 2.4 =">Show me (a)</button><button class="pill" type="button" data-keys="18.4 × 1.7 ÷ 11.5 =">Show me (b)</button></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example: A Hotel and a Wall">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>One shadow, one mirror</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Downtown, a 2.0 m sign post casts a 2.5 m shadow. At the same time, a hotel’s shadow is 45 m long. How tall is the hotel?</div><div class="work" style="--h:140px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{h}{45}=\dfrac{2.0}{2.5}</span>: &nbsp;<span class="tex">2.5h=90</span>, &nbsp;<span class="tex">h=36</span>. The hotel is <b>36 m</b> tall (about 12 storeys of 3 m ✓).</div></div></div>
+    <div class="part"><div class="pl">(b) A mirror lies 10.5 m from a wall that is 7.0 m tall. Kim’s eyes are 1.60 m above the ground. How far from the mirror must she stand to see the top of the wall?</div><div class="work" style="--h:140px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{7.0}{10.5}=\dfrac{1.60}{d}</span>: &nbsp;<span class="tex">7.0d=16.8</span>, &nbsp;<span class="tex">d=2.4</span>. Kim stands <b>2.4 m</b> from the mirror.</div></div></div>
+  </div>
+</section>
+
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–9">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 6 · Questions 1–9</h2>
+  <p class="pr-t">Shadows and mirrors: sketch the two triangles first, then write the word proportion.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Fill in the blanks</span>
+    <span><b>2</b>Why similar?</span>
+    <span><b>3</b>Shadow table</span>
+    <span><b>4</b>The noon shadow</span>
+    <span><b>5</b>The Ferris wheel</span>
+    <span><b>6</b>Feet and inches</span>
+    <span><b>7</b>The gym wall</span>
+    <span><b>8</b>The basketball hoop</span>
+    <span><b>9</b>Grace’s mistake</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 9.</span><a class="pill" href="../../../#/lesson/u6l6">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Sighting methods ================= -->
+<section class="card" data-ink="s3" data-section="3. A Ruler at Arm’s Length">
+  <div class="sec-h"><span class="badge">3</span><h2>Sighting Methods: a Ruler, or Stakes</h2></div>
+  <p><b>A ruler at arm’s length.</b> Hold a ruler straight up at arm’s length. Close one eye. Slide the ruler so its 0 lines up with the bottom of the object, and read the ruler where the top of the object lines up. The two sight lines from your eye make two triangles, one inside the other. The ruler and the object are both upright, so they are parallel, and the triangles are similar (like the nested triangles of Lesson 5).</p>
+  <div class="def"><b>Key idea</b> &nbsp; The ruler method &nbsp; <span class="tex">\dfrac{\text{height of object}}{\text{distance to object}}=\dfrac{\text{ruler reading}}{\text{eye to ruler}}</span>
+    <div class="u6l6-note">The ruler reading and the eye-to-ruler distance must be in the same unit (both cm). Then their ratio has no unit, and the height comes out in the unit of the distance.</div></div>
+  <div class="explainer u6l6-gap" data-explainer="ruler"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Paige walks closer to the wind turbine. Will the tower cover more of the ruler, or less?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>More.</b> Closer things look bigger. At 200 m away the 120 m tower is 0.6 of the distance, so it covers <span class="tex">0.6\times60=36</span> cm of the ruler.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>The wind turbine</h3></div>
+  <div class="u6l6-ex5">
+    <div class="part"><div class="pl">Paige is 400 m from a wind turbine in southern Alberta (she found the distance on a map app). She holds a ruler upright 60 cm from her eye. The tower, from the ground to the hub in the centre of the blades, covers 18 cm of the ruler. How tall is the tower?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{h}{400}=\dfrac{18}{60}</span> &nbsp; (<span class="tex">18\div60=0.3</span>: the tower is 0.3 of the distance)<br><span class="tex">60\times h=400\times18=7\,200</span><br><span class="tex">h=7\,200\div60=120</span><br>The tower is about <b>120 m</b> tall.</div></div></div>
+    <div class="u6l6-fig" data-fig="ex5" style="width:440px;height:230px"></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Stakes Across a River">
+  <h3 class="sub">Stakes across a river</h3>
+  <p>You can’t stretch a tape across a river, but you can make a small copy of the triangle on your side. Pick a tree <span class="tex">T</span> on the far bank. Put stake <span class="tex">A</span> straight across from it. Walk along the bank to stake <span class="tex">B</span>, then on to <span class="tex">C</span>. At <span class="tex">C</span>, turn <span class="tex">90^\circ</span> and walk away from the river until <span class="tex">B</span> lines up with the tree: that is point <span class="tex">D</span>. The triangles <span class="tex">TAB</span> and <span class="tex">DCB</span> each have a right angle, and the angles at <span class="tex">B</span> are <b>vertically opposite</b> (Unit 5), so they are equal. The triangles are similar.</p>
+  <div class="explainer" data-explainer="river"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>The Bow River</h3></div>
+  <div class="u6l6-ex5">
+    <div class="parts c1">
+      <div class="part"><div class="pl">Kenji uses the stake method to find the width <span class="tex">w</span> of the Bow River at a fishing spot. He measures <span class="tex">AB=30.0</span> m, <span class="tex">BC=10.0</span> m and <span class="tex">CD=7.6</span> m.<br><br>(a) Name the matching sides: <span class="tex">TA</span> matches <span class="u6l6-blank" data-reveal="&nbsp;"><span class="tex">DC</span></span>, and <span class="tex">AB</span> matches <span class="u6l6-blank" data-reveal="&nbsp;"><span class="tex">CB</span></span>.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">TA</span> matches <span class="tex">DC</span> (both are across from the angle at <span class="tex">B</span>), and <span class="tex">AB</span> matches <span class="tex">CB</span> (both run along the bank to <span class="tex">B</span>).</div></div></div>
+    </div>
+    <div class="u6l6-fig" data-fig="ex6" style="width:440px;height:250px"></div>
+  </div>
+  <div class="part"><div class="pl">(b) How wide is the river?</div><div class="work" style="--h:150px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\triangle TAB\sim\triangle DCB</span>, so <span class="tex">\dfrac{TA}{AB}=\dfrac{DC}{CB}:\ \dfrac{w}{30.0}=\dfrac{7.6}{10.0}</span><br><span class="tex">10.0\times w=30.0\times7.6=228</span><br><span class="tex">w=228\div10.0=22.8</span><br>The river is about <b>22.8 m</b> wide. (Check: <span class="tex">AB</span> is 3 times <span class="tex">BC</span>, so <span class="tex">w</span> is 3 times <span class="tex">CD</span>: <span class="tex">3\times7.6=22.8</span> ✓)</div></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= 4. Is it reasonable? ================= -->
+<section class="card" data-ink="s4" data-section="4. Is the Answer Reasonable?">
+  <div class="sec-h"><span class="badge">4</span><h2>Is the Answer Reasonable?</h2></div>
+  <p>Indirect measurement is easy to get wrong, and nobody can climb up to check. So always check your answer.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Checks for indirect measurement
+    <ul class="u6l6-ul">
+      <li><b>Compare inside one triangle.</b> If the stick’s shadow is longer than the stick, then <b>every</b> shadow is longer than its object at that moment. A tree with a 21 m shadow must then be shorter than 21 m.</li>
+      <li><b>Estimate with the scale factor.</b> If one shadow (or distance) is about 30 times the other, the heights differ by about 30 times.</li>
+      <li><b>Compare with something you know.</b> One storey of a building is about 3 m. A school flagpole is often 8 to 12 m. A tree that is 90 m tall is not reasonable in Alberta.</li>
+    </ul></div>
+  <p class="u6l6-gap">Your answer can also be a little off because of the measurements: shadows measured at different times, ground that is not level, an object that leans, a mirror that is not flat, or using your full height instead of your eye height. Small mistakes in short lengths (the stick, your eye height) grow when you multiply up.</p>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Find the mistake</h3></div>
+  <div class="pl">Each student made a mistake. Explain the mistake, and give the correct answer if you can.</div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Ava: a 2.0 m post has a 3.0 m shadow. A tree’s shadow is 21 m. She writes <span class="tex">\dfrac{h}{21}=\dfrac{3.0}{2.0}</span>, so <span class="tex">h=31.5</span> m.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">She flipped the stick’s ratio: shadow over height on the right, but height over shadow on the left.<br>Correct: <span class="tex">\dfrac{h}{21}=\dfrac{2.0}{3.0}</span>, so <span class="tex">3.0h=42</span>, <span class="tex">h=14</span> m.<br>Check: the post’s shadow is longer than the post, so the tree must be shorter than 21 m. 31.5 m can’t be right ✓</div></div></div>
+    <div class="part"><div class="pl">(b) Ethan is 1.80 m tall and his eyes are 1.68 m high. Mirror method: he is 2.1 m from the mirror, and the mirror is 14.7 m from a tree. He writes <span class="tex">h=1.80\times14.7\div2.1=12.6</span> m.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">He used his full height. The light goes to his eyes, so use 1.68 m.<br><span class="tex">h=1.68\times14.7\div2.1=11.76</span><br>The tree is about <b>11.8 m</b> tall.</div></div></div>
+    <div class="part"><div class="pl">(c) Mia measured her shadow at 9:00 a.m. and the school’s shadow at 2:00 p.m. She used them in the shadow method.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The sun’s angle changed between 9:00 a.m. and 2:00 p.m., so the triangles are not similar. Her answer is wrong and can’t be fixed with these numbers. She must measure both shadows again at the same time.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. Check the Work">
+  <h3 class="sub">Check each student’s work</h3>
+  <div class="explainer" data-explainer="verdict"></div>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Small Mistakes Grow">
+  <h3 class="sub">Why small mistakes grow</h3>
+  <div class="explainer" data-explainer="errors"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Shadows:</b> measure both at the <b>same time</b>. Height ÷ shadow is the same for both objects. A right angle and the same sun angle: similar (AA).</div>
+    <div><b>Mirror:</b> angle in = angle out. Height ÷ (object to mirror) = eye height ÷ (you to mirror). Use your <b>eye</b> height; measure to the <b>centre</b>.</div>
+    <div><b>Sighting:</b> ruler at arm’s length: height ÷ distance = ruler reading ÷ eye to ruler. Stakes: <span class="tex">\triangle TAB\sim\triangle DCB</span> (vertically opposite angles at <span class="tex">B</span>).</div>
+    <div><b>Check:</b> shadow longer than the stick? Then every shadow is longer than its object. Estimate with the scale factor. Compare with things you know (a storey is about 3 m).</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u6l6">
+    <div><div class="kicker">Your turn</div><b>Assignment 6 · Questions 10–19</b><div class="muted">The radio tower, Ella’s stake, a creek in a coulee, a wheelchair ramp, Sam’s school, a cloudy day, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l7/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 7 — Unit 6 Review</b><div class="muted">Similar polygons, scale factors, enlargements, scale diagrams, similar triangles and indirect measurement: get ready for the Unit 6 test.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u6l6.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u6l6', homeHref: '../../', title: '6.6 Indirect Measurement' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

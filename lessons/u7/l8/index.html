@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finding Angles with Inverse Trig Ratios · Math 10-3 7.8</title>
+<meta name="description" content="Math 10-3 Unit 7 Lesson 8: the inverse trig keys sin⁻¹, cos⁻¹ and tan⁻¹ on the TI-30XIIS (DEG mode), typing the whole fraction, finding an acute angle of a right triangle from any two sides, the other acute angle as 90° − θ, checking an angle a second way, quick checks for a reasonable angle (45°, 30°, ERROR, RAD mode), and angles on the job: ladders, wheelchair ramps, roof pitch and a drone. A ramp you tilt while the angle updates. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u7l8.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u7l8">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Upside-Down Calculator">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Upside-Down Calculator</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Turn a calculator <b>upside down</b> and some digits look like letters: <b>0</b> is O, <b>1</b> is I, <b>3</b> is E, <b>4</b> is h, <b>5</b> is S, <b>7</b> is L and <b>8</b> is B.</p><p class="vw-ctx">Type <b>77345</b>, flip the calculator over, and the screen says <b>ShELL</b>.</p><p class="vw-ask">What number do you type so the screen says hELLO?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="A calculator screen showing 77345 slowly turns upside down and reads ShELL, then turns back">
+    <rect x="40" y="16" width="250" height="228" rx="26" fill="#3a4254" stroke="#1c2230" stroke-width="3"/>
+    <g fill="#5d6577"><rect x="66" y="168" width="40" height="22" rx="6"/><rect x="118" y="168" width="40" height="22" rx="6"/><rect x="170" y="168" width="40" height="22" rx="6"/><rect x="222" y="168" width="40" height="22" rx="6"/><rect x="66" y="202" width="40" height="22" rx="6"/><rect x="118" y="202" width="40" height="22" rx="6"/><rect x="170" y="202" width="40" height="22" rx="6"/><rect x="222" y="202" width="40" height="22" rx="6"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" values="0 165 96;0 165 96;180 165 96;180 165 96;360 165 96" keyTimes="0;.3;.5;.8;1" dur="6s" repeatCount="indefinite"/>
+      <rect x="62" y="56" width="206" height="80" rx="10" fill="#c9d4bf" stroke="#1c2230" stroke-width="3"/>
+      <text x="252" y="112" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="46" font-weight="800" fill="#1d2a18">77345</text>
+    </g>
+    <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.45;.52;.78;.83;1" dur="6s" repeatCount="indefinite"/>
+      <text x="165" y="40" text-anchor="middle" font-size="22" font-weight="800" fill="#f2c94c">ShELL!</text></g>
+  </svg></div></div>
+  <div class="bk-wq u7l8-wq"><div class="q-line"><div class="q-num">?</div><div>Try it on your own calculator. Then make another word for a neighbour to decode.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><div class="u7l8-wsol"><svg viewBox="0 0 260 130" role="img" aria-label="A calculator screen showing 0.7734, turned upside down so it reads hELLO">
+      <g class="u7l8-wflip"><rect x="10" y="20" width="240" height="90" rx="10" fill="#c9d4bf" stroke="#1c2230" stroke-width="3"/>
+      <text x="236" y="84" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-size="50" font-weight="800" fill="#1d2a18">0.7734</text></g>
+    </svg></div>
+    <div><b>Type 0.7734.</b> Upside down, the <b>last</b> digit comes <b>first</b>, so you type the word backwards: O L L E h → 0 7 7 3 4. The twist: a calculator won’t show a 0 at the front of 07734, so you type <b>0.7734</b>. Upside down, the little dot is easy to ignore. <span class="muted">Flipping the calculator back <b>undoes</b> the flip. Today the inverse keys undo sin, cos and tan.</span></div></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 7 Right Triangles and Trigonometry · Lesson 8</div>
+  <h1>Finding Angles with Inverse Trig Ratios</h1>
+  <p class="lede">So far we started with an angle and found a side. Today we go the other way. When you know <b>two sides</b> of a right triangle, the <b>inverse keys</b> on your calculator turn their ratio back into the <b>angle</b>: how steep a ramp is, whether a ladder is safe, the angle of a roof.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>use the <b>inverse keys</b> <span class="tex">\sin^{-1}</span>, <span class="tex">\cos^{-1}</span> and <span class="tex">\tan^{-1}</span> (in <b>DEG</b> mode) to turn a ratio into an angle</li>
+      <li>type the <b>whole fraction</b> inside the bracket, and round the angle to the nearest degree</li>
+      <li>find an acute angle of a right triangle from <b>any two sides</b>, choosing sin, cos or tan</li>
+      <li>find the <b>other acute angle</b> with <span class="tex">90^\circ-\theta</span>, and <b>check</b> an angle a second way</li>
+      <li>decide if an angle is <b>reasonable</b>, and solve problems about ladders, ramps and roofs</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G4</b> Demonstrate an understanding of primary trigonometric ratios (sine, cosine, tangent) by: applying similarity to right triangles; generalizing patterns from similar right triangles; applying the primary trigonometric ratios; solving problems.<br><span class="muted">Today: using the inverse trig ratios to find angles, and solving problems with them.</span></div>
+</section>
+
+<!-- ================= 1. Undoing a trig ratio ================= -->
+<section class="card" data-ink="s1" data-section="1. Undoing a Trig Ratio">
+  <div class="sec-h"><span class="badge">1</span><h2>Undoing a Trig Ratio</h2></div>
+  <p>In Lessons 4 to 7 you started with an <b>angle</b> and used <b>sin</b>, <b>cos</b> or <b>tan</b> to get a <b>ratio</b>. For example, <span class="tex">\tan35^\circ\approx0.7002</span>.</p>
+  <p>Now we go the other way: we know the ratio and want the angle. To go backwards, we use an <b>inverse</b> trig ratio. “Inverse” means “undo”, the way subtracting undoes adding and the square root undoes squaring.</p>
+  <div class="explainer" data-explainer="undo"></div>
+  <div class="def u7l8-gap"><b>Key idea</b> &nbsp; <b>Inverse trig ratios</b> <span class="muted">(read <span class="tex">\sin^{-1}</span> as “inverse sine”)</span>
+    <table class="u7l8-kt">
+      <tr><td>If <span class="tex">\sin\theta=0.5</span>,</td><td>then <span class="tex">\theta=\sin^{-1}(0.5)=30^\circ</span>.</td><td>“Which angle has a sine of 0.5?”</td></tr>
+      <tr><td>If <span class="tex">\cos\theta=0.2</span>,</td><td>then <span class="tex">\theta=\cos^{-1}(0.2)\approx78^\circ</span>.</td><td>“Which angle has a cosine of 0.2?”</td></tr>
+      <tr><td>If <span class="tex">\tan\theta=0.7002</span>,</td><td>then <span class="tex">\theta=\tan^{-1}(0.7002)\approx35^\circ</span>.</td><td>“Which angle has a tangent of 0.7002?”</td></tr>
+    </table></div>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. The Inverse Keys">
+  <h3 class="sub">The inverse keys on your calculator</h3>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>First check that the screen shows <b>DEG</b> (degree mode). If it shows RAD or GRAD, press <span class="keys"><kbd>DRG</kbd></span>, choose DEG with the arrow keys and press <span class="keys"><kbd>ENTER</kbd></span>.<br>
+    The inverse keys are the <b>second functions</b> of the trig keys: <span class="keys"><kbd>2nd</kbd><kbd>sin</kbd></span> gives <span class="tex">\sin^{-1}</span>, <span class="keys"><kbd>2nd</kbd><kbd>cos</kbd></span> gives <span class="tex">\cos^{-1}</span>, and <span class="keys"><kbd>2nd</kbd><kbd>tan</kbd></span> gives <span class="tex">\tan^{-1}</span>.<br>
+    Example: <span class="keys"><kbd>2nd</kbd><kbd>tan</kbd> 0.7002 <kbd>)</kbd> <kbd>ENTER</kbd></span>. The screen shows tan⁻¹(0.7002) and the answer 34.99…, so the angle is about 35°.</div>
+    <button class="pill" type="button" data-keys="tan⁻¹ 0.7002 ) =">Show me</button></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The <span class="tex">-1</span> is <b>not</b> a power. <span class="tex">\tan^{-1}(0.7002)</span> does <b>not</b> mean <span class="tex">1\div0.7002</span>. It is the angle whose tangent is 0.7002. Round angles to the <b>nearest degree</b> unless the question says otherwise.</div></div>
+  <div class="explainer u7l8-gap" data-explainer="keys"></div>
+</section>
+
+<section class="card" data-extra data-ink="s1x" data-section="1. Not a Power">
+  <h3 class="sub">The −1 is not a power: two different buttons</h3>
+  <div class="explainer" data-explainer="notpower"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Without a calculator: which is bigger, <span class="tex">\tan^{-1}(0.8)</span> or <span class="tex">\tan^{-1}(1.2)</span>? How do you know?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tan^{-1}(1.2)</span>. A bigger tangent means a steeper slope, so a bigger angle. (<span class="tex">\tan^{-1}(1)=45^\circ</span>, so one is a bit under 45° and the other a bit over: about 39° and 50°.)</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Ratio to angle</h3></div>
+  <div class="part"><div class="pl">Find each angle <span class="tex">\theta</span> to the nearest degree.</div>
+    <table class="u7l8-tbl u7l8-t1">
+      <tr><th></th><th>Write it with an inverse</th><th>Calculator shows</th><th><span class="tex">\theta</span> (nearest degree)</th></tr>
+      <tr><th>(a) <span class="tex">\sin\theta=0.6157</span></th><td><span data-reveal="&nbsp;"><span class="tex">\theta=\sin^{-1}(0.6157)</span></span></td><td><span data-reveal="&nbsp;">38.0028…</span></td><td><span data-reveal="&nbsp;">38°</span></td></tr>
+      <tr><th>(b) <span class="tex">\cos\theta=0.3420</span></th><td><span data-reveal="&nbsp;"><span class="tex">\theta=\cos^{-1}(0.3420)</span></span></td><td><span data-reveal="&nbsp;">70.0012…</span></td><td><span data-reveal="&nbsp;">70°</span></td></tr>
+      <tr><th>(c) <span class="tex">\tan\theta=0.4663</span></th><td><span data-reveal="&nbsp;"><span class="tex">\theta=\tan^{-1}(0.4663)</span></span></td><td><span data-reveal="&nbsp;">24.9996…</span></td><td><span data-reveal="&nbsp;">25°</span></td></tr>
+      <tr><th>(d) <span class="tex">\sin\theta=0.95</span></th><td><span data-reveal="&nbsp;"><span class="tex">\theta=\sin^{-1}(0.95)</span></span></td><td><span data-reveal="&nbsp;">71.8051…</span></td><td><span data-reveal="&nbsp;">72°</span></td></tr>
+      <tr><th>(e) <span class="tex">\cos\theta=0.875</span></th><td><span data-reveal="&nbsp;"><span class="tex">\theta=\cos^{-1}(0.875)</span></span></td><td><span data-reveal="&nbsp;">28.9550…</span></td><td><span data-reveal="&nbsp;">29°</span></td></tr>
+      <tr><th>(f) <span class="tex">\tan\theta=2.5</span></th><td><span data-reveal="&nbsp;"><span class="tex">\theta=\tan^{-1}(2.5)</span></span></td><td><span data-reveal="&nbsp;">68.1985…</span></td><td><span data-reveal="&nbsp;">68°</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>38°</b> · (b) <b>70°</b> · (c) <b>25°</b> · (d) <b>72°</b> (71.8 rounds up) · (e) <b>29°</b> (28.96 rounds up) · (f) <b>68°</b>. A tangent can be more than 1, like 2.5: that just means a steep angle, more than 45°.</div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1c" data-section="1. When the Ratio Is a Fraction">
+  <h3 class="sub">When the ratio is a fraction</h3>
+  <p>In a triangle the ratio usually starts as a fraction, like <span class="tex">\sin A=\frac58</span>. Type the <b>whole fraction</b> inside the bracket. Do not round the fraction to a short decimal first: that can change the angle.</p>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="tex">\sin A=\frac58</span>: &nbsp; <span class="keys"><kbd>2nd</kbd><kbd>sin</kbd> 5 <kbd>÷</kbd> 8 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 38.68…, so <span class="tex">\angle A\approx39^\circ</span>.</div>
+    <button class="pill" type="button" data-keys="sin⁻¹ 5 ÷ 8 ) =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Type the whole fraction</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) <span class="tex">\sin A=\dfrac58</span>. Find <span class="tex">\angle A</span>.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle A=\sin^{-1}\!\left(\frac58\right)</span><br><span class="tex">\angle A=38.68\ldots\approx39^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">\cos B=\dfrac4{11}</span>. Find <span class="tex">\angle B</span>.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle B=\cos^{-1}\!\left(\frac4{11}\right)</span><br><span class="tex">\angle B=68.67\ldots\approx69^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">\tan C=\dfrac{12}7</span>. Find <span class="tex">\angle C</span>.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle C=\tan^{-1}\!\left(\frac{12}7\right)</span><br><span class="tex">\angle C=59.74\ldots\approx60^\circ</span></div></div></div>
+  </div>
+  <div class="part u7l8-gap"><div class="pl">(d) For part (b), Maya rounded <span class="tex">\frac4{11}</span> to 0.4 first. What angle did she get? Why is it wrong?</div><div class="work" style="--h:90px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\cos^{-1}(0.4)=66.42\ldots\approx66^\circ</span>. That is <b>3° off</b>. <span class="tex">\frac4{11}=0.3636\ldots</span>, and rounding it to 0.4 changed the ratio too much. Keep the whole fraction (or all the decimals) until the end.</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex2x" data-section="Extra Example: Ratio to Angle">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More ratios to angles</h3></div>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) <span class="tex">\sin\theta=0.2588</span></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\sin^{-1}(0.2588)=14.99\ldots\approx15^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">\cos\theta=0.7071</span></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\cos^{-1}(0.7071)=45.00\ldots\approx45^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">\tan\theta=1.7321</span></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tan^{-1}(1.7321)=60.00\ldots\approx60^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(d) <span class="tex">\tan B=\dfrac34</span></div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tan^{-1}\!\left(\frac34\right)=36.86\ldots\approx37^\circ</span></div></div></div>
+  </div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Why can a tangent be more than 1 (like 1.7321), but a sine or cosine never can?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">sin and cos divide by the <b>hypotenuse</b>, the longest side, so they are always less than 1. tan is opp ÷ adj, and opp can be longer than adj (any angle over 45°).</div></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s1d" data-section="1. Maya's Shortcut">
+  <h3 class="sub">Maya’s shortcut, side by side</h3>
+  <div class="explainer" data-explainer="early"></div>
+</section>
+
+<!-- ================= 2. From two sides ================= -->
+<section class="card" data-ink="s2" data-section="2. Finding an Angle From Two Sides">
+  <div class="sec-h"><span class="badge">2</span><h2>Finding an Angle From Two Sides</h2></div>
+  <p>To find an acute angle <span class="tex">\theta</span> in a right triangle, you need <b>two sides</b>. Label them from <span class="tex">\theta</span>’s point of view, as in Lessons 4 to 6: the <b class="u7l8-hyp">hypotenuse</b> (hyp) is across from the right angle and is the longest side; the <b class="u7l8-opp">opposite</b> side (opp) is across from <span class="tex">\theta</span>; the <b class="u7l8-adj">adjacent</b> side (adj) touches <span class="tex">\theta</span> and is not the hypotenuse.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Finding an angle</b>
+    <ol class="u7l8-steps">
+      <li><b>Step 1:</b> Label the sides opp, adj and hyp from the angle you want.</li>
+      <li><b>Step 2:</b> Circle the two sides you know. Choose the ratio that uses them (SOH CAH TOA):
+        <div class="u7l8-soh"><span>opp and hyp → <span class="tex">\sin\theta=\dfrac{\text{opp}}{\text{hyp}}</span></span><span>adj and hyp → <span class="tex">\cos\theta=\dfrac{\text{adj}}{\text{hyp}}</span></span><span>opp and adj → <span class="tex">\tan\theta=\dfrac{\text{opp}}{\text{adj}}</span></span></div></li>
+      <li><b>Step 3:</b> Write the ratio and put in the two lengths.</li>
+      <li><b>Step 4:</b> Use the inverse key: <span class="tex">\theta=\sin^{-1}(\ldots)</span>, <span class="tex">\cos^{-1}(\ldots)</span> or <span class="tex">\tan^{-1}(\ldots)</span>. Round to the nearest degree.</li>
+    </ol></div>
+  <div class="explainer u7l8-gap" data-explainer="steps"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Label, choose, find θ</h3></div>
+  <div class="pl">Label the two given sides opp, adj or hyp from <span class="tex">\theta</span>. Then find <span class="tex">\theta</span> to the nearest degree.</div>
+  <div class="parts c3 u7l8-p3">
+    <div class="part"><div class="pl">(a)</div><div class="u7l8-fig" data-fig="ex3a"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">9 cm is adj, 5 cm is opp: <b>tan</b>.<br><span class="tex">\tan\theta=\frac59</span>, &nbsp;<span class="tex">\theta=\tan^{-1}\!\left(\frac59\right)</span><br><span class="tex">\theta=29.05\ldots\approx29^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u7l8-fig" data-fig="ex3b"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">7 m is opp, 12 m is hyp: <b>sin</b>.<br><span class="tex">\sin\theta=\frac7{12}</span>, &nbsp;<span class="tex">\theta=\sin^{-1}\!\left(\frac7{12}\right)</span><br><span class="tex">\theta=35.68\ldots\approx36^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c)</div><div class="u7l8-fig" data-fig="ex3c"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">8.5 cm is adj, 11 cm is hyp: <b>cos</b>.<br><span class="tex">\cos\theta=\frac{8.5}{11}</span>, &nbsp;<span class="tex">\theta=\cos^{-1}\!\left(\frac{8.5}{11}\right)</span><br><span class="tex">\theta=39.40\ldots\approx39^\circ</span></div></div></div>
+  </div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Part (c): <span class="keys"><kbd>2nd</kbd><kbd>cos</kbd> 8.5 <kbd>÷</kbd> 11 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 39.40…</div>
+    <button class="pill" type="button" data-keys="cos⁻¹ 8.5 ÷ 11 ) =">Show me</button></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> In part (a), could you use sin instead of tan?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Not yet: sin needs the <b>hyp</b>, and we don’t know it. You could find it first with the Pythagorean theorem (<span class="tex">\sqrt{9^2+5^2}\approx10.30</span>), then <span class="tex">\sin^{-1}\!\left(\frac5{10.30}\right)\approx29^\circ</span>, the same angle. Using the two sides you were given is quicker and safer.</div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2t" data-section="2. Try It: Tilt the Ramp">
+  <h3 class="sub">Try it: tilt the ramp</h3>
+  <p>Drag the <b>round handle</b> at the top of the ramp: up and down changes the <b>rise</b>, left and right changes the <b>run</b>. All three ratios give the <b>same angle</b>. Tap <b>Hide the angle</b> and let the class guess first.</p>
+  <div class="u7l8-tool" id="u7l8-ramp"></div>
+</section>
+
+<!-- ================= 3. The other acute angle ================= -->
+<section class="card" data-ink="s3" data-section="3. The Other Acute Angle, and Checking">
+  <div class="sec-h"><span class="badge">3</span><h2>The Other Acute Angle, and Checking</h2></div>
+  <p>The three angles of any triangle add to 180°. In a right triangle one angle is 90°, so the two <b>acute angles add to 90°</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Other acute angle <span class="tex">=90^\circ-\theta</span></b> &nbsp; <span class="muted">(for example, if one acute angle is 28°, the other is <span class="tex">90^\circ-28^\circ=62^\circ</span>)</span></div>
+  <p class="u7l8-gap">You can <b>check</b> an angle by finding it a second way: with a different ratio, or from the other angle’s point of view. Both ways should give the same answer.</p>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> When you move to the other acute angle, <b>opp and adj swap</b>. The side that was opposite the first angle is adjacent to the second one. The hypotenuse never changes.</div></div>
+  <div class="explainer u7l8-gap" data-explainer="other"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Both acute angles, checked</h3></div>
+  <div class="u7l8-ex4">
+    <div>
+      <p class="u7l8-p">In <span class="tex">\triangle ABC</span>, <span class="tex">\angle C=90^\circ</span>. The sides are <span class="tex">a=8</span> cm, <span class="tex">b=15</span> cm and <span class="tex">c=17</span> cm.</p>
+      <div class="parts c1">
+        <div class="part"><div class="pl">(a) Find <span class="tex">\angle A</span> with the tangent ratio.</div><div class="work" style="--h:80px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From <span class="tex">A</span>: opp <span class="tex">=a=8</span>, adj <span class="tex">=b=15</span>.<br><span class="tex">\tan A=\frac8{15}</span>, &nbsp;<span class="tex">\angle A=\tan^{-1}\!\left(\frac8{15}\right)=28.07\ldots\approx28^\circ</span></div></div></div>
+        <div class="part"><div class="pl">(b) Check <span class="tex">\angle A</span> with the sine ratio.</div><div class="work" style="--h:70px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp <span class="tex">=8</span>, hyp <span class="tex">=17</span>. <span class="tex">\sin A=\frac8{17}</span>, &nbsp;<span class="tex">\angle A=\sin^{-1}\!\left(\frac8{17}\right)=28.07\ldots\approx28^\circ</span> ✓</div></div></div>
+      </div>
+    </div>
+    <div class="u7l8-fig" data-fig="ex4"></div>
+  </div>
+  <div class="parts c2 u7l8-gap">
+    <div class="part"><div class="pl">(c) Find <span class="tex">\angle B</span> by subtracting.</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle B=90^\circ-28.07^\circ=61.93^\circ\approx62^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(d) Check <span class="tex">\angle B</span> with a ratio from <span class="tex">B</span>’s point of view.</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From <span class="tex">B</span>: opp <span class="tex">=b=15</span>, adj <span class="tex">=a=8</span> (they swapped).<br><span class="tex">\angle B=\tan^{-1}\!\left(\frac{15}8\right)=61.92\ldots\approx62^\circ</span> ✓</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Find both angles</h3></div>
+  <div class="u7l8-ex4">
+    <div class="part"><div class="pl">In <span class="tex">\triangle PQR</span>, <span class="tex">\angle R=90^\circ</span>, the hypotenuse <span class="tex">PQ=14.5</span> m and <span class="tex">QR=6.2</span> m. Find <span class="tex">\angle P</span> and <span class="tex">\angle Q</span> to the nearest degree. Check <span class="tex">\angle Q</span> with a ratio.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From <span class="tex">P</span>: <span class="tex">QR=6.2</span> is opp and <span class="tex">PQ=14.5</span> is hyp, so use sin.<br><span class="tex">\sin P=\frac{6.2}{14.5}</span>, &nbsp;<span class="tex">\angle P=\sin^{-1}\!\left(\frac{6.2}{14.5}\right)=25.31\ldots\approx25^\circ</span><br><span class="tex">\angle Q=90^\circ-25.31^\circ=64.69^\circ\approx65^\circ</span><br>Check: from <span class="tex">Q</span>, <span class="tex">QR=6.2</span> is adj. <span class="tex">\angle Q=\cos^{-1}\!\left(\frac{6.2}{14.5}\right)=64.68\ldots\approx65^\circ</span> ✓</div></div></div>
+    <div class="u7l8-fig" data-fig="ex5"></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex5x" data-section="Extra Example: Both Acute Angles">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>Both acute angles</h3></div>
+  <p class="u7l8-p">In <span class="tex">\triangle DEF</span>, <span class="tex">\angle F=90^\circ</span>, the legs are <span class="tex">d=9</span> cm and <span class="tex">e=12</span> cm, and the hypotenuse is <span class="tex">f=15</span> cm.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Find <span class="tex">\angle D</span>.</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From <span class="tex">D</span>: opp 9, adj 12. <span class="tex">\tan^{-1}\!\left(\frac9{12}\right)=36.86\ldots\approx37^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) Find <span class="tex">\angle E</span> by subtracting.</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">90^\circ-36.87^\circ=53.13^\circ\approx53^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c) Check <span class="tex">\angle E</span> with the sine ratio.</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From <span class="tex">E</span>: opp 12, hyp 15. <span class="tex">\sin^{-1}\!\left(\frac{12}{15}\right)=53.13\ldots\approx53^\circ</span> ✓</div></div></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s3x" data-section="3. Why They Add to 90°">
+  <h3 class="sub">Why do the two acute angles always add to 90°?</h3>
+  <div class="explainer" data-explainer="sum90"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Jonah says a right triangle has angles of 90°, 50° and 50°. Can he be right?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. The two acute angles must add to 90°, but <span class="tex">50^\circ+50^\circ=100^\circ</span>. All three would add to 190°, not 180°. If one acute angle is 50°, the other is <span class="tex">90^\circ-50^\circ=40^\circ</span>.</div></div></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u7l8"></section>
+
+<!-- ================= 4. Is it reasonable? ================= -->
+<section class="card" data-ink="s4" data-section="4. Is the Angle Reasonable?">
+  <div class="sec-h"><span class="badge">4</span><h2>Is the Angle Reasonable?</h2></div>
+  <p>A calculator does exactly what you type, so a small slip gives a wrong angle. Before you write your answer, compare it with these benchmarks.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Quick checks for an angle <span class="tex">\theta</span> in a right triangle</b>
+    <ul class="u7l8-ul">
+      <li>If the two legs are <b>equal</b>, <span class="tex">\theta=45^\circ</span>. If opp is <b>shorter</b> than adj, <span class="tex">\theta</span> is <b>less than</b> 45°. If opp is <b>longer</b>, <span class="tex">\theta</span> is <b>more than</b> 45°.</li>
+      <li>If opp is <b>half</b> the hypotenuse, <span class="tex">\theta=30^\circ</span> (<span class="tex">\sin30^\circ=0.5</span>). If adj is half the hypotenuse, <span class="tex">\theta=60^\circ</span>.</li>
+      <li>The bigger acute angle is across from the longer leg.</li>
+      <li>An <b>ERROR</b> with <span class="tex">\sin^{-1}</span> or <span class="tex">\cos^{-1}</span> means the number was more than 1. The hypotenuse is the longest side, so it always goes on the <b>bottom</b>.</li>
+      <li>A tiny answer like 0.5 (for an angle that looks like about 30°) means the calculator is in <b>RAD</b> mode.</li>
+    </ul></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Liv’s angle looks like about 60°, but her calculator shows 1.047. What happened?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Her calculator is in <b>RAD</b> mode (60° is about 1.047 radians). Press <span class="keys"><kbd>DRG</kbd></span>, choose DEG, and do it again.</div></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Where the Benchmarks Come From">
+  <h3 class="sub">Where the benchmarks come from</h3>
+  <div class="explainer" data-explainer="bench"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Find the mistake</h3></div>
+  <div class="u7l8-ex6h">
+    <p class="u7l8-p">A right triangle has legs of 6 m and 11 m. Ava, Ben and Cara each tried to find the angle <span class="tex">\theta</span> across from the 6 m leg. Each one made a mistake. Find it and fix it.</p>
+    <div class="u7l8-fig" data-fig="ex6"></div>
+  </div>
+  <div class="part">
+    <table class="u7l8-tbl u7l8-t6">
+      <tr><th>Student’s work</th><th>What went wrong? (Use a quick check.)</th><th>Correct work</th></tr>
+      <tr><td>(a) Ava: <span class="tex">\theta=\tan^{-1}\!\left(\frac{11}6\right)\approx61^\circ</span></td><td><span data-reveal="&nbsp;">opp (6) is shorter than adj (11), so <span class="tex">\theta</span> must be less than 45°. She put adj on top.</span></td><td><span data-reveal="&nbsp;"><span class="tex">\theta=\tan^{-1}\!\left(\frac6{11}\right)=28.61\ldots\approx29^\circ</span></span></td></tr>
+      <tr><td>(b) Ben: <span class="tex">\tan^{-1}\!\left(\frac6{11}\right)</span> shows 0.4993</td><td><span data-reveal="&nbsp;">0.5 is far too small for this triangle. His calculator is in RAD mode.</span></td><td><span data-reveal="&nbsp;">Press <span class="keys"><kbd>DRG</kbd></span>, choose DEG. <span class="tex">\theta\approx29^\circ</span></span></td></tr>
+      <tr><td>(c) Cara (a different triangle: adj 9.6 m, hyp 15 m): <span class="tex">\cos^{-1}\!\left(\frac{15}{9.6}\right)</span> gives ERROR</td><td><span data-reveal="&nbsp;"><span class="tex">\frac{15}{9.6}</span> is more than 1. The hyp must go on the bottom.</span></td><td><span data-reveal="&nbsp;"><span class="tex">\theta=\cos^{-1}\!\left(\frac{9.6}{15}\right)=50.20\ldots\approx50^\circ</span></span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) adj on top: <b>29°</b>, not 61° · (b) RAD mode: switch to DEG, <b>29°</b> · (c) hyp on top: <b>50°</b>. Ava’s 61° is the <b>other</b> acute angle: <span class="tex">90^\circ-29^\circ=61^\circ</span>.</div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Cara’s keys: <span class="keys"><kbd>2nd</kbd><kbd>cos</kbd> 15 <kbd>÷</kbd> 9.6 <kbd>)</kbd> <kbd>ENTER</kbd></span> gives an error. Then the right way round: 9.6 <kbd>÷</kbd> 15.</div>
+    <button class="pill" type="button" data-keys="cos⁻¹ 15 ÷ 9.6 ) =">Cara’s keys</button>
+    <button class="pill" type="button" data-keys="cos⁻¹ 9.6 ÷ 15 ) =">Fixed</button></div>
+  <div class="explainer u7l8-gap" data-explainer="checks"></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 8 · Questions 1–8</h2>
+  <p class="pr-t">Check that your calculator shows DEG. Try these before we use angles on the job.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Ratio to angle</span>
+    <span><b>2</b>Type the whole fraction</span>
+    <span><b>3</b>Label, choose, find θ</span>
+    <span><b>4</b>The other acute angle</span>
+    <span><b>5</b>Find, subtract, check</span>
+    <span><b>6</b>Two ways, same angle</span>
+    <span><b>7</b>More or less than 45°?</span>
+    <span><b>8</b>ERROR and RAD</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u7l8">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. On the job ================= -->
+<section class="card" data-ink="s5" data-section="5. Angles on the Job">
+  <div class="sec-h"><span class="badge">5</span><h2>Angles on the Job: Ladders, Ramps and Roofs</h2></div>
+  <p>Many jobs need an angle that you cannot measure easily, but you <b>can</b> measure two lengths. Sketch a right triangle, mark the right angle, write the lengths you know, mark the angle you want, then follow the four steps.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Safety guidelines</b> <span class="muted">(approximate; always follow the rules for your job site)</span>
+    <ul class="u7l8-ul">
+      <li><b>Ladders:</b> a ladder should make an angle of <b>about 75°</b> with the ground. <span class="muted">(Rule of thumb: 1 m out from the wall for every 4 m of ladder.)</span></li>
+      <li><b>Wheelchair ramps:</b> a slope of 1 in 12 (1 m up for every 12 m along the ground), which is <b>about 4.8°</b>, is the steepest usually allowed.</li>
+      <li><b>Roof pitch:</b> a “5/12 pitch” means the roof rises 5 inches for every 12 inches across.</li>
+    </ul></div>
+  <div class="explainer u7l8-gap" data-explainer="jobs"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>A ladder and a ramp</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A painter leans a 6 m ladder against a wall. The foot of the ladder is 1.5 m from the wall. What angle does the ladder make with the ground? Is it safe?</div><div class="u7l8-fig" data-fig="ex7a"></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From <span class="tex">\theta</span>: the ground distance 1.5 m is adj, the ladder 6 m is hyp. Use cos.<br><span class="tex">\cos\theta=\frac{1.5}6</span>, &nbsp;<span class="tex">\theta=\cos^{-1}\!\left(\frac{1.5}6\right)=75.52\ldots\approx76^\circ</span><br>This is very close to 75°, so the ladder is set up <b>safely</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A wheelchair ramp at a community hall is 8 m long (along the ramp surface). It rises 0.6 m. Find the angle between the ramp and the ground, to the nearest tenth of a degree. Does it meet the guideline?</div><div class="u7l8-fig" data-fig="ex7b"></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From <span class="tex">\theta</span>: the rise 0.6 m is opp, the ramp 8 m is hyp. Use sin.<br><span class="tex">\sin\theta=\frac{0.6}8</span>, &nbsp;<span class="tex">\theta=\sin^{-1}\!\left(\frac{0.6}8\right)=4.30\ldots\approx4.3^\circ</span><br>4.3° is less than about 4.8°, so <b>yes</b>, the ramp meets the guideline.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A roof and a drone</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A garage roof has a 5/12 pitch. Find the angle <span class="tex">\theta</span> between the roof and the horizontal. Then find angle <span class="tex">x</span> at the peak, between the rafter and the vertical centre post.</div><div class="u7l8-fig" data-fig="ex8a"></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The pitch triangle has opp <span class="tex">=5</span> and adj <span class="tex">=12</span>. Use tan.<br><span class="tex">\theta=\tan^{-1}\!\left(\frac5{12}\right)=22.61\ldots\approx23^\circ</span><br>The post, the rafter and the horizontal make a right triangle, so <span class="tex">x=90^\circ-22.62^\circ=67.38^\circ\approx67^\circ</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) A drone is hovering 90 m above a field. A car is parked 140 m away, measured along the ground. Find the angle of depression from the drone to the car.</div><div class="u7l8-fig" data-fig="ex8b"></div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The angle of depression at the drone equals the angle of elevation at the car (alternate interior angles). From the car: opp <span class="tex">=90</span>, adj <span class="tex">=140</span>.<br><span class="tex">\theta=\tan^{-1}\!\left(\frac{90}{140}\right)=32.73\ldots\approx33^\circ</span>. The angle of depression is about <b>33°</b>.</div></div></div>
+  </div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Part (b): <span class="keys"><kbd>2nd</kbd><kbd>tan</kbd> 90 <kbd>÷</kbd> 140 <kbd>)</kbd> <kbd>ENTER</kbd></span> shows 32.73…</div>
+    <button class="pill" type="button" data-keys="tan⁻¹ 90 ÷ 140 ) =">Show me</button></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example: More Angles on the Job">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>More angles on the job</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A skateboard ramp rises 0.9 m over 2.4 m along the ground. Find its angle.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp 0.9, adj 2.4: tan.<br><span class="tex">\tan^{-1}\!\left(\frac{0.9}{2.4}\right)=20.55\ldots\approx21^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) A grain conveyor belt is 15 m long and lifts the grain 4 m. Find the angle of the belt.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp 4, hyp 15 (the belt): sin.<br><span class="tex">\sin^{-1}\!\left(\frac4{15}\right)=15.46\ldots\approx15^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c) A ramp rises 0.3 m over 3.6 m along the ground. Does it meet the 4.8° guideline?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">opp 0.3, adj 3.6: tan.<br><span class="tex">\tan^{-1}\!\left(\frac{0.3}{3.6}\right)=4.76\ldots\approx4.8^\circ</span>. Just meets it: <span class="tex">0.3\div3.6</span> is exactly 1 in 12.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Inverse = undo.</b> <span class="tex">\sin^{-1}</span>, <span class="tex">\cos^{-1}</span>, <span class="tex">\tan^{-1}</span> turn a ratio back into an angle. Keys: <b>2nd</b> sin / cos / tan, in <b>DEG</b> mode. The <span class="tex">-1</span> is not a power.</div>
+    <div><b>Four steps:</b> label opp, adj, hyp from <span class="tex">\theta</span>; circle the two sides you know; write the ratio (SOH CAH TOA); use the inverse key with the <b>whole fraction</b>. Round to the nearest degree.</div>
+    <div><b>Other acute angle</b> <span class="tex">=90^\circ-\theta</span>. From the other angle, opp and adj <b>swap</b> (hyp stays). Check with a second ratio.</div>
+    <div><b>Reasonable?</b> opp &lt; adj means less than 45°. ERROR: the hyp must go on the bottom. A tiny answer: RAD mode. On the job: ladders about 75°, ramps at most about 4.8°.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u7l8">
+    <div><div class="kicker">Your turn</div><b>Assignment 8 · Questions 9–18</b><div class="muted">Jayden’s ladder, two wheelchair ramps, a roof-pitch table, a zipline and a lighthouse, a guy wire, a ski run near Calgary, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l9/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 9 — Solving Right Triangles: Choosing the Right Ratio</b><div class="muted">Pythagoras, sin, cos or tan? A routine that picks the right tool, then whole triangles and two-triangle problems.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u7l8.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u7l8', homeHref: '../../', title: '7.8 Finding Angles with Inverse Trig Ratios' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

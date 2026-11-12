@@ -1,0 +1,71 @@
+/* Math 10-3 · Unit 6 · Lesson 4 — Scale Diagrams: Maps and Floor Plans: styles used only on this page (prefix u6l4-).
+ * Colours: drawing / plan lengths blue, real lengths red, verdicts green (fits) / red (doesn't) / amber (too small). */
+.u6l4 .ans .katex, .u6l4 .pl .katex, .u6l4 .def .katex { font-size: 1.06em; }
+.u6l4 .ex-cap .katex { font-size: 1.04em; }
+.u6l4-gap { margin-top: 14px; }
+.u6l4-p { margin: 0 0 8px; }
+.u6l4-note { margin-top: 6px; font-size: 18.5px; }
+.u6l4-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 4px; }
+.u6l4-steps li { font-size: 18.5px; }
+.u6l4-two2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+.u6l4-two2 .def { margin: 0; }
+.u6l4-btns { display: inline-flex; gap: 6px; flex-wrap: wrap; }
+
+/* ---------- warm-up ---------- */
+.u6l4-wpoll .poll-opts { grid-template-columns: 1fr 1fr; margin-left: 0; } .u6l4-wpoll > .pill, .u6l4-wpoll .poll-ans { margin-left: 0; }
+.u6l4-wpoll .opt { font-size: 20px; padding: 10px 14px; }
+.u6l4-wans { display: grid; grid-template-columns: 1fr 250px; gap: 18px; align-items: center; font-size: 19px; line-height: 1.4; }
+
+/* ---------- figures ---------- */
+.u6l4-fig { position: relative; margin: 4px auto; flex: none; }
+.u6l4-fig svg, .u6l4-svg { display: block; overflow: visible; }
+.part:not(.shown) .u6l4-fa { visibility: hidden; }
+
+/* ---------- tables ---------- */
+.u6l4-tbl { border-collapse: collapse; font-size: 20px; margin: 8px 0 4px; background: #fff; width: 100%; }
+.u6l4-tbl th, .u6l4-tbl td { border: 2px solid #b9ad97; padding: 6px 10px; text-align: center; height: 46px; }
+.u6l4-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u6l4-tbl tr > th:first-child { text-align: left; white-space: nowrap; }
+.u6l4-ways th { text-align: center !important; }
+.u6l4-ways td { width: 33%; font-size: 21px; }
+.u6l4-ways .u6l4-fig { margin: 0 auto; }
+.u6l4-t1 td { width: 30%; }
+.u6l4-t1 tr > th:first-child { width: 50px; }
+.u6l4-t3 td { width: 25%; }
+.u6l4-t8 { width: auto; min-width: 380px; }
+.u6l4-t8 td { width: 110px; }
+
+/* ---------- example layouts ---------- */
+.u6l4-ex2 { display: grid; grid-template-columns: 430px 1fr; gap: 20px; align-items: start; }
+.u6l4-ex2 .parts { margin: 0; }
+.u6l4-ex3 { display: grid; grid-template-columns: 420px 1fr; gap: 20px; align-items: start; }
+.u6l4-ex8 { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: start; }
+.u6l4-ex9 { display: grid; grid-template-columns: 624px 1fr; gap: 16px; align-items: start; }
+.u6l4-ex9 .parts { margin: 0; }
+.u6l4-tape .geo-readout { font-size: 19px; min-height: 30px; }
+.u6l4-tape.u6l4-hid .geo-readout { visibility: hidden; }
+.u6l4-tbtn { margin-top: 4px; }
+
+/* ---------- explainer labels ---------- */
+.u6l4-hold { position: absolute; width: 0; height: 0; }
+.u6l4-lab { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap; font: 700 20px var(--round); color: var(--ink); text-align: center; }
+.u6l4-left .u6l4-lab, .u6l4-lab.u6l4-left { transform: translate(0, -50%); text-align: left; }
+.u6l4-card { padding: 8px 14px; background: #fff; border: 2px solid var(--line); border-radius: 12px; font-size: 21px; line-height: 1.35; }
+.u6l4-card .u6l4-k { display: block; font: 800 14px var(--round); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.u6l4-big { font: 900 34px var(--round); }
+.u6l4-work { font-size: 22px; font-weight: 600; padding: 3px 10px; background: #fff; border-radius: 10px; }
+.u6l4-res { font-size: 22px; padding: 6px 14px; background: #fff; border: 3px solid var(--brand2); border-radius: 12px; }
+.u6l4-tok { font: 800 22px var(--round); padding: 4px 12px; border-radius: 999px; background: #fff; border: 2.5px solid currentColor; }
+.u6l4-d { color: var(--blue, #1f5bd6); }
+.u6l4-r { color: var(--red, #c93a33); }
+.u6l4-tag { font: 800 18px var(--round); padding: 1px 8px; border-radius: 8px; background: #fff; }
+.u6l4-small { font-size: 16px; font-weight: 700; }
+.u6l4-lamp { font: 800 20px var(--round); padding: 8px 14px; border: 3px solid #cfc6b4; border-radius: 12px; background: #fff; color: #8e8678; min-width: 210px; }
+.u6l4-lamp.u6l4-on { border-color: var(--brand2); background: #fff4dc; color: var(--brand); box-shadow: 0 0 0 4px rgba(194, 122, 14, .18); }
+
+/* the plan table inside the floor-plan explainer */
+.u6l4-pt { display: grid; grid-template-columns: 150px 120px 120px; border: 2px solid #b9ad97; border-radius: 10px; overflow: hidden; background: #fff; }
+.u6l4-pt > div { height: 38px; display: grid; place-items: center; font: 700 19px var(--round); border-right: 1.5px solid #e2dacb; border-bottom: 1.5px solid #e2dacb; }
+.u6l4-pt .u6l4-pth { background: var(--brand-soft); font-size: 16px; }
+.u6l4-pt .u6l4-ptl { justify-items: start; padding-left: 10px; font-size: 17px; }
+.u6l4-pt .u6l4-ptp { color: var(--blue, #1f5bd6); }

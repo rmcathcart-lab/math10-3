@@ -1,0 +1,107 @@
+/* Math 10-3 · Unit 7 · Lesson 8 — Finding Angles with Inverse Trig Ratios: styles used only on this page (prefix u7l8-).
+ * Role colours as in geo.js: opp red, adj blue, hyp brown; θ amber. */
+.u7l8 .ans .katex, .u7l8 .pl .katex, .u7l8 .def .katex { font-size: 1.08em; }
+.u7l8-gap { margin-top: 14px; }
+.u7l8-p { margin: 0 0 8px; }
+.u7l8-opp, .u7l8 b.u7l8-opp { color: #c93a33; }
+.u7l8-adj, .u7l8 b.u7l8-adj { color: #1f5bd6; }
+.u7l8-hyp, .u7l8 b.u7l8-hyp { color: #9a6a24; }
+
+/* ---------- warm-up ---------- */
+.u7l8-wq .bk-ans { display: grid; grid-template-columns: 250px 1fr; gap: 18px; align-items: center; font-size: 20px; color: var(--ink); }
+.u7l8-wsol svg { width: 250px; height: auto; display: block; overflow: visible; }
+.u7l8-wflip { transform-box: view-box; transform-origin: 130px 65px; }
+.u7l8-wq.shown .u7l8-wflip { animation: u7l8-flip 1.6s ease-in-out .3s forwards; }
+@keyframes u7l8-flip { from { transform: rotate(0deg); } to { transform: rotate(180deg); } }
+@media (prefers-reduced-motion: reduce) { .u7l8-wq.shown .u7l8-wflip { animation: none; transform: rotate(180deg); } }
+
+/* ---------- key ideas, steps, lists ---------- */
+.u7l8-kt { border-collapse: collapse; margin-top: 8px; font-size: 19px; }
+.u7l8-kt td { padding: 4px 18px 4px 0; }
+.u7l8-kt td:last-child { color: var(--muted); }
+.u7l8-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 6px; }
+.u7l8-steps li { font-size: 19px; }
+.u7l8-soh { display: flex; gap: 26px; margin: 6px 0 2px 22px; flex-wrap: wrap; }
+.u7l8-ul { margin: 6px 0 0; padding-left: 22px; display: grid; gap: 5px; }
+.u7l8-ul li { font-size: 19px; }
+
+/* ---------- tables ---------- */
+.u7l8-tbl { border-collapse: collapse; font-size: 19px; margin: 8px 0 4px; background: #fff; width: 100%; }
+.u7l8-tbl th, .u7l8-tbl td { border: 2px solid #b9ad97; padding: 6px 10px; text-align: center; height: 50px; }
+.u7l8-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u7l8-t1 tr > th:first-child { text-align: left; white-space: nowrap; font: 600 19px var(--font); background: #fbf7f0; }
+.u7l8-t1 tr:first-child > th:first-child { background: var(--brand-soft); }
+.u7l8-t1 td { width: 27%; }
+.u7l8-t6 td { text-align: left; font-size: 18px; width: 33%; vertical-align: middle; }
+.u7l8-t6 td:first-child { background: #fbf7f0; }
+
+/* ---------- figures and example layouts ---------- */
+.u7l8-fig { position: relative; margin: 4px auto; flex: none; }
+.u7l8-fig svg, .u7l8-svg { display: block; overflow: visible; }
+.u7l8-p3 .part { align-items: center; }
+.u7l8-p3 .pl { align-self: stretch; }
+.u7l8-ex4 { display: grid; grid-template-columns: 1fr 370px; gap: 18px; align-items: start; }
+.u7l8-ex4 .parts { margin: 0; }
+.u7l8-ex6h { display: grid; grid-template-columns: 1fr 310px; gap: 18px; align-items: center; }
+.u7l8-sufig { display: flex; justify-content: center; }
+
+/* ---------- explainer labels and working ---------- */
+.u7l8-hold { position: absolute; width: 0; height: 0; }
+.u7l8-lab { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); white-space: nowrap; font: 700 21px var(--round); color: var(--ink); text-align: center; }
+.u7l8-lab.u7l8-left { transform: translate(0, -50%); }
+.u7l8-lab.u7l8-right { transform: translate(-100%, -50%); }
+.u7l8-big { font: 900 52px var(--round); color: #1f5bd6; }
+.u7l8-mach { font-size: 50px; color: #6e4a1c; }
+.u7l8-mach .katex { font-size: 1.1em; }
+.u7l8-token { font: 800 26px var(--round); padding: 4px 14px; background: #fff; border: 3px solid #c27a0e; border-radius: 999px; color: #6e4a1c; }
+.u7l8-note { font-size: 21px; font-weight: 600; color: var(--muted); }
+.u7l8-small { font-size: 18px; }
+.u7l8-hypc { color: #9a6a24; } .u7l8-adjc { color: #1f5bd6; } .u7l8-oppc { color: #c93a33; }
+.u7l8-tag { font: 700 22px var(--round); padding: 6px 16px; border: 3px solid var(--brand2); border-radius: 14px; background: #fff; color: var(--brand); }
+.u7l8-tag.u7l8-tagok { border-color: #12805a; color: #12805a; }
+.u7l8-tag.u7l8-tagno { border-color: #c93a33; color: #c93a33; }
+.u7l8-eq { font-size: 24px; padding: 4px 12px; background: #fff; border-radius: 10px; }
+.u7l8-read { font-size: 22px; line-height: 1.5; padding: 8px 18px; background: #fff; border: 2px solid var(--line); border-radius: 12px; font-weight: 500; }
+.u7l8-wl { position: absolute; white-space: nowrap; font-size: 21px; line-height: 1.3; }
+.u7l8-wbig { font-size: 25px; }
+.u7l8-wmid { font-size: 21px; }
+.u7l8-wsm { font-size: 19px; white-space: normal; width: 400px; line-height: 1.4; }
+.u7l8-wans { padding: 2px 10px; background: #e8f5ee; border: 2px solid #12805a; border-radius: 10px; }
+.u7l8-stu { font-size: 21px; padding: 10px 16px; background: #fffbe8; border: 2px solid #e2c873; border-radius: 12px; white-space: nowrap; }
+
+/* ---------- the mini TI-30XIIS ---------- */
+.u7l8-lcd { position: absolute; }
+.u7l8-lcdt { font: 800 17px var(--round); color: var(--muted); margin: 0 0 4px 4px; }
+.u7l8-scr { box-sizing: border-box; background: #c9d4bf; border: 6px solid #3a4254; border-radius: 14px; padding: 4px 14px 6px; color: #1d2a18; box-shadow: inset 0 2px 6px rgba(0,0,0,.25); }
+.u7l8-ind { display: flex; gap: 12px; font: 800 13px ui-monospace, Menlo, monospace; height: 16px; }
+.u7l8-im.u7l8-rad { color: #c93a33; }
+.u7l8-e { font: 700 24px/1.25 ui-monospace, Menlo, monospace; white-space: nowrap; min-height: 30px; }
+.u7l8-e sup { font-size: .6em; }
+.u7l8-r { font: 800 36px/1.15 ui-monospace, Menlo, monospace; text-align: right; min-height: 42px; }
+.u7l8-r.u7l8-err { font-size: 28px; color: #7e1f16; }
+.u7l8-keys { display: flex; gap: 10px; }
+.u7l8-key { position: relative; width: 52px; height: 42px; display: grid; place-items: center; border-radius: 10px; background: #3a4254; color: #fff; font: 800 15px var(--round); box-shadow: 0 3px 0 #1c2230; margin-top: 16px; transition: transform .1s; }
+.u7l8-key small { position: absolute; top: -18px; left: 0; right: 0; text-align: center; font: 800 11px var(--round); color: #b8860b; }
+.u7l8-key.u7l8-k2 { background: #c9a227; color: #1c2230; }
+.u7l8-key.u7l8-ke { width: 70px; background: #5d6577; }
+.u7l8-key.on { transform: translateY(3px); box-shadow: 0 0 0 4px #f2c94c; }
+
+/* ---------- SOH CAH TOA chooser ---------- */
+.u7l8-soh3 { display: flex; gap: 8px; }
+.u7l8-sc { width: 140px; padding: 6px 4px 8px; background: #fff; border: 2.5px solid var(--line); border-radius: 12px; text-align: center; font-size: 17px; transition: opacity .3s, border-color .3s; }
+.u7l8-sc b { display: block; font: 900 22px var(--round); color: var(--brand); }
+.u7l8-sc.dim { opacity: .35; }
+.u7l8-sc.lit { border-color: #c27a0e; background: #fff6e6; }
+
+/* ---------- the ramp tool ---------- */
+.u7l8-tool { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 10px 16px 14px; }
+.u7l8-rsvg { margin: 0 auto; touch-action: none; }
+.u7l8-knob { cursor: grab; }
+.u7l8-rpanel { display: grid; grid-template-columns: 1fr 280px; gap: 6px 18px; align-items: center; margin-top: 4px; }
+.u7l8-rrows { display: grid; gap: 2px; font-size: 20px; grid-row: span 2; }
+.u7l8-rrows > div { display: flex; align-items: center; gap: 10px; }
+.u7l8-rf { display: inline-block; width: 46px; font: 800 17px var(--round); color: var(--muted); }
+.u7l8-rbadge { font-size: 18px; padding: 8px 12px; border-radius: 12px; background: #f6f5f0; line-height: 1.35; }
+.u7l8-rbadge.ok { background: #e8f5ee; color: #0e6a4a; }
+.u7l8-rbadge.no { background: #fff1d6; color: #8a5a0a; }
+.u7l8-rbtns { display: flex; flex-wrap: wrap; gap: 6px; }

@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Similar Polygons and Scale Factor · Math 10-3 6.1</title>
+<meta name="description" content="Math 10-3 Unit 6 Lesson 1: similar polygons are the same shape (corresponding angles equal, corresponding sides in the same ratio), matching parts with the naming order, the scale factor k = new ÷ original (enlargement, reduction, same size), changing units first, model scales like 1 : 87, and finding missing sides by multiplying or dividing by k. A shape that grows and shrinks with live ratio tags. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u6l1.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u6l1">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Magnifying Glass Riddle">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Magnifying Glass Riddle</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Zoe draws a small triangle on paper. One corner of the triangle is <b>30°</b>.</p><p class="vw-ctx">She looks at the corner through a <b>magnifying glass</b> that makes everything look <b>3 times as big</b>.</p><p class="vw-ask">How big does the 30° corner look through the glass?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="A sheet of paper with a small drawn triangle, and a magnifying glass drifting back and forth above it with a question mark in the lens">
+    <rect x="18" y="40" width="250" height="200" rx="8" fill="#fffdf7" stroke="#b9ab92" stroke-width="3" transform="rotate(-4 143 140)"/>
+    <g stroke="#d9cdb8" stroke-width="2" transform="rotate(-4 143 140)"><line x1="34" y1="80" x2="250" y2="80"/><line x1="34" y1="110" x2="250" y2="110"/><line x1="34" y1="200" x2="250" y2="200"/></g>
+    <path d="M70 182 L150 182 L92 140 Z" fill="#f5ecdf" stroke="#1c2230" stroke-width="3" stroke-linejoin="round" transform="rotate(-4 143 140)"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;34 -10;60 6;24 14;0 0" dur="6s" repeatCount="indefinite"/>
+      <line x1="196" y1="150" x2="248" y2="206" stroke="#6e4a1c" stroke-width="16" stroke-linecap="round"/>
+      <line x1="196" y1="150" x2="248" y2="206" stroke="#9a6a24" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="160" cy="112" r="56" fill="#dff0fb" fill-opacity=".72" stroke="#3a4254" stroke-width="9"/>
+      <path d="M128 88 A40 40 0 0 1 166 72" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+      <text x="160" y="132" font-size="58" font-weight="800" fill="#9a6a24" text-anchor="middle" font-family="system-ui, sans-serif">?<animate attributeName="opacity" values="1;.35;1" dur="2s" repeatCount="indefinite"/></text>
+    </g>
+  </svg></div></div>
+  <div class="poll u6l1-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> 10°</div>
+      <div class="opt right"><b>B</b> 30°</div>
+      <div class="opt"><b>C</b> 33°</div>
+      <div class="opt"><b>D</b> 90°</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u6l1-wans"><div><b>B: still 30°!</b> The glass makes the <b>arms</b> of the corner look 3 times as <b>long</b>, but it does not make the corner open any <b>wider</b>. The amount of turn between the arms stays the same. <span class="muted">Try it with your phone camera: zoom in on the corner of a page. It gets bigger, but it stays a square corner. Today we see why: a bigger copy keeps the same shape.</span></div><div class="u6l1-fig" data-fig="wans" style="width:300px;height:170px"></div></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 6 Similarity and Scale · Lesson 1</div>
+  <h1>Similar Polygons and Scale Factor</h1>
+  <p class="lede">A phone photo and a big poster print of it. A model truck and the real truck. They have the <b>same shape</b>, but not the same size. Today we learn what makes two shapes <b>similar</b>, how to match their corners and sides, and how one number, the <b>scale factor</b>, enlarges, reduces and finds missing lengths.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>tell when two polygons are <b>similar</b>: equal matching angles, and every side multiplied by the <b>same number</b></li>
+      <li>use the <b>naming order</b> (like <span class="tex">ABCD\sim PQRS</span>) to match corresponding angles and sides, even when a figure is turned or flipped</li>
+      <li>find the <b>scale factor</b> <span class="tex">k=\text{new}\div\text{original}</span> and say if it is an <b>enlargement</b>, a <b>reduction</b> or the <b>same size</b></li>
+      <li>use <span class="tex">k</span> to find a missing side: <b>multiply</b> for the new figure, <b>divide</b> for the original</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G3</b> Demonstrate an understanding of similarity of convex polygons, including regular and irregular polygons.<br><span class="muted">Today: what similar means, corresponding parts, the scale factor, and finding missing sides.</span></div>
+</section>
+
+<!-- ================= 1. Same shape, different size ================= -->
+<section class="card" data-ink="s1" data-section="1. Same Shape, Different Size">
+  <div class="sec-h"><span class="badge">1</span><h2>Same Shape, Different Size</h2></div>
+  <p>A <b>polygon</b> is a closed flat shape with straight sides: a triangle (3 sides), a quadrilateral (4 sides), a pentagon (5 sides), a hexagon (6 sides), and so on.</p>
+  <p>Two figures are <b>similar</b> if they have exactly the <b>same shape</b>. They can be different sizes. A photo and a bigger print of it are similar. A model car and the real car are similar. But if you stretch a photo in only one direction, everyone in it looks too wide or too thin. The shape has changed, so the stretched photo is <b>not</b> similar to the original.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Two polygons are <b>similar</b> when <b>both</b> of these are true:
+    <ol class="u6l1-steps">
+      <li><b>1. Corresponding angles are equal.</b> The matching corners are the same size.</li>
+      <li><b>2. Corresponding sides are in the same ratio.</b> Every side of one figure is the matching side of the other figure <b>multiplied by the same number</b>.</li>
+    </ol>
+    <div class="u6l1-note">The symbol <span class="tex">\sim</span> means “is similar to”. Figures with the same shape <b>and</b> the same size are <b>congruent</b>. Congruent figures are similar too.</div></div>
+  <div class="tip u6l1-know"><div class="tip-ic">i</div><div><b>Remember.</b> Turning or flipping a figure does not change its shape. Only stretching or squishing does.</div></div>
+  <div class="explainer u6l1-gap" data-explainer="stretch"></div>
+  <div class="part think u6l1-gap" data-extra><div class="pl"><span class="think-tag">Think</span> A photo is 4 inches by 6 inches. A print of it is 8 inches by 10 inches. Is the print similar to the photo?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> The short side was multiplied by <span class="tex">8\div4=2</span>, but the long side by only <span class="tex">10\div6=1.67\ldots</span> The sides were not all multiplied by the same number, so part of the photo gets cut off (or squished).</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Which copies are similar?</h3></div>
+  <p class="u6l1-p">Each small square is 1 unit. Which copies are similar to the original?</p>
+  <div class="u6l1-fig" data-fig="ex1" style="width:946px;height:240px"></div>
+  <div class="parts c2 u6l1-gap">
+    <div class="part"><div class="pl">(a) Which copies are similar to the original?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>A, C and D</b> have the same shape as the original. Copy C is flipped, but its shape did not change.</div></div></div>
+    <div class="part"><div class="pl">(b) For each similar copy, every length was multiplied by what number?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: <b>×2</b> (2 wide → 4 wide, 3 tall → 6 tall)<br>C: <b>×1</b> (same size: congruent)<br>D: <b>×1.5</b> (2 → 3 and 3 → 4.5)</div></div></div>
+  </div>
+  <div class="part"><div class="pl">(c) Explain why copy B is <b>not</b> similar to the original.</div><div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The widths were doubled (2 → 4) but the heights stayed the same (3 → 3). The sides were not all multiplied by the same number, so B is stretched sideways. It is a different shape.</div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1c" data-section="1. Check Example 1">
+  <h3 class="sub">Check Example 1: measure every copy</h3>
+  <div class="explainer" data-explainer="copies"></div>
+</section>
+
+<!-- ================= 2. Corresponding parts ================= -->
+<section class="card" data-ink="s2" data-section="2. Corresponding Parts">
+  <div class="sec-h"><span class="badge">2</span><h2>Corresponding Parts and Naming Order</h2></div>
+  <p><b>Corresponding</b> parts are parts in matching positions: the matching angles and the matching sides. When we write <span class="tex">ABCD\sim PQRS</span>, the <b>order of the letters</b> tells you what matches. The 1st letter goes with the 1st letter, the 2nd with the 2nd, and so on.</p>
+  <div class="u6l1-name">
+    <div class="u6l1-cols"><span>A</span><span>B</span><span>C</span><span>D</span><i>↕</i><i>↕</i><i>↕</i><i>↕</i><span>P</span><span>Q</span><span>R</span><span>S</span></div>
+    <div class="u6l1-pairs">
+      <div><b>Angles:</b> <span class="tex">\angle A</span> and <span class="tex">\angle P</span>, &nbsp;<span class="tex">\angle B</span> and <span class="tex">\angle Q</span>, &nbsp;<span class="tex">\angle C</span> and <span class="tex">\angle R</span>, &nbsp;<span class="tex">\angle D</span> and <span class="tex">\angle S</span></div>
+      <div><b>Sides:</b> <span class="tex">AB</span> and <span class="tex">PQ</span>, &nbsp;<span class="tex">BC</span> and <span class="tex">QR</span>, &nbsp;<span class="tex">CD</span> and <span class="tex">RS</span>, &nbsp;<span class="tex">DA</span> and <span class="tex">SP</span></div>
+    </div>
+  </div>
+  <div class="def u6l1-gap"><b>Key idea</b> &nbsp; If <span class="tex">ABCD\sim PQRS</span>, then
+    <div class="u6l1-eqs"><span class="tex">\angle A=\angle P,\ \ \angle B=\angle Q,\ \ \angle C=\angle R,\ \ \angle D=\angle S</span> <span class="u6l1-and">and</span> <span class="tex">\dfrac{PQ}{AB}=\dfrac{QR}{BC}=\dfrac{RS}{CD}=\dfrac{SP}{DA}</span></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The second figure is often turned or flipped. Do not match parts by where they sit on the page. Write the two names one above the other and read down the columns.</div></div>
+  <div class="tip u6l1-know"><div class="tip-ic">i</div><div><b>Quick refresher.</b> From Lesson 5.3: the angles in a triangle add up to <b>180°</b>, in a quadrilateral <b>360°</b>, and in a pentagon <b>540°</b>.</div></div>
+  <div class="explainer u6l1-gap" data-explainer="match"></div>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Turn It Back">
+  <h3 class="sub">Why the letters work: turn (or flip) the copy back</h3>
+  <p>Slide, turn or flip the second figure and shrink it, and it lands right on top of the first one. The corners with matching letters land on each other.</p>
+  <div class="explainer" data-explainer="turnback"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Matching parts of turned triangles</h3></div>
+  <p class="u6l1-p"><span class="tex">\triangle ABC\sim\triangle XYZ</span>. The second triangle is turned around.</p>
+  <div class="u6l1-ex2">
+    <div class="u6l1-fig" data-fig="ex2" style="width:400px;height:250px"></div>
+    <div class="part"><div class="pl">(a) Complete the table of corresponding parts.</div>
+      <table class="u6l1-tbl u6l1-t3">
+        <tr><th>In <span class="tex">\triangle ABC</span></th><td><span class="tex">\angle A</span></td><td><span class="tex">\angle B</span></td><td><span class="tex">\angle C</span></td></tr>
+        <tr><th>In <span class="tex">\triangle XYZ</span></th><td><span data-reveal="&nbsp;"><span class="tex">\angle X</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">\angle Y</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">\angle Z</span></span></td></tr>
+        <tr class="u6l1-tsep"><th>In <span class="tex">\triangle ABC</span></th><td>side <span class="tex">AB</span></td><td>side <span class="tex">BC</span></td><td>side <span class="tex">CA</span></td></tr>
+        <tr><th>In <span class="tex">\triangle XYZ</span></th><td><span data-reveal="&nbsp;"><span class="tex">XY</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">YZ</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">ZX</span></span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1st with 1st, 2nd with 2nd, 3rd with 3rd: <span class="tex">\angle X,\ \angle Y,\ \angle Z</span> and <span class="tex">XY,\ YZ,\ ZX</span>.</div></div></div>
+  </div>
+  <div class="parts c2 u6l1-gap">
+    <div class="part"><div class="pl">(b) <span class="tex">\angle A=52^\circ</span> and <span class="tex">\angle B=71^\circ</span>. Find <span class="tex">\angle C</span>, <span class="tex">\angle X</span>, <span class="tex">\angle Y</span> and <span class="tex">\angle Z</span>.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle C=180^\circ-52^\circ-71^\circ=57^\circ</span> (angles in a triangle)<br>Corresponding angles are equal: <span class="tex">\angle X=52^\circ,\ \angle Y=71^\circ,\ \angle Z=57^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(c) Write the three equal ratios of corresponding sides (new over original).</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{XY}{AB}=\dfrac{YZ}{BC}=\dfrac{ZX}{CA}</span></div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>A flipped quadrilateral</h3></div>
+  <p class="u6l1-p">Quadrilateral <span class="tex">ABCD\sim</span> quadrilateral <span class="tex">EFGH</span>. <span class="tex">EFGH</span> is smaller and flipped over. <span class="tex">\angle A=78^\circ</span>, <span class="tex">\angle B=112^\circ</span> and <span class="tex">\angle C=64^\circ</span>.</p>
+  <div class="u6l1-ex3">
+    <div class="u6l1-fig" data-fig="ex3" style="width:440px;height:220px"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Find <span class="tex">\angle D</span>.</div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Angles in a quadrilateral add to 360°.<br><span class="tex">\angle D=360^\circ-78^\circ-112^\circ-64^\circ=106^\circ</span></div></div></div>
+      <div class="part"><div class="pl">(b) Find <span class="tex">\angle E</span>, <span class="tex">\angle F</span>, <span class="tex">\angle G</span> and <span class="tex">\angle H</span>.</div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle E=\angle A=78^\circ,\ \angle F=\angle B=112^\circ,</span><br><span class="tex">\angle G=\angle C=64^\circ,\ \angle H=\angle D=106^\circ</span></div></div></div>
+    </div>
+  </div>
+  <div class="part u6l1-gap"><div class="pl">(c) Which side of <span class="tex">EFGH</span> corresponds to <span class="tex">BC</span>? <span class="u6l1-blank" data-reveal="&nbsp;"><span class="tex">FG</span></span> &nbsp; Which side of <span class="tex">ABCD</span> corresponds to <span class="tex">HE</span>? <span class="u6l1-blank" data-reveal="&nbsp;"><span class="tex">DA</span></span></div><div class="work" style="--h:60px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">B\leftrightarrow F</span> and <span class="tex">C\leftrightarrow G</span>, so <span class="tex">BC\leftrightarrow FG</span>. <span class="tex">H\leftrightarrow D</span> and <span class="tex">E\leftrightarrow A</span>, so <span class="tex">HE\leftrightarrow DA</span>.</div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 3. The scale factor ================= -->
+<section class="card" data-ink="s3" data-section="3. The Scale Factor">
+  <div class="sec-h"><span class="badge">3</span><h2>The Scale Factor</h2></div>
+  <p>When a figure is enlarged or reduced to make a similar figure, every length is multiplied by the same number. This number is called the <b>scale factor</b>, <span class="tex">k</span>. The first figure is the <b>original</b>. The figure you make from it is the <b>new figure</b> (also called the <b>image</b>).</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Scale factor:</b> &nbsp; <span class="tex u6l1-big">k=\dfrac{\text{new length}}{\text{original length}}</span> &nbsp; (use a pair of corresponding sides)
+    <div class="u6l1-kinds"><div><span class="tex">k&gt;1</span>: an <b>enlargement</b> <span class="muted">(the new figure is bigger)</span></div><div><span class="tex">k&lt;1</span>: a <b>reduction</b> <span class="muted">(smaller)</span></div><div><span class="tex">k=1</span>: the <b>same size</b></div></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Put the <b>new</b> length on top. Both lengths must be in the <b>same unit</b>, so change units first (1 m = 100 cm). Estimate: if the new figure is bigger, <span class="tex">k</span> must be more than 1.</div></div>
+  <div class="explainer u6l1-gap" data-explainer="kfactor"></div>
+</section>
+
+<section class="card" data-ink="s3t" data-section="3. Try It: Grow and Shrink">
+  <h3 class="sub">Try it: grow and shrink a shape</h3>
+  <p>Drag the <b>k</b> slider. Every side of the new figure is <span class="tex">k\times</span> the matching side, and the ratio tags (new ÷ original) all show the same number. Then drag <b>stretch sideways</b>: the tags stop agreeing, and the shape is no longer similar.</p>
+  <div class="u6l1-tool" id="u6l1-tool"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Find the scale factor</h3></div>
+  <div class="part"><div class="pl">Each row gives a side of an original figure and the matching side of a similar new figure. Find the scale factor. Is it an enlargement, a reduction, or the same size?</div>
+    <table class="u6l1-tbl u6l1-t4">
+      <tr><th></th><th>Original</th><th>New</th><th>Scale factor <span class="tex">k</span></th><th>Type</th></tr>
+      <tr><th>(a)</th><td>4 cm</td><td>10 cm</td><td><span data-reveal="&nbsp;"><span class="tex">10\div4=2.5</span></span></td><td><span data-reveal="&nbsp;">enlargement</span></td></tr>
+      <tr><th>(b)</th><td>12 m</td><td>3 m</td><td><span data-reveal="&nbsp;"><span class="tex">3\div12=0.25</span></span></td><td><span data-reveal="&nbsp;">reduction</span></td></tr>
+      <tr><th>(c)</th><td>15 cm</td><td>6 cm</td><td><span data-reveal="&nbsp;"><span class="tex">6\div15=0.4</span></span></td><td><span data-reveal="&nbsp;">reduction</span></td></tr>
+      <tr><th>(d)</th><td>7 in</td><td>7 in</td><td><span data-reveal="&nbsp;"><span class="tex">7\div7=1</span></span></td><td><span data-reveal="&nbsp;">same size (congruent)</span></td></tr>
+      <tr><th>(e)</th><td>2.4 ft</td><td>8.4 ft</td><td><span data-reveal="&nbsp;"><span class="tex">8.4\div2.4=3.5</span></span></td><td><span data-reveal="&nbsp;">enlargement</span></td></tr>
+    </table>
+    <div class="work" style="--h:40px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) 2.5, enlargement · (b) 0.25, reduction · (c) 0.4, reduction · (d) 1, same size (congruent) · (e) 3.5, enlargement. Estimate first: if the new side is longer, <span class="tex">k</span> is more than 1.</div></div></div>
+  <p class="u6l1-p u6l1-gap">A scale factor can be a fraction. In (b), <span class="tex">k=0.25=\tfrac{1}{4}</span>: each new side is <b>one quarter</b> of the original side.</p>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>New ÷ original, in that order. For (e): <span class="keys">8.4 <kbd>÷</kbd> 2.4 <kbd>ENTER</kbd></span> gives 3.5.</div>
+    <button class="pill" type="button" data-keys="8.4 ÷ 2.4 =">Show me</button></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Change the units first</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A school logo is 5 cm wide on a letter. On a banner in the gym, the logo is 1.2 m wide. Find the scale factor from the letter to the banner.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same units first: 1.2 m = 120 cm<br><span class="tex">k=\dfrac{\text{new}}{\text{original}}=\dfrac{120}{5}=24</span><br>The scale factor is 24: the banner logo is 24 times as wide. (An enlargement.)</div></div></div>
+    <div class="part"><div class="pl">(b) A model of a railway boxcar is 18 cm long. The real boxcar is 15.66 m long. Find the scale factor from the real boxcar to the model.</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">15.66 m = 1566 cm. The real boxcar is the original.<br><span class="tex">k=\dfrac{18}{1566}=0.0114\ldots</span> Flip it to see it better: <span class="tex">1566\div18=87</span>, so <span class="tex">k=\tfrac{1}{87}</span>.<br>The model is <span class="tex">\tfrac{1}{87}</span> the size of the real boxcar. (A reduction.)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>A tiny decimal is hard to read. Divide the other way: <span class="keys">1566 <kbd>÷</kbd> 18 <kbd>ENTER</kbd></span> gives 87. So <span class="tex">k=\tfrac{1}{87}</span></div>
+    <button class="pill" type="button" data-keys="1566 ÷ 18 =">Show me</button></div>
+  <div class="tip u6l1-know"><div class="tip-ic">i</div><div><b>Model scales.</b> A model labelled <b>1 : 87</b> means model length : real length = 1 : 87. Every part of the model is <span class="tex">\tfrac{1}{87}</span> of the real size, so <span class="tex">k=\tfrac{1}{87}</span> from real to model. Other common scales: <b>1 : 24</b> and <b>1 : 64</b> for model cars.</div></div>
+  <div class="part think u6l1-gap" data-extra><div class="pl"><span class="think-tag">Think</span> The scale factor from a real car to a model is <span class="tex">\tfrac{1}{64}</span>. What is the scale factor from the model back to the real car?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>64.</b> Going back, the new figure is the real car and the original is the model, so <span class="tex">k=\text{real}\div\text{model}=64</span>. The real car is 64 times as big.</div></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 1 · Questions 1–7</h2>
+  <p class="pr-t">Similar or not, matching parts, and the scale factor. Try these before we find missing sides.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Similar on a grid?</span>
+    <span><b>2</b>True or false</span>
+    <span><b>3</b>Table of matching parts</span>
+    <span><b>4</b>Angles of similar triangles</span>
+    <span><b>5</b>Pentagon angles</span>
+    <span><b>6</b>Scale factor table</span>
+    <span><b>7</b>Same units first</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u6l1">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Missing sides ================= -->
+<section class="card" data-ink="s4" data-section="4. Finding Missing Sides">
+  <div class="sec-h"><span class="badge">4</span><h2>Using the Scale Factor to Find Missing Sides</h2></div>
+  <p>Once you know the scale factor, you can find any missing side of two similar figures.</p>
+  <div class="def"><b>Key idea</b> &nbsp; Finding a missing side: 4 steps
+    <ol class="u6l1-steps">
+      <li><b>Step 1.</b> Match the corresponding sides (use the naming order).</li>
+      <li><b>Step 2.</b> Find <span class="tex">k</span> from a pair of corresponding sides where you know <b>both</b> lengths: <span class="tex">k=\text{new}\div\text{original}</span>.</li>
+      <li><b>Step 3.</b> A side of the <b>new</b> figure: <b>multiply</b>, <span class="tex">\text{new}=k\times\text{original}</span>.<br>A side of the <b>original</b> figure: <b>divide</b>, <span class="tex">\text{original}=\text{new}\div k</span>.</li>
+      <li><b>Step 4.</b> Check: in an enlargement the new sides are longer; in a reduction they are shorter.</li>
+    </ol></div>
+  <div class="tip u6l1-know"><div class="tip-ic">i</div><div><b>Another way.</b> You can also use a proportion, as in Lesson 1.4. For a missing side <span class="tex">x</span>: <span class="tex">\dfrac{x}{5}=\dfrac{12}{8}</span>, so <span class="tex">x=12\times5\div8=7.5</span>. Both methods give the same answer.</div></div>
+  <div class="explainer u6l1-gap" data-explainer="missing"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Find the missing sides</h3></div>
+  <p class="u6l1-p"><span class="tex">ABCD\sim PQRS</span>. The diagrams are not drawn to scale.</p>
+  <div class="u6l1-ex6">
+    <div class="u6l1-fig" data-fig="ex6" style="width:520px;height:250px"></div>
+    <div class="part"><div class="pl">(a) Which two sides give the scale factor? Find <span class="tex">k</span> from <span class="tex">ABCD</span> to <span class="tex">PQRS</span>.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">AB</span> and <span class="tex">PQ</span>: we know both lengths.<br><span class="tex">k=\dfrac{PQ}{AB}=\dfrac{12}{8}=1.5</span> (an enlargement)</div></div></div>
+  </div>
+  <div class="parts c2 u6l1-gap">
+    <div class="part"><div class="pl">(b) Find <span class="tex">QR</span> and <span class="tex">SP</span>.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">New sides: multiply by <span class="tex">k</span>.<br><span class="tex">QR=1.5\times BC=1.5\times5=7.5</span> cm<br><span class="tex">SP=1.5\times DA=1.5\times6=9</span> cm</div></div></div>
+    <div class="part"><div class="pl">(c) Find <span class="tex">CD</span>. Then check one answer with a proportion.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">CD</span> is in the original: divide by <span class="tex">k</span>.<br><span class="tex">CD=RS\div1.5=6.6\div1.5=4.4</span> cm<br>Check with <span class="tex">\frac{QR}{5}=\frac{12}{8}</span>: <span class="tex">QR=12\times5\div8=7.5</span> ✓</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>A side of the original: divide. <span class="keys">6.6 <kbd>÷</kbd> 1.5 <kbd>ENTER</kbd></span> gives 4.4.</div>
+    <button class="pill" type="button" data-keys="6.6 ÷ 1.5 =">Show me</button></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Another Way: A Proportion">
+  <h3 class="sub">Another way: the same answers with a proportion</h3>
+  <div class="explainer" data-explainer="proportion"></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u6l1"></section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>A poster and a model truck</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Mia has a 10 cm by 15 cm photo of her dog. She orders a similar poster print that is 60 cm on the short side.<br>(i) Find the scale factor.</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">k=\dfrac{60}{10}=6</span></div></div></div>
+    <div class="part"><div class="pl">(b) A 1 : 24 model of a pickup truck is sold at a hobby shop in Red Deer.<br>(i) The real truck is 5.88 m long. How long is the model, in centimetres?</div><div class="work" style="--h:80px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">5.88 m = 588 cm, <span class="tex">k=\tfrac{1}{24}</span><br>Model <span class="tex">=588\div24=24.5</span> cm (multiplying by <span class="tex">\tfrac{1}{24}</span> is dividing by 24)</div></div></div>
+    <div class="part"><div class="pl">(a)(ii) How long is the long side of the poster?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Long side <span class="tex">=6\times15=90</span> cm<br>The poster is 60 cm by 90 cm.</div></div></div>
+    <div class="part"><div class="pl">(b)(ii) The model is 8.25 cm tall. How tall is the real truck, in metres?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The real truck is 24 times as big: <span class="tex">8.25\times24=198</span> cm = 1.98 m<br>The real truck is 1.98 m tall.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Real to model at 1 : 24 is “divide by 24”: <span class="keys">588 <kbd>÷</kbd> 24 <kbd>ENTER</kbd></span> gives 24.5.</div>
+    <button class="pill" type="button" data-keys="588 ÷ 24 =">Show me</button></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4m" data-section="4. The Scale-Factor Machine">
+  <h3 class="sub">The scale-factor machine: multiply going forward, divide going back</h3>
+  <div class="explainer" data-explainer="machine"></div>
+  <div class="tip u6l1-know"><div class="tip-ic">i</div><div><b>Good to know.</b> Areas do not grow by <span class="tex">k</span>. If every length is doubled (<span class="tex">k=2</span>), the area is <span class="tex">2\times2=4</span> times as big. The 60 cm by 90 cm poster above has <span class="tex">6\times6=36</span> times the area of the photo.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s4a" data-section="4. Why Area Grows Faster">
+  <h3 class="sub">Why the area grows by <span class="tex">k\times k</span></h3>
+  <p>Count how many copies of the original fit inside the new figure.</p>
+  <div class="explainer" data-explainer="area"></div>
+</section>
+
+<section class="card example" data-extra data-ink="exm" data-section="Extra Example: A Model House">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>A 1 : 50 model house</h3></div>
+  <p class="u6l1-p">An architect builds a 1 : 50 model of a new house in Cochrane.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) The model is 24 cm wide. How wide is the real house, in metres?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The real house is 50 times as big: <span class="tex">24\times50=1\,200</span> cm = <b>12 m</b></div></div></div>
+    <div class="part"><div class="pl">(b) The real front door is 2.1 m tall. How tall is the model door, in centimetres?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">2.1 m = 210 cm. <span class="tex">210\div50=4.2</span> cm</div></div></div>
+    <div class="part"><div class="pl">(c) What is the scale factor from the real house to the model? Is it an enlargement or a reduction?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">k=\tfrac{1}{50}=0.02</span>, less than 1: a <b>reduction</b>.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Similar</b> (<span class="tex">\sim</span>): the same shape. Corresponding <b>angles are equal</b>, and every side is multiplied by the <b>same number</b>. Turning or flipping is fine; stretching one way is not. Same size too = <b>congruent</b>.</div>
+    <div><b>Naming order:</b> in <span class="tex">ABCD\sim PQRS</span>, 1st letter with 1st, 2nd with 2nd… Write the names one above the other and read down the columns. Don’t match by position on the page.</div>
+    <div><b>Scale factor:</b> <span class="tex">k=\text{new}\div\text{original}</span>, same units first. <span class="tex">k&gt;1</span> enlargement, <span class="tex">k&lt;1</span> reduction, <span class="tex">k=1</span> same size. A 1 : 87 model has <span class="tex">k=\tfrac{1}{87}</span>.</div>
+    <div><b>Missing sides:</b> find <span class="tex">k</span> from a pair you know. New side: <b>multiply</b> by <span class="tex">k</span>. Original side: <b>divide</b> by <span class="tex">k</span>. Check: bigger in an enlargement, smaller in a reduction.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u6l1">
+    <div><div class="kicker">Your turn</div><b>Assignment 1 · Questions 8–18</b><div class="muted">Missing sides of similar triangles and quadrilaterals, a photo on a projector screen, 1 : 64 model cars, a giant team pennant with gold trim, Jaxon’s mistake, perimeters, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l2/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 2 — Are They Similar? Checking Angles and Side Ratios</b><div class="muted">Two tests for similar shapes: check the angles, then check the side ratios. Why a square and a rectangle are not similar, and why all regular hexagons are.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u6l1.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u6l1', homeHref: '../../', title: '6.1 Similar Polygons and Scale Factor' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

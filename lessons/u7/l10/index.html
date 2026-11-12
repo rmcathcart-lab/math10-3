@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 7 Review · Math 10-3 7.10</title>
+<meta name="description" content="Math 10-3 Unit 7 Lesson 10: the Unit 7 review. Every skill from the unit on one page (squares and square roots, triangle basics, the Pythagorean theorem, square corners, naming the sides, sine, cosine and tangent, finding sides and angles, elevation and depression, solving right triangles), worked examples that mix the topics, and a practice unit test. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u7l10.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u7l10">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Triangle Quilt">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Triangle Quilt</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Maya is sewing a quilt for her grandma. It is one <b>big triangle</b> made of <b>16 small triangles</b>.</p><p class="vw-ctx">Two triangles that share a <b>side</b> can’t be the same colour. (Touching at just a corner is fine.)</p><p class="vw-ask">What is the fewest colours of fabric Maya needs?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A big triangle made of 16 small triangles, not coloured yet, with a needle sewing around the edge">
+    <polygon points="150.0,22.0 120.0,74.0 180.0,74.0" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"><animate attributeName="fill" values="#fffaf1;#f2c14e;#f2c14e;#7fa9ea;#7fa9ea;#e58a80;#e58a80;#fffaf1" keyTimes="0;0.1;0.3;0.4;0.6;0.7;0.9;1" dur="6s" repeatCount="indefinite"/></polygon>
+    <polygon points="120.0,74.0 90.0,125.9 150.0,125.9" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="180.0,74.0 150.0,125.9 210.0,125.9" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="120.0,74.0 180.0,74.0 150.0,125.9" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="90.0,125.9 60.0,177.9 120.0,177.9" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="150.0,125.9 120.0,177.9 180.0,177.9" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="210.0,125.9 180.0,177.9 240.0,177.9" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="90.0,125.9 150.0,125.9 120.0,177.9" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="150.0,125.9 210.0,125.9 180.0,177.9" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="60.0,177.9 30.0,229.8 90.0,229.8" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="120.0,177.9 90.0,229.8 150.0,229.8" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="180.0,177.9 150.0,229.8 210.0,229.8" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="240.0,177.9 210.0,229.8 270.0,229.8" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="60.0,177.9 120.0,177.9 90.0,229.8" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="120.0,177.9 180.0,177.9 150.0,229.8" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="180.0,177.9 240.0,177.9 210.0,229.8" fill="#fffaf1" stroke="#6e4a1c" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- the stitching around the edge, with a needle travelling along it -->
+    <path d="M150 14 L22 235 H278 Z" fill="none" stroke="#c93a33" stroke-width="2" stroke-dasharray="6 6"/>
+    <g>
+      <animateMotion dur="9s" repeatCount="indefinite" rotate="auto" path="M150 14 L22 235 H278 Z"/>
+      <line x1="-14" y1="0" x2="14" y2="0" stroke="#5c6470" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="-9" cy="0" rx="3" ry="1.4" fill="#fff"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.6s" repeatCount="indefinite"/><text x="292" y="70" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u7l10-wpoll">
+    <div class="poll-opts">
+      <div class="opt right"><b>A</b><span>2 colours</span></div>
+      <div class="opt"><b>B</b><span>3 colours</span></div>
+      <div class="opt"><b>C</b><span>4 colours</span></div>
+      <div class="opt"><b>D</b><span>16 colours</span></div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u7l10-wans"><svg viewBox="0 0 120 102" role="img" aria-label="The quilt coloured: every triangle pointing up is yellow, every triangle pointing down is blue">
+      <polygon points="60.0,6.0 47.0,28.5 73.0,28.5" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="47.0,28.5 34.0,51.0 60.0,51.0" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="73.0,28.5 60.0,51.0 86.0,51.0" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="47.0,28.5 73.0,28.5 60.0,51.0" fill="#7fa9ea" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="34.0,51.0 21.0,73.5 47.0,73.5" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="60.0,51.0 47.0,73.5 73.0,73.5" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="86.0,51.0 73.0,73.5 99.0,73.5" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="34.0,51.0 60.0,51.0 47.0,73.5" fill="#7fa9ea" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="60.0,51.0 86.0,51.0 73.0,73.5" fill="#7fa9ea" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="21.0,73.5 8.0,96.1 34.0,96.1" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="47.0,73.5 34.0,96.1 60.0,96.1" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="73.0,73.5 60.0,96.1 86.0,96.1" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="99.0,73.5 86.0,96.1 112.0,96.1" fill="#f2c14e" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="21.0,73.5 47.0,73.5 34.0,96.1" fill="#7fa9ea" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="47.0,73.5 73.0,73.5 60.0,96.1" fill="#7fa9ea" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+      <polygon points="73.0,73.5 99.0,73.5 86.0,96.1" fill="#7fa9ea" stroke="#6e4a1c" stroke-width="1.6" stroke-linejoin="round"/>
+    </svg><div><b>A: just 2 colours!</b> Make every triangle that points <b>up</b> yellow and every triangle that points <b>down</b> blue. Every side inside the quilt is shared by one “up” triangle and one “down” triangle, so two neighbours never match. <span class="muted">Most people guess 3, because a triangle has 3 sides. A checkerboard works the same way: 2 colours.</span></div></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 7 Right Triangles and Trigonometry · Lesson 10</div>
+  <h1>Unit 7 Review</h1>
+  <p class="lede">Every rule from the unit on <b>one page</b>, then worked examples that <b>mix the topics</b>, set up like the unit test. Try each example on your own first. Then we check it together.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li><b>estimate</b> a square root between two whole numbers, and find the <b>third angle</b> of a triangle</li>
+      <li>use the <b>Pythagorean theorem</b> to find a hypotenuse or a leg, and check that a corner is <b>square</b></li>
+      <li>label <b>opp</b>, <b>adj</b> and <b>hyp</b> from an angle, and write <b>sin</b>, <b>cos</b> and <b>tan</b> as ratios</li>
+      <li>find a <b>side</b> with SOH CAH TOA (multiply or divide) and an <b>angle</b> with an inverse key</li>
+      <li>solve problems with angles of <b>elevation</b> and <b>depression</b>, and <b>solve</b> a whole right triangle</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>G2</b> Demonstrate an understanding of the Pythagorean theorem by: identifying situations that involve right triangles; verifying the formula; applying the formula; solving problems.</div>
+  <div class="outcome"><b>G4</b> Demonstrate an understanding of primary trigonometric ratios (sine, cosine, tangent) by: applying similarity to right triangles; generalizing patterns from similar right triangles; applying the primary trigonometric ratios; solving problems.</div>
+  <div class="outcome"><b>A1</b> Solve problems that require the manipulation and application of formulas related to: perimeter; area; the Pythagorean theorem; primary trigonometric ratios; income.</div>
+</section>
+
+<!-- ================= 1. The unit on one page ================= -->
+<section class="card" data-ink="s1" data-section="1. The Unit on One Page">
+  <div class="sec-h"><span class="badge">1</span><h2>The Unit on One Page</h2></div>
+  <p>Use this page to study. Each row is one skill: what to do, and a short example. The small tag shows the lesson it came from. Lengths are rounded to the nearest tenth and angles to the nearest degree unless a question says otherwise.</p>
+  <table class="u7l10-one">
+    <tr><th>Skill</th><th>What to do</th><th>Example</th></tr>
+    <tr><td><b>Squares and square roots</b><i>7.1</i></td><td>Squaring multiplies a number by itself. The <b>square root</b> undoes it (<span class="keys"><kbd>2nd</kbd><kbd>x²</kbd></span> is <span class="tex">\sqrt{\ }</span>). Estimate a root between the two perfect squares around it.</td><td><span class="tex">9^2=81</span>, &nbsp;<span class="tex">\sqrt{81}=9</span><br><span class="tex">\sqrt{50}</span> is between 7 and 8 (49 and 64): <span class="tex">\approx7.1</span></td></tr>
+    <tr><td><b>Triangle basics</b><i>7.1</i></td><td>The angles of any triangle add to <b>180°</b>. A <b>right triangle</b> has a 90° angle (square mark). The two sides that make the right angle are the <b>legs</b>; the side across from it is the <b>hypotenuse</b>, the longest side.</td><td>Angles 90° and 35°: third angle<br><span class="tex">180^\circ-90^\circ-35^\circ=55^\circ</span></td></tr>
+    <tr><td><b>Pythagorean theorem</b><i>7.2, 7.3</i></td><td>Right triangles only: <span class="tex">a^2+b^2=c^2</span> (<span class="tex">c</span> is the hypotenuse).<br>Hypotenuse: <span class="tex">c=\sqrt{a^2+b^2}</span> (<b>add</b>). &nbsp;A leg: <span class="tex">a=\sqrt{c^2-b^2}</span> (<b>subtract</b>).</td><td>Legs 5 and 12:<br><span class="tex">c=\sqrt{25+144}=\sqrt{169}=13</span></td></tr>
+    <tr><td><b>Right triangle test; square corners</b><i>7.3</i></td><td>Is <span class="tex">a^2+b^2</span> equal to <span class="tex">c^2</span> (with <span class="tex">c</span> the longest side)? Equal: right triangle. Not equal: not a right triangle. <b>3-4-5 method</b>: measure 3 along one side and 4 along the other; the diagonal is 5 if the corner is square (also 6-8-10, 9-12-15). A rectangle is square if its two diagonals are equal.</td><td>6, 7, 9: &nbsp;<span class="tex">36+49=85</span>,<br><span class="tex">9^2=81</span>; &nbsp;<span class="tex">85\ne81</span>, so <b>not</b> a right triangle</td></tr>
+    <tr><td><b>Naming the sides</b><i>7.4</i></td><td>Stand at the angle you are using, <span class="tex">\theta</span>. <b>hyp</b>: across from the right angle. <b>opp</b>: across from <span class="tex">\theta</span>. <b>adj</b>: next to <span class="tex">\theta</span> (not the hyp). Change the angle and opp and adj swap.</td><td><div id="u7l10-mini" class="u7l10-mini"></div></td></tr>
+    <tr><td><b>Trig ratios</b><i>7.4–7.6</i></td><td><b>SOH CAH TOA</b>: &nbsp;<span class="tex">\sin\theta=\dfrac{\text{opp}}{\text{hyp}}</span>, &nbsp;<span class="tex">\cos\theta=\dfrac{\text{adj}}{\text{hyp}}</span>, &nbsp;<span class="tex">\tan\theta=\dfrac{\text{opp}}{\text{adj}}</span>.<br>Similar right triangles with the same <span class="tex">\theta</span> have the same ratios. Calculator in <b>DEG</b> mode.</td><td><span class="tex">\tan50^\circ\approx1.1918</span>: in every right triangle with a 50° angle, opp is about 1.19 times adj</td></tr>
+    <tr><td><b>Finding a side</b><i>7.4–7.6</i></td><td>Label the sides, pick the ratio that uses the side you <b>know</b> and the side you <b>want</b>, substitute, solve. Unknown on <b>top</b>: multiply. Unknown on the <b>bottom</b>: divide.</td><td><span class="tex">\tan40^\circ=\tfrac{x}{10}</span>:<br><span class="tex">x=10\times\tan40^\circ\approx8.4</span><br><span class="tex">\sin40^\circ=\tfrac{6}{x}</span>:<br><span class="tex">x=6\div\sin40^\circ\approx9.3</span></td></tr>
+    <tr><td><b>Finding an angle</b><i>7.8</i></td><td>Use two sides and the <b>inverse</b> key: <span class="tex">\theta=\tan^{-1}\!\left(\dfrac{\text{opp}}{\text{adj}}\right)</span> with <span class="keys"><kbd>2nd</kbd><kbd>tan</kbd></span> (also <span class="tex">\sin^{-1}</span>, <span class="tex">\cos^{-1}</span>). The other acute angle is <span class="tex">90^\circ-\theta</span>.</td><td>opp 4, adj 7:<br><span class="tex">\theta=\tan^{-1}(4\div7)\approx30^\circ</span>; other angle 60°</td></tr>
+    <tr><td><b>Elevation and depression</b><i>7.7</i></td><td>Both are measured from the <b>horizontal</b>. Elevation: looking up. Depression: looking down. The angle of depression from the top equals the angle of elevation from the bottom (alternate interior angles). <b>Add the eye</b> (or hand) height when you sight from above the ground.</td><td>Eye 1.5 m, 20 m away, elevation 50°:<br><span class="tex">20\tan50^\circ+1.5\approx25.3</span> m</td></tr>
+    <tr><td><b>Solving a right triangle</b><i>7.9</i></td><td>Find every missing side and angle. Routine: <b>sketch and label</b>, choose Pythagoras or SOH CAH TOA, solve, <b>check</b>. Two triangles that share a side: solve the one with enough facts first.</td><td>Checks: the hyp is the longest side; the bigger angle faces the longer side</td></tr>
+  </table>
+  <div class="def u7l10-rem"><b>Remember.</b> Calculator in <b>DEG</b> mode (the screen shows DEG; if not, press <span class="keys"><kbd>DRG</kbd></span> and choose DEG). Label opp, adj and hyp from the angle you are using. Keep the full calculator value until the last step, then round. Check: the hypotenuse is the longest side, and <span class="tex">\sin\theta</span> and <span class="tex">\cos\theta</span> are always less than 1.</div>
+</section>
+
+<section class="card" data-extra data-ink="s1c" data-section="1. Which Tool Do I Need?">
+  <h3 class="sub">Check yourself: which tool do I need?</h3>
+  <p>Two questions pick the tool every time: do you want a <b>side</b> or an <b>angle</b>, and do you know an acute angle?</p>
+  <div class="explainer" data-explainer="tool"></div>
+</section>
+
+<!-- ================= 2. Square roots and the Pythagorean theorem ================= -->
+<section class="card example" data-ink="ex1" data-section="2. Square Roots and Pythagoras: Example 1">
+  <div class="sec-h"><span class="badge">2</span><h2>Square Roots and the Pythagorean Theorem</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>A root, an angle and a hypotenuse</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) <span class="tex">\sqrt{70}</span> is between which two whole numbers? Estimate it, then find it to the nearest tenth.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">8^2=64</span> and <span class="tex">9^2=81</span>, so <span class="tex">\sqrt{70}</span> is between <b>8 and 9</b> (a bit closer to 8).<br><span class="keys"><kbd>2nd</kbd><kbd>x²</kbd></span> 70 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span>: <span class="tex">\sqrt{70}\approx8.4</span></div></div></div>
+    <div class="part"><div class="pl">(b) A triangle has angles of 90° and 34°. Find the third angle. What kind of triangle is it?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">180^\circ-90^\circ-34^\circ=56^\circ</span><br>It has a 90° angle, so it is a <b>right triangle</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) A right triangle has legs of 9 cm and 14 cm. Find the hypotenuse.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">c^2=9^2+14^2=81+196=277</span><br><span class="tex">c=\sqrt{277}\approx16.6</span> cm<br>Check: longer than 14 ✓</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Square roots on the TI-30XIIS:</b> <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd></span> is <span class="tex">\sqrt{\ }</span>, and it opens a bracket: <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd></span> 70 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span> gives 8.366…</div>
+    <div class="u7l10-pcol"><button class="pill" type="button" data-keys="√ 70 ) =">√70</button><button class="pill" type="button" data-keys="9 x² + 14 x² =">9² + 14²</button><button class="pill" type="button" data-keys="√ 277 ) =">√277</button></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex1c" data-section="2. Check Example 1">
+  <h3 class="sub">Check Example 1: perfect squares, the 180° rule, squares on the sides</h3>
+  <div class="explainer" data-explainer="roots"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>The hay bale elevator</h3></div>
+  <p class="q">A hay bale elevator (a long conveyor) is 15 m long. Its lower end sits on the ground, 9.5 m from the wall of a barn. Its top end rests at the bottom of the hayloft door. How high is the hayloft door, to the nearest tenth of a metre?</p>
+  <div class="u7l10-ex2">
+    <div class="u7l10-fig"><svg viewBox="0 0 380 292" role="img" aria-label="A conveyor 15 metres long leaning from the ground to the loft door of a barn; its foot is 9.5 metres from the wall; the door height is h">
+      <rect x="262" y="8" width="100" height="247" fill="#ece7dd"/>
+      <path d="M262 255 V8 H362" fill="none" stroke="#1c2230" stroke-width="3"/>
+      <rect x="266" y="12" width="26" height="34" fill="#fff" stroke="#1c2230" stroke-width="2"/>
+      <text x="298" y="24" class="u7l10-ft sm" style="text-anchor:start">loft</text><text x="298" y="41" class="u7l10-ft sm" style="text-anchor:start">door</text>
+      <line x1="20" y1="255" x2="370" y2="255" stroke="#8a6f4d" stroke-width="3"/>
+      <line x1="90" y1="255" x2="262" y2="46" stroke="#5c6470" stroke-width="7" stroke-linecap="round"/>
+      <g fill="#e2c35f" stroke="#9b7a1d" stroke-width="1.5"><rect x="-11" y="-7" width="22" height="13" rx="2" transform="translate(140 186) rotate(-50.5)"/><rect x="-11" y="-7" width="22" height="13" rx="2" transform="translate(195 119) rotate(-50.5)"/></g>
+      <text x="155" y="140" class="u7l10-ft">15 m</text>
+      <path d="M250 255 V243 H262" fill="none" stroke="#1c2230" stroke-width="2"/>
+      <line x1="90" y1="270" x2="262" y2="270" stroke="#3a4254" stroke-width="1.5"/><path d="M90 270 l8 -4 v8 z M262 270 l-8 -4 v8 z" fill="#3a4254"/>
+      <text x="176" y="284" class="u7l10-ft">9.5 m</text>
+      <line x1="322" y1="255" x2="322" y2="46" stroke="#c93a33" stroke-width="1.5"/><path d="M322 255 l-4 -8 h8 z M322 46 l-4 8 h8 z" fill="#c93a33"/>
+      <text x="338" y="150" class="u7l10-ft u7l10-it" fill="#c93a33">h</text>
+    </svg></div>
+    <div class="part"><div class="pl">Find the height of the hayloft door, <span class="tex">h</span>.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The elevator is the <b>hypotenuse</b> (across from the right angle at the wall). We want a leg, so <b>subtract</b>.<br><span class="tex">h^2=15^2-9.5^2=225-90.25=134.75</span><br><span class="tex">h=\sqrt{134.75}\approx11.6</span> m<br>Check: a leg must be shorter than the hypotenuse: <span class="tex">11.6&lt;15</span> ✓<br>The hayloft door is about <b>11.6 m</b> above the ground.</div></div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> <b>Add</b> the squares only when you want the hypotenuse. For a leg, <b>subtract</b>: hypotenuse² minus the other leg². Adding here would give 17.8 m, longer than the elevator itself.</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Subtract the squares, then take the root:</b> 15 <span class="keys"><kbd>x²</kbd><kbd>−</kbd></span> 9.5 <span class="keys"><kbd>x²</kbd><kbd>ENTER</kbd></span> gives 134.75. Then <span class="keys"><kbd>2nd</kbd><kbd>x²</kbd></span> 134.75 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span> gives 11.608…</div>
+    <div class="u7l10-pcol"><button class="pill" type="button" data-keys="15 x² − 9.5 x² =">15² − 9.5²</button><button class="pill" type="button" data-keys="√ 134.75 ) =">√134.75</button></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>A shed floor and a right triangle test</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Gita is framing a shed floor 2.4 m by 3.2 m. What should the diagonal be if the corners are square? She measures 4.06 m. Are the corners square?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2.4^2+3.2^2=5.76+10.24=16</span>, &nbsp;<span class="tex">\sqrt{16}=4</span><br>The diagonal should be <b>4.00 m</b>. 4.06 m is too long, so the corners are <b>not</b> square (the angle is a little more than 90°).</div></div></div>
+    <div class="part"><div class="pl">(b) Is a triangle with sides 16 cm, 63 cm and 65 cm a right triangle? Explain using the Pythagorean theorem.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Longest side: 65. &nbsp;<span class="tex">16^2+63^2=256+3\,969=4\,225</span><br><span class="tex">65^2=4\,225</span>. The two are equal, so <b>yes</b>, it is a right triangle (the right angle is across from the 65 cm side).</div></div></div>
+  </div>
+  <p class="small muted" data-extra><b>Think:</b> in (a), if the diagonal had been <b>shorter</b> than 4.00 m, which way would the corner be off? (Less than 90°: the two sides are pulled closer together.)</p>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex3c" data-section="2. Check Examples 2 and 3">
+  <h3 class="sub">Check Examples 2 and 3: subtract for a leg, measure the diagonal, test the triangle</h3>
+  <div class="explainer" data-explainer="pyth"></div>
+</section>
+
+<!-- ================= 3. The trig ratios: finding sides ================= -->
+<section class="card example" data-ink="ex4" data-section="3. Trig Ratios: Example 4">
+  <div class="sec-h"><span class="badge">3</span><h2>The Trig Ratios: Finding Sides</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Three ratios from one triangle</h3></div>
+  <div class="u7l10-ex4">
+    <div class="u7l10-fig" id="u7l10-f4"></div>
+    <div class="part"><div class="pl">(a) Label opp, adj and hyp for <span class="tex">\theta</span>. Then write <span class="tex">\sin\theta</span>, <span class="tex">\cos\theta</span> and <span class="tex">\tan\theta</span> as fractions and as decimals (to 4 decimal places).</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">hyp = 37 (across from the right angle), opp = 12 (across from <span class="tex">\theta</span>), adj = 35<br><span class="tex">\sin\theta=\frac{12}{37}\approx0.3243</span>, &nbsp;<span class="tex">\cos\theta=\frac{35}{37}\approx0.9459</span>, &nbsp;<span class="tex">\tan\theta=\frac{12}{35}\approx0.3429</span></div></div></div>
+  </div>
+  <div class="part"><div class="pl">(b) A bigger triangle has the same angle <span class="tex">\theta</span> and sides 24, 70 and 74. Find its <span class="tex">\tan\theta</span>. What do you notice? Why?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tan\theta=\frac{24}{70}\approx0.3429</span>, <b>the same</b>. The triangles are similar (every side is doubled), so the ratios do not change. A trig ratio depends <b>only on the angle</b>.</div></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex4c" data-section="3. Check Example 4">
+  <h3 class="sub">Check Example 4: label from θ, then SOH CAH TOA</h3>
+  <div class="explainer" data-explainer="ratios"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Find each side marked <span class="tex">x</span></h3></div>
+  <p class="q">Find each side marked <span class="tex">x</span>, to the nearest tenth.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a)<div class="u7l10-fig sm" id="u7l10-f5a"></div></div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">We have adj, we want opp: <b>TOA</b>.<br><span class="tex">\tan38^\circ=\dfrac{x}{12}</span><br><span class="tex">x=12\times\tan38^\circ</span><br><span class="tex">x\approx9.4</span> m</div></div></div>
+    <div class="part"><div class="pl">(b)<div class="u7l10-fig sm" id="u7l10-f5b"></div></div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">We have opp, we want hyp: <b>SOH</b>.<br><span class="tex">\sin27^\circ=\dfrac{5.5}{x}</span><br><span class="tex">x=5.5\div\sin27^\circ</span><br><span class="tex">x\approx12.1</span> cm</div></div></div>
+    <div class="part"><div class="pl">(c)<div class="u7l10-fig sm" id="u7l10-f5c"></div></div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">We have hyp, we want adj: <b>CAH</b>.<br><span class="tex">\cos63^\circ=\dfrac{x}{18}</span><br><span class="tex">x=18\times\cos63^\circ</span><br><span class="tex">x\approx8.2</span> ft &nbsp;Check: shorter than 18 ✓</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Trig keys open a bracket:</b> 12 <span class="keys"><kbd>×</kbd><kbd>tan</kbd></span> 38 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span>. Check DEG first: <span class="keys"><kbd>tan</kbd></span> 45 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span> must give 1.</div>
+    <div class="u7l10-pcol"><button class="pill" type="button" data-keys="12 × tan 38 ) =">(a)</button><button class="pill" type="button" data-keys="5.5 ÷ sin 27 ) =">(b)</button><button class="pill" type="button" data-keys="18 × cos 63 ) =">(c)</button></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex5c" data-section="3. Check Example 5">
+  <h3 class="sub">Check Example 5: know, want, pick the ratio, multiply or divide</h3>
+  <div class="explainer" data-explainer="sides"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>The solar panel near Taber</h3></div>
+  <p class="q">A solar panel on a farm near Taber is tilted at 35° to the ground. Seen from the side, the panel covers a horizontal distance of 1.6 m.</p>
+  <div class="u7l10-ex6">
+    <div class="u7l10-fig" id="u7l10-f6"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) How much higher is the top edge of the panel than the bottom edge (the rise)?</div><div class="work" style="--h:100px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">For the 35° angle, 1.6 m is adj and the rise is opp: <b>TOA</b>.<br>rise <span class="tex">=1.6\times\tan35^\circ\approx1.12</span> m, so about <b>1.1 m</b></div></div></div>
+      <div class="part"><div class="pl">(b) How long is the panel (the sloped side)?</div><div class="work" style="--h:100px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The panel is hyp, and we know adj: <b>CAH</b>.<br><span class="tex">\cos35^\circ=\dfrac{1.6}{x}</span>, &nbsp;<span class="tex">x=1.6\div\cos35^\circ\approx2.0</span> m</div></div></div>
+    </div>
+  </div>
+  <div class="part"><div class="pl">(c) Check (b) with the Pythagorean theorem.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\sqrt{1.6^2+1.1203^2}=\sqrt{3.8151}\approx1.95</span>, so about 2.0 m ✓ &nbsp;(use the unrounded rise, 1.1203…)</div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Unknown on the bottom: divide.</b> 1.6 <span class="keys"><kbd>÷</kbd><kbd>cos</kbd></span> 35 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span> gives 1.953…</div>
+    <div class="u7l10-pcol"><button class="pill" type="button" data-keys="1.6 × tan 35 ) =">rise</button><button class="pill" type="button" data-keys="1.6 ÷ cos 35 ) =">panel</button></div></div>
+  <p class="small muted" data-extra><b>Think:</b> before you calculate (b), how do you know the panel must be longer than 1.6 m? (It is the hypotenuse, the longest side.)</p>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex6c" data-section="3. Check Example 6">
+  <h3 class="sub">Check Example 6: tilt the panel, then TOA, CAH and Pythagoras</h3>
+  <div class="explainer" data-explainer="solar"></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u7l10"></section>
+
+<!-- ================= 4. Finding angles, elevation and depression ================= -->
+<section class="card example" data-ink="ex7" data-section="4. Finding Angles: Example 7">
+  <div class="sec-h"><span class="badge">4</span><h2>Finding Angles, Elevation and Depression</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>A boat launch and a coulee path</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A boat launch drops 1.8 m over a horizontal distance of 14 m. Find the angle the launch makes with the horizontal.<div class="u7l10-fig sm" id="u7l10-f7a"></div></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">We have opp and adj: <b>TOA</b>.<br><span class="tex">\theta=\tan^{-1}\!\left(\dfrac{1.8}{14}\right)</span><br><span class="keys"><kbd>2nd</kbd><kbd>tan</kbd></span> 1.8 <span class="keys"><kbd>÷</kbd></span> 14 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span><br><span class="tex">\theta\approx7^\circ</span></div></div></div>
+    <div class="part"><div class="pl">(b) A straight path up the side of a coulee is 250 m long and climbs 60 m. Find the angle between the path and the horizontal, and the other acute angle of the triangle.<div class="u7l10-fig sm" id="u7l10-f7b"></div></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">We have opp and hyp: <b>SOH</b>.<br><span class="tex">\theta=\sin^{-1}\!\left(\dfrac{60}{250}\right)\approx14^\circ</span><br>Other angle: <span class="tex">90^\circ-14^\circ=76^\circ</span><br>Check: the 76° angle faces the longer leg ✓</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Inverse keys are 2nd functions:</b> <span class="keys"><kbd>2nd</kbd><kbd>tan</kbd></span> is <span class="tex">\tan^{-1}</span>, <span class="keys"><kbd>2nd</kbd><kbd>sin</kbd></span> is <span class="tex">\sin^{-1}</span>. Type the two sides as a division inside the bracket.</div>
+    <div class="u7l10-pcol"><button class="pill" type="button" data-keys="tan⁻¹ 1.8 ÷ 14 ) =">(a)</button><button class="pill" type="button" data-keys="sin⁻¹ 60 ÷ 250 ) =">(b)</button></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex7c" data-section="4. Check Example 7">
+  <h3 class="sub">Check Example 7: two sides in, the angle out</h3>
+  <div class="explainer" data-explainer="angles"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>The church steeple and the lost dog</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Nolan stands 55 m from the base of a church steeple. With a clinometer held at eye level, 1.5 m above the ground, the angle of elevation to the tip of the steeple is 27°. How tall is the steeple?
+      <div class="u7l10-fig sm"><svg viewBox="0 0 360 230" role="img" aria-label="Nolan's eye 1.5 m above the ground, 55 m from a church; the line of sight to the steeple tip makes 27 degrees with the horizontal">
+        <rect x="262" y="128" width="76" height="76" fill="#efe6d6" stroke="#6a7182" stroke-width="1.5"/>
+        <path d="M288 128 V78 L300 34 L312 78 V128" fill="#e3d6bd" stroke="#6a7182" stroke-width="1.5"/>
+        <path d="M296 104 h8 v12 h-8 z" fill="#fff" stroke="#6a7182" stroke-width="1.2"/>
+        <line x1="10" y1="204" x2="350" y2="204" stroke="#8a6f4d" stroke-width="3"/>
+        <g stroke="#3a4254" stroke-width="2.4" fill="none" stroke-linecap="round"><circle cx="36" cy="160" r="6" fill="#fff"/><path d="M36 166 V186 M36 186 L30 204 M36 186 L42 204 M36 172 L46 168"/></g>
+        <circle cx="40" cy="160" r="2.5" fill="#1c2230"/>
+        <line x1="40" y1="160" x2="300" y2="160" stroke="#3a4254" stroke-width="2" stroke-dasharray="7 5"/>
+        <line x1="40" y1="160" x2="300" y2="34" stroke="#c27a0e" stroke-width="2.6"/>
+        <path d="M100 160 A60 60 0 0 0 94 133.8" fill="none" stroke="#c27a0e" stroke-width="2"/>
+        <text x="122" y="147" class="u7l10-ft sm" fill="#c27a0e">27°</text>
+        <text x="20" y="182" class="u7l10-ft sm" style="text-anchor:end">1.5 m</text>
+        <line x1="40" y1="216" x2="300" y2="216" stroke="#3a4254" stroke-width="1.5"/><path d="M40 216 l8 -4 v8 z M300 216 l-8 -4 v8 z" fill="#3a4254"/>
+        <text x="170" y="226" class="u7l10-ft sm">55 m</text>
+      </svg></div></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">From the eye: adj = 55 m, want opp: <b>TOA</b>.<br>opp <span class="tex">=55\times\tan27^\circ\approx28.02</span> m<br>Add the eye height: <span class="tex">28.02+1.5\approx29.5</span> m<br>The steeple is about <b>29.5 m</b> tall.</div></div></div>
+    <div class="part"><div class="pl">(b) A worker on the walkway of a water tower, 32 m above the ground, sees a lost dog at an angle of depression of 9°. How far is the dog from the base of the tower? (Flat ground.)
+      <div class="u7l10-fig sm"><svg viewBox="0 0 360 230" role="img" aria-label="A worker on a water tower walkway 32 m up looks down at a dog at an angle of depression of 9 degrees; the distance along the ground is d">
+        <path d="M30 204 L42 86 M66 204 L54 86 M34 166 L62 166 M38 126 L58 126" stroke="#6a7182" stroke-width="2.4" fill="none"/>
+        <rect x="24" y="40" width="48" height="40" rx="10" fill="#d9e4f2" stroke="#6a7182" stroke-width="1.8"/>
+        <path d="M20 86 H76" stroke="#3a4254" stroke-width="3"/>
+        <circle cx="48" cy="86" r="3" fill="#1c2230"/>
+        <line x1="10" y1="204" x2="350" y2="204" stroke="#8a6f4d" stroke-width="3"/>
+        <line x1="48" y1="86" x2="340" y2="86" stroke="#3a4254" stroke-width="2" stroke-dasharray="7 5"/>
+        <line x1="48" y1="86" x2="306" y2="204" stroke="#c27a0e" stroke-width="2.6"/>
+        <path d="M128 86 A80 80 0 0 1 120.8 119.3" fill="none" stroke="#c27a0e" stroke-width="2"/>
+        <text x="146" y="104" class="u7l10-ft sm" fill="#c27a0e">9°</text>
+        <g fill="#8a5a2b"><ellipse cx="316" cy="194" rx="12" ry="6"/><circle cx="330" cy="188" r="5"/><path d="M308 196 v8 M324 196 v8" stroke="#8a5a2b" stroke-width="3"/><path d="M304 192 l-6 -6" stroke="#8a5a2b" stroke-width="3"/></g>
+        <text x="320" y="176" class="u7l10-ft sm">dog</text>
+        <text x="14" y="146" class="u7l10-ft sm" style="text-anchor:start">32</text><text x="14" y="164" class="u7l10-ft sm" style="text-anchor:start">m</text>
+        <text x="180" y="221" class="u7l10-ft u7l10-it">d</text>
+      </svg></div></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The angle of elevation from the dog to the worker is also 9° (alternate interior angles).<br>In that triangle, 32 m is opp and <span class="tex">d</span> is adj: <b>TOA</b>.<br><span class="tex">\tan9^\circ=\dfrac{32}{d}</span>, &nbsp;<span class="tex">d=32\div\tan9^\circ\approx202.0</span> m</div></div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The clinometer gives the height <b>above Nolan’s eye</b>. Add the 1.5 m to get the height above the ground. (The pictures are sketches: not to scale.)</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Close the bracket before you add:</b> 55 <span class="keys"><kbd>×</kbd><kbd>tan</kbd></span> 27 <span class="keys"><kbd>)</kbd><kbd>+</kbd></span> 1.5 <span class="keys"><kbd>ENTER</kbd></span> gives 29.52…</div>
+    <div class="u7l10-pcol"><button class="pill" type="button" data-keys="55 × tan 27 ) + 1.5 =">(a)</button><button class="pill" type="button" data-keys="32 ÷ tan 9 ) =">(b)</button></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex8c" data-section="4. Check Example 8">
+  <h3 class="sub">Check Example 8: sight from the eye, then from the walkway</h3>
+  <div class="explainer" data-explainer="elev"></div>
+</section>
+
+<!-- ================= 5. Solving right triangles ================= -->
+<section class="card example" data-ink="ex9" data-section="5. Solving Right Triangles: Example 9">
+  <div class="sec-h"><span class="badge">5</span><h2>Solving Right Triangles</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Solve the triangle</h3></div>
+  <p class="q">In <span class="tex">\triangle ABC</span>, <span class="tex">\angle C=90^\circ</span>, <span class="tex">\angle A=41^\circ</span> and the hypotenuse <span class="tex">c=15</span> cm. Solve the triangle (find <span class="tex">\angle B</span>, <span class="tex">a</span> and <span class="tex">b</span>).</p>
+  <div class="u7l10-ex9">
+    <div class="u7l10-fig" id="u7l10-f9"></div>
+    <div class="part"><div class="pl">Find <span class="tex">\angle B</span>, <span class="tex">a</span> and <span class="tex">b</span>. Then check your answers two ways.</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\angle B=90^\circ-41^\circ=49^\circ</span><br>For <span class="tex">\angle A</span>: <span class="tex">a</span> is opp, <span class="tex">b</span> is adj, <span class="tex">c</span> is hyp.<br><span class="tex">a=15\times\sin41^\circ\approx9.8</span> cm &nbsp;(SOH)<br><span class="tex">b=15\times\cos41^\circ\approx11.3</span> cm &nbsp;(CAH)<br>Check with Pythagoras: <span class="tex">9.841^2+11.321^2\approx225=15^2</span> ✓<br>Check: the bigger angle (49°) faces the longer leg (<span class="tex">b</span>) ✓</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Both legs from the hypotenuse:</b> 15 <span class="keys"><kbd>×</kbd><kbd>sin</kbd></span> 41 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span> and 15 <span class="keys"><kbd>×</kbd><kbd>cos</kbd></span> 41 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span>.</div>
+    <div class="u7l10-pcol"><button class="pill" type="button" data-keys="15 × sin 41 ) =">a</button><button class="pill" type="button" data-keys="15 × cos 41 ) =">b</button></div></div>
+  <p class="small muted" data-extra><b>Think:</b> once you have <span class="tex">a</span>, could you find <span class="tex">b</span> with the Pythagorean theorem instead? (Yes: <span class="tex">b=\sqrt{15^2-9.841^2}\approx11.3</span>. Use the unrounded <span class="tex">a</span>.)</p>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>The cell tower and its two guy wires</h3></div>
+  <p class="q">A cell tower is 52 m tall. Two guy wires run from the top of the tower to anchors on opposite sides of the tower, on flat ground. One wire makes an angle of 61° with the ground and the other makes 48°. How far apart are the two anchors?</p>
+  <div class="u7l10-ex10">
+    <div class="u7l10-fig"><svg viewBox="0 0 360 270" role="img" aria-label="A 52 m tower with two guy wires to the ground: the left wire makes 61 degrees, the right wire 48 degrees; the ground distances are x and y">
+      <line x1="10" y1="230" x2="350" y2="230" stroke="#8a6f4d" stroke-width="3"/>
+      <path d="M134 230 L140 30 L146 230 M135 196 L145 163 M145 196 L135 163 M136 130 L144 97 M144 130 L136 97 M138 64 L142 40 M142 64 L138 40" stroke="#7b4fc4" stroke-width="2" fill="none"/>
+      <line x1="29" y1="230" x2="140" y2="30" stroke="#1c2230" stroke-width="2.4"/>
+      <line x1="140" y1="30" x2="320" y2="230" stroke="#1c2230" stroke-width="2.4"/>
+      <circle cx="140" cy="30" r="4" fill="#c93a33"/>
+      <path d="M128 230 V218 H140" fill="none" stroke="#1c2230" stroke-width="2"/>
+      <path d="M69 230 A40 40 0 0 0 48.4 195" fill="none" stroke="#1c2230" stroke-width="2"/>
+      <text x="80" y="210" class="u7l10-ft sm">61°</text>
+      <path d="M280 230 A40 40 0 0 1 293.2 200.3" fill="none" stroke="#1c2230" stroke-width="2"/>
+      <text x="262" y="213" class="u7l10-ft sm">48°</text>
+      <text x="168" y="120" class="u7l10-ft sm">52 m</text>
+      <text x="84" y="250" class="u7l10-ft u7l10-it">x</text><text x="230" y="250" class="u7l10-ft u7l10-it">y</text>
+    </svg></div>
+    <div class="part"><div class="pl">Find the distance between the two anchors.</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Two right triangles share the 52 m side (the tower). In each, the tower is opp and the ground distance is adj: <b>TOA</b>.<br>Left: <span class="tex">x=52\div\tan61^\circ\approx28.82</span> m<br>Right: <span class="tex">y=52\div\tan48^\circ\approx46.82</span> m<br>Total: <span class="tex">28.82+46.82\approx75.6</span> m<br>The anchors are about <b>75.6 m</b> apart. (Reasonable: the flatter wire, 48°, has its anchor farther from the tower.)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>One triangle at a time:</b> 52 <span class="keys"><kbd>÷</kbd><kbd>tan</kbd></span> 61 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span>, then 52 <span class="keys"><kbd>÷</kbd><kbd>tan</kbd></span> 48 <span class="keys"><kbd>)</kbd><kbd>ENTER</kbd></span>. Add the two full answers, then round.</div>
+    <div class="u7l10-pcol"><button class="pill" type="button" data-keys="52 ÷ tan 61 ) =">x</button><button class="pill" type="button" data-keys="52 ÷ tan 48 ) =">y</button></div></div>
+  <p class="small muted" data-extra><b>Think:</b> what if both anchors were on the <b>same</b> side of the tower? (Then the distance between them is <span class="tex">46.82-28.82\approx18.0</span> m: subtract instead of add.)</p>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex10c" data-section="5. Check Examples 9 and 10">
+  <h3 class="sub">Check Examples 9 and 10: solve it, then check it</h3>
+  <div class="explainer" data-explainer="solve"></div>
+</section>
+
+<!-- ================= 6. Practice test: multiple choice traps ================= -->
+<section class="card" data-extra data-ink="s6x" data-section="6. Practice Test: Spot the Trap">
+  <div class="sec-h"><span class="badge">6</span><h2>Practice Test: Spot the Trap</h2></div>
+  <p>On a multiple-choice test, the wrong answers are often the answers you get from a <b>common mistake</b>. Work it out first, then find the mistake behind each wrong choice.</p>
+  <div class="explainer" data-explainer="traps"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Roots and Pythagoras.</b> Estimate a root between perfect squares. Angles in a triangle add to 180°. <span class="tex">a^2+b^2=c^2</span>: <b>add</b> for the hypotenuse, <b>subtract</b> for a leg.</div>
+    <div><b>Square corners.</b> Is <span class="tex">a^2+b^2=c^2</span>? Then it is a right triangle. 3-4-5 (6-8-10, 9-12-15). A rectangle is square when both diagonals are equal.</div>
+    <div><b>SOH CAH TOA.</b> Label opp, adj and hyp from <span class="tex">\theta</span>. Pick the ratio with the side you know and the side you want. Unknown on top: <b>multiply</b>. On the bottom: <b>divide</b>.</div>
+    <div><b>Angles and checks.</b> Inverse keys give the angle; the other angle is <span class="tex">90^\circ-\theta</span>. Elevation and depression: from the <b>horizontal</b>; add the eye height. Check: the hyp is longest.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u7l10">
+    <div><div class="kicker">Your turn</div><b>Assignment 10 · Unit 7 Review · Questions 1–26</b><div class="muted">A practice unit test: written response (1–14), multiple choice (15–22) and numerical response (23–26). Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+<!-- ================= up next: the unit test ================= -->
+<section class="card u7l10-next" data-ink="next" data-section="Up next: Unit 7 Test">
+  <div class="u7l10-next-h"><span class="kicker">Up next</span><b>Unit 7 test</b> <span class="muted">Shaky on an idea today? Go back to its lesson.</span></div>
+  <div class="u7l10-next-grid">
+    <a href="../l1/"><span class="rn">7.1</span>Squares, square roots and triangle basics <small>Example 1(a), (b)</small></a>
+    <a href="../l2/"><span class="rn">7.2</span>The Pythagorean theorem: finding the hypotenuse <small>Example 1(c)</small></a>
+    <a href="../l3/"><span class="rn">7.3</span>Finding a leg, and squaring a corner <small>Examples 2, 3</small></a>
+    <a href="../l4/"><span class="rn">7.4</span>Similar right triangles and the tangent ratio <small>Examples 4, 5(a)</small></a>
+    <a href="../l5/"><span class="rn">7.5</span>The sine ratio <small>Example 5(b)</small></a>
+    <a href="../l6/"><span class="rn">7.6</span>The cosine ratio <small>Examples 5(c), 6</small></a>
+    <a href="../l7/"><span class="rn">7.7</span>Angles of elevation and depression <small>Example 8</small></a>
+    <a href="../l8/"><span class="rn">7.8</span>Finding angles with inverse trig ratios <small>Example 7</small></a>
+    <a href="../l9/"><span class="rn">7.9</span>Solving right triangles <small>Examples 9, 10</small></a>
+    <div class="test"><span class="rn">Test</span>Unit 7 test: G2, G4, A1 <small>calculator in DEG mode · set up like today’s practice test · round lengths to the nearest tenth and angles to the nearest degree</small></div>
+  </div>
+  <div class="space" id="next-space" style="min-height:80px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u7l10.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u7l10', homeHref: '../../', title: '7.10 Unit 7 Review' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>
