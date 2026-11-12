@@ -14,6 +14,8 @@
  *   Events    question opened, left the page (new numbers), answer revealed, new version, away
  *   Progress  one row per student per lesson: counts + the lesson state (for resuming on another device)
  *   Days      one row per student per lesson per day: seconds worked (all / in class), answers, right, first try
+ *   Projects  one row per student per unit project: checkpoints done, handed in, the saved work (state JSON), and the
+ *             teacher's grade (indicator per outcome + comment, JSON) and when it was released to the student
  *
  * Script properties: SHEET_ID, TEACHER_KEY, SECRET (token signing), CLASSES (list of class codes with a roster),
  *   BLOCKS ({ class: 'A'..'D' }), NOSCHOOL (["2026-10-12", …]), CAL:<class> (the class calendar, see js/calendar.js:
@@ -137,6 +139,7 @@ function doGet(e) {
     if (a === 'myretests') return json_(myRetests_(p), cb);
     if (a === 'reqretest') return json_(reqRetest_(p), cb);
     if (a === 'cal') return json_(cal_(p['class'] || classByBlock_(p.block)), cb);
+    if (a === 'myprojects') return json_(myProjects_(p), cb);
     if (!teacherKey_() || p.key !== teacherKey_()) return json_({ ok: false, error: 'bad key' }, cb);
     if (a === 'classes') return json_(classList_(), cb);
     if (a === 'dash') return json_(dash_(p['class']), cb);
@@ -168,6 +171,8 @@ function doGet(e) {
     if (a === 'tresults') return json_(tresults_(p.session), cb);
     if (a === 'setmarks') return json_(setMarks_(p.session, p.data), cb);
     if (a === 'release') return json_(release_(p.session, p.on === '1' || p.on === 'true'), cb);
+    if (a === 'projects') return json_(projects_(p['class']), cb);
+    if (a === 'setproject') return json_(setProject_(p['class'], p.name, p.project, p.grade, p.release), cb);
     return json_({ ok: false, error: 'unknown action' }, cb);
   } catch (err) { return json_({ ok: false, error: String(err) }, cb); }
 }
@@ -240,6 +245,7 @@ function doPost(e) {
   if (!body || !body.name || !body['class']) return json_({ ok: false, error: 'missing' });
   body['class'] = canon_(body['class']);
   if (body.kind === 'test') { try { return json_(testPost_(body)); } catch (err) { return json_({ ok: false, error: String(err) }); } }
+  if (body.kind === 'project') { try { return json_(projectPost_(body)); } catch (err) { return json_({ ok: false, error: String(err) }); } }
   /* Check-ins come from every signed-in student about every 45 s. The token check (cached), the live status (one cache
    * entry per student) and the writes below need no script lock. */
   try {
@@ -879,4 +885,76 @@ function restoreLedger() {
       Logger.log('Copied ' + vals.length + ' ' + name + ' rows from ' + x.id);
     });
   });
+}
+
+/* ============================================================
+ * UNIT PROJECTS (js/projects.js): one guided project per unit (Unit 1: Pop-Up Shop).
+ *   Projects  one row per student per project: key (class|name|project), class, name, project, done (checkpoints),
+ *             total, submitted (when handed in), updated, state (the student's work, JSON), grade (JSON:
+ *             { lv: { N1: 'PRG' }, cm: comment, at }), released (when the grade was released to the student)
+ * Students save with POST { kind: 'project', class, name, token, project, state, summary: { done, total, submitted } }.
+ * Like the practice check-ins this takes no script lock: a student's row is updated in place (rows are never deleted,
+ * so row numbers hold) and only the student's columns (A–I) are written, so it can't overwrite the teacher's grade (J–K).
+ * An older copy (the state's own `updated` time is older than the saved one) is ignored.
+ * Reads: myprojects (student: their work, and grades only once released), projects (teacher: the class).
+ * Writes from the ledger: setproject (grade and/or release).
+ * ============================================================ */
+COLS.Projects = ['key', 'class', 'name', 'project', 'done', 'total', 'submitted', 'updated', 'state', 'grade', 'released'];
+function projKey_(klass, name, pid) { return norm_(klass) + '|' + norm_(name) + '|' + pid; }
+function projRow_(sh, key) {
+  var last = sh.getLastRow(); if (last < 2) return 0;
+  var keys = sh.getRange(2, 1, last - 1, 1).getValues();
+  for (var i = keys.length - 1; i >= 0; i--) if (keys[i][0] === key) return i + 2;
+  return 0;
+}
+function projectPost_(body) {
+  var who = authFast_(body['class'], body.name, body.token); if (!who) return { ok: false, error: 'badtoken' };
+  var pid = String(body.project || ''); if (!/^[a-z0-9]{1,12}$/.test(pid)) return { ok: false, error: 'bad project' };
+  var st = body.state && typeof body.state === 'object' && !Array.isArray(body.state) ? body.state : null; if (!st) return { ok: false, error: 'no state' };
+  var txt = JSON.stringify(st); if (txt.length > 48000) return { ok: false, error: 'too big' };
+  var s = body.summary || {}, key = projKey_(who.klass, who.name, pid), now = Date.now(), sh = sheet_('Projects'), r = projRow_(sh, key);
+  if (r) { // an older copy (another device that was behind) doesn't replace newer work
+    var old = null; try { old = JSON.parse(String(sh.getRange(r, 9).getValue() || 'null')); } catch (e) { old = null; }
+    if (old && (Number(old.updated) || 0) > (Number(st.updated) || 0)) return { ok: true, stale: true };
+  }
+  var sub = Number(s.submitted) || 0;
+  var row = [key, who.klass, who.name, pid, Math.max(0, Number(s.done) || 0), Math.max(0, Number(s.total) || 0), sub ? new Date(sub) : '', new Date(now), txt];
+  if (r) sh.getRange(r, 1, 1, row.length).setValues([row]); else sh.appendRow(row.concat(['', '']));
+  return { ok: true };
+}
+function projRec_(r) {
+  var st = null, g = null; try { st = JSON.parse(String(r[8] || 'null')); } catch (e) {} try { g = JSON.parse(String(r[9] || 'null')); } catch (e) {}
+  return { name: String(r[2]), project: String(r[3]), done: Number(r[4]) || 0, total: Number(r[5]) || 0, submitted: ms_(r[6]), updated: ms_(r[7]), state: st, grade: g, released: ms_(r[10]) };
+}
+function myProjects_(p) {
+  var who = authFast_(p['class'], p.name, p.token); if (!who) return { ok: false, error: 'badtoken' };
+  var pre = norm_(who.klass) + '|' + norm_(who.name) + '|', out = {};
+  rows_('Projects').forEach(function (r) {
+    if (String(r[0]).indexOf(pre) !== 0) return;
+    var x = projRec_(r), o = { state: x.state, updated: x.updated, submitted: x.submitted };
+    if (x.released && x.grade) { o.grade = x.grade; o.released = x.released; } // a grade is the student's only once it's released
+    out[x.project] = o;
+  });
+  return { ok: true, projects: out };
+}
+function projects_(klass) {
+  var k = norm_(klass), out = [];
+  rows_('Projects').forEach(function (r) { if (norm_(r[1]) === k) out.push(projRec_(r)); });
+  return { ok: true, projects: out, now: Date.now() };
+}
+var IND_ = ['NM', 'LIM', 'BEG', 'EMG', 'PRG', 'ADV', 'MAS'];
+function setProject_(klass, name, pid, gradeJson, release) {
+  pid = String(pid || ''); if (!/^[a-z0-9]{1,12}$/.test(pid)) return { ok: false, error: 'bad project' };
+  var st = findStudent_(klass, name); if (!st) return { ok: false, error: 'unknown student' };
+  var sh = sheet_('Projects'), key = projKey_(st.v[0], st.v[1], pid), r = projRow_(sh, key);
+  if (!r) { sh.appendRow([key, String(st.v[0]), String(st.v[1]), pid, 0, 0, '', '', '', '', '']); r = projRow_(sh, key); }
+  if (gradeJson != null && gradeJson !== '') {
+    var g = null; try { g = JSON.parse(gradeJson); } catch (e) { return { ok: false, error: 'bad grade' }; }
+    var lv = {}; Object.keys((g && g.lv) || {}).slice(0, 8).forEach(function (o) { if (/^[A-Z]{1,3}\d{0,2}$/.test(o) && IND_.indexOf(g.lv[o]) >= 0) lv[o] = g.lv[o]; });
+    var clean = { lv: lv, cm: String((g && g.cm) || '').replace(/[<>]/g, ' ').slice(0, 800), at: Date.now() };
+    sh.getRange(r, 10).setValue(JSON.stringify(clean));
+  }
+  if (release === '1') sh.getRange(r, 11).setValue(new Date());
+  else if (release === '0') sh.getRange(r, 11).setValue('');
+  return { ok: true, project: projRec_(sh.getRange(r, 1, 1, COLS.Projects.length).getValues()[0]) };
 }
