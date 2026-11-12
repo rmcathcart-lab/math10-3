@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Perimeter and Circumference · Math 10-3 3.6</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 6: perimeter and circumference. Adding the sides of polygons, rectangles and squares, finding missing sides of L shapes, C = πd and C = 2πr, shapes with half circles, and the cost of fencing, trim and edging. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l6.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l6">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: A Rope Around the Earth">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>A Rope Around the Earth</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A rope is wrapped tightly around the Earth at the equator. It is about 40&#8239;000 km long. Now we add just <b>1 metre</b> to the rope and lift it evenly, all the way around.</p><p class="vw-ask">How big is the gap under the rope?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="The Earth turning slowly with a rope around its equator and a 1 metre tag">
+    <defs><clipPath id="u3l6-wclip"><circle cx="150" cy="140" r="96"/></clipPath></defs>
+    <circle cx="150" cy="140" r="96" fill="#5b9bd5" stroke="#1f5b8f" stroke-width="3"/>
+    <g clip-path="url(#u3l6-wclip)"><g fill="#6fb36b" stroke="#3f7a3c" stroke-width="2">
+      <animateTransform attributeName="transform" type="translate" values="0 0;-200 0" dur="12s" repeatCount="indefinite"/>
+      <path d="M70 80 q30 -20 55 0 q10 25 -10 45 q-25 10 -40 -10 z"/><path d="M150 150 q25 -15 40 5 q5 35 -20 50 q-20 -20 -20 -55 z"/><path d="M215 90 q40 -10 60 15 q-20 20 -50 10 z"/>
+      <path d="M270 80 q30 -20 55 0 q10 25 -10 45 q-25 10 -40 -10 z"/><path d="M350 150 q25 -15 40 5 q5 35 -20 50 q-20 -20 -20 -55 z"/><path d="M415 90 q40 -10 60 15 q-20 20 -50 10 z"/>
+    </g></g>
+    <ellipse cx="150" cy="140" rx="96" ry="14" fill="none" stroke="#b5651d" stroke-width="5"/>
+    <path d="M54 140 A96 14 0 0 0 246 140" fill="none" stroke="#e0a21a" stroke-width="5"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.8s" repeatCount="indefinite"/>
+      <path d="M246 140 L262 120" stroke="#6e4a1c" stroke-width="2"/>
+      <rect x="250" y="92" width="72" height="30" rx="6" fill="#fff" stroke="#6e4a1c" stroke-width="2.5"/>
+      <text x="286" y="113" font-size="18" font-weight="800" fill="#6e4a1c" text-anchor="middle">+1 m</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="2.2s" repeatCount="indefinite"/>
+      <text x="40" y="44" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u3l6-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> thinner than a sheet of paper</div>
+      <div class="opt right"><b>B</b> big enough for a cat to crawl under</div>
+      <div class="opt"><b>C</b> taller than a person</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>B, about 16 cm!</b> Most people guess A. But adding 1 m to the distance around makes the circle about <span class="tex">1\div\pi\approx0.32</span> m wider, so the rope lifts about <b>16 cm</b> everywhere: a cat could crawl under it all the way around the world. <span class="muted">The twist: it is the <b>same 16 cm</b> for a rope around a basketball. Today we learn the rule behind it.</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 6</div>
+  <h1>Perimeter and Circumference</h1>
+  <p class="lede">How much fence goes around a dog run? How much baseboard goes around a bedroom? How far does a bike roll when its wheel turns once? Today we find the distance <b>around</b> shapes, including circles, and what it costs.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find the <b>perimeter</b> of a polygon by adding its sides (all in the same unit)</li>
+      <li>use <span class="tex">P=2l+2w</span> for a rectangle and find <b>missing sides</b> of an L shape</li>
+      <li>find the <b>circumference</b> of a circle with <span class="tex">C=\pi d</span> or <span class="tex">C=2\pi r</span>, and estimate it as <span class="tex">3\times d</span></li>
+      <li>find the perimeter of shapes made with <b>half circles</b></li>
+      <li>find the <b>cost</b> of fencing, trim and edging, and <b>round up</b> pieces</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M3</b> Solve and verify problems that involve SI and imperial linear measurements, including decimal and fractional measurements.</div>
+</section>
+
+<!-- ================= 1. Perimeter of a polygon ================= -->
+<section class="card" data-ink="s1" data-section="1. Perimeter of a Polygon">
+  <div class="sec-h"><span class="badge">1</span><h2>Perimeter of a Polygon</h2></div>
+  <p>A <b>polygon</b> is a flat shape with straight sides, like a triangle, a rectangle or a hexagon. The <b>perimeter</b> is the total distance <b>around the outside</b> of a shape. To find it, add the lengths of all the sides. Perimeter is a <b>length</b>, so its unit is cm, m, in or ft (no small 2).</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u3l6-kgrid">
+      <div><b>Perimeter</b> <span class="tex">P</span> = the sum of all the side lengths</div>
+      <div><b>Square</b> (side <span class="tex">s</span>): <span class="tex">P=4s</span></div>
+      <div><b>Rectangle</b> (length <span class="tex">l</span>, width <span class="tex">w</span>): <span class="tex">P=2l+2w</span> or <span class="tex">P=2(l+w)</span></div>
+    </div></div>
+  <div class="def-grid">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Start at one corner and go around the shape. Tick each side as you add it, so you do not miss one or count one twice. All the sides must be in the <b>same unit</b> before you add.</div></div>
+    <div class="tip u3l6-rtip"><div class="tip-ic">⌐</div><div><b>Reading diagrams.</b> A small square in a corner means a <b>right angle</b> (a square corner, 90°). Small tick marks on sides mean those sides are <b>equal</b>. Diagrams are often not drawn to scale: use the numbers, not a ruler.</div></div>
+  </div>
+  <div class="explainer" data-explainer="walk"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Add the sides</h3></div>
+  <p class="u3l6-qt">Find the perimeter of each shape.</p>
+  <div class="parts c3">
+    <div class="part"><div class="u3l6-fig" data-fig="tri"></div><div class="pl">(a) a triangle</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Change to cm: 48 mm = 4.8 cm<br><span class="tex">P=8+6.5+4.8</span><br><span class="tex">P=19.3</span> cm</div></div></div>
+    <div class="part"><div class="u3l6-fig" data-fig="lot"></div><div class="pl">(b) a building lot (not to scale)</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">P=14.2+9.5+11.8+10.3+7.6</span><br><span class="tex">P=53.4</span> m</div></div></div>
+    <div class="part"><div class="u3l6-fig" data-fig="hex"></div><div class="pl">(c) a hexagon tile (all sides equal)</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">6 equal sides:<br><span class="tex">P=6\times2\tfrac34=6\times2.75</span><br><span class="tex">P=16.5=16\tfrac12</span> in</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Rectangles and Squares">
+  <h3 class="sub">Rectangles and squares: a fence around a yard</h3>
+  <p>A rectangle has two lengths and two widths. Walk around it and you add <span class="tex">l+w+l+w</span>: that is <span class="tex">2l+2w</span>, or <span class="tex">2(l+w)</span> (add one length and one width, then double).</p>
+  <div class="explainer" data-explainer="yard"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A square has a perimeter of 36 cm. How long is each side?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A square has 4 equal sides: <span class="tex">36\div4=9</span> cm.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Rectangles and squares</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Find the perimeter of each rectangle or square. Estimate first to check your answer.</div>
+      <table class="u3l6-tbl u3l6-ex2">
+        <tr><th>Shape</th><th>Size</th><th>Work</th><th>Perimeter</th></tr>
+        <tr><td>(a) Volleyball court</td><td>18 m by 9 m</td><td><span data-reveal="&nbsp;"><span class="tex">2\times18+2\times9=36+18</span></span></td><td><span data-reveal="&nbsp;">54 m</span></td></tr>
+        <tr><td>(b) Phone screen</td><td>15.2 cm by 7.1 cm</td><td><span data-reveal="&nbsp;"><span class="tex">2(15.2+7.1)=2\times22.3</span></span></td><td><span data-reveal="&nbsp;">44.6 cm</span></td></tr>
+        <tr><td>(c) Square floor tile</td><td>side <span class="tex">4\tfrac34</span> in</td><td><span data-reveal="&nbsp;"><span class="tex">4\times4\tfrac34=4\times4.75</span></span></td><td><span data-reveal="&nbsp;">19 in</span></td></tr>
+        <tr><td>(d) Area rug</td><td>5 ft 6 in by 7 ft 9 in</td><td><span data-reveal="&nbsp;">2 × (12 ft 15 in) = 2 × (13 ft 3 in)</span></td><td><span data-reveal="&nbsp;">26 ft 6 in</span></td></tr>
+      </table>
+      <div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimates: (a) <span class="tex">2\times20+2\times10=60</span> m, close to 54 m. (b) <span class="tex">2(15+7)=44</span> cm. (c) <span class="tex">4\times5=20</span> in.<br>(d) Add the length and width first: 5 ft 6 in + 7 ft 9 in = 12 ft 15 in = 13 ft 3 in (15 in = 1 ft 3 in). Double it: <b>26 ft 6 in</b>. (Check in feet: 5.5 ft and 7.75 ft, <span class="tex">2(5.5+7.75)=26.5</span> ft = 26 ft 6 in.)</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Missing sides ================= -->
+<section class="card" data-ink="s2" data-section="2. Finding Missing Side Lengths">
+  <div class="sec-h"><span class="badge">2</span><h2>Finding Missing Side Lengths</h2></div>
+  <p>Sometimes a diagram does not show every side. When all the corners are right angles (like an L shape), use the sides you know:</p>
+  <ul class="u3l6-ul">
+    <li>The sides that go <b>across</b> at the top add up to the side across the bottom.</li>
+    <li>The sides that go <b>up and down</b> on one side add up to the side on the other.</li>
+  </ul>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Missing side = the long side − the part you know.</b> &nbsp; Then add <b>all</b> the sides, including the ones you found.</div>
+  <div class="tip u3l6-ctip"><div class="tip-ic">✓</div><div><b>Check.</b> When a shape is a rectangle with <b>one corner cut out</b> (an L shape), its perimeter is the same as the perimeter of the whole rectangle around it. The cut just moves two sides inward. (This shortcut does <b>not</b> work when a notch is cut into the middle of a side.)</div></div>
+  <div class="explainer" data-explainer="missing"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Rosa’s L-shaped garden</h3></div>
+  <div class="u3l6-side">
+    <div class="u3l6-figcol"><div class="u3l6-fig" data-fig="rosa"></div><div class="u3l6-figcap">All corners are right angles.</div></div>
+    <div>
+      <p class="u3l6-qt">Rosa is planting a garden shaped like an L. She wants to put a short border fence around it.</p>
+      <div class="parts c1">
+        <div class="part"><div class="pl">(a) Find the missing side lengths <span class="tex">a</span> and <span class="tex">b</span>.</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">a=9.6-4.1=5.5</span> m (across: top parts add to the bottom)<br><span class="tex">b=7.2-2.8=4.4</span> m (up and down: right parts add to the left)</div></div></div>
+        <div class="part"><div class="pl">(b) Find the perimeter of the garden.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">P=9.6+2.8+5.5+4.4+4.1+7.2=33.6</span> m<br>Rosa needs <b>33.6 m</b> of border fence.</div></div></div>
+        <div class="part"><div class="pl">(c) Check with the shortcut for an L shape.</div><div class="work" style="--h:80px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Rectangle around it: 9.6 m by 7.2 m.<br><span class="tex">2(9.6+7.2)=2\times16.8=33.6</span> m ✓</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Tyler’s L-shaped desk</h3></div>
+  <div class="u3l6-side">
+    <div class="u3l6-figcol"><div class="u3l6-fig" data-fig="tyler"></div><div class="u3l6-figcap">All corners are right angles.</div></div>
+    <div>
+      <p class="u3l6-qt">Tyler builds an L-shaped desk top. He will glue a thin strip of edge banding all the way around it.</p>
+      <div class="parts c1">
+        <div class="part"><div class="pl">(a) Find the two missing side lengths.</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Across: <span class="tex">60-24\tfrac14=35\tfrac34</span> in<br>Up and down: <span class="tex">48\tfrac12-22\tfrac34=47\tfrac64-22\tfrac34=25\tfrac34</span> in</div></div></div>
+        <div class="part"><div class="pl">(b) How many inches of edge banding does Tyler need?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">P=60+22\tfrac34+35\tfrac34+25\tfrac34+24\tfrac14+48\tfrac12</span><br>Wholes: <span class="tex">60+22+35+25+24+48=214</span>; fractions: <span class="tex">\tfrac34+\tfrac34+\tfrac34+\tfrac14+\tfrac24=\tfrac{12}{4}=3</span><br><span class="tex">P=217</span> in. (Check: <span class="tex">2(60+48\tfrac12)=2\times108\tfrac12=217</span> in ✓)</div></div></div>
+        <div class="part"><div class="pl">(c) Write your answer in feet and inches.</div><div class="work" style="--h:80px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">217\div12=18</span> remainder 1, so 18 ft 1 in.<br>Tyler needs <b>18 ft 1 in</b> of edge banding.</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example">
+  <div class="ex-head"><span class="ex-tag">Extra</span><h3>More practice: beds, frames and fences</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A garden bed has 5 equal sides, each 1.4 m long. Find its perimeter.</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">P=5\times1.4=7</span> m</div></div></div>
+    <div class="part"><div class="pl">(b) A picture frame is 3 ft 8 in by 2 ft 7 in. Find its perimeter in feet and inches.</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">3 ft 8 in + 2 ft 7 in = 5 ft 15 in = 6 ft 3 in<br><span class="tex">P=2\times</span> 6 ft 3 in = <b>12 ft 6 in</b></div></div></div>
+    <div class="part"><div class="pl">(c) A triangle has sides 2 ft 9 in, 3 ft 5 in and 4 ft 2 in. Find its perimeter in feet and inches.</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Feet: <span class="tex">2+3+4=9</span> ft; inches: <span class="tex">9+5+2=16</span> in<br>9 ft 16 in = <b>10 ft 4 in</b> (16 in = 1 ft 4 in)</div></div></div>
+  </div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–6">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 6 · Questions 1–6</h2>
+  <p class="pr-t">Try these before we go on to circles.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Add the sides</span>
+    <span><b>2</b>Rectangles and squares</span>
+    <span><b>3</b>Find the mistakes</span>
+    <span><b>4</b>An L-shaped room</span>
+    <span><b>5</b>A U-shaped deck</span>
+    <span><b>6</b>The garden path</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 6.</span><a class="pill" href="../../../#/lesson/u3l6">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Circumference ================= -->
+<section class="card" data-ink="s3" data-section="3. Circumference of a Circle">
+  <div class="sec-h"><span class="badge">3</span><h2>Circumference of a Circle</h2></div>
+  <div class="u3l6-side rev">
+    <div>
+      <p>A circle has no straight sides, so we need new words.</p>
+      <ul class="u3l6-ul">
+        <li>The <b>centre</b> is the point in the middle.</li>
+        <li>The <b>radius</b> (<span class="tex">r</span>) is the distance from the centre to the edge.</li>
+        <li>The <b>diameter</b> (<span class="tex">d</span>) is the distance all the way across, through the centre. It is two radii: <span class="tex">d=2r</span>.</li>
+        <li>The <b>circumference</b> (<span class="tex">C</span>) is the distance around the circle. It is the perimeter of a circle.</li>
+      </ul>
+      <p>For <b>every</b> circle, the circumference is a little more than 3 times the diameter. The exact number is called <b>pi</b> (say “pie”), written <span class="tex">\pi</span>. It is about 3.14, and its decimals go on forever.</p>
+    </div>
+    <div class="u3l6-fig" data-fig="circle"></div>
+  </div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Circumference:</b> <span class="tex">C=\pi d</span> or <span class="tex">C=2\pi r</span> &nbsp;(<span class="tex">\pi\approx3.14</span>)<br>
+    <span class="u3l6-eg"><b>Estimate:</b> <span class="tex">C\approx3\times d</span>. For example, a circle 30 cm across goes around a bit more than <span class="tex">3\times30=90</span> cm.</span></div>
+  <div class="explainer" data-explainer="roll"></div>
+  <div class="def-grid">
+    <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Use the <span class="keys"><kbd>π</kbd></span> key: it holds many more decimals than 3.14. <span class="keys"><kbd>π</kbd> <kbd>×</kbd> 30 <kbd>ENTER</kbd></span> shows 94.24777961. With a radius of 7: <span class="keys">2 <kbd>×</kbd> <kbd>π</kbd> <kbd>×</kbd> 7 <kbd>ENTER</kbd></span> shows 43.98229715. (Using 3.14 gives an answer that is a tiny bit different.)</div>
+      <div class="u3l6-pcol"><button class="pill" type="button" data-keys="π × 30 =">d = 30</button><button class="pill" type="button" data-keys="2 × π × 7 =">r = 7</button></div></div>
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> If you are given the <b>radius</b>, double it first (or use <span class="tex">C=2\pi r</span>). The most common mistake is <span class="tex">\pi\times r</span>, which gives only <b>half</b> the circumference.</div></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A pizza has a radius of 7 in. Sam writes <span class="tex">C=\pi\times7\approx22.0</span> in. How can you tell this is wrong without a calculator?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The diameter is 14 in, so the estimate is <span class="tex">3\times14=42</span> in. 22 in is only about half of that: Sam used the radius instead of the diameter.</div></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s3w" data-section="3. Why Pi Is the Same for Every Circle">
+  <h3 class="sub">Why is it always about 3.14?</h3>
+  <p>Wrap a string around any round object, then lay it next to the diameter. Small or huge, the string is always a bit more than <b>3 diameters</b>: <span class="tex">C\div d\approx3.14</span>. That number is <span class="tex">\pi</span>.</p>
+  <div class="explainer" data-explainer="piRatio"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Around the circle</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Find the circumference of each object. Estimate first. Round to the nearest tenth.</div>
+      <table class="u3l6-tbl u3l6-ex5">
+        <tr><th>Object</th><th>Given</th><th>Diameter</th><th>Estimate (<span class="tex">3\times d</span>)</th><th>Work (<span class="tex">C=\pi d</span>)</th><th>Circumference</th></tr>
+        <tr><td>(a) Wall clock</td><td><span class="tex">d=30</span> cm</td><td><span data-reveal="&nbsp;">30 cm</span></td><td><span data-reveal="&nbsp;">90 cm</span></td><td><span data-reveal="&nbsp;"><span class="tex">\pi\times30=94.24\ldots</span></span></td><td><span data-reveal="&nbsp;">94.2 cm</span></td></tr>
+        <tr><td>(b) Pizza</td><td><span class="tex">r=7</span> in</td><td><span data-reveal="&nbsp;">14 in</span></td><td><span data-reveal="&nbsp;">42 in</span></td><td><span data-reveal="&nbsp;"><span class="tex">\pi\times14=43.98\ldots</span></span></td><td><span data-reveal="&nbsp;">44.0 in</span></td></tr>
+        <tr><td>(c) Round hay bale</td><td><span class="tex">r=0.9</span> m</td><td><span data-reveal="&nbsp;">1.8 m</span></td><td><span data-reveal="&nbsp;">5.4 m</span></td><td><span data-reveal="&nbsp;"><span class="tex">\pi\times1.8=5.654\ldots</span></span></td><td><span data-reveal="&nbsp;">5.7 m</span></td></tr>
+        <tr><td>(d) Jar lid</td><td><span class="tex">d=3\tfrac14</span> in</td><td><span data-reveal="&nbsp;">3.25 in</span></td><td><span data-reveal="&nbsp;">about 10 in</span></td><td><span data-reveal="&nbsp;"><span class="tex">\pi\times3.25=10.21\ldots</span></span></td><td><span data-reveal="&nbsp;">10.2 in</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">For (b) and (c) the radius is given, so double it: <span class="tex">d=2\times7=14</span> in, <span class="tex">d=2\times0.9=1.8</span> m. Each answer is a bit more than the estimate, as it should be.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. One Turn of a Wheel">
+  <h3 class="sub">One turn of a wheel</h3>
+  <p>Each time a wheel turns once, it rolls forward a distance equal to its <b>circumference</b>.</p>
+  <div class="explainer" data-explainer="bike"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Nadia’s bike</h3></div>
+  <p class="u3l6-qt">Each time a bike wheel turns once, the bike rolls forward a distance equal to the wheel’s circumference. Nadia’s bike wheel has a diameter of 66 cm.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) How far does the bike roll when the wheel turns once? Round to the nearest tenth of a centimetre.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">C=\pi d=\pi\times66</span><br><span class="tex">C=207.345\ldots</span><br>The bike rolls about <b>207.3 cm</b> in one turn.</div></div></div>
+    <div class="part"><div class="pl">(b) How far does the bike roll in 500 turns? Give your answer in metres, to the nearest tenth.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">500\times207.345\ldots=103\,672.5\ldots</span> cm<br><span class="tex">103\,672.5\div100=1036.7</span> m<br>About <b>1036.7 m</b> (just over 1 km).</div></div></div>
+    <div class="part"><div class="pl">(c) About how many turns does the wheel make in 1 km?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 km = 1000 m = 100&#8239;000 cm<br><span class="tex">100\,000\div207.345\ldots\approx482.3</span><br>The wheel turns about <b>482 times</b> in 1 km.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- sources (search results; pages not opened in this session — please verify):
+     https://www.aps.org/apsnews/2006/06/eratosthenes-measures-earth (APS News, "June, ca. 240 B.C. Eratosthenes Measures the Earth") ;
+     https://www.lindahall.org/about/news/scientist-of-the-day/eratosthenes-of-cyrene ;
+     https://brilliant.org/wiki/calculating-the-size-of-the-earth/ -->
+<!-- ================= Math History box (brown) ================= -->
+<section class="card history" data-ink="hist" data-section="Math History: Eratosthenes Measures the Earth">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">Egypt · about 240 BCE</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">A Stick and a Shadow</h3>
+      <p>Eratosthenes ran the great library in Alexandria, Egypt. In the town of Syene, far to the south, the noon Sun on the longest day of the year shone straight down: sticks had no shadow.</p>
+      <p>At the same time in Alexandria, a stick cast a short shadow. Its angle showed the towns were <b>1/50</b> of the way around the Earth, about <b>5000 stadia</b> apart (an old Greek unit). So the Earth was about <span class="tex">50\times5000=250\,000</span> stadia around.</p>
+      <div class="part hist-q"><div class="pl">Today we know the Earth is about 40&#8239;000 km around. Use <span class="tex">C=\pi d</span>: about how wide is the Earth?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">d=C\div\pi=40\,000\div\pi\approx12\,700</span> km.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u3l6-hist" viewBox="0 0 600 300" role="img" aria-label="Sun rays fall straight down on a stick at Syene and at a slant on a stick at Alexandria. The same small angle at the centre of the Earth is one fiftieth of the circle."></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+      <p class="hist-note">Historians still argue about how long his stadion was, so we do not know exactly how close he came.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 4. Half circles ================= -->
+<section class="card" data-ink="s4" data-section="4. Shapes With Half Circles">
+  <div class="sec-h"><span class="badge">4</span><h2>Shapes With Half Circles</h2></div>
+  <p>A <b>semicircle</b> is half of a circle. Its curved edge is half of the circumference. Two semicircles with the same diameter make one whole circle.</p>
+  <p>Many shapes are made of a rectangle and one or two semicircles (an arched window, a running track). To find the perimeter, add only the edges on the <b>outside</b>. Do not add a line where two pieces join.</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u3l6-kgrid">
+      <div><b>Curved edge of a semicircle</b> = <span class="tex">\pi d\div2</span></div>
+      <div><b>Two equal semicircles</b> = <span class="tex">\pi d</span> (one whole circle)</div>
+      <div><b>Perimeter</b> = the straight edges on the outside + the curved edges</div>
+    </div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A half circle on its own has a straight edge too (its diameter). Remember to add it. But when the half circle sits on a rectangle, that line is <b>inside</b> the shape, so it is not part of the perimeter.</div></div>
+  <div class="explainer" data-explainer="semi"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A circle has a diameter of 10 m. Is half of it (a semicircle with its straight edge) half the perimeter of the circle?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. The circle: <span class="tex">\pi\times10\approx31.4</span> m. The semicircle: curved <span class="tex">31.4\div2=15.7</span> m <b>plus</b> the straight edge 10 m = 25.7 m. That is much more than half of 31.4 m.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Rugs, windows and skating paths</h3></div>
+  <p class="u3l6-qt">Find the perimeter of each shape. Round to the nearest tenth.</p>
+  <div class="parts c3">
+    <div class="part"><div class="u3l6-fig" data-fig="rug"></div><div class="pl">(a) a half-circle rug</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Curved: <span class="tex">\pi\times4\div2=6.283\ldots</span> ft<br>Straight: 4 ft<br><span class="tex">P=6.283+4=10.283\ldots</span><br><span class="tex">P\approx10.3</span> ft</div></div></div>
+    <div class="part"><div class="u3l6-fig" data-fig="window"></div><div class="pl">(b) an arched window frame</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The arch is half a circle with <span class="tex">d=90</span> cm: <span class="tex">\pi\times90\div2=141.37\ldots</span> cm<br>Straight: <span class="tex">120+90+120=330</span> cm<br><span class="tex">P=330+141.37\approx471.4</span> cm<br>(The dashed line is inside: not added.)</div></div></div>
+    <div class="part"><div class="u3l6-fig" data-fig="path"></div><div class="pl">(c) an outdoor skating path: two straight sides 40 m long, and a semicircle at each end</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Two semicircles, <span class="tex">d=18</span> m, make one circle: <span class="tex">\pi\times18=56.548\ldots</span> m<br>Straight: <span class="tex">40+40=80</span> m<br><span class="tex">P=80+56.548\approx136.5</span> m</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l6"></section>
+
+<!-- ================= 5. Fencing, trim and edging ================= -->
+<section class="card" data-ink="s5" data-section="5. Fencing, Trim and Edging">
+  <div class="sec-h"><span class="badge">5</span><h2>Fencing, Trim and Edging: Finding the Cost</h2></div>
+  <p>Fencing a yard, putting baseboard in a room and edging a garden are all perimeter jobs. Follow these steps.</p>
+  <ol class="u3l6-steps">
+    <li><b>Step 1.</b> Find the length needed. Use only the sides that need it, and subtract any gaps (doors, gates).</li>
+    <li><b>Step 2.</b> If it is sold <b>by the metre or foot</b>: cost = length × price per metre (or per foot).</li>
+    <li><b>Step 3.</b> If it is sold in <b>pieces or rolls of a fixed length</b>: divide to find how many, then <b>round up</b>. You cannot buy part of a piece. Cost = number of pieces × price per piece.</li>
+  </ol>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Cost</b> = length × price per unit length &nbsp;&nbsp;&nbsp; <b>Pieces needed</b> = length needed ÷ length of one piece → <b>always round up</b></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Round pieces <b>up</b> even when the decimal is small: 5.1 pieces means you must buy 6. If you buy 5, you will be short.</div></div>
+  <div class="explainer" data-explainer="fence"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Jamal makes the gate gap 1.5 m instead of 1.2 m. How much less does the fencing cost?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">0.3 m less fencing: <span class="tex">0.3\times\$18.75=\$5.625</span>, about <b>$5.63</b> less (before tax).</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Jamal’s dog run</h3></div>
+  <div class="u3l6-side">
+    <div class="u3l6-fig" data-fig="dogrun"></div>
+    <p class="u3l6-qt">Jamal is fencing a rectangular dog run, 9.5 m by 6 m. He will leave a 1.2 m space for a gate. Fencing costs $18.75 per metre, and the gate costs $129.00.</p>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the perimeter of the dog run.</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">P=2(9.5+6)=2\times15.5=31</span> m</div></div></div>
+    <div class="part"><div class="pl">(b) How many metres of fencing does Jamal need?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">31-1.2=29.8</span> m of fencing</div></div></div>
+    <div class="part"><div class="pl">(c) Find the cost of the fencing.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">29.8\times\$18.75=\$558.75</span></div></div></div>
+    <div class="part"><div class="pl">(d) Find the total cost of the fencing and the gate, with 5% GST.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Before tax: <span class="tex">\$558.75+\$129.00=\$687.75</span><br>With GST: <span class="tex">\$687.75\times1.05=722.1375\approx\$722.14</span><br>The total cost is <b>$722.14</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Shawna’s baseboard</h3></div>
+  <p class="u3l6-qt">Shawna is putting new baseboard around her bedroom. The room is a rectangle 11 ft 6 in by 13 ft 3 in. There is no baseboard across the 2 ft 8 in doorway. Baseboard is sold in 8 ft pieces for $13.98 each. (Pieces can be cut and joined anywhere.)</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the perimeter of the room in feet and inches.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">11 ft 6 in + 13 ft 3 in = 24 ft 9 in<br><span class="tex">P=2\times</span> 24 ft 9 in = 48 ft 18 in = <b>49 ft 6 in</b></div></div></div>
+    <div class="part"><div class="pl">(b) How much baseboard does Shawna need?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">49 ft 6 in − 2 ft 8 in<br>= 48 ft 18 in − 2 ft 8 in (regroup 1 ft as 12 in)<br>= <b>46 ft 10 in</b></div></div></div>
+    <div class="part"><div class="pl">(c) How many 8 ft pieces must she buy, and what do they cost?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">46 ft 10 in is about 46.83 ft. <span class="tex">46.83\div8\approx5.85</span><br>Round up: <b>6 pieces</b>. (5 pieces = 40 ft is not enough.)<br><span class="tex">6\times\$13.98=\$83.88</span></div></div></div>
+    <div class="part"><div class="pl">(d) How much baseboard will be left over?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">6 pieces = <span class="tex">6\times8=48</span> ft<br>48 ft − 46 ft 10 in = 47 ft 12 in − 46 ft 10 in<br>= <b>1 ft 2 in</b> left over</div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exx2" data-section="Extra Example: Circles and Costs">
+  <div class="ex-head"><span class="ex-tag">Extra</span><h3>More practice: tables, wheels and lights</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A round table has a diameter of 1.5 m. Find its circumference, to the nearest tenth.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">3\times1.5=4.5</span> m<br><span class="tex">\pi\times1.5=4.712\ldots\approx4.7</span> m</div></div></div>
+    <div class="part"><div class="pl">(b) A wheelchair wheel has a diameter of 24 in. How far does it roll in 100 turns, in feet (nearest foot)?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\pi\times24=75.398\ldots</span> in<br><span class="tex">100\times75.398\ldots=7539.8\ldots</span> in<br><span class="tex">7539.8\div12\approx628</span> ft</div></div></div>
+    <div class="part"><div class="pl">(c) String lights go around a square deck, 14 ft on each side. They come in 25 ft strings for $19.99. How many strings, and what cost?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">P=4\times14=56</span> ft<br><span class="tex">56\div25=2.24</span>: round up to 3 strings<br><span class="tex">3\times\$19.99=\$59.97</span></div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Perimeter:</b> add all the sides, in the same unit. Square <span class="tex">P=4s</span>; rectangle <span class="tex">P=2l+2w=2(l+w)</span>. Tick each side so you don’t miss one.</div>
+    <div><b>Missing sides:</b> the long side − the part you know. An L shape has the same perimeter as the rectangle around it (not true for a notch in the middle of a side).</div>
+    <div><b>Circumference:</b> <span class="tex">C=\pi d=2\pi r</span>, about <span class="tex">3\times d</span>. Given the radius? Double it first. One turn of a wheel rolls one circumference.</div>
+    <div><b>Half circles:</b> curved edge <span class="tex">\pi d\div2</span>; add outside edges only. <b>Cost:</b> length × price; pieces = length ÷ piece length, <b>round up</b>.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l6">
+    <div><div class="kicker">Your turn</div><b>Assignment 6 · Questions 7–18</b><div class="muted">An electric fence, circles and wheels, earrings, a running track, fencing, trim and edging costs, and multiple choice. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l7/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 7 — Rearranging Formulas: Finding a Missing Side</b><div class="muted">You have 30 m of fence and the pen must be 9 m long. How wide can it be?</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l6.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l6', homeHref: '../../', title: '3.6 Perimeter and Circumference' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

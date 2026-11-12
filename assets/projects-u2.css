@@ -1,0 +1,193 @@
+/* Unit 2 project: Pick Your Job (js/projects/u2.js). Job postings, timesheets, sales report, tree tally, pay stub,
+ * savings goal, comparison table and the printable job offer. Everything is prefixed pj-u2-. --jc = the job's colour. */
+
+/* ---- job heads and small bits ---- */
+.pj-u2-jh .pj-u2-boss { font-size: 13.5px; color: var(--muted); }
+.pj-u2-jh b { color: var(--jc, var(--ink)); }
+.pj-u2-facts { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: -2px 0 12px; font-size: 14px; }
+.pj-u2-facts span { padding: 4px 10px; border-radius: 8px; background: #fbfaf7; border: 1px solid var(--line2); }
+.pj-u2-big input { font-weight: 800; }
+.pj-fl small { font-weight: 500; color: var(--muted); }
+
+/* ---- Checkpoint 1: the job board ---- */
+.pj-u2-board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
+.pj-u2-post { --jc: #2563eb; display: flex; flex-direction: column; gap: 12px; background: #fff; border: 1.5px solid var(--line); border-top: 6px solid var(--jc); border-radius: 16px; padding: 14px 14px 14px; box-shadow: 0 2px 8px rgba(20, 24, 33, .05); transition: border-color .15s, box-shadow .15s; }
+.pj-u2-post.is-first { border-color: var(--jc); box-shadow: 0 0 0 3px color-mix(in srgb, var(--jc) 22%, transparent), 0 6px 18px rgba(20, 24, 33, .08); }
+.pj-u2-post-in { flex: 1; }
+.pj-u2-post-h { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 10px; align-items: center; }
+.pj-u2-pi { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; font-size: 26px; background: color-mix(in srgb, var(--jc) 12%, #fff); }
+.pj-u2-kind { font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--jc); }
+.pj-u2-post-h h4 { margin: 0; font-size: 18px; line-height: 1.2; }
+.pj-u2-post .pj-u2-boss { font-size: 12.5px; color: var(--muted); line-height: 1.3; }
+.pj-u2-pay { margin: 12px 0 8px; padding: 8px 12px; border-radius: 12px; background: color-mix(in srgb, var(--jc) 8%, #fff); font-size: 15px; }
+.pj-u2-pay b { font-size: 24px; font-weight: 900; color: var(--jc); letter-spacing: -.01em; }
+.pj-u2-pay span { color: var(--ink2); font-weight: 600; }
+.pj-u2-list { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.45; color: var(--ink2); }
+.pj-u2-list li { margin: 3px 0; }
+.pj-u2-shift { display: flex; flex-direction: column; gap: 6px; padding-top: 10px; border-top: 1px dashed var(--line); }
+.pj-u2-shiftc { flex-direction: column; flex-wrap: nowrap; }
+.pj-u2-shiftc .pj-opt { display: grid; grid-template-columns: auto 1fr; column-gap: 8px; text-align: left; padding: 8px 12px; font-size: 14px; }
+.pj-u2-shiftc .pj-opt small { grid-column: 2; font-weight: 500; color: var(--muted); font-size: 12.5px; }
+.pj-u2-firstc .pj-opt { width: 100%; justify-content: center; font-size: 15px; border-style: dashed; border-color: var(--jc); color: var(--jc); }
+.pj-u2-firstc .pj-opt.on { border-style: solid; background: var(--jc); color: #fff; box-shadow: none; }
+.pj-u2-goals { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.pj-u2-goals .pj-opt small { font-weight: 700; color: var(--ink2); }
+
+/* example pieces */
+.pj-u2-x-posts { display: flex; flex-wrap: wrap; gap: 10px; }
+.pj-u2-x-posts span { display: grid; padding: 10px 14px; border-radius: 12px; background: #fff; border: 1.5px solid #eadfcd; font-weight: 700; font-size: 16px; animation: pjIn .5s both; animation-delay: calc(var(--i) * .18s); }
+.pj-u2-x-posts small { font-weight: 600; color: #c2410c; font-size: 14px; }
+.pj-u2-x-ways { display: flex; flex-wrap: wrap; gap: 8px; } .pj-u2-x-ways span { padding: 8px 14px; border-radius: 12px; background: #fff; border: 1px solid #f0dcc0; font-size: 16px; }
+.pj-u2-x-q { margin: 0; padding: 10px 14px 10px 34px; background: #fff; border: 1px solid #f0dcc0; border-radius: 12px; font-size: 16px; line-height: 1.6; }
+.pj-u2-x-row { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; padding: 8px 14px; border-radius: 12px; background: #fff; border: 1px dashed #e8c99c; font-size: 16px; }
+.pj-u2-x-row b { font-variant-numeric: tabular-nums; }
+
+/* ---- Checkpoint 2: timesheets ---- */
+.pj-u2-tsbox { padding: 0; overflow: hidden; }
+.pj-u2-ts-h { display: flex; align-items: baseline; gap: 6px 14px; flex-wrap: wrap; padding: 12px 16px; background: #f4f8ff; border-bottom: 1px solid #dbe6fb; }
+.pj-u2-ts-h b { font-size: 18px; } .pj-u2-ts-h span { color: var(--muted); font-size: 13.5px; }
+.pj-u2-ts-k { font-size: 11.5px !important; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #1d4ed8 !important; }
+.pj-u2-ts { display: grid; padding: 4px 16px 6px; }
+.pj-u2-ts-r { display: grid; grid-template-columns: 96px 88px 88px 100px 120px minmax(80px, 1fr); gap: 4px 12px; align-items: center; padding: 6px 0; border-top: 1px solid var(--line2); font-variant-numeric: tabular-nums; position: relative; }
+.pj-u2-ts-r:first-child { border-top: 0; }
+.pj-u2-ts-hd { font-size: 11.5px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.pj-u2-ts-d small { color: var(--muted); font-size: 12.5px; }
+.pj-u2-ts-t { font-size: 15.5px; }
+.pj-u2-ts-r.is-off { color: #a39e92; padding: 3px 0; }
+.pj-u2-ts-off { grid-column: 2 / -1; font-size: 13px; font-style: italic; }
+.pj-u2-ts .pj-in { min-width: 0; width: 120px; height: 40px; }
+.pj-u2-ts-note { position: absolute; right: 0; top: 2px; font-size: 11px; font-weight: 700; color: #9a5b00; background: #fff8ec; border: 1px solid #f1d3a3; border-radius: 6px; padding: 0 6px; }
+.pj-u2-ts-tot { border-top: 2px solid var(--line); }
+.pj-u2-ts-sp { grid-column: 2 / 5; font-size: 13px; color: var(--muted); }
+.pj-u2-bar { position: relative; height: 12px; border-radius: 6px; background: #f1eee7; overflow: hidden; }
+.pj-u2-bar i { position: absolute; left: 0; top: 0; bottom: 0; background: #93b4ee; border-radius: 6px; }
+.pj-u2-bar i.ot { background: #f59e0b; border-radius: 0 6px 6px 0; }
+.pj-u2-bar em { position: absolute; top: -2px; bottom: -2px; width: 2px; background: #6b7280; opacity: .5; }
+.pj-u2-ot { margin: 0; padding: 12px 16px 16px; background: #fffbf3; border-top: 1px solid #f3e3c8; }
+.pj-u2-ot-k { font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: #8a4b00; }
+.pj-u2-ot .pj-grid3 > .pj-field { max-width: 260px; }
+
+/* ---- Checkpoint 3: gross pay ---- */
+.pj-u2-job { position: relative; border-left: 5px solid var(--jc); }
+.pj-u2-jl { position: absolute; right: 14px; top: 12px; width: 28px; height: 28px; border-radius: 8px; background: var(--jc); color: #fff; display: grid; place-items: center; font-weight: 800; }
+.pj-u2-job .pj-ph { padding-right: 36px; }
+.pj-u2-job .pj-grid3 + .pj-grid3 { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.pj-u2-job .pj-cost { margin-left: 0; flex-basis: 100%; width: fit-content; }
+.pj-u2-sales { max-width: 520px; margin-bottom: 14px; padding: 10px 14px 14px; border-radius: 14px; background: #faf7ff; border: 1px solid #e3d9fb; }
+.pj-u2-sales-h { font-weight: 800; font-size: 14px; margin-bottom: 4px; }
+.pj-u2-sales-r { display: flex; justify-content: space-between; padding: 4px 0; border-top: 1px dashed #e3d9fb; font-variant-numeric: tabular-nums; font-size: 15.5px; }
+.pj-u2-quota { position: relative; height: 14px; margin-top: 30px; border-radius: 7px; background: #ece6fb; }
+.pj-u2-quota i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 7px; background: linear-gradient(90deg, #a78bfa, #7c3aed); }
+.pj-u2-quota em { position: absolute; top: -6px; bottom: -6px; width: 2px; background: #111827; }
+.pj-u2-quota em span { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); white-space: nowrap; font-style: normal; font-size: 11.5px; font-weight: 800; color: #111827; margin-bottom: 2px; }
+.pj-u2-tally { margin-bottom: 14px; padding: 10px 14px 14px; border-radius: 14px; background: #f3faf5; border: 1px solid #cfe8d7; }
+.pj-u2-tally-h { font-weight: 800; font-size: 14px; margin-bottom: 8px; } .pj-u2-tally-h small { font-weight: 500; color: var(--muted); }
+.pj-u2-tally-g { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.pj-u2-tday { display: grid; justify-items: center; padding: 7px 4px; border-radius: 10px; background: #fff; border: 1.5px solid #d4ead9; font-variant-numeric: tabular-nums; position: relative; }
+.pj-u2-tday span { font-size: 11.5px; font-weight: 700; color: var(--muted); }
+.pj-u2-tday b { font-size: 19px; }
+.pj-u2-tday small { font-size: 11.5px; color: #15803d; font-weight: 600; }
+.pj-u2-tday.rough { background: #fbf6ee; border-color: #e9d6b5; } .pj-u2-tday.rough small { color: #92400e; }
+.pj-u2-tday.star::after { content: '★'; position: absolute; top: 3px; right: 6px; color: #e3a008; font-size: 14px; }
+
+/* ---- Checkpoint 4: the pay stub ---- */
+.pj-u2-stub { --jc: #2563eb; max-width: 760px; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); font-variant-numeric: tabular-nums; }
+.pj-u2-stub-h { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 12px 16px; background: var(--jc); color: #fff; }
+.pj-u2-stub-h div { display: grid; } .pj-u2-stub-h span { font-size: 12.5px; opacity: .85; } .pj-u2-stub-h .r { text-align: right; }
+.pj-u2-stub-c { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+.pj-u2-stub-e, .pj-u2-stub-d { padding: 10px 16px 12px; }
+.pj-u2-stub-d { border-left: 1px dashed var(--line); background: #fdfcf9; }
+.pj-u2-stub-k { font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.pj-u2-sl { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 6px 0; border-top: 1px solid var(--line2); font-size: 15px; }
+.pj-u2-sl span small { display: block; font-size: 12px; color: var(--muted); }
+.pj-u2-sl.tot { font-weight: 800; border-top: 2px solid var(--line); }
+.pj-u2-sl.in .pj-in { width: 150px; min-width: 0; height: 40px; }
+.pj-u2-stub-n { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 16px; border-top: 2px solid var(--jc); background: color-mix(in srgb, var(--jc) 7%, #fff); font-size: 17px; }
+.pj-u2-stub-n small { font-size: 12.5px; color: var(--muted); font-weight: 500; margin-left: 6px; }
+.pj-u2-stub-n .pj-in { width: 170px; }
+.pj-u2-gbarw { padding: 0 16px 14px; background: color-mix(in srgb, var(--jc) 7%, #fff); }
+.pj-u2-gbar { position: relative; display: flex; height: 26px; border-radius: 8px; overflow: hidden; background: #ece9e1; font-size: 12.5px; font-weight: 700; }
+.pj-u2-gbar i { display: block; height: 100%; transition: width .5s; } .pj-u2-gbar i.net { background: #3aa66a; } .pj-u2-gbar i.ded { background: #e8826f; }
+.pj-u2-gbar span { position: absolute; left: 10px; top: 4px; color: #fff; } .pj-u2-gbar span.r { left: auto; right: 10px; }
+.pj-u2-others, .pj-u2-back, .pj-u2-ad { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.pj-u2-mini { border-top: 5px solid var(--jc); }
+.pj-u2-mini .pj-grid3 > .pj-field { max-width: none; }
+.pj-u2-mini .pj-field + .pj-field { margin-top: 10px; }
+.pj-u2-mini .pj-sel select { width: 100%; }
+
+/* ---- Checkpoint 5: the goal ---- */
+.pj-u2-thermo { display: flex; align-items: center; gap: 14px; max-width: 560px; padding: 10px 14px; border-radius: 14px; background: #fff; border: 1px solid var(--line); font-size: 15px; }
+.pj-u2-th-t { position: relative; flex: 0 0 22px; height: 70px; border-radius: 11px; background: #f1eee7; border: 2px solid #d6d0c3; overflow: hidden; }
+.pj-u2-th-t i { position: absolute; left: 0; right: 0; bottom: 0; background: linear-gradient(0deg, #16a34a, #4ade80); transition: height .6s; }
+.pj-u2-rule { margin: -2px 0 10px; padding: 7px 10px; border-radius: 10px; background: #fbfaf7; border: 1px dashed var(--line); font-size: 15px; font-weight: 700; }
+.pj-u2-rule span { font-weight: 500; color: var(--muted); display: block; font-size: 13.5px; }
+.pj-u2-verify { margin-top: 8px; font-size: 13.5px; color: var(--muted); } .pj-u2-verify .ok { color: #1f7a48; font-weight: 800; } .pj-u2-verify .no { color: #b42318; font-weight: 800; }
+
+/* ---- Checkpoint 6: compare ---- */
+.pj-u2-cmp { display: grid; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 10px 16px; font-variant-numeric: tabular-nums; }
+.pj-u2-cmp-r { display: grid; grid-template-columns: minmax(150px, 1.3fr) 1fr 1fr 0.9fr 150px; gap: 10px; align-items: center; padding: 7px 0; border-top: 1px solid var(--line2); font-size: 15.5px; }
+.pj-u2-cmp-r:first-child { border-top: 0; }
+.pj-u2-cmp-h { font-size: 11.5px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.pj-u2-cmp-j { border-left: 4px solid var(--jc); padding-left: 8px; }
+.pj-u2-cmp .pj-in { min-width: 0; width: 140px; height: 40px; }
+.pj-u2-guess { padding: 10px 14px; border-radius: 12px; background: #f5f0ff; border: 1px solid #ddd0fb; font-size: 15px; max-width: 820px; }
+.pj-u2-guess.right { background: var(--good-bg); border-color: var(--good-line); }
+.pj-u2-guess.wrong { background: #fff8ec; border-color: #f1d3a3; }
+.pj-u2-kind2 { font-size: 12px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--jc); margin: -6px 0 8px; }
+
+/* ---- Checkpoint 7: the job offer ---- */
+.pj-u2-offerwrap { display: flex; }
+.pj-u2-offer { --jc: #2563eb; width: 600px; max-width: 100%; background: #fff; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 10px 30px rgba(20, 24, 33, .12); font-variant-numeric: tabular-nums; overflow: hidden; }
+.pj-u2-of-top { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 16px 20px; border-bottom: 3px solid var(--jc); }
+.pj-u2-of-logo { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-size: 28px; background: color-mix(in srgb, var(--jc) 12%, #fff); border: 2px solid var(--jc); }
+.pj-u2-of-top b { display: block; font-size: 20px; color: var(--jc); } .pj-u2-of-top div > span { font-size: 13px; color: var(--muted); }
+.pj-u2-of-stamp { font-weight: 900; letter-spacing: .14em; font-size: 13px; color: var(--jc); border: 2px solid var(--jc); border-radius: 6px; padding: 4px 8px; transform: rotate(-4deg); }
+.pj-u2-of-body { padding: 14px 22px 18px; font-size: 15px; line-height: 1.5; }
+.pj-u2-of-body p { margin: 0 0 8px; }
+.pj-u2-of-pay { display: grid; gap: 2px; padding: 8px 12px; border-radius: 8px; background: color-mix(in srgb, var(--jc) 7%, #fff); margin: 10px 0; }
+.pj-u2-of-pay span { font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.pj-u2-of-k { font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 6px 0 4px; }
+.pj-u2-of-stub table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.pj-u2-of-stub td { padding: 4px 6px; border-top: 1px solid #eee; } .pj-u2-of-stub td:last-child { text-align: right; white-space: nowrap; }
+.pj-u2-of-stub td small { color: var(--muted); }
+.pj-u2-of-stub tr.g td { font-weight: 800; border-top: 1.5px solid #ccc; } .pj-u2-of-stub tr.d td { color: #8a2c1c; }
+.pj-u2-of-stub tr.n td { font-weight: 900; font-size: 16px; color: #fff; background: var(--jc); }
+.pj-u2-of-goal { display: flex; align-items: center; gap: 8px; margin-top: 12px; padding: 8px 12px; border-radius: 8px; border: 1px dashed var(--jc); font-size: 14.5px; } .pj-u2-of-gi { font-size: 24px; line-height: 1; }
+.pj-u2-of-sign { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 18px; }
+.pj-u2-of-sign div { display: grid; border-top: 1.5px solid #333; padding-top: 2px; }
+.pj-u2-of-sign small { font-size: 12px; color: var(--muted); }
+.pj-u2-of-sig { order: -1; min-height: 30px; font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive; font-size: 24px; line-height: 1.2; color: #1e3a8a; }
+.pj-u2-of-modern { border-radius: 18px; } .pj-u2-of-modern .pj-u2-of-top { background: var(--jc); color: #fff; border-bottom: 0; } .pj-u2-of-modern .pj-u2-of-top b, .pj-u2-of-modern .pj-u2-of-top span, .pj-u2-of-modern .pj-u2-of-stamp { color: #fff; } .pj-u2-of-modern .pj-u2-of-stamp { border-color: #fff; } .pj-u2-of-modern .pj-u2-of-logo { background: #fff; border-color: #fff; }
+.pj-u2-of-bold { border: 4px solid var(--jc); border-radius: 0; } .pj-u2-of-bold .pj-u2-of-top b { font-size: 24px; text-transform: uppercase; letter-spacing: .02em; } .pj-u2-of-bold .pj-u2-of-stamp { background: #fde047; color: #111; border-color: #111; }
+.pj-print .pj-u2-offer { box-shadow: none; margin: 0 auto; }
+.pj-print .pj-u2-offer, .pj-print .pj-u2-of-top, .pj-print .pj-u2-of-stub tr.n td, .pj-print .pj-u2-of-pay, .pj-print .pj-u2-of-logo, .pj-print .pj-u2-of-stamp { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.pj-u2-narrow { max-width: 340px; }
+
+/* read-only (Teacher Ledger) */
+.pj-ro .pj-u2-firstc .pj-opt:not(.on) { display: none; }
+
+/* ---- narrower screens ---- */
+@media (max-width: 1100px) {
+  .pj-u2-board { grid-template-columns: minmax(0, 1fr); }
+  .pj-u2-post { display: grid; grid-template-columns: minmax(0, 1fr) 260px; column-gap: 16px; align-items: start; }
+  .pj-u2-post > :not(.pj-u2-post-in) { grid-column: 2; }
+  .pj-u2-post-in { grid-row: 1 / span 3; }
+  .pj-u2-goals { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .pj-u2-ts-r { grid-template-columns: 78px 72px 72px 64px 100px minmax(40px, 1fr); gap: 4px 8px; }
+  .pj-u2-ts .pj-in { width: 100px; }
+  .pj-u2-ts-t { font-size: 14.5px; }
+  .pj-u2-cmp-r { grid-template-columns: minmax(120px, 1.2fr) 1fr 1fr 0.8fr 130px; font-size: 14.5px; }
+  .pj-u2-cmp .pj-in { width: 124px; }
+}
+@media (max-width: 700px) {
+  .pj-u2-post { display: flex; }
+  .pj-u2-stub-c { grid-template-columns: minmax(0, 1fr); } .pj-u2-stub-d { border-left: 0; border-top: 1px dashed var(--line); }
+  .pj-u2-tally-g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pj-u2-ts-hd { display: none; }
+  .pj-u2-ts-r { grid-template-columns: 70px 1fr 1fr 60px; } .pj-u2-ts-r .pj-in { grid-column: 2 / 4; } .pj-u2-bar { grid-column: 4; }
+  .pj-u2-cmp-h { display: none; } .pj-u2-cmp-r { grid-template-columns: 1fr 1fr; } .pj-u2-cmp-j { grid-column: 1 / -1; }
+  .pj-u2-goals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

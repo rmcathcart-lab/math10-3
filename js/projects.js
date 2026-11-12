@@ -413,7 +413,7 @@
     var card = el(notYet ? 'div' : 'a', 'pj-card' + (notYet ? ' is-later' : '') + (submitted ? ' is-sub' : '') + (done === n ? ' is-done' : ''));
     if (!notYet) card.href = '#/project/' + def.id;
     var nextI = st.indexOf('open'), nextCp = def.checkpoints[nextI];
-    var badge = el('div', 'pj-card-icon', ring(done, n, 66) + '<span class="pj-card-svg">' + SHOP_ICON + '</span>');
+    var badge = el('div', 'pj-card-icon', ring(done, n, 66) + '<span class="pj-card-svg">' + (def.icon || SHOP_ICON) + '</span>');
     card.appendChild(badge);
     var main = el('div', 'pj-card-main');
     main.appendChild(el('div', 'pj-card-k', 'Unit ' + def.unit + ' Project'));
@@ -440,7 +440,7 @@
     PJ.list().forEach(function (def) {
       var ci = calInfo(def), P = stateOf(def.id, false); if (!ci.due || ci.due < ci.today || (ci.opens && ci.opens > ci.today) || (P && P.submitted)) return;
       var st = PJ.statuses(def, P || PJ.blank()), done = st.filter(function (s) { return s === 'done'; }).length;
-      var b = el('a', 'next-test hh-test pj-due', '<span class="pj-due-i">' + SHOP_ICON + '</span><span class="tt-l">' + esc(def.title) + ' due </span><b>' + esc(niceDate(ci.due)) + '</b><span class="tt-w"> · ' + done + '/' + def.checkpoints.length + '</span>');
+      var b = el('a', 'next-test hh-test pj-due', '<span class="pj-due-i">' + (def.icon || SHOP_ICON) + '</span><span class="tt-l">' + esc(def.title) + ' due </span><b>' + esc(niceDate(ci.due)) + '</b><span class="tt-w"> · ' + done + '/' + def.checkpoints.length + '</span>');
       b.href = '#/project/' + def.id; b.title = def.title + ' (Unit ' + def.unit + ' project) is due ' + niceDate(ci.due, true) + ', the unit test day. ' + done + ' of ' + def.checkpoints.length + ' checkpoints done.';
       out.push(b);
     });
@@ -451,7 +451,7 @@
     var def = HW.PROJECTS[info.project]; if (!def || !sess()) return null;
     var P = stateOf(def.id, false) || PJ.blank(), st = PJ.statuses(def, P), done = st.filter(function (s) { return s === 'done'; }).length, ci = calInfo(def);
     var box = el('section', 'today pj-today'); if (HW.unitStyle) box.setAttribute('style', HW.unitStyle(def.unit));
-    box.appendChild(el('div', 'td-badge pj-today-b', SHOP_ICON));
+    box.appendChild(el('div', 'td-badge pj-today-b', def.icon || SHOP_ICON));
     var main = el('div', 'td-main', '<div class="td-when">Today in class · Unit ' + def.unit + ' project work day</div><h2 class="td-title">' + esc(def.title) + '</h2><div class="td-sub">' + done + ' of ' + def.checkpoints.length + ' checkpoints done' + (ci.due ? ' · due ' + esc(niceDate(ci.due)) : '') + '</div>');
     box.appendChild(main);
     var acts = el('div', 'td-acts'), a = el('a', 'btn btn-primary td-go', (done ? 'Continue' : 'Start') + ' ' + esc(def.title)); a.href = '#/project/' + def.id; acts.appendChild(a); box.appendChild(acts);
@@ -504,7 +504,7 @@
     var st = PJ.statuses(def, P), done = st.filter(function (s) { return s === 'done'; }).length, ci = calInfo(def), g = PJ.grade(def.id);
     side.innerHTML = '';
     var head = el('div', 'pj-side-h');
-    head.innerHTML = '<div class="pj-side-icon">' + ring(done, def.checkpoints.length, 58) + '<span class="pj-card-svg">' + SHOP_ICON + '</span></div>' +
+    head.innerHTML = '<div class="pj-side-icon">' + ring(done, def.checkpoints.length, 58) + '<span class="pj-card-svg">' + (def.icon || SHOP_ICON) + '</span></div>' +
       '<div><div class="pj-side-k">Unit ' + def.unit + ' Project</div><h2>' + esc(def.title) + '</h2><div class="pj-side-p">' + done + ' of ' + def.checkpoints.length + ' checkpoints' + (ci.due ? ' · due ' + esc(niceDate(ci.due)) : '') + '</div></div>';
     side.appendChild(head);
     var ol = el('ol', 'pj-steps');

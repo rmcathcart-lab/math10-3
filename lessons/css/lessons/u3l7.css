@@ -1,0 +1,61 @@
+/* Math 10-3 · Unit 3 · Lesson 7 — Rearranging Formulas: styles used only on this page (prefix u3l7-).
+ * Colours: the known side / undo amber, the missing value red, checks green, lengths amber, widths blue. */
+.u3l7 .ans .katex, .u3l7 .pl .katex { font-size: 1.04em; }
+.u3l7-cc { display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; }
+.u3l7-pcol { display: flex; gap: 8px; flex: none; flex-wrap: wrap; }
+
+/* ---------- warm-up ---------- */
+.u3l7-wsteps { margin: 0; padding-left: 1.4em; font: 500 28px/1.4 var(--font); color: var(--ink); }
+.u3l7-wsteps li::marker { font-weight: 800; color: var(--brand2); }
+
+/* ---------- page pieces ---------- */
+.u3l7-forms { display: grid; grid-template-columns: 0.9fr 0.8fr 1fr 1.6fr 1.1fr; gap: 8px; margin: 10px 0 4px; }
+.u3l7-forms > div { background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 8px 10px; font-size: 19px; line-height: 1.35; text-align: center; }
+.u3l7-forms > div > span:first-child { display: block; font: 800 15px var(--round); color: var(--brand2); text-transform: uppercase; letter-spacing: .03em; }
+.u3l7-forms small { display: block; font-size: 15px; color: var(--muted); }
+.u3l7-eg { font-size: 19px !important; margin-top: 8px !important; }
+.u3l7-key { display: grid; grid-template-columns: 1fr 270px; gap: 18px; align-items: center; margin: 4px 0 14px; }
+.u3l7-key > .def { margin: 0; }
+.u3l7-one { display: grid; grid-template-columns: auto auto auto 1fr; gap: 6px 14px; align-items: baseline; margin: 10px 0 4px; font-size: 20px; }
+.u3l7-rows { display: grid; grid-template-columns: auto auto 1fr; gap: 6px 10px; align-items: baseline; margin: 8px 0 2px; font-size: 20px; }
+.u3l7-rows > span:nth-child(3n+1) { text-align: right; }
+.u3l7-rows > span:nth-child(3n) { font-size: 17px; color: var(--ink2); padding-left: 14px; }
+.u3l7-two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0 4px; }
+.u3l7-two > span { background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 8px 12px; font-size: 18px; line-height: 1.35; }
+.u3l7-tri { margin: 0; text-align: center; }
+.u3l7-tri svg { width: 240px; height: auto; }
+.u3l7-tri figcaption { font-size: 16px; color: var(--muted); line-height: 1.3; }
+.u3l7-est { background: #e9f0f8; } .u3l7-est .tip-ic { background: #3a5b80; color: #fff; font-weight: 900; }
+.u3l7-alt { background: #fff4e0; } .u3l7-alt .tip-ic { background: #c27a0e; color: #fff; font-weight: 900; }
+.u3l7-note { background: #eef3f9; } .u3l7-note .tip-ic { background: #3a5b80; color: #fff; font-weight: 800; }
+.u3l7-tbl { border-collapse: collapse; margin: 10px auto 12px; font-size: 19px; }
+.u3l7-tbl th, .u3l7-tbl td { border: 2px solid #cfc6b4; padding: 6px 12px; text-align: center; height: 50px; }
+.u3l7-tbl th { background: var(--brand-soft); font-weight: 800; }
+.u3l7-tbl td.u3l7-wk { min-width: 300px; }
+
+/* ---------- explainer pieces ---------- */
+.u3l7-svg { overflow: visible; pointer-events: none; }
+.u3l7-eq { font-size: 22px; color: var(--ink); white-space: nowrap; justify-content: flex-start; padding: 0 12px; }
+.u3l7-eq.res { color: #8b2f1c; font-weight: 700; }
+.u3l7-eq.good { color: #0e5e41; background: #eaf6ef; border-radius: 10px; }
+.u3l7-eq.bad { color: #8b2f1c; background: #fbe6e4; border-radius: 10px; }
+.u3l7-eq.mid { justify-content: center; }
+.u3l7-eq small { font-size: 16px; color: var(--muted); }
+.u3l7-estb { background: #e9f0f8; border-radius: 12px; font-size: 20px; color: #2c4a6e; }
+.u3l7-lab { font: 800 17px var(--round); color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+.u3l7-lab.undo { color: #c27a0e; }
+.u3l7-lcd { box-sizing: border-box; background: #c9d4bf; border: 5px solid #3a4254; border-radius: 12px; padding: 3px 12px; font: 700 18px/1.25 ui-monospace, Menlo, monospace; color: #1d2a18; box-shadow: inset 0 2px 6px rgba(0,0,0,.25); }
+.u3l7-lcd .e { white-space: nowrap; } .u3l7-lcd .r { text-align: right; font-size: 28px; font-weight: 800; }
+.u3l7-why { font-size: 19px; line-height: 1.35; }
+
+/* the undo stack */
+.u3l7-blk { border-radius: 12px; font-size: 24px; border: 3px solid; background: #fff; }
+.u3l7-blk.v { border-color: #8b2f1c; background: #fbe6e4; }
+.u3l7-blk.op { border-color: #3a4254; background: #eef1f5; font: 800 24px var(--round); color: #3a4254; }
+.u3l7-blk.un { border-color: #c27a0e; background: #fff4e0; font: 800 24px var(--round); color: #8a560a; }
+.u3l7-blk.res { border-color: #6e4a1c; background: #f5ecdf; }
+.u3l7-blk.fin { border-color: #12805a; background: #e3f3ea; }
+.u3l7-wear { font: 800 16px var(--round); color: var(--muted); white-space: nowrap; }
+
+/* the balance */
+.u3l7-side { font-size: 24px; }

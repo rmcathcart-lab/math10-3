@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deductions and Net Pay · Math 10-3 2.7</title>
+<meta name="description" content="Math 10-3 Unit 2 Lesson 7: deductions and net pay. Gross pay minus deductions, CPP, EI and income tax as percents, other deductions, percent of gross pay, before-tax deductions and taxable income, and reading and checking a pay stub. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u2l7.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u2l7">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Which One Doesn’t Belong?">
+  <div class="vw-strip"><svg viewBox="0 0 340 60" aria-hidden="true">
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0;0 0" keyTimes="0;0.15;0.3;1" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+      <circle cx="70" cy="32" r="18" fill="#e3b04b" stroke="#9a6a24" stroke-width="3"/><text x="70" y="40" font-size="22" font-weight="800" fill="#6e4a1c" text-anchor="middle">$</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -7;0 0;0 0" keyTimes="0;0.25;0.4;0.55;1" dur="3.2s" repeatCount="indefinite"/>
+      <text x="140" y="44" font-size="38" font-weight="800" fill="#c93a33" text-anchor="middle">%</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -7;0 0;0 0" keyTimes="0;0.5;0.65;0.8;1" dur="3.2s" repeatCount="indefinite"/>
+      <text x="205" y="26" font-size="20" font-weight="800" fill="#1f5bd6" text-anchor="middle">3</text><line x1="192" y1="32" x2="218" y2="32" stroke="#1f5bd6" stroke-width="3"/><text x="205" y="53" font-size="20" font-weight="800" fill="#1f5bd6" text-anchor="middle">20</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -7;0 0" keyTimes="0;0.72;0.87;1" dur="3.2s" repeatCount="indefinite"/>
+      <text x="275" y="44" font-size="32" font-weight="800" fill="#12805a" text-anchor="middle">0.?</text></g>
+  </svg></div>
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Which One Doesn’t Belong?</h2>
+  <p class="wf-rule vw-rule">Which one is the odd one out? Pick one and be ready to say <b>why</b>.</p></div>
+  <div class="vw-wodb">
+    <div><b>A</b><span class="tex">0.15</span></div>
+    <div><b>B</b><span class="tex">15\%</span></div>
+    <div><b>C</b><span class="tex">\dfrac{3}{20}</span></div>
+    <div><b>D</b><span class="tex">\$15</span></div>
+  </div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Convince the person beside you. Is there more than one good answer?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>Any of them can be right.</b> <b>A</b> is the only decimal. <b>B</b> is the only percent. <b>C</b> is the only fraction. <b>D</b> is the only money amount, and the only one that is a different size. <b>The twist:</b> A, B and C are all the <b>same number</b>, 15 out of 100! Today you will turn rates like 15% into decimals like 0.15.</div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 2 Earning an Income · Lesson 7</div>
+  <h1>Deductions and Net Pay: Reading a Pay Stub</h1>
+  <p class="lede">You worked the hours, so why is your paycheque smaller than what you earned? Today we find every amount that comes off your pay, and we learn to <b>check every line</b> of a pay stub. It is your money!</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find <b>total deductions</b> and <b>net pay</b>: gross pay − total deductions</li>
+      <li>find <b>CPP</b>, <b>EI</b> and <b>income tax</b> from their rates, rounded to the cent</li>
+      <li>find the <b>percent of my gross pay</b> I take home, and find a rate</li>
+      <li>use <b>before-tax deductions</b> to find my <b>taxable income</b></li>
+      <li>complete and <b>check a pay stub</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N2</b> Demonstrate an understanding of income, including: wages, salary, contracts, commissions and piecework, to calculate gross pay and net pay.</div>
+</section>
+
+<!-- ================= 1. Gross pay, deductions and net pay ================= -->
+<section class="card" data-ink="s1" data-section="1. Gross Pay, Deductions and Net Pay">
+  <div class="sec-h"><span class="badge">1</span><h2>Gross Pay, Deductions and Net Pay</h2></div>
+  <p>Your <b>gross pay</b> is everything you earned in a pay period: wages, overtime, commission, bonuses. You never get all of it. Before you are paid, your employer takes some money off. Each amount taken off is a <b>deduction</b>.</p>
+  <p>The money that is left is your <b>net pay</b>, also called <b>take-home pay</b>. It is the amount that goes into your bank account. Each payday you also get a <b>pay stub</b> (or pay statement). It lists your gross pay, every deduction, and your net pay.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Total deductions</b> = add up every deduction &nbsp;&nbsp;·&nbsp;&nbsp; <b>Net pay = gross pay − total deductions</b></div>
+  <div class="explainer" data-explainer="grossNet"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Once deductions come off, net pay is always less than gross pay. When you plan how to spend or save, use your <b>net</b> pay. That is the money you actually get.</div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Kai’s coffee shop pay</h3></div>
+  <p class="q">Kai works at a coffee shop in Cochrane. His gross pay for two weeks is $684.00. His deductions are CPP $40.70, EI $11.22, income tax $68.40, and $6.50 for his staff apron. Find his total deductions and his net pay.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">Step 1: Find his total deductions.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$40.70+\$11.22+\$68.40+\$6.50=\$126.82</span></div></div></div>
+    <div class="part"><div class="pl">Step 2: Find his net pay.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$684.00-\$126.82=\$557.18</span><br>Kai’s deductions total <b>$126.82</b>, and his net pay is <b>$557.18</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Required deductions ================= -->
+<section class="card" data-ink="s2" data-section="2. CPP, EI and Income Tax">
+  <div class="sec-h"><span class="badge">2</span><h2>Required Deductions: CPP, EI and Income Tax</h2></div>
+  <p>By law, your employer must take three deductions off your pay and send them to the government (the <b>Canada Revenue Agency</b>, or <b>CRA</b>):</p>
+  <div class="u2l7-three">
+    <div><b>CPP</b><i>Canada Pension Plan</i>Money saved for when you retire. Your employer puts in the same amount as you.</div>
+    <div><b>EI</b><i>Employment Insurance</i>If you lose your job (and it is not your fault), or you take time off for a new baby, EI pays you part of your wages for a while.</div>
+    <div><b>Income tax</b><i>federal and provincial</i>Pays for things like hospitals, schools and roads. Part goes to the federal government and part to the province.</div>
+  </div>
+  <p>Each one is a <b>percent</b> of your pay. In this lesson, every question gives you the rates to use. They are <b>example rates</b>.</p>
+  <div class="tip u2l7-real" data-extra><div class="tip-ic">i</div><div><b>Real life.</b> Real CPP, EI and income tax amounts come from CRA payroll tables or an online payroll calculator. They follow yearly rules. For example, there is no CPP on the first part of your yearly income, there is a most you can pay each year, and income tax depends on how much you earn in the whole year. Many students with part-time jobs get some or all of their income tax back when they file a tax return in the spring.</div></div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>A deduction that is a percent:</b> deduction = gross pay × rate (as a decimal)
+    <div class="eg">CPP at 5.95%: gross pay × 0.0595. &nbsp; <b>Round each deduction to the nearest cent <i>before</i> you add the deductions.</b></div></div>
+  <div class="explainer" data-explainer="pctDecimal"></div>
+  <div class="def-grid">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> To change a percent to a decimal, move the decimal point <b>2 places left</b>: <span class="tex">5.95\%=0.0595</span> (not 0.595), <span class="tex">1.64\%=0.0164</span>, <span class="tex">15\%=0.15</span>.</div></div>
+    <div class="tip u2l7-est"><div class="tip-ic">≈</div><div><b>Estimate.</b> 1% of your pay: move the decimal point 2 places left. On $720, 1% is $7.20. CPP (about 6%) is about <span class="tex">6\times\$7.20\approx\$43</span>. EI (less than 2%) is less than $14.40. If your answer is far from the estimate, check your decimal.</div></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Estimate With 1%">
+  <h3 class="sub">Estimate with 1%: count the little blocks</h3>
+  <p>Cut the pay into 100 equal blocks. One block is 1% of the pay. CPP is about 6 blocks, EI is less than 2 blocks, and a 15% tax is 15 blocks.</p>
+  <div class="explainer" data-explainer="onePercent"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Your pay stub says EI is $0.98 on a gross pay of $600. Is that possible at 1.64%?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. 1% of $600 is $6, so 1.64% is between $6 and $12. $0.98 is much too small. Someone used 0.00164 (that is only 0.164%). The right EI is <span class="tex">\$600\times0.0164=\$9.84</span>.</div></div></div>
+</section>
+
+<section class="card" data-ink="s2c" data-section="2. The Deduction Machine">
+  <h3 class="sub">Finding each deduction, one line at a time</h3>
+  <p>Each percent deduction goes through the same machine: <b>gross pay × rate as a decimal</b>, then <b>round to the cent</b>. Fixed amounts go straight in. Then add the lines and subtract.</p>
+  <div class="explainer" data-explainer="deductMachine"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>CPP on $1&#8239;240.00: <span class="keys">1240 <kbd>×</kbd> 0.0595 <kbd>ENTER</kbd></span> shows 73.78. EI: <span class="keys">1240 <kbd>×</kbd> 0.0164 <kbd>ENTER</kbd></span> shows 20.336, so EI is about <b>$20.34</b>.</div>
+    <div class="u2l7-pcol"><button class="pill" type="button" data-keys="1240 × 0.0595 =">CPP</button><button class="pill" type="button" data-keys="1240 × 0.0164 =">EI</button></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Hana’s hotel pay</h3></div>
+  <p class="q">Hana works at a hotel front desk in Banff. Her gross pay for two weeks is $1&#8239;240.00. Use the example rates in the table. Find each deduction, her total deductions, and her net pay.</p>
+  <div class="u2l7-ex2">
+    <table class="u2l7-tbl">
+      <tr><th>Deduction</th><th>Rate</th><th>Amount</th></tr>
+      <tr><td>CPP</td><td>5.95%</td><td><span data-reveal="&nbsp;">$73.78</span></td></tr>
+      <tr><td>EI</td><td>1.64%</td><td><span data-reveal="&nbsp;">$20.34</span></td></tr>
+      <tr><td>Income tax</td><td>15%</td><td><span data-reveal="&nbsp;">$186.00</span></td></tr>
+      <tr class="tot"><td colspan="2">Total deductions</td><td><span data-reveal="&nbsp;">$280.12</span></td></tr>
+      <tr class="tot"><td colspan="2">Net pay</td><td><span data-reveal="&nbsp;">$959.88</span></td></tr>
+    </table>
+    <div class="part"><div class="pl">Show your work.</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">CPP <span class="tex">=\$1\,240.00\times0.0595=\$73.78</span><br>EI <span class="tex">=\$1\,240.00\times0.0164=\$20.336\approx\$20.34</span><br>Income tax <span class="tex">=\$1\,240.00\times0.15=\$186.00</span><br>Total <span class="tex">=\$73.78+\$20.34+\$186.00=\$280.12</span><br>Net <span class="tex">=\$1\,240.00-\$280.12=\$959.88</span>. Hana’s net pay is <b>$959.88</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Noah’s garden centre job</h3></div>
+  <p class="q">Noah is 16. He works 18 hours one week at a garden centre in Calgary and earns Alberta’s student wage of $13.00 an hour (as of 2026; rates can change). His deductions are CPP 5.95%, EI 1.64% and income tax 6%.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find his gross pay, each deduction, and his net pay.</div><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">gross <span class="tex">=18\times\$13.00=\$234.00</span><br>CPP <span class="tex">=\$234.00\times0.0595=\$13.923\approx\$13.92</span><br>EI <span class="tex">=\$234.00\times0.0164=\$3.8376\approx\$3.84</span><br>income tax <span class="tex">=\$234.00\times0.06=\$14.04</span><br>total <span class="tex">=\$13.92+\$3.84+\$14.04=\$31.80</span><br>net <span class="tex">=\$234.00-\$31.80=\$202.20</span>. Noah’s net pay is <b>$202.20</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Noah wants an e-scooter that costs $650.00 with tax. If he saves all his net pay, how many weeks will it take?</div><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$650.00\div\$202.20\approx3.2</span>, so 3 weeks is not quite enough.<br>It will take Noah <b>4 weeks</b>. (If he used his gross pay, he would think 3 weeks.)</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2d" data-section="2. Noah’s Scooter: Gross or Net?">
+  <h3 class="sub">Noah’s scooter: save with gross pay or net pay?</h3>
+  <p>Fill two jars, one week at a time: one with his gross pay, one with the money he really gets.</p>
+  <div class="explainer" data-explainer="scooter"></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u2l7"></section>
+
+<!-- ================= 3. Other deductions and percent of gross pay ================= -->
+<section class="card" data-ink="s3" data-section="3. Other Deductions and Percent of Gross Pay">
+  <div class="sec-h"><span class="badge">3</span><h2>Other Deductions and Percent of Gross Pay</h2></div>
+  <p>Many jobs have <b>other deductions</b>. Some are a fixed dollar amount each payday and some are a percent:</p>
+  <div class="u2l7-other">
+    <div><b>Health and dental plan</b>You and your employer share the cost.</div>
+    <div><b>Uniform or safety gear</b>Sometimes paid off over a few paycheques.</div>
+    <div><b>Charitable donation</b>One you choose, such as to a food bank.</div>
+    <div><b>Parking</b>or a staff social club.</div>
+  </div>
+  <p><b>Every deduction goes into the total deductions.</b></p>
+  <p>To compare pay, it helps to know what <b>percent</b> of your gross pay you keep. This is the same “part ÷ whole × 100” you used in Unit 1.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Percent of gross pay</b>
+    <div class="eg u2l7-keq"><span>take-home percent <span class="tex">=\dfrac{\text{net pay}}{\text{gross pay}}\times100</span></span><span>deductions percent <span class="tex">=\dfrac{\text{total deductions}}{\text{gross pay}}\times100</span></span></div>
+    <div class="eg"><b>Finding a rate:</b> rate <span class="tex">=\dfrac{\text{deduction}}{\text{pay it was taken from}}\times100</span> &nbsp;&nbsp; The two percents add to 100%.</div></div>
+  <div class="explainer" data-explainer="pctGrid"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Job A pays $18.00 an hour and you keep 80%. Job B pays $20.00 an hour and you keep 70%. Which job puts more in your bank account for each hour?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Job A: <span class="tex">\$18.00\times0.80=\$14.40</span> an hour. Job B: <span class="tex">\$20.00\times0.70=\$14.00</span> an hour. <b>Job A</b>, even though its wage is lower.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Sofia’s delivery van</h3></div>
+  <p class="q">Sofia drives a delivery van in Lethbridge. Her gross pay this week is $960.00. Her deductions are CPP 5.95%, EI 1.64%, income tax 16%, a health plan of $14.25, $20.00 toward her safety boots, and a $5.00 donation to the food bank. Find her net pay.</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">CPP <span class="tex">=\$960.00\times0.0595=\$57.12</span> &nbsp;·&nbsp; EI <span class="tex">=\$960.00\times0.0164=\$15.744\approx\$15.74</span> &nbsp;·&nbsp; income tax <span class="tex">=\$960.00\times0.16=\$153.60</span><br>total <span class="tex">=\$57.12+\$15.74+\$153.60+\$14.25+\$20.00+\$5.00=\$265.71</span><br>net <span class="tex">=\$960.00-\$265.71=\$694.29</span>. Sofia’s net pay is <b>$694.29</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>What percent do I keep? What rate is that?</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Use Example 4. What percent of her gross pay does Sofia take home? What percent goes to deductions? Round to the nearest tenth.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">take-home: <span class="tex">\$694.29\div\$960.00=0.7232</span><br><span class="tex">0.7232\times100\approx72.3\%</span><br>deductions: <span class="tex">100\%-72.3\%=27.7\%</span><br>(check: <span class="tex">\$265.71\div\$960.00\times100\approx27.7\%</span>)<br>Sofia takes home about <b>72.3%</b> of her gross pay.</div></div></div>
+    <div class="part"><div class="pl">(b) Marcus’s pay stub shows income tax of $97.20 on gross pay of $810.00. What income tax rate is he paying?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">rate <span class="tex">=\$97.20\div\$810.00=0.12</span><br><span class="tex">0.12\times100=12\%</span><br>Check: <span class="tex">\$810.00\times0.12=\$97.20</span> ✓<br>Marcus pays income tax at <b>12%</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= 4. Before-tax deductions and taxable income ================= -->
+<section class="card" data-ink="s4" data-section="4. Before-Tax Deductions and Taxable Income">
+  <div class="sec-h"><span class="badge">4</span><h2>Before-Tax Deductions and Taxable Income</h2></div>
+  <p>Some deductions come off <b>before</b> income tax is worked out. These are <b>before-tax deductions</b>: <b>union dues</b> (a fee for belonging to a union), a <b>company pension plan</b>, and <b>RRSP</b> savings (Registered Retirement Savings Plan) taken off at work. You pay income tax only on what is left. That amount is your <b>taxable income</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Taxable income = gross pay − before-tax deductions</b> &nbsp;&nbsp;·&nbsp;&nbsp; <b>Income tax = taxable income × tax rate</b>
+    <div class="eg">CPP and EI are still worked out on the <b>gross</b> pay. If there are no before-tax deductions, taxable income = gross pay.</div></div>
+  <ol class="u2l7-steps">
+    <li><b>Step 1</b> Find each before-tax deduction.</li>
+    <li><b>Step 2</b> Taxable income = gross pay − before-tax deductions.</li>
+    <li><b>Step 3</b> CPP and EI on the <b>gross</b> pay; income tax on the <b>taxable income</b>.</li>
+    <li><b>Step 4</b> Add <b>all</b> the deductions.</li>
+    <li><b>Step 5</b> Net pay = gross pay − total deductions.</li>
+  </ol>
+  <div class="explainer" data-explainer="taxable"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Before-tax deductions are still deductions. They come out of your pay, so count them in the total deductions.</div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Ethan, carpentry apprentice</h3></div>
+  <p class="q">Ethan is a first-year carpentry apprentice in Edmonton. His gross pay for two weeks is $2&#8239;080.00. His before-tax deductions are union dues of 1.5% of gross pay and $50.00 into his RRSP. His other deductions are CPP 5.95%, EI 1.64%, and income tax 18% of his taxable income.</p>
+  <div class="parts u2l7-ex6">
+    <div class="part"><div class="pl">(a) Find his taxable income and his net pay.</div><div class="work" style="--h:300px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: union dues <span class="tex">=\$2\,080.00\times0.015=\$31.20</span>; RRSP = $50.00<br>Step 2: taxable income <span class="tex">=\$2\,080.00-\$31.20-\$50.00=\$1\,998.80</span><br>Step 3: CPP <span class="tex">=\$2\,080.00\times0.0595=\$123.76</span>; EI <span class="tex">=\$2\,080.00\times0.0164=\$34.112\approx\$34.11</span><br>income tax <span class="tex">=\$1\,998.80\times0.18=\$359.784\approx\$359.78</span><br>Step 4: total <span class="tex">=\$31.20+\$50.00+\$123.76+\$34.11+\$359.78=\$598.85</span><br>Step 5: net <span class="tex">=\$2\,080.00-\$598.85=\$1\,481.15</span><br>Ethan’s taxable income is <b>$1&#8239;998.80</b> and his net pay is <b>$1&#8239;481.15</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) How much less income tax does Ethan pay because of his before-tax deductions?</div><div class="work" style="--h:300px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Tax on all of his gross pay: <span class="tex">\$2\,080.00\times0.18=\$374.40</span><br><span class="tex">\$374.40-\$359.78=\$14.62</span><br>He pays <b>$14.62</b> less income tax.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Why Round Each Line First?">
+  <h3 class="sub">Why round each deduction <i>before</i> you add?</h3>
+  <p>A pay stub only shows whole cents. The total on the stub has to match the lines on the stub, so add the <b>rounded</b> lines.</p>
+  <div class="explainer" data-explainer="roundFirst"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Ethan joins a second union and his dues go up. Does his income tax go up, go down, or stay the same?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>It goes down</b> (a little). Union dues are before-tax, so his taxable income gets smaller, and 18% of a smaller amount is smaller. His net pay still goes down, because the dues cost more than the tax he saves.</div></div></div>
+</section>
+
+<!-- ================= Math History box (brown) ================= -->
+<!-- sources: https://thecanadianencyclopedia.ca/en/article/income-tax (Income War Tax Act, royal assent 20 Sept 1917; 4% above a $1&#8239;500 exemption for unmarried people, $3&#8239;000 for others; not expected to last; about 80% file today)
+     https://www.rcinet.ca/en/2017/07/25/canada-history-july-25-100-years-of-temporary-tax (introduced 25 July 1917 by Finance Minister Sir Thomas White as a temporary war tax; the act was 11 pages, now over 3000) -->
+<section class="card history" data-ink="hist" data-section="Math History: The “Temporary” Tax">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1917</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">The “temporary” tax</h3>
+      <p>Canada had no income tax until <b>1917</b>. To help pay for the First World War, Finance Minister Sir Thomas White brought in the <b>Income War Tax Act</b>, meant to be a short-term war tax.</p>
+      <p>The rate was <b>4%</b> of the income <b>above</b> a tax-free amount ($1&#8239;500 a year for an unmarried person). The law was <b>11 pages</b> long. The war ended, but the tax stayed. Today the law is over <b>3&#8239;000 pages</b>.</p>
+      <div class="part hist-q"><div class="pl">In 1917, an unmarried worker earned $2&#8239;000. The tax was 4% of the income above $1&#8239;500. How much tax was that?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$2\,000-\$1\,500=\$500</span> (like taxable income!)<br><span class="tex">\$500\times0.04=\$20</span> for the whole year.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u2l7-hist" viewBox="0 0 600 300" role="img" aria-label="A 1917 tax law of 11 pages stamped temporary; the years roll on to 2026 and the pile of pages grows to over 3000"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–6">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 7 · Questions 1–6</h2>
+  <p class="pr-t">Try these before we read a real pay stub.</p>
+  <div class="pr-chips n3">
+    <span><b>1</b>Pay words</span>
+    <span><b>2</b>Total deductions and net pay</span>
+    <span><b>3</b>Rate to decimal, then the deduction</span>
+    <span><b>4</b>Is this EI possible?</span>
+    <span><b>5</b>Owen’s net pay</span>
+    <span><b>6</b>Brooke’s net pay</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 6.</span><a class="pill" href="../../../#/lesson/u2l7">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. Reading and checking a pay stub ================= -->
+<section class="card" data-ink="s5" data-section="5. Reading and Checking a Pay Stub">
+  <div class="sec-h"><span class="badge">5</span><h2>Reading and Checking a Pay Stub</h2></div>
+  <p>A pay stub shows the <b>pay period</b> (the dates you worked), your hours and rate, your <b>earnings</b> (each kind of pay and the gross pay), each deduction, the total deductions, and the net pay. Many stubs also have a <b>year-to-date (YTD)</b> column: the total so far this year.</p>
+  <p>Mistakes happen on pay stubs, and it is your money, so <b>check yours every payday</b>:</p>
+  <ol class="u2l7-steps u2l7-chk">
+    <li><b>1</b> Check the hours against your own record, and hours × rate for each earnings line.</li>
+    <li><b>2</b> Add the earnings to check the gross pay.</li>
+    <li><b>3</b> Estimate, then check each deduction.</li>
+    <li><b>4</b> Add the deductions, and check that net pay = gross pay − total deductions.</li>
+  </ol>
+  <div class="explainer" data-explainer="stubFill"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Lucas’s warehouse pay stub</h3></div>
+  <p class="q">Lucas works at a warehouse in Balzac. Overtime is paid at time and a half. Complete his pay stub.</p>
+  <table class="u2l7-stub">
+    <tr class="co"><td colspan="7"><b>Prairie Link Logistics</b>, Balzac, AB</td></tr>
+    <tr class="co"><td colspan="7">Employee: Lucas Moreau &nbsp;&nbsp;&nbsp; Pay period: Oct. 5–11, 2026</td></tr>
+    <tr class="grp"><th colspan="4">Earnings</th><th colspan="3">Deductions</th></tr>
+    <tr><th>Description</th><th>Hours</th><th>Rate</th><th>Amount</th><th>Description</th><th>Rate</th><th>Amount</th></tr>
+    <tr><td>Regular</td><td>40</td><td>$19.20</td><td class="r"><span data-reveal="&nbsp;">$768.00</span></td><td>CPP</td><td>5.95%</td><td class="r"><span data-reveal="&nbsp;">$53.41</span></td></tr>
+    <tr><td>Overtime</td><td>4.5</td><td><span data-reveal="&nbsp;">$28.80</span></td><td class="r"><span data-reveal="&nbsp;">$129.60</span></td><td>EI</td><td>1.64%</td><td class="r"><span data-reveal="&nbsp;">$14.72</span></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td>Income tax</td><td>14%</td><td class="r"><span data-reveal="&nbsp;">$125.66</span></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td>Health plan</td><td></td><td class="r">$11.80</td></tr>
+    <tr class="tot"><td colspan="3">Gross pay</td><td class="r"><span data-reveal="&nbsp;">$897.60</span></td><td colspan="2">Total deductions</td><td class="r"><span data-reveal="&nbsp;">$205.59</span></td></tr>
+    <tr class="tot net"><td colspan="6">Net pay</td><td class="r"><span data-reveal="&nbsp;">$692.01</span></td></tr>
+  </table>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Show your work.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Overtime rate <span class="tex">=\$19.20\times1.5=\$28.80</span>; regular <span class="tex">=40\times\$19.20=\$768.00</span>; overtime <span class="tex">=4.5\times\$28.80=\$129.60</span><br>gross <span class="tex">=\$768.00+\$129.60=\$897.60</span><br>CPP <span class="tex">=\$897.60\times0.0595=\$53.4072\approx\$53.41</span>; EI <span class="tex">=\$897.60\times0.0164=\$14.72064\approx\$14.72</span><br>income tax <span class="tex">=\$897.60\times0.14=\$125.664\approx\$125.66</span><br>total <span class="tex">=\$53.41+\$14.72+\$125.66+\$11.80=\$205.59</span>; net <span class="tex">=\$897.60-\$205.59=\$692.01</span></div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s5y" data-section="5. The Year-to-Date Column">
+  <h3 class="sub">The year-to-date (YTD) column</h3>
+  <p>The YTD column is a running total: each payday, the new amount is added on. <b>New YTD = old YTD + this pay.</b></p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">Before Example 7’s pay, Lucas’s YTD gross pay was $31&#8239;240.80 and his YTD CPP was $1&#8239;858.83. What do the YTD lines show after this pay?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">YTD gross <span class="tex">=\$31\,240.80+\$897.60=\$32\,138.40</span><br>YTD CPP <span class="tex">=\$1\,858.83+\$53.41=\$1\,912.24</span></div></div></div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> In late December, a full-time worker’s stub shows CPP <b>$0.00</b>. Is that a mistake?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Not always. There is a <b>most you can pay</b> into CPP each year. Once the YTD CPP reaches it, CPP stops until January. (EI works the same way.)</div></div></div>
+  </div>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. Check Every Line">
+  <h3 class="sub">Check every line: ✓ or ✗?</h3>
+  <p>Go down the stub with the checklist. Estimate each deduction first: a wrong decimal shows up right away.</p>
+  <div class="explainer" data-explainer="stubCheck"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Aisha’s pay stub: find the two mistakes</h3></div>
+  <p class="q">Aisha’s own record shows she worked <b>38 hours</b> this week. Here is her pay stub. Find the two mistakes. Then find her correct net pay and how much she was underpaid.</p>
+  <table class="u2l7-stub">
+    <tr class="co"><td colspan="7"><b>Foothills Pharmacy</b>, Okotoks, AB</td></tr>
+    <tr class="co"><td colspan="7">Employee: Aisha Rahman &nbsp;&nbsp;&nbsp; Pay period: Nov. 2–8, 2026</td></tr>
+    <tr><th>Earnings</th><th>Hours</th><th>Rate</th><th>Amount</th><th>Deductions</th><th>Rate</th><th>Amount</th></tr>
+    <tr><td>Regular</td><td>36</td><td>$17.75</td><td class="r">$639.00</td><td>CPP</td><td>5.95%</td><td class="r">$38.02</td></tr>
+    <tr><td></td><td></td><td></td><td></td><td>EI</td><td>1.64%</td><td class="r">$104.80</td></tr>
+    <tr><td></td><td></td><td></td><td></td><td>Income tax</td><td>12%</td><td class="r">$76.68</td></tr>
+    <tr><td></td><td></td><td></td><td></td><td>Uniform</td><td></td><td class="r">$8.00</td></tr>
+    <tr class="tot"><td colspan="3">Gross pay</td><td class="r">$639.00</td><td colspan="2">Total deductions</td><td class="r">$227.50</td></tr>
+    <tr class="tot net"><td colspan="6">Net pay</td><td class="r">$411.50</td></tr>
+  </table>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the two mistakes.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Mistake 1:</b> the stub says 36 hours, but she worked 38.<br><b>Mistake 2:</b> EI should be about 1.6% of $639, about $10, not $104.80 (16.4% was used).</div></div></div>
+    <div class="part"><div class="pl">(b) Find her correct net pay and how much she was underpaid.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Correct gross <span class="tex">=38\times\$17.75=\$674.50</span><br>CPP <span class="tex">=\$674.50\times0.0595\approx\$40.13</span>; EI <span class="tex">=\$674.50\times0.0164\approx\$11.06</span><br>income tax <span class="tex">=\$674.50\times0.12=\$80.94</span><br>total <span class="tex">=\$40.13+\$11.06+\$80.94+\$8.00=\$140.13</span><br>net <span class="tex">=\$674.50-\$140.13=\$534.37</span><br>underpaid by <span class="tex">\$534.37-\$411.50=\$122.87</span>. Aisha should be paid <b>$534.37</b>, which is <b>$122.87</b> more.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Net pay = gross pay − total deductions.</b> Add up <b>every</b> deduction. Plan with your net pay: it is the money you actually get.</div>
+    <div><b>A percent deduction = gross pay × rate as a decimal</b> (5.95% = 0.0595). Round each one to the cent <b>before</b> you add. Estimate with 1% to catch a wrong decimal.</div>
+    <div><b>Percent of gross:</b> net ÷ gross × 100 (take-home) and deductions ÷ gross × 100; they add to 100%. <b>A rate</b> = deduction ÷ the pay it came from × 100.</div>
+    <div><b>Before-tax deductions</b> (union dues, pension, RRSP) make the <b>taxable income</b> smaller: tax is on the taxable income, CPP and EI on the gross. <b>Check every line</b> of your pay stub.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u2l7">
+    <div><div class="kicker">Your turn</div><b>Assignment 7 · Questions 7–18</b><div class="muted">Pay stubs with overtime, percent of gross pay, finding rates, before-tax deductions, finding the mistake, and a raise. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l8/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 8 — Working Backwards: How Many Hours Do I Need?</b><div class="muted">“I want $400. How many hours is that?” Next we turn the pay formula around.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u2l7.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u2l7', homeHref: '../../', title: '2.7 Deductions and Net Pay' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

@@ -37,7 +37,16 @@
     u1l1: 'rounding, estimating and using a calculator with money', u1l2: 'equivalent fractions and simplest form', u1l3: 'writing and simplifying ratios',
     u1l4: 'solving proportions', u1l5: 'finding rates and unit rates', u1l6: 'comparing unit prices to find the best buy',
     u1l7: 'converting percents and finding a percent of an amount', u1l8: 'calculating markup and sales tax', u1l9: 'calculating discounts and sale prices',
-    u1l10: 'converting between currencies'
+    u1l10: 'converting between currencies',
+    u2l1: 'working with hours, minutes and timesheets', u2l2: 'calculating gross pay from wages and salaries', u2l3: 'calculating overtime pay',
+    u2l4: 'calculating piecework and contract earnings', u2l5: 'calculating commission', u2l6: 'working with tips, bonuses and shift premiums',
+    u2l7: 'calculating deductions and net pay', u2l8: 'working backwards from a pay goal',
+    u3l1: 'adding, subtracting and multiplying mixed numbers', u3l2: 'using SI units and prefixes', u3l3: 'reading a ruler and tape measure in inches',
+    u3l4: 'converting lengths within SI and within imperial', u3l5: 'converting lengths between SI and imperial', u3l6: 'finding perimeter and circumference',
+    u3l7: 'rearranging formulas to find a missing side', u3l8: 'finding the area of 2-D shapes', u3l9: 'finding the area of composite and irregular shapes',
+    u3l10: 'finding the surface area of prisms', u3l11: 'finding the surface area of cylinders, pyramids and cones',
+    u4l1: 'finding the volume of prisms and cylinders', u4l2: 'converting units of capacity', u4l3: 'converting between Celsius and Fahrenheit',
+    u4l4: 'converting units of mass', u4l5: 'converting mass between SI and imperial', u4l6: 'converting between volume and mass (bushels and tonnes)'
   };
   var LADDER = ['NM', 'LIM', 'BEG', 'EMG', 'PRG', 'ADV', 'MAS'];
   var LNAME = { NM: 'Not Meeting', LIM: 'Limited', BEG: 'Beginning', EMG: 'Emerging', PRG: 'Progressing', ADV: 'Advancing', MAS: 'Mastery' };

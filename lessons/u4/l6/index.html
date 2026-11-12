@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bushels and Tonnes · Math 10-3 4.6</title>
+<meta name="description" content="Math 10-3 Unit 4 Lesson 6: from volume to mass. Conversion factors (kg per L, t per cubic metre), water, gravel loads, the imperial bushel, bushels per tonne for wheat, canola, barley and oats, converting bushels and tonnes, prices per bushel and per tonne, grain bins and truck boxes. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u4l6.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u4l6">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Two Combines, One Field">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Two Combines, One Field</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A farmer near Vulcan has a field of wheat to harvest.</p><p class="vw-ctx">The new combine can harvest the whole field in <b>3 hours</b>. The old combine takes <b>6 hours</b>.</p><p class="vw-ask">If both combines work on the field together, how long will it take?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="Two combines, a green one and a red one, drive back and forth across a golden wheat field">
+    <rect x="8" y="40" width="314" height="190" rx="14" fill="#f2d27a"/>
+    <g stroke="#d9b24c" stroke-width="3">
+      <line x1="20" y1="80" x2="310" y2="80"/><line x1="20" y1="120" x2="310" y2="120"/><line x1="20" y1="160" x2="310" y2="160"/><line x1="20" y1="200" x2="310" y2="200"/>
+    </g>
+    <circle cx="282" cy="22" r="14" fill="#f4b400"><animate attributeName="r" values="13;16;13" dur="3s" repeatCount="indefinite"/></circle>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;190 0;0 0" dur="4s" repeatCount="indefinite"/>
+      <rect x="20" y="64" width="70" height="34" rx="6" fill="#2f8a3c" stroke="#1d5a26" stroke-width="2.5"/>
+      <rect x="64" y="52" width="22" height="18" rx="3" fill="#bfe6ff" stroke="#1d5a26" stroke-width="2.5"/>
+      <rect x="90" y="70" width="12" height="26" rx="2" fill="#e0a21a" stroke="#8a5a0a" stroke-width="2"/>
+      <circle cx="38" cy="100" r="9" fill="#1c2230"/><circle cx="74" cy="100" r="9" fill="#1c2230"/>
+      <text x="42" y="87" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">3 h</text>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;-120 0;0 0" dur="8s" repeatCount="indefinite"/>
+      <rect x="226" y="146" width="70" height="34" rx="6" fill="#c0392b" stroke="#6e1f16" stroke-width="2.5"/>
+      <rect x="230" y="134" width="22" height="18" rx="3" fill="#bfe6ff" stroke="#6e1f16" stroke-width="2.5"/>
+      <rect x="214" y="152" width="12" height="26" rx="2" fill="#e0a21a" stroke="#8a5a0a" stroke-width="2"/>
+      <circle cx="244" cy="182" r="9" fill="#1c2230"/><circle cx="280" cy="182" r="9" fill="#1c2230"/>
+      <text x="270" y="169" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">6 h</text>
+    </g>
+    
+  </svg></div></div>
+  <div class="poll u4l6-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> 4.5 hours</div>
+      <div class="opt"><b>B</b> 3 hours</div>
+      <div class="opt right"><b>C</b> 2 hours</div>
+      <div class="opt"><b>D</b> 9 hours</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>C, 2 hours.</b> Think about 6 hours: the new combine could harvest <b>2 fields</b> and the old one <b>1 field</b>. That is 3 fields in 6 hours, so 1 field takes <span class="tex">6\div3=2</span> hours. <span class="muted">4.5 h (the average) can’t be right: the new combine alone only takes 3 h, and help can only make it faster!</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 4 Volume, Capacity, Mass and Temperature · Lesson 6</div>
+  <h1>From Volume to Mass: Bushels, Tonnes and Conversion Factors</h1>
+  <p class="lede">A bin of wheat, a truck of gravel, a jug of milk: we know how much <b>space</b> it takes. But how <b>heavy</b> is it? Today we use a <b>conversion factor</b> to change a volume into a mass, and back, all the way to Prairie grain in <b>bushels</b> and <b>tonnes</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>use a conversion factor: <b>mass = volume × factor</b> and <b>volume = mass ÷ factor</b></li>
+      <li>explain what a <b>bushel</b> is, and why a bushel of wheat is heavier than a bushel of oats</li>
+      <li>change <b>bushels to tonnes</b> (÷ factor) and <b>tonnes to bushels</b> (× factor)</li>
+      <li>change a price <b>per bushel</b> to a price <b>per tonne</b>, and back</li>
+      <li>find what a <b>grain bin</b> or truck box holds: volume → bushels → tonnes</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M1</b> Demonstrate an understanding of the Système International (SI) by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; applying strategies to convert SI units to imperial units.</div>
+  <div class="outcome"><b>M2</b> Demonstrate an understanding of the imperial system by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; comparing the American and British imperial units for capacity; applying strategies to convert imperial units to SI units.</div>
+</section>
+
+<!-- ================= 1. Volume and mass ================= -->
+<section class="card" data-ink="s1" data-section="1. Volume and Mass Are Different">
+  <div class="sec-h"><span class="badge">1</span><h2>Volume and Mass Are Different</h2></div>
+  <p><b>Volume</b> is how much space something takes up (L, m³, ft³). <b>Mass</b> is how heavy it is (kg, t, lb). A bucket of sand and the same bucket of popcorn have the same volume, but the sand is much heavier. So to change a volume into a mass, you need to know <b>what the stuff is</b>.</p>
+  <p>A <b>conversion factor</b> tells you how much mass is in one unit of volume of one material, for example “milk: 1.03 kg per L”. Water is the easy one: the metric system was built so that 1 mL of water has a mass of about 1 g.</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u4l6-k2">
+      <div><b>Water:</b> 1 mL ≈ 1 g &nbsp;·&nbsp; 1 L ≈ 1 kg &nbsp;·&nbsp; 1 m³ = 1000 L ≈ 1000 kg = 1 t</div>
+      <div><b>Any material:</b> &nbsp; <b>mass = volume × (mass per unit of volume)</b> &nbsp;&nbsp;&nbsp; <b>volume = mass ÷ (mass per unit of volume)</b></div>
+    </div></div>
+  <div class="explainer" data-explainer="factorMachine"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Which is heavier: a 4 L jug of milk or a 4 kg bag of flour?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The milk: <span class="tex">4\times1.03=4.12</span> kg, a little more than 4 kg. (Water would be a tie: 4 L of water ≈ 4 kg.)</div></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The units must match. If the factor is “kg per L”, the volume must be in litres (change mL to L first), and the answer is in kg.</div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Find each mass</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Find each mass. Use the conversion factor given.</div>
+      <table class="u4l6-tbl u4l6-ex1">
+        <tr><th>Material</th><th>Factor</th><th>Volume</th><th>Work</th><th>Mass</th></tr>
+        <tr><td>(a) Water in a jug</td><td>1 kg per L</td><td>4 L</td><td><span data-reveal="&nbsp;"><span class="tex">4\times1</span></span></td><td><span data-reveal="&nbsp;">4 kg</span></td></tr>
+        <tr><td>(b) Milk</td><td>1.03 kg per L</td><td>4 L</td><td><span data-reveal="&nbsp;"><span class="tex">4\times1.03</span></span></td><td><span data-reveal="&nbsp;">4.12 kg</span></td></tr>
+        <tr><td>(c) Gasoline in a full tank</td><td>0.74 kg per L</td><td>60 L</td><td><span data-reveal="&nbsp;"><span class="tex">60\times0.74</span></span></td><td><span data-reveal="&nbsp;">44.4 kg</span></td></tr>
+        <tr><td>(d) Honey in a pail</td><td>1.42 kg per L</td><td>2.5 L</td><td><span data-reveal="&nbsp;"><span class="tex">2.5\times1.42</span></span></td><td><span data-reveal="&nbsp;">3.55 kg</span></td></tr>
+        <tr><td>(e) Water in a bottle</td><td>1 g per mL</td><td>355 mL</td><td><span data-reveal="&nbsp;"><span class="tex">355\times1</span></span></td><td><span data-reveal="&nbsp;">355 g</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>4 kg</b> · (b) <b>4.12 kg</b> · (c) <b>44.4 kg</b> · (d) <b>3.55 kg</b> · (e) <b>355 g</b></div></div></div>
+    <div class="part"><div class="pl">(f) A 60 L tank of gasoline weighs less than 60 L of water. How do you know from the factors?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Gasoline is 0.74 kg per L and water is 1 kg per L. Each litre of gasoline is lighter, so 60 L of gasoline (44.4 kg) is lighter than 60 L of water (60 kg).</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Round Down or Round Up?">
+  <h3 class="sub">Loads and limits: round down or round up?</h3>
+  <div class="tip u4l6-oktip"><div class="tip-ic">↕</div><div><b>Round down or round up?</b> If a load <b>must not go over</b> a limit, round the amount <b>down</b>, so you stay under the limit. If you need <b>enough</b> loads, trips or bags to do the whole job, round <b>up</b>.</div></div>
+  <div class="explainer" data-explainer="gravel"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Ravi’s gravel driveway</h3></div>
+  <p class="q">Ravi is building a gravel driveway in Cochrane. Gravel has a mass of about 1.7 t per m³. The driveway needs 8 m³ of gravel. The landscaper’s dump truck can carry at most 6 t.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) What is the mass of the gravel Ravi needs?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">mass = volume × factor<br><span class="tex">8\times1.7=13.6</span> t<br>The gravel has a mass of <b>13.6 t</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) How many cubic metres can the truck carry in one load? Round down to the nearest tenth.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">volume = mass ÷ factor<br><span class="tex">6\div1.7=3.529\ldots</span><br>Round down: <b>3.5 m³</b> per load.</div></div></div>
+    <div class="part"><div class="pl">(c) How many loads are needed?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">13.6\div6=2.27\ldots</span> loads<br>Round up: <b>3 loads</b>.<br>(2 loads carry only 12 t.)</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. What is a bushel? ================= -->
+<section class="card" data-ink="s2" data-section="2. What Is a Bushel?">
+  <div class="sec-h"><span class="badge">2</span><h2>What Is a Bushel?</h2></div>
+  <p>A <b>bushel</b> (bu) is an old imperial unit of <b>volume</b> for grain and other dry crops. One bushel is <b>8 imperial (British) gallons</b>. That is about the space inside a box 33 cm on each side.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>1 bushel</b> ≈ 36.4 L ≈ 1.28 ft³ ≈ 2220 in³ &nbsp;&nbsp;·&nbsp;&nbsp; 1 m³ ≈ 27.5 bu</div>
+  <p>Prairie farmers still talk in bushels (“this bin holds 3000 bushels”). But grain elevators <b>weigh</b> grain and pay by the <b>tonne</b>. So farmers must change bushels to tonnes.</p>
+  <div class="explainer" data-explainer="bushelBox"></div>
+  <div class="tip u4l6-ustip"><div class="tip-ic">US</div><div><b>US or British?</b> A US bushel is a little smaller (about 35.2 L), just like a US gallon is smaller than a British gallon. In this lesson a bushel is the Canadian (imperial) bushel.</div></div>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Bushels per Tonne">
+  <h3 class="sub">Each crop has its own factor: bushels per tonne</h3>
+  <p>A bushel of heavy grain weighs more than a bushel of light grain. So each crop has its own <b>conversion factor</b> in <b>bushels per tonne</b> (bu/t): the number of bushels it takes to make <b>1 tonne</b> (1000 kg).</p>
+  <table class="u4l6-tbl u4l6-crops">
+    <tr><th>Crop</th><th>Wheat</th><th>Canola</th><th>Barley</th><th>Oats</th></tr>
+    <tr><td>Bushels per tonne</td><td>36.7</td><td>44.1</td><td>45.9</td><td>64.8</td></tr>
+  </table>
+  <p class="u4l6-small">Factors in this lesson are rounded examples. Grain buyers use exact tables for each crop.</p>
+  <div class="def"><b>Key idea</b> &nbsp; A <b>bigger</b> factor means a <b>lighter</b> bushel: you need more bushels to make a tonne.
+    <div class="eg">Mass of one bushel: kg per bushel = 1000 ÷ factor &nbsp;&nbsp; e.g. wheat: <span class="tex">1000\div36.7\approx27.2</span> kg</div></div>
+  <div class="explainer" data-explainer="tonneStack"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Without a calculator: is a bushel of canola (44.1 bu/t) heavier or lighter than a bushel of wheat (36.7 bu/t)?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Lighter.</b> It takes <b>more</b> bushels of canola to make the same tonne, so each canola bushel holds less mass.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>How heavy is one bushel?</h3></div>
+  <div class="u4l6-ex3">
+    <div class="part"><div class="pl">(a) Find the mass of one bushel of each crop. Round to the nearest tenth of a kilogram.</div>
+      <table class="u4l6-tbl u4l6-kgbu">
+        <tr><th>Crop</th><th>bu/t</th><th>Work</th><th>kg/bu</th></tr>
+        <tr><td>Wheat</td><td>36.7</td><td><span class="tex">1000\div36.7</span></td><td>27.2</td></tr>
+        <tr><td>Canola</td><td>44.1</td><td><span data-reveal="&nbsp;"><span class="tex">1000\div44.1</span></span></td><td><span data-reveal="&nbsp;">22.7</span></td></tr>
+        <tr><td>Barley</td><td>45.9</td><td><span data-reveal="&nbsp;"><span class="tex">1000\div45.9</span></span></td><td><span data-reveal="&nbsp;">21.8</span></td></tr>
+        <tr><td>Oats</td><td>64.8</td><td><span data-reveal="&nbsp;"><span class="tex">1000\div64.8</span></span></td><td><span data-reveal="&nbsp;">15.4</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Canola <b>22.7 kg</b> · Barley <b>21.8 kg</b> · Oats <b>15.4 kg</b></div></div></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(b) Which crop is the heaviest per bushel? Which is the lightest?</div>
+        <p class="u4l6-frame">Heaviest <span class="u4l6-blank" data-reveal="&nbsp;">wheat</span> &nbsp;&nbsp; Lightest <span class="u4l6-blank" data-reveal="&nbsp;">oats</span></p>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Heaviest: <b>wheat</b> (27.2 kg). Lightest: <b>oats</b> (15.4 kg).</div></div></div>
+      <div class="part"><div class="pl">(c) Two identical trucks are filled to the same level, one with wheat and one with oats. Which truck is heavier? Explain.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The <b>wheat</b> truck. Both hold the same number of bushels, and a bushel of wheat (27.2 kg) is heavier than a bushel of oats (15.4 kg).</div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Bushels and tonnes ================= -->
+<section class="card" data-ink="s3" data-section="3. Converting Between Bushels and Tonnes">
+  <div class="sec-h"><span class="badge">3</span><h2>Converting Between Bushels and Tonnes</h2></div>
+  <p>The factor says how many bushels make 1 tonne. So:</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u4l6-k2">
+      <div><b>Tonnes → bushels:</b> multiply by the factor. &nbsp; <span class="tex">12\text{ t}\times\dfrac{36.7\text{ bu}}{1\text{ t}}=440.4\text{ bu}</span></div>
+      <div><b>Bushels → tonnes:</b> divide by the factor. &nbsp; <span class="tex">850\text{ bu}\times\dfrac{1\text{ t}}{44.1\text{ bu}}=850\div44.1\approx19.27\text{ t}</span></div>
+    </div></div>
+  <p>Write the factor as a fraction so the unit you start with <b>cancels</b> (t on the bottom to cancel t; bu on the bottom to cancel bu).</p>
+  <div class="explainer" data-explainer="buTonne"></div>
+  <div class="def-grid">
+    <div class="tip u4l6-oktip"><div class="tip-ic">✓</div><div><b>Check.</b> The number of bushels is always <b>bigger</b> than the number of tonnes (about 35 to 65 times bigger). If your tonnes come out bigger than your bushels, you went the wrong way.</div></div>
+    <div class="tip"><div class="tip-ic">≈</div><div><b>Rounding.</b> Unless a question says otherwise, round bushels to the nearest <b>whole bushel</b> and tonnes to <b>two decimals</b> (the nearest 10 kg).</div></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. Why Divide? Count the Tonnes">
+  <h3 class="sub">Why divide? Count how many tonnes fit</h3>
+  <p>Every 44.1 bushels of canola make one tonne. So the number of tonnes is the number of <b>groups of 44.1</b> in the bushels: a division.</p>
+  <div class="explainer" data-explainer="groups"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Bushels ↔ tonnes</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Convert. Use the factors in the table above.</div>
+      <table class="u4l6-tbl u4l6-ex4">
+        <tr><th>Crop</th><th>Factor</th><th>Change</th><th>Work</th><th>Answer</th></tr>
+        <tr><td>(a) Wheat</td><td>36.7 bu/t</td><td>12 t to bu</td><td><span data-reveal="&nbsp;"><span class="tex">12\times36.7=440.4</span></span></td><td><span data-reveal="&nbsp;">440 bu</span></td></tr>
+        <tr><td>(b) Canola</td><td>44.1 bu/t</td><td>850 bu to t</td><td><span data-reveal="&nbsp;"><span class="tex">850\div44.1=19.274\ldots</span></span></td><td><span data-reveal="&nbsp;">19.27 t</span></td></tr>
+        <tr><td>(c) Barley</td><td>45.9 bu/t</td><td>2000 bu to t</td><td><span data-reveal="&nbsp;"><span class="tex">2000\div45.9=43.572\ldots</span></span></td><td><span data-reveal="&nbsp;">43.57 t</span></td></tr>
+        <tr><td>(d) Oats</td><td>64.8 bu/t</td><td>6.5 t to bu</td><td><span data-reveal="&nbsp;"><span class="tex">6.5\times64.8=421.2</span></span></td><td><span data-reveal="&nbsp;">421 bu</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>440 bu</b> · (b) <b>19.27 t</b> · (c) <b>43.57 t</b> · (d) <b>421 bu</b></div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Tonnes to bushels: <span class="keys">12 <kbd>×</kbd> 36.7 <kbd>ENTER</kbd></span> shows 440.4. Bushels to tonnes: <span class="keys">850 <kbd>÷</kbd> 44.1 <kbd>ENTER</kbd></span> shows 19.27437…</div>
+    <div class="u4l6-pcol"><button class="pill" type="button" data-keys="12 × 36.7 =">t → bu</button><button class="pill" type="button" data-keys="850 ÷ 44.1 =">bu → t</button></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3c" data-section="3. On the Truck Scale">
+  <h3 class="sub">On the truck scale</h3>
+  <p>An elevator weighs the whole truck on a <b>truck scale</b>. A legal load has a mass limit. To find the most grain you can haul, change the limit to bushels and <b>round down</b>.</p>
+  <div class="explainer" data-explainer="truckScale"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Barley for the cattle, wheat on the truck</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A hobby farm near Olds buys 150 bushels of barley for its cattle. Find the mass in tonnes, in kilograms (to the nearest kg) and in pounds. Use 1 kg ≈ 2.2 lb.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Tonnes: <span class="tex">150\div45.9=3.2679\ldots</span> t<br>Kilograms: <span class="tex">3.2679\times1000\approx3268</span> kg<br>Pounds: <span class="tex">3268\times2.2=7189.6\approx7190</span> lb<br>The barley is about <b>3.27 t</b>, <b>3268 kg</b> or <b>7190 lb</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Nadia’s grain truck may legally carry 14.5 t. Can she haul 560 bushels of wheat in one load? What is the most wheat (whole bushels) she can haul?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">560\div36.7\approx15.26</span> t. That is more than 14.5 t, so <b>no</b>.<br>Most wheat: <span class="tex">14.5\times36.7=532.15</span> bu<br>Round down: she can haul <b>532 bushels</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 6 · Questions 1–8</h2>
+  <p class="pr-t">Try these before we go on to prices and grain bins.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Mass from a factor</span>
+    <span><b>2</b>Loads: round down or up</span>
+    <span><b>3</b>Mass of one bushel</span>
+    <span><b>4–5</b>Tonnes ↔ bushels</span>
+    <span><b>6</b>Find the mistake</span>
+    <span><b>7–8</b>Tonnes, kg, lb and truck limits</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u4l6">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Prices ================= -->
+<section class="card" data-ink="s4" data-section="4. Price per Bushel and per Tonne">
+  <div class="sec-h"><span class="badge">4</span><h2>Price per Bushel and Price per Tonne</h2></div>
+  <p>Elevators post grain prices in <b>dollars per tonne</b>, but many farmers still think in <b>dollars per bushel</b>. One tonne of wheat is 36.7 bushels, so the price of one tonne is shared by 36.7 bushels.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>$ per bushel = $ per tonne ÷ factor</b> &nbsp;&nbsp;&nbsp; <b>$ per tonne = $ per bushel × factor</b>
+    <div class="eg">The price per tonne is always the bigger number, because a tonne is many bushels.</div></div>
+  <div class="explainer" data-explainer="priceBu"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Money.</b> Keep all the decimals in your calculator and round to the nearest cent only at the end. <span class="keys">680 <kbd>÷</kbd> 44.1 <kbd>ENTER</kbd></span> shows 15.41950…, about <b>$15.42</b> per bushel.</div>
+    <button class="pill" type="button" data-keys="680 ÷ 44.1 =">Show me</button></div>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Why the Same Factor Works for Prices">
+  <h3 class="sub">Why does the same factor work for prices?</h3>
+  <p>One tonne of wheat <b>is</b> 36.7 bushels. If one bushel sells for $7.80, then 36.7 bushels sell for 36.7 times as much: <span class="tex">7.80\times36.7=\$286.26</span>. Going the other way, the price of a tonne is <b>shared</b> by its 36.7 bushels, so you divide.</p>
+  <p>This is the same idea as meat prices in Lesson 5: the <b>bigger</b> unit (the tonne) always has the <b>bigger</b> price.</p>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Without a calculator: canola (44.1 bu/t) at $15.00 a bushel is <b>about</b> how much per tonne?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">About <span class="tex">15\times44=660</span>, so about <b>$660 per tonne</b>. (Exactly: <span class="tex">15\times44.1=\$661.50</span>.)</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Change each price</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Change each price. Round to the nearest cent.</div>
+      <table class="u4l6-tbl u4l6-ex6">
+        <tr><th>Crop</th><th>Factor</th><th>Price</th><th>Work</th><th>New price</th></tr>
+        <tr><td>(a) Canola</td><td>44.1 bu/t</td><td>$680.00/t</td><td><span data-reveal="&nbsp;"><span class="tex">680\div44.1=15.419\ldots</span></span></td><td><span data-reveal="&nbsp;">$15.42/bu</span></td></tr>
+        <tr><td>(b) Wheat</td><td>36.7 bu/t</td><td>$7.80/bu</td><td><span data-reveal="&nbsp;"><span class="tex">7.80\times36.7=286.26</span></span></td><td><span data-reveal="&nbsp;">$286.26/t</span></td></tr>
+        <tr><td>(c) Oats</td><td>64.8 bu/t</td><td>$4.25/bu</td><td><span data-reveal="&nbsp;"><span class="tex">4.25\times64.8=275.4</span></span></td><td><span data-reveal="&nbsp;">$275.40/t</span></td></tr>
+        <tr><td>(d) Barley</td><td>45.9 bu/t</td><td>$255.00/t</td><td><span data-reveal="&nbsp;"><span class="tex">255\div45.9=5.555\ldots</span></span></td><td><span data-reveal="&nbsp;">$5.56/bu</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>$15.42/bu</b> · (b) <b>$286.26/t</b> · (c) <b>$275.40/t</b> · (d) <b>$5.56/bu</b></div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Liam’s barley: which buyer?</h3></div>
+  <p class="q">Liam is selling barley (45.9 bu/t). Buyer A offers $5.70 per bushel. Buyer B offers $260.00 per tonne.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Change Buyer A’s price to dollars per tonne. Which buyer pays more?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: <span class="tex">\$5.70\times45.9=\$261.63</span> per tonne<br>B: $260.00 per tonne<br><b>Buyer A</b> pays more, by $1.63 per tonne.</div></div></div>
+    <div class="part"><div class="pl">(b) Liam sells 3000 bushels. How much more money does he get from the better buyer?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: <span class="tex">3000\times\$5.70=\$17\,100.00</span><br>B: <span class="tex">3000\div45.9=65.359\ldots</span> t; <span class="tex">65.359\ldots\times\$260\approx\$16\,993.46</span><br><span class="tex">\$17\,100.00-\$16\,993.46=\$106.54</span><br>Liam gets <b>$106.54</b> more from Buyer A.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u4l6"></section>
+
+<!-- ================= 5. Grain bins ================= -->
+<section class="card" data-ink="s5" data-section="5. Grain Bins: From Volume to Bushels">
+  <div class="sec-h"><span class="badge">5</span><h2>Grain Bins: From Volume to Bushels</h2></div>
+  <p>A round steel grain bin is a <b>cylinder</b>, so the grain inside has volume <span class="tex">V=\pi r^2h</span> (Lesson 1), where <span class="tex">h</span> is how deep the grain is. To find what the bin holds, change the volume to bushels, then to tonnes.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>volume → bushels → tonnes</b>
+    <div class="u4l6-k2">
+      <div>ft³ → bu: <b>divide by 1.28</b> (1 bu ≈ 1.28 ft³) &nbsp;&nbsp;&nbsp;&nbsp; m³ → bu: <b>multiply by 27.5</b> (1 m³ ≈ 27.5 bu)</div>
+    </div></div>
+  <div class="explainer" data-explainer="binFill"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Why do we <b>divide</b> by 1.28 for cubic feet, but <b>multiply</b> by 27.5 for cubic metres?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A bushel is <b>bigger</b> than a cubic foot (1 bu ≈ 1.28 ft³), so there are <b>fewer</b> bushels than cubic feet: divide. A cubic metre is <b>bigger</b> than a bushel (1 m³ ≈ 27.5 bu), so there are <b>more</b> bushels than cubic metres: multiply.</div></div></div>
+  <div class="tip u4l6-oktip"><div class="tip-ic">✓</div><div><b>Check.</b> The number of bushels is a bit <b>less</b> than the number of cubic feet (about <span class="tex">\tfrac45</span> of it), but about 27 times <b>more</b> than the number of cubic metres. Real bins have a cone-shaped pile on top. In this lesson the grain is level.</div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A wheat bin near Lethbridge</h3></div>
+  <div class="u4l6-ex8">
+    <div class="u4l6-binfig"><p class="q">A wheat bin on a farm near Lethbridge has a diameter of 18 ft. The wheat is level and 15 ft deep.</p>
+      <svg viewBox="0 0 260 250" role="img" aria-label="A round grain bin, diameter 18 ft, with wheat 15 ft deep">
+        <path d="M50 70 L130 22 L210 70 Z" fill="#d7dbe0" stroke="#3a4254" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M50 70 L50 200 A80 18 0 0 0 210 200 L210 70" fill="#eef0f3" stroke="#3a4254" stroke-width="3"/>
+        <path d="M50 108 A80 18 0 0 0 210 108 L210 200 A80 18 0 0 1 50 200 Z" fill="#f2d27a"/>
+        <ellipse cx="130" cy="108" rx="80" ry="18" fill="#f6dd93" stroke="#b8902a" stroke-width="2"/>
+        <path d="M50 200 A80 18 0 0 0 210 200" fill="none" stroke="#3a4254" stroke-width="3"/>
+        <text x="130" y="160" font-size="16" font-weight="700" fill="#7a5a10" text-anchor="middle">wheat</text>
+        <line x1="50" y1="236" x2="210" y2="236" stroke="#1c2230" stroke-width="2"/><path d="M50 236 l8 -5 v10 z M210 236 l-8 -5 v10 z" fill="#1c2230"/>
+        <text x="130" y="232" font-size="15" font-weight="700" text-anchor="middle">diameter 18 ft</text>
+        <line x1="228" y1="110" x2="228" y2="200" stroke="#1c2230" stroke-width="2"/><path d="M228 110 l-5 8 h10 z M228 200 l-5 -8 h10 z" fill="#1c2230"/>
+        <text x="234" y="152" font-size="15" font-weight="700">15</text><text x="234" y="168" font-size="15" font-weight="700">ft</text>
+      </svg></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Find the volume of the wheat, to the nearest cubic foot.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=18\div2=9</span> ft<br><span class="tex">V=\pi r^2h=\pi\times9^2\times15\approx3817</span> ft³</div></div></div>
+      <div class="part"><div class="pl">(b) How many bushels is that?</div><div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3817\div1.28\approx2982</span> bu</div></div></div>
+      <div class="part"><div class="pl">(c) Find the mass of the wheat (36.7 bu/t), to the nearest tenth of a tonne.</div><div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2982\div36.7\approx81.3</span> t</div></div></div>
+      <div class="part"><div class="pl">(d) A truck hauls 600 bushels per trip. How many trips will it take to empty the bin?</div><div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2982\div600=4.97</span> trips. Round up: <b>5 trips</b>.</div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>A grain truck box</h3></div>
+  <p class="q">A grain truck box is 6.1 m long and 2.4 m wide. It is filled level to a depth of 1.5 m. The truck may carry at most 14.5 t.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the volume of grain in the box.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">V=lwh=6.1\times2.4\times1.5=21.96</span> m³</div></div></div>
+    <div class="part"><div class="pl">(b) How many bushels is that, to the nearest bushel?</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">21.96\times27.5=603.9\approx604</span> bu</div></div></div>
+    <div class="part"><div class="pl">(c) If the box is full of canola (44.1 bu/t), what is the mass? Is the load legal?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">604\div44.1\approx13.70</span> t<br>13.70 t is less than 14.5 t, so the load is <b>legal</b>.</div></div></div>
+    <div class="part"><div class="pl">(d) If the box is full of wheat (36.7 bu/t), is the load legal? What should the driver do?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">604\div36.7\approx16.46</span> t, more than 14.5 t, so it is <b>not legal</b>.<br>The driver should not fill the box: load at most <b>532 bu</b> of wheat (Example 5).</div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example">
+  <div class="ex-head"><span class="ex-tag">Extra</span><h3>More practice: the honey farm and the hopper</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A beekeeper near Falher has 180 kg of honey (1.42 kg per L). How many 2.5 L pails can she fill?</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">volume = mass ÷ factor: <span class="tex">180\div1.42=126.76\ldots</span> L<br><span class="tex">126.76\div2.5=50.7\ldots</span>: round <b>down</b>, <b>50 full pails</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A hopper bin holds 1500 bushels. How many tonnes of canola (44.1 bu/t) is that? Of oats (64.8 bu/t)?</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Canola: <span class="tex">1500\div44.1\approx34.01</span> t<br>Oats: <span class="tex">1500\div64.8\approx23.15</span> t<br>The same bin of oats is much lighter.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Volume is space, mass is heaviness.</b> mass = volume × factor; volume = mass ÷ factor. Water: 1 L ≈ 1 kg, 1 m³ ≈ 1 t. Round <b>down</b> to stay under a limit, <b>up</b> for enough loads.</div>
+    <div><b>A bushel</b> is 8 imperial gallons ≈ 36.4 L ≈ 1.28 ft³; 1 m³ ≈ 27.5 bu. Each crop has a factor in <b>bushels per tonne</b>. Bigger factor → lighter bushel: kg per bu = 1000 ÷ factor.</div>
+    <div><b>t → bu: × factor. bu → t: ÷ factor.</b> Bushels are always the bigger number. Round bushels to a whole number and tonnes to two decimals.</div>
+    <div><b>Prices:</b> $/bu = $/t ÷ factor; $/t = $/bu × factor. <b>Bins:</b> volume (<span class="tex">\pi r^2h</span> or <span class="tex">lwh</span>) → bushels (÷ 1.28 for ft³, × 27.5 for m³) → tonnes.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u4l6">
+    <div><div class="kicker">Your turn</div><b>Assignment 6 · Questions 9–18</b><div class="muted">Prices per bushel and per tonne, which buyer pays more, yields, grain bins in feet and metres, trips to the elevator, and multiple choice. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l7/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 7 — Unit 4 Review</b><div class="muted">Volume, capacity, temperature and mass, all together: get ready for the Unit 4 test.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u4l6.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u4l6', homeHref: '../../', title: '4.6 Bushels and Tonnes' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Math 10-3 · Unit 3 · Lesson 6 — Perimeter and Circumference: styles used only on this page (prefix u3l6-).
+ * Colours: outside edges/answers red, diameters and straight edges blue, fences brown, OK green. */
+.u3l6 .ans .katex, .u3l6 .pl .katex { font-size: 1.06em; }
+.u3l6-c { display: flex; align-items: center; justify-content: center; text-align: center; }
+.u3l6-c > div { max-width: 100%; }
+.u3l6-pcol { display: flex; gap: 8px; flex: none; }
+.u3l6 .def-grid > .tip { margin: 0; }
+.u3l6-wpoll .poll-opts { margin-left: 0; } .u3l6-wpoll > .pill, .u3l6-wpoll .poll-ans { margin-left: 0; }
+.u3l6-wpoll .opt { font-size: 22px; padding: 10px 14px; } .u3l6-wpoll .poll-ans { font-size: 20px; }
+.u3l6-rtip { background: #eef4fb; } .u3l6-rtip .tip-ic { background: #1f5bd6; color: #fff; font-weight: 800; }
+.u3l6-ctip { background: #eaf6ef; margin: 10px 0 12px; } .u3l6-ctip .tip-ic { background: var(--ok); color: #fff; font-weight: 800; }
+
+/* ---------- page pieces ---------- */
+.u3l6-kgrid { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 10px; margin-top: 8px; }
+.u3l6-kgrid > div { background: #fff; border-radius: 10px; padding: 8px 12px; font-size: 18px; line-height: 1.4; }
+.u3l6-qt { font-size: 19px; margin: 4px 0 10px; }
+.u3l6-eg { display: inline-block; margin-top: 4px; font-size: 18px; color: #2c4a6e; }
+.u3l6-ul { margin: 4px 0 10px; padding-left: 1.4em; font-size: 18px; line-height: 1.5; }
+.u3l6-steps { list-style: none; margin: 6px 0 12px; padding: 0; display: grid; gap: 4px; font-size: 18px; }
+.u3l6-side { display: grid; grid-template-columns: 340px 1fr; gap: 18px; align-items: start; }
+.u3l6-side.rev { grid-template-columns: 1fr 250px; align-items: center; }
+.u3l6-figcol { display: grid; gap: 4px; justify-items: center; }
+.u3l6-figcap { font-size: 16px; color: var(--muted); }
+.u3l6-fig { display: grid; place-items: center; }
+.u3l6-fig svg { width: 100%; max-width: 330px; height: auto; overflow: visible; }
+.u3l6-fig svg text { font: 700 17px var(--round); fill: #1c2230; }
+.u3l6-fig svg text.var { font: italic 700 20px Georgia, serif; fill: var(--red); }
+.u3l6-fig .sh { fill: #fff6e5; stroke: #1c2230; stroke-width: 3; stroke-linejoin: round; }
+.u3l6-fig .ra { fill: none; stroke: #1c2230; stroke-width: 2; }
+.parts .part > .u3l6-fig { margin-bottom: 6px; }
+.parts .part > .u3l6-fig svg { max-width: 250px; }
+.u3l6-tbl { border-collapse: collapse; font-size: 19px; margin: 8px auto 6px; background: #fff; width: 100%; }
+.u3l6-tbl th, .u3l6-tbl td { border: 2px solid #b9ad97; padding: 7px 10px; text-align: center; height: 46px; }
+.u3l6-tbl th { background: var(--brand-soft); font: 800 16px var(--round); }
+.u3l6-tbl td:first-child { text-align: left; font-weight: 600; }
+.u3l6-ex2 td:nth-child(3) { width: 380px; } .u3l6-ex2 td:nth-child(4) { width: 140px; }
+.u3l6-ex5 td:nth-child(3) { width: 110px; } .u3l6-ex5 td:nth-child(4) { width: 120px; } .u3l6-ex5 td:nth-child(5) { width: 200px; } .u3l6-ex5 td:nth-child(6) { width: 130px; }
+
+/* ---------- explainer pieces ---------- */
+.u3l6-svg { overflow: visible; pointer-events: none; }
+.u3l6-lcd { box-sizing: border-box; background: #c9d4bf; border: 5px solid #3a4254; border-radius: 12px; padding: 3px 12px; font: 700 18px/1.25 ui-monospace, Menlo, monospace; color: #1d2a18; box-shadow: inset 0 2px 6px rgba(0,0,0,.25); }
+.u3l6-lcd .e { white-space: nowrap; }
+.u3l6-lcd .r { text-align: right; font-size: 26px; font-weight: 800; }
+.u3l6-eline { box-sizing: border-box; justify-content: flex-start; text-align: left; font-size: 21px; white-space: nowrap; }
+.u3l6-eline.lg { font-size: 24px; }
+.u3l6-eline.sm { font-size: 19px; }
+.u3l6-res { box-sizing: border-box; background: #fff; border: 3px solid var(--red); border-radius: 14px; font-size: 22px; }
+.u3l6-res b, .u3l6-res .katex { color: var(--red); }
+.u3l6-chk { box-sizing: border-box; background: #e9f0f8; border-radius: 12px; font-size: 19px; color: #2c4a6e; padding: 4px 12px; }
+.u3l6-fact { box-sizing: border-box; background: #fff6e5; border: 2px solid #e0c08a; border-radius: 14px; font-size: 20px; padding: 6px 14px; line-height: 1.35; }
+.u3l6-tag { box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 10px; font: 800 18px var(--round); color: #fff; white-space: nowrap; }
+.u3l6-tag.rd { background: var(--red); }
+.u3l6-oname { font: 800 22px var(--round); color: var(--brand); white-space: nowrap; }
+.u3l6-pname { box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; line-height: 1.25; }
+.u3l6-pname b { font: 800 19px var(--round); color: var(--brand); } .u3l6-pname span { font-size: 16px; color: var(--ink2); white-space: nowrap; }
+.u3l6-rod { box-sizing: border-box; background: #1f5bd6; border-radius: 4px; }
+.u3l6-string { background: var(--red); border-radius: 5px; }
+.u3l6-ratio { box-sizing: border-box; justify-content: flex-start; font-size: 22px; }
+.u3l6-road { box-sizing: border-box; background: #e6e3dc; border: 2px solid #9aa4b1; border-radius: 6px; }
+.u3l6-rfill { background: var(--red); border-radius: 6px 0 0 6px; opacity: .85; }
+.u3l6-gtick { text-align: center; font: 700 14px var(--round); color: var(--muted); white-space: nowrap; }
+.u3l6-flag { box-sizing: border-box; display: flex; align-items: center; padding-left: 8px; border-left: 4px solid #12805a; background: #e3f4ea; font: 800 17px var(--round); color: #12805a; }
+.u3l6-cnt { font: 600 20px/34px var(--round); white-space: nowrap; }
+.u3l6-cnt b { color: var(--red); }
+.u3l6-receipt { box-sizing: border-box; display: grid; gap: 4px; background: #fff; border: 2px dashed #b9ad97; border-radius: 12px; padding: 10px 16px; font-size: 19px; }
+.u3l6-receipt > div { display: flex; justify-content: space-between; gap: 12px; }
+.u3l6-receipt > div.sub { border-top: 2px solid #e6dccb; padding-top: 4px; }
+.u3l6-receipt > div.gst { border-top: 2px solid #e6dccb; padding-top: 4px; font-size: 21px; } .u3l6-receipt > div.gst b { color: var(--red); }
+.u3l6-need { background: #2f6db5; border-radius: 4px; }
+.u3l6-piece { box-sizing: border-box; display: grid; place-items: center; background: #f2d39b; border: 3px solid #a8742a; border-radius: 6px; font: 800 17px var(--round); color: #6e4a1c; }
+.u3l6-left { box-sizing: border-box; text-align: right; font: 800 16px var(--round); color: var(--ok); white-space: nowrap; }
+.u3l6-leftbar { box-sizing: border-box; background: repeating-linear-gradient(45deg, rgba(18,128,90,.35) 0 6px, rgba(18,128,90,.1) 6px 12px); border: 3px solid var(--ok); border-radius: 0 6px 6px 0; z-index: 2; }

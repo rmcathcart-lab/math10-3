@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Composite and Irregular Shapes · Math 10-3 3.9</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 9: composite and irregular shapes. Split and add, whole minus the cut-out, counting full and part squares on a grid, and checking an area a second way. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l9.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l9">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Three Cuts, How Many Pieces?">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Three Cuts, How Many Pieces?</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">You have one round pizza and a long, sharp pizza cutter.</p><p class="vw-ctx">You may make <b>3 straight cuts</b>. Each cut goes all the way across. The pieces do <b>not</b> have to be the same size, and you can’t move or stack the pieces.</p><p class="vw-ask">What is the greatest number of pieces you can get?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A pepperoni pizza with a pizza cutter rolling back and forth across it">
+    <ellipse cx="160" cy="232" rx="125" ry="9" fill="#efe6d6"/>
+    <circle cx="160" cy="128" r="104" fill="#d99a4e" stroke="#8a5a22" stroke-width="3"/>
+    <circle cx="160" cy="128" r="90" fill="#f2c45a"/>
+    <g fill="#c4442f" stroke="#8e2a1c" stroke-width="2">
+      <circle cx="120" cy="92" r="12"/><circle cx="188" cy="80" r="12"/><circle cx="214" cy="140" r="12"/><circle cx="160" cy="128" r="12"/>
+      <circle cx="108" cy="150" r="12"/><circle cx="168" cy="186" r="12"/><circle cx="130" cy="196" r="10"/><circle cx="222" cy="98" r="9"/>
+    </g>
+    <g fill="#5e8f3a"><ellipse cx="146" cy="104" rx="6" ry="3"/><ellipse cx="196" cy="168" rx="6" ry="3" transform="rotate(40 196 168)"/><ellipse cx="96" cy="120" rx="6" ry="3" transform="rotate(-30 96 120)"/></g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="-70 -46;70 46;-70 -46" keyTimes="0;0.5;1" dur="3.6s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
+      <line x1="160" y1="128" x2="196" y2="88" stroke="#4a4436" stroke-width="9" stroke-linecap="round"/>
+      <line x1="196" y1="88" x2="226" y2="56" stroke="#9a6a24" stroke-width="13" stroke-linecap="round"/>
+      <circle cx="160" cy="128" r="20" fill="#d7dbe2" stroke="#4a4436" stroke-width="4"/>
+      <circle cx="160" cy="128" r="5" fill="#4a4436"/>
+    </g>
+    <text x="300" y="60" font-size="44" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="poll u3l9-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> 6 pieces</div>
+      <div class="opt right"><b>B</b> 7 pieces</div>
+      <div class="opt"><b>C</b> 8 pieces</div>
+      <div class="opt"><b>D</b> 9 pieces</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><div class="u3l9-wans"><div><b>B, 7 pieces.</b> Cutting through the centre every time gives only 6. Instead, make each new cut cross <b>every earlier cut</b>, at a <b>new</b> point (not where two cuts already meet). The 3rd cut crosses 2 cuts, so it passes through 3 pieces and splits each one: <span class="tex">4+3=7</span>. <span class="muted">Bonus: with 4 cuts, the most is 11. The pattern adds 2, then 3, then 4: 2, 4, 7, 11, …</span></div>
+      <svg viewBox="0 0 200 200" width="170" height="170" role="img" aria-label="A pizza cut by three lines into 7 pieces, numbered 1 to 7"><circle cx="100" cy="100" r="92" fill="#f2c45a" stroke="#8a5a22" stroke-width="4"/><g stroke="#4a4436" stroke-width="3.5"><line x1="182.4" y1="140.9" x2="8.6" y2="110.3"/><line x1="23.4" y1="150.9" x2="136.8" y2="15.7"/><line x1="94.2" y1="8.2" x2="154.6" y2="174"/></g><g font-size="16" font-weight="800" fill="#6e4a1c" text-anchor="middle"><text x="54" y="74">1</text><text x="114" y="32">2</text><text x="152" y="86">3</text><text x="100" y="106">4</text><text x="30" y="132">5</text><text x="96" y="162">6</text><text x="158" y="154">7</text></g></svg></div></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 9</div>
+  <h1>Composite and Irregular Shapes</h1>
+  <p class="lede">A coffee shop floor, a shed wall, a backyard with a deck, a pond in a park: most real shapes are not one simple shape. Today we <b>split</b> shapes into parts we know, take away the <b>cut-outs</b>, <b>count squares</b> on a grid, and <b>check</b> our answers a second way.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li><b>split</b> a composite shape into rectangles, triangles and semicircles, and <b>add</b> their areas</li>
+      <li>find a <b>missing side</b> by looking across the shape</li>
+      <li>find an area as the <b>whole</b> shape <b>minus the cut-out</b></li>
+      <li><b>estimate</b> the area of an irregular shape by counting <b>full</b> and <b>part</b> squares on a grid</li>
+      <li><b>check</b> an area a second way, or with a rectangle around the shape</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M4</b> Solve problems that involve SI and imperial area measurements of regular, composite and irregular 2-D shapes and 3-D objects, including decimal and fractional measurements, and verify the solutions.</div>
+</section>
+
+<!-- ================= 1. Split and add ================= -->
+<section class="card" data-ink="s1" data-section="1. Split and Add">
+  <div class="sec-h"><span class="badge">1</span><h2>Composite Shapes: Split and Add</h2></div>
+  <p>A <b>composite shape</b> is a shape made of two or more simple shapes, such as rectangles, triangles and half circles. Most floor plans, yards and walls are composite shapes. There is no single formula for them, but you can <b>split</b> them into shapes you already know.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Split and add</b>
+    <div class="u3l9-steps">
+      <span><b>1</b>Draw lines to split the shape into rectangles, triangles or circle parts.</span>
+      <span><b>2</b>Find any missing side lengths.</span>
+      <span><b>3</b>Find the area of each part.</span>
+      <span><b>4</b>Add the areas. Write the answer in square units (m², ft², …).</span>
+    </div>
+    <div class="eg">A <b>semicircle</b> is half a circle: &nbsp;<span class="tex">A=\tfrac12\pi r^2</span> &nbsp;(the radius <span class="tex">r</span> is half the diameter).</div></div>
+  <div class="explainer" data-explainer="splitAdd"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The parts must <b>not overlap</b>. Each square unit is counted only once. To find a missing side, look across the shape: the short sides on one side add up to the long side on the other side.</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Can you split the coffee shop floor in Example 1 into <b>three</b> rectangles? Would the area change?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Yes, for example with both lines. The area <b>does not change</b>: it is still 51 m². Splitting more just means more small parts to add (and more chances for a slip).</div></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. The Overlap Trap">
+  <h3 class="sub">The overlap trap</h3>
+  <p>What happens if two parts overlap? Some square metres get counted <b>twice</b>.</p>
+  <div class="explainer" data-explainer="overlap"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>The coffee shop floor</h3></div>
+  <div class="u3l9-ex1">
+    <div class="u3l9-fig" id="u3l9-fig-ex1"></div>
+    <div>
+      <p class="q">The floor plan shows the seating area of a coffee shop. All the corners are square corners (90°).</p>
+      <div class="part"><div class="pl">(a) Find the missing side lengths <span class="tex">a</span> and <span class="tex">b</span>.</div><div class="work" style="--h:100px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">a=9-5=4</span> m &nbsp;&nbsp; <span class="tex">b=7-4=3</span> m</div></div></div>
+      <div class="u3l9-hint"><b>Hint.</b> The top (5 m) and <span class="tex">a</span> together are as long as the bottom (9 m).</div>
+    </div>
+  </div>
+  <div class="parts c2 u3l9-gap">
+    <div class="part"><div class="pl">(b) Split the floor with a <b>vertical</b> (up-and-down) line into two rectangles. Find the area of the floor.</div>
+      <div class="u3l9-mini" id="u3l9-fig-ex1b"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: <span class="tex">5\times7=35</span> m²<br>B: <span class="tex">4\times4=16</span> m² &nbsp;(B is <span class="tex">a</span> by 4 m)<br>Total: <span class="tex">35+16=51</span> m²</div></div></div>
+    <div class="part"><div class="pl">(c) Split it another way, with a <b>horizontal</b> (side-to-side) line. Do you get the same area?</div>
+      <div class="u3l9-mini" id="u3l9-fig-ex1c"></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">C: <span class="tex">9\times4=36</span> m²<br>D: <span class="tex">5\times3=15</span> m² &nbsp;(D is 5 m by <span class="tex">b</span>)<br>Total: <span class="tex">36+15=51</span> m². <b>Yes, the same area.</b></div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1c" data-section="1. A Triangle on Top">
+  <h3 class="sub">A rectangle with a triangle on top</h3>
+    <div class="tip u3l9-ftip"><div class="tip-ic">½</div><div><b>Fractions of a foot.</b> Change a fraction to a decimal before you use the calculator: <span class="tex">\tfrac14=0.25</span>, <span class="tex">\tfrac12=0.5</span>, <span class="tex">\tfrac34=0.75</span>. So <span class="tex">7\tfrac12</span> ft <span class="tex">=7.5</span> ft.</div></div>
+  <div class="explainer" data-explainer="shedWall"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Siding for Mila’s shed</h3></div>
+  <div class="u3l9-ex2">
+    <div class="u3l9-fig" id="u3l9-fig-ex2"></div>
+    <div>
+      <p class="q">Mila is putting new siding on the end wall of her garden shed. The wall is a rectangle with a triangle on top.</p>
+      <div class="parts c2">
+        <div class="part"><div class="pl">(a) Find the area of the rectangle and of the triangle.</div><div class="work" style="--h:120px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Rectangle: <span class="tex">10\times7.5=75</span> ft²<br>Triangle: <span class="tex">\tfrac12\times10\times3.5=17.5</span> ft²</div></div></div>
+        <div class="part"><div class="pl">(b) What is the total area of the wall?</div><div class="work" style="--h:120px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">75+17.5=92.5</span> ft² &nbsp;(or <span class="tex">92\tfrac12</span> ft²)</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="parts c1 u3l9-gap">
+    <div class="part"><div class="pl">(c) The shed has two end walls like this. One box of siding covers 50 ft². How many boxes does Mila need for both end walls?</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Both walls: <span class="tex">2\times92.5=185</span> ft² &nbsp;·&nbsp; <span class="tex">185\div50=3.7</span> boxes. She cannot buy part of a box, so round <b>up</b>: Mila needs <b>4 boxes</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1d" data-section="1. Half a Circle on Top">
+  <h3 class="sub">Half a circle on top</h3>
+  <p>A semicircle is half a circle, so its area is half of <span class="tex">\pi r^2</span>. The radius is half the width it sits on.</p>
+  <div class="explainer" data-explainer="archWindow"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For the semicircle in Example 3: <span class="keys">0.5 <kbd>×</kbd> <kbd>π</kbd> <kbd>×</kbd> 18 <kbd>x²</kbd> <kbd>ENTER</kbd></span> shows 508.938… Keep all the digits until the last step, then round.</div>
+      <button class="pill" type="button" data-keys="0.5 × π × 18 x² =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>An arched window</h3></div>
+  <div class="u3l9-ex3">
+    <div class="u3l9-fig" id="u3l9-fig-ex3"></div>
+    <div>
+      <p class="q">An arched window is a rectangle 36 in wide and 48 in tall, with a semicircle on top.</p>
+      <div class="parts c2">
+        <div class="part"><div class="pl">(a) Find the area of the rectangle.</div><div class="work" style="--h:110px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">36\times48=1\,728</span> in²</div></div></div>
+        <div class="part"><div class="pl">(b) Find the area of the semicircle.</div><div class="work" style="--h:110px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=36\div2=18</span> in<br><span class="tex">A=\tfrac12\times\pi\times18^2=508.938\ldots</span> in²</div></div></div>
+        <div class="part"><div class="pl">(c) Find the total area of the window, to the nearest square inch.</div><div class="work" style="--h:110px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1\,728+508.938\ldots=2\,236.938\ldots</span><br>The window is about <b>2&#8239;237 in²</b>.</div></div></div>
+        <div class="part"><div class="pl">(d) Window film is sold by the square foot. Change your answer to square feet, to the nearest tenth. (1 ft² = 144 in²)</div><div class="work" style="--h:110px"></div>
+          <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2\,236.938\div144=15.534\ldots</span><br>The window is about <b>15.5 ft²</b>.</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+
+<!-- ================= 2. Whole minus the cut-out ================= -->
+<section class="card" data-ink="s2" data-section="2. Whole Minus the Cut-Out">
+  <div class="sec-h"><span class="badge">2</span><h2>Whole Minus the Cut-Out</h2></div>
+  <p>Some shapes have a hole or a piece missing: a lawn with a pool in it, a wall with a door and a window. For these, find the area of the <b>whole</b> shape, then <b>subtract</b> the area of each <b>cut-out</b> (the part that is not included).</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Area = area of the whole shape − area of the cut-out(s)</b>
+    <div class="eg">Many composite shapes can be done either way: split and add, <b>or</b> whole minus cut-out. Using both is a good way to check.</div></div>
+  <div class="explainer" data-explainer="cutOut"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>The coffee shop again, and the Nguyens’ backyard</h3></div>
+  <div class="u3l9-ex4">
+    <div class="part"><div class="pl">(a) Find the area of the coffee shop floor from Example 1 using whole minus cut-out.</div>
+      <div class="u3l9-mini" id="u3l9-fig-ex4a"></div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Whole: <span class="tex">9\times7=63</span> m²<br>Cut-out corner: <span class="tex">a\times b=4\times3=12</span> m²<br><span class="tex">63-12=51</span> m² (the same as Example 1)</div></div></div>
+    <div class="part"><div class="pl">(b) The Nguyens’ backyard is a rectangle 15 m by 12 m. It has a deck 6 m by 4.5 m and a round flower bed 3 m across. The rest will be sod (grass). Find the area of sod, to the nearest hundredth of a square metre.</div>
+      <div class="u3l9-mini" id="u3l9-fig-ex4b"></div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Whole yard: <span class="tex">15\times12=180</span> m² &nbsp; Deck: <span class="tex">6\times4.5=27</span> m²<br>Flower bed: <span class="tex">r=3\div2=1.5</span> m, &nbsp;<span class="tex">\pi\times1.5^2=7.0685\ldots</span> m²<br>Sod: <span class="tex">180-27-7.0685\ldots=145.931\ldots\approx145.93</span> m²</div></div></div>
+  </div>
+  <div class="parts c1 u3l9-gap">
+    <div class="part"><div class="pl">(c) Sod costs $4.80 per m². The landscaper rounds the area <b>up</b> to the next whole square metre. What will the sod cost (before tax)?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">145.93 m² rounds up to 146 m². &nbsp;<span class="tex">146\times\$4.80=\$700.80</span> &nbsp; The sod will cost <b>$700.80</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Three Ways, One Answer">
+  <h3 class="sub">Three ways, one answer</h3>
+  <p>The coffee shop floor three ways: two different splits, and whole minus cut-out.</p>
+  <div class="explainer" data-explainer="threeWays"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Owen paints his bedroom wall</h3></div>
+  <p class="q">Owen is painting one wall of his bedroom. The wall is 12 ft long and 8 ft high. It has a door 3 ft wide and 6 ft 8 in high, and a window 4 ft wide and 3 ft 6 in high. He will not paint the door or the window.</p>
+  <div class="u3l9-ex5">
+    <div class="u3l9-fig" id="u3l9-fig-ex5"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Change the door height and the window height to feet.<br>6 ft 8 in = <span data-reveal="&nbsp;?&nbsp;"><span class="tex">6\tfrac{8}{12}=6\tfrac23</span> ft</span> &nbsp;&nbsp;&nbsp; 3 ft 6 in = <span data-reveal="&nbsp;?&nbsp;"><span class="tex">3\tfrac12=3.5</span> ft</span></div><div class="work" style="--h:70px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">8 in is <span class="tex">\tfrac{8}{12}=\tfrac23</span> of a foot: <span class="tex">6\tfrac23</span> ft. &nbsp; 6 in is half a foot: <span class="tex">3.5</span> ft.</div></div></div>
+      <div class="part"><div class="pl">(b) Find the area Owen will paint.</div><div class="work" style="--h:110px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Wall: <span class="tex">12\times8=96</span> ft² &nbsp; Door: <span class="tex">3\times6\tfrac23=3\times\tfrac{20}{3}=20</span> ft²<br>Window: <span class="tex">4\times3.5=14</span> ft² &nbsp; Paint: <span class="tex">96-20-14=62</span> ft²</div></div></div>
+    </div>
+  </div>
+  <div class="parts c1 u3l9-gap">
+    <div class="part"><div class="pl">(c) Owen will paint two coats. One can of paint covers about 100 ft². How many cans does he need?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Two coats: <span class="tex">2\times62=124</span> ft². &nbsp;<span class="tex">124\div100=1.24</span> cans, so round up: Owen needs <b>2 cans</b>.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>The calculator can do <span class="tex">6\tfrac23</span> for you: <span class="keys">3 <kbd>×</kbd> 6 <kbd>A b/c</kbd> 2 <kbd>A b/c</kbd> 3 <kbd>ENTER</kbd></span> shows 20. Or use the decimal: <span class="keys">3 <kbd>×</kbd> ( 6 + 8 <kbd>÷</kbd> 12 ) <kbd>ENTER</kbd></span>.</div>
+    <div class="u3l9-pcol"><button class="pill" type="button" data-keys="3 × 6 ab/c 2 ab/c 3 =">Fraction</button><button class="pill" type="button" data-keys="3 × ( 6 + 8 ÷ 12 ) =">Decimal</button></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–9">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 9 · Questions 1–9</h2>
+  <p class="pr-t">Try these before we move on to shapes with curved, uneven edges.</p>
+  <div class="pr-chips">
+    <span><b>1–2</b>Count squares, split and add</span>
+    <span><b>3</b>An L-shaped deck, two ways</span>
+    <span><b>4–5</b>A stage and a shed with a porch</span>
+    <span><b>6–9</b>Cut-outs: a mat, a patio, a wall, a path</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 9.</span><a class="pill" href="../../../#/lesson/u3l9">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Irregular shapes ================= -->
+<section class="card" data-ink="s3" data-section="3. Irregular Shapes: Counting Squares">
+  <div class="sec-h"><span class="badge">3</span><h2>Irregular Shapes: Counting Squares</h2></div>
+  <p>An <b>irregular shape</b> has curved or uneven sides, like a pond, a lake or a spill. There is no formula for it, so we <b>estimate</b> its area with a grid.</p>
+  <div class="u3l9-sq">
+    <div><span class="u3l9-sw u3l9-swf"></span><b>Full square:</b> completely inside the shape.</div>
+    <div><span class="u3l9-sw u3l9-swp"></span><b>Part square:</b> cut by the edge of the shape. Some are almost full and some are almost empty, so on average a part square is about <b>half</b> full. Two part squares make about one full square.</div>
+  </div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Area ≈ (full squares + part squares ÷ 2) × area of one square</b></div>
+  <div class="explainer" data-explainer="gridCount"></div>
+  <div class="tip u3l9-ftip"><div class="tip-ic">✓</div><div><b>Count carefully.</b> Put a small mark in each square as you count it (a tick for full, a dot for part), so you do not count a square twice or miss one.</div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>The pond in the park</h3></div>
+  <p class="q">A park map shows a pond on a grid. Each square is 1 m by 1 m, so each square is 1 m².</p>
+  <div class="u3l9-ex6">
+    <div class="u3l9-fig" id="u3l9-fig-ex6"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Complete the table.</div>
+        <table class="u3l9-tbl">
+          <tr><td>Full squares</td><td><span data-reveal="&nbsp;">12</span></td></tr>
+          <tr><td>Part squares</td><td><span data-reveal="&nbsp;">20</span></td></tr>
+          <tr><td>Part squares ÷ 2</td><td><span data-reveal="&nbsp;"><span class="tex">20\div2=10</span></span></td></tr>
+          <tr><td>Estimate of area</td><td><span data-reveal="&nbsp;"><span class="tex">12+10=22</span> m²</span></td></tr>
+        </table>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">12 full, 20 part, <span class="tex">20\div2=10</span>, estimate <span class="tex">12+10=22</span> m²</div></div></div>
+      <div class="part"><div class="pl">(b) Finish the sentence. The pond’s area is about <span data-reveal="&nbsp;?&nbsp;"><b>22 m²</b></span>.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">about <b>22 m²</b></div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. Why Half?">
+  <h3 class="sub">Why do two part squares make about one full square?</h3>
+  <p>Pull the 20 part squares of the pond out of the grid and pair them up: an almost-empty one with an almost-full one.</p>
+  <div class="explainer" data-explainer="whyHalf"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Why not count every part square as a full square?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">It would count a lot of grass as pond: <span class="tex">12+20=32</span> m², far more than the real 21.5 m². Counting none of them (12 m²) is far too small. Half is the fair middle.</div></div></div>
+</section>
+
+<section class="card" data-ink="s3c" data-section="3. Bigger Squares">
+  <h3 class="sub">When one square stands for more</h3>
+  <p>When each square stands for more than 1 square unit, find the area of <b>one square</b> first, then multiply. To check an estimate, draw a rectangle <b>around</b> the shape (the real area is less) and a rectangle <b>inside</b> it (the real area is more). A good estimate is between the two.</p>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>A slough in a field</h3></div>
+  <p class="q">A farmer’s map shows a slough (a prairie pond) in a field. On the map, each square stands for 10 m by 10 m.</p>
+  <div class="u3l9-ex7">
+    <div class="u3l9-fig" id="u3l9-fig-ex7"></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) What area does one square stand for?</div><div class="work" style="--h:60px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">10\times10=100</span> m²</div></div></div>
+      <div class="part"><div class="pl">(b) Estimate the area of the slough.</div><div class="work" style="--h:110px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Full: 16 &nbsp; Part: 22 &nbsp; <span class="tex">22\div2=11</span><br><span class="tex">16+11=27</span> squares &nbsp; <span class="tex">27\times100=2\,700</span> m²</div></div></div>
+    </div>
+  </div>
+  <div class="parts c2 u3l9-gap">
+    <div class="part"><div class="pl">(c) On the map, draw the smallest rectangle (on grid lines) that goes all the way <b>around</b> the slough. Find the area it stands for.</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">8\times5=40</span> squares<br><span class="tex">40\times100=4\,000</span> m². The slough is less than this.</div></div></div>
+    <div class="part"><div class="pl">(d) Draw the biggest rectangle that fits <b>inside</b> the slough. Find its area. Is your estimate from (b) between the two rectangles?</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5\times3=15</span> squares, so 1&#8239;500 m²<br>Yes: <span class="tex">1\,500<2\,700<4\,000</span> m².</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l9"></section>
+
+<!-- ================= 4. Checking ================= -->
+<section class="card" data-ink="s4" data-section="4. Is My Answer Reasonable?">
+  <div class="sec-h"><span class="badge">4</span><h2>Is My Answer Reasonable? Checking a Second Way</h2></div>
+  <p>Area mistakes are easy to make: a missing side, an overlap, a diameter used as a radius. Always check your answer.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Ways to check an area</b>
+    <div class="u3l9-checks">
+      <span><b>Second way</b>Split the shape a different way, or use whole minus cut-out. You should get the same answer.</span>
+      <span><b>Rectangle around</b>The answer must be <b>less</b> than the area of a rectangle that goes around the shape.</span>
+      <span><b>Units</b>Area is always in <b>square</b> units (m², ft², …).</span>
+    </div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>The skating oval</h3></div>
+  <div class="u3l9-ex8">
+    <p class="q">A town floods an outdoor skating oval. It is a rectangle 40 m long and 20 m wide, with a semicircle on each end.</p>
+    <div class="u3l9-fig" id="u3l9-fig-ex8"></div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Estimate first. What are the length and width of a rectangle that goes around the whole oval? What is its area?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Length: <span class="tex">10+40+10=60</span> m (each end adds a radius). Width: 20 m.<br><span class="tex">60\times20=1\,200</span> m². The oval must be less than 1&#8239;200 m².</div></div></div>
+    <div class="part"><div class="pl">(b) Find the area of the oval, to the nearest square metre. Is it less than your answer to (a)?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Rectangle: <span class="tex">40\times20=800</span> m²<br>Two semicircles make one circle, <span class="tex">r=20\div2=10</span> m: &nbsp;<span class="tex">\pi\times10^2=314.159\ldots</span><br><span class="tex">800+314.159\ldots\approx1\,114</span> m². Yes, less than 1&#8239;200 m².</div></div></div>
+  </div>
+  <div class="parts c1 u3l9-gap">
+    <div class="part"><div class="pl">(c) Jordan got 2&#8239;057 m². Use part (a) to explain how you know his answer is wrong. What mistake do you think he made?</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">2&#8239;057 m² is more than the 1&#8239;200 m² rectangle that goes around the oval, so it cannot be right. He used the diameter (20 m) as the radius: <span class="tex">\pi\times20^2=1\,256.6\ldots</span>, and <span class="tex">800+1\,256.6\ldots\approx2\,057</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. The Oval Verdict">
+  <h3 class="sub">The verdict: which answer can be right?</h3>
+  <div class="explainer" data-explainer="ovalCheck"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Split and add.</b> Split a composite shape into rectangles, triangles and semicircles <span class="tex">(\tfrac12\pi r^2)</span>. Find missing sides by looking across. <b>No overlaps.</b></div>
+    <div><b>Whole minus cut-out.</b> Area of the whole shape, then subtract each hole: a deck, a pool, a door, a window.</div>
+    <div><b>Irregular shapes:</b> area ≈ (full squares + part squares ÷ 2) × area of one square.</div>
+    <div><b>Check:</b> a second way gives the same answer; the area is less than a rectangle around the shape; square units. Round <b>up</b> when you buy boxes, cans or sod.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l9">
+    <div><div class="kicker">Your turn</div><b>Assignment 9 · Questions 10–18</b><div class="muted">A garden and a pond on grids, Kayla’s mistake, carpet in square yards, a missing length, and four quick checks. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l10/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 10 — Nets and Surface Area of Prisms</b><div class="muted">Unfold a box into a flat net and add up its faces: cardboard, wrapping paper, a tent and a bedroom’s walls.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l9.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l9', homeHref: '../../', title: '3.9 Composite and Irregular Shapes' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

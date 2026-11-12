@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 3 Review · Math 10-3 3.12</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 12: Unit 3 review. Every rule from the unit on one page, then worked examples that mix length, conversions, perimeter, formulas, area and surface area, set up like the unit test. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l12.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l12">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Fold It to the Moon">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Fold It to the Moon</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A sheet of paper is about <b>0.1 mm</b> thick. Fold it in half: now it is 2 sheets thick. Fold it again: 4 sheets thick.</p><p class="vw-ctx">Pretend you could keep folding it in half forever. The Moon is about <b>384&#8239;000 km</b> away.</p><p class="vw-ask">About how many folds would it take for the stack to reach the Moon?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A sheet of paper folding in half again and again, its stack getting taller, with the Moon far above">
+    <circle cx="270" cy="44" r="30" fill="#efe9d8" stroke="#b7ab8d" stroke-width="3"/>
+    <circle cx="260" cy="36" r="6" fill="#ddd3ba"/><circle cx="280" cy="54" r="8" fill="#ddd3ba"/><circle cx="276" cy="30" r="4" fill="#ddd3ba"/>
+    <g fill="#c9b98f"><circle cx="40" cy="30" r="2"/><circle cx="120" cy="18" r="1.6"/><circle cx="190" cy="60" r="1.8"/><circle cx="310" cy="110" r="1.6"/><circle cx="70" cy="90" r="1.5"/></g>
+    <ellipse cx="120" cy="236" rx="100" ry="8" fill="#efe6d6"/>
+    <!-- the stack: 1, 2, 4, 8 layers, then back to 1 -->
+    <g>
+      <rect x="60" y="226" width="120" height="6" fill="#fffdf6" stroke="#9a6a24" stroke-width="2.5">
+        <animate attributeName="height" values="6;6;12;12;24;24;48;48;6" keyTimes="0;0.15;0.25;0.4;0.5;0.65;0.75;0.92;1" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="226;226;220;220;208;208;184;184;226" keyTimes="0;0.15;0.25;0.4;0.5;0.65;0.75;0.92;1" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="width" values="120;120;60;60;30;30;15;15;120" keyTimes="0;0.15;0.25;0.4;0.5;0.65;0.75;0.92;1" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="x" values="60;60;90;90;105;105;112.5;112.5;60" keyTimes="0;0.15;0.25;0.4;0.5;0.65;0.75;0.92;1" dur="8s" repeatCount="indefinite"/>
+      </rect>
+      <text x="200" y="224" font-size="20" font-weight="800" fill="#6e4a1c">
+        <animate attributeName="opacity" values="1;1;1;1" dur="8s" repeatCount="indefinite"/>
+        ×2
+      </text>
+    </g>
+    <path d="M120 170 C150 130 200 110 238 72" fill="none" stroke="#9a6a24" stroke-width="2.5" stroke-dasharray="5 7">
+      <animate attributeName="stroke-dashoffset" values="0;-24" dur="1.2s" repeatCount="indefinite"/>
+    </path>
+    <text x="170" y="150" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="poll u3l12-wpoll">
+    <div class="poll-opts">
+      <div class="opt right"><b>A</b> about 42 folds</div>
+      <div class="opt"><b>B</b> about 4&#8239;200 folds</div>
+      <div class="opt"><b>C</b> about 420&#8239;000 folds</div>
+      <div class="opt"><b>D</b> about 42 million folds</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>A: only 42 folds!</b> Each fold <b>doubles</b> the thickness. After 10 folds the stack is about 10 cm thick. After 20 folds, about 105 m (taller than a 30-storey building). After 30 folds, about 107 km. After <b>42</b> folds, about 440&#8239;000 km: past the Moon! <span class="muted">Try it: most people can’t fold a real sheet in half more than 7 or 8 times. Today: mm, cm, m and km, and every other rule from Unit 3.</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 12</div>
+  <h1>Unit 3 Review</h1>
+  <p class="lede">Every rule from the unit on <b>one page</b>, then worked examples that <b>mix the topics</b>, set up like the unit test. Try each example on your own first. Then we check it together.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>add, subtract and multiply <b>mixed numbers</b>, and read a ruler to <span class="tex">\tfrac{1}{16}</span> in</li>
+      <li>convert lengths <b>within SI</b>, <b>within imperial</b> (feet and inches), and <b>between</b> them</li>
+      <li>find a <b>perimeter</b> and a <b>circumference</b>, and round up when I buy pieces</li>
+      <li><b>rearrange</b> a formula to find a missing length, and check it</li>
+      <li>find the <b>area</b> of simple and composite shapes, and change area units</li>
+      <li>find the <b>surface area</b> of prisms, cylinders, pyramids and cones</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M1</b> Demonstrate an understanding of the Système International (SI) by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; applying strategies to convert SI units to imperial units.</div>
+  <div class="outcome"><b>M2</b> Demonstrate an understanding of the imperial system by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; comparing the American and British imperial units for capacity; applying strategies to convert imperial units to SI units.</div>
+  <div class="outcome"><b>M3</b> Solve and verify problems that involve SI and imperial linear measurements, including decimal and fractional measurements.</div>
+  <div class="outcome"><b>M4</b> Solve problems that involve SI and imperial area measurements of regular, composite and irregular 2-D shapes and 3-D objects, including decimal and fractional measurements, and verify the solutions.</div>
+  <div class="outcome"><b>A1</b> Solve problems that require the manipulation and application of formulas related to: perimeter; area; the Pythagorean theorem; primary trigonometric ratios; income.</div>
+</section>
+
+<!-- ================= 1. The unit on one page ================= -->
+<section class="card" data-ink="s1" data-section="1. The Unit on One Page">
+  <div class="sec-h"><span class="badge">1</span><h2>The Unit on One Page</h2></div>
+  <p>Use this page to study. Each row is one skill: what to do, and a short example. The small tag shows the lesson it came from. Conversion numbers marked <span class="tex">\approx</span> are rounded, so answers that use them are close, not exact.</p>
+  <table class="u3l12-one">
+    <tr><th>Skill</th><th>What to do</th><th>Example</th></tr>
+    <tr><td><b>Mixed numbers</b><i>3.1</i></td><td>Add or subtract: get a common denominator, then do the whole numbers and the fractions. Borrow 1 as <span class="tex">\tfrac88</span> (or <span class="tex">\tfrac44</span>, …) when you need to. Multiply: change to improper fractions first. Simplify.</td><td><span class="tex">2\tfrac34+1\tfrac58=2\tfrac68+1\tfrac58=3\tfrac{11}{8}=4\tfrac38</span></td></tr>
+    <tr><td><b>SI length</b><i>3.2, 3.4</i></td><td>km, hm, dam, <b>m</b>, dm, cm, mm. Each step down: <span class="tex">\times10</span>. Each step up: <span class="tex">\div10</span>. 1 km = 1&#8239;000 m; 1 m = 100 cm = 1&#8239;000 mm.</td><td>3.45 m = 345 cm (2 steps down)<br>850 m = 0.85 km (3 steps up)</td></tr>
+    <tr><td><b>Imperial length</b><i>3.3, 3.4</i></td><td>12 in = 1 ft; 3 ft = 1 yd; 36 in = 1 yd; 5&#8239;280 ft = 1 mi; 1&#8239;760 yd = 1 mi. To a smaller unit, multiply. To a bigger unit, divide.</td><td>100 in: <span class="tex">100\div12=8</span> R 4, so 8 ft 4 in</td></tr>
+    <tr><td><b>Feet and inches</b><i>3.4</i></td><td>5′ 9″ means 5 ft 9 in. The inches part is less than 12. Adding: change 12 in into 1 ft. Subtracting: borrow 1 ft as 12 in.</td><td>5′ 9″ + 2′ 8″ = 7′ 17″ = 8′ 5″</td></tr>
+    <tr><td><b>Reading a ruler</b><i>3.3</i></td><td>Whole inches: the last number you passed. Then count the <span class="tex">\tfrac1{16}</span> spaces past it and simplify.</td><td>12 spaces past 3: <span class="tex">3\tfrac{12}{16}=3\tfrac34</span> in</td></tr>
+    <tr><td><b>SI ↔ imperial</b><i>3.5</i></td><td>1 in = 2.54 cm (exact); 1 ft = 30.48 cm; 1 yd = 0.9144 m; 1 m <span class="tex">\approx</span> 3.28 ft; 1 mi <span class="tex">\approx</span> 1.609 km; 1 km <span class="tex">\approx</span> 0.621 mi. The smaller unit always has the bigger number.</td><td>5′ 10″ = 70 in<br><span class="tex">70\times2.54=177.8</span> cm</td></tr>
+    <tr><td><b>Perimeter and circumference</b><i>3.6</i></td><td><span class="tex">P</span> = the sum of the sides; rectangle <span class="tex">P=2l+2w</span>. Circle: <span class="tex">C=\pi d=2\pi r</span>. Curved edge of a half circle <span class="tex">=\pi d\div2</span>. Pieces sold in set lengths: round <b>up</b>.</td><td><span class="tex">d=30</span> cm: <span class="tex">C=\pi\times30\approx94.2</span> cm</td></tr>
+    <tr><td><b>Rearranging formulas</b><i>3.7</i></td><td>Undo + or − first, then × or ÷. <span class="tex">w=(P-2l)\div2</span>; <span class="tex">d=C\div\pi</span>; <span class="tex">w=A\div l</span>. Check by putting the answer back in.</td><td><span class="tex">P=36</span>, <span class="tex">l=11</span>: <span class="tex">w=(36-22)\div2=7</span></td></tr>
+    <tr><td><b>Area</b><i>3.8</i></td><td>Rectangle <span class="tex">A=lw</span>; parallelogram <span class="tex">A=bh</span>; triangle <span class="tex">A=\tfrac12bh</span>; trapezoid <span class="tex">A=\tfrac12(a+b)h</span>; circle <span class="tex">A=\pi r^2</span>. Answers in square units.</td><td><span class="tex">r=5</span> m: <span class="tex">A=\pi\times5^2\approx78.5</span> m²</td></tr>
+    <tr><td><b>Area units</b><i>3.8</i></td><td>1 ft² = 144 in²; 1 yd² = 9 ft²; 1 m² = 10&#8239;000 cm²; 1 m² <span class="tex">\approx</span> 10.76 ft².</td><td><span class="tex">54\text{ ft}^2\div9=6\text{ yd}^2</span></td></tr>
+    <tr><td><b>Composite and irregular shapes</b><i>3.9</i></td><td>Split into simple shapes and add, or take the whole shape minus the cut-out. Irregular: (full squares + part squares ÷ 2) × area of one square.</td><td>12 full, 20 part:<br><span class="tex">12+20\div2=22</span> squares</td></tr>
+    <tr><td><b>Surface area of prisms</b><i>3.10</i></td><td>Draw the net. Find the area of every face, then add. A box has 3 pairs of equal faces. An open box has no top.</td><td>Cube with 3 cm edges:<br><span class="tex">6\times(3\times3)=54</span> cm²</td></tr>
+    <tr><td><b>Surface area of cylinders, pyramids, cones</b><i>3.11</i></td><td>Cylinder: <span class="tex">\text{SA}=2\pi r^2+2\pi rh</span> (the side unrolls to a rectangle). Square pyramid: base <span class="tex">+\ 4\times\tfrac12bs</span>. Cone: <span class="tex">\text{SA}=\pi r^2+\pi rs</span>. <span class="tex">s</span> is the <b>slant height</b>.</td><td>Cylinder, <span class="tex">r=2</span> cm, <span class="tex">h=5</span> cm:<br><span class="tex">2\pi(2^2)+2\pi(2)(5)\approx88.0</span> cm²</td></tr>
+  </table>
+  <div class="def u3l12-rem"><b>Remember.</b> Put every length in the <b>same unit</b> before you add or multiply. Use the <b>radius</b> in <span class="tex">\pi r^2</span>, not the diameter. Perimeter is a length (m, ft); area and surface area are in <b>square</b> units (m², ft²). Round only at the <b>end</b>. Round <b>up</b> when you buy pieces, cans or rolls; round <b>down</b> when you count the pieces you can cut.</div>
+</section>
+
+<section class="card" data-extra data-ink="s1c" data-section="1. Check Yourself: Which Rule?">
+  <h3 class="sub">Check yourself: which rule do you need?</h3>
+  <p>Name the row of the table first, then tap a card to check.</p>
+  <div class="bk-flips" style="--bk-cols:4">
+    <div class="bk-flip"><div class="bk-front">How many feet of fence go around a 20 m by 12 m yard?</div><div class="bk-back"><b>Perimeter</b>, then <b>SI ↔ imperial</b><br><span class="tex">P=64</span> m, then <span class="tex">\times3.28</span></div></div>
+    <div class="bk-flip"><div class="bk-front">A board is 7′ 4″. How many inches is that?</div><div class="bk-back"><b>Feet and inches</b><br><span class="tex">7\times12+4=88</span> in</div></div>
+    <div class="bk-flip"><div class="bk-front">A round table top is 3 m around. How wide is it?</div><div class="bk-back"><b>Rearranging formulas</b><br><span class="tex">d=C\div\pi</span></div></div>
+    <div class="bk-flip"><div class="bk-front">How much paint covers the outside of a closed water tank?</div><div class="bk-back"><b>Surface area of a cylinder</b><br><span class="tex">2\pi r^2+2\pi rh</span></div></div>
+    <div class="bk-flip"><div class="bk-front">A rug is 54 ft². How many square yards?</div><div class="bk-back"><b>Area units</b><br><span class="tex">\div9</span></div></div>
+    <div class="bk-flip"><div class="bk-front">What is <span class="tex">5\tfrac14-2\tfrac78</span>?</div><div class="bk-back"><b>Mixed numbers</b><br>borrow 1 as <span class="tex">\tfrac88</span></div></div>
+    <div class="bk-flip"><div class="bk-front">A pond on a grid covers 15 full squares and 8 part squares.</div><div class="bk-back"><b>Irregular shapes</b><br><span class="tex">15+8\div2=19</span> squares</div></div>
+    <div class="bk-flip"><div class="bk-front">A sign says 120 km. About how many miles?</div><div class="bk-back"><b>SI ↔ imperial</b><br><span class="tex">120\times0.621</span></div></div>
+  </div>
+</section>
+
+<!-- ================= 2. Measuring and converting length ================= -->
+<section class="card example" data-ink="ex1" data-section="2. Measuring and Converting: Example 1">
+  <div class="sec-h"><span class="badge">2</span><h2>Measuring and Converting Length</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>A ruler and Sofia’s baseboard</h3></div>
+  <p class="q">The ruler is real size (on paper).</p>
+  <div class="u3l12-fig" id="u3l12-fig-ruler"></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Read the length at each arrow.<br>A <span data-reveal="______"><span class="tex">1\tfrac{3}{16}</span> in</span> &nbsp;&nbsp; B <span data-reveal="______"><span class="tex">4\tfrac58</span> in</span></div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: 3 small spaces past 1, so <span class="tex">1\tfrac{3}{16}</span> in.<br>B: 10 spaces past 4: <span class="tex">\tfrac{10}{16}=\tfrac58</span>, so <span class="tex">4\tfrac58</span> in.</div></div></div>
+    <div class="part"><div class="pl">(b) How far apart are the two arrows?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4\tfrac58-1\tfrac{3}{16}=4\tfrac{10}{16}-1\tfrac{3}{16}=3\tfrac{7}{16}</span> in</div></div></div>
+    <div class="part"><div class="pl">(c) Sofia needs 3 pieces of baseboard, each <span class="tex">2\tfrac34</span> ft long. What total length is that? Is one 8 ft piece enough?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3\times2\tfrac34=3\times\tfrac{11}{4}=\tfrac{33}{4}=8\tfrac14</span> ft<br><span class="tex">8\tfrac14</span> ft is more than 8 ft, so one 8 ft piece is <b>not</b> enough.</div></div></div>
+    <div class="part"><div class="pl">(d) She buys a 10 ft piece instead. How much is left after she cuts the 3 pieces? (Ignore the saw cuts.)</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">10-8\tfrac14=9\tfrac44-8\tfrac14=1\tfrac34</span> ft<br><b><span class="tex">1\tfrac34</span> ft</b> is left over.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex1c" data-section="2. Check Example 1">
+  <h3 class="sub">Check Example 1: read the ruler, cut the boards</h3>
+  <div class="explainer" data-explainer="ruler"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Convert the lengths</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Fill in the blanks.</div>
+      <div class="u3l12-blanks">3.2 km = <span data-reveal="_____">3&#8239;200</span> m<br>65 mm = <span data-reveal="_____">6.5</span> cm<br>0.48 m = <span data-reveal="_____">48</span> cm</div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">km to m: 3 steps down, <span class="tex">\times1\,000</span>. mm to cm: 1 step up, <span class="tex">\div10</span>. m to cm: 2 steps down, <span class="tex">\times100</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) Fill in the blanks.</div>
+      <div class="u3l12-blanks">9 ft 5 in = <span data-reveal="_____">113</span> in<br>2 mi = <span data-reveal="_____">3&#8239;520</span> yd<br>7 yd = <span data-reveal="_____">21</span> ft</div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">9\times12+5=108+5=113</span> in. 1 mi = 1&#8239;760 yd: <span class="tex">2\times1\,760=3\,520</span> yd. <span class="tex">7\times3=21</span> ft.</div></div></div>
+    <div class="part"><div class="pl">(c) Liam is 5′ 11″ tall. What is his height in centimetres, to the nearest centimetre?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Inches: <span class="tex">5\times12+11=71</span> in<br><span class="tex">71\times2.54=180.34</span> cm<br>Liam is about <b>180 cm</b> tall.</div></div></div>
+    <div class="part"><div class="pl">(d) Ruby runs a 5 km fun run. Estimate the distance in miles, then find it to the nearest tenth. (1 km <span class="tex">\approx</span> 0.621 mi)</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">\times0.6</span>: <span class="tex">5\times0.6=3</span> mi<br>Exact: <span class="tex">5\times0.621=3.105\approx3.1</span> mi<br>Close to the estimate ✓</div></div></div>
+  </div>
+  <div class="parts c1 u3l12-gap">
+    <div class="part"><div class="pl">(e) Two shelves are 3′ 9″ and 2′ 10″ long. Will they fit side by side on a wall space that is 6′ 6″ wide?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">3′ 9″ + 2′ 10″ = 5′ 19″. 19″ = 12″ + 7″, so 5′ 19″ = 6′ 7″.<br>6′ 7″ is 1 inch more than 6′ 6″, so the shelves will <b>not</b> fit.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex2c" data-section="2. Check Example 2">
+  <h3 class="sub">Check Example 2: the staircase, Liam’s height, the shelves</h3>
+  <div class="explainer" data-explainer="convert"></div>
+</section>
+
+<!-- ================= 3. Perimeter, circumference and rearranging ================= -->
+<section class="card example" data-ink="ex3" data-section="3. Perimeter and Rearranging: Example 3">
+  <div class="sec-h"><span class="badge">3</span><h2>Perimeter, Circumference and Rearranging</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Edging a garden bed</h3></div>
+  <div class="u3l12-exfig">
+    <div class="u3l12-fig" id="u3l12-fig-bed"></div>
+    <div class="part"><div class="pl">A garden bed is a rectangle with a half circle on one end.<br>(a) Find the perimeter of the bed, to the nearest hundredth of a metre.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Straight sides: <span class="tex">6+6+3=15</span> m<br>Curved edge: <span class="tex">\pi d\div2=\pi\times3\div2\approx4.712</span> m<br><span class="tex">P\approx15+4.712=19.712\approx19.71</span> m</div></div></div>
+  </div>
+  <div class="parts c2 u3l12-gap">
+    <div class="part"><div class="pl">(b) Edging is sold in 2.4 m pieces for $7.98 each. How many pieces are needed, and what do they cost?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">19.712\div2.4\approx8.21</span>, so round <b>up</b>: <b>9 pieces</b><br><span class="tex">9\times\$7.98=\$71.82</span></div></div></div>
+    <div class="part"><div class="pl">(c) Find the total with 5% GST.</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$71.82\times1.05=\$75.411\approx\$75.41</span><br>The edging costs <b>$75.41</b> with GST.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex3c" data-section="3. Check Example 3">
+  <h3 class="sub">Check Example 3: walk the edge, then buy the edging</h3>
+  <div class="explainer" data-explainer="bed"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Find the missing length</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A rectangular dog run uses 32 m of fencing. It is 9.5 m long. How wide is it? Check your answer.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">P=2l+2w</span>, so <span class="tex">w=(P-2l)\div2</span><br><span class="tex">w=(32-2\times9.5)\div2=(32-19)\div2=6.5</span> m<br>Check: <span class="tex">2(9.5)+2(6.5)=19+13=32</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(b) The edge of a round table top is 4.4 m around. Find its diameter, to the nearest hundredth of a metre.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">C=\pi d</span>, so <span class="tex">d=C\div\pi</span><br><span class="tex">d=4.4\div\pi\approx1.4006\approx1.40</span> m<br>Check: <span class="tex">\pi\times1.40\approx4.40</span> ✓</div></div></div>
+  </div>
+  <div class="parts c1 u3l12-gap">
+    <div class="part"><div class="pl">(c) A rectangular patio has an area of 22.5 m². It is 3 m wide. How long is it?</div><div class="work" style="--h:100px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=lw</span>, so <span class="tex">l=A\div w=22.5\div3=7.5</span> m. Check: <span class="tex">7.5\times3=22.5</span> ✓</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex4c" data-section="3. Check Example 4">
+  <h3 class="sub">Check Example 4: undo the formula</h3>
+  <div class="explainer" data-explainer="undo"></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l12"></section>
+
+<!-- ================= 4. Area ================= -->
+<section class="card example" data-ink="ex5" data-section="4. Area: Example 5">
+  <div class="sec-h"><span class="badge">4</span><h2>Area</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>A sail, a flower bed, a rug and area units</h3></div>
+  <div class="u3l12-ex5f"><div class="u3l12-fig" id="u3l12-fig-sail"></div><div class="u3l12-fig" id="u3l12-fig-trap"></div></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A triangle-shaped sail has a base of 2.4 m and a height of 3.5 m. Find its area.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=\tfrac12bh=\tfrac12\times2.4\times3.5</span><br><span class="tex">A=4.2</span> m²</div></div></div>
+    <div class="part"><div class="pl">(b) A flower bed is a trapezoid. Its parallel sides are <span class="tex">3\tfrac12</span> ft and <span class="tex">5\tfrac12</span> ft, and they are 2 ft apart. Find its area.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=\tfrac12(a+b)h=\tfrac12\times(3.5+5.5)\times2</span><br><span class="tex">=\tfrac12\times9\times2=9</span> ft²</div></div></div>
+    <div class="part"><div class="pl">(c) A round rug is 1.8 m across. Find its area, to the nearest hundredth.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=1.8\div2=0.9</span> m<br><span class="tex">A=\pi r^2=\pi\times0.9^2\approx2.544\,69\approx2.54</span> m²</div></div></div>
+    <div class="part"><div class="pl">(d) Fill in the blanks.</div>
+      <div class="u3l12-blanks">9 ft² = <span data-reveal="_____">1&#8239;296</span> in² &nbsp;&nbsp; 45 ft² = <span data-reveal="___">5</span> yd²<br>4.2 m² = <span data-reveal="______">42&#8239;000</span> cm²</div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">9\times144=1\,296</span>; <span class="tex">45\div9=5</span>; <span class="tex">4.2\times10\,000=42\,000</span></div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex5c" data-section="4. Check Example 5">
+  <h3 class="sub">Check Example 5: where the area formulas come from</h3>
+  <div class="explainer" data-explainer="areas"></div>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Why 144, 9 and 10 000?">
+  <h3 class="sub">Why 144, 9 and 10&#8239;000? Cut the big square into small ones</h3>
+  <p>An area unit is a square. A square foot is 12 in long <b>and</b> 12 in wide, so it holds <span class="tex">12\times12</span> square inches, not 12.</p>
+  <div class="explainer" data-explainer="units"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Carpet for Jaspreet’s L-shaped room</h3></div>
+  <div class="u3l12-exfig">
+    <div class="u3l12-fig" id="u3l12-fig-room"></div>
+    <div class="part"><div class="pl">Jaspreet is putting carpet in an L-shaped family room. All the corners are square.<br>(a) Find the area as the <b>whole rectangle minus the cut-out</b> corner.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Whole: <span class="tex">18\times15=270</span> ft²<br>Cut-out: <span class="tex">(18-12)\times(15-11)=6\times4=24</span> ft²<br>Area: <span class="tex">270-24=246</span> ft²</div></div></div>
+  </div>
+  <div class="parts c2 u3l12-gap">
+    <div class="part"><div class="pl">(b) Check by splitting the room into two rectangles.</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Split with an up-and-down line:<br><span class="tex">12\times15=180</span> ft² and <span class="tex">6\times11=66</span> ft²<br><span class="tex">180+66=246</span> ft² ✓</div></div></div>
+    <div class="part"><div class="pl">(c) Carpet costs $38.50 per square yard and is sold in whole square yards. What will the carpet cost before tax?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">246\div9\approx27.33</span> yd², so buy <b>28 yd²</b> (round up)<br><span class="tex">28\times\$38.50=\$1\,078.00</span><br>The carpet costs <b>$1&#8239;078.00</b> before tax.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex6c" data-section="4. Check Example 6">
+  <h3 class="sub">Check Example 6: lift out the corner, then split it</h3>
+  <div class="explainer" data-explainer="room"></div>
+</section>
+
+<!-- ================= 5. Surface area ================= -->
+<section class="card example" data-ink="ex7" data-section="5. Surface Area: Example 7">
+  <div class="sec-h"><span class="badge">5</span><h2>Surface Area</h2></div>
+  <p>The <b>surface area</b> (SA) of a 3-D object is the total area of all its faces. Unfold the object into a flat <b>net</b>, find the area of each part, and add.</p>
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>The chocolate box</h3></div>
+  <p class="q">This is the net of a chocolate box shaped like a triangular prism. The triangle ends have sides of 5 cm, 5 cm and 8 cm and a height of 3 cm. The box is 25 cm long.</p>
+  <div class="u3l12-exfig">
+    <div class="u3l12-fig" id="u3l12-fig-net"></div>
+    <div class="part"><div class="pl">(a) Complete the face table.</div>
+      <table class="u3l12-ft">
+        <tr><th>Faces</th><th>Area</th></tr>
+        <tr><td>2 triangles</td><td><span data-reveal="&nbsp;"><span class="tex">2\times\tfrac12\times8\times3=24</span> cm²</span></td></tr>
+        <tr><td>bottom (8 cm by 25 cm)</td><td><span data-reveal="&nbsp;"><span class="tex">8\times25=200</span> cm²</span></td></tr>
+        <tr><td>2 sides (5 cm by 25 cm)</td><td><span data-reveal="&nbsp;"><span class="tex">2\times5\times25=250</span> cm²</span></td></tr>
+        <tr><td><b>Surface area</b></td><td><span data-reveal="&nbsp;"><span class="tex">24+200+250=474</span> cm²</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 triangles 24 cm² · bottom 200 cm² · 2 sides 250 cm² · <b>SA = 474 cm²</b></div></div></div>
+  </div>
+  <div class="parts c1 u3l12-gap">
+    <div class="part"><div class="pl">(b) The factory has a sheet of cardboard with an area of 1 m² (10&#8239;000 cm²). If no cardboard is wasted, how many whole boxes can it make?</div><div class="work" style="--h:100px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">10\,000\div474\approx21.1</span>. A part of a box is not a box, so round <b>down</b>: <b>21 boxes</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex7c" data-section="5. Check Example 7">
+  <h3 class="sub">Check Example 7: fill the face table from the net</h3>
+  <div class="explainer" data-explainer="prismNet"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A soup can, a tent and a funnel</h3></div>
+  <div class="u3l12-ex8f"><div class="u3l12-fig" id="u3l12-fig-can"></div><div class="u3l12-fig" id="u3l12-fig-tent"></div><div class="u3l12-fig" id="u3l12-fig-funnel"></div></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A soup can has a radius of 3.8 cm and a height of 11 cm. Find the area of the paper label that wraps around the side.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The label unrolls into a rectangle: <span class="tex">2\pi r\times h</span><br><span class="tex">2\pi rh=2\times\pi\times3.8\times11\approx262.6</span> cm²</div></div></div>
+    <div class="part"><div class="pl">(b) Find the surface area of the whole can (side, top and bottom).</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Two circles: <span class="tex">2\pi r^2=2\times\pi\times3.8^2\approx90.7</span> cm²<br><span class="tex">\text{SA}\approx262.64+90.73\approx353.4</span> cm²</div></div></div>
+    <div class="part"><div class="pl">(c) A tent is a square pyramid with a 2.2 m by 2.2 m floor. The slant height of each side is 1.8 m. How much fabric is in the 4 sides and the floor?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Floor: <span class="tex">2.2\times2.2=4.84</span> m²<br>4 triangles: <span class="tex">4\times\tfrac12\times2.2\times1.8=7.92</span> m²<br><span class="tex">\text{SA}=4.84+7.92=12.76</span> m² of fabric</div></div></div>
+    <div class="part"><div class="pl">(d) A kitchen funnel is a cone with a radius of 6 cm and a slant height of 15 cm (ignore the spout). It has no base. Find the area of plastic in the cone.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">No base, so only the curved side: <span class="tex">\pi rs</span><br><span class="tex">\pi\times6\times15\approx282.7</span> cm²</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex8c" data-section="5. Check Example 8">
+  <h3 class="sub">Check Example 8: unroll, unfold, flatten</h3>
+  <div class="explainer" data-explainer="solids"></div>
+</section>
+
+<section class="card" data-extra data-ink="s6x" data-section="6. Practice Test: Spot the Trap">
+  <h3 class="sub">Practice test: spot the trap</h3>
+  <p>Multiple-choice questions are built from <b>real mistakes</b>. Each wrong choice is what you get from one slip. Find the slip, and you can’t be fooled.</p>
+  <div class="explainer" data-explainer="traps"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Length.</b> SI: × or ÷ 10 for each step. Imperial: 12 in = 1 ft, 3 ft = 1 yd, 5&#8239;280 ft = 1 mi; regroup 12 in as 1 ft. Between: 1 in = 2.54 cm, 1 km <span class="tex">\approx0.621</span> mi. Ruler: whole inches, then sixteenths, then simplify.</div>
+    <div><b>Perimeter.</b> Add the sides; circle <span class="tex">C=\pi d</span>; half circle <span class="tex">\pi d\div2</span>. Round <b>up</b> for pieces. <b>Rearranging:</b> undo + or − first, then × or ÷, and check.</div>
+    <div><b>Area.</b> <span class="tex">lw</span>, <span class="tex">bh</span>, <span class="tex">\tfrac12bh</span>, <span class="tex">\tfrac12(a+b)h</span>, <span class="tex">\pi r^2</span> (radius!). Composite: split and add, or whole − cut-out. 1 ft² = 144 in², 1 yd² = 9 ft², 1 m² = 10&#8239;000 cm².</div>
+    <div><b>Surface area.</b> Net, area of each piece, add. Cylinder <span class="tex">2\pi r^2+2\pi rh</span>; pyramid base + <span class="tex">4\times\tfrac12bs</span>; cone <span class="tex">\pi r^2+\pi rs</span>. Use only the pieces that are there.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l12">
+    <div><div class="kicker">Your turn</div><b>Assignment 12 · Unit 3 Review · Questions 1–27</b><div class="muted">A practice unit test: written response (1–15), multiple choice (16–23) and numerical response (24–27). Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+<!-- ================= up next: the unit test ================= -->
+<section class="card u3l12-next" data-ink="next" data-section="Up next: Unit 3 Test">
+  <div class="u3l12-next-h"><span class="kicker">Up next</span><b>Unit 3 test</b> <span class="muted">Shaky on an idea today? Go back to its lesson.</span></div>
+  <div class="u3l12-next-grid">
+    <a href="../l1/"><span class="rn">3.1</span>Fractions refresher: mixed numbers <small>Example 1(c), (d)</small></a>
+    <a href="../l2/"><span class="rn">3.2</span>The SI system: units, prefixes, referents <small>Example 2(a)</small></a>
+    <a href="../l3/"><span class="rn">3.3</span>Imperial units and reading a tape measure <small>Example 1(a), (b)</small></a>
+    <a href="../l4/"><span class="rn">3.4</span>Converting length within SI and within imperial <small>Example 2(b), (e)</small></a>
+    <a href="../l5/"><span class="rn">3.5</span>Converting length between SI and imperial <small>Example 2(c), (d)</small></a>
+    <a href="../l6/"><span class="rn">3.6</span>Perimeter and circumference <small>Example 3</small></a>
+    <a href="../l7/"><span class="rn">3.7</span>Rearranging formulas: a missing side <small>Example 4</small></a>
+    <a href="../l8/"><span class="rn">3.8</span>Area of 2-D shapes <small>Example 5</small></a>
+    <a href="../l9/"><span class="rn">3.9</span>Composite and irregular shapes <small>Example 6</small></a>
+    <a href="../l10/"><span class="rn">3.10</span>Nets and surface area of prisms <small>Example 7</small></a>
+    <a href="../l11/"><span class="rn">3.11</span>Surface area of cylinders, pyramids and cones <small>Example 8</small></a>
+    <div class="test"><span class="rn">Test</span>Unit 3 test: M1, M2, M3, M4, A1 <small>calculator allowed · set up like today’s practice test · every idea from today’s review</small></div>
+  </div>
+  <div class="space" id="next-space" style="min-height:80px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l12.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l12', homeHref: '../../', title: '3.12 Unit 3 Review' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

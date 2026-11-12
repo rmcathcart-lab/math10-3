@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Working Backwards · Math 10-3 2.8</title>
+<meta name="description" content="Math 10-3 Unit 2 Lesson 8: working backwards with pay formulas. Rearrange pay = rate × hours to find the hours or the wage, round up to whole hours and shifts, overtime hours needed, paid hours, sales needed for a commission goal, and hours needed to take home an amount after deductions. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u2l8.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u2l8">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Mini-Donut Bag">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Mini-Donut Bag</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">At the Calgary Stampede, you buy a bag of mini-donuts. On the way to your seat, you meet <b>3 friends</b>.</p><p class="vw-ctx">Each friend takes <b>half</b> of the donuts in your bag, <b>plus 1 more</b>. When you sit down, <b>1 donut</b> is left.</p><p class="vw-ask">How many mini-donuts were in the bag?</p></div><div class="vw-art"><svg viewBox="0 0 330 260" role="img" aria-label="A paper bag of mini-donuts with steam rising and sugar falling; a donut keeps getting lifted out of the bag">
+    <ellipse cx="165" cy="240" rx="110" ry="10" fill="#efe6d6"/>
+    <g><animateTransform attributeName="transform" type="rotate" values="-2 165 236;2 165 236;-2 165 236" dur="2.6s" repeatCount="indefinite"/>
+      <path d="M95 96 L235 96 L248 232 Q248 238 242 238 L88 238 Q82 238 82 232 Z" fill="#f4e3c3" stroke="#9a6a24" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M95 96 L104 80 L116 96 L128 80 L140 96 L152 80 L164 96 L176 80 L188 96 L200 80 L212 96 L224 80 L235 96" fill="#f4e3c3" stroke="#9a6a24" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="132" cy="92" r="20" fill="#d9954a" stroke="#8a5a14" stroke-width="3"/><circle cx="132" cy="92" r="6" fill="#f4e3c3" stroke="#8a5a14" stroke-width="2"/>
+      <circle cx="176" cy="86" r="20" fill="#d9954a" stroke="#8a5a14" stroke-width="3"/><circle cx="176" cy="86" r="6" fill="#f4e3c3" stroke="#8a5a14" stroke-width="2"/>
+      <circle cx="210" cy="96" r="18" fill="#d9954a" stroke="#8a5a14" stroke-width="3"/><circle cx="210" cy="96" r="5" fill="#f4e3c3" stroke="#8a5a14" stroke-width="2"/>
+      <rect x="112" y="150" width="106" height="44" rx="8" fill="#c93a33"/>
+      <text x="165" y="178" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">MINI-DONUTS</text>
+    </g>
+    <g fill="none" stroke="#b9a27f" stroke-width="4" stroke-linecap="round" opacity=".8">
+      <path d="M140 52 q-10 -14 0 -28 q10 -14 0 -26"><animate attributeName="opacity" values="0;.9;0" dur="2.4s" repeatCount="indefinite"/></path>
+      <path d="M178 50 q-10 -14 0 -28 q10 -14 0 -26"><animate attributeName="opacity" values="0;.9;0" dur="2.4s" begin=".8s" repeatCount="indefinite"/></path>
+      <path d="M212 56 q-10 -14 0 -28 q10 -14 0 -26"><animate attributeName="opacity" values="0;.9;0" dur="2.4s" begin="1.6s" repeatCount="indefinite"/></path>
+    </g>
+    <g fill="#fff" stroke="#d8cdb8" stroke-width="1"><circle cx="120" cy="60" r="3"><animate attributeName="cy" values="40;70" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="196" cy="58" r="3"><animate attributeName="cy" values="44;74" dur="1.8s" begin=".9s" repeatCount="indefinite"/></circle></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.1;0.3;0.42;1" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-40 -70;-70 -90;-70 -90" keyTimes="0;0.3;0.42;1" dur="3s" repeatCount="indefinite"/>
+      <circle cx="176" cy="86" r="17" fill="#d9954a" stroke="#8a5a14" stroke-width="3"/><circle cx="176" cy="86" r="5" fill="#f4e3c3" stroke="#8a5a14" stroke-width="2"/></g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Got an answer? <b>Check it</b>: start with your number and let the 3 friends take their share.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>22 mini-donuts!</b> Work <b>backwards</b> and undo each friend: add the 1 back, then double. Before the last friend: <span class="tex">(1+1)\times2=4</span>. Before the second friend: <span class="tex">(4+1)\times2=10</span>. At the start: <span class="tex">(10+1)\times2=22</span>. Check forward: 22 → 10 → 4 → 1 ✓. <span class="muted">Today we work backwards with pay.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 2 Earning an Income · Lesson 8</div>
+  <h1>Working Backwards: How Many Hours Do I Need?</h1>
+  <p class="lede">“I want $400. How many hours is that?” Today we turn a pay formula around to find the <b>hours</b>, the <b>wage</b> or the <b>sales</b> you need. Then we check by putting the answer back in.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>rearrange <b>pay = rate × hours</b> to find the hours or the rate, and <b>check</b> my answer</li>
+      <li>round <b>up</b> to whole hours or whole shifts when I need <b>at least</b> an amount</li>
+      <li>find the <b>overtime hours</b> I need, and find a wage from <b>paid hours</b></li>
+      <li>find the <b>sales</b> needed to earn a commission goal</li>
+      <li>find the hours needed to <b>take home</b> an amount after deductions</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>A1</b> Solve problems that require the manipulation and application of formulas related to: perimeter, area, the Pythagorean theorem, primary trigonometric ratios, income.</div>
+  <div class="outcome"><b>N2</b> Demonstrate an understanding of income, including: wages, salary, contracts, commissions and piecework, to calculate gross pay and net pay.</div>
+</section>
+
+<!-- ================= 1. Turning the pay formula around ================= -->
+<section class="card" data-ink="s1" data-section="1. Turning the Pay Formula Around">
+  <div class="sec-h"><span class="badge">1</span><h2>Turning the Pay Formula Around</h2></div>
+  <p>You know how to find gross pay: multiply the hourly wage (the <b>rate</b>) by the hours worked. But often you know the pay you <b>want</b>, and you need something else: “I want $400. How many hours is that?”</p>
+  <p>This is <b>working backwards</b>. You <b>rearrange</b> the formula. That means you write it a new way, so the thing you want to find is by itself on one side of the equal sign.</p>
+  <div class="u2l8-key">
+    <div class="def"><b>Key idea</b> &nbsp; <b>The pay formula, three ways</b>
+      <div class="u2l8-three">
+        <span>To find the <b>pay</b>:</span><span><b>pay = rate × hours</b></span>
+        <span>To find the <b>hours</b>:</span><span><b>hours = pay ÷ rate</b></span>
+        <span>To find the <b>rate</b> (wage):</span><span><b>rate = pay ÷ hours</b></span>
+      </div>
+      <div class="eg"><b>Check:</b> put your answer back into pay = rate × hours. You should get the pay you started with.</div></div>
+    <figure class="u2l8-tri"><svg viewBox="0 0 300 230" role="img" aria-label="Formula triangle: pay on top, rate and hours on the bottom">
+      <path d="M150 10 L290 220 L10 220 Z" fill="#fff6e5" stroke="#6e4a1c" stroke-width="4" stroke-linejoin="round"/>
+      <line x1="80" y1="115" x2="220" y2="115" stroke="#6e4a1c" stroke-width="4"/><line x1="150" y1="115" x2="150" y2="220" stroke="#6e4a1c" stroke-width="4"/>
+      <text x="150" y="90" font-size="30" font-weight="800" fill="#6e4a1c" text-anchor="middle">pay</text>
+      <text x="96" y="180" font-size="28" font-weight="800" fill="#1f5bd6" text-anchor="middle">rate</text>
+      <text x="206" y="180" font-size="28" font-weight="800" fill="#12805a" text-anchor="middle">hours</text>
+    </svg><figcaption><b>Formula triangle.</b> Cover the one you want. Side by side means ×; one above the other means ÷.</figcaption></figure>
+  </div>
+  <div class="explainer" data-explainer="undoMachine"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Divide the <b>pay</b> by the <b>rate</b>, not the rate by the pay. <b>Estimate first:</b> $520 at about $16 an hour is about 30 hours. If your calculator says 0.03 hours, you divided the wrong way.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. The Formula Triangle">
+  <h3 class="sub">Cover the one you want</h3>
+  <p>The formula triangle holds all three formulas. Cover the thing you want to find; what is left tells you what to do.</p>
+  <div class="explainer" data-explainer="triangle"></div>
+</section>
+
+<section class="card" data-extra data-ink="s1c" data-section="1. Which Way Do I Divide?">
+  <h3 class="sub">Which way do I divide?</h3>
+  <p>Pay ÷ rate gives hours. Rate ÷ pay gives a tiny number that is not the hours. An estimate tells you right away which one makes sense.</p>
+  <div class="explainer" data-explainer="wrongWay"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Jonas gets a raise to $20.00 an hour. Does he need more or fewer hours to earn $520.00? How many?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Fewer.</b> Each hour pays more, so it takes fewer hours: <span class="tex">\$520.00\div\$20.00=26</span> hours.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Find the wage, find the hours</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Marco earned $446.25 for 25.5 hours of work at a garden centre. What is his hourly wage?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">rate = pay ÷ hours<br>rate <span class="tex">=\$446.25\div25.5=\$17.50</span><br>Check: <span class="tex">\$17.50\times25.5=\$446.25</span> ✓<br>Marco earns <b>$17.50</b> an hour.</div></div></div>
+    <div class="part"><div class="pl">(b) Jonas earns $16.25 an hour at a car wash. How many hours must he work to earn $520.00?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">hours = pay ÷ rate<br>hours <span class="tex">=\$520.00\div\$16.25=32</span><br>Check: <span class="tex">\$16.25\times32=\$520.00</span> ✓<br>Jonas must work <b>32 hours</b>.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(a) <span class="keys">446.25 <kbd>÷</kbd> 25.5 <kbd>ENTER</kbd></span> shows 17.5. &nbsp; (b) <span class="keys">520 <kbd>÷</kbd> 16.25 <kbd>ENTER</kbd></span> shows 32.</div>
+    <div class="u2l8-pcol"><button class="pill" type="button" data-keys="446.25 ÷ 25.5 =">(a)</button><button class="pill" type="button" data-keys="520 ÷ 16.25 =">(b)</button></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1d" data-section="1. Round Up">
+  <h3 class="sub">Round up to be sure</h3>
+  <div class="tip u2l8-up"><div class="tip-ic">↑</div><div><b>Round up.</b> When you need <b>at least</b> some amount of money, round the hours <b>up</b> to the next whole hour (or whole shift), even if the decimal is small: 41.1 h means you need 42 h. Rounding down would leave you a little short.</div></div>
+  <div class="explainer" data-explainer="roundUp"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Priya’s new phone</h3></div>
+  <p class="q">Priya earns $15.50 an hour at a grocery store. She wants to earn $650.00 (before deductions) to buy a new phone.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many whole hours must she work?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">hours = pay ÷ rate <span class="tex">=\$650.00\div\$15.50=41.935\ldots</span><br>Round up: she must work <b>42 hours</b>.<br>Check: <span class="tex">42\times\$15.50=\$651.00</span>, which is at least $650 ✓<br>(<span class="tex">41\times\$15.50=\$635.50</span> is not enough.)</div></div></div>
+    <div class="part"><div class="pl">(b) Her shifts are 6 hours long. How many shifts is that?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">42\div6=7</span>. Priya needs <b>7 shifts</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Working backwards with overtime ================= -->
+<section class="card" data-ink="s2" data-section="2. Working Backwards With Overtime">
+  <div class="sec-h"><span class="badge">2</span><h2>Working Backwards With Overtime</h2></div>
+  <p>Remember the Alberta rule: hours over 8 in a day (or over 44 in a week, whichever gives more) are <b>overtime</b>, paid at 1.5 times the wage. If someone already works 8 hours every day, any extra hour added to a shift is an overtime hour.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>How many overtime hours do I need?</b>
+    <ol class="u2l8-steps">
+      <li><b>Step 1</b> Find the pay for the regular hours.</li>
+      <li><b>Step 2</b> Extra pay needed = target pay − regular pay</li>
+      <li><b>Step 3</b> Overtime rate = 1.5 × wage</li>
+      <li><b>Step 4</b> Overtime hours = extra pay needed ÷ overtime rate</li>
+    </ol></div>
+  <div class="explainer" data-explainer="otSteps"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Kofi’s overtime</h3></div>
+  <p class="q">Kofi works 8 hours a day, Monday to Friday, at a warehouse. He earns $20.00 an hour. Any extra hours he adds to a shift are overtime at time-and-a-half. How many overtime hours does he need to earn $950.00 this week?</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: regular pay <span class="tex">=40\times\$20.00=\$800.00</span><br>Step 2: extra needed <span class="tex">=\$950.00-\$800.00=\$150.00</span><br>Step 3: overtime rate <span class="tex">=1.5\times\$20.00=\$30.00</span> an hour<br>Step 4: overtime hours <span class="tex">=\$150.00\div\$30.00=5</span><br>Check: <span class="tex">\$800.00+5\times\$30.00=\$950.00</span> ✓ &nbsp;(Weekly rule: <span class="tex">45-44=1</span> h, so the daily rule gives more.)<br>Kofi needs <b>5 hours</b> of overtime.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Paid Hours">
+  <h3 class="sub">Finding the wage when there is overtime: count the paid hours</h3>
+  <p>To find the <b>wage</b> when a pay stub has overtime in it, count the <b>paid hours</b>. Each overtime hour is paid like 1.5 regular hours (a double-time hour is paid like 2 hours).</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>paid hours = regular hours + 1.5 × overtime hours</b> &nbsp;&nbsp;·&nbsp;&nbsp; <b>wage = gross pay ÷ paid hours</b></div>
+  <div class="explainer" data-explainer="paidHours"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Lena’s wage</h3></div>
+  <p class="q">Lena’s pay stub shows 40 regular hours and 6 overtime hours (time-and-a-half). Her gross pay is $1&#8239;029.00. What is her hourly wage?</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">paid hours <span class="tex">=40+1.5\times6=40+9=49</span><br>wage <span class="tex">=\$1\,029.00\div49=\$21.00</span><br>Check: regular <span class="tex">40\times\$21.00=\$840.00</span>; overtime <span class="tex">6\times\$31.50=\$189.00</span>; <span class="tex">\$840.00+\$189.00=\$1\,029.00</span> ✓<br>Lena earns <b>$21.00</b> an hour.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–9">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 8 · Questions 1–9</h2>
+  <p class="pr-t">Try these before we work backwards with commission.</p>
+  <div class="pr-chips n3">
+    <span><b>1–2</b>Complete the table; rearrange the formulas</span>
+    <span><b>3</b>Ella’s hours (round up)</span>
+    <span><b>4</b>Jordan’s mistake</span>
+    <span><b>5</b>Amara’s hours and shifts</span>
+    <span><b>6</b>Noor: what if?</span>
+    <span><b>7</b>The tree planter</span>
+    <span><b>8</b>Bryn’s overtime hours</span>
+    <span><b>9</b>Wages from paid hours</span>
+    <span><b>✓</b>Check every answer by putting it back in</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 9.</span><a class="pill" href="../../../#/lesson/u2l8">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. How much do I need to sell? ================= -->
+<section class="card" data-ink="s3" data-section="3. How Much Do I Need to Sell?">
+  <div class="sec-h"><span class="badge">3</span><h2>How Much Do I Need to Sell?</h2></div>
+  <p>A salesperson on commission earns a percent of what they sell. To reach a pay goal, they need to know how much to sell. Rearrange the commission formula the same way.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Commission:</b> commission = rate × sales &nbsp;&nbsp;→&nbsp;&nbsp; <b>sales needed = commission wanted ÷ rate</b>
+    <div class="eg"><b>Salary + commission:</b> first find the commission needed = target pay − salary. Then divide by the rate.</div>
+    <div class="eg"><b>Graduated commission:</b> use up the first level, then find the sales needed at the next rate.</div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Change the percent to a decimal: <span class="tex">8\%=0.08</span>. <span class="tex">\$1\,200\div8=\$150</span> is wrong; <span class="tex">\$1\,200\div0.08=\$15\,000</span> is right. Sales needed are always <b>much bigger</b> than the commission.</div></div>
+  <div class="explainer" data-explainer="salesNeeded"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Why is the sales amount always much bigger than the commission?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The salesperson only keeps a small part of each sale (8¢ of every dollar at 8%). To collect $1&#8239;200 in 8¢ pieces, you need a lot of dollars of sales: dividing by a small decimal makes the number <b>bigger</b>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Commission goals</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Dana sells furniture and earns 8% commission. How much must she sell to earn $1&#8239;200.00 in commission this month?</div><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">8\%=0.08</span><br>sales = commission ÷ rate<br>sales <span class="tex">=\$1\,200.00\div0.08=\$15\,000.00</span><br>Check: <span class="tex">0.08\times\$15\,000=\$1\,200</span> ✓<br>Dana must sell <b>$15&#8239;000.00</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Raj earns a salary of $1&#8239;800.00 a month plus 4% commission on his sales of cell phone plans. How much must he sell to earn $3&#8239;000.00 this month?</div><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">commission needed <span class="tex">=\$3\,000-\$1\,800=\$1\,200</span><br>sales <span class="tex">=\$1\,200\div0.04=\$30\,000</span><br>Check: <span class="tex">\$1\,800+0.04\times\$30\,000=\$3\,000</span> ✓<br>Raj must sell <b>$30&#8239;000.00</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Graduated Commission">
+  <h3 class="sub">Graduated commission: fill the first level, then the next</h3>
+  <p>With a graduated commission, the first part of the sales pays one rate and the sales above it pay a higher rate. Use up the first level, then work backwards for the rest.</p>
+  <div class="explainer" data-explainer="graduated"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Jasmine’s hot tubs</h3></div>
+  <p class="q">Jasmine sells hot tubs. She earns 3% commission on the first $10&#8239;000 of her sales in a month and 5% on all sales over $10&#8239;000. How much must she sell to earn $1&#8239;000.00 in commission?</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: the first level pays <span class="tex">0.03\times\$10\,000=\$300</span>.<br>Step 2: still needed <span class="tex">=\$1\,000-\$300=\$700</span>, earned at 5%.<br>Step 3: sales over $10&#8239;000 <span class="tex">=\$700\div0.05=\$14\,000</span><br>Step 4: total sales <span class="tex">=\$10\,000+\$14\,000=\$24\,000</span><br>Check: <span class="tex">\$300+0.05\times\$14\,000=\$300+\$700=\$1\,000</span> ✓<br>Jasmine must sell <b>$24&#8239;000.00</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u2l8"></section>
+
+<!-- ================= 4. Hours needed after deductions ================= -->
+<section class="card" data-ink="s4" data-section="4. Hours Needed After Deductions">
+  <div class="sec-h"><span class="badge">4</span><h2>Hours Needed After Deductions</h2></div>
+  <p>Your pay cheque shows your <b>net pay</b>, not your gross pay. To buy something, you need enough <b>net</b> pay. So find how much you take home for each hour, then divide.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Hours needed to take home an amount</b>
+    <ol class="u2l8-steps n3">
+      <li><b>Step 1</b> Total deduction rate = add the percents</li>
+      <li><b>Step 2</b> Net per hour = wage × (1 − total deduction rate)</li>
+      <li><b>Step 3</b> Hours = net pay needed ÷ net per hour, rounded <b>up</b></li>
+    </ol>
+    <div class="eg">Buying something in Alberta? Net pay needed = price × 1.05 (5% GST)</div></div>
+  <div class="tip u2l8-note" data-extra><div class="tip-ic">i</div><div><b>Note.</b> The CPP, EI and income tax rates in this lesson are simple examples. Real deductions come from CRA tables and change with your pay and the time of year.</div></div>
+  <div class="explainer" data-explainer="thermo"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Don’t round the net per hour too early.</b> Write at least four decimals, or do it all in one line. In Example 8 below: <span class="keys">944.99 <kbd>÷</kbd> <kbd>(</kbd> 18.50 <kbd>×</kbd> 0.7741 <kbd>)</kbd> <kbd>ENTER</kbd></span></div>
+    <button class="pill" type="button" data-keys="944.99 ÷ ( 18.50 × 0.7741 ) =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Ethan’s trip to Jasper</h3></div>
+  <p class="q">Ethan earns $16.00 an hour at a movie theatre. His deductions take about 20% of his gross pay. How many hours must he work to take home $600.00 for a trip to Jasper?</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">net per hour <span class="tex">=\$16.00\times(1-0.20)=\$16.00\times0.80=\$12.80</span><br>hours <span class="tex">=\$600.00\div\$12.80=46.875</span> → round up to <b>47 hours</b><br>Check: gross <span class="tex">=47\times\$16.00=\$752.00</span>; net <span class="tex">=\$752.00\times0.80=\$601.60</span>, at least $600 ✓<br>Ethan must work <b>47 hours</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Sofia’s laptop</h3></div>
+  <p class="q">Sofia earns $18.50 an hour. Her deductions are CPP 5.95%, EI 1.64% and income tax 15%. She wants a laptop that costs $899.99 in Calgary.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) What is the total cost of the laptop with GST?</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$899.99\times1.05=\$944.9895</span><br><span class="tex">\approx\$944.99</span></div></div></div>
+    <div class="part"><div class="pl">(b) What percent of her gross pay does Sofia take home? What is her net pay for one hour?</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">total deductions <span class="tex">=5.95\%+1.64\%+15\%=22.59\%</span><br>she keeps <span class="tex">100\%-22.59\%=77.41\%</span><br>net per hour <span class="tex">=\$18.50\times0.7741</span> <span class="tex">=\$14.320\,85\approx\$14.32</span></div></div></div>
+    <div class="part"><div class="pl">(c) How many hours must she work to buy the laptop? Check your answer.</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">hours <span class="tex">=\$944.99\div14.320\,85=65.99\ldots</span> → <b>66 hours</b><br>Check: gross <span class="tex">=66\times\$18.50=\$1\,221.00</span>; net <span class="tex">=\$1\,221.00\times0.7741=\$945.18</span>, enough ✓<br>(65 hours gives only <span class="tex">\$930.86</span>.)</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Think: More Deductions">
+  <h3 class="sub">Think it through</h3>
+  <div class="parts c2">
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> Ethan’s deductions go up to 25%. Does he need more or fewer hours to take home $600.00? How many?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>More.</b> He keeps less of each hour: <span class="tex">\$16.00\times0.75=\$12.00</span>. <span class="tex">\$600.00\div\$12.00=50</span> hours.</div></div></div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> Why do we multiply by <span class="tex">(1-0.20)</span> and not by 0.20?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$16.00\times0.20=\$3.20</span> is the part that is <b>taken off</b>. Ethan keeps the rest, 80%: <span class="tex">\$16.00\times0.80=\$12.80</span>.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>pay = rate × hours</b>, so <b>hours = pay ÷ rate</b> and <b>rate = pay ÷ hours</b>. Estimate first, and <b>check</b> by putting the answer back in.</div>
+    <div>Need <b>at least</b> an amount? Round the hours (or shifts) <b>up</b>. <b>Overtime:</b> extra pay needed ÷ (1.5 × wage). <b>Wage from a stub:</b> gross ÷ paid hours (regular + 1.5 × overtime).</div>
+    <div><b>Sales needed = commission ÷ rate</b> (rate as a decimal). Salary first: commission needed = target − salary. Graduated: use up the first level first.</div>
+    <div><b>Take-home goal:</b> net per hour = wage × (1 − deduction rate); hours = net needed ÷ net per hour, rounded up. Add 5% GST to a price first.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u2l8">
+    <div><div class="kicker">Your turn</div><b>Assignment 8 · Questions 10–18</b><div class="muted">Sales needed for commission goals, a quota, two job offers, hours after deductions, and a savings goal. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l9/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 9 — Unit 2 Review</b><div class="muted">Time, wages, overtime, piecework, commission, extra earnings, deductions and working backwards: all of Unit 2, together.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u2l8.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u2l8', homeHref: '../../', title: '2.8 Working Backwards' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

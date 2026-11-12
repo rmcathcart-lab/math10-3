@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Commission · Math 10-3 2.5</title>
+<meta name="description" content="Math 10-3 Unit 2 Lesson 5: commission and salary plus commission. Straight commission, base pay plus commission, graduated (tiered) commission, quotas, finding the rate or the sales, and comparing pay plans. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u2l5.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u2l5">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Up 10%, Down 10%">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Up 10%, Down 10%</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A jacket at a store in Calgary costs <b>$100</b>.</p><p class="vw-ctx">On Monday, the store raises the price by <b>10%</b>.</p><p class="vw-ctx">On Friday, the jacket goes on sale: <b>10% off</b> the new price.</p><p class="vw-ask">What does the jacket cost now? More than $100, less than $100, or exactly $100?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A jacket under a swinging price tag of $100, with an up arrow for 10% up and a down arrow for 10% off taking turns">
+    <rect x="18" y="226" width="294" height="12" rx="6" fill="#efe4d2"/>
+    <g>
+      <path d="M118 96 Q134 82 150 84 L165 98 L180 84 Q196 82 212 96 L236 128 L220 140 L210 128 L210 222 L120 222 L120 128 L110 140 L94 128 Z" fill="#2f6f8f" stroke="#1d4357" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M150 84 L165 120 L180 84" fill="none" stroke="#1d4357" stroke-width="3" stroke-linejoin="round"/>
+      <line x1="165" y1="120" x2="165" y2="222" stroke="#1d4357" stroke-width="2.5"/>
+      <circle cx="158" cy="146" r="3" fill="#e9c46a"/><circle cx="158" cy="170" r="3" fill="#e9c46a"/><circle cx="158" cy="194" r="3" fill="#e9c46a"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-7 165 20;7 165 20;-7 165 20" dur="3s" repeatCount="indefinite"/>
+      <line x1="165" y1="8" x2="165" y2="30" stroke="#4a4436" stroke-width="2.5"/>
+      <path d="M125 30 H205 V74 H125 Z" fill="#fff6e5" stroke="#9a6a24" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="165" cy="38" r="3.5" fill="#9a6a24"/>
+      <text x="165" y="66" font-size="26" font-weight="800" fill="#6e4a1c" text-anchor="middle">$100</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;1;1;0;0;0" keyTimes="0;0.1;0.4;0.5;0.9;1" dur="4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 10;0 -6;0 10" dur="4s" repeatCount="indefinite"/>
+      <path d="M42 150 L66 118 L90 150 H76 V196 H56 V150 Z" fill="#c0392b"/>
+      <text x="66" y="222" font-size="22" font-weight="800" fill="#c0392b" text-anchor="middle">+10%</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;0;1;1;0" keyTimes="0;0.5;0.55;0.6;0.9;1" dur="4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 -6;0 10;0 -6" dur="4s" repeatCount="indefinite"/>
+      <path d="M240 160 L264 192 L288 160 H274 V114 H254 V160 Z" fill="#1f8a5b"/>
+      <text x="264" y="222" font-size="22" font-weight="800" fill="#1f8a5b" text-anchor="middle">−10%</text>
+    </g>
+    <text x="268" y="74" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Got a guess? <b>Check it</b>: find the Monday price first, then take 10% off <b>that</b>.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>It costs $99, less than $100!</b> Monday: 10% of $100 is $10, so the price goes up to <b>$110</b>. Friday: 10% of <b>$110</b> is <b>$11</b>, so the price drops to <span class="tex">\$110-\$11=\$99</span>. The 10% off is taken from a <b>bigger</b> number, so it takes away more than the $10 that was added. <span class="muted">A percent is always a percent <b>of something</b>. Today: commission, a percent of what you sell.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 2 Earning an Income · Lesson 5</div>
+  <h1>Commission and Salary Plus Commission</h1>
+  <p class="lede">Some jobs pay you for what you <b>sell</b>, not for your time. Today we find a <b>commission</b>, add it to a <b>base pay</b>, work with <b>levels</b> and <b>quotas</b>, and decide which pay plan is better for you.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find a <b>commission</b>: sales × commission rate (as a decimal)</li>
+      <li>find <b>gross pay</b> for salary or wage <b>plus commission</b></li>
+      <li>find a <b>graduated</b> commission (levels) and a commission <b>over a quota</b></li>
+      <li>work <b>backwards</b> to find the rate or the sales</li>
+      <li>compare two <b>pay plans</b> and find where they pay the same</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N2</b> Demonstrate an understanding of income, including: wages; salary; contracts; commissions; piecework to calculate gross pay and net pay.<br><span class="muted">Today: commissions.</span></div>
+</section>
+
+<!-- ================= 1. Straight commission ================= -->
+<section class="card" data-ink="s1" data-section="1. Straight Commission">
+  <div class="sec-h"><span class="badge">1</span><h2>Straight Commission</h2></div>
+  <p>Some jobs pay you for what you <b>sell</b>, not for your time. A <b>commission</b> is money you earn as a <b>percent of your sales</b>. The percent is the <b>commission rate</b>. Your <b>sales</b> are the total dollar value of everything you sold.</p>
+  <p>If commission is your <b>only</b> pay, it is called <b>straight commission</b>. Jobs that often pay this way: real estate agents, car and RV salespeople, and some furniture, appliance and travel sales jobs.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Commission = sales × commission rate</b> &nbsp;(change the rate to a decimal first)
+    <div class="eg">5% commission on $2000 of sales: &nbsp;<span class="tex">\$2000\times0.05=\$100</span></div></div>
+  <div class="explainer" data-explainer="straight"></div>
+  <div class="def-grid">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Write the rate as a decimal carefully: <span class="tex">6\%=0.06</span>, <span class="tex">2.5\%=0.025</span>, <span class="tex">12\%=0.12</span>. A commission is a <b>part</b> of the sales, so it should be much <b>smaller</b> than the sales.</div></div>
+    <div class="tip u2l5-esttip"><div class="tip-ic">≈</div><div><b>Estimate.</b> Find <b>10%</b> first (move the decimal one place left). <b>5%</b> is half of that. For 6%, the answer is a bit more than the 5% amount.</div></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. Percent to Decimal">
+  <h3 class="sub">Percent to decimal: divide by 100</h3>
+  <p>“Percent” means “out of 100”. To change a percent to a decimal, divide by 100: the decimal point hops <b>two places left</b>. Fill any empty place with a zero.</p>
+  <div class="explainer" data-explainer="decimalRate"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Kai’s rate is only 2.5%, but he can earn almost $1000 on one sale. How can a small rate give a big commission?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The <b>sales</b> are big. A travel trailer costs tens of thousands of dollars, so even a small part of it is a lot of money.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Maya sells appliances</h3></div>
+  <p class="q">Maya sells appliances (fridges, stoves, washers) at a store in Calgary. She earns <b>6%</b> commission. Last week she sold <b>$7385.00</b> worth of appliances.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Estimate her commission.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">10% of $7385 is about <b>$740</b>.<br>5% is half of that, about <b>$370</b>.<br>6% is a bit more: about <b>$440</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Calculate her commission.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6\%=0.06</span><br>commission <span class="tex">=\$7385.00\times0.06=\$443.10</span><br>Maya earned <b>$443.10</b> in commission. (Close to the estimate ✓)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">7385 <kbd>×</kbd> 0.06 <kbd>ENTER</kbd></span> shows 443.1. Write it as money: <b>$443.10</b>.</div>
+    <button class="pill" type="button" data-keys="7385 × 0.06 =">Show me</button></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>A trailer and a week of shoes</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Kai sells trailers at an RV lot in Airdrie. He earns <b>2.5%</b> of the selling price. He sells a travel trailer for <b>$38&#8239;900.00</b>. What is his commission?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2.5\%=0.025</span><br>commission <span class="tex">=\$38\,900.00\times0.025=\$972.50</span><br>Kai earns <b>$972.50</b> on the trailer.</div></div></div>
+    <div class="part"><div class="pl">(b) Bianca works in a shoe store. She earns <b>8%</b> commission. Her sales this week were <b>$1249.99</b>, <b>$869.50</b> and <b>$2380.00</b>. What is her commission for the week?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">total sales <span class="tex">=\$1249.99+\$869.50+\$2380.00=\$4499.49</span><br>commission <span class="tex">=\$4499.49\times0.08=\$359.9592</span><br><span class="tex">\approx\$359.96</span><br>Bianca earns <b>$359.96</b> in commission.</div></div></div>
+  </div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Add first with <b>brackets</b>: <span class="keys"><kbd>(</kbd> 1249.99 <kbd>+</kbd> 869.50 <kbd>+</kbd> 2380 <kbd>)</kbd> <kbd>×</kbd> 0.08 <kbd>ENTER</kbd></span> shows 359.9592.</div>
+    <button class="pill" type="button" data-keys="( 1249.99 + 869.50 + 2380 ) × 0.08 =">Show me</button></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Salary plus commission ================= -->
+<section class="card" data-ink="s2" data-section="2. Salary Plus Commission">
+  <div class="sec-h"><span class="badge">2</span><h2>Salary Plus Commission</h2></div>
+  <p>Straight commission is risky: in a slow week you might earn very little. Many sales jobs pay a <b>base pay</b> that you always get, <b>plus</b> a commission. The base pay can be a <b>salary</b> (a set amount each pay period) or an <b>hourly wage</b> (hours × rate, as in Lesson 2).</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Salary plus commission</b>
+    <div class="eg"><b>gross pay = base pay + commission</b> &nbsp;=&nbsp; base pay + (sales × commission rate)</div>
+    <div class="eg">Base pay is a salary, or hours worked × hourly wage.</div></div>
+  <div class="explainer" data-explainer="basePlus"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Find the <b>commission first</b>, then add the base pay. Do <b>not</b> take the percent of the base pay.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Percent of What?">
+  <h3 class="sub">Percent of what? The sales, not the base pay</h3>
+  <p>The commission is a reward for <b>selling</b>, so it is a percent of the <b>sales</b>. Taking the percent of the base pay gives a tiny number that has nothing to do with what was sold.</p>
+  <div class="explainer" data-explainer="wrongBase"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Phones and mattresses</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Jordan sells cell phone plans. He earns <b>$450.00 a week</b> plus <b>4%</b> of his sales. This week he sold <b>$7325.00</b>. Find his gross pay.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">commission <span class="tex">=\$7325.00\times0.04=\$293.00</span><br>gross pay <span class="tex">=\$450.00+\$293.00=\$743.00</span><br>Jordan’s gross pay is <b>$743.00</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Priya works at a mattress store in Lethbridge. She earns <b>$15.50/h</b> plus <b>2.5%</b> commission. Last week she worked <b>32 h</b> and sold <b>$18&#8239;640.00</b>. Find her gross pay.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">wage: <span class="tex">32\times\$15.50=\$496.00</span><br>commission: <span class="tex">\$18\,640.00\times0.025=\$466.00</span><br>gross pay <span class="tex">=\$496.00+\$466.00=\$962.00</span><br>Priya’s gross pay is <b>$962.00</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–5">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 5 · Questions 1–5</h2>
+  <p class="pr-t">Try these before we go on to levels and quotas.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Rates as decimals</span>
+    <span><b>2</b>Find the commission</span>
+    <span><b>3</b>Estimate, then calculate</span>
+    <span><b>4</b>Salary plus commission</span>
+    <span><b>5</b>Hourly wage plus commission</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 5.</span><a class="pill" href="../../../#/lesson/u2l5">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Graduated commission and quotas ================= -->
+<section class="card" data-ink="s3" data-section="3. Graduated Commission">
+  <div class="sec-h"><span class="badge">3</span><h2>Graduated Commission and Quotas</h2></div>
+  <p>Some employers pay a <b>higher</b> rate when you sell more. In a <b>graduated commission</b> (also called a <b>tiered</b> commission), the sales are split into <b>levels</b>, and each level has its own rate. For example: 3% on the first $10&#8239;000 of sales, and 5% on the amount <b>over</b> $10&#8239;000.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Graduated commission</b>
+    <div class="eg"><b>Step 1:</b> Split the sales into the levels. &nbsp; <b>Step 2:</b> Find the commission for each level. &nbsp; <b>Step 3:</b> Add.</div></div>
+  <div class="explainer" data-explainer="tiers"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The higher rate is only for the part of the sales <b>above</b> the level, not for all the sales.</div></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Lucas sells furniture</h3></div>
+  <p class="q">Lucas sells furniture. He earns <b>3%</b> on the first <b>$10&#8239;000</b> of his monthly sales and <b>5%</b> on sales <b>over</b> $10&#8239;000. In March he sold <b>$16&#8239;400</b>. Complete the table to find his commission.</p>
+  <div class="part"><table class="u2l5-tbl u2l5-lv">
+      <tr><th>Level</th><th>Sales in this level</th><th>Rate</th><th>Commission</th></tr>
+      <tr><td>First $10&#8239;000</td><td><span data-reveal="&nbsp;">$10&#8239;000</span></td><td>3%</td><td><span data-reveal="&nbsp;"><span class="tex">\$10\,000\times0.03=\$300.00</span></span></td></tr>
+      <tr><td>Over $10&#8239;000</td><td><span data-reveal="&nbsp;"><span class="tex">\$16\,400-\$10\,000=\$6400</span></span></td><td>5%</td><td><span data-reveal="&nbsp;"><span class="tex">\$6400\times0.05=\$320.00</span></span></td></tr>
+      <tr class="tot"><td colspan="3">Total commission</td><td><span data-reveal="&nbsp;"><span class="tex">\$300.00+\$320.00=\$620.00</span></span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Lucas earned <b>$620.00</b> in commission in March. (Using 5% on all $16&#8239;400 would wrongly give $820.00.)</div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Do it in one line with brackets: <span class="keys">10000 <kbd>×</kbd> 0.03 <kbd>+</kbd> <kbd>(</kbd> 16400 <kbd>−</kbd> 10000 <kbd>)</kbd> <kbd>×</kbd> 0.05 <kbd>ENTER</kbd></span> shows 620.</div>
+    <button class="pill" type="button" data-keys="10000 × 0.03 + ( 16400 − 10000 ) × 0.05 =">Show me</button></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Quotas">
+  <h3 class="sub">Quotas</h3>
+  <p>A <b>quota</b> is a sales target. Some jobs pay commission only on the sales <b>over</b> the quota. Sell less than the quota and you get only your base pay.</p>
+  <div class="explainer" data-explainer="quota"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Why might a radio station pay commission only on sales <b>over</b> a quota?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The salary already pays for a normal month of sales. The commission is a <b>reward</b> for selling <b>more</b> than expected, so it pushes the worker to go past the target.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Hana sells radio ads</h3></div>
+  <p class="q">Hana sells advertising for a radio station in Red Deer. She earns <b>$2400.00 a month</b> plus <b>6%</b> of her sales <b>over</b> a monthly quota of <b>$20&#8239;000</b>.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find her gross pay in a month when she sells <b>$27&#8239;850</b>.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">sales over quota <span class="tex">=\$27\,850-\$20\,000=\$7850</span><br>commission <span class="tex">=\$7850\times0.06=\$471.00</span><br>gross pay <span class="tex">=\$2400.00+\$471.00=\$2871.00</span><br>Hana earns <b>$2871.00</b> that month.</div></div></div>
+    <div class="part"><div class="pl">(b) Find her gross pay in a month when she sells <b>$18&#8239;500</b>.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">$18&#8239;500 is <b>less</b> than the $20&#8239;000 quota, so there are no sales over the quota.<br>commission = $0<br>Hana earns only her salary, <b>$2400.00</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u2l5"></section>
+
+<!-- ================= 4. Finding the rate or the sales ================= -->
+<section class="card" data-ink="s4" data-section="4. Finding the Rate or the Sales">
+  <div class="sec-h"><span class="badge">4</span><h2>Finding the Rate or the Sales</h2></div>
+  <p>Sometimes you know the commission and want the <b>rate</b> or the <b>sales</b>. Use the same formula, worked backwards. (Lesson 8 does more of this.)</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Working backwards</b>
+    <div class="eg">commission rate <span class="tex">=\dfrac{\text{commission}}{\text{sales}}\times100</span> (as a percent) &emsp;&emsp; sales <span class="tex">=\dfrac{\text{commission}}{\text{rate as a decimal}}</span></div>
+    <div class="eg"><b>Check:</b> sales × rate should give the commission.</div></div>
+  <div class="explainer" data-explainer="backwards"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>The rate as a percent in one line: <span class="keys">378 <kbd>÷</kbd> 8400 <kbd>×</kbd> 100 <kbd>ENTER</kbd></span> shows 4.5.</div>
+    <button class="pill" type="button" data-keys="378 ÷ 8400 × 100 =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Work it backwards</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Ethan earned <b>$378.00</b> in commission on sales of <b>$8400.00</b>. What is his commission rate?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">rate <span class="tex">=\$378.00\div\$8400.00=0.045</span><br><span class="tex">0.045\times100=4.5\%</span><br>Check: <span class="tex">\$8400\times0.045=\$378</span> ✓<br>His commission rate is <b>4.5%</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A band’s booking agent keeps <b>15%</b> of what the band is paid for each show. Last summer the agent earned <b>$1620.00</b> from the band’s shows. How much was the band paid in all?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">15\%=0.15</span><br>sales <span class="tex">=\$1620.00\div0.15=\$10\,800.00</span><br>Check: <span class="tex">\$10\,800\times0.15=\$1620</span> ✓<br>The band was paid <b>$10&#8239;800.00</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= 5. Comparing pay plans ================= -->
+<section class="card" data-ink="s5" data-section="5. Comparing Pay Plans">
+  <div class="sec-h"><span class="badge">5</span><h2>Comparing Pay Plans</h2></div>
+  <p>Which pays more: a steady salary or a plan with commission? <b>It depends on how much you sell.</b> Make a table of the pay at a few sales amounts, then look for where the plans pay the <b>same</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Where two plans pay the same</b> (salary only vs. smaller salary + commission)
+    <div class="eg"><b>sales needed = (difference in base pay) ÷ (commission rate as a decimal)</b></div>
+    <div class="eg">Sell <b>more</b> than this and the commission plan pays more. Sell <b>less</b> and the salary pays more.</div></div>
+  <div class="explainer" data-explainer="crossover"></div>
+</section>
+
+<section class="card" data-extra data-ink="s5b" data-section="5. Why Difference ÷ Rate?">
+  <h3 class="sub">Why difference ÷ rate? Job B catches up</h3>
+  <p>Job A starts $1300 ahead. Every $1000 that Ava sells gives Job B 5% of $1000 = <b>$50</b> more. Count how many $50 steps it takes to close the $1300 gap.</p>
+  <div class="explainer" data-explainer="whyCross"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Ava’s two job offers</h3></div>
+  <p class="q">Ava has two job offers selling windows and doors for a home renovation company.</p>
+  <div class="u2l5-jobs">
+    <div><b>Job A:</b> $2800 a month salary.</div>
+    <div><b>Job B:</b> $1500 a month plus 5% of her sales.</div>
+  </div>
+  <div class="part"><div class="pl">(a) Complete the table.</div>
+    <table class="u2l5-tbl u2l5-ava">
+      <tr><th>Monthly sales</th><th>$10&#8239;000</th><th>$20&#8239;000</th><th>$30&#8239;000</th><th>$40&#8239;000</th></tr>
+      <tr><td>Job A pay</td><td><span data-reveal="&nbsp;">$2800</span></td><td><span data-reveal="&nbsp;">$2800</span></td><td><span data-reveal="&nbsp;">$2800</span></td><td><span data-reveal="&nbsp;">$2800</span></td></tr>
+      <tr><td>Job B pay</td><td><span data-reveal="&nbsp;">$2000</span></td><td><span data-reveal="&nbsp;">$2500</span></td><td><span data-reveal="&nbsp;">$3000</span></td><td><span data-reveal="&nbsp;">$3500</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Job B at $10&#8239;000: <span class="tex">\$1500+\$10\,000\times0.05=\$1500+\$500=\$2000</span>. The others the same way: +$1000, +$1500, +$2000.</div></div></div>
+  <div class="parts c2 u2l5-gap">
+    <div class="part"><div class="pl">(b) At what monthly sales do the two jobs pay the same?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Job A pays <span class="tex">\$2800-\$1500=\$1300</span> more in base pay.<br>Job B catches up when 5% of sales = $1300.<br>sales <span class="tex">=\$1300\div0.05=\$26\,000</span><br>Check: <span class="tex">\$1500+\$26\,000\times0.05=\$2800</span> ✓<br>They pay the same at <b>$26&#8239;000</b> a month.</div></div></div>
+    <div class="part"><div class="pl">(c) Ava thinks she can sell about <b>$24&#8239;000</b> a month. Which job should she take? Give a reason that is not only the pay.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">$24&#8239;000 is less than $26&#8239;000, so <b>Job A</b> pays more (B: <span class="tex">\$1500+\$1200=\$2700</span>).<br>Sample reason: Job A is the same every month, so she can plan rent and bills. (If she expects her sales to grow, Job B could pay more later.)</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5c" data-section="5. Advantages and Disadvantages">
+  <h3 class="sub">Advantages and disadvantages</h3>
+  <p>Complete the table with the class. Tap a cell to show a sample answer.</p>
+  <table class="u2l5-tbl u2l5-ad">
+    <tr><th>Pay plan</th><th>An advantage for the worker</th><th>A disadvantage for the worker</th><th>Jobs that use it</th></tr>
+    <tr><td>Salary or wage only</td><td><span data-reveal="&nbsp;">Same pay every period; easy to budget.</span></td><td><span data-reveal="&nbsp;">No extra pay for selling more.</span></td><td><span data-reveal="&nbsp;">office clerk, cashier, teacher</span></td></tr>
+    <tr><td>Straight commission</td><td><span data-reveal="&nbsp;">No limit: the more you sell, the more you earn.</span></td><td><span data-reveal="&nbsp;">A slow month means very low pay; stress.</span></td><td><span data-reveal="&nbsp;">real estate agent, car sales</span></td></tr>
+    <tr><td>Salary + commission</td><td><span data-reveal="&nbsp;">A safe base pay, plus a reward for selling.</span></td><td><span data-reveal="&nbsp;">Base pay is often lower than a full salary.</span></td><td><span data-reveal="&nbsp;">phone, furniture, appliance sales</span></td></tr>
+  </table>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Commission = sales × rate</b> (rate as a decimal: 6% = 0.06, 2.5% = 0.025). Estimate with 10% and 5% first. The commission is much smaller than the sales.</div>
+    <div><b>Gross pay = base pay + commission.</b> Base pay is a salary or hours × wage. Take the percent of the <b>sales</b>, never of the base pay.</div>
+    <div><b>Levels:</b> split the sales, find each level’s commission, add. The higher rate is only for the part <b>over</b> the level. <b>Quota:</b> commission only on sales over the target.</div>
+    <div><b>Backwards:</b> rate = commission ÷ sales × 100; sales = commission ÷ rate. <b>Compare plans:</b> they pay the same at (difference in base pay) ÷ rate.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u2l5">
+    <div><div class="kicker">Your turn</div><b>Assignment 5 · Questions 6–18</b><div class="muted">Levels, real estate, quotas, finding the rate or the sales, comparing jobs with a table and a graph, and finding a mistake. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l6/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 6 — Extra Earnings: Tips, Bonuses and Shift Premiums</b><div class="muted">Tips shared by hours, bonuses, and extra pay for the late shift.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u2l5.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u2l5', homeHref: '../../', title: '2.5 Commission' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

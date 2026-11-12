@@ -1,0 +1,67 @@
+/* Math 10-3 · Unit 3 · Lesson 4 — Converting Length Within SI and Within Imperial: styles used only on this page
+ * (prefix u3l4-). Feet brown (#9a6a24), inches blue (#1f5bd6), leftovers orange. */
+.u3l4 .ans .katex, .u3l4 .pl .katex, .u3l4 .def .katex { font-size: 1.08em; }
+.u3l4 .ex-cap .katex { font-size: 1.06em; }
+.u3l4-gap { margin-top: 14px; }
+.u3l4-pcol { display: flex; gap: 8px; flex: none; flex-wrap: wrap; }
+.u3l4 .tip-row .tip { margin-top: 14px; }
+.tip.u3l4-know { background: #f5ecdf; } .tip.u3l4-know .tip-ic { background: var(--brand2); color: #fff; font-family: Georgia, serif; }
+
+/* ---------- tables ---------- */
+.u3l4-tbl { border-collapse: collapse; font-size: 19px; margin: 8px 0 4px; background: #fff; width: 100%; }
+.u3l4-tbl th, .u3l4-tbl td { border: 2px solid #b9ad97; padding: 6px 12px; text-align: center; height: 44px; }
+.u3l4-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u3l4-tbl td:first-child { text-align: left; font-weight: 700; white-space: nowrap; }
+.u3l4-kt { border-collapse: collapse; width: 100%; margin-top: 6px; font-size: 18.5px; }
+.u3l4-kt td { padding: 5px 8px; border-top: 1px solid #e1d3bb; vertical-align: middle; }
+.u3l4-kt td:first-child { width: 52%; }
+
+/* ---------- imperial facts and chain ---------- */
+.u3l4-imp { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: center; margin-bottom: 8px; }
+.u3l4-imp .def { margin: 0; }
+.u3l4-facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 6px 0 4px; font-weight: 700; font-size: 20px; }
+.u3l4-chain { background: #fff; border: 2px solid var(--line); border-radius: 14px; padding: 12px 10px; }
+.u3l4-crow { display: flex; align-items: center; justify-content: center; gap: 4px; }
+.u3l4-u { display: inline-grid; place-items: center; width: 54px; height: 40px; border: 3px solid #3a4254; border-radius: 8px; font: 900 20px var(--round); background: #fbf7ef; }
+.u3l4-ar { display: grid; grid-template-rows: auto auto auto auto; justify-items: center; font-size: 15px; line-height: 1; min-width: 62px; }
+.u3l4-ar i { font-style: normal; font-weight: 800; color: #6e4a1c; }
+.u3l4-ar b { font-size: 20px; color: #3a4254; }
+.u3l4-cnote { display: flex; justify-content: space-between; font: 700 14px var(--round); color: var(--muted); margin-top: 8px; padding: 0 6px; }
+.u3l4-uf { display: flex; justify-content: center; gap: 60px; font-size: 22px; margin: 6px 0 10px; }
+.u3l4-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 4px 0 14px; }
+.u3l4-three > div { background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 8px; text-align: center; font: 800 24px var(--round); }
+.u3l4-three small { display: block; font: 700 15px var(--round); color: var(--muted); margin-bottom: 2px; }
+.u3l4-two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 6px; font-size: 19px; line-height: 1.7; }
+.u3l4-steps { margin: 4px 0 12px; padding-left: 0; list-style: none; display: grid; gap: 4px; font-size: 19px; }
+
+/* ---------- explainer pieces ---------- */
+.u3l4-c { box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; }
+.u3l4-fl { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; white-space: nowrap; font-size: 19px; }
+.u3l4-card { background: #fff; border: 3px solid #9a6a24; border-radius: 12px; font-size: 21px; padding: 4px 10px; }
+.u3l4-card.blue { border-color: #1f5bd6; } .u3l4-card.green { border-color: #12805a; } .u3l4-card.red { border-color: #c93a33; }
+.u3l4-res { background: #fff6e5; border: 3px solid #e2a63a; border-radius: 12px; font-size: 22px; font-weight: 700; padding: 4px 12px; }
+.u3l4-tag { font: 800 17px var(--round); color: #3a4254; }
+.u3l4-small { font-size: 16px; color: var(--ink2); }
+.u3l4-card .katex, .u3l4-res .katex, .u3l4-tag .katex, .u3l4-line .katex { font-size: 1.25em; }
+.u3l4-svg { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.u3l4-step { background: #fbf7ef; border: 3px solid #3a4254; border-radius: 6px 6px 0 0; font: 900 22px var(--round); flex-direction: column; line-height: 1.05; }
+.u3l4-step small { font: 700 12px var(--round); color: var(--muted); }
+.u3l4-step.u3l4-c { align-items: flex-start; padding-top: 6px; }
+.u3l4-step > div { display: flex; flex-direction: column; align-items: center; }
+.u3l4-step.on { background: #fff1c9; border-color: #c27a0e; }
+.u3l4-digits { display: flex; align-items: flex-end; font: 900 40px var(--round); }
+.u3l4-dg { width: 40px; text-align: center; display: inline-block; }
+.u3l4-dg.pad { color: #c27a0e; }
+.u3l4-pt { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: #c93a33; }
+.u3l4-line { font-size: 22px; }
+.u3l4-col { font: 800 36px var(--round); }
+.u3l4-col .katex { font-size: 1.05em; }
+.u3l4-hd { font: 800 17px var(--round); color: var(--muted); }
+.u3l4-chip { background: #fff1c9; border: 3px solid #c27a0e; border-radius: 10px; font: 900 24px var(--round); color: #8a5a0a; }
+.u3l4-bar { position: absolute; box-sizing: border-box; border: 2px solid #6e4a1c; display: flex; align-items: center; justify-content: center; font: 800 16px var(--round); color: #4a2c14; overflow: hidden; white-space: nowrap; }
+
+/* ---------- warm-up ---------- */
+.u3l4-wpoll .poll-opts { margin-left: 0; } .u3l4-wpoll > .pill, .u3l4-wpoll .poll-ans { margin-left: 0; }
+.u3l4-wpoll .opt { font-size: 21px; padding: 10px 14px; } .u3l4-wpoll .poll-ans { font-size: 19px; }
+.u3l4 .u3l4-guides { opacity: 0; transition: opacity .5s; }
+.u3l4 .warm:has(.poll.revealed) .u3l4-guides { opacity: 1; }

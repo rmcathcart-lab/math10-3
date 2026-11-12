@@ -1,0 +1,128 @@
+/* Math 10-3 · Unit 3 · Lesson 1 — Fractions Refresher: Mixed Numbers. Styles used only on this page (prefix u3l1-).
+ * First number's pieces amber, second number's blue, taken-away pieces red, answers red, estimates blue. */
+.u3l1 .ex-cap .katex { font-size: 1.1em; }
+.u3l1 .pl .katex { font-size: 1.1em; }
+.u3l1 .ans .katex { font-size: 1.1em; }
+.u3l1 .katex { white-space: nowrap; }
+.u3l1-gap { display: inline-block; width: 26px; }
+.u3l1-pcol { display: flex; flex-direction: column; gap: 6px; flex: none; }
+.u3l1 .tip:not(.watch):not(.calc-tip) { background: var(--brand-soft); }
+.u3l1 .tip:not(.watch):not(.calc-tip) .tip-ic { background: var(--brand2); color: #fff; }
+
+/* ---------------- notes ---------------- */
+.u3l1-defs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0 12px; }
+.u3l1-defs > div { background: var(--brand-soft); border-top: 5px solid var(--brand2); border-radius: 10px; padding: 10px 14px; font-size: 19px; line-height: 1.38; }
+.u3l1-defs > div > b:first-child { display: block; font: 800 20px var(--round); color: var(--brand); margin-bottom: 2px; }
+.u3l1-defs .eg { display: block; margin-top: 6px; font-size: 22px; text-align: center; }
+.u3l1-figrow { display: grid; grid-template-columns: auto 1fr; gap: 30px; align-items: center; margin: 4px 0 10px; }
+.u3l1-figrow p { margin: 0; font-size: 20px; }
+.u3l1-big { display: inline-block; font-size: 30px; margin-top: 8px; }
+.u3l1-fig svg { display: block; height: auto; }
+.u3l1-fig-wide svg { margin: 4px auto 0; }
+.u3l1-keys { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 10px 0 12px; }
+.u3l1-keys > div { background: var(--brand-soft); border-left: 5px solid var(--brand2); border-radius: 10px; padding: 10px 14px; font-size: 19px; line-height: 1.38; }
+.u3l1-keys .eg { display: block; margin-top: 6px; font-size: 21px; text-align: center; }
+.u3l1-steps ol { margin: 4px 0 0; padding-left: 1.6em; }
+.u3l1-steps li { margin: 2px 0; }
+.u3l1-c { text-align: center; font-size: 21px; margin: 4px 0 8px; }
+.u3l1-blanks { font-size: 20px; margin: 8px 0 2px; }
+.u3l1-blanks .katex { font-size: 1.25em; }
+.u3l1-tbl { border-collapse: collapse; margin: 8px auto 12px; font-size: 20px; }
+.u3l1-tbl th, .u3l1-tbl td { border: 2px solid #cfc6b4; padding: 6px 12px; text-align: center; height: 58px; }
+.u3l1-tbl th { background: var(--brand-soft); font-weight: 800; }
+.u3l1-tbl tr > th:first-child { text-align: left; }
+.u3l1-tbl td { min-width: 150px; }
+.u3l1-tbl td:nth-child(3), .u3l1-tbl td:nth-child(4) { min-width: 270px; }
+.u3l1-tbl .katex { font-size: 1.1em; }
+
+/* ---------------- explainers: shared ---------------- */
+.u3l1-abs { position: absolute; }
+.u3l1-mid { translate: -50% -50%; }
+.u3l1-ml { translate: 0 -50%; }
+.u3l1-red { color: var(--red); }
+.u3l1-tile { font-size: 28px; white-space: nowrap; background: var(--brand-soft); border-radius: 12px; padding: 4px 18px; }
+.u3l1-tile.fin { box-shadow: inset 0 0 0 2.5px var(--red); }
+.u3l1-tile .katex { font-size: 1.05em; }
+.u3l1-leg { font: 700 20px var(--round); color: var(--muted); white-space: nowrap; }
+.u3l1-leg .katex { font-size: 1.15em; color: var(--ink); }
+.u3l1-badge { font: 800 17px var(--round); color: #fff; background: var(--ok, #12805a); border-radius: 999px; padding: 2px 12px; white-space: nowrap; }
+.u3l1-badge.pt { background: #fff3d6; color: var(--ink); border: 2.5px solid var(--amber); padding: 0 10px; }
+.u3l1-badge.pt .katex, .u3l1-badge.rg .katex { font-size: 1.3em; }
+.u3l1-badge.rg { background: var(--red); }
+.u3l1-badge .katex { font-size: 1.05em; }
+.u3l1-cnt { font: 800 15px var(--round); fill: #3a2a12; text-anchor: middle; pointer-events: none; }
+.u3l1-run { font: 800 22px var(--round); fill: var(--brand); text-anchor: middle; }
+.u3l1-rowlab { font-size: 26px; white-space: nowrap; }
+.u3l1-rowlab > b:first-child { font: 800 21px var(--round); }
+.u3l1-rowlab .katex { font-size: 1.05em; }
+.u3l1-rowlab.b { color: #1f4f9a; }
+.u3l1-rowlab.r { color: var(--red); }
+.u3l1-note { font: 600 20px var(--round); color: var(--muted); white-space: nowrap; }
+.u3l1-note .katex { font-size: 1.15em; }
+
+/* big numbers for the changing-forms explainer */
+.u3l1-tk { font: 800 56px/1 var(--round); color: var(--ink); white-space: nowrap; translate: -50% -50%; }
+.u3l1-tk.s { font-size: 44px; }
+.u3l1-tk.r { color: var(--red); }
+.u3l1-tk.g { color: var(--muted); }
+.u3l1-tk.b { color: #1f5bd6; }
+.u3l1-fl { height: 5px; background: var(--ink); border-radius: 3px; translate: -50% -50%; }
+.u3l1-fl.r { background: var(--red); }
+.u3l1-wk { font: 800 34px var(--round); color: var(--ink); white-space: nowrap; }
+.u3l1-wk .m { color: var(--muted); font-size: 22px; font-weight: 700; }
+.u3l1-wk b { color: var(--red); }
+
+/* the tape measure */
+.u3l1-tn { font: 800 15px var(--round); fill: #3a2a12; text-anchor: middle; }
+.u3l1-plab { font-size: 22px; white-space: nowrap; background: rgba(255, 255, 255, .92); border-radius: 8px; padding: 0 8px; }
+.u3l1-plab .katex { font-size: 1.05em; }
+.u3l1-plab.est { color: #1f5bd6; font: 800 20px var(--round); }
+.u3l1-flag { font: 800 19px var(--round); white-space: nowrap; padding: 2px 10px; border-radius: 8px; background: #fff; border: 2.5px solid currentColor; }
+.u3l1-flag .katex { font-size: 1.05em; }
+.u3l1-flag.r { color: var(--red); }
+.u3l1-flag.b { color: #1f5bd6; }
+.u3l1-flag.k { color: var(--ink); }
+.u3l1-zoom { background: #fffdf5; border: 3px solid #c99a2e; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, .12); }
+.u3l1-zt { font: 800 15px var(--round); fill: #5a4a2a; text-anchor: middle; }
+
+/* multiply machine */
+.u3l1-mach { width: 250px; height: 92px; box-sizing: border-box; background: #2c3442; border-radius: 16px; box-shadow: 0 5px 0 #1b2128; color: #e9eef5; display: grid; align-content: center; justify-items: center; gap: 2px; text-align: center; }
+.u3l1-mach .nm { font: 800 13px var(--round); letter-spacing: .14em; color: #9fb2c8; }
+.u3l1-mach .op { font: 800 22px var(--round); color: #f2b84b; }
+.u3l1-mach.on { box-shadow: 0 5px 0 #1b2128, 0 0 0 4px #f2b84b; }
+.u3l1-out { font-size: 30px; white-space: nowrap; background: #fff; border: 2.5px solid #e6dfd0; border-radius: 12px; padding: 4px 14px; translate: -50% 0; }
+.u3l1-out .katex { font-size: 1.05em; }
+.u3l1-out.fin { border-color: var(--red); color: var(--red); }
+.u3l1-sub { font-size: 22px; color: var(--muted); white-space: nowrap; translate: -50% 0; }
+.u3l1-sub .katex { font-size: 1.05em; }
+
+/* calculator screen (estimate & check) */
+.u3l1-lcd { background: #c9d4b8; border: 4px solid #3a4254; border-radius: 10px; padding: 6px 14px; min-width: 250px; box-sizing: border-box; font: 700 30px 'Courier New', monospace; color: #1c2230; text-align: right; }
+.u3l1-lcd .top { font-size: 17px; text-align: left; color: #3a4254; min-height: 22px; white-space: nowrap; }
+.u3l1-lcdk { font: 700 16px var(--round); color: var(--muted); white-space: nowrap; }
+.u3l1-lcdk kbd { font-size: 14px; }
+
+/* lowest common denominator */
+.u3l1-sc { display: grid; place-items: center; width: 74px; height: 58px; border-radius: 12px; border: 3px solid #d9cfbd; background: #fff; font: 800 28px var(--round); color: var(--ink); translate: -50% -50%; }
+.u3l1-sc.yes { border-color: var(--ok, #12805a); background: #e7f5ee; }
+.u3l1-sc.no { color: var(--muted); }
+.u3l1-scm { font: 800 18px var(--round); white-space: nowrap; translate: -50% 0; }
+.u3l1-scm.yes { color: var(--ok, #12805a); }
+.u3l1-scm.no { color: var(--red); }
+.u3l1-eqv { font-size: 40px; white-space: nowrap; translate: -50% -50%; }
+.u3l1-eqv .katex { font-size: 1.05em; }
+.u3l1-mul { font: 800 24px var(--round); color: var(--brand2); white-space: nowrap; translate: -50% -50%; }
+.u3l1-mul.big { font-size: 38px; color: #1f5bd6; }
+.u3l1-mul.big.g { color: var(--ok, #12805a); }
+
+/* the area model */
+.u3l1-al { font: 800 20px var(--round); fill: var(--ink); text-anchor: middle; }
+.u3l1-ap { font-size: 22px; white-space: nowrap; translate: -50% -50%; pointer-events: none; }
+.u3l1-ap .katex { font-size: 1.2em; }
+.u3l1-ap.sm .katex { font-size: 1em; }
+
+/* the borrowing figure */
+.u3l1-brow { display: grid; grid-template-columns: 110px auto; align-items: center; gap: 10px; justify-content: center; margin: 4px 0; }
+.u3l1-blab { font-size: 26px; text-align: right; }
+.u3l1-blab .katex { font-size: 1.05em; }
+.u3l1 .vw-ctx .katex { font-size: 1.2em; }

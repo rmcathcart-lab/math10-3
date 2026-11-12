@@ -1,0 +1,71 @@
+/* Math 10-3 · Unit 3 · Lesson 12 — Unit 3 Review: styles used only on this page (prefix u3l12-). */
+.u3l12 .ans .katex, .u3l12 .pl .katex { font-size: 1.06em; }
+.u3l12-wpoll .poll-opts { margin-left: 0; } .u3l12-wpoll > .pill, .u3l12-wpoll .poll-ans { margin-left: 0; }
+.u3l12-wpoll .opt { font-size: 22px; padding: 10px 14px; } .u3l12-wpoll .poll-ans { font-size: 20px; }
+.u3l12-gap { margin-top: 14px; }
+
+/* the unit on one page */
+.u3l12-one { width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.35; margin: 6px 0 12px; }
+.u3l12-one th { background: var(--brand); color: #fff; font: 800 17px var(--round); padding: 7px 10px; text-align: left; }
+.u3l12-one td { border-bottom: 1.5px solid #e6dccb; padding: 6px 10px; vertical-align: top; }
+.u3l12-one tr:nth-child(even) td { background: #fbf7f0; }
+.u3l12-one td:first-child { width: 190px; }
+.u3l12-one td:first-child i { display: inline-block; margin-left: 6px; font: 700 13px var(--round); font-style: normal; color: var(--brand2); background: #f5ecdf; border-radius: 6px; padding: 0 5px; }
+.u3l12-one td:last-child { width: 270px; }
+.u3l12-rem { font-size: 19px; }
+
+/* example figures */
+.u3l12-fig { display: grid; place-items: center; }
+.u3l12-fsvg { display: block; overflow: visible; max-width: 100%; height: auto; }
+.u3l12-exfig { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; }
+.u3l12-ex5f, .u3l12-ex8f { display: flex; justify-content: space-around; align-items: flex-end; margin: 0 0 8px; }
+.u3l12-blanks { font-size: 20px; line-height: 1.9; margin: 6px 0; }
+.u3l12-blanks [data-reveal] { font-weight: 700; color: var(--brand); }
+.u3l12-ft { border-collapse: collapse; font-size: 19px; background: #fff; margin: 8px 0; width: 100%; }
+.u3l12-ft th, .u3l12-ft td { border: 2px solid #b9ad97; padding: 7px 12px; height: 44px; }
+.u3l12-ft th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u3l12-ft td:last-child { width: 260px; text-align: center; }
+
+/* explainer pieces */
+.u3l12-svg { overflow: visible; pointer-events: none; }
+.u3l12-lab { font: 700 19px var(--round); color: var(--ink); white-space: nowrap; pointer-events: none; }
+.u3l12-lab.u3l12-ctr { transform: translate(-50%, -50%); }
+.u3l12-lab.u3l12-dim { background: rgba(255,255,255,.9); border-radius: 6px; padding: 1px 6px; }
+.u3l12-lab.u3l12-red { color: #c93a33; } .u3l12-lab.u3l12-blue { color: #1f5bd6; } .u3l12-lab.u3l12-green { color: #12805a; }
+.u3l12-lab.u3l12-small { font: 600 17px var(--font); }
+.u3l12-lab.u3l12-area { font: 800 18px var(--round); color: var(--brand); background: rgba(255,255,255,.92); border: 1.5px solid #d9c9ae; border-radius: 8px; padding: 1px 7px; }
+.u3l12-lab.u3l12-tag { font: 600 19px/1.4 var(--font); background: #fff; border-radius: 8px; padding: 2px 8px; }
+.u3l12-lab.u3l12-why { font: 600 17px var(--font); color: #c93a33; white-space: normal; max-width: 430px; }
+.u3l12-ln { box-sizing: border-box; display: flex; align-items: center; font-size: 19px; line-height: 1.2; padding: 0 12px; background: #fff; border: 2px solid var(--line); border-radius: 10px; white-space: nowrap; overflow: hidden; }
+.u3l12-ln.u3l12-big { border-color: #c93a33; font-size: 20.5px; }
+.u3l12-ln.u3l12-big .katex { color: #c93a33; }
+.u3l12-rcpt { box-sizing: border-box; background: #fffef8; border: 2px solid #b9ad97; border-radius: 6px; padding: 8px 14px; font: 600 17px ui-monospace, Menlo, monospace; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+.u3l12-rr { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; }
+.u3l12-rr.u3l12-rt { border-top: 2px dashed #b9ad97; margin-top: 4px; padding-top: 8px; font-size: 19px; color: #c93a33; }
+.u3l12-node { box-sizing: border-box; display: flex; align-items: center; justify-content: center; background: #fff; border: 3px solid var(--brand2); border-radius: 14px; font-size: 24px; }
+.u3l12-node.u3l12-var { background: #fff6e5; }
+.u3l12-node.u3l12-known { border-color: #1f5bd6; background: #eaf0fc; }
+.u3l12-node.u3l12-ans { border-color: #c93a33; background: #fbecea; }
+.u3l12-node.u3l12-ans .katex { color: #c93a33; }
+.u3l12-op { transform: translateX(-50%); font: 800 21px var(--round); white-space: nowrap; }
+.u3l12-ftab { box-sizing: border-box; background: #fff; border: 2px solid #b9ad97; border-radius: 10px; overflow: hidden; }
+.u3l12-fr { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 0 12px; height: 50px; border-bottom: 1.5px solid #e6dccb; font-size: 18px; }
+.u3l12-fr.u3l12-fh { background: var(--brand-soft); font: 800 17px var(--round); }
+.u3l12-fr.u3l12-fs { border-bottom: 0; background: #fbecea; }
+.u3l12-fr.u3l12-fs .katex { color: #c93a33; }
+.u3l12-fk { white-space: nowrap; }
+.u3l12-mc { box-sizing: border-box; display: flex; align-items: center; gap: 14px; background: #fff; border: 2.5px solid var(--line); border-radius: 12px; padding: 0 16px; font-size: 22px; transition: background .3s, border-color .3s, opacity .3s; }
+.u3l12-mcl { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 18px; flex: none; }
+.u3l12-mc.u3l12-no { opacity: .55; border-color: #c93a33; text-decoration: line-through; text-decoration-color: #c93a33; }
+.u3l12-mc.u3l12-yes { border-color: #12805a; background: #e9f6ee; }
+.u3l12-mc.u3l12-yes .u3l12-mcl { background: #12805a; }
+
+/* up next: the unit test */
+.u3l12-next-h { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin-bottom: 10px; font-size: 22px; }
+.u3l12-next-h .muted { font-size: 17px; }
+.u3l12-next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.u3l12-next-grid a { display: block; text-decoration: none; color: var(--ink); background: #f6f1e8; border-radius: 10px; padding: 8px 12px; font-size: 17px; font-weight: 600; line-height: 1.3; }
+.u3l12-next-grid .rn { display: block; font-weight: 800; color: var(--brand2); font-size: 15px; }
+.u3l12-next-grid small { display: block; color: var(--muted); font-weight: 500; font-size: 15px; }
+.u3l12-next-grid .test { grid-column: 1 / -1; display: block; background: #fff8e6; border: 1.5px solid #e9cf8f; border-radius: 10px; padding: 8px 12px; font-size: 18px; font-weight: 700; line-height: 1.3; }
+.u3l12-next-grid .test .rn { color: var(--amber, #c27a0e); }

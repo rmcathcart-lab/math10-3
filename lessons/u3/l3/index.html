@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reading a Tape Measure · Math 10-3 3.3</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 3: the imperial system. Inches, feet, yards and miles and their referents, how an inch is split into halves, quarters, eighths and sixteenths, reading a ruler or tape measure to the nearest 1/16 in, and writing lengths in feet and inches. An interactive ruler and tape measure. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l3.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l3">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Bookworm’s Trip">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Bookworm’s Trip</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Three books stand on a shelf in order: <b>Volume 1, Volume 2, Volume 3</b>. Their spines face you, like in a library.</p><p class="vw-ctx">In each book, the pages are <b>2 in</b> thick. Each cover is <b><span class="tex">\tfrac18</span> in</b> thick.</p><p class="vw-ctx">A bookworm starts at <b>page 1 of Volume 1</b>. It chews in a straight line to the <b>last page of Volume 3</b>.</p><p class="vw-ask">How far does the bookworm chew?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="Three books on a shelf, labelled Volume 1, 2 and 3, with a small green bookworm wiggling on top">
+    <rect x="12" y="214" width="306" height="16" rx="4" fill="#b98a55" stroke="#7a5124" stroke-width="3"/>
+    <g stroke="#3a2a14" stroke-width="3" stroke-linejoin="round">
+      <rect x="46" y="74" width="76" height="140" rx="5" fill="#2f6fb5"/>
+      <rect x="127" y="74" width="76" height="140" rx="5" fill="#c0573a"/>
+      <rect x="208" y="74" width="76" height="140" rx="5" fill="#3f8a5a"/>
+    </g>
+    <g fill="#fff" opacity=".85"><rect x="54" y="92" width="60" height="5" rx="2"/><rect x="54" y="190" width="60" height="5" rx="2"/><rect x="135" y="92" width="60" height="5" rx="2"/><rect x="135" y="190" width="60" height="5" rx="2"/><rect x="216" y="92" width="60" height="5" rx="2"/><rect x="216" y="190" width="60" height="5" rx="2"/></g>
+    <g font-size="15" font-weight="800" fill="#fff" text-anchor="middle"><text x="84" y="132">VOL.</text><text x="165" y="132">VOL.</text><text x="246" y="132">VOL.</text></g>
+    <g font-size="34" font-weight="900" fill="#fff" text-anchor="middle"><text x="84" y="170">1</text><text x="165" y="170">2</text><text x="246" y="170">3</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;10 0;0 0" dur="2.4s" repeatCount="indefinite"/>
+      <g fill="#7cc04a" stroke="#3f6f1e" stroke-width="2">
+        <circle cx="64" cy="66" r="7"><animate attributeName="cy" values="66;62;66" dur="0.8s" repeatCount="indefinite"/></circle>
+        <circle cx="75" cy="64" r="7"><animate attributeName="cy" values="64;68;64" dur="0.8s" repeatCount="indefinite"/></circle>
+        <circle cx="86" cy="66" r="7"><animate attributeName="cy" values="66;62;66" dur="0.8s" repeatCount="indefinite"/></circle>
+        <circle cx="98" cy="63" r="8.5"><animate attributeName="cy" values="63;66;63" dur="0.8s" repeatCount="indefinite"/></circle>
+      </g>
+      <circle cx="101" cy="60" r="2" fill="#1c2230"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="246" y="52" font-size="44" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u3l3-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> <span class="tex">6\tfrac34</span> in</div>
+      <div class="opt"><b>B</b> 6 in</div>
+      <div class="opt right"><b>C</b> <span class="tex">2\tfrac12</span> in</div>
+      <div class="opt"><b>D</b> 2 in</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>C: only <span class="tex">2\tfrac12</span> in!</b> Stand a book on a shelf with its spine facing you: its <b>front cover is on the right</b>. So page 1 of Volume 1 sits right next to Volume 2, and the last page of Volume 3 is on its <b>left</b>, also next to Volume 2. The worm only chews through 4 covers and the pages of Volume 2: <span class="tex">2+4\times\tfrac18=2+\tfrac48=2\tfrac12</span> in. <span class="muted">Grab two books from the shelf and check!</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 3</div>
+  <h1>The Imperial System and Reading a Tape Measure</h1>
+  <p class="lede">Lumber, people’s heights, TV screens and wrenches are measured in <b>inches and feet</b>. Today we meet the imperial units, learn what every little line on a ruler means, and read a <b>tape measure</b> to the nearest sixteenth of an inch, like on a job site.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>name the imperial units (<b>inch, foot, yard, mile</b>), how they relate, and a referent for each</li>
+      <li>name every line on a ruler: <b>halves, quarters, eighths and sixteenths</b>, in simplest form</li>
+      <li><b>read a ruler</b> or tape measure, and measure an object, even when it does not start at 0</li>
+      <li>measure to the <b>nearest <span class="tex">\tfrac18</span> in</b> or <b>nearest <span class="tex">\tfrac1{16}</span> in</b></li>
+      <li>read a tape measure in <b>feet and inches</b>, and put imperial lengths in order</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M2</b> Demonstrate an understanding of the imperial system by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; comparing the American and British imperial units for capacity; applying strategies to convert imperial units to SI units.</div>
+  <div class="outcome"><b>M3</b> Solve and verify problems that involve SI and imperial linear measurements, including decimal and fractional measurements.</div>
+</section>
+
+<!-- ================= 1. Imperial units ================= -->
+<section class="card" data-ink="s1" data-section="1. Imperial Units of Length">
+  <div class="sec-h"><span class="badge">1</span><h2>Imperial Units of Length</h2></div>
+  <p>Canada’s official system of measurement is the <b>SI</b> (metric) system. The <b>imperial system</b> is an older system. The United States still uses it, and so do many Canadian trades. The imperial units of length are the <b>inch</b>, the <b>foot</b>, the <b>yard</b> and the <b>mile</b>.</p>
+  <div class="def u3l3-def-units"><b>Key idea</b> &nbsp; Imperial units of length
+    <table class="u3l3-tbl u3l3-units">
+      <tr><th>Unit</th><th>Symbol</th><th>How it relates</th><th>Referent (about this long)</th></tr>
+      <tr><td>inch</td><td>in &nbsp;or&nbsp; ″</td><td>the smallest unit</td><td>the width of your thumb at the top knuckle</td></tr>
+      <tr><td>foot</td><td>ft &nbsp;or&nbsp; ′</td><td>1 ft = 12 in</td><td>a school ruler; a sheet of paper is 11 in long</td></tr>
+      <tr><td>yard</td><td>yd</td><td>1 yd = 3 ft = 36 in</td><td>one long step; a little shorter than a metre stick</td></tr>
+      <tr><td>mile</td><td>mi</td><td>1 mi = 1760 yd = 5280 ft</td><td>about a 20-minute walk</td></tr>
+    </table></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Two marks ″ mean <b>inches</b> and one mark ′ means <b>feet</b>: 6′ is 6 feet (a tall person), 6″ is 6 inches (half a ruler). Together, 5′ 9″ means 5 feet 9 inches.</div></div>
+  <p class="u3l3-gap"><b>Where Canadians still use imperial units:</b> building (a “2 by 4”, sheets of plywood and drywall are 4 ft by 8 ft, wall studs 16 in apart), people’s heights, TV and phone screens (measured corner to corner in inches), tire and wheel sizes, plumbing pipe, sports (a CFL field is 110 yd long, golf in yards), and road signs in miles when you drive in the United States.</p>
+  <div class="explainer" data-explainer="units"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Choose the unit</h3></div>
+  <div class="part"><div class="pl">(a) Choose the best imperial unit (inch, foot, yard or mile) to measure each length.</div>
+    <table class="u3l3-tbl">
+      <tr><td>the length of a phone</td><td class="u3l3-cc"><span data-reveal="&nbsp;">inch</span></td><td>the length of a football field</td><td class="u3l3-cc"><span data-reveal="&nbsp;">yard</span></td></tr>
+      <tr><td>the height of a basement ceiling</td><td class="u3l3-cc"><span data-reveal="&nbsp;">foot</span></td><td>the distance from Seattle to Portland</td><td class="u3l3-cc"><span data-reveal="&nbsp;">mile</span></td></tr>
+      <tr><td>the width of a wrench</td><td class="u3l3-cc"><span data-reveal="&nbsp;">inch</span></td><td>the length of a garden hose</td><td class="u3l3-cc"><span data-reveal="&nbsp;">foot</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">phone: <b>inch</b> · football field: <b>yard</b> · basement ceiling: <b>foot</b> · Seattle to Portland: <b>mile</b> · wrench: <b>inch</b> · garden hose: <b>foot</b></div></div></div>
+  <div class="part u3l3-gap"><div class="pl">(b) Circle the most reasonable length.</div>
+    <div class="u3l3-pick"><span>(i) the height of a classroom door</span><span class="u3l3-opt">7 in</span><span class="u3l3-opt u3l3-yes">7 ft</span><span class="u3l3-opt">7 yd</span><span class="u3l3-opt">7 mi</span><span class="u3l3-why">7 ft: a bit taller than an adult</span></div>
+    <div class="u3l3-pick"><span>(ii) the length of a new pencil</span><span class="u3l3-opt u3l3-yes">7 in</span><span class="u3l3-opt">7 ft</span><span class="u3l3-opt">7 yd</span><span class="u3l3-opt">7 mi</span><span class="u3l3-why">7 in: about 7 thumb widths</span></div>
+    <div class="u3l3-pick"><span>(iii) the length of a hockey rink</span><span class="u3l3-opt">200 in</span><span class="u3l3-opt u3l3-yes">200 ft</span><span class="u3l3-opt">200 yd</span><span class="u3l3-opt">200 mi</span><span class="u3l3-why">200 ft: 200 in is only about 17 rulers</span></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(i) <b>7 ft</b> · (ii) <b>7 in</b> · (iii) <b>200 ft</b></div></div></div>
+  <div class="part u3l3-gap"><div class="pl">(c) Use the relationships in the box. Which is longer?</div>
+    <div class="u3l3-cmp"><div>(i) 1 yd or 2 ft? <span class="u3l3-blank" data-reveal="&nbsp;">1 yd</span></div><div>(ii) 1 ft or 10 in? <span class="u3l3-blank" data-reveal="&nbsp;">1 ft</span></div><div>(iii) 1 mi or 2000 yd? <span class="u3l3-blank" data-reveal="&nbsp;">2000 yd</span></div></div>
+    <div class="work" style="--h:60px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(i) 1 yd = 3 ft, which is more than 2 ft: <b>1 yd</b>. (ii) 1 ft = 12 in, which is more than 10 in: <b>1 ft</b>. (iii) 1 mi = 1760 yd, which is less than 2000 yd: <b>2000 yd</b>.</div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- sources: https://en.wikipedia.org/wiki/Inch (a 1324 statute of Edward II: "three grains of barley, dry and round,
+     placed end to end, lengthwise"; inch from Latin uncia, one-twelfth; 1959 international yard: 1 in = 25.4 mm);
+     https://en.wikipedia.org/wiki/Barleycorn_(unit) (three barleycorns to the inch, older than the statutes; still the
+     basis of UK and North American shoe sizes); https://en.wikipedia.org/wiki/Shoe_size (each size up is one more barleycorn) -->
+<section class="card history" data-ink="hist" data-section="Math History: Three Grains of Barley">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1324</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">An inch was three grains of barley</h3>
+      <p>Long ago there were no factory-made rulers. In <b>1324</b>, an English law under King Edward II said an inch is <b>three grains of barley</b>, dry and round, laid end to end.</p>
+      <p>One grain was called a <b>barleycorn</b>, so a barleycorn is <span class="tex">\tfrac13</span> of an inch. Your <b>shoe size</b> still uses it: each shoe size up is one barleycorn longer.</p>
+      <p>Today the inch is exact: since 1959, <b>1 inch = 2.54 cm</b>.</p>
+      <div class="part hist-q"><div class="pl">How many barleycorns long is a 1-foot ruler?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 ft = 12 in, and each inch is 3 barleycorns: <span class="tex">12\times3=36</span> barleycorns.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u3l3-hist" viewBox="0 0 600 300" role="img" aria-label="Three barley grains line up end to end to make one inch on a ruler; then a shoe grows by one grain for each shoe size"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 2. How an inch is split up ================= -->
+<section class="card" data-ink="s2" data-section="2. How an Inch Is Split Up">
+  <div class="sec-h"><span class="badge">2</span><h2>How an Inch Is Split Up</h2></div>
+  <p>An imperial ruler splits each inch into 2 halves, then 4 quarters, then 8 eighths, then 16 <b>sixteenths</b>. The lines have different lengths so you can tell them apart.</p>
+  <div class="u3l3-tiers">
+    <div class="def"><b>Key idea</b> &nbsp; The lines on a ruler
+      <div class="u3l3-tierlist">
+        <span class="k"><span class="u3l3-swatch" style="background:#1c2230"></span>longest line</span><span>a whole inch (1, 2, 3, …)</span>
+        <span class="k"><span class="u3l3-swatch" style="background:#c93a33"></span>next longest</span><span>a half: <span class="tex">\tfrac12</span></span>
+        <span class="k"><span class="u3l3-swatch" style="background:#1f5bd6"></span>next</span><span>quarters: <span class="tex">\tfrac14,\ \tfrac34</span></span>
+        <span class="k"><span class="u3l3-swatch" style="background:#12805a"></span>next</span><span>eighths: <span class="tex">\tfrac18,\ \tfrac38,\ \tfrac58,\ \tfrac78</span></span>
+        <span class="k"><span class="u3l3-swatch" style="background:#7b4fc4"></span>shortest line</span><span>sixteenths: <span class="tex">\tfrac1{16},\ \tfrac3{16},\ \tfrac5{16},\ \dots,\ \tfrac{15}{16}</span></span>
+      </div></div>
+    <div class="def"><b>Naming a line</b><br>To name any line, <b>count the small spaces</b> from the last whole inch. Each space is <span class="tex">\tfrac1{16}</span> in. Then write the fraction in <b>simplest form</b>:
+      <div class="eg" style="font-size:20px;margin-top:8px"><span class="tex">\tfrac8{16}=\tfrac12</span> &nbsp;&nbsp;&nbsp; <span class="tex">\tfrac{12}{16}=\tfrac34</span> &nbsp;&nbsp;&nbsp; <span class="tex">\tfrac6{16}=\tfrac38</span></div></div>
+  </div>
+  <div class="explainer" data-explainer="split"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>The TI-30XIIS simplifies for you: <span class="keys">6 <kbd>A b/c</kbd> 16 <kbd>ENTER</kbd></span> shows <b>3⌟8</b>, which means <span class="tex">\tfrac38</span>.</div>
+    <div class="u3l3-pcol"><button class="pill" type="button" data-keys="6 ab/c 16 =">6/16</button><button class="pill" type="button" data-keys="12 ab/c 16 =">12/16</button></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Why the Fractions Simplify">
+  <h3 class="sub">Why does <span class="tex">\tfrac{12}{16}=\tfrac34</span>? The lines line up</h3>
+  <p>Put a ruler marked in sixteenths above rulers marked in eighths, quarters and halves. A sixteenths line that sits right on a bigger line has a simpler name.</p>
+  <div class="explainer" data-explainer="simplify"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Without counting, how can you tell that a line is <b>not</b> an odd sixteenth?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">It is <b>longer</b> than the shortest lines. Only the odd sixteenths (<span class="tex">\tfrac1{16},\tfrac3{16},\dots</span>) get the shortest lines.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Name the lines</h3></div>
+  <div class="part"><div class="pl">(a) This is <b>one inch</b>, made bigger. Write the fraction for each line, in simplest form, in the boxes. The half is done for you.</div>
+    <div class="u3l3-fig" data-fig="ex2"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Left to right: <span class="tex">\tfrac1{16},\ \tfrac18,\ \tfrac3{16},\ \tfrac14,\ \tfrac5{16},\ \tfrac38,\ \tfrac7{16},\ \tfrac12,\ \tfrac9{16},\ \tfrac58,\ \tfrac{11}{16},\ \tfrac34,\ \tfrac{13}{16},\ \tfrac78,\ \tfrac{15}{16}</span></div></div></div>
+  <div class="parts c2 u3l3-gap">
+    <div class="part"><div class="pl">(b) Write in simplest form.</div>
+      <div class="u3l3-lines"><div><span class="tex">\tfrac2{16}=</span> <span class="u3l3-blank" data-reveal="&nbsp;"><span class="tex">\tfrac18</span></span></div><div><span class="tex">\tfrac4{16}=</span> <span class="u3l3-blank" data-reveal="&nbsp;"><span class="tex">\tfrac14</span></span></div><div><span class="tex">\tfrac{10}{16}=</span> <span class="u3l3-blank" data-reveal="&nbsp;"><span class="tex">\tfrac58</span></span></div><div><span class="tex">\tfrac{14}{16}=</span> <span class="u3l3-blank" data-reveal="&nbsp;"><span class="tex">\tfrac78</span></span></div></div>
+      <div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Divide the top and bottom by 2 (by 4 for <span class="tex">\tfrac4{16}</span>): <span class="tex">\tfrac18,\ \tfrac14,\ \tfrac58,\ \tfrac78</span>.</div></div></div>
+    <div class="part"><div class="pl">(c) Which lines can <b>not</b> be simplified? How can you tell them on a ruler?</div>
+      <div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The <b>odd</b> sixteenths (<span class="tex">\tfrac1{16},\tfrac3{16},\dots,\tfrac{15}{16}</span>): an odd top and 16 have no common factor except 1. They are the <b>shortest</b> lines.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Reading a ruler ================= -->
+<section class="card" data-ink="s3" data-section="3. Reading a Ruler">
+  <div class="sec-h"><span class="badge">3</span><h2>Reading a Ruler</h2></div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Reading a ruler or tape measure</b>
+    <ul class="u3l3-steps">
+      <li><b>Step 1.</b> The <b>whole inches</b> are the last number you passed.</li>
+      <li><b>Step 2.</b> The <b>fraction</b> is how far past that number: use the length of the line, or count the <span class="tex">\tfrac1{16}</span> spaces.</li>
+      <li><b>Step 3.</b> Write a mixed number in simplest form, with the unit: <span class="tex">4\tfrac7{16}</span> in (say “four and seven-sixteenths inches”).</li>
+    </ul></div>
+  <div class="explainer" data-explainer="readRuler"></div>
+</section>
+
+<section class="card" data-ink="s3t" data-section="3. Try It: The Ruler">
+  <h3 class="sub">Try it: read the ruler</h3>
+  <p>Drag along the ruler to move the red arrow. It stops on a line. Tap <b>Hide the reading</b>, move the arrow, and let the class read it first.</p>
+  <div class="u3l3-tool" id="u3l3-ruler"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Read the ruler</h3></div>
+  <div class="part"><div class="pl">Read the length at each arrow.</div>
+    <div class="u3l3-fig" data-fig="ex3"></div>
+    <div class="u3l3-lines"><div>A <span class="u3l3-blank w2" data-reveal="&nbsp;"><span class="tex">\tfrac34</span> in</span></div><div>B <span class="u3l3-blank w2" data-reveal="&nbsp;"><span class="tex">1\tfrac58</span> in</span></div><div>C <span class="u3l3-blank w2" data-reveal="&nbsp;"><span class="tex">2\tfrac5{16}</span> in</span></div><div>D <span class="u3l3-blank w2" data-reveal="&nbsp;"><span class="tex">3\tfrac12</span> in</span></div><div>E <span class="u3l3-blank w2" data-reveal="&nbsp;"><span class="tex">4\tfrac7{16}</span> in</span></div><div>F <span class="u3l3-blank w2" data-reveal="&nbsp;"><span class="tex">5\tfrac18</span> in</span></div></div>
+    <div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">For example, E: the last number passed is 4. The arrow is 7 small spaces past 4, so <span class="tex">4\tfrac7{16}</span> in. C: 5 spaces past 2, so <span class="tex">2\tfrac5{16}</span> in. B: 10 spaces past 1, <span class="tex">\tfrac{10}{16}=\tfrac58</span>, so <span class="tex">1\tfrac58</span> in.</div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Measuring an Object">
+  <h3 class="sub">Measuring an object</h3>
+  <div class="tip watch" style="margin-top:0"><div class="tip-ic">!</div><div><b>Watch out.</b> Line up the end of the object with the <b>0 line</b>, not with the end of the ruler. Many rulers have a little blank space before 0. If the object does not start at 0, you must take away the starting mark.</div></div>
+  <div class="explainer" data-explainer="objects" style="margin-top:14px"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>How long is each object?</h3></div>
+  <div class="u3l3-fig" data-fig="ex4a"></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) the key</div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">6 spaces past 2: <span class="tex">\tfrac6{16}=\tfrac38</span>. The key is <b><span class="tex">2\tfrac38</span> in</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) the crayon</div><div class="work" style="--h:60px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">4 spaces past 5: <span class="tex">\tfrac4{16}=\tfrac14</span>. The crayon is <b><span class="tex">5\tfrac14</span> in</b>.</div></div></div>
+  </div>
+  <div class="u3l3-fig u3l3-gap" data-fig="ex4c"></div>
+  <div class="part"><div class="pl">(c) The screw starts at the 1 in line. How long is it?</div><div class="work" style="--h:120px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">It ends at <span class="tex">4\tfrac58</span> in. It starts at 1 in. From 1 to 4 is 3 whole inches, plus <span class="tex">\tfrac58</span> more. Or subtract: <span class="tex">4\tfrac58-1=3\tfrac58</span>. The screw is <b><span class="tex">3\tfrac58</span> in</b> long.</div></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Mixed numbers on the calculator: <span class="keys">4 <kbd>A b/c</kbd> 5 <kbd>A b/c</kbd> 8 <kbd>−</kbd> 1 <kbd>ENTER</kbd></span> shows <b>29⌟8</b>, an improper fraction. Press <span class="keys"><kbd>2nd</kbd><kbd>d/e</kbd></span> to see the mixed number, <span class="tex">3\tfrac58</span>.</div>
+    <button class="pill" type="button" data-keys="4 ab/c 5 ab/c 8 − 1 = d/e">Show me</button></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l3"></section>
+
+<!-- ================= 4. Nearest 1/8 or 1/16 ================= -->
+<section class="card" data-ink="s4" data-section="4. Nearest 1/8 or 1/16 Inch">
+  <div class="sec-h"><span class="badge">4</span><h2>Measuring to the Nearest <span class="tex">\tfrac18</span> or <span class="tex">\tfrac1{16}</span> Inch</h2></div>
+  <p>An edge often falls <b>between</b> two lines. Then you use the <b>closest</b> line.</p>
+  <div class="def"><b>Key idea</b>
+    <ul class="u3l3-steps">
+      <li><b>To the nearest <span class="tex">\tfrac1{16}</span> in:</b> use all the lines, and pick the closest one.</li>
+      <li><b>To the nearest <span class="tex">\tfrac18</span> in:</b> skip the shortest (<span class="tex">\tfrac1{16}</span>) lines. Pick the closest of the longer lines.</li>
+    </ul></div>
+  <p>A rough job (framing a wall) is often fine to the nearest <span class="tex">\tfrac18</span> in. Finish work (trim, cabinets) needs the nearest <span class="tex">\tfrac1{16}</span> in. Using smaller marks gives a more <b>precise</b> measurement.</p>
+  <div class="explainer" data-explainer="nearest"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Nearest sixteenth, nearest eighth</h3></div>
+  <div class="part"><div class="pl">This is the part of a ruler from 2 in to 3 in, made bigger. Measure each arrow.</div>
+    <div class="u3l3-ex5">
+      <div class="u3l3-fig" data-fig="ex5"></div>
+      <table class="u3l3-tbl u3l3-t5">
+        <tr><th></th><th>nearest <span class="tex">\tfrac1{16}</span> in</th><th>nearest <span class="tex">\tfrac18</span> in</th></tr>
+        <tr><td><b>P</b></td><td><span data-reveal="&nbsp;"><span class="tex">2\tfrac5{16}</span> in</span></td><td><span data-reveal="&nbsp;"><span class="tex">2\tfrac14</span> in</span></td></tr>
+        <tr><td><b>Q</b></td><td><span data-reveal="&nbsp;"><span class="tex">2\tfrac{13}{16}</span> in</span></td><td><span data-reveal="&nbsp;"><span class="tex">2\tfrac78</span> in</span></td></tr>
+      </table>
+    </div>
+    <div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">P is just before the 5th sixteenth line: <span class="tex">2\tfrac5{16}</span> in. Skipping the shortest lines, P is between <span class="tex">2\tfrac28\,(=2\tfrac14)</span> and <span class="tex">2\tfrac38</span>, closer to <b><span class="tex">2\tfrac14</span> in</b>. Q is just past the 13th sixteenth line: <span class="tex">2\tfrac{13}{16}</span> in. Between <span class="tex">2\tfrac68</span> and <span class="tex">2\tfrac78</span>, it is closer to <b><span class="tex">2\tfrac78</span> in</b>.</div></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–9">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 3 · Questions 1–9</h2>
+  <p class="pr-t">Try these before we read a real tape measure.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Unit facts</span>
+    <span><b>2</b>′ and ″</span>
+    <span><b>3</b>Units and referents</span>
+    <span><b>4</b>Simplest form</span>
+    <span><b>5</b>One inch, bigger</span>
+    <span><b>6</b>Read the ruler</span>
+    <span><b>7</b>Draw the arrows</span>
+    <span><b>8</b>Measure objects</span>
+    <span><b>9</b>Nearest <span class="tex">\tfrac1{16}</span> and <span class="tex">\tfrac18</span></span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 9.</span><a class="pill" href="../../../#/lesson/u3l3">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. Tape measures, feet and inches ================= -->
+<section class="card" data-ink="s5" data-section="5. Tape Measures and Feet and Inches">
+  <div class="sec-h"><span class="badge">5</span><h2>Tape Measures and Feet and Inches</h2></div>
+  <p>A <b>tape measure</b> is a long ruler that rolls up. Its <b>hook</b> at the end is a little loose on purpose. It slides by its own thickness, so the reading is right when you hook it over an edge and when you push it against a wall.</p>
+  <p>The numbers on a tape keep counting inches past 12: 13, 14, 15, … At each foot many tapes add a small tag: <b>1F</b> at 12 in, <b>2F</b> at 24 in, <b>3F</b> at 36 in. Most tapes also show every 16 in in <b style="color:#c93a33">red</b> (16, 32, 48, …) because wall studs are built 16 in apart.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Feet and inches:</b> &nbsp; 2 feet <span class="tex">1\tfrac58</span> inches = <span class="tex">2'\,1\tfrac58''</span> = 2 ft <span class="tex">1\tfrac58</span> in. The inches part is always <b>less than 12</b>.
+    <div class="eg"><b>On a tape:</b> the <b>feet</b> are the last foot tag you passed (1F, 2F, …). The <b>inches</b> are how far past that tag. For example, <span class="tex">25\tfrac58</span> in is <span class="tex">1\tfrac58</span> in past 2F (24 in), so it is <span class="tex">2'\,1\tfrac58''</span>. (Lesson 4 shows how to change any number of inches.)</div></div>
+  <div class="explainer" data-explainer="tapeFtIn"></div>
+</section>
+
+<section class="card" data-extra data-ink="s5h" data-section="5. Why Is the Hook Loose?">
+  <h3 class="sub">Why is the hook loose?</h3>
+  <p>Pull the tape and the hook slides out. Push it and the hook slides in. It moves by exactly its own thickness.</p>
+  <div class="explainer" data-explainer="hook"></div>
+</section>
+
+<section class="card" data-ink="s5t" data-section="5. Try It: The Tape Measure">
+  <h3 class="sub">Try it: the tape measure</h3>
+  <p>Drag along the tape to move the arrow. Tap the strip on top to jump along the tape. The reading shows inches <b>and</b> feet and inches. Turn off <b>Stop on a line</b> to practise the nearest <span class="tex">\tfrac18</span> and <span class="tex">\tfrac1{16}</span> in.</p>
+  <div class="u3l3-tool" id="u3l3-tape"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Read the tape measure</h3></div>
+  <div class="part"><div class="pl">Read each arrow on this part of a tape measure. Write it in inches, then in feet and inches.</div>
+    <div class="u3l3-fig" data-fig="ex6"></div>
+    <table class="u3l3-tbl u3l3-t5">
+      <tr><th></th><th>inches</th><th>feet and inches</th><th>how</th></tr>
+      <tr><td><b>A</b></td><td><span data-reveal="&nbsp;"><span class="tex">22\tfrac34</span> in</span></td><td><span data-reveal="&nbsp;"><span class="tex">1'\,10\tfrac34''</span></span></td><td><span data-reveal="&nbsp;">before 2F, so 1 ft; <span class="tex">22\tfrac34-12=10\tfrac34</span> in more</span></td></tr>
+      <tr><td><b>B</b></td><td><span data-reveal="&nbsp;"><span class="tex">25\tfrac58</span> in</span></td><td><span data-reveal="&nbsp;"><span class="tex">2'\,1\tfrac58''</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">1\tfrac58</span> in past 2F</span></td></tr>
+      <tr><td><b>C</b></td><td><span data-reveal="&nbsp;"><span class="tex">27\tfrac3{16}</span> in</span></td><td><span data-reveal="&nbsp;"><span class="tex">2'\,3\tfrac3{16}''</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">3\tfrac3{16}</span> in past 2F</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A <span class="tex">22\tfrac34</span> in <span class="tex">=1'\,10\tfrac34''</span> · B <span class="tex">25\tfrac58</span> in <span class="tex">=2'\,1\tfrac58''</span> · C <span class="tex">27\tfrac3{16}</span> in <span class="tex">=2'\,3\tfrac3{16}''</span></div></div></div>
+  <div class="tip u3l3-know"><div class="tip-ic">i</div><div><b>Good to know.</b> A “2 by 4” is not 2 in by 4 in. The board shrinks as it dries and is planed smooth, so it is really <span class="tex">1\tfrac12''</span> by <span class="tex">3\tfrac12''</span>.</div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s5c" data-section="5. Why a 2 by 4 Is Smaller">
+  <h3 class="sub">Why is a 2 by 4 smaller than 2 in by 4 in?</h3>
+  <div class="explainer" data-explainer="twoByFour"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Feet and inches, and putting sizes in order</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Write in symbols: 6 feet 1 inch, and 5 feet <span class="tex">10\tfrac12</span> inches. Write in words: <span class="tex">8'</span></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6'\,1''</span> and <span class="tex">5'\,10\tfrac12''</span>. <span class="tex">8'</span> is <b>8 feet</b> (a common length of lumber).</div></div></div>
+    <div class="part"><div class="pl">(b) Order these volleyball players from tallest to shortest.<br>Kenji <span class="tex">5'\,11''</span> &nbsp; Ruth <span class="tex">6'\,2\tfrac12''</span> &nbsp; Marc <span class="tex">6'\,0''</span> &nbsp; Ines <span class="tex">5'\,9\tfrac34''</span></div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Compare the feet first, then the inches. 6 ft: Ruth (<span class="tex">2\tfrac12</span> in) is taller than Marc (0 in). 5 ft: Kenji (11 in) is taller than Ines (<span class="tex">9\tfrac34</span> in). <b>Ruth, Marc, Kenji, Ines.</b></div></div></div>
+  </div>
+  <div class="part u3l3-gap"><div class="pl">(c) A mechanic’s wrenches are marked <span class="tex">\tfrac12'',\ \tfrac7{16}'',\ \tfrac58'',\ \tfrac9{16}''</span> and <span class="tex">\tfrac34''</span>. Put them in order from smallest to largest. The <span class="tex">\tfrac9{16}''</span> wrench is too small for a bolt. Which wrench should she try next?</div><div class="work" style="--h:130px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Change all to sixteenths: <span class="tex">\tfrac12=\tfrac8{16},\ \tfrac7{16},\ \tfrac58=\tfrac{10}{16},\ \tfrac9{16},\ \tfrac34=\tfrac{12}{16}</span>. Order: <span class="tex">\tfrac7{16}'',\ \tfrac12'',\ \tfrac9{16}'',\ \tfrac58'',\ \tfrac34''</span>. The next size up from <span class="tex">\tfrac9{16}''</span> is the <b><span class="tex">\tfrac58''</span> wrench</b>.</div></div></div>
+  <div class="explainer u3l3-gap" data-explainer="order"></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Units:</b> 1 ft = 12 in · 1 yd = 3 ft = 36 in · 1 mi = 1760 yd = 5280 ft. <b>″</b> means inches, <b>′</b> means feet. Referents: thumb, ruler, long step, 20-minute walk.</div>
+    <div><b>The lines:</b> longest = inch, then <span class="tex">\tfrac12</span>, quarters, eighths, and the shortest are the odd sixteenths. Count the <span class="tex">\tfrac1{16}</span> spaces and write the fraction in <b>simplest form</b>.</div>
+    <div><b>Reading:</b> the last number passed, then the fraction past it. Start at the <b>0 line</b>, or take away the starting mark. Nearest <span class="tex">\tfrac18</span>: skip the shortest lines.</div>
+    <div><b>Feet and inches:</b> the last foot tag passed (1F, 2F, …), then the inches past it, less than 12: <span class="tex">25\tfrac58</span> in <span class="tex">=2'\,1\tfrac58''</span>. To order sizes, use sixteenths.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l3">
+    <div><div class="kicker">Your turn</div><b>Assignment 3 · Questions 10–18</b><div class="muted">Tape measures in feet and inches, socket sizes, heights, a reading mistake, cutting baseboard, and imperial units on the job. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l4/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 4 — Converting Length Within SI and Within Imperial</b><div class="muted">How many inches in a 100 yd football field? How many 30 in pieces from an 8 ft board? Next we change units.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l3.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l3', homeHref: '../../', title: '3.3 Reading a Tape Measure' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

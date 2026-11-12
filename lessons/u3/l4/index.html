@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Converting Length · Math 10-3 3.4</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 4: converting length within SI (the metric staircase) and within imperial (12, 3, 1760 and 5280), unit factors, feet and inches, decimal feet, adding and subtracting feet and inches, and planning cuts from lumber. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l4.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l4">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Which Line Is Longer?">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Which Line Is Longer?</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Here are two straight black lines.</p><p class="vw-ctx">The top line has <b>arrowheads</b> on its ends. The bottom line has <b>tails</b> on its ends.</p><p class="vw-ask">Which black line is longer: the top one or the bottom one?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="Two horizontal lines: the top one ends in arrowheads pointing in, the bottom one ends in tails pointing out">
+    <g class="u3l4-guides" stroke="#c93a33" stroke-width="2.5" stroke-dasharray="6 5"><line x1="65" x2="65" y1="40" y2="215"/><line x1="265" x2="265" y1="40" y2="215"/></g>
+    <g stroke="#1c2230" stroke-width="6" stroke-linecap="round" fill="none">
+      <line x1="65" x2="265" y1="85" y2="85"/>
+      <line x1="65" x2="265" y1="175" y2="175"/>
+    </g>
+    <g stroke="#9a6a24" stroke-width="6" stroke-linecap="round" fill="none">
+      <path d="M90 60 L65 85 L90 110 M240 60 L265 85 L240 110"><animate attributeName="stroke" values="#9a6a24;#c27a0e;#9a6a24" dur="2.4s" repeatCount="indefinite"/></path>
+      <path d="M40 150 L65 175 L40 200 M290 150 L265 175 L290 200"><animate attributeName="stroke" values="#c27a0e;#9a6a24;#c27a0e" dur="2.4s" repeatCount="indefinite"/></path>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="165" y="138" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="poll u3l4-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> the top line</div>
+      <div class="opt"><b>B</b> the bottom line</div>
+      <div class="opt right"><b>C</b> they are the same length</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>C: they are exactly the same length!</b> Look at the red guide lines. The tails make the bottom line <i>look</i> longer, and the arrowheads make the top line <i>look</i> shorter. This trick is called the <b>Müller-Lyer illusion</b>. <span class="muted">Your eyes can fool you. That is why carpenters measure instead of guessing, and today we make sure the units do not fool us either.</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 4</div>
+  <h1>Converting Length Within SI and Within Imperial</h1>
+  <p class="lede">A plan says 4.2 m, but your tape is in centimetres. A board is 8 ft, but the pieces are 30 in. Today we <b>change units</b>: down and up the SI staircase, and with 12, 3, 1760 and 5280 in imperial. Then we add and subtract <b>feet and inches</b> and plan cuts from lumber.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>convert within SI by counting steps on the <b>staircase</b> (× 10 or ÷ 10 for each step)</li>
+      <li>convert within imperial: <b>bigger unit to smaller, multiply</b>; smaller to bigger, divide</li>
+      <li>change between <b>feet and inches</b>, inches only, and <b>decimal feet</b></li>
+      <li><b>add and subtract</b> feet and inches, trading 12 in for 1 ft</li>
+      <li>plan cuts: <b>round down</b> for pieces I can cut, <b>round up</b> for boards I must buy</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M1</b> Demonstrate an understanding of the Système International (SI) by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; applying strategies to convert SI units to imperial units.</div>
+  <div class="outcome"><b>M2</b> Demonstrate an understanding of the imperial system by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; comparing the American and British imperial units for capacity; applying strategies to convert imperial units to SI units.</div>
+  <div class="outcome"><b>M3</b> Solve and verify problems that involve SI and imperial linear measurements, including decimal and fractional measurements.</div>
+</section>
+
+<!-- ================= 1. SI staircase ================= -->
+<section class="card" data-ink="s1" data-section="1. Converting Within SI">
+  <div class="sec-h"><span class="badge">1</span><h2>Converting Within SI: The Staircase</h2></div>
+  <p>Every SI unit of length is the <b>metre</b> with a <b>prefix</b> in front. On the staircase, each step is <b>10 times</b> as big as the step below it. To <b>convert</b> (change) a length to another unit, count the steps.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Going down</b> to a smaller unit: <b>multiply</b> by 10 for each step. &nbsp; <b>Going up</b> to a bigger unit: <b>divide</b> by 10 for each step.
+    <div class="eg">1 km = 1000 m &nbsp;&nbsp;·&nbsp;&nbsp; 1 m = 100 cm &nbsp;&nbsp;·&nbsp;&nbsp; 1 m = 1000 mm &nbsp;&nbsp;·&nbsp;&nbsp; 1 cm = 10 mm</div></div>
+  <div class="explainer" data-explainer="stairs"></div>
+  <div class="tip-row">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A <b>smaller</b> unit means a <b>bigger</b> number: 4.2 m is 420 cm, not 0.042 cm. Before you finish, ask: “Should my answer be bigger or smaller than what I started with?”</div></div>
+    <div class="tip u3l4-know"><div class="tip-ic">i</div><div><b>Good to know.</b> People mostly use km, m, cm and mm. The hm, dam and dm steps are rarely used, but they still count when you count steps (m to mm is 3 steps).</div></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. Why Multiply Going Down?">
+  <h3 class="sub">Why multiply when we go down?</h3>
+  <p>Smaller units are shorter, so it takes <b>more</b> of them to cover the same length. Watch one metre stick fill up with centimetres.</p>
+  <div class="explainer" data-explainer="whyTimes"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Count the steps</h3></div>
+  <div class="part"><div class="pl">Convert each length. Fill in the table.</div>
+    <table class="u3l4-tbl">
+      <tr><th>Convert</th><th>Up or down? Steps?</th><th>× or ÷ by</th><th>Answer</th></tr>
+      <tr><td>(a) 4.2 m to cm</td><td><span data-reveal="&nbsp;">down 2</span></td><td><span data-reveal="&nbsp;">× 100</span></td><td><span data-reveal="&nbsp;">420 cm</span></td></tr>
+      <tr><td>(b) 85 mm to cm</td><td><span data-reveal="&nbsp;">up 1</span></td><td><span data-reveal="&nbsp;">÷ 10</span></td><td><span data-reveal="&nbsp;">8.5 cm</span></td></tr>
+      <tr><td>(c) 2.75 km to m</td><td><span data-reveal="&nbsp;">down 3</span></td><td><span data-reveal="&nbsp;">× 1000</span></td><td><span data-reveal="&nbsp;">2750 m</span></td></tr>
+      <tr><td>(d) 630 cm to m</td><td><span data-reveal="&nbsp;">up 2</span></td><td><span data-reveal="&nbsp;">÷ 100</span></td><td><span data-reveal="&nbsp;">6.3 m</span></td></tr>
+      <tr><td>(e) 0.6 m to mm</td><td><span data-reveal="&nbsp;">down 3</span></td><td><span data-reveal="&nbsp;">× 1000</span></td><td><span data-reveal="&nbsp;">600 mm</span></td></tr>
+      <tr><td>(f) 12&#8239;500 m to km</td><td><span data-reveal="&nbsp;">up 3</span></td><td><span data-reveal="&nbsp;">÷ 1000</span></td><td><span data-reveal="&nbsp;">12.5 km</span></td></tr>
+      <tr><td>(g) 45 mm to m</td><td><span data-reveal="&nbsp;">up 3</span></td><td><span data-reveal="&nbsp;">÷ 1000</span></td><td><span data-reveal="&nbsp;">0.045 m</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>420 cm</b> · (b) <b>8.5 cm</b> · (c) <b>2750 m</b> · (d) <b>6.3 m</b> · (e) <b>600 mm</b> · (f) <b>12.5 km</b> · (g) <b>0.045 m</b></div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1c" data-section="1. Mixed Units">
+  <h3 class="sub">Mixed units</h3>
+  <p>A length like 3 m 45 cm uses two units. You can only add, subtract or compare lengths when they are in the <b>same unit</b>, so convert first.</p>
+  <div class="explainer" data-explainer="sameUnit"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Same unit first</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Write 3 m 45 cm in centimetres, and in metres.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">3 m = 300 cm, so 3 m 45 cm <span class="tex">=300+45=345</span> cm.<br><span class="tex">345\div100=3.45</span> m</div></div></div>
+    <div class="part"><div class="pl">(b) A plumber cuts 65 cm off a 2.4 m length of pipe. How long is the piece that is left, in cm and in m?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">2.4 m <span class="tex">=2.4\times100=240</span> cm<br><span class="tex">240-65=175</span> cm = 1.75 m<br>The piece left is <b>175 cm (1.75 m)</b> long.</div></div></div>
+    <div class="part"><div class="pl">(c) Put in order from shortest to longest:<br>1.2 km, &nbsp; 950 m, &nbsp; 125&#8239;000 cm, &nbsp; 1&#8239;300&#8239;000 mm</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Change all to metres: 1.2 km = 1200 m; 950 m; <span class="tex">125\,000\div100=1250</span> m; <span class="tex">1\,300\,000\div1000=1300</span> m.<br>Order: <b>950 m, 1.2 km, 125&#8239;000 cm, 1&#8239;300&#8239;000 mm</b></div></div></div>
+    <div class="part"><div class="pl">(d) Maya runs 4 laps of a 400 m track, then 1.8 km home on the road. How far does she run in all, in km?</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Track: <span class="tex">4\times400=1600</span> m = 1.6 km<br><span class="tex">1.6+1.8=3.4</span> km<br>Maya runs <b>3.4 km</b> in all.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Imperial ================= -->
+<section class="card" data-ink="s2" data-section="2. Converting Within Imperial">
+  <div class="sec-h"><span class="badge">2</span><h2>Converting Within Imperial: Multiply or Divide?</h2></div>
+  <p>The imperial units of length are the <b>inch</b> (in or ″), the <b>foot</b> (ft or ′), the <b>yard</b> (yd) and the <b>mile</b> (mi). They do <b>not</b> go up by tens, so you need to know these numbers.</p>
+  <div class="u3l4-imp">
+    <div class="def"><b>Key idea</b>
+      <div class="u3l4-facts"><span>12 in = 1 ft</span><span>3 ft = 1 yd</span><span>36 in = 1 yd</span><span>5280 ft = 1 mi</span><span>1760 yd = 1 mi</span></div>
+      <div class="eg" style="font-size:19px"><b>Bigger unit to smaller unit:</b> multiply. &nbsp; <b>Smaller unit to bigger unit:</b> divide.</div></div>
+    <div class="u3l4-chain" aria-label="mi to yd times 1760, yd to ft times 3, ft to in times 12; the other way divide">
+      <div class="u3l4-crow"><span class="u3l4-u">mi</span><span class="u3l4-ar"><i>× 1760</i><b>⟶</b><b>⟵</b><i>÷ 1760</i></span><span class="u3l4-u">yd</span><span class="u3l4-ar"><i>× 3</i><b>⟶</b><b>⟵</b><i>÷ 3</i></span><span class="u3l4-u">ft</span><span class="u3l4-ar"><i>× 12</i><b>⟶</b><b>⟵</b><i>÷ 12</i></span><span class="u3l4-u">in</span></div>
+      <div class="u3l4-cnote"><span>to a smaller unit: multiply →</span><span>← to a bigger unit: divide</span></div>
+    </div>
+  </div>
+  <div class="explainer" data-explainer="impMachine"></div>
+  <p class="u3l4-gap"><b>Unit factors.</b> A <b>unit factor</b> is a fraction that equals 1, such as <span class="tex">\dfrac{12\text{ in}}{1\text{ ft}}</span>. Multiplying by it does not change the length, only the unit. Put the unit you want on <b>top</b> and the unit you have on the <b>bottom</b>, so the old unit cancels:</p>
+  <div class="u3l4-uf"><span class="tex">7\,\cancel{\text{ft}}\times\dfrac{12\text{ in}}{1\,\cancel{\text{ft}}}=7\times12=84\text{ in}</span><span class="tex">54\,\cancel{\text{in}}\times\dfrac{1\text{ ft}}{12\,\cancel{\text{in}}}=54\div12=4.5\text{ ft}</span></div>
+  <p>Unit factors are handy when you need two steps (miles to feet to inches): just multiply by one factor after another.</p>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Unit Factors, Step by Step">
+  <h3 class="sub">Unit factors, step by step</h3>
+  <p>Write the unit factor so the unit you have is on the bottom. Cross out the units that cancel. What is left is the new unit.</p>
+  <div class="explainer" data-explainer="unitFactor"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Mia wrote <span class="tex">7\text{ ft}\times\dfrac{1\text{ ft}}{12\text{ in}}</span>. Why can’t that be right?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Nothing cancels: she would get “ft × ft ÷ in”, which is not a length unit. The unit she <b>has</b> (ft) must be on the <b>bottom</b>: <span class="tex">\dfrac{12\text{ in}}{1\text{ ft}}</span>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Multiply or divide?</h3></div>
+  <div class="part"><div class="pl">Convert each length. Fill in the table.</div>
+    <table class="u3l4-tbl">
+      <tr><th>Convert</th><th>To a bigger or smaller unit?</th><th>Work</th><th>Answer</th></tr>
+      <tr><td>(a) 9 ft to in</td><td><span data-reveal="&nbsp;">smaller: multiply</span></td><td><span data-reveal="&nbsp;"><span class="tex">9\times12</span></span></td><td><span data-reveal="&nbsp;">108 in</span></td></tr>
+      <tr><td>(b) 66 in to ft</td><td><span data-reveal="&nbsp;">bigger: divide</span></td><td><span data-reveal="&nbsp;"><span class="tex">66\div12</span></span></td><td><span data-reveal="&nbsp;">5.5 ft</span></td></tr>
+      <tr><td>(c) 15 ft to yd</td><td><span data-reveal="&nbsp;">bigger: divide</span></td><td><span data-reveal="&nbsp;"><span class="tex">15\div3</span></span></td><td><span data-reveal="&nbsp;">5 yd</span></td></tr>
+      <tr><td>(d) 4.5 yd to ft</td><td><span data-reveal="&nbsp;">smaller: multiply</span></td><td><span data-reveal="&nbsp;"><span class="tex">4.5\times3</span></span></td><td><span data-reveal="&nbsp;">13.5 ft</span></td></tr>
+      <tr><td>(e) 2 mi to ft</td><td><span data-reveal="&nbsp;">smaller: multiply</span></td><td><span data-reveal="&nbsp;"><span class="tex">2\times5280</span></span></td><td><span data-reveal="&nbsp;">10&#8239;560 ft</span></td></tr>
+      <tr><td>(f) 7920 ft to mi</td><td><span data-reveal="&nbsp;">bigger: divide</span></td><td><span data-reveal="&nbsp;"><span class="tex">7920\div5280</span></span></td><td><span data-reveal="&nbsp;">1.5 mi</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>108 in</b> · (b) <b>5.5 ft</b> · (c) <b>5 yd</b> · (d) <b>13.5 ft</b> · (e) <b>10&#8239;560 ft</b> · (f) <b>1.5 mi</b></div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Football fields and wire spools</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A football field is 100 yd long between the goal lines. How long is that in inches? Use unit factors.</div><div class="work" style="--h:200px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">100\text{ yd}\times\dfrac{3\text{ ft}}{1\text{ yd}}\times\dfrac{12\text{ in}}{1\text{ ft}}</span><br><span class="tex">=100\times3\times12=3600</span> in<br>(Or: 1 yd = 36 in, so <span class="tex">100\times36=3600</span> in.)</div></div></div>
+    <div class="part"><div class="pl">(b) A spool holds 500 ft of electrical wire. An electrician uses 84 in of wire for each light fixture. How many fixtures can she wire from one spool?</div><div class="work" style="--h:200px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same unit first: <span class="tex">500\times12=6000</span> in<br><span class="tex">6000\div84=71.4\ldots</span><br>Round <b>down</b>: the last bit of wire is too short for a fixture.<br>She can wire <b>71 fixtures</b>.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Two factors in one line: <span class="keys">100 <kbd>×</kbd> 3 <kbd>×</kbd> 12 <kbd>ENTER</kbd></span> shows 3600. For (b): <span class="keys">500 <kbd>×</kbd> 12 <kbd>÷</kbd> 84 <kbd>ENTER</kbd></span> shows 71.42857143.</div>
+    <div class="u3l4-pcol"><button class="pill" type="button" data-keys="100 × 3 × 12 =">(a)</button><button class="pill" type="button" data-keys="500 × 12 ÷ 84 =">(b)</button></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 4 · Questions 1–7</h2>
+  <p class="pr-t">Try these before we work with feet and inches.</p>
+  <div class="pr-chips">
+    <span><b>1</b>SI conversions</span>
+    <span><b>2</b>&lt;, &gt; or =</span>
+    <span><b>3</b>Kayla’s mistake</span>
+    <span><b>4</b>Ribbon roll</span>
+    <span><b>5</b>Kananaskis trail</span>
+    <span><b>6</b>Imperial conversions</span>
+    <span><b>7</b>Park path</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u3l4">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Feet and inches ================= -->
+<section class="card" data-ink="s3" data-section="3. Feet and Inches">
+  <div class="sec-h"><span class="badge">3</span><h2>Feet and Inches</h2></div>
+  <p>Heights and building measurements are often written in <b>feet and inches</b>, like <span class="tex">5'\,7''</span> (say “5 feet 7 inches”). The same length can be written three ways:</p>
+  <div class="u3l4-three"><div><small>feet and inches</small><span class="tex">5'\,6''</span></div><div><small>inches only</small>66 in</div><div><small>decimal feet</small>5.5 ft</div></div>
+  <div class="def"><b>Key idea</b>
+    <table class="u3l4-kt">
+      <tr><td><b>ft and in → in:</b> feet × 12, then add the inches.</td><td><span class="tex">5'\,7''=5\times12+7=67</span> in</td></tr>
+      <tr><td><b>in → ft and in:</b> ÷ 12; the whole number is the feet; inches left = inches − feet × 12.</td><td>100 in: <span class="tex">100\div12=8.33\ldots</span>, so 8 ft; <span class="tex">100-8\times12=4</span>, so <span class="tex">8'\,4''</span></td></tr>
+      <tr><td><b>ft and in → decimal ft:</b> inches ÷ 12, add to the feet.</td><td><span class="tex">6'\,9''=6+9\div12=6.75</span> ft</td></tr>
+      <tr><td><b>decimal ft → ft and in:</b> decimal part × 12.</td><td>4.25 ft: <span class="tex">0.25\times12=3</span>, so <span class="tex">4'\,3''</span></td></tr>
+    </table></div>
+  <div class="explainer" data-explainer="ftin"></div>
+  <div class="tip-row">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> 5.6 ft is <b>not</b> <span class="tex">5'\,6''</span>. The 0.6 is a part of a <i>foot</i>, not inches: <span class="tex">0.6\times12=7.2</span>, so 5.6 ft <span class="tex">\approx5'\,7''</span>. (And <span class="tex">5'\,6''=5.5</span> ft.)</div></div>
+    <div class="tip u3l4-know"><div class="tip-ic">i</div><div><b>Handy facts.</b> 3 in = 0.25 ft · 6 in = 0.5 ft · 9 in = 0.75 ft · 4 in <span class="tex">\approx</span> 0.33 ft · 8 in <span class="tex">\approx</span> 0.67 ft</div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For 100 in: <span class="keys">100 <kbd>÷</kbd> 12 <kbd>ENTER</kbd></span> shows 8.333333333, so 8 ft. Then <span class="keys">100 <kbd>−</kbd> 8 <kbd>×</kbd> 12 <kbd>ENTER</kbd></span> shows 4, so 4 in left.</div>
+    <div class="u3l4-pcol"><button class="pill" type="button" data-keys="100 ÷ 12 =">÷ 12</button><button class="pill" type="button" data-keys="100 − 8 × 12 =">inches left</button></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. 5.6 ft Is Not 5′ 6″">
+  <h3 class="sub">5.6 ft is not 5′ 6″: tenths of a foot vs inches</h3>
+  <p>A decimal cuts a foot into <b>10</b> equal parts. Inches cut it into <b>12</b>. So 6 tenths and 6 inches are different lengths.</p>
+  <div class="explainer" data-explainer="notDecimal"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Three ways to write a length</h3></div>
+  <div class="part"><div class="pl">Convert each length. Round decimal feet to the nearest hundredth and inches to the nearest inch.</div>
+    <table class="u3l4-tbl">
+      <tr><th>Length</th><th>Change to</th><th>Work</th><th>Answer</th></tr>
+      <tr><td>(a) <span class="tex">6'\,2''</span></td><td>inches</td><td><span data-reveal="&nbsp;"><span class="tex">6\times12+2=72+2</span></span></td><td><span data-reveal="&nbsp;">74 in</span></td></tr>
+      <tr><td>(b) <span class="tex">5'\,10\tfrac12''</span></td><td>inches</td><td><span data-reveal="&nbsp;"><span class="tex">5\times12+10\tfrac12=60+10\tfrac12</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">70\tfrac12</span> in</span></td></tr>
+      <tr><td>(c) 45 in</td><td>ft and in</td><td><span data-reveal="&nbsp;"><span class="tex">45\div12=3.75;\ \ 45-36=9</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">3'\,9''</span></span></td></tr>
+      <tr><td>(d) 130 in</td><td>ft and in</td><td><span data-reveal="&nbsp;"><span class="tex">130\div12=10.83\ldots;\ \ 130-120=10</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">10'\,10''</span></span></td></tr>
+      <tr><td>(e) <span class="tex">8'\,6''</span></td><td>decimal ft</td><td><span data-reveal="&nbsp;"><span class="tex">8+6\div12=8+0.5</span></span></td><td><span data-reveal="&nbsp;">8.5 ft</span></td></tr>
+      <tr><td>(f) <span class="tex">3'\,4''</span></td><td>decimal ft</td><td><span data-reveal="&nbsp;"><span class="tex">3+4\div12=3.333\ldots</span></span></td><td><span data-reveal="&nbsp;">3.33 ft</span></td></tr>
+      <tr><td>(g) 7.25 ft</td><td>ft and in</td><td><span data-reveal="&nbsp;"><span class="tex">0.25\times12=3</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">7'\,3''</span></span></td></tr>
+      <tr><td>(h) 5.6 ft</td><td>ft and in</td><td><span data-reveal="&nbsp;"><span class="tex">0.6\times12=7.2\approx7</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">5'\,7''</span></span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>74 in</b> · (b) <b><span class="tex">70\tfrac12</span> in</b> · (c) <b><span class="tex">3'\,9''</span></b> · (d) <b><span class="tex">10'\,10''</span></b> · (e) <b>8.5 ft</b> · (f) <b>3.33 ft</b> · (g) <b><span class="tex">7'\,3''</span></b> · (h) <b><span class="tex">5'\,7''</span></b></div></div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Heights, walls and a tricky decimal</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Last year Jayden was <span class="tex">4'\,11''</span> tall. Now he is 62 in tall. How much did he grow?</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4'\,11''=4\times12+11=59</span> in<br><span class="tex">62-59=3</span> in<br>Jayden grew <b>3 inches</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A laser measure shows a wall is 9.75 ft long. Write this in feet and inches.</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.75\times12=9</span><br>The wall is <b><span class="tex">9'\,9''</span></b> long.</div></div></div>
+    <div class="part"><div class="pl">(c) Which is longer, 7.3 ft or <span class="tex">7'\,3''</span>? By how much?</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">7.3 ft: <span class="tex">0.3\times12=3.6</span> in, so 7 ft 3.6 in.<br><b>7.3 ft</b> is longer, by <span class="tex">3.6-3=0.6</span> in.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l4"></section>
+
+<!-- ================= 4. Adding and subtracting feet and inches ================= -->
+<section class="card" data-ink="s4" data-section="4. Adding and Subtracting Feet and Inches">
+  <div class="sec-h"><span class="badge">4</span><h2>Adding and Subtracting Feet and Inches</h2></div>
+  <p>Add <b>feet to feet</b> and <b>inches to inches</b>. If you get 12 or more inches, trade 12 in for 1 ft (<b>regroup</b>), like trading 10 ones for 1 ten. When you subtract and the top has too few inches, <b>borrow</b> 1 ft and turn it into 12 in. To multiply, multiply the feet and the inches, then regroup.</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u3l4-two"><div><b>Add:</b> <span class="tex">4'\,7''+3'\,10''=7'\,17''</span><br><span class="tex">17''=12''+5''=1'\,5''</span>, so <span class="tex">7'\,17''=8'\,5''</span></div>
+      <div><b>Subtract:</b> <span class="tex">9'\,3''-5'\,8''</span><br>borrow 1 ft: <span class="tex">9'\,3''=8'\,15''</span>; <span class="tex">8'\,15''-5'\,8''=3'\,7''</span></div></div></div>
+  <div class="explainer" data-explainer="addSub"></div>
+  <div class="tip u3l4-know"><div class="tip-ic">✓</div><div><b>Check.</b> Change everything to inches. For the addition: <span class="tex">55+46=101</span> in, and <span class="tex">101-96=5</span>, so <span class="tex">8'\,5''</span> ✓</div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Regroup and borrow</h3></div>
+  <div class="part"><div class="pl">Find each answer. Write it in feet and inches, with fewer than 12 inches.</div></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) <span class="tex">5'\,9''+2'\,8''</span></div><div class="work" style="--h:160px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">7'\,17''</span><br><span class="tex">17''=1'\,5''</span><br><span class="tex">=8'\,5''</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">11'\,2''-6'\,7''</span></div><div class="work" style="--h:160px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Borrow: <span class="tex">11'\,2''=10'\,14''</span><br><span class="tex">10'\,14''-6'\,7''=4'\,7''</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">3\times2'\,9''</span></div><div class="work" style="--h:160px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6'\,27''</span><br><span class="tex">27''=2'\,3''</span><br><span class="tex">=8'\,3''</span></div></div></div>
+    <div class="part"><div class="pl">(d) <span class="tex">6'\,4\tfrac12''+2'\,9\tfrac34''</span></div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac12+\tfrac34=\tfrac24+\tfrac34=1\tfrac14</span><br><span class="tex">4+9+1\tfrac14=14\tfrac14</span>, so <span class="tex">8'\,14\tfrac14''</span><br><span class="tex">14\tfrac14''=1'\,2\tfrac14''</span><br><span class="tex">=9'\,2\tfrac14''</span></div></div></div>
+    <div class="part"><div class="pl">(e) <span class="tex">8'-3'\,5\tfrac12''</span></div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">8'=7'\,12''</span><br><span class="tex">7'\,12''-3'\,5\tfrac12''=4'\,6\tfrac12''</span></div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Will the SUV fit?</h3></div>
+  <p class="q">Owen’s garage door opening is <span class="tex">7'\,0''</span> high. His SUV is <span class="tex">5'\,11''</span> tall.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) He puts a cargo box on the roof that adds <span class="tex">1'\,2''</span>. Will the SUV fit through the door?</div><div class="work" style="--h:180px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5'\,11''+1'\,2''=6'\,13''=7'\,1''</span><br><span class="tex">7'\,1''</span> is more than <span class="tex">7'\,0''</span>, so it will <b>not</b> fit. It is 1 inch too tall.</div></div></div>
+    <div class="part"><div class="pl">(b) A slimmer cargo box adds only <span class="tex">11\tfrac12''</span>. How much room is left above it?</div><div class="work" style="--h:180px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5'\,11''+11\tfrac12''=5'\,22\tfrac12''=6'\,10\tfrac12''</span><br><span class="tex">7'\,0''-6'\,10\tfrac12''=6'\,12''-6'\,10\tfrac12''=1\tfrac12''</span><br>There is <b><span class="tex">1\tfrac12</span> inches</b> of room.</div></div></div>
+  </div>
+  <div class="explainer u3l4-gap" data-explainer="garage"></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= 5. Cutting and fitting ================= -->
+<section class="card" data-ink="s5" data-section="5. Cutting and Fitting">
+  <div class="sec-h"><span class="badge">5</span><h2>Cutting and Fitting</h2></div>
+  <p>Lumber is sold in lengths such as 8 ft, 10 ft and 12 ft. Trim and pipe are often sold in 8 ft or 2.4 m pieces. To plan the cuts:</p>
+  <ul class="u3l4-steps">
+    <li><b>Step 1.</b> Change everything to the same, smaller unit (inches, or cm).</li>
+    <li><b>Step 2.</b> Divide the board length by the piece length.</li>
+    <li><b>Step 3.</b> Round in the way that makes sense.</li>
+  </ul>
+  <div class="def"><b>Key idea</b> &nbsp; Pieces you can <b>cut</b> from one board: <b>round down</b> (a short leftover is not a piece).<br>Boards, rolls or packs you must <b>buy</b>: <b>round up</b> (you cannot buy part of a board).</div>
+  <div class="tip u3l4-know"><div class="tip-ic">i</div><div><b>On the job.</b> Each saw cut turns about <span class="tex">\tfrac18''</span> of wood into sawdust (the <b>kerf</b>). For tight jobs, leave room for it.</div></div>
+  <div class="explainer u3l4-gap" data-explainer="lumber"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Noah’s garden planters</h3></div>
+  <p class="q">Noah is building garden planters. He needs pieces of board 30 in long. The boards are 8 ft long and cost $5.48 each.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many 30 in pieces can he cut from one board? How much is left over?</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">8 ft <span class="tex">=8\times12=96</span> in<br><span class="tex">96\div30=3.2</span>, so <b>3 pieces</b> (round down)<br>Leftover: <span class="tex">96-3\times30=96-90=6</span> in</div></div></div>
+    <div class="part"><div class="pl">(b) He needs 14 pieces. How many boards must he buy, and what do they cost?</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">14\div3=4.67</span>, so 5 boards (round up)<br><span class="tex">5\times\$5.48=\$27.40</span><br>He must buy <b>5 boards for $27.40</b>.</div></div></div>
+  </div>
+  <div class="part u3l4-gap"><div class="pl">(c) For the planter trim, he buys trim in 2.4 m lengths and cuts it into 55 cm pieces. How many pieces can he cut from one length, and how much is left over?</div><div class="work" style="--h:150px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">2.4 m = 240 cm; <span class="tex">240\div55=4.36\ldots</span>, so <b>4 pieces</b><br>Leftover: <span class="tex">240-4\times55=240-220=20</span> cm</div></div></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>SI staircase:</b> km, hm, dam, m, dm, cm, mm. Down a step: × 10. Up a step: ÷ 10. Smaller unit, bigger number.</div>
+    <div><b>Imperial:</b> 12 in = 1 ft, 3 ft = 1 yd, 5280 ft = 1 mi, 1760 yd = 1 mi. To a smaller unit, multiply; to a bigger unit, divide. Unit factors: the unit you want on top.</div>
+    <div><b>Feet and inches:</b> <span class="tex">5'\,7''=5\times12+7=67</span> in. 100 in <span class="tex">=8'\,4''</span>. Decimal feet: inches ÷ 12. 5.6 ft is <b>not</b> <span class="tex">5'\,6''</span>.</div>
+    <div><b>Add and subtract:</b> feet with feet, inches with inches; trade 12 in for 1 ft, or borrow 1 ft = 12 in. <b>Cuts:</b> round down for pieces, round up for boards to buy.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l4">
+    <div><div class="kicker">Your turn</div><b>Assignment 4 · Questions 8–18</b><div class="muted">Feet and inches, decimal feet, heights, adding and subtracting, kitchen cabinets, a bench from deck boards, and ribbon by the yard. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l5/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 5 — Converting Length Between SI and Imperial</b><div class="muted">An inch is exactly 2.54 cm. Next we cross over between the two systems: km/h and mph, cm and inches.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l4.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l4', homeHref: '../../', title: '3.4 Converting Length' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
  * The lessons home (this folder's index.html), the course catalog it's built from and the app icons: from the device
  * first, so the home-screen app opens instantly, then refreshed from the network in the background; when that brings a
  * newer home or catalog (a lesson switched on), the open home page is told and refreshes itself. */
-const CACHE = 'm103-teaching-v1';
+const CACHE = 'm103-teaching-v2';
 const SCOPE = new URL('./', self.location).href; // …/lessons/
 const SHELL = ['./', 'manifest.webmanifest', 'assets/icon-180.png', 'assets/icon-192.png', 'assets/favicon.svg', '../js/catalog.js', '../js/ns.js'].map((p) => new URL(p, self.location).href);
 self.addEventListener('install', (e) => {

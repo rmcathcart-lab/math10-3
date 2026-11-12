@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nets and Surface Area of Prisms · Math 10-3 3.10</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 10: nets and surface area of prisms. Faces, edges and vertices, nets of a cube, face tables for boxes, triangular prisms, open boxes and painting a room. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l10.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l10">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Hidden Dots">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Hidden Dots</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Three dice are stacked in a tower on a table. On every die, <b>opposite faces add to 7</b>: 1 and 6, 2 and 5, 3 and 4.</p><p class="vw-ctx">The top of the tower shows <b>5</b>.</p><p class="vw-ask">How many dots are on the faces nobody can see: the faces pressed together and the face on the table?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A tower of three dice swaying gently on a table, with a 5 on top">
+    <ellipse cx="150" cy="236" rx="92" ry="9" fill="#efe6d6"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-3 150 236;3 150 236;-3 150 236" dur="3.4s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
+      <g stroke="#6e4a1c" stroke-width="3" stroke-linejoin="round">
+        <polygon points="96,232 172,232 172,166 96,166" fill="#fffaf1"/><polygon points="172,232 206,212 206,146 172,166" fill="#efe2cc"/><polygon points="96,166 172,166 206,146 130,146" fill="#f7efe1"/>
+        <polygon points="96,166 172,166 172,100 96,100" fill="#fffaf1"/><polygon points="172,166 206,146 206,80 172,100" fill="#efe2cc"/><polygon points="96,100 172,100 206,80 130,80" fill="#f7efe1"/>
+        <polygon points="96,100 172,100 172,34 96,34" fill="#fffaf1"/><polygon points="172,100 206,80 206,14 172,34" fill="#efe2cc"/><polygon points="96,34 172,34 206,14 130,14" fill="#fbf6ec"/>
+      </g>
+      <g fill="#2a2a2a">
+        <circle cx="115.0" cy="182.5" r="6"/>
+        <circle cx="153.0" cy="182.5" r="6"/>
+        <circle cx="115.0" cy="215.5" r="6"/>
+        <circle cx="153.0" cy="215.5" r="6"/>
+        <circle cx="180.5" cy="210.5" r="4.6"/>
+        <circle cx="197.5" cy="200.5" r="4.6"/>
+        <circle cx="189.0" cy="189.0" r="4.6"/>
+        <circle cx="180.5" cy="177.5" r="4.6"/>
+        <circle cx="197.5" cy="167.5" r="4.6"/>
+        <circle cx="115.0" cy="116.5" r="6"/>
+        <circle cx="153.0" cy="149.5" r="6"/>
+        <circle cx="180.5" cy="146.5" r="4.6"/>
+        <circle cx="197.5" cy="136.5" r="4.6"/>
+        <circle cx="180.5" cy="128.0" r="4.6"/>
+        <circle cx="197.5" cy="118.0" r="4.6"/>
+        <circle cx="180.5" cy="109.5" r="4.6"/>
+        <circle cx="197.5" cy="99.5" r="4.6"/>
+        <circle cx="115.0" cy="50.5" r="6"/>
+        <circle cx="134.0" cy="67.0" r="6"/>
+        <circle cx="153.0" cy="83.5" r="6"/>
+        <circle cx="189.0" cy="57.0" r="4.6"/>
+        <ellipse cx="123.5" cy="29.0" rx="5.5" ry="3.2"/>
+        <ellipse cx="161.5" cy="29.0" rx="5.5" ry="3.2"/>
+        <ellipse cx="151.0" cy="24.0" rx="5.5" ry="3.2"/>
+        <ellipse cx="140.5" cy="19.0" rx="5.5" ry="3.2"/>
+        <ellipse cx="178.5" cy="19.0" rx="5.5" ry="3.2"/>
+      </g>
+    </g>
+    <text x="276" y="140" font-size="44" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="poll u3l10-wpoll">
+    <div class="poll-opts">
+      <div class="opt"><b>A</b> 14 dots</div>
+      <div class="opt"><b>B</b> 15 dots</div>
+      <div class="opt right"><b>C</b> 16 dots</div>
+      <div class="opt"><b>D</b> 21 dots</div>
+    </div>
+    <button class="pill" type="button" data-poll-reveal>Reveal</button>
+    <div class="poll-ans"><b>C, 16 dots.</b> You don’t need to know any of the hidden numbers! The middle die and the bottom die each hide a <b>top and bottom</b>, a pair of opposite faces: <span class="tex">7+7=14</span>. The top die hides only its bottom, opposite the 5: <span class="tex">7-5=2</span>. So <span class="tex">14+2=16</span>. <span class="muted">Bonus: a tower of 4 dice with a 3 on top hides <span class="tex">7\times4-3=25</span> dots.</span></div>
+  </div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 10</div>
+  <h1>Nets and Surface Area of Prisms</h1>
+  <p class="lede">How much cardboard makes a shipping box? How much nylon for a tent, or paint for a bedroom? Today we <b>unfold</b> boxes and other prisms into flat <b>nets</b>, and add up the areas of all the faces: the <b>surface area</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>count the <b>faces, edges and vertices</b> of a prism, and name it by the shape of its bases</li>
+      <li>tell whether a pattern is a <b>net</b> of a cube</li>
+      <li>use a <b>face table</b> or <span class="tex">SA=2lw+2lh+2wh</span> to find the surface area of a box, and <span class="tex">6s^2</span> for a cube</li>
+      <li>find the surface area of a <b>triangular prism</b>: 2 triangles + 3 rectangles</li>
+      <li>cover a real object: an <b>open box</b>, a tent, the <b>walls of a room</b> (coats, cans, cost)</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M4</b> Solve problems that involve SI and imperial area measurements of regular, composite and irregular 2-D shapes and 3-D objects, including decimal and fractional measurements, and verify the solutions.</div>
+</section>
+
+<!-- ================= 1. Prisms, faces and nets ================= -->
+<section class="card" data-ink="s1" data-section="1. Prisms, Faces and Nets">
+  <div class="sec-h"><span class="badge">1</span><h2>Prisms, Faces and Nets</h2></div>
+  <p>A <b>3-D object</b> (three-dimensional object) has length, width and height, like a box. Each flat surface of a 3-D object is a <b>face</b>. Two faces meet along an <b>edge</b>. Edges meet at a corner called a <b>vertex</b> (plural: <b>vertices</b>).</p>
+  <p>A <b>prism</b> is a 3-D object with two matching ends that face each other. The ends are called the <b>bases</b>. All the other faces are rectangles. A prism is named for the shape of its bases. In the pictures, <b>dashed lines</b> are edges hidden at the back.</p>
+  <div class="u3l10-prisms">
+    <div><div class="u3l10-fig" id="u3l10-fig-cube"></div><b>cube</b><span>6 equal squares</span></div>
+    <div><div class="u3l10-fig" id="u3l10-fig-rect"></div><b>rectangular prism</b><span>bases are rectangles</span></div>
+    <div><div class="u3l10-fig" id="u3l10-fig-tri"></div><b>triangular prism</b><span>bases are triangles</span></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A prism has bases with <b>8 sides</b> (an octagonal prism, like a stop sign made thick). How many faces does it have?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>10 faces:</b> the 2 octagon bases, plus one rectangle for each of the 8 sides of the base.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Count them up</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Complete the table for the three prisms above.</div>
+      <table class="u3l10-tbl u3l10-t1">
+        <tr><th></th><th>Cube</th><th>Rectangular prism</th><th>Triangular prism</th></tr>
+        <tr><td>Number of faces</td><td><span data-reveal="&nbsp;">6</span></td><td><span data-reveal="&nbsp;">6</span></td><td><span data-reveal="&nbsp;">5</span></td></tr>
+        <tr><td>Shapes of the faces</td><td><span data-reveal="&nbsp;">6 squares</span></td><td><span data-reveal="&nbsp;">6 rectangles</span></td><td><span data-reveal="&nbsp;">2 triangles, 3 rectangles</span></td></tr>
+        <tr><td>Number of edges</td><td><span data-reveal="&nbsp;">12</span></td><td><span data-reveal="&nbsp;">12</span></td><td><span data-reveal="&nbsp;">9</span></td></tr>
+        <tr><td>Number of vertices</td><td><span data-reveal="&nbsp;">8</span></td><td><span data-reveal="&nbsp;">8</span></td><td><span data-reveal="&nbsp;">6</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Count the hidden (dashed) edges too. A box has 4 edges on top, 4 on the bottom and 4 going up: <b>12 edges</b>. A triangular prism has 3 + 3 + 3 = <b>9 edges</b> and 3 + 3 = <b>6 vertices</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Nets">
+  <h3 class="sub">Nets: unfold it flat</h3>
+  <div class="u3l10-netdef">
+    <p>A <b>net</b> is a flat pattern that folds up to make a 3-D object. Each face of the object appears in the net <b>once</b>, with no gaps and no overlaps. Think of a cereal box cut open along some edges and pressed flat.</p>
+    <div class="u3l10-fig" id="u3l10-fig-net"></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Which ones fold into a cube?</h3></div>
+  <p class="q">Each pattern is made of 6 squares. Which patterns are nets of a cube? Imagine folding each one. Write yes or no.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a)</div><div class="u3l10-fig u3l10-cn" id="u3l10-fig-cna"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> The column of 4 wraps around; the two side squares close the ends.</div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u3l10-fig u3l10-cn" id="u3l10-fig-cnb"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> 5 squares in a row wrap all the way around, so the first and last overlap, and one side is left open.</div></div></div>
+    <div class="part"><div class="pl">(c)</div><div class="u3l10-fig u3l10-cn" id="u3l10-fig-cnc"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Yes.</b> A “staircase” folds into a cube.</div></div></div>
+    <div class="part"><div class="pl">(d)</div><div class="u3l10-fig u3l10-cn" id="u3l10-fig-cnd"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> The 2 by 2 block on the left folds onto itself, so two faces overlap.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1c" data-section="1. Fold It and See">
+  <h3 class="sub">Fold it and see</h3>
+  <p>Pick a pattern from Example 2. The machine folds every square up along its edges.</p>
+  <div class="explainer" data-explainer="cubeNets"></div>
+</section>
+
+<!-- ================= Math History box (brown) ================= -->
+<!-- sources: https://w.georgehart.com/virtual-polyhedra/durer.html (George Hart, Dürer's polyhedra: 1525 Underweysung der Messung, early polyhedral nets);
+     https://en.wikipedia.org/wiki/Net_(polyhedron) (nets for the Platonic solids and several Archimedean solids in Dürer's 1525 book; first called nets in 1543 by Augustin Hirschvogel) -->
+<section class="card history" data-ink="hist" data-section="Math History: Dürer’s Nets">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1525</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">An artist who unfolded shapes</h3>
+      <p>Albrecht Dürer was a German artist, famous for his woodcuts and engravings. In 1525 he wrote a book about measuring and drawing for painters and craftspeople.</p>
+      <p>In it he drew 3-D shapes in a new way: <b>unfolded flat</b>, so a reader could copy the pattern, cut it out and fold it up. His book has flat patterns for the cube and many fancier solids. It is one of the earliest books to show them. In 1543 another German artist, Augustin Hirschvogel, first called these patterns <b>nets</b>.</p>
+      <div class="part hist-q"><div class="pl">Dürer’s pattern for a cube has 6 squares. If each square is 6 cm by 6 cm, how much paper does the net cover?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One square: <span class="tex">6\times6=36</span> cm². Six squares: <span class="tex">6\times36=216</span> cm². That is the cube’s <b>surface area</b> (next section).</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u3l10-hist" viewBox="0 0 600 300" role="img" aria-label="A cube net is drawn line by line on old paper, then the year 1525 and the word net from 1543 appear"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 2. Surface area of a rectangular prism ================= -->
+<section class="card" data-ink="s2" data-section="2. Surface Area of a Rectangular Prism">
+  <div class="sec-h"><span class="badge">2</span><h2>Surface Area of a Rectangular Prism</h2></div>
+  <p>The <b>surface area</b> (SA) of a 3-D object is the total area of all of its faces. It is the same as the area of its net. Surface area tells you how much material covers the outside: cardboard for a box, wrapping paper, paint or fabric. It is measured in square units, such as cm², m², in² or ft².</p>
+  <p>A rectangular prism has 6 faces in 3 matching pairs: top and bottom, front and back, and the two ends. A <b>face table</b> keeps track of them so that no face is missed or counted twice.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Surface area = the sum of the areas of all the faces = the area of the net.</b>
+    <div class="u3l10-sa">
+      <div><b>Rectangular prism</b> (length <span class="tex">l</span>, width <span class="tex">w</span>, height <span class="tex">h</span>)<div class="u3l10-big"><span class="tex">SA=2lw+2lh+2wh</span></div><div class="u3l10-under"><span>top &amp; bottom</span><span>front &amp; back</span><span>two ends</span></div></div>
+      <div><b>Cube</b> (edge <span class="tex">s</span>)<div class="u3l10-big"><span class="tex">SA=6s^2</span></div><div class="u3l10-under"><span>6 equal squares, each <span class="tex">s\times s</span></span></div></div>
+    </div></div>
+  <div class="explainer" data-explainer="unfoldBox"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Surface area is <b>not</b> <span class="tex">l\times w\times h</span>. Multiplying all three lengths gives the <b>volume</b> (how much fits inside, in Unit 4). Surface area <b>adds</b> the areas of the faces.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Fill or Wrap?">
+  <h3 class="sub">Fill or wrap? Volume and surface area are different</h3>
+  <p>Volume counts the <b>cubes inside</b>. Surface area counts the <b>squares on the outside</b>.</p>
+  <div class="explainer" data-explainer="notVolume"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>A shipping box</h3></div>
+  <p class="q">A shipping box is 40 cm long, 30 cm wide and 25 cm high.</p>
+  <div class="u3l10-ex3">
+    <div class="u3l10-ex3fig"><div class="u3l10-fig" id="u3l10-fig-ex3box"></div><div class="u3l10-fig" id="u3l10-fig-ex3net"></div></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Write the size of each face on the net.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Front and back: <span class="tex">40\times25</span> &nbsp; Top and bottom: <span class="tex">40\times30</span> &nbsp; Ends: <span class="tex">30\times25</span></div></div></div>
+      <div class="part"><div class="pl">(b) Complete the face table.</div>
+        <table class="u3l10-tbl u3l10-ft">
+          <tr><th>Faces</th><th>Size</th><th>Area of one</th><th>Area of two</th></tr>
+          <tr><td>top &amp; bottom</td><td><span data-reveal="&nbsp;"><span class="tex">40\times30</span></span></td><td><span data-reveal="&nbsp;">1&#8239;200 cm²</span></td><td><span data-reveal="&nbsp;">2&#8239;400 cm²</span></td></tr>
+          <tr><td>front &amp; back</td><td><span data-reveal="&nbsp;"><span class="tex">40\times25</span></span></td><td><span data-reveal="&nbsp;">1&#8239;000 cm²</span></td><td><span data-reveal="&nbsp;">2&#8239;000 cm²</span></td></tr>
+          <tr><td>two ends</td><td><span data-reveal="&nbsp;"><span class="tex">30\times25</span></span></td><td><span data-reveal="&nbsp;">750 cm²</span></td><td><span data-reveal="&nbsp;">1&#8239;500 cm²</span></td></tr>
+          <tr><td colspan="3" class="u3l10-sar"><b>Surface area</b></td><td><span data-reveal="&nbsp;"><b>5&#8239;900 cm²</b></span></td></tr>
+        </table>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2\,400+2\,000+1\,500=5\,900</span> cm²</div></div></div>
+    </div>
+  </div>
+  <div class="parts c2 u3l10-gap">
+    <div class="part"><div class="pl">(c) Check your answer with the formula.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">SA=2lw+2lh+2wh</span><br><span class="tex">=2(40)(30)+2(40)(25)+2(30)(25)</span><br><span class="tex">=2\,400+2\,000+1\,500=5\,900</span> cm² ✓</div></div></div>
+    <div class="part"><div class="pl">(d) Write the surface area in m².</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 m² <span class="tex">=10\,000</span> cm², so divide.<br><span class="tex">5\,900\div10\,000=0.59</span><br>The box has about <b>0.59 m²</b> of cardboard.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Two cubes</h3></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For a cube, use the <kbd>x²</kbd> key: an edge of 2.5 in gives <span class="keys">6 <kbd>×</kbd> 2.5 <kbd>x²</kbd> <kbd>ENTER</kbd></span> <span class="tex">=37.5</span>.</div>
+    <button class="pill" type="button" data-keys="6 × 2.5 x² =">Show me</button></div>
+  <div class="parts c2 u3l10-gap">
+    <div class="part"><div class="pl">(a) A wooden toy block is a cube with edges <span class="tex">2\tfrac12</span> in long. Find its surface area.</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2\tfrac12</span> in <span class="tex">=2.5</span> in<br><span class="tex">SA=6s^2=6\times2.5^2=6\times6.25=37.5</span><br>The block’s surface area is <b>37.5 in²</b> (<span class="tex">37\tfrac12</span> in²).</div></div></div>
+    <div class="part"><div class="pl">(b) A storage ottoman is a cube with edges 1 ft 3 in long. Fabric covers all 6 faces. How much fabric is needed, in in² and in ft²?</div><div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 ft 3 in <span class="tex">=12+3=15</span> in<br><span class="tex">SA=6\times15^2=6\times225=1\,350</span> in²<br>In ft²: <span class="tex">1\,350\div144=9.375</span><br>The ottoman needs <b>1&#8239;350 in²</b>, or about <b>9.4 ft²</b>, of fabric.</div></div></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> You make every edge of a cube <b>twice as long</b>. What happens to its surface area?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">It is <b>4 times</b> as big. Each face is twice as long and twice as wide: <span class="tex">2\times2=4</span> times the area. For example <span class="tex">6\times1^2=6</span> becomes <span class="tex">6\times2^2=24</span>.</div></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l10"></section>
+
+<!-- ================= 3. Triangular prisms ================= -->
+<section class="card" data-ink="s3" data-section="3. Surface Area of a Triangular Prism">
+  <div class="sec-h"><span class="badge">3</span><h2>Surface Area of a Triangular Prism</h2></div>
+  <div class="u3l10-trinet">
+    <p>A triangular prism has <b>5 faces</b>: 2 matching triangles (the bases) and 3 rectangles. Each rectangle is as long as the prism. Its width is one side of the triangle. So the net is three rectangles in a row with a triangle on each side.</p>
+    <div class="u3l10-fig" id="u3l10-fig-trinet"></div>
+  </div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Triangular prism: SA = 2 triangles + 3 rectangles</b>
+    <div class="eg">Each triangle: <span class="tex">A=\tfrac12bh</span>, using the <b>height</b> of the triangle (straight up from the base).<br>Each rectangle: <span class="tex">A=</span> (side of the triangle) × (length of the prism).<br><b>Shortcut:</b> the 3 rectangles together = (perimeter of the triangle) × (length of the prism).</div></div>
+  <div class="explainer" data-explainer="triPrism"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The height of the triangle is <b>not</b> one of its slanted sides (unless the triangle has a right angle). Use the height for the two triangles, and the three sides for the three rectangles.</div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>A rubber door wedge</h3></div>
+  <p class="q">A rubber door wedge is a triangular prism. Its ends are right triangles with sides 5 cm, 12 cm and 13 cm. The wedge is 4 cm wide.</p>
+  <div class="u3l10-ex5">
+    <div class="u3l10-ex5fig"><div class="u3l10-fig" id="u3l10-fig-ex5"></div><div class="u3l10-fig" id="u3l10-fig-ex5net"></div></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) On the net, write how to find the area of each face.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Triangles: <span class="tex">\tfrac12(12)(5)</span> each &nbsp; Rectangles: <span class="tex">5\times4</span>, <span class="tex">12\times4</span>, <span class="tex">13\times4</span></div></div></div>
+      <div class="part"><div class="pl">(b) Find the surface area of the wedge.</div><div class="work" style="--h:190px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Triangles: <span class="tex">\tfrac12\times12\times5=30</span> cm² each; <span class="tex">2\times30=60</span> cm²<br>Rectangles: <span class="tex">5\times4=20</span>, <span class="tex">12\times4=48</span>, <span class="tex">13\times4=52</span>; <span class="tex">20+48+52=120</span> cm²<br>(Shortcut: <span class="tex">(5+12+13)\times4=30\times4=120</span> ✓)<br><span class="tex">SA=60+120=180</span> cm². The wedge has a surface area of <b>180 cm²</b>.</div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. The Shortcut">
+  <h3 class="sub">Why the shortcut works: three rectangles make one</h3>
+  <p>All three rectangles are as long as the prism. Push them together and they make one long rectangle: as wide as the <b>perimeter</b> of the triangle.</p>
+  <div class="explainer" data-explainer="shortcut"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Jordan’s camping tent</h3></div>
+  <div class="u3l10-ex6">
+    <p class="q">Jordan is sewing a small camping tent shaped like a triangular prism. The front is a triangle 2.4 m wide at the bottom and 1.6 m high. Each sloping side of the tent is 2 m. The tent is 3 m long.</p>
+    <div class="u3l10-fig" id="u3l10-fig-ex6"></div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How much fabric is needed for the whole tent, including the floor?</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Two ends: <span class="tex">2\times\tfrac12\times2.4\times1.6=3.84</span> m²<br>Two sloping sides: <span class="tex">2\times(2\times3)=12</span> m²<br>Floor: <span class="tex">2.4\times3=7.2</span> m²<br><span class="tex">SA=3.84+12+7.2=23.04</span> m²</div></div></div>
+    <div class="part"><div class="pl">(b) The floor is made of a heavier fabric. How much of the lighter nylon is needed for the rest?</div><div class="work" style="--h:170px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Everything except the floor:<br><span class="tex">23.04-7.2=15.84</span> m² &nbsp;(or <span class="tex">3.84+12=15.84</span> m²)<br>Jordan needs <b>15.84 m²</b> of nylon.</div></div></div>
+  </div>
+  <div class="parts c1 u3l10-gap">
+    <div class="part"><div class="pl">(c) The nylon costs $8.95 per m². What does the nylon cost with 5% GST?</div><div class="work" style="--h:100px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">15.84\times\$8.95=\$141.768</span>; &nbsp;<span class="tex">\$141.768\times1.05=\$148.856\ldots\approx\$148.86</span><br>The nylon costs <b>$148.86</b> with GST.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 10 · Questions 1–8</h2>
+  <p class="pr-t">Try these before we cover open boxes and real jobs.</p>
+  <div class="pr-chips">
+    <span><b>1–2</b>Faces, edges, vertices; nets of a cube</span>
+    <span><b>3–5</b>Boxes and cubes: nets, face tables, formulas</span>
+    <span><b>6–7</b>Triangular prisms: a block and a curb ramp</span>
+    <span><b>8</b>Wrapping a gift box</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u3l10">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Open boxes and real jobs ================= -->
+<section class="card" data-ink="s4" data-section="4. Open Boxes and Real Jobs">
+  <div class="sec-h"><span class="badge">4</span><h2>Open Boxes and Real Jobs</h2></div>
+  <p>Not every job covers every face. An <b>open box</b> has no top, so it has only 5 faces. When you paint a room you paint the walls (and maybe the ceiling), but not the floor, the doors or the windows. Always ask first: <b>which faces get covered?</b></p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Covering a real object</b>
+    <div class="u3l10-steps">
+      <span><b>1</b>Sketch the object. List only the faces that get covered.</span>
+      <span><b>2</b>Find the area of each of those faces and add.</span>
+      <span><b>3</b>Subtract any openings that are not covered (doors, windows).</span>
+      <span><b>4</b>Multiply by the number of coats (for paint or stain).</span>
+      <span><b>5</b>Divide by the area one can, roll or sheet covers. Round <b>up</b>.</span>
+      <span><b>6</b>Find the cost.</span>
+    </div></div>
+  <div class="explainer" data-explainer="openBox"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Amira’s planter box</h3></div>
+  <div class="u3l10-ex7">
+    <div>
+      <p class="q">Amira is building a planter box with no top out of plywood. The box is 4 ft long, <span class="tex">1\tfrac12</span> ft wide and 2 ft high.</p>
+      <div class="part"><div class="pl">(a) Which faces does she need to build? Find the area of plywood needed.</div><div class="work" style="--h:160px"></div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">5 faces: the bottom, front, back and two ends (no top).<br>Bottom: <span class="tex">4\times1.5=6</span> ft² &nbsp; Front and back: <span class="tex">2\times(4\times2)=16</span> ft²<br>Two ends: <span class="tex">2\times(1.5\times2)=6</span> ft² &nbsp; Total: <span class="tex">6+16+6=28</span> ft²</div></div></div>
+    </div>
+    <div class="u3l10-fig" id="u3l10-fig-ex7"></div>
+  </div>
+  <div class="parts c1 u3l10-gap">
+    <div class="part"><div class="pl">(b) A sheet of plywood is 4 ft by 8 ft. Is one sheet enough? Explain, using area.</div><div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One sheet is <span class="tex">4\times8=32</span> ft². She needs 28 ft², which is less than 32 ft². <b>Yes</b>, one sheet has enough area (if she plans her cuts carefully).</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Lucas paints his bedroom</h3></div>
+  <p class="q">Lucas is painting the four walls of his bedroom. The room is 4 m long, 3.5 m wide and 2.5 m high. He does not paint the ceiling, the door (0.9 m by 2 m) or the window (1.5 m by 1.2 m). He wants 2 coats. A can of paint covers about 35 m² and costs $54.98.</p>
+  <div class="u3l10-fig" id="u3l10-fig-ex8"></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the area of the four walls.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Long walls: <span class="tex">2\times(4\times2.5)=20</span> m²<br>Short walls: <span class="tex">2\times(3.5\times2.5)=17.5</span> m²<br>Walls: <span class="tex">20+17.5=37.5</span> m²</div></div></div>
+    <div class="part"><div class="pl">(b) Subtract the door and the window.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Door: <span class="tex">0.9\times2=1.8</span>; window: <span class="tex">1.5\times1.2=1.8</span><br><span class="tex">37.5-1.8-1.8=33.9</span> m²</div></div></div>
+    <div class="part"><div class="pl">(c) How many cans does he need for 2 coats?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 coats: <span class="tex">33.9\times2=67.8</span> m²<br><span class="tex">67.8\div35=1.93\ldots</span> Round <b>up</b>: <b>2 cans</b>.</div></div></div>
+    <div class="part"><div class="pl">(d) Find the cost of the paint with 5% GST.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2\times\$54.98=\$109.96</span><br><span class="tex">\$109.96\times1.05=\$115.458\approx\$115.46</span><br>The paint costs <b>$115.46</b> with GST.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. Unfold the Room">
+  <h3 class="sub">Unfold the room: four walls in a strip</h3>
+  <div class="explainer" data-explainer="roomPaint"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Prisms</b> have 2 matching bases (named for their shape) and rectangle sides. A <b>net</b> folds up into the object: every face once, no gaps, no overlaps.</div>
+    <div><b>Surface area</b> = the total area of all the faces = the area of the net. Box: <span class="tex">SA=2lw+2lh+2wh</span> (a face table helps). Cube: <span class="tex">SA=6s^2</span>. Not <span class="tex">l\times w\times h</span>!</div>
+    <div><b>Triangular prism:</b> 2 triangles <span class="tex">(\tfrac12bh)</span> + 3 rectangles (each side × length). Shortcut: perimeter × length.</div>
+    <div><b>Real jobs:</b> only the faces that get covered, minus openings, × coats, ÷ what one can or sheet covers, round <b>up</b>, then the cost.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l10">
+    <div><div class="kicker">Your turn</div><b>Assignment 10 · Questions 9–18</b><div class="muted">A fish tank, a menu stand, drywall for a garage, Jae’s mistake, a cube backwards, and five quick checks. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l11/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 11 — Surface Area of Cylinders, Pyramids and Cones</b><div class="muted">Peel the label off a can into a rectangle, and unfold a pyramid into triangles.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l10.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l10', homeHref: '../../', title: '3.10 Nets and Surface Area of Prisms' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

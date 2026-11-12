@@ -9,7 +9,7 @@
   /* lessons that have a lesson page under lessons/ (examples + the teacher's class notes); the home page and the
    * lesson sidebar link to it as lessons/u1/l7/?class=<block>. The coordinator switches lessons on here. */
   root.HW.TEACHING = { base: 'lessons/',
-    lessons: ['u1l0', 'u1l1', 'u1l2', 'u1l3', 'u1l4', 'u1l5', 'u1l6', 'u1l7', 'u1l8', 'u1l9', 'u1l10', 'u1l11'] };
+    lessons: ['u1l0', 'u1l1', 'u1l2', 'u1l3', 'u1l4', 'u1l5', 'u1l6', 'u1l7', 'u1l8', 'u1l9', 'u1l10', 'u1l11', 'u2l1', 'u2l2', 'u2l3', 'u2l4', 'u2l5', 'u2l6', 'u2l7', 'u2l8', 'u2l9', 'u3l1', 'u3l2', 'u3l3', 'u3l4', 'u3l5', 'u3l6', 'u3l7', 'u3l8', 'u3l9', 'u3l10', 'u3l11', 'u3l12', 'u4l1', 'u4l2', 'u4l3', 'u4l4', 'u4l5', 'u4l6', 'u4l7'] };
   /* project: { id, title } = the unit's guided project (js/projects/u<N>.js, opened at #/project/<id>). The class calendar
      gives it a project work day ('p' + unit) right before the unit's review lesson (the last lesson listed). */
   root.HW.CATALOG = [
@@ -26,7 +26,7 @@
       { id: 'u1l9', num: '9', title: 'On Sale! Discounts and Sale Prices' },
       { id: 'u1l10', num: '10', title: 'Currency Exchange: Converting, and Buy vs Sell Rates' },
       { id: 'u1l11', num: '11', title: 'Unit 1 Review' }] },
-    { unit: 2, title: 'Earning an Income', outcomes: 'N2 · A1', lessons: [
+    { unit: 2, title: 'Earning an Income', outcomes: 'N2 · A1', project: { id: 'u2', title: 'Pick Your Job' }, lessons: [
       { id: 'u2l1', num: '1', title: 'Time Math: Hours, Minutes and Timesheets' },
       { id: 'u2l2', num: '2', title: 'Wages and Salaries: Gross Pay and Pay Periods' },
       { id: 'u2l3', num: '3', title: 'Overtime: Time-and-a-Half and Double Time' },
@@ -36,7 +36,7 @@
       { id: 'u2l7', num: '7', title: 'Deductions and Net Pay: Reading a Pay Stub' },
       { id: 'u2l8', num: '8', title: 'Working Backwards: How Many Hours Do I Need?' },
       { id: 'u2l9', num: '9', title: 'Unit 2 Review' }] },
-    { unit: 3, title: 'Length, Area and Surface Area', outcomes: 'M1 · M2 · M3 · M4 · A1', lessons: [
+    { unit: 3, title: 'Length, Area and Surface Area', outcomes: 'M1 · M2 · M3 · M4 · A1', project: { id: 'u3', title: 'Reno Crew' }, lessons: [
       { id: 'u3l1', num: '1', title: 'Fractions Refresher: Mixed Numbers' },
       { id: 'u3l2', num: '2', title: 'The SI System: Units, Prefixes and Referents' },
       { id: 'u3l3', num: '3', title: 'The Imperial System and Reading a Tape Measure' },
@@ -49,7 +49,7 @@
       { id: 'u3l10', num: '10', title: 'Nets and Surface Area of Prisms' },
       { id: 'u3l11', num: '11', title: 'Surface Area of Cylinders, Pyramids and Cones' },
       { id: 'u3l12', num: '12', title: 'Unit 3 Review' }] },
-    { unit: 4, title: 'Volume, Capacity, Mass and Temperature', outcomes: 'M1 · M2', lessons: [
+    { unit: 4, title: 'Volume, Capacity, Mass and Temperature', outcomes: 'M1 · M2', project: { id: 'u4', title: 'Recipe Rescue' }, lessons: [
       { id: 'u4l1', num: '1', title: 'Volume of Prisms and Cylinders' },
       { id: 'u4l2', num: '2', title: 'Capacity: Litres, Gallons, and US vs British Units' },
       { id: 'u4l3', num: '3', title: 'Temperature: Celsius and Fahrenheit' },

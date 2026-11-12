@@ -1,0 +1,102 @@
+/* Math 10-3 · Unit 2 · Lesson 8 — Working Backwards: styles used only on this page (prefix u2l8-).
+ * Colours: pay brown, rate blue, hours green, the "undo" direction amber, answers red, checks green, overtime orange. */
+.u2l8 .ex-cap .katex { font-size: 1.04em; }
+.u2l8 .ans .katex, .u2l8 .pl .katex { font-size: 1.04em; }
+.u2l8-c { display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; }
+.u2l8-pcol { display: flex; gap: 8px; flex: none; }
+
+/* ---------- page pieces ---------- */
+.u2l8-key { display: grid; grid-template-columns: 1fr 300px; gap: 18px; align-items: center; margin: 4px 0 14px; }
+.u2l8-key > .def { margin: 0; }
+.u2l8-three { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; margin: 10px 0 8px; font-size: 21px; }
+.u2l8-tri { margin: 0; text-align: center; }
+.u2l8-tri svg { width: 260px; height: auto; }
+.u2l8-tri figcaption { font-size: 16px; color: var(--muted); line-height: 1.3; }
+.u2l8-up { background: #eaf6ef; } .u2l8-up .tip-ic { background: var(--ok); color: #fff; font-weight: 900; }
+.u2l8-note { background: #eef3f9; } .u2l8-note .tip-ic { background: #3a5b80; color: #fff; font-weight: 800; }
+.u2l8-steps { list-style: none; padding: 0; margin: 10px 0 4px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.u2l8-steps.n3 { grid-template-columns: repeat(3, 1fr); }
+.u2l8-steps > li { background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 8px 12px; font-size: 17px; line-height: 1.3; }
+.u2l8-steps > li > b:first-child { display: block; font: 800 16px var(--round); color: var(--brand2); }
+
+/* ---------- explainer pieces ---------- */
+.u2l8-svg { overflow: visible; pointer-events: none; }
+.u2l8-eq { font-size: 22px; color: var(--ink); white-space: nowrap; }
+.u2l8-eq.res { color: #8b2f1c; font-weight: 700; }
+.u2l8-eq.ok { color: #0e5e41; background: #eaf6ef; border-radius: 10px; }
+.u2l8-eq small { font-size: 16px; color: var(--muted); }
+.u2l8-est { background: #e9f0f8; border-radius: 12px; font-size: 20px; color: #2c4a6e; }
+.u2l8-lcd { box-sizing: border-box; background: #c9d4bf; border: 5px solid #3a4254; border-radius: 12px; padding: 3px 12px; font: 700 18px/1.25 ui-monospace, Menlo, monospace; color: #1d2a18; box-shadow: inset 0 2px 6px rgba(0,0,0,.25); }
+.u2l8-lcd .e { white-space: nowrap; } .u2l8-lcd .r { text-align: right; font-size: 28px; font-weight: 800; }
+.u2l8-wrong { background: #fbe6e4; border: 2px solid #c93a33; border-radius: 12px; font-size: 20px; color: #8b2f1c; }
+
+/* the undo machine */
+.u2l8-slot { background: #fff; border: 3px solid #b9ad97; border-radius: 16px; font-size: 22px; gap: 8px; }
+.u2l8-slot b { font-size: 26px; }
+.u2l8-slot b.q { color: var(--red); font-size: 34px; }
+.u2l8-ans b { color: var(--red); font-size: 28px; }
+.u2l8-mach { flex-direction: column; background: #eef1f5; border: 4px solid #3a4254; border-radius: 20px; font: 900 32px var(--round); color: #3a4254; }
+.u2l8-mach > div { display: flex; flex-direction: column; align-items: center; }
+.u2l8-mach small { font: 700 15px var(--round); color: var(--muted); }
+.u2l8-mach.undo { border-color: #c27a0e; background: #fff4e0; color: #8a560a; }
+.u2l8-rowlab { font: 800 17px var(--round); color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+.u2l8-rowlab.b { color: #c27a0e; }
+.u2l8-tline { background: #fff; border: 2px solid var(--line); border-radius: 12px; font-size: 22px; padding: 0 16px; }
+.u2l8-tline.big { font-size: 30px; border-color: #6e4a1c; background: #fff6e5; }
+.u2l8-wwh { border-radius: 10px; font-size: 19px; }
+.u2l8-wwh.ok { background: #e3f3ea; color: #0e5e41; } .u2l8-wwh.no { background: #fbe6e4; color: #8b2f1c; }
+.u2l8-wwc { font-size: 20px; line-height: 1.35; }
+
+/* round up */
+.u2l8-goal { background: #c93a33; border-radius: 2px; }
+.u2l8-goal > i { position: absolute; top: -24px; left: 50%; transform: translateX(-50%); font: 800 16px var(--round); font-style: normal; color: #c93a33; white-space: nowrap; }
+.u2l8-goal.h > i { left: auto; right: 100%; top: -10px; transform: none; margin-right: 6px; }
+.u2l8-hlab { font-size: 24px; }
+.u2l8-pbar { justify-content: flex-start; padding-left: 14px; border-radius: 10px; font-size: 20px; white-space: nowrap; transform-origin: left center; }
+.u2l8-pbar.no { background: #f7d3cf; border: 3px solid #c93a33; } .u2l8-pbar.ok { background: #c9ecd9; border: 3px solid #12805a; }
+.u2l8-shift { flex-direction: column; background: #cfe0fb; border: 2px solid #1f5bd6; border-radius: 10px; line-height: 1.1; }
+.u2l8-shift > div { display: flex; flex-direction: column; }
+.u2l8-shift b { font: 900 22px var(--round); color: #1f5bd6; } .u2l8-shift small { font-size: 13px; color: var(--muted); }
+
+/* Kofi's week */
+.u2l8-day { font: 800 18px var(--round); color: var(--muted); }
+.u2l8-reg { background: #cfe0fb; border: 2px solid #1f5bd6; border-radius: 8px 0 0 8px; font: 700 16px var(--round); color: #1f5bd6; transform-origin: left center; }
+.u2l8-ot { background: #f7c98a; border: 2px solid #c27a0e; border-radius: 0 8px 8px 0; font: 800 16px var(--round); color: #7a4a06; }
+.u2l8-sline { justify-content: flex-start; background: #fff; border-left: 6px solid #c9b79a; border-radius: 8px; padding: 0 14px; font-size: 20px; gap: 8px; white-space: nowrap; }
+.u2l8-sline > div > b:first-child { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #6e4a1c; color: #fff; font: 800 15px var(--round); margin-right: 6px; }
+.u2l8-sline.res { border-color: #c93a33; background: #fff4f2; } .u2l8-sline.no { border-color: #c93a33; color: #8b2f1c; }
+.u2l8-meter { box-sizing: border-box; background: #fff; border: 2px solid #b9ad97; border-radius: 10px; }
+.u2l8-mfill { background: #8fb4ee; border-radius: 10px 0 0 10px; }
+.u2l8-mfill.ot { background: #f2b260; border-radius: 0; }
+.u2l8-mlab { font-size: 19px; color: var(--ink); }
+.u2l8-gap { border: 3px dashed #c93a33; border-radius: 8px; font: 800 16px var(--round); color: #c93a33; background: rgba(255,255,255,.6); }
+
+/* paid hours */
+.u2l8-hb { box-sizing: border-box; background: #cfe0fb; border: 1px solid #1f5bd6; border-radius: 3px; }
+.u2l8-hb.ot { background: #f7c98a; border-color: #c27a0e; }
+.u2l8-brace { font: 700 16px var(--round); color: #1f5bd6; border-top: 3px solid currentColor; }
+.u2l8-brace.ot { color: #c27a0e; }
+
+/* commission */
+.u2l8-tgt { box-sizing: border-box; justify-content: flex-end; padding-right: 16px; border: 3px dashed #6e4a1c; border-radius: 10px; font-size: 20px; }
+.u2l8-sal { background: #e9c46a; border: 3px solid #9a6a24; border-radius: 10px 0 0 10px; font-size: 19px; transform-origin: left center; }
+.u2l8-com { background: #c9ecd9; border: 3px solid #12805a; border-radius: 0 10px 10px 0; font-size: 19px; }
+.u2l8-blab { font: 800 18px var(--round); color: var(--muted); justify-content: flex-end; padding-right: 10px; }
+.u2l8-blab.l { justify-content: flex-start; padding: 0; color: var(--ink); font-weight: 600; font-size: 19px; }
+.u2l8-track { box-sizing: border-box; background: #fff; border: 2px solid #d8cdb8; border-radius: 10px; }
+.u2l8-tier { box-sizing: border-box; border-radius: 8px; font-size: 18px; white-space: nowrap; overflow: hidden; transform-origin: left center; }
+.u2l8-tier.a { background: #bfe3e3; border: 3px solid #0f8a8a; }
+.u2l8-tier.b { background: #d9c8f2; border: 3px solid #7b4fc4; }
+.u2l8-tick { font: 700 15px var(--round); color: var(--muted); }
+.u2l8-cfill { border-radius: 8px 0 0 8px; } .u2l8-cfill.a { background: #8fd1d1; } .u2l8-cfill.b { background: #b59ae6; border-radius: 0; }
+
+/* the thermometer */
+.u2l8-keep { background: #c9ecd9; border: 3px solid #12805a; border-radius: 10px 0 0 10px; }
+.u2l8-dedb { background: #f7d3cf; border: 3px solid #c93a33; border-radius: 0 10px 10px 0; }
+.u2l8-hl { justify-content: flex-start; font-size: 18px; color: #0e5e41; white-space: nowrap; }
+.u2l8-hl.d { justify-content: flex-end; color: #8b2f1c; }
+.u2l8-tube { box-sizing: border-box; background: #fff; border: 4px solid #8a8f99; border-bottom: 0; border-radius: 45px 45px 0 0; }
+.u2l8-bulb { box-sizing: border-box; background: #12805a; border: 4px solid #8a8f99; border-radius: 50%; }
+.u2l8-tfill { background: #12805a; }
+.u2l8-cnt { justify-content: flex-start; font-size: 19px; line-height: 1.25; text-align: left; }
+.u2l8-cnt b { color: #0e5e41; font-size: 22px; }

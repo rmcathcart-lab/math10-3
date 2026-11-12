@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wages and Salaries · Math 10-3 2.2</title>
+<meta name="description" content="Math 10-3 Unit 2 Lesson 2: wages and salaries. Gross pay from hours × hourly wage, timesheets, finding the hourly wage, Alberta's minimum wage, salaries split into pay periods (weekly, biweekly, semi-monthly, monthly), the hourly equivalent of a salary, and comparing job offers. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u2l2.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u2l2">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Count to a Million">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Count to a Million</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A boss offers you a strange job: count out loud from <b>1</b> to <b>1&#8201;000&#8201;000</b>.</p><p class="vw-ctx">You say <b>one number every second</b>, with no breaks, for <b>8 hours a day</b>.</p><p class="vw-ask">About how many work days will it take you? Guess first!</p></div><div class="vw-art"><svg viewBox="0 0 320 240" role="img" aria-label="A counter whose last digits keep rolling, beside a speech bubble">
+    <rect x="18" y="70" width="284" height="96" rx="16" fill="#2c3442"/>
+    <rect x="32" y="84" width="256" height="68" rx="8" fill="#c9d4b8"/>
+    <g font-family="ui-monospace, Menlo, monospace" font-size="44" font-weight="700" fill="#1e2618" text-anchor="middle">
+      <text x="62" y="134">0</text><text x="96" y="134">0</text><text x="130" y="134">0</text><text x="164" y="134">4</text><text x="198" y="134">2</text>
+      <text x="232" y="134">7<animate attributeName="opacity" values="1;0;0" dur="3s" calcMode="discrete" repeatCount="indefinite"/></text>
+      <text x="232" y="134" opacity="0">8<animate attributeName="opacity" values="0;1;0" dur="3s" calcMode="discrete" repeatCount="indefinite"/></text>
+      <text x="232" y="134" opacity="0">9<animate attributeName="opacity" values="0;0;1" dur="3s" calcMode="discrete" repeatCount="indefinite"/></text>
+      <text x="266" y="134">?</text>
+    </g>
+    <path d="M196 20 h96 a12 12 0 0 1 12 12 v22 a12 12 0 0 1 -12 12 h-60 l-14 14 v-14 h-22 a12 12 0 0 1 -12 -12 v-22 a12 12 0 0 1 12 -12z" fill="#fff" stroke="#9a6a24" stroke-width="3"><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="1s" repeatCount="indefinite"/></path>
+    <text x="244" y="50" font-size="20" font-weight="800" fill="#6e4a1c" text-anchor="middle" font-family="system-ui, sans-serif">…428!<animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="1s" repeatCount="indefinite"/></text>
+    <g fill="#9a6a24"><circle cx="70" cy="200" r="8"><animate attributeName="opacity" values="1;.2;1" dur="1s" repeatCount="indefinite"/></circle><circle cx="96" cy="200" r="8"><animate attributeName="opacity" values="1;.2;1" dur="1s" begin=".33s" repeatCount="indefinite"/></circle><circle cx="122" cy="200" r="8"><animate attributeName="opacity" values="1;.2;1" dur="1s" begin=".66s" repeatCount="indefinite"/></circle></g>
+    <text x="150" y="207" font-size="18" font-weight="700" fill="#5a5f6a" font-family="system-ui, sans-serif">1 per second</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Was your guess too high or too low?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans">1&#8201;000&#8201;000 seconds <span class="tex">\div 3600</span> (seconds in an hour) <span class="tex">\approx 278</span> hours. At 8 hours a day: <span class="tex">278\div8\approx35</span>, so about <b>35 work days</b>, or 7 weeks of full-time work! (Really it takes much longer: “seven hundred eighty-four thousand, three hundred twelve” takes more than a second to say.) At $15.00 an hour, those 278 hours would earn about <b>$4170</b>. Today: hours × hourly wage.</div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 2 Earning an Income · Lesson 2</div>
+  <h1>Wages and Salaries: Gross Pay and Pay Periods</h1>
+  <p class="lede">How much do you earn before anything is taken off? Today we work out <b>gross pay</b> for jobs paid <b>by the hour</b> (a wage) and jobs paid <b>by the year</b> (a salary), check Alberta’s <b>minimum wage</b>, split a salary into <b>paycheques</b>, and compare job offers fairly.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>explain <b>wage, salary, gross pay, deductions</b> and <b>net pay</b></li>
+      <li>find <b>gross pay = hours × hourly wage</b>, from a timesheet too</li>
+      <li>find an <b>hourly wage</b> from the pay and the hours, and check it against Alberta’s <b>minimum wage</b></li>
+      <li>split a salary into <b>pay periods</b> (weekly, biweekly, semi-monthly, monthly) and find the yearly salary from one cheque</li>
+      <li>find the <b>hourly equivalent</b> of a salary and <b>compare</b> a wage job with a salary job</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N2</b> Demonstrate an understanding of income, including: wages, salary, contracts, commissions, piecework to calculate gross pay and net pay.</div>
+</section>
+
+<!-- ================= 1. Wages, salaries and gross pay ================= -->
+<section class="card" data-ink="s1" data-section="1. Wages, Salaries and Gross Pay">
+  <div class="sec-h"><span class="badge">1</span><h2>Wages, Salaries and Gross Pay</h2></div>
+  <p>Your <b>income</b> is the money you are paid for the work you do. Two of the most common ways to be paid are:</p>
+  <div class="u2l2-two">
+    <div><b>Wage</b>You are paid a set amount for <b>each hour</b> you work (an <b>hourly wage</b> or <b>hourly rate</b>, like $17.50/h). More hours means more pay.</div>
+    <div><b>Salary</b>You are paid a set amount for a <b>whole year</b> (like $52&#8201;000 a year), split into equal paycheques. The pay stays the same even if you work a little more or less one week.</div>
+  </div>
+  <div class="def"><b>Gross pay</b> is everything you earn <b>before</b> anything is taken off. Your employer takes money off your cheque for things like income tax. These are called <b>deductions</b>. The amount you actually take home is your <b>net pay</b>, so net pay is always less than gross pay. (Deductions are in Lesson 7.)</div>
+  <table class="u2l2-tbl u2l2-jobs">
+    <tr><th>Jobs that often pay a wage</th><th>Jobs that often pay a salary</th></tr>
+    <tr><td>cashier, cook, server, warehouse worker, lifeguard, construction labourer, apprentice in a trade</td><td>teacher, office manager, accountant, engineer, store manager, police officer</td></tr>
+  </table>
+</section>
+
+<!-- ================= 2. Gross pay from an hourly wage ================= -->
+<section class="card" data-ink="s2" data-section="2. Gross Pay from an Hourly Wage">
+  <div class="sec-h"><span class="badge">2</span><h2>Gross Pay from an Hourly Wage</h2></div>
+  <p>To find gross pay for an hourly job, <b>multiply</b> the hours by the hourly wage.</p>
+  <div class="def"><b>Gross pay from a wage:</b> <span class="u2l2-gap"></span> gross pay <span class="tex">=</span> hours worked <span class="tex">\times</span> hourly wage<br>Write the hours as a <b>decimal</b> first. Round the pay to the nearest cent at the <b>end</b>.</div>
+  <div class="u2l2-tips">
+    <div class="tip"><div class="tip-ic">↺</div><div><b>Quick refresher:</b> minutes ÷ 60 = part of an hour. 15 min = 0.25 h, 30 min = 0.5 h, 45 min = 0.75 h. So 7 h 45 min = <b>7.75 h</b>, not 7.45 h.</div></div>
+    <div class="tip"><div class="tip-ic">≈</div><div><b>Estimate:</b> round the hours and the wage to easy numbers. For 7.75 h at $23.85/h: about <span class="tex">8\times\$24=\$192</span>. If your calculator says $1848 or $18.48, something went wrong.</div></div>
+  </div>
+  <div class="explainer" data-explainer="paycheque"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Hours × hourly wage</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Noor works at a garden centre for $16.40/h. On Saturday she works 6 hours. What is her gross pay?</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">gross pay <span class="tex">=6\times\$16.40=\$98.40</span><br><b>Noor earns $98.40.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Dev is an apprentice carpenter. He earns $23.85/h. One day he works 7 h 45 min. Estimate, then find his gross pay.</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">8\times\$24=\$192</span><br>7 h 45 min = 7.75 h<br>gross pay <span class="tex">=7.75\times\$23.85=\$184.8375\approx\$184.84</span><br><b>Dev earns $184.84</b> (close to the estimate).</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Pay from a Timesheet">
+  <h3 class="sub">Pay from a timesheet</h3>
+  <p>Most hourly workers fill in a <b>timesheet</b> (or time card). It shows when each shift starts and ends. A break you are <b>not</b> paid for (an <b>unpaid break</b>) is taken off the hours.</p>
+  <div class="explainer" data-explainer="sofia"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Sofia’s week</h3></div>
+  <p class="q">Sofia is a cook at a café in Cochrane. She earns $17.60/h. Complete her timesheet, then find her gross pay for the week.</p>
+  <table class="u2l2-tbl u2l2-ts">
+    <tr><th>Day</th><th>Start</th><th>End</th><th>Unpaid break</th><th>Hours paid</th></tr>
+    <tr><th>Monday</th><td>6:00 a.m.</td><td>2:30 p.m.</td><td>30 min</td><td><span data-reveal>8</span></td></tr>
+    <tr><th>Tuesday</th><td>7:00 a.m.</td><td>12:00 p.m.</td><td>none</td><td><span data-reveal>5</span></td></tr>
+    <tr><th>Wednesday</th><td colspan="3" class="off">day off</td><td>0</td></tr>
+    <tr><th>Thursday</th><td>10:30 a.m.</td><td>4:45 p.m.</td><td>30 min</td><td><span data-reveal>5.75</span></td></tr>
+    <tr><th>Friday</th><td>11:00 a.m.</td><td>7:30 p.m.</td><td>30 min</td><td><span data-reveal>8</span></td></tr>
+    <tr><th>Saturday</th><td>8:00 a.m.</td><td>12:00 p.m.</td><td>none</td><td><span data-reveal>4</span></td></tr>
+    <tr class="tot"><th colspan="4">Total hours</th><td><span data-reveal>30.75</span></td></tr>
+  </table>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Gross pay for the week:</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Mon: 6:00 to 2:30 is 8 h 30 min = 8.5 h; <span class="tex">8.5-0.5=8</span> h. Thu: 10:30 to 4:45 is 6 h 15 min = 6.25 h; <span class="tex">6.25-0.5=5.75</span> h. Fri: <span class="tex">8.5-0.5=8</span> h<br>total <span class="tex">=8+5+5.75+8+4=30.75</span> h<br>gross pay <span class="tex">=30.75\times\$17.60=\$541.20</span> (estimate: <span class="tex">31\times\$18=\$558</span> ✓)<br><b>Sofia’s gross pay for the week is $541.20.</b></div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2c" data-section="2. Finding the Hourly Wage">
+  <h3 class="sub">Finding the hourly wage</h3>
+  <p>If you know the pay and the hours, you can find the hourly wage. <b>Undo</b> the multiplying: <b>divide</b>.</p>
+  <div class="def"><b>Finding the hourly wage:</b> <span class="u2l2-gap"></span> hourly wage <span class="tex">=</span> gross pay <span class="tex">\div</span> hours worked</div>
+  <div data-extra><div class="explainer" data-explainer="undo"></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Amara’s hourly wage</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Amara works at a pharmacy. Last week she worked 25.5 hours and her gross pay was $446.25. What is her hourly wage? Check your answer.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">hourly wage <span class="tex">=\$446.25\div25.5=\$17.50</span><br>Check: <span class="tex">25.5\times\$17.50=\$446.25</span> ✓<br><b>Amara earns $17.50/h.</b></div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Minimum wage ================= -->
+<section class="card" data-ink="s3" data-section="3. Alberta’s Minimum Wage">
+  <div class="sec-h"><span class="badge">3</span><h2>Alberta’s Minimum Wage</h2></div>
+  <p>The <b>minimum wage</b> is the lowest hourly wage an employer is allowed to pay. Each province sets its own.</p>
+  <div class="u2l2-minw">
+    <div class="h">Alberta minimum wage <small>(as of 2026; rates can change)</small></div>
+    <div class="r"><b>$15.00/h</b><span>Most workers: at least $15.00 an hour.</span></div>
+    <div class="r s"><b>$13.00/h</b><span>Students <b>under 18</b> can be paid $13.00/h for the <b>first 28 hours</b> in a week <b>while school is in session</b>. Any hours past 28 that week, and all hours in the summer or other school breaks, must be paid at least $15.00/h.</span></div>
+  </div>
+  <p>To check a job, find the hourly wage (pay ÷ hours) and <b>compare</b> it with the minimum.</p>
+  <div class="explainer" data-explainer="minWage"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Minimum wage or not?</h3></div>
+  <p class="q">Is each person paid at least Alberta’s minimum wage?</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Ben is 22. He earned $456.00 for 32 hours at a car dealership.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$456.00\div32=\$14.25</span>/h<br><span class="tex">\$14.25&lt;\$15.00</span><br><b>No.</b> Ben is paid less than minimum wage.</div></div></div>
+    <div class="part"><div class="pl">(b) Lucy is 16. In November she earned $283.50 for 21 hours at a bakery.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$283.50\div21=\$13.50</span>/h<br>School is in, she is under 18 and works under 28 h, so the minimum is $13.00.<br><b>Yes</b>, <span class="tex">\$13.50\ge\$13.00</span>.</div></div></div>
+    <div class="part"><div class="pl">(c) In July, Lucy earned $378.00 for 28 hours at the same bakery.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$378.00\div28=\$13.50</span>/h<br>In the summer the minimum is $15.00.<br><b>No.</b> <span class="tex">\$13.50&lt;\$15.00</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Tyler’s week in October</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Tyler is 17 and works at a sporting goods store. His employer pays the lowest wage the law allows. In one week in October, Tyler works 31 hours. What is his gross pay?</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">first 28 h at $13.00: <span class="tex">28\times\$13.00=\$364.00</span><br>hours past 28: <span class="tex">31-28=3</span> h at $15.00: <span class="tex">3\times\$15.00=\$45.00</span><br>gross pay <span class="tex">=\$364.00+\$45.00=\$409.00</span><br><b>Tyler’s gross pay is $409.00.</b></div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u2l2"></section>
+
+<!-- ================= 4. Salaries and pay periods ================= -->
+<section class="card" data-ink="s4" data-section="4. Salaries and Pay Periods">
+  <div class="sec-h"><span class="badge">4</span><h2>Salaries and Pay Periods</h2></div>
+  <p>A salary is a yearly amount, but nobody waits a whole year to be paid. The salary is split into <b>equal paycheques</b>. The time each cheque covers is a <b>pay period</b>.</p>
+  <table class="u2l2-tbl u2l2-pp">
+    <tr><th>Pay period</th><th>How often you are paid</th><th>Paycheques in a year</th></tr>
+    <tr><th>weekly</th><td>every week</td><td><b>52</b></td></tr>
+    <tr><th>biweekly</th><td>every two weeks</td><td><b>26</b></td></tr>
+    <tr><th>semi-monthly</th><td>twice a month (e.g. the 15th and the last day)</td><td><b>24</b></td></tr>
+    <tr><th>monthly</th><td>once a month</td><td><b>12</b></td></tr>
+  </table>
+  <div class="def"><b>Salaries:</b> <span class="u2l2-gap"></span> pay per cheque <span class="tex">=</span> yearly salary <span class="tex">\div</span> number of pay periods<br><span class="u2l2-ind"></span> yearly salary <span class="tex">=</span> pay per cheque <span class="tex">\times</span> number of pay periods</div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b><i>Bi</i>weekly (every 2 weeks, 26 cheques) and <i>semi</i>-monthly (twice a month, 24 cheques) sound alike but are different.</b> A month is a bit more than 4 weeks, so 26 is more than <span class="tex">2\times12=24</span>.</div></div>
+  <div class="explainer" data-explainer="payPeriods"></div>
+  <div data-extra><div class="explainer" data-explainer="biVsSemi"></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Paycheques from a salary</h3></div>
+  <p class="q">Hana is a dental office manager. Her salary is $54&#8201;600 a year.</p>
+  <p class="q">(a) Complete the table to show her gross pay for each pay period.</p>
+  <table class="u2l2-tbl u2l2-hana">
+    <tr><th>Pay period</th><td>weekly</td><td>biweekly</td><td>semi-monthly</td><td>monthly</td></tr>
+    <tr><th>Calculation</th><td><span data-reveal><span class="tex">54\,600\div52</span></span></td><td><span data-reveal><span class="tex">54\,600\div26</span></span></td><td><span data-reveal><span class="tex">54\,600\div24</span></span></td><td><span data-reveal><span class="tex">54\,600\div12</span></span></td></tr>
+    <tr><th>Gross pay</th><td><span data-reveal>$1&#8201;050.00</span></td><td><span data-reveal>$2&#8201;100.00</span></td><td><span data-reveal>$2&#8201;275.00</span></td><td><span data-reveal>$4&#8201;550.00</span></td></tr>
+  </table>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(b) Marco is a lab technician. He is paid $1&#8201;925.50 biweekly. What is his yearly salary? What is his average pay per month?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">yearly salary <span class="tex">=\$1\,925.50\times26=\$50\,063.00</span><br>per month <span class="tex">=\$50\,063.00\div12=\$4\,171.9166\ldots\approx\$4\,171.92</span><br><b>Marco earns $50&#8201;063.00 a year, which is about $4&#8201;171.92 a month.</b></div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. Hourly Equivalent of a Salary">
+  <h3 class="sub">The hourly equivalent of a salary</h3>
+  <p>To compare a salary with an hourly wage, find the salary’s <b>hourly equivalent</b>: what it works out to for each hour worked. A full-time 40-hour week is <span class="tex">40\times52=2\,080</span> hours a year.</p>
+  <div class="def"><b>Hourly equivalent of a salary:</b> <span class="u2l2-gap"></span> hourly equivalent <span class="tex">=</span> yearly salary <span class="tex">\div</span> (hours per week <span class="tex">\times</span> 52)<br><b>Yearly pay from a wage:</b> <span class="u2l2-gap"></span> yearly pay <span class="tex">=</span> hourly wage <span class="tex">\times</span> hours per week <span class="tex">\times</span> weeks worked</div>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>On the TI-30XIIS:</b> for $46&#8201;800 and 40 h a week, key <span class="keys"><kbd>4</kbd><kbd>6</kbd><kbd>8</kbd><kbd>0</kbd><kbd>0</kbd><kbd>÷</kbd><kbd>(</kbd><kbd>4</kbd><kbd>0</kbd><kbd>×</kbd><kbd>5</kbd><kbd>2</kbd><kbd>)</kbd><kbd>ENTER</kbd></span>. It gives 22.5. Without the brackets the calculator divides by 40 and then <b>multiplies</b> by 52.</div>
+    <div class="u2l2-pcol"><button class="pill" data-keys="46800 ÷ ( 40 × 52 ) =">With brackets</button><button class="pill" data-keys="46800 ÷ 40 × 52 =">Without</button></div>
+  </div>
+  <div class="explainer" data-explainer="hourlyEq"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Per hour and per year</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A youth centre pays its program coordinator a salary of $46&#8201;800 for a 40-hour week. What is the hourly equivalent?</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">hours a year <span class="tex">=40\times52=2\,080</span><br><span class="tex">\$46\,800\div2\,080=\$22.50</span><br><b>The salary works out to $22.50/h.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Jesse works at a print shop for $21.40/h, 37.5 hours every week of the year. What is his yearly gross pay?</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$21.40\times37.5\times52=\$41\,730.00</span><br><b>Jesse earns $41&#8201;730.00 a year.</b></div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (one per lesson) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–10">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 2 · Questions 1–10</h2>
+  <p class="pr-t">Try these before we go on to comparing job offers.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Words: wage, salary, gross pay…</span>
+    <span><b>2–5</b>Gross pay and timesheets</span>
+    <span><b>6–7</b>Hourly wage and minimum wage</span>
+    <span><b>8–10</b>Pay periods, yearly salary, hourly equivalent</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 10.</span><a class="pill" href="../../../#/lesson/u2l2">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. Comparing jobs ================= -->
+<section class="card" data-ink="s5" data-section="5. Comparing Wage and Salary Jobs">
+  <div class="sec-h"><span class="badge">5</span><h2>Comparing Wage and Salary Jobs</h2></div>
+  <p>To compare two jobs fairly, put them in the <b>same units</b>: pay per week (or per year) <b>and</b> pay per hour. Then think about more than the money.</p>
+  <table class="u2l2-tbl u2l2-pc">
+    <tr><th></th><th>Hourly wage</th><th>Salary</th></tr>
+    <tr><th>Good</th><td>paid for every hour you work; extra hours mean extra pay (and overtime)</td><td>the same pay every cheque, so it is easy to budget; often paid vacation and benefits</td></tr>
+    <tr><th>Not so good</th><td>hours can be cut, so pay can change; no work means no pay</td><td>extra hours usually mean no extra pay</td></tr>
+  </table>
+  <div class="explainer" data-explainer="jobCompare"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Riya’s two job offers</h3></div>
+  <p class="q">Riya has two job offers. <b>Job A:</b> $22.75/h, 35 hours a week. <b>Job B:</b> a salary of $42&#8201;900 a year, 37.5 hours a week.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the weekly pay for each job.</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: <span class="tex">35\times\$22.75=\$796.25</span><br>B: <span class="tex">\$42\,900\div52=\$825.00</span><br><b>Job B pays $28.75 more a week.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Find the pay per hour for each job.</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: $22.75/h<br>B: <span class="tex">\$825.00\div37.5=\$22.00</span>/h<br><b>Job A pays more for each hour.</b></div></div></div>
+    <div class="part"><div class="pl">(c) What if Job A gave Riya 40 hours a week instead? Which job would pay more each week then?</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: <span class="tex">40\times\$22.75=\$910.00</span>, which is more than $825.00. <b>Job A would pay more.</b></div></div></div>
+    <div class="part"><div class="pl">(d) Which job would you pick? Give one reason about money and one other reason.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Sample: <b>Job B</b>, because it pays $825.00 a week no matter what and it is easy to budget.<br>Or <b>Job A</b>: it pays more per hour, leaves 2.5 h more free time, and extra hours are paid.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Find the mistake</h3></div>
+  <p class="q">Find the mistake in each solution and fix it.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Cole’s salary is $39&#8201;000 a year, paid semi-monthly.<br><i>Cole’s work:</i> <span class="tex">\$39\,000\div26=\$1\,500.00</span> per cheque.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Mistake: semi-monthly means <b>24</b> cheques, not 26 (26 is biweekly).<br><span class="tex">\$39\,000\div24=\$1\,625.00</span><br><b>Each cheque is $1&#8201;625.00.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Erin worked 6 h 45 min at $16.00/h.<br><i>Erin’s work:</i> <span class="tex">6.45\times\$16.00=\$103.20</span>.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Mistake: 45 min is not 0.45 h. <span class="tex">45\div60=0.75</span>, so 6 h 45 min = 6.75 h.<br><span class="tex">6.75\times\$16.00=\$108.00</span><br><b>Erin earned $108.00.</b></div></div></div>
+  </div>
+  <div data-extra><div class="explainer" data-explainer="mistakes"></div></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Wage:</b> paid by the hour. <b>Salary:</b> paid by the year. <b>Gross pay</b> is before deductions; <b>net pay</b> (what you take home) is less.</div>
+    <div><b>Gross pay = hours × hourly wage</b> (hours as a decimal: 7 h 45 min = 7.75 h). <b>Hourly wage = pay ÷ hours.</b> Estimate first; round to the cent at the end.</div>
+    <div><b>Alberta minimum wage:</b> $15.00/h; students under 18 may get $13.00/h for the first 28 h a week while school is in.</div>
+    <div><b>Pay periods:</b> weekly 52, biweekly 26, semi-monthly 24, monthly 12. Cheque = salary ÷ periods. <b>Hourly equivalent</b> = salary ÷ (hours per week × 52).</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u2l2">
+    <div><div class="kicker">Your turn</div><b>Assignment 2 · Questions 11–18</b><div class="muted">Comparing job offers, finding the mistake, a raise or more hours, biweekly vs semi-monthly, and multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l3/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 3 — Overtime: Time-and-a-Half and Double Time</b><div class="muted">Hours past 8 in a day or 44 in a week are paid at 1.5 times the regular wage.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u2l2.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u2l2', homeHref: '../../', title: '2.2 Wages and Salaries' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The SI System · Math 10-3 3.2</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 2: SI units for length, mass, capacity and temperature, the prefixes kilo to milli, referents and sensible units, reading a metric ruler or tape, and changing units on the prefix staircase. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l2.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l2">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Palindrome Odometer">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Palindrome Odometer</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Maya is driving to Banff. Her odometer shows <b>15951 km</b>. That number is a <b>palindrome</b>: it reads the same forwards and backwards.</p><p class="vw-ctx">Exactly 2 hours later, the odometer shows the very <b>next</b> palindrome.</p><p class="vw-ask">How fast was Maya driving?</p></div><div class="vw-art"><svg viewBox="0 0 320 250" role="img" aria-label="A car driving along a road past mountains, with an odometer reading 15951 km">
+    <path d="M0 150 L60 80 L110 130 L170 50 L240 140 L290 95 L320 120 V170 H0 Z" fill="#c9d6e3"/>
+    <path d="M150 74 L170 50 L190 76 Z" fill="#fff"/>
+    <rect x="0" y="170" width="320" height="50" fill="#5a5f6a"/>
+    <g stroke="#fff" stroke-width="5" stroke-dasharray="24 20"><line x1="-44" y1="195" x2="364" y2="195"><animate attributeName="x1" values="-44;-88" dur="0.6s" repeatCount="indefinite"/><animate attributeName="x2" values="364;320" dur="0.6s" repeatCount="indefinite"/></line></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="0.5s" repeatCount="indefinite"/>
+      <path d="M92 168 V146 Q96 132 116 130 L140 112 Q150 106 166 106 H206 Q220 106 230 120 L244 132 Q258 134 262 146 V168 Z" fill="#c93a33"/>
+      <path d="M146 116 Q152 112 164 112 H184 V130 H130 Z M190 112 H204 Q214 112 222 124 L226 130 H190 Z" fill="#dbe8f5"/>
+    </g>
+    <g><circle cx="126" cy="170" r="15" fill="#1c2230"/><circle cx="126" cy="170" r="6" fill="#c9ced8"/><path d="M126 158 V182 M114 170 H138" stroke="#9aa0ab" stroke-width="3"><animateTransform attributeName="transform" type="rotate" from="0 126 170" to="360 126 170" dur="0.5s" repeatCount="indefinite"/></path></g>
+    <g><circle cx="228" cy="170" r="15" fill="#1c2230"/><circle cx="228" cy="170" r="6" fill="#c9ced8"/><path d="M228 158 V182 M216 170 H240" stroke="#9aa0ab" stroke-width="3"><animateTransform attributeName="transform" type="rotate" from="0 228 170" to="360 228 170" dur="0.5s" repeatCount="indefinite"/></path></g>
+    <rect x="70" y="8" width="180" height="46" rx="8" fill="#1c2230"/>
+    <g font-family="'Courier New', monospace" font-size="30" font-weight="700" fill="#7cf29a" text-anchor="middle"><text x="96" y="42">1</text><text x="124" y="42">5</text><text x="152" y="42">9</text><text x="180" y="42">5</text><text x="208" y="42">1</text></g>
+    <text x="236" y="42" font-size="14" font-weight="700" fill="#c9ced8" text-anchor="middle" font-family="system-ui, sans-serif">km</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Lots of people guess 15961. Is that really a palindrome?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans">No: 15961 backwards is 16951. The middle digit is already 9, so it can’t go up. The next palindrome is <b>16061 km</b>. Maya drove <span class="tex">16061-15951=110</span> km in 2 h, so she was driving <b>55 km/h</b> (about the speed limit on a small highway). Today: kilometres, metres, and all the other SI units.</div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 2</div>
+  <h1>The SI System: Units, Prefixes and Referents</h1>
+  <p class="lede">Canada measures in <b>SI units</b>: metres, grams, litres and degrees Celsius. Today we learn what the <b>prefixes</b> kilo, centi and milli mean, use everyday <b>referents</b> to picture a unit, <b>read a metric ruler</b> to the millimetre, and <b>change units</b> by moving the decimal point.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>name the SI unit for <b>length, mass, capacity, temperature and area</b></li>
+      <li>tell what a <b>prefix</b> is worth (kilo = 1000, centi = 0.01, milli = 0.001)</li>
+      <li>use a <b>referent</b> to estimate, and choose a <b>sensible unit</b></li>
+      <li><b>read a metric ruler or tape</b> in centimetres and millimetres</li>
+      <li><b>change units</b> on the staircase by moving the decimal point, and <b>compare</b> measurements</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M1</b> Demonstrate an understanding of the Système International (SI) by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; applying strategies to convert SI units to imperial units.</div>
+</section>
+
+<!-- ================= 1. SI units ================= -->
+<section class="card" data-ink="s1" data-section="1. SI Units">
+  <div class="sec-h"><span class="badge">1</span><h2>SI Units: What We Measure and With What</h2></div>
+  <p>The <b>SI</b> (short for <i>Système International</i>, French for “International System”) is the <b>metric system</b>. It is the official measurement system in Canada and in most of the world. Each kind of measurement has one <b>base unit</b>. Bigger and smaller units are made from it by multiplying or dividing by 10, 100, 1000, …, just like place value.</p>
+  <table class="u3l2-tbl u3l2-units">
+    <tr><th>What you measure</th><th>It tells you …</th><th>SI unit (symbol)</th><th>Other units you will see</th></tr>
+    <tr><th>Length</th><td>how long, wide, tall or far</td><td><b>metre (m)</b></td><td>millimetre (mm), centimetre (cm), kilometre (km)</td></tr>
+    <tr><th>Mass</th><td>how heavy something is</td><td><b>gram (g)</b></td><td>milligram (mg), kilogram (kg), tonne (t)</td></tr>
+    <tr><th>Capacity</th><td>how much a container holds</td><td><b>litre (L)</b></td><td>millilitre (mL)</td></tr>
+    <tr><th>Temperature</th><td>how hot or cold</td><td><b>degree Celsius (°C)</b></td><td></td></tr>
+    <tr><th>Area</th><td>how much flat surface is covered</td><td><b>square metre (m²)</b></td><td>square centimetre (cm²)</td></tr>
+    <tr><th>Volume</th><td>how much space an object takes up</td><td><b>cubic metre (m³)</b></td><td>cubic centimetre (cm³)</td></tr>
+  </table>
+  <div class="def"><b>How the SI units fit together</b>
+    <ul class="u3l2-ul"><li>Water freezes at 0 °C and boils at 100 °C. <span class="u3l2-gap"></span> 1 tonne (t) = 1000 kg.</li>
+    <li>A cube 1 cm on each side has a volume of 1 cm³. It holds exactly <b>1 mL</b>, and 1 mL of water has a mass of about <b>1 g</b>.</li>
+    <li>So <b>1 L of water has a mass of about 1 kg</b>. (Area and volume units come later in this unit and in Unit 4.)</li></ul></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>What is measured?</h3></div>
+  <p class="q">For each item, write what is being measured (length, mass, capacity, temperature or area) and the SI unit you would use.</p>
+  <table class="u3l2-tbl u3l2-ex1">
+    <tr><th>Item</th><th>What is measured?</th><th>SI unit (symbol)</th></tr>
+    <tr><th>(a) the distance from Calgary to Banff</th><td><span data-reveal>length</span></td><td><span data-reveal>kilometre (km)</span></td></tr>
+    <tr><th>(b) how much water a kettle holds</th><td><span data-reveal>capacity</span></td><td><span data-reveal>litre (L)</span></td></tr>
+    <tr><th>(c) how heavy a bag of potatoes is</th><td><span data-reveal>mass</span></td><td><span data-reveal>kilogram (kg)</span></td></tr>
+    <tr><th>(d) how warm it is outside in July</th><td><span data-reveal>temperature</span></td><td><span data-reveal>degree Celsius (°C)</span></td></tr>
+    <tr><th>(e) the carpet needed to cover a floor</th><td><span data-reveal>area</span></td><td><span data-reveal>square metre (m²)</span></td></tr>
+    <tr><th>(f) the width of a phone screen</th><td><span data-reveal>length</span></td><td><span data-reveal>centimetre (cm) or millimetre (mm)</span></td></tr>
+  </table>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Prefixes ================= -->
+<section class="card" data-ink="s2" data-section="2. The Prefixes">
+  <div class="sec-h"><span class="badge">2</span><h2>The Prefixes</h2></div>
+  <p>A <b>prefix</b> is a word part at the front of a unit. It tells you <b>how many base units</b> the unit is worth. The same prefixes work for metres, grams and litres.</p>
+  <table class="u3l2-tbl u3l2-pre">
+    <tr><th>Prefix</th><td><b>kilo</b></td><td><b>hecto</b></td><td><b>deca</b></td><td class="base"><b>(base unit)</b></td><td><b>deci</b></td><td><b>centi</b></td><td><b>milli</b></td></tr>
+    <tr><th>Symbol</th><td>k</td><td>h</td><td>da</td><td class="base">m, g, L</td><td>d</td><td>c</td><td>m</td></tr>
+    <tr><th>Worth</th><td>1000</td><td>100</td><td>10</td><td class="base">1</td><td>0.1</td><td>0.01</td><td>0.001</td></tr>
+    <tr><th>Example</th><td>1 km = 1000 m</td><td>1 hm = 100 m</td><td>1 dam = 10 m</td><td class="base">1 m</td><td>1 dm = 0.1 m</td><td>1 cm = 0.01 m</td><td>1 mm = 0.001 m</td></tr>
+  </table>
+  <p>Read the bottom row the other way, too: 1 m = 10 dm = 100 cm = 1000 mm. A memory trick for the order: <b>K</b>ing <b>H</b>enry <b>D</b>ied <b>B</b>y <b>D</b>rinking <b>C</b>hocolate <b>M</b>ilk (kilo, hecto, deca, <b>B</b>ase, deci, centi, milli).</p>
+  <div class="def"><b>The units you will use most</b><br>1 km = 1000 m <span class="u3l2-gap"></span> 1 m = 100 cm = 1000 mm <span class="u3l2-gap"></span> 1 cm = 10 mm<br>1 kg = 1000 g <span class="u3l2-gap"></span> 1 g = 1000 mg <span class="u3l2-gap"></span> 1 L = 1000 mL <span class="u3l2-gap"></span> 1 t = 1000 kg</div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>The letter m does two jobs.</b> At the <b>end</b> of a symbol it means <b>metre</b>; at the <b>front</b> of a two-letter symbol it means <b>milli</b>. So mm is a millimetre, mg a milligram, mL a millilitre. Write litre with a capital L, write km with a small k, never add an “s” to a symbol, and leave a space: 5 km, not 5km or 5 kms.</div></div>
+  <div class="explainer" data-explainer="zoom"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Names, symbols and worth</h3></div>
+  <div class="u3l2-two">
+    <div>
+      <p class="q">(a) Complete the table.</p>
+      <table class="u3l2-tbl u3l2-ex2">
+        <tr><th>Unit name</th><th>Symbol</th><th>1 of these equals …</th></tr>
+        <tr><td>kilometre</td><td>km</td><td>1000 m</td></tr>
+        <tr><td>millilitre</td><td><span data-reveal>mL</span></td><td><span data-reveal>0.001 L</span></td></tr>
+        <tr><td><span data-reveal>centimetre</span></td><td>cm</td><td><span data-reveal>0.01 m</span></td></tr>
+        <tr><td>kilogram</td><td><span data-reveal>kg</span></td><td><span data-reveal>1000 g</span></td></tr>
+        <tr><td><span data-reveal>milligram</span></td><td>mg</td><td><span data-reveal>0.001 g</span></td></tr>
+        <tr><td>hectolitre</td><td><span data-reveal>hL</span></td><td><span data-reveal>100 L</span></td></tr>
+        <tr><td><span data-reveal>decimetre</span></td><td>dm</td><td><span data-reveal>0.1 m</span></td></tr>
+      </table>
+    </div>
+    <div>
+      <p class="q">(b) Fill in the blanks.</p>
+      <div class="u3l2-blanks">
+        <div>1 m = <span data-reveal>100</span> cm = <span data-reveal>1000</span> mm</div>
+        <div>1 cm = <span data-reveal>10</span> mm</div>
+        <div>1 L = <span data-reveal>1000</span> mL</div>
+        <div>1 kg = <span data-reveal>1000</span> g</div>
+      </div>
+      <div class="parts c1"><div class="part"><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">kilo = 1000, centi = 0.01, milli = 0.001, hecto = 100, deci = 0.1. <b>m</b> at the front means milli.</div></div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= Math History box (brown) ================= -->
+<!-- sources: https://ri.se/en/how-a-metre-became-a-metre (RISE, Sweden's national metrology institute: proposed 19 March 1791 as one ten-millionth of the distance from the North Pole to the equator through Paris, adopted 26 March 1791; metric system adopted June 1799; the mètre des Archives about 0.2 mm short; 20 October 1983: the length light travels in vacuum in 1/299 792 458 of a second)
+     https://www.qualitymag.com/articles/98751-the-emergence-of-the-metric-system (Delambre and Méchain measured the meridian arc from Dunkirk to Barcelona from 1792; finished 1799, the year the platinum bar, the "metre of the Archives", was made) -->
+<section class="card history" data-ink="hist" data-section="Math History: A Metre from the North Pole">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1791 – 1983</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">A metre measured from the North Pole</h3>
+      <p>In <b>1791</b>, French scientists wanted a unit that belonged to everyone. They chose a piece of the Earth: one <b>metre</b> would be <b>one ten-millionth</b> of the distance from the North Pole to the equator, along a line through Paris.</p>
+      <p>Starting in 1792, the astronomers Delambre and Méchain measured part of that line, from Dunkirk in France to Barcelona in Spain. In <b>1799</b> a platinum bar one metre long was made and kept in the French archives. Their measuring was a little off: the bar is about <b>0.2 mm</b> too short. Since <b>1983</b>, the metre is defined by the speed of light.</p>
+      <div class="part hist-q"><div class="pl">If a metre is <span class="tex">\tfrac{1}{10\,000\,000}</span> of the way from the North Pole to the equator, how many kilometres is that trip?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The trip is 10&#8239;000&#8239;000 m. Metres to kilometres is up 3 steps, so <span class="tex">÷\,1000</span>: <b>10&#8239;000 km</b>. (Because the bar came out a little short, the true distance is about 10&#8239;002 km.)</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u3l2-hist" viewBox="0 0 600 300" role="img" aria-label="A globe with a line from the North Pole to the equator through Paris, split into ten million metres; then a platinum bar; then a beam of light"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+      <p class="hist-note">Today one metre is the distance light travels in <span class="tex">\tfrac{1}{299\,792\,458}</span> of a second.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 3. Referents ================= -->
+<section class="card" data-ink="s3" data-section="3. Referents and Sensible Units">
+  <div class="sec-h"><span class="badge">3</span><h2>Referents and Choosing a Sensible Unit</h2></div>
+  <p>A <b>referent</b> is a familiar object that is about the size of a unit. A referent helps you <b>picture</b> a unit and <b>estimate</b> a measurement without a ruler or a scale.</p>
+  <table class="u3l2-tbl u3l2-ref">
+    <tr><th colspan="2">Length</th><th colspan="2">Mass, capacity and temperature</th></tr>
+    <tr><td><b>1 mm</b></td><td>the thickness of a dime</td><td><b>1 g</b></td><td>a paper clip</td></tr>
+    <tr><td><b>1 cm</b></td><td>the width of your smallest fingernail</td><td><b>1 kg</b></td><td>a 1 L carton of water or milk</td></tr>
+    <tr><td><b>1 m</b></td><td>a long step, or a doorknob’s height from the floor</td><td><b>1 t</b></td><td>a small car</td></tr>
+    <tr><td><b>2 m</b></td><td>the height of a door</td><td><b>1 mL</b></td><td>about 20 drops of water</td></tr>
+    <tr><td><b>1 km</b></td><td>about a 12-minute walk</td><td><b>5 mL</b></td><td>a teaspoon <span class="u3l2-gap"></span> <b>250 mL:</b> a cup</td></tr>
+    <tr><td></td><td></td><td><b>1 L</b></td><td>a carton of milk</td></tr>
+    <tr><td></td><td></td><td><b>°C</b></td><td>0: water freezes <span class="u3l2-gap s"></span> 20: room <span class="u3l2-gap s"></span> 37: body <span class="u3l2-gap s"></span> 100: water boils</td></tr>
+  </table>
+  <div class="explainer" data-explainer="referents"></div>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Choosing a Sensible Unit">
+  <h3 class="sub">Choosing a sensible unit</h3>
+  <p>To choose a <b>sensible unit</b>, pick the unit that gives an easy number, not a huge one or a tiny one. The height of a door is about 2 m. Saying 2000 mm or 0.002 km is correct but not sensible.</p>
+  <div class="u3l2-keys">
+    <div><b>Length:</b> mm for very small things (a screw, the thickness of glass); cm for things you hold (a book, a phone); m for rooms, buildings and fields; km for distances between places.</div>
+    <div><b>Mass:</b> mg for medicine and vitamins; g for small things and food packages; kg for people, pets and big bags; t for trucks and heavy loads.</div>
+    <div><b>Capacity:</b> mL for small containers and spoonfuls; L for jugs, tanks and pools.</div>
+  </div>
+  <div class="explainer" data-explainer="sensible"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Sensible units</h3></div>
+  <p class="q">(a) Choose the most sensible unit: mm, cm, m, km, g, kg, mL or L.</p>
+  <table class="u3l2-tbl u3l2-ex3">
+    <tr><th>the length of a hockey rink</th><td><span data-reveal>m</span></td><th>the mass of a cat</th><td><span data-reveal>kg</span></td></tr>
+    <tr><th>the thickness of a phone case</th><td><span data-reveal>mm</span></td><th>the juice in a juice box</th><td><span data-reveal>mL</span></td></tr>
+    <tr><th>the drive from Calgary to Red Deer</th><td><span data-reveal>km</span></td><th>the mass of a slice of cheese</th><td><span data-reveal>g</span></td></tr>
+    <tr><th>the length of a pencil</th><td><span data-reveal>cm</span></td><th>the gas in a car’s tank</th><td><span data-reveal>L</span></td></tr>
+  </table>
+  <p class="q">(b) Choose the most reasonable measurement.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(i) the height of a basketball hoop</div><div class="bk-mc" data-answer="B"><div>3 cm</div><div>3 m</div><div>3 km</div></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>3 m</b> (about a door and a half).</div></div></div>
+    <div class="part"><div class="pl">(ii) the mass of a large egg</div><div class="bk-mc" data-answer="B"><div>60 mg</div><div>60 g</div><div>60 kg</div></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>60 g</b> (about 60 paper clips).</div></div></div>
+    <div class="part"><div class="pl">(iii) a bathtub holds</div><div class="bk-mc" data-answer="B"><div>150 mL</div><div>150 L</div><div>15&#8239;000 L</div></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>150 L</b> (150 milk cartons).</div></div></div>
+    <div class="part"><div class="pl">(iv) the water in a hot bath</div><div class="bk-mc" data-answer="B"><div>4 °C</div><div>40 °C</div><div>400 °C</div></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>40 °C</b>. Body temperature is 37 °C, so a hot bath is a little warmer.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Estimating with referents</h3></div>
+  <p class="q">Use a referent to estimate.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Tae’s smallest fingernail is about 1 cm wide. A pencil is about 17 fingernails long. About how long is the pencil?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">17\times1\text{ cm}=17\text{ cm}</span><br><b>The pencil is about 17 cm long.</b></div></div></div>
+    <div class="part"><div class="pl">(b) A door is about 2 m tall. The gym wall is about 4 doors tall. About how tall is the wall?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4\times2\text{ m}=8\text{ m}</span><br><b>The wall is about 8 m tall.</b></div></div></div>
+    <div class="part"><div class="pl">(c) A paper clip has a mass of about 1 g. About what is the mass of 250 paper clips?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">250\times1\text{ g}=250\text{ g}</span><br><b>About 250 g</b> (that is a quarter of a kilogram).</div></div></div>
+    <div class="part"><div class="pl">(d) A milk carton holds 1 L. A soup pot holds about as much as 6 cartons. About how much does the pot hold?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6\times1\text{ L}=6\text{ L}</span><br><b>The pot holds about 6 L.</b></div></div></div>
+  </div>
+  <div data-extra><div class="explainer" data-explainer="estimate"></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= 4. Metric ruler ================= -->
+<section class="card" data-ink="s4" data-section="4. Measuring with a Metric Ruler">
+  <div class="sec-h"><span class="badge">4</span><h2>Measuring With a Metric Ruler or Tape</h2></div>
+  <p>On a metric ruler the numbers are <b>centimetres</b>. Each centimetre is split into 10 small spaces. Each small space is <b>1 millimetre</b>. The middle mark, a bit longer, is at 5 mm (half a centimetre).</p>
+  <div class="def u3l2-steps"><ol><li>Line up one end of the object with the <b>0 mark</b> (not the end of the ruler).</li><li>Read the last full centimetre before the other end.</li><li>Count the millimetre marks past it. 6 cm and 4 mm is <b>6.4 cm</b> or <b>64 mm</b>.</li></ol>
+    If the object does not start at 0, subtract: <b>length = end reading − start reading</b>.</div>
+  <p>A metric <b>tape measure</b> works the same way but is longer. Most tapes number every centimetre, so the mark 126 means 126 cm, which is 1 m 26 cm or 1.26 m.</p>
+  <div class="explainer" data-explainer="ruler"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Reading a ruler and a tape</h3></div>
+  <p class="q">(a) Read the ruler at A, B and C. Write each reading in centimetres and in millimetres.</p>
+  <div class="u3l2-rrow">
+    <div class="u3l2-fig" id="u3l2-fig-e5a"></div>
+    <table class="u3l2-tbl u3l2-e5">
+      <tr><th></th><th>cm</th><th>mm</th></tr>
+      <tr><th>A</th><td><span data-reveal>2.4 cm</span></td><td><span data-reveal>24 mm</span></td></tr>
+      <tr><th>B</th><td><span data-reveal>5.5 cm</span></td><td><span data-reveal>55 mm</span></td></tr>
+      <tr><th>C</th><td><span data-reveal>8.9 cm</span></td><td><span data-reveal>89 mm</span></td></tr>
+    </table>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(b) How long is the bolt? Give your answer in cm and in mm.</div><div class="u3l2-fig" id="u3l2-fig-e5b"></div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">It does not start at 0. end − start <span class="tex">=6.3-1.0=5.3</span> cm<br><b>The bolt is 5.3 cm (53 mm) long.</b></div></div></div>
+    <div class="part"><div class="pl">(c) Aiden measures the width of a window with a tape measure. The end of the window is at the arrow. Write the width in cm, in mm and in m.</div><div class="u3l2-fig" id="u3l2-fig-e5c"></div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The arrow is 8 small marks past 126, so 126.8 cm.<br>126.8 cm = 1268 mm = 1.268 m. <b>The window is 126.8 cm (1268 mm, or about 1.27 m) wide.</b></div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (one per lesson) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 2 · Questions 1–8</h2>
+  <p class="pr-t">Try these before we start changing units.</p>
+  <div class="pr-chips">
+    <span><b>1</b>What is measured?</span>
+    <span><b>2–3</b>Prefixes and symbols</span>
+    <span><b>4–5</b>Sensible units</span>
+    <span><b>6</b>Referents</span>
+    <span><b>7–8</b>Reading a ruler and a tape</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u3l2">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. Changing units ================= -->
+<section class="card" data-ink="s5" data-section="5. Changing Units">
+  <div class="sec-h"><span class="badge">5</span><h2>Changing Units: Moving the Decimal Point</h2></div>
+  <p>SI units are based on 10, so to change units you multiply or divide by 10, 100 or 1000. That just <b>moves the decimal point</b>. Use the staircase.</p>
+  <div class="u3l2-fig u3l2-stairfig" id="u3l2-fig-stairs"></div>
+  <div class="def u3l2-steps"><ol><li>Find the unit you have and the unit you want on the staircase.</li><li>Count the steps between them, and see if you go <b>down</b> or <b>up</b>.</li><li>Down: multiply (move the decimal point right one place per step). Up: divide (move it left). Fill empty places with zeros.</li></ol>
+    For example, metres to centimetres is 2 steps down, so <span class="tex">\times100</span>: 3.45 m → 34.5 → <b>345 cm</b>.</div>
+  <div class="u3l2-keys two">
+    <div><b>Smaller unit ⇒ bigger number. Bigger unit ⇒ smaller number.</b><br>Check every answer: 3.45 m = 345 cm makes sense, because it takes many small centimetres to make a few metres.</div>
+    <div class="w"><b>Watch out:</b> count every step, even the ones you do not use much. From m to mm is <b>3</b> steps (m, dm, cm, mm), so <span class="tex">\times1000</span>, not <span class="tex">\times100</span>.</div>
+  </div>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>On the TI-30XIIS:</b> <span class="keys"><kbd>3</kbd><kbd>.</kbd><kbd>4</kbd><kbd>5</kbd><kbd>×</kbd><kbd>1</kbd><kbd>0</kbd><kbd>0</kbd><kbd>ENTER</kbd></span> shows <b>345</b>. <span class="u3l2-gap"></span> <span class="keys"><kbd>8</kbd><kbd>5</kbd><kbd>0</kbd><kbd>÷</kbd><kbd>1</kbd><kbd>0</kbd><kbd>0</kbd><kbd>0</kbd><kbd>ENTER</kbd></span> shows <b>0.85</b>.</div>
+    <div class="u3l2-pcol"><button class="pill" data-keys="3.45 × 100 =">Show me</button><button class="pill" data-keys="850 ÷ 1000 =">850 ÷ 1000</button></div>
+  </div>
+  <div class="explainer" data-explainer="stairs"></div>
+  <div data-extra><div class="explainer" data-explainer="trap"></div></div>
+  <div data-extra><div class="explainer" data-explainer="placeChart"></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Changing units</h3></div>
+  <p class="q">Change each measurement.</p>
+  <table class="u3l2-tbl u3l2-ex6">
+    <tr><th>Change</th><th>Up or down? How many steps?</th><th>Work</th><th>Answer</th></tr>
+    <tr><th>(a) 3.45 m to cm</th><td><span data-reveal>down 2</span></td><td><span data-reveal><span class="tex">3.45\times100</span></span></td><td><span data-reveal>345 cm</span></td></tr>
+    <tr><th>(b) 2.6 km to m</th><td><span data-reveal>down 3</span></td><td><span data-reveal><span class="tex">2.6\times1000</span></span></td><td><span data-reveal>2600 m</span></td></tr>
+    <tr><th>(c) 85 mm to cm</th><td><span data-reveal>up 1</span></td><td><span data-reveal><span class="tex">85\div10</span></span></td><td><span data-reveal>8.5 cm</span></td></tr>
+    <tr><th>(d) 640 cm to m</th><td><span data-reveal>up 2</span></td><td><span data-reveal><span class="tex">640\div100</span></span></td><td><span data-reveal>6.4 m</span></td></tr>
+    <tr><th>(e) 1250 g to kg</th><td><span data-reveal>up 3</span></td><td><span data-reveal><span class="tex">1250\div1000</span></span></td><td><span data-reveal>1.25 kg</span></td></tr>
+    <tr><th>(f) 0.75 L to mL</th><td><span data-reveal>down 3</span></td><td><span data-reveal><span class="tex">0.75\times1000</span></span></td><td><span data-reveal>750 mL</span></td></tr>
+    <tr><th>(g) 4 mm to m</th><td><span data-reveal>up 3</span></td><td><span data-reveal><span class="tex">4\div1000</span></span></td><td><span data-reveal>0.004 m</span></td></tr>
+    <tr><th>(h) 2.5 cm to mm</th><td><span data-reveal>down 1</span></td><td><span data-reveal><span class="tex">2.5\times10</span></span></td><td><span data-reveal>25 mm</span></td></tr>
+  </table>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l2"></section>
+
+<section class="card" data-ink="s5b" data-section="5. Comparing Measurements">
+  <h3 class="sub">Comparing measurements</h3>
+  <p>To <b>compare</b> measurements in different units, change them to the <b>same unit</b> first.</p>
+  <div class="explainer" data-explainer="compare"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Which is more?</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Which is longer, 0.8 m or 75 cm?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">0.8 m <span class="tex">=0.8\times100=80</span> cm<br>80 cm is more than 75 cm. <b>0.8 m is longer.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Which holds more: one 1.5 L bottle of pop, or four 355 mL cans?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1.5 L <span class="tex">=1.5\times1000=1500</span> mL<br>Cans: <span class="tex">4\times355=1420</span> mL<br><b>The 1.5 L bottle holds more</b> (80 mL more).</div></div></div>
+  </div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(c) Four friends did the long jump. Sana jumped 4.35 m, Theo 428 cm, Uma 4410 mm and Vic 0.0043 km. Put the jumps in order from shortest to longest. Who won?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Change all to cm: Sana <span class="tex">4.35\times100=435</span> cm, Theo 428 cm, Uma <span class="tex">4410\div10=441</span> cm, Vic <span class="tex">0.0043\times100\,000=430</span> cm<br>(For Vic: km to m is <span class="tex">\times1000</span>, so 4.3 m; then m to cm is <span class="tex">\times100</span>, so 430 cm.)<br>Shortest to longest: Theo (428 cm), Vic (430 cm), Sana (435 cm), Uma (441 cm). <b>Uma won.</b></div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5c" data-section="5. Problems with Units">
+  <h3 class="sub">Problems with units</h3>
+  <p>In a word problem, change everything to <b>one unit</b> before you multiply, divide, add or subtract. Then answer in the unit the question asks for.</p>
+  <div class="explainer" data-explainer="lemonade"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Lemonade and laps</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Marisol is selling lemonade at a fundraiser. Each cup holds 250 mL. A jug holds 4 L.<br>(i) How many cups can she fill from one jug?<br>(ii) How many jugs does she need to make to fill 50 cups?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">(i) 4 L = 4000 mL; <span class="tex">4000\div250=16</span> <b>cups</b><br>(ii) <span class="tex">50\times250=12\,500</span> mL = 12.5 L; <span class="tex">12.5\div4=3.125</span> jugs<br>3 jugs are not enough, so <b>she needs 4 jugs</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Owen runs 3 laps of a 400 m track. Then he runs 1.8 km on the road. How far does he run in all, in kilometres?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Track: <span class="tex">3\times400=1200</span> m<br>1200 m <span class="tex">=1200\div1000=1.2</span> km<br>Total: <span class="tex">1.2+1.8=3.0</span> km<br><b>Owen runs 3 km.</b></div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>SI base units:</b> metre (m) for length, gram (g) for mass, litre (L) for capacity, degree Celsius (°C) for temperature. 1 L of water ≈ 1 kg.</div>
+    <div><b>Prefixes:</b> kilo 1000, hecto 100, deca 10, base 1, deci 0.1, centi 0.01, milli 0.001. 1 km = 1000 m, 1 m = 100 cm = 1000 mm.</div>
+    <div><b>Referents</b> help you estimate: dime ≈ 1 mm, fingernail ≈ 1 cm, door ≈ 2 m, paper clip ≈ 1 g, milk carton ≈ 1 L ≈ 1 kg. Choose the unit that gives an easy number.</div>
+    <div><b>Staircase:</b> down = × 10 per step (point moves right), up = ÷ 10 per step (point moves left). Smaller unit ⇒ bigger number. Compare in the <b>same unit</b>.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l2">
+    <div><div class="kicker">Your turn</div><b>Assignment 2 · Questions 9–18</b><div class="muted">Changing units, finding Jun’s mistake, comparing with &lt;, &gt; or =, ordering heights, juice glasses, ribbon bows, a dog’s medicine, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l3/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 3 — The Imperial System and Reading a Tape Measure</b><div class="muted">Inches, feet, yards and miles, and reading a tape measure to the nearest sixteenth of an inch.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l2.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l2', homeHref: '../../', title: '3.2 The SI System' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

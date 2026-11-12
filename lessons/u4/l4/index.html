@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mass · Math 10-3 4.4</title>
+<meta name="description" content="Math 10-3 Unit 4 Lesson 4: mass in grams, kilograms, tonnes, ounces, pounds and tons. Referents, the SI staircase (× or ÷ 1000), 1 ton = 2000 lb and 1 lb = 16 oz, adding and subtracting pounds and ounces, the true cost per pound, and reading scales. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u4l4.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u4l4">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Light Bag">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Light Bag</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">There are <b>9</b> bags of candy that look exactly the same.</p><p class="vw-ctx">One bag is missing a candy, so it is a little <b>lighter</b>. You have a balance scale, but no weights.</p><p class="vw-ask">Can you find the light bag using the balance only 2 times?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A balance scale rocking gently, with bags of candy on both pans and more bags waiting">
+    <rect x="135" y="214" width="60" height="14" rx="5" fill="#6e4a1c"/>
+    <rect x="159" y="70" width="12" height="148" fill="#9a6a24"/>
+    <circle cx="165" cy="66" r="9" fill="#6e4a1c"/>
+    <g><animateTransform attributeName="transform" type="rotate" values="-7 165 66;7 165 66;-7 165 66" dur="3.4s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
+      <rect x="45" y="61" width="240" height="10" rx="5" fill="#4a3010"/>
+      <g><animateTransform attributeName="transform" type="rotate" values="7 55 66;-7 55 66;7 55 66" dur="3.4s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
+        <path d="M55 66 L25 128 M55 66 L85 128" stroke="#4a4436" stroke-width="2.5"/><path d="M15 128 H95 Q90 146 55 146 Q20 146 15 128 Z" fill="#c9a26b" stroke="#7a5124" stroke-width="2.5"/>
+        <path d="M30 128 q-4 -22 10 -26 q14 4 10 26 Z" fill="#e66f8e"/><path d="M48 128 q-4 -24 10 -28 q14 4 10 28 Z" fill="#6aa8e0"/><path d="M64 128 q-4 -20 10 -24 q14 4 8 24 Z" fill="#f0b43c"/></g>
+      <g><animateTransform attributeName="transform" type="rotate" values="7 275 66;-7 275 66;7 275 66" dur="3.4s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
+        <path d="M275 66 L245 128 M275 66 L305 128" stroke="#4a4436" stroke-width="2.5"/><path d="M235 128 H315 Q310 146 275 146 Q240 146 235 128 Z" fill="#c9a26b" stroke="#7a5124" stroke-width="2.5"/>
+        <path d="M250 128 q-4 -22 10 -26 q14 4 10 26 Z" fill="#8ccf9a"/><path d="M268 128 q-4 -24 10 -28 q14 4 10 28 Z" fill="#e66f8e"/><path d="M284 128 q-4 -20 10 -24 q14 4 8 24 Z" fill="#6aa8e0"/></g>
+    </g>
+    <path d="M20 228 q-5 -24 11 -28 q16 4 11 28 Z" fill="#f0b43c"/><path d="M48 228 q-5 -24 11 -28 q16 4 11 28 Z" fill="#8ccf9a"/><path d="M76 228 q-5 -24 11 -28 q16 4 11 28 Z" fill="#e66f8e"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="268" y="214" font-size="44" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Plan it with a partner. What goes on each pan the <b>first</b> time?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>Yes!</b> Make 3 groups of 3. <b>Weighing 1:</b> group A against group B. If one side goes up, the light bag is in that group. If they balance, it is in group C. <b>Weighing 2:</b> take the 3 bags from that group and put 1 against 1. The side that goes up is the light bag. If they balance, it is the bag you left off. <span class="muted">Most people try 4 against 4 first, which can take 3 weighings.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 4 Volume, Capacity, Mass and Temperature · Lesson 4</div>
+  <h1>Mass: Grams, Kilograms, Ounces, Pounds and Tons</h1>
+  <p class="lede">A toonie, a bag of sugar, a loaded truck, a puppy at the vet. Today we choose a <b>sensible unit</b> of mass, convert in <b>SI</b> (× or ÷ 1000) and in <b>imperial</b> (16 oz in a pound, 2000 lb in a ton), work with <b>pounds and ounces</b>, and <b>read scales</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>choose a sensible unit using <b>referents</b> (a paper clip is about 1 g, 1 L of water is about 1 kg)</li>
+      <li>convert between <b>mg, g, kg and t</b> (× or ÷ 1000)</li>
+      <li>convert between <b>oz, lb and tons</b> (16 and 2000), and write masses in <b>pounds and ounces</b></li>
+      <li>add, subtract and multiply <b>pounds and ounces</b>, and find the <b>true cost</b> per pound</li>
+      <li><b>read a scale</b>: find what one space is worth, and count on</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M1</b> Demonstrate an understanding of the Système International (SI) by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; applying strategies to convert SI units to imperial units.</div>
+  <div class="outcome"><b>M2</b> Demonstrate an understanding of the imperial system by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; comparing the American and British imperial units for capacity; applying strategies to convert imperial units to SI units.</div>
+</section>
+
+<!-- ================= 1. Mass, weight and referents ================= -->
+<section class="card" data-ink="s1" data-section="1. Mass, Weight and Referents">
+  <div class="sec-h"><span class="badge">1</span><h2>Mass, Weight and Referents</h2></div>
+  <p><b>Mass</b> is how much matter (stuff) is in an object. In everyday speech we say <b>weight</b>: “weigh the apples”, “my weight”. In this lesson, <i>mass</i> and <i>weight</i> mean the same thing. <span class="muted">(A scientist would say weight is the pull of gravity. On the Moon you would weigh less, but your mass would not change.)</span></p>
+  <p>Canada uses <b>SI</b> (metric) units of mass. You will still see <b>imperial</b> units on meat counters, at the gym, on baby scales and in trucking.</p>
+  <table class="u4l4-tbl u4l4-units">
+    <tr class="hd"><th colspan="3">SI units of mass</th></tr>
+    <tr><td>milligram</td><td>mg</td><td>medicine and vitamins (a pill might have 500 mg)</td></tr>
+    <tr><td>gram</td><td>g</td><td>a paper clip is about 1 g; a toonie is about 7 g</td></tr>
+    <tr><td>kilogram</td><td>kg</td><td>1 L of water is about 1 kg; a bag of sugar is often 2 kg</td></tr>
+    <tr><td>tonne</td><td>t</td><td>1000 L of water is about 1 t; a small car is about 1.3 t</td></tr>
+    <tr class="hd"><th colspan="3">Imperial units of mass</th></tr>
+    <tr><td>ounce</td><td>oz</td><td>a slice of bread is about 1 oz; a hockey puck is about 6 oz</td></tr>
+    <tr><td>pound</td><td>lb</td><td>a block of butter is 1 lb</td></tr>
+    <tr><td>ton</td><td>(tn)</td><td>a big bison bull is about 1 ton</td></tr>
+  </table>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A <b>tonne</b> (t) is metric: 1 t = 1000 kg. A <b>ton</b> is imperial: 1 ton = 2000 lb. They are different units, even though they sound the same. (The imperial ton is also called a <b>short ton</b>.)</div></div>
+  <div class="explainer" data-explainer="balance"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Which is heavier: 1 tonne or 1 ton?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The <b>tonne</b>, a little. 1 t = 1000 kg, which is about 2200 lb. That is a bit more than the 2000 lb in a ton. (Next lesson: 1 kg ≈ 2.2 lb.)</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Sensible units</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Choose a sensible unit for the mass of each object.</div>
+      <table class="u4l4-tbl u4l4-sens">
+        <tr><th>Object</th><th>SI unit</th><th>Imperial unit</th></tr>
+        <tr><td>a bag of sugar</td><td><span data-reveal="&nbsp;">kg</span></td><td><span data-reveal="&nbsp;">lb</span></td></tr>
+        <tr><td>a vitamin pill</td><td><span data-reveal="&nbsp;">mg</span></td><td><span data-reveal="&nbsp;">—</span></td></tr>
+        <tr><td>a school bus</td><td><span data-reveal="&nbsp;">t</span></td><td><span data-reveal="&nbsp;">tons</span></td></tr>
+        <tr><td>a strawberry</td><td><span data-reveal="&nbsp;">g</span></td><td><span data-reveal="&nbsp;">oz</span></td></tr>
+        <tr><td>a Grade 10 student</td><td><span data-reveal="&nbsp;">kg</span></td><td><span data-reveal="&nbsp;">lb</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">kg/lb · mg/— · t/tons · g/oz · kg/lb. A vitamin pill is too light for any imperial unit to make sense.</div></div></div>
+    <div class="part"><div class="pl">(b) Circle the most sensible mass.</div>
+      <div class="u4l4-circ">
+        <div><span class="lab">(i) a large pumpkin:</span><span>6 g</span><span class="u4l4-pick">6 kg</span><span>6 t</span></div>
+        <div><span class="lab">(ii) a smartphone:</span><span>190 mg</span><span class="u4l4-pick">190 g</span><span>190 kg</span></div>
+        <div><span class="lab">(iii) a pickup truck:</span><span>2.5 kg</span><span class="u4l4-pick">2.5 t</span><span>250 t</span></div>
+        <div><span class="lab">(iv) a big apple:</span><span class="u4l4-pick">8 oz</span><span>8 lb</span><span>8 tons</span></div>
+      </div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">6 kg · 190 g · 2.5 t · 8 oz. A pumpkin is several 1 L water jugs, so about 6 kg.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Converting SI units ================= -->
+<section class="card" data-ink="s2" data-section="2. Converting SI Units of Mass">
+  <div class="sec-h"><span class="badge">2</span><h2>Converting SI Units of Mass</h2></div>
+  <p>SI units use the same <b>prefixes</b> as length: <b>kilo</b> means 1000, <b>milli</b> means <span class="tex">\tfrac{1}{1000}</span>. Each step on the staircase is 10 times the next one down.</p>
+  <div class="u4l4-stair" id="u4l4-stair"></div>
+  <p>The grey units are rarely used for mass. The ones you need are 1000 times apart, so each jump is <b>three steps</b>:</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>t</b> → <b>kg</b> → <b>g</b> → <b>mg</b>: <b>× 1000</b> each jump going down; <b>÷ 1000</b> each jump going up.
+    <div class="u4l4-jumps"><span>1 t = 1000 kg</span><span>1 kg = 1000 g</span><span>1 g = 1000 mg</span></div>
+    <div class="eg"><b>Bigger unit → smaller unit: multiply.</b> &nbsp;&nbsp; <b>Smaller unit → bigger unit: divide.</b></div></div>
+  <div class="tip u4l4-oktip"><div class="tip-ic">✓</div><div><b>Check.</b> When you change to a <b>smaller</b> unit you need <b>more</b> of them, so the number gets bigger: 2.4 kg = 2400 g. Multiplying or dividing by 1000 moves the decimal point <b>3 places</b>.</div></div>
+  <div class="explainer" data-explainer="stairs"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Which is more: 0.5 kg of cheese or 450 g of cheese?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same unit first: <span class="tex">0.5\times1000=500</span> g. 500 g is more than 450 g, so <b>0.5 kg</b> is more (by 50 g).</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Convert. Show whether you multiply or divide.</h3></div>
+  <div class="part">
+    <table class="u4l4-tbl u4l4-wide">
+      <tr><th>Change</th><th>Work</th><th>Answer</th></tr>
+      <tr><td>(a) 2.4 kg to grams</td><td><span data-reveal="&nbsp;"><span class="tex">2.4\times1000</span></span></td><td><span data-reveal="&nbsp;">2400 g</span></td></tr>
+      <tr><td>(b) 750 g to kilograms</td><td><span data-reveal="&nbsp;"><span class="tex">750\div1000</span></span></td><td><span data-reveal="&nbsp;">0.75 kg</span></td></tr>
+      <tr><td>(c) 3500 kg to tonnes</td><td><span data-reveal="&nbsp;"><span class="tex">3500\div1000</span></span></td><td><span data-reveal="&nbsp;">3.5 t</span></td></tr>
+      <tr><td>(d) 0.6 t to kilograms</td><td><span data-reveal="&nbsp;"><span class="tex">0.6\times1000</span></span></td><td><span data-reveal="&nbsp;">600 kg</span></td></tr>
+      <tr><td>(e) 250 mg to grams</td><td><span data-reveal="&nbsp;"><span class="tex">250\div1000</span></span></td><td><span data-reveal="&nbsp;">0.25 g</span></td></tr>
+      <tr><td>(f) 45 g to kilograms</td><td><span data-reveal="&nbsp;"><span class="tex">45\div1000</span></span></td><td><span data-reveal="&nbsp;">0.045 kg</span></td></tr>
+      <tr><td>(g) 1.2 g to milligrams</td><td><span data-reveal="&nbsp;"><span class="tex">1.2\times1000</span></span></td><td><span data-reveal="&nbsp;">1200 mg</span></td></tr>
+      <tr><td>(h) 2.5 kg to milligrams (two jumps)</td><td><span data-reveal="&nbsp;"><span class="tex">2.5\times1000\times1000</span></span></td><td><span data-reveal="&nbsp;">2&#8201;500&#8201;000 mg</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) 2400 g · (b) 0.75 kg · (c) 3.5 t · (d) 600 kg · (e) 0.25 g · (f) 0.045 kg · (g) 1200 mg · (h) 2&#8201;500&#8201;000 mg</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- sources: https://www.nationalgeographic.com/science/article/kilogram-forever-changed-why-mass-matters (Le Grand K: a
+     platinum-iridium cylinder in a vault at the International Bureau of Weights and Measures in Sèvres, France, under three
+     glass bell jars; it differed from its copies by about 50 micrograms; replaced by a definition using Planck's constant on
+     20 May 2019); https://phys.org/news/2019-05-adieu-le-grand-kilogram-redefined.pdf (the prototypes date from 1889) -->
+<section class="card history" data-ink="hist" data-section="Math History: Le Grand K">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1889 to 2019</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">The kilogram that lived in a vault</h3>
+      <p>For 130 years, <b>one kilogram</b> was the mass of one small metal cylinder in a vault near Paris, France. Scientists called it <b>Le Grand K</b> (“the big K”). It sat under <b>three glass bell jars</b>. Countries kept copies of it to check their own scales.</p>
+      <p>But copies drifted apart by about <b>50 micrograms</b>, about the mass of a grain of salt. So on <b>May 20, 2019</b>, the kilogram got a new definition from a number in physics that never changes.</p>
+      <div class="part hist-q"><div class="pl">Le Grand K is exactly 1 kg. What is that in grams? In milligrams?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Going down to smaller units, multiply: <span class="tex">1\times1000=1000</span> g, and <span class="tex">1000\times1000=1\,000\,000</span> mg. One kilogram is <b>a million milligrams</b>!</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u4l4-hist" viewBox="0 0 600 300" role="img" aria-label="A small metal cylinder under three glass bell jars, then a balance compares it with a copy that is a tiny bit off"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Ruby’s bake sale</h3></div>
+  <p class="q">Ruby is baking bread for a bake sale. Each loaf uses 650 g of flour. She bakes 6 loaves. Flour comes in 2.5 kg bags.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) How much flour does she need, in kilograms?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6\times650=3900</span> g<br><span class="tex">3900\div1000=3.9</span> kg<br>She needs <b>3.9 kg</b> of flour.</div></div></div>
+    <div class="part"><div class="pl">(b) How many bags of flour must she buy?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3.9\div2.5=1.56</span> bags<br>You cannot buy part of a bag, so round up.<br>She must buy <b>2 bags</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) How much flour will be left over? Is it enough for one more loaf?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 bags: <span class="tex">2\times2.5=5</span> kg<br><span class="tex">5-3.9=1.1</span> kg <span class="tex">=1100</span> g left<br><b>Yes</b>: 1100 g &gt; 650 g.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2c" data-section="2. Ruby’s Flour Bags">
+  <h3 class="sub">Ruby’s flour, bag by bag</h3>
+  <p>Fill the bags with what Ruby needs. Whatever is left in the second bag is the leftover flour.</p>
+  <div class="explainer" data-explainer="flour"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Can the truck cross the bridge?</h3></div>
+  <p class="q">A flatbed truck has a mass of 4.8 t when it is empty. It is loaded with 14 pallets of patio stones. Each pallet has a mass of 925 kg. A sign on a bridge says the limit is 18 t.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Find the mass of the pallets, in tonnes.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">14\times925=12\,950</span> kg<br><span class="tex">12\,950\div1000=12.95</span> t</div></div></div>
+    <div class="part"><div class="pl">(b) Can the loaded truck cross the bridge?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Total: <span class="tex">4.8+12.95=17.75</span> t<br>17.75 t &lt; 18 t<br><b>Yes</b>, the truck can cross.</div></div></div>
+    <div class="part"><div class="pl">(c) Could the driver add one more pallet? Explain.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">One more: 925 kg <span class="tex">=0.925</span> t<br><span class="tex">17.75+0.925=18.675</span> t<br><b>No.</b> That is over the 18 t limit.</div></div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Change to the <b>same unit</b> before you add or compare. Adding 4.8 t and 12&#8201;950 kg as “4.8 + 12&#8201;950” makes no sense.</div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Loading the Truck">
+  <h3 class="sub">Loading the truck, pallet by pallet</h3>
+  <p>Load the pallets one at a time and watch the total grow in tonnes. The bridge sign is the limit.</p>
+  <div class="explainer" data-explainer="truck"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>The deli and the vitamins</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Sliced turkey costs $2.38 per 100 g at the deli. Find the price per kilogram, and the cost of 350 g.</div><div class="work" style="--h:210px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 kg = 1000 g = 10 hundreds<br>Per kg: <span class="tex">10\times\$2.38=\$23.80</span><br>350 g = 3.5 hundreds: <span class="tex">3.5\times\$2.38=\$8.33</span><br>It costs <b>$23.80 per kg</b>, and 350 g costs <b>$8.33</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Each vitamin C tablet has 500 mg of vitamin C. A health guide says an adult should take no more than 2 g a day. What is the most tablets a day?</div><div class="work" style="--h:210px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same unit first: 2 g <span class="tex">=2\times1000=2000</span> mg<br><span class="tex">2000\div500=4</span><br>The most is <b>4 tablets</b> a day.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–5">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 4 · Questions 1–5</h2>
+  <p class="pr-t">Try these before we go on to ounces, pounds and tons.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Sensible units</span>
+    <span><b>2</b>Most sensible mass</span>
+    <span><b>3</b>Convert in SI</span>
+    <span><b>4</b>Granola batches</span>
+    <span><b>5</b>Cheddar at the deli</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 5.</span><a class="pill" href="../../../#/lesson/u4l4">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Converting imperial units ================= -->
+<section class="card" data-ink="s3" data-section="3. Converting Imperial Units of Mass">
+  <div class="sec-h"><span class="badge">3</span><h2>Converting Imperial Units of Mass</h2></div>
+  <p>Imperial units are <b>not</b> based on 10. You have to remember the numbers:</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>ton</b> → <b>lb</b>: <b>× 2000</b> &nbsp;·&nbsp; <b>lb</b> → <b>oz</b>: <b>× 16</b> &nbsp;&nbsp; (going back up: <b>÷ 2000</b>, <b>÷ 16</b>)
+    <div class="u4l4-jumps"><span>1 ton = 2000 pounds (lb)</span><span>1 pound (lb) = 16 ounces (oz)</span></div>
+    <div class="eg"><b>Bigger unit → smaller unit: multiply.</b> &nbsp;&nbsp; <b>Smaller unit → bigger unit: divide.</b></div></div>
+  <p>Masses are often written in <b>pounds and ounces</b>, like 3 lb 7 oz. To change it to ounces, change the pounds to ounces and add the extra ounces: <span class="tex">3\times16+7=55</span> oz.</p>
+  <p><b>Ounces to pounds and ounces.</b> Step 1: divide by 16; the whole number is the pounds. Step 2: the ounces left over are the decimal part × 16 (or subtract the ounces in those pounds).</p>
+  <div class="explainer" data-explainer="ozPack"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>70 oz: <span class="keys">70 <kbd>÷</kbd> 16 <kbd>ENTER</kbd></span> shows 4.375, so 4 lb. Then <span class="keys"><kbd>−</kbd> 4 <kbd>ENTER</kbd></span> shows 0.375, and <span class="keys"><kbd>×</kbd> 16 <kbd>ENTER</kbd></span> shows 6. So 70 oz = 4 lb 6 oz. (Check: <span class="tex">4\times16+6=70</span>.)</div>
+    <button class="pill" type="button" data-keys="70 ÷ 16 = − 4 = × 16 =">Show me</button></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The decimal part of a pound is <b>not</b> ounces. 1.5 lb is <b>not</b> 1 lb 5 oz. Half a pound is 8 oz, so 1.5 lb = 1 lb 8 oz.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. 1.5 lb Is Not 1 lb 5 oz">
+  <h3 class="sub">1.5 lb is not 1 lb 5 oz</h3>
+  <p>A pound is cut into <b>16</b> ounces, not 10. So the digits after the decimal point are <b>not</b> ounces.</p>
+  <div class="explainer" data-explainer="notOz"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Without a calculator: what is 1.25 lb in pounds and ounces? (Hint: a quarter of 16.)</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">A quarter of a pound is <span class="tex">16\div4=4</span> oz, so 1.25 lb = <b>1 lb 4 oz</b>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Convert</h3></div>
+  <div class="part">
+    <table class="u4l4-tbl u4l4-wide">
+      <tr><th>Change</th><th>Work</th><th>Answer</th></tr>
+      <tr><td>(a) 5 lb to ounces</td><td><span data-reveal="&nbsp;"><span class="tex">5\times16</span></span></td><td><span data-reveal="&nbsp;">80 oz</span></td></tr>
+      <tr><td>(b) 3 lb 7 oz to ounces</td><td><span data-reveal="&nbsp;"><span class="tex">3\times16+7=48+7</span></span></td><td><span data-reveal="&nbsp;">55 oz</span></td></tr>
+      <tr><td>(c) 72 oz to pounds</td><td><span data-reveal="&nbsp;"><span class="tex">72\div16</span></span></td><td><span data-reveal="&nbsp;">4.5 lb</span></td></tr>
+      <tr><td>(d) 70 oz to pounds and ounces</td><td><span data-reveal="&nbsp;"><span class="tex">70\div16=4.375;\ 0.375\times16=6</span></span></td><td><span data-reveal="&nbsp;">4 lb 6 oz</span></td></tr>
+      <tr><td>(e) 3.25 lb to pounds and ounces</td><td><span data-reveal="&nbsp;"><span class="tex">0.25\times16=4</span></span></td><td><span data-reveal="&nbsp;">3 lb 4 oz</span></td></tr>
+      <tr><td>(f) 10 oz to pounds</td><td><span data-reveal="&nbsp;"><span class="tex">10\div16</span></span></td><td><span data-reveal="&nbsp;">0.625 lb</span></td></tr>
+      <tr><td>(g) 3.5 tons to pounds</td><td><span data-reveal="&nbsp;"><span class="tex">3.5\times2000</span></span></td><td><span data-reveal="&nbsp;">7000 lb</span></td></tr>
+      <tr><td>(h) 9000 lb to tons</td><td><span data-reveal="&nbsp;"><span class="tex">9000\div2000</span></span></td><td><span data-reveal="&nbsp;">4.5 tons</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) 80 oz · (b) 55 oz · (c) 4.5 lb · (d) 4 lb 6 oz · (e) 3 lb 4 oz · (f) 0.625 lb · (g) 7000 lb · (h) 4.5 tons</div></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Gravel and hay</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A landscaper has 2.75 tons of gravel to move into a backyard. Her wheelbarrow holds about 125 lb. How many loads will it take?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same unit: <span class="tex">2.75\times2000=5500</span> lb<br><span class="tex">5500\div125=44</span><br>It will take about <b>44 loads</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A rancher feeds each of her 45 cows about 28 lb of hay a day. How many tons of hay does she need for 30 days? Her round bales are 1400 lb each. How many bales is that?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">28\times45\times30=37\,800</span> lb<br><span class="tex">37\,800\div2000=18.9</span> tons<br>Bales: <span class="tex">37\,800\div1400=27</span><br>She needs <b>18.9 tons</b> of hay, which is <b>27 bales</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= 4. Working with pounds and ounces ================= -->
+<section class="card" data-ink="s4" data-section="4. Working with Pounds and Ounces">
+  <div class="sec-h"><span class="badge">4</span><h2>Working with Pounds and Ounces</h2></div>
+  <p>To add or subtract masses in pounds and ounces, line up <b>pounds under pounds</b> and <b>ounces under ounces</b>, like adding hours and minutes.</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u4l4-rules">
+      <div><b>Adding:</b> add the ounces, add the pounds. If you have 16 oz or more, trade 16 oz for 1 lb.</div>
+      <div><b>Subtracting:</b> if there are not enough ounces on top, borrow 1 lb and turn it into 16 oz.</div>
+      <div><b>Multiplying:</b> multiply the pounds and the ounces, then trade every 16 oz for 1 lb.</div>
+    </div></div>
+  <div class="explainer" data-explainer="lbOz"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Add, subtract, multiply</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) 5 lb 12 oz + 3 lb 9 oz</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">8 lb 21 oz<br>21 oz = 16 + 5 = 1 lb 5 oz<br>Answer: <b>9 lb 5 oz</b></div></div></div>
+    <div class="part"><div class="pl">(b) 7 lb 3 oz − 2 lb 10 oz</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">3 oz is less than 10 oz, so borrow:<br>7 lb 3 oz = 6 lb 19 oz<br>6 lb 19 oz − 2 lb 10 oz<br>Answer: <b>4 lb 9 oz</b></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">4\times(1\text{ lb }11\text{ oz})</span></div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4\times1=4</span> lb, <span class="tex">4\times11=44</span> oz → 4 lb 44 oz<br><span class="tex">44\div16=2.75</span>, so 2 lb and <span class="tex">44-32=12</span> oz<br>Answer: <b>6 lb 12 oz</b></div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>The backpack and the puppy</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Owen is packing for an overnight hike. His tent is 4 lb 9 oz, his sleeping bag is 2 lb 14 oz, his stove and pot are 1 lb 3 oz, and his food is 3 lb 11 oz. He wants the total under 12 lb. Is it? By how much is he over or under?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Pounds: <span class="tex">4+2+1+3=10</span> lb<br>Ounces: <span class="tex">9+14+3+11=37</span> oz<br>37 oz = 32 + 5 = 2 lb 5 oz<br>Total: 12 lb 5 oz<br><b>No.</b> He is <b>5 oz over</b> 12 lb.</div></div></div>
+    <div class="part"><div class="pl">(b) A puppy named Bear weighed 6 lb 13 oz at 8 weeks old. At 12 weeks he weighed 11 lb 4 oz. How much did he gain?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">4 oz is less than 13 oz, so borrow:<br>11 lb 4 oz = 10 lb 20 oz<br><span class="tex">10-6=4</span> lb, <span class="tex">20-13=7</span> oz<br>Bear gained <b>4 lb 7 oz</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u4l4"></section>
+
+<section class="card" data-ink="s4b" data-section="4. Prices by the Pound">
+  <h3 class="sub">Prices by the pound or ounce</h3>
+  <p>To compare sizes, change both to the <b>same unit</b> (usually ounces), then find the unit price, just like in Unit 1. Sometimes part of what you buy is thrown away (peel, bones, fat). The <b>true cost</b> per pound is what you paid ÷ the pounds you can actually use.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>True cost per pound = total price paid ÷ usable pounds</b>
+    <div class="eg">Change pounds and ounces to decimal pounds first: 9 oz <span class="tex">=9\div16=0.5625</span> lb</div></div>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>Coffee and a watermelon</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A 12 oz bag of coffee costs $10.99. A 2 lb bag of the same coffee costs $26.99. Which is the better buy?</div><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 lb <span class="tex">=2\times16=32</span> oz<br>12 oz: <span class="tex">\$10.99\div12\approx\$0.916</span> per oz<br>32 oz: <span class="tex">\$26.99\div32\approx\$0.843</span> per oz<br>The <b>2 lb bag</b> is the better buy.</div></div></div>
+    <div class="part"><div class="pl">(b) Nadia buys a watermelon that weighs 9 lb 4 oz, at $0.80 per lb. After she cuts off the rind, she has 5 lb 9 oz of fruit. What did she pay, and what is her true cost per pound of fruit?</div><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">9 lb 4 oz <span class="tex">=9+4\div16=9.25</span> lb<br>Paid: <span class="tex">9.25\times\$0.80=\$7.40</span><br>Fruit: 5 lb 9 oz <span class="tex">=5+9\div16=5.5625</span> lb<br>True cost: <span class="tex">\$7.40\div5.5625\approx\$1.33</span> per lb<br>She paid <b>$7.40</b>, a true cost of about <b>$1.33 per lb</b> of fruit.</div></div></div>
+  </div>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4d" data-section="4. Coffee: Price per Ounce">
+  <h3 class="sub">Coffee: same unit, then price per ounce</h3>
+  <p>The bags are in different units. Change 2 lb to ounces, then find the price of one ounce in each bag.</p>
+  <div class="explainer" data-explainer="coffee"></div>
+</section>
+
+<section class="card" data-extra data-ink="s4c" data-section="4. The Watermelon’s True Cost">
+  <h3 class="sub">The watermelon’s true cost</h3>
+  <p>Nadia pays for the rind too, but she only eats the fruit. Share what she paid over the pounds she can use.</p>
+  <div class="explainer" data-explainer="trueCost"></div>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example: Kenji’s Parcel">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>Kenji’s parcel</h3></div>
+  <p class="q">Kenji is mailing a box to his grandma in Montana. He packs 3 lb 10 oz of books and 1 lb 9 oz of toys. The empty box is 12 oz.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) What is the mass of the books and toys together?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">4 lb 19 oz<br>19 oz = 1 lb 3 oz<br><b>5 lb 3 oz</b></div></div></div>
+    <div class="part"><div class="pl">(b) What is the mass of the whole parcel, box included?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">5 lb 3 oz + 12 oz = 5 lb 15 oz<br>15 oz is less than 16, so no trade.<br><b>5 lb 15 oz</b></div></div></div>
+    <div class="part"><div class="pl">(c) Shipping costs $2.40 for each pound or part of a pound. What does it cost?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">5 lb 15 oz is part of the 6th pound, so pay for <b>6 lb</b>.<br><span class="tex">6\times\$2.40=\$14.40</span></div></div></div>
+  </div>
+  <div class="space" id="exx-space"></div>
+  <button class="more" data-more="exx-space">+ More space</button>
+</section>
+
+<!-- ================= 5. Reading scales ================= -->
+<section class="card" data-ink="s5" data-section="5. Reading Scales">
+  <div class="sec-h"><span class="badge">5</span><h2>Reading Scales</h2></div>
+  <p>A <b>scale</b> measures mass. To read a scale with a dial or a pointer:</p>
+  <div class="u4l4-steps">
+    <div><b>Step 1</b>Find two numbers next to each other and their difference.</div>
+    <div><b>Step 2</b>Count the <b>spaces</b> (not the lines) between them. One space is worth difference ÷ spaces.</div>
+    <div><b>Step 3</b>Start at the last number before the pointer and count on.</div>
+  </div>
+  <p>A <b>digital scale</b> shows the number for you. Its <b>TARE</b> (or ZERO) button sets the scale to 0 with a bowl on it, so you weigh only what you put in the bowl. Without it, subtract: mass of food = total − mass of the bowl.</p>
+  <div class="explainer" data-explainer="readScale"></div>
+</section>
+
+<section class="card example" data-ink="ex11" data-section="Example 11">
+  <div class="ex-head"><span class="ex-tag">Example 11</span><h3>Read each scale</h3></div>
+  <div class="u4l4-ex11">
+    <div class="part"><div class="pl">(a) Kitchen scale.</div>
+      <div class="u4l4-fig" id="u4l4-dialA"></div>
+      <p class="u4l4-frame">One small space is worth <span class="u4l4-blank" data-reveal="&nbsp;">20 g</span></p>
+      <p class="u4l4-frame">It reads <span class="u4l4-blank" data-reveal="&nbsp;">340 g</span></p>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">From 0 to 100 there are 5 spaces: <span class="tex">100\div5=20</span> g each. <span class="tex">300+2\times20=340</span> g.</div></div></div>
+    <div class="u4l4-ex11r">
+      <div class="part"><div class="pl">(b) Bathroom scale (pounds).</div>
+        <div class="u4l4-fig" id="u4l4-stripB"></div>
+        <p class="u4l4-frame">One small space: <span class="u4l4-blank" data-reveal="&nbsp;">1 lb</span> &nbsp; Reading: <span class="u4l4-blank" data-reveal="&nbsp;">143 lb</span></p>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">10 spaces from 120 to 130, so 1 lb each; 3 past 140 is <b>143 lb</b>.</div></div></div>
+      <div class="part"><div class="pl">(c) Produce scale (pounds).</div>
+        <div class="u4l4-fig" id="u4l4-stripC"></div>
+        <p class="u4l4-frame">One small space: <span class="u4l4-blank" data-reveal="&nbsp;">2 oz</span> &nbsp; Reading: <span class="u4l4-blank" data-reveal="&nbsp;">1 lb 10 oz</span></p>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">8 spaces in 1 lb: <span class="tex">16\div8=2</span> oz each. The pointer is 5 spaces past 1:<br><span class="tex">5\times2=10</span> oz, so <b>1 lb 10 oz</b>.</div></div></div>
+    </div>
+  </div>
+  <div class="parts c1 u4l4-gap">
+    <div class="part"><div class="pl">(d) Jae puts a mixing bowl full of flour on a digital scale. It shows 1.24 kg. The empty bowl has a mass of 315 g. How much flour is in the bowl?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same unit: 1.24 kg <span class="tex">=1240</span> g &nbsp;·&nbsp; <span class="tex">1240-315=925</span> g<br>There are <b>925 g</b> of flour in the bowl. (Next time, he could press TARE with the empty bowl on.)</div></div></div>
+  </div>
+  <div class="space" id="ex11-space"></div>
+  <button class="more" data-more="ex11-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Referents:</b> paper clip ≈ 1 g, toonie ≈ 7 g, 1 L of water ≈ 1 kg, slice of bread ≈ 1 oz, butter = 1 lb. A <b>tonne</b> (1000 kg) is not a <b>ton</b> (2000 lb).</div>
+    <div><b>SI:</b> t → kg → g → mg, <b>× 1000</b> each jump down, <b>÷ 1000</b> each jump up. Same unit before you add or compare.</div>
+    <div><b>Imperial:</b> 1 ton = 2000 lb, 1 lb = 16 oz. Ounces → lb oz: ÷ 16, then the leftover ounces. 1.5 lb = 1 lb <b>8</b> oz. Trade 16 oz for 1 lb.</div>
+    <div><b>True cost</b> = price paid ÷ usable pounds. <b>Read a scale:</b> difference ÷ spaces, then count on. TARE, or subtract the bowl.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u4l4">
+    <div><div class="kicker">Your turn</div><b>Assignment 4 · Questions 6–18</b><div class="muted">Imperial conversions, spotting mistakes, hay bales and butter, pounds and ounces, price per ounce, true cost, and reading scales. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l5/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 5 — Converting Mass Between SI and Imperial</b><div class="muted">Meat priced per pound, a scale in kilograms. Next we cross between the two systems: 1 kg ≈ 2.2 lb.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u4l4.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u4l4', homeHref: '../../', title: '4.4 Mass' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

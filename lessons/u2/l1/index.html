@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Time Math · Math 10-3 2.1</title>
+<meta name="description" content="Math 10-3 Unit 2 Lesson 1 (refresher): minutes as fractions and decimals of an hour, mixed numbers of hours, adding and subtracting hours and minutes, the 12-hour and 24-hour clock, elapsed time, and timesheets with unpaid breaks. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u2l1.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u2l1">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: When Do the Hands Meet?">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>When Do the Hands Meet?</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">At <b>12:00 noon</b>, the hour hand and the minute hand point the same way. One is right on top of the other.</p><p class="vw-ctx">Then the clock keeps ticking, all afternoon and evening.</p><p class="vw-ask">From noon until just before midnight, how many times are the two hands right on top of each other?</p></div><div class="vw-art"><svg viewBox="0 0 300 260" role="img" aria-label="A clock whose minute hand spins and whose hour hand creeps slowly around">
+    <circle cx="150" cy="130" r="112" fill="#fffaf1" stroke="#6e4a1c" stroke-width="7"/>
+    <g stroke="#6e4a1c" stroke-width="4" stroke-linecap="round"><path d="M150 26 V42 M150 218 V234 M46 130 H62 M238 130 H254"/></g>
+    <g stroke="#9a6a24" stroke-width="2.5" stroke-linecap="round"><path d="M202 40 L198 47 M240 78 L233 82 M240 182 L233 178 M202 220 L198 213 M98 220 L102 213 M60 182 L67 178 M60 78 L67 82 M98 40 L102 47"/></g>
+    <g font-size="22" font-weight="800" fill="#6e4a1c" text-anchor="middle" font-family="system-ui, sans-serif"><text x="150" y="66">12</text><text x="218" y="138">3</text><text x="150" y="208">6</text><text x="82" y="138">9</text></g>
+    <line x1="150" y1="130" x2="150" y2="74" stroke="#2b2f38" stroke-width="10" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 150 130" to="360 150 130" dur="48s" repeatCount="indefinite"/></line>
+    <line x1="150" y1="130" x2="150" y2="44" stroke="#c93a33" stroke-width="6" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 150 130" to="360 150 130" dur="4s" repeatCount="indefinite"/></line>
+    <circle cx="150" cy="130" r="9" fill="#2b2f38"/>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Most people say 12. Are they right?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>Only 11 times!</b> At 12:00, then about 1:05, 2:11, 3:16, 4:22, 5:27, 6:33, 7:38, 8:44, 9:49 and 10:55. There is no meeting in the 11 o’clock hour: the next one is exactly at <b>12:00 midnight</b>. The hands meet about every <b>1 h 5 min</b> (a bit more, really). In a whole day they meet <b>22</b> times. Today is all about hours and minutes.</div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 2 Earning an Income · Lesson 1</div>
+  <h1>Time Math: Hours, Minutes and Timesheets</h1>
+  <p class="lede">Pay is worked out in <b>hours</b>, but clocks show hours <b>and minutes</b>. Before we work out any pay, we review how to write minutes as <b>part of an hour</b>, add and subtract times, read <b>both kinds of clocks</b>, find <b>elapsed time</b>, and total the hours on a <b>timesheet</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>change <b>minutes to decimal hours</b> and back (7 h 45 min = 7.75 h)</li>
+      <li>write a time as a <b>mixed number</b> of hours, and change an improper fraction of hours to a mixed number</li>
+      <li><b>add and subtract</b> hours and minutes, regrouping at 60</li>
+      <li>change between the <b>12-hour and 24-hour clock</b></li>
+      <li>find <b>elapsed time</b> by counting up, even past midnight</li>
+      <li>complete a <b>timesheet</b> with unpaid breaks and total the hours</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>Refresher</b> Skills from earlier grades that this unit uses (not marked as a unit outcome).</div>
+</section>
+
+<!-- ================= 1. Parts of an hour ================= -->
+<section class="card" data-ink="s1" data-section="1. Parts of an Hour">
+  <div class="sec-h"><span class="badge">1</span><h2>Parts of an Hour: Fractions and Decimals</h2></div>
+  <p>Pay is worked out in <b>hours</b>, but clocks show hours <b>and minutes</b>. So you need to write minutes as part of an hour. There are <b>60 minutes in 1 hour</b>, so 15 min is <span class="tex">\tfrac{15}{60}=\tfrac14</span> of an hour.</p>
+  <div class="u2l1-clockrow">
+    <svg class="u2l1-clock45" viewBox="-112 -78 224 156" role="img" aria-label="A clock face with 45 minutes shaded: three of the four quarters">
+      <path d="M0 0 L0 -60 A60 60 0 1 1 -60 0 Z" fill="#f2b84b"/>
+      <circle r="60" fill="none" stroke="#2b2f38" stroke-width="3"/>
+      <g stroke="#2b2f38" stroke-width="3"><path d="M0 -60 V-48 M60 0 H48 M0 60 V48 M-60 0 H-48"/></g>
+      <path d="M0 0 V-60" stroke="#2b2f38" stroke-width="2.5"/><path d="M0 0 H60 M0 0 V60 M0 0 H-60" stroke="#2b2f38" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <circle r="3" fill="#2b2f38"/>
+      <g font-size="10.5" font-weight="700" fill="#5a5f6a" text-anchor="middle" font-family="system-ui, sans-serif"><text y="-66">0 / 60 min</text><text x="66" y="4" text-anchor="start">15 min</text><text y="74">30 min</text><text x="-66" y="4" text-anchor="end">45 min</text></g>
+    </svg>
+    <div>
+      <p>The shaded part is <b>45 min</b>. It is 3 of the 4 quarters of the clock, so</p>
+      <p class="u2l1-big"><span class="tex">45\text{ min}=\tfrac{45}{60}\text{ h}=\tfrac34\text{ h}=0.75\text{ h}</span></p>
+      <p>The same amount of time can be written three ways:</p>
+      <p class="u2l1-three"><b>7 h 45 min</b><span>=</span><span class="tex">7\tfrac34\text{ h}</span><span>=</span><b>7.75 h</b></p>
+    </div>
+  </div>
+  <div class="u2l1-keys">
+    <div><b>Minutes → decimal hours:</b> divide the minutes by 60, then add the whole hours.<span class="eg">7 h 45 min: <span class="tex">45\div60=0.75</span>, so <b>7.75 h</b></span></div>
+    <div><b>Decimal hours → minutes:</b> multiply only the <b>decimal part</b> by 60.<span class="eg">3.4 h: <span class="tex">0.4\times60=24</span>, so <b>3 h 24 min</b></span></div>
+    <div class="w"><b>Benchmarks:</b> <span class="u2l1-gap"></span>15 min <span class="tex">=\tfrac14\text{ h}=0.25\text{ h}</span> <span class="u2l1-gap"></span>30 min <span class="tex">=\tfrac12\text{ h}=0.5\text{ h}</span> <span class="u2l1-gap"></span>45 min <span class="tex">=\tfrac34\text{ h}=0.75\text{ h}</span></div>
+  </div>
+  <div class="explainer" data-explainer="clockBar"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Benchmarks</h3></div>
+  <p class="q">Complete the table of benchmarks. Write each fraction in simplest form. Round decimals to 2 places.</p>
+  <table class="u2l1-tbl u2l1-bench">
+    <tr><th>Minutes</th><td>15</td><td>30</td><td>45</td><td>20</td><td>40</td><td>10</td><td>6</td><td>12</td></tr>
+    <tr><th>Fraction of an hour</th><td><span class="tex">\tfrac14</span></td><td><span data-reveal><span class="tex">\tfrac12</span></span></td><td><span data-reveal><span class="tex">\tfrac34</span></span></td><td><span data-reveal><span class="tex">\tfrac13</span></span></td><td><span data-reveal><span class="tex">\tfrac23</span></span></td><td><span data-reveal><span class="tex">\tfrac16</span></span></td><td><span data-reveal><span class="tex">\tfrac1{10}</span></span></td><td><span data-reveal><span class="tex">\tfrac15</span></span></td></tr>
+    <tr><th>Decimal hours</th><td>0.25</td><td><span data-reveal>0.5</span></td><td><span data-reveal>0.75</span></td><td><span data-reveal>0.33</span></td><td><span data-reveal>0.67</span></td><td><span data-reveal>0.17</span></td><td><span data-reveal>0.1</span></td><td><span data-reveal>0.2</span></td></tr>
+  </table>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Fraction: write the minutes over 60 and simplify, e.g. <span class="tex">\tfrac{20}{60}=\tfrac13</span>, <span class="tex">\tfrac{12}{60}=\tfrac15</span>.<br>Decimal: divide by 60, e.g. <span class="tex">20\div60=0.333\ldots\approx0.33</span>, <span class="tex">40\div60=0.666\ldots\approx0.67</span>, <span class="tex">10\div60=0.166\ldots\approx0.17</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= Math History box (brown) ================= -->
+<!-- sources: https://www.scientificamerican.com/article/experts-time-division-days-hours-minutes/ (Sumerian/Babylonian base 60; 60 divisible by 1–6, 10, 12, 15, 20, 30; Egyptian 12 + 12 hours; Ptolemy's Almagest c. 150 CE splits a degree into 60 and 60 again; minutes on clocks only near the end of the 1500s)
+     https://www.mentalfloss.com/history/decimal-time-how-french-made-10-hour-day (French decimal time: 10 h of 100 min of 100 s, official 24 Nov 1793, no longer required 7 Apr 1795) -->
+<section class="card history" data-ink="hist" data-section="Math History: Why 60 Minutes?">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">c. 2000 BCE – 1795</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">Why does an hour have 60 minutes?</h3>
+      <p>About 4000 years ago, the Sumerians and then the Babylonians (in today’s Iraq) counted in groups of <b>60</b>. Nobody knows for sure why. But 60 splits evenly into 2, 3, 4, 5, 6, 10, 12, 15, 20 and 30 equal parts. That is why 15, 20 and 30 minutes are such friendly fractions of an hour.</p>
+      <p>Astronomers kept using 60s. In about 150 CE, Ptolemy split each degree into 60 small parts, and each of those into 60 again: our <b>minutes</b> and <b>seconds</b>. In 1793, France tried a day of <b>10 hours</b>, each with <b>100 minutes</b>. People didn’t like it, and it was dropped in 1795.</p>
+      <div class="part hist-q"><div class="pl">A French decimal day had <span class="tex">10\times100=1000</span> minutes. Our day has <span class="tex">24\times60</span> minutes. Which minute was longer?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Our day has <span class="tex">24\times60=1440</span> minutes. The same day cut into only 1000 pieces gives <b>bigger pieces</b>: one French minute was <span class="tex">1440\div1000=1.44</span> of our minutes (about 1 min 26 s).</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u2l1-hist" viewBox="0 0 600 300" role="img" aria-label="A ring of 60 minutes splits evenly into 2, 3, 4, 5, 6 and 12 equal parts; then a French decimal clock with 10 hours"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+      <p class="hist-note">Clocks with a minute hand only became common in Europe near the end of the 1500s.</p>
+    </figure>
+  </div>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Changing Hours and Minutes">
+  <h3 class="sub">Changing between hours and minutes and decimal hours</h3>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>The digits after a decimal point are not minutes.</b> 7.30 h is <b>not</b> 7 h 30 min. 7 h 30 min <span class="tex">=7.5</span> h, and 7.30 h <span class="tex">=</span> 7 h 18 min (because <span class="tex">0.3\times60=18</span>).</div></div>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>On the TI-30XIIS:</b> for 5 h 50 min, key <span class="keys"><kbd>5</kbd><kbd>0</kbd><kbd>÷</kbd><kbd>6</kbd><kbd>0</kbd><kbd>+</kbd><kbd>5</kbd><kbd>ENTER</kbd></span>. The screen shows <b>5.833333333</b>. The calculator divides before it adds, so you don’t need brackets.</div>
+    <div class="u2l1-pcol"><button class="pill" data-keys="50 ÷ 60 + 5 =">Show me</button></div>
+  </div>
+  <div class="explainer" data-explainer="convert"></div>
+  <div data-extra><div class="explainer" data-explainer="trap"></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Decimal hours and hours and minutes</h3></div>
+  <p class="q">(a) Change to decimal hours. Round to 2 decimal places if needed.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(i) 3 h 15 min</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">15\div60=0.25</span><br><b>3.25 h</b></div></div></div>
+    <div class="part"><div class="pl">(ii) 5 h 50 min</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">50\div60=0.8333\ldots</span><br>about <b>5.83 h</b></div></div></div>
+    <div class="part"><div class="pl">(iii) 8 h 36 min</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">36\div60=0.6</span><br><b>8.6 h</b></div></div></div>
+    <div class="part"><div class="pl">(iv) 95 min</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">95\div60=1.5833\ldots</span><br>about <b>1.58 h</b><br>(95 min = 1 h 35 min)</div></div></div>
+  </div>
+  <p class="q">(b) Change to hours and minutes.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(i) 6.5 h</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.5\times60=30</span><br><b>6 h 30 min</b></div></div></div>
+    <div class="part"><div class="pl">(ii) 4.75 h</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.75\times60=45</span><br><b>4 h 45 min</b></div></div></div>
+    <div class="part"><div class="pl">(iii) 2.4 h</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.4\times60=24</span><br><b>2 h 24 min</b></div></div></div>
+    <div class="part"><div class="pl">(iv) 1.35 h</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.35\times60=21</span><br><b>1 h 21 min</b></div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1c" data-section="1. Mixed Numbers of Hours">
+  <h3 class="sub">Mixed numbers and improper fractions of an hour</h3>
+  <p>Time is sometimes written as a fraction of an hour. A <b>mixed number</b>, like <span class="tex">2\tfrac34</span>, has a whole number and a fraction. An <b>improper fraction</b>, like <span class="tex">\tfrac{11}{4}</span>, has a top (numerator) that is bigger than or equal to its bottom (denominator).</p>
+  <div class="u2l1-keys">
+    <div><b>Improper fraction → mixed number:</b> divide the top by the bottom. The answer is the whole number; the remainder goes over the bottom. Then simplify the fraction if you can.<span class="eg"><span class="tex">\tfrac94</span>: <span class="tex">9\div4=2</span> remainder 1, so <span class="tex">\tfrac94=2\tfrac14</span></span></div>
+    <div><b>Mixed number → improper fraction:</b> multiply the whole number by the bottom, add the top, keep the bottom.<span class="eg"><span class="tex">1\tfrac12=\tfrac{1\times2+1}{2}=\tfrac32</span> (an hour and a half is 3 half-hours)</span></div>
+  </div>
+  <div class="explainer" data-explainer="pieces"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Mixed numbers of hours</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Write each time as a mixed number of hours.<br>(i) 2 h 45 min <span class="u2l1-gap"></span> (ii) 1 h 20 min</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">(i) <span class="tex">\tfrac{45}{60}=\tfrac34</span>, so <b><span class="tex">2\tfrac34</span> h</b><br>(ii) <span class="tex">\tfrac{20}{60}=\tfrac13</span>, so <b><span class="tex">1\tfrac13</span> h</b></div></div></div>
+    <div class="part"><div class="pl">(b) A mechanic’s job card says a repair took <span class="tex">\tfrac{11}{4}</span> h. Write this as a mixed number, and in hours and minutes.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">11\div4=2</span> remainder 3, so <span class="tex">\tfrac{11}{4}=2\tfrac34</span> h.<br><span class="tex">\tfrac34</span> h = 45 min, so the repair took <b>2 h 45 min</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) Ms. Okafor books swimming lessons that are each half an hour long. How many lessons fit in <span class="tex">3\tfrac12</span> h?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3\tfrac12=\tfrac{3\times2+1}{2}=\tfrac72</span><br><span class="tex">\tfrac72</span> means 7 halves, so <b>7 lessons</b> fit.</div></div></div>
+    <div class="part"><div class="pl">(d) A parent volunteer helped at the school for a total of 250 min. Write this in hours and minutes, as a mixed number, and in decimal hours.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">250\div60=4</span> remainder 10 (<span class="tex">4\times60=240</span>, <span class="tex">250-240=10</span>)<br><b>4 h 10 min</b> <span class="tex">=4\tfrac{10}{60}\text{ h}=\mathbf{4\tfrac16}\text{ h}</span><br><span class="tex">250\div60=4.1666\ldots\approx</span> <b>4.17 h</b></div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Adding and subtracting ================= -->
+<section class="card" data-ink="s2" data-section="2. Adding and Subtracting Times">
+  <div class="sec-h"><span class="badge">2</span><h2>Adding and Subtracting Hours and Minutes</h2></div>
+  <p>Add hours to hours and minutes to minutes. An hour has <b>60</b> minutes, not 100, so you <b>regroup at 60</b>.</p>
+  <div class="u2l1-keys">
+    <div><b>Adding:</b> add the hours, add the minutes. If there are 60 min or more, trade 60 min for 1 h.<span class="eg">7 h 45 min + 6 h 30 min = 13 h 75 min = <b>14 h 15 min</b></span></div>
+    <div><b>Subtracting:</b> if there are not enough minutes on top, borrow 1 h and add 60 min.<span class="eg">5 h 10 min − 2 h 40 min → 4 h 70 min − 2 h 40 min = <b>2 h 30 min</b></span></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Don’t type 7.45 + 6.30 into your calculator.</b> 7 h 45 min is not 7.45 h. Either add the hours and minutes by hand, or change each time to decimal hours first (<span class="tex">7.75+6.5=14.25</span> h).</div></div>
+  <div class="explainer" data-explainer="regroup"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Adding and subtracting times</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) 4 h 25 min + 3 h 50 min</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">7 h 75 min<br><span class="tex">=</span> <b>8 h 15 min</b></div></div></div>
+    <div class="part"><div class="pl">(b) 2 h 40 min + 1 h 35 min + 3 h 55 min</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">6 h 130 min<br>130 min = 2 h 10 min<br><span class="tex">=</span> <b>8 h 10 min</b></div></div></div>
+    <div class="part"><div class="pl">(c) 9 h 15 min − 3 h 40 min</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Borrow 1 h: 8 h 75 min − 3 h 40 min<br><span class="tex">=</span> <b>5 h 35 min</b></div></div></div>
+  </div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(d) A delivery company lets its drivers drive at most 11 h in a day. Rosa has driven 4 h 35 min this morning and 3 h 50 min this afternoon. How much longer can she drive today?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">So far: 4 h 35 min + 3 h 50 min = 7 h 85 min = 8 h 25 min<br>Left: 11 h − 8 h 25 min = 10 h 60 min − 8 h 25 min = 2 h 35 min<br><b>Rosa can drive 2 h 35 min more today.</b></div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (one per lesson) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 1 · Questions 1–7</h2>
+  <p class="pr-t">Try these before we go on to the 24-hour clock.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Benchmark table</span>
+    <span><b>2–4</b>Decimal hours ↔ hours and minutes</span>
+    <span><b>5</b>Mixed numbers of hours</span>
+    <span><b>6–7</b>Adding and subtracting times</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u2l1">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. 12-hour and 24-hour clock ================= -->
+<section class="card" data-ink="s3" data-section="3. The 12-Hour and 24-Hour Clock">
+  <div class="sec-h"><span class="badge">3</span><h2>The 12-Hour and 24-Hour Clock</h2></div>
+  <p>The <b>12-hour clock</b> counts from 12 to 12 twice a day. <b>a.m.</b> times run from midnight to noon. <b>p.m.</b> times run from noon to midnight. 12:00 a.m. is <b>midnight</b> and 12:00 p.m. is <b>noon</b>.</p>
+  <p>The <b>24-hour clock</b> counts the hours from 00 to 23 and has no a.m. or p.m. It always uses two digits for the hour: 07:30 is 7:30 a.m. and 19:30 is 7:30 p.m. Hospitals, airlines, the military, transit schedules and many work schedules use it.</p>
+  <div class="u2l1-ribbon" id="u2l1-ribbon"></div>
+  <div class="u2l1-keys">
+    <div><b>12-hour → 24-hour:</b> a.m.: keep the hour (write 2 digits): 9:15 a.m. = 09:15. p.m.: <b>add 12</b> to the hour: 4:20 p.m. = 16:20.<span class="eg">The two 12 o’clocks are different: 12:40 a.m. = <b>00:40</b> (just after midnight), 12:40 p.m. = <b>12:40</b> (just after noon)</span></div>
+    <div><b>24-hour → 12-hour:</b> hours 13 to 23: <b>subtract 12</b>, p.m. Hour 12: p.m. Hour 00: write 12, a.m. Hours 01 to 11: a.m.<span class="eg">18:05 = 6:05 p.m. <span class="u2l1-gap"></span> 00:30 = 12:30 a.m.</span></div>
+  </div>
+  <div class="explainer" data-explainer="clock24"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Both clocks</h3></div>
+  <p class="q">Complete the table.</p>
+  <table class="u2l1-tbl u2l1-clk">
+    <tr><th>12-hour clock</th><td>6:15 a.m.</td><td>3:40 p.m.</td><td>12:20 a.m.</td><td>12:05 p.m.</td><td>11:55 p.m.</td></tr>
+    <tr><th>24-hour clock</th><td><span data-reveal>06:15</span></td><td><span data-reveal>15:40</span></td><td><span data-reveal>00:20</span></td><td><span data-reveal>12:05</span></td><td><span data-reveal>23:55</span></td></tr>
+    <tr class="gap"><th>24-hour clock</th><td>08:30</td><td>17:10</td><td>00:45</td><td>21:00</td><td>12:30</td></tr>
+    <tr><th>12-hour clock</th><td><span data-reveal>8:30 a.m.</span></td><td><span data-reveal>5:10 p.m.</span></td><td><span data-reveal>12:45 a.m.</span></td><td><span data-reveal>9:00 p.m.</span></td><td><span data-reveal>12:30 p.m.</span></td></tr>
+  </table>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">p.m.: <span class="tex">3+12=15</span>, <span class="tex">11+12=23</span>. 12:20 a.m. is just after midnight, so 00:20. 12:05 p.m. is just after noon, so 12:05.<br><span class="tex">17-12=5</span>, so 5:10 p.m.; <span class="tex">21-12=9</span>, so 9:00 p.m.; 00:45 is just after midnight: 12:45 a.m.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s3c" data-section="3. Check Yourself: Both Clocks">
+  <h3 class="sub">Check yourself: which time is it?</h3>
+  <p>Say the other clock’s time first, then tap a card to check.</p>
+  <div class="bk-flips" style="--bk-cols:4">
+    <div class="bk-flip"><div class="bk-front">7:05 p.m.</div><div class="bk-back"><b>19:05</b><br><span class="tex">7+12=19</span></div></div>
+    <div class="bk-flip"><div class="bk-front">22:30</div><div class="bk-back"><b>10:30 p.m.</b><br><span class="tex">22-12=10</span></div></div>
+    <div class="bk-flip"><div class="bk-front">12:10 a.m.</div><div class="bk-back"><b>00:10</b><br>10 min after midnight</div></div>
+    <div class="bk-flip"><div class="bk-front">12:50</div><div class="bk-back"><b>12:50 p.m.</b><br>just after noon</div></div>
+  </div>
+</section>
+
+<!-- ================= 4. Elapsed time ================= -->
+<section class="card" data-ink="s4" data-section="4. Elapsed Time">
+  <div class="sec-h"><span class="badge">4</span><h2>Elapsed Time</h2></div>
+  <p><b>Elapsed time</b> is how much time passes from a start time to an end time. You can’t just subtract the clock times on a calculator, because the minutes go up to 60, not 100. Instead, <b>count up</b> from the start time in friendly jumps.</p>
+  <div class="def"><b>Count up:</b> <span class="u2l1-gap"></span>① jump to the next whole hour <span class="u2l1-gap"></span>② jump the whole hours <span class="u2l1-gap"></span>③ jump the minutes left <span class="u2l1-gap"></span>④ add the jumps</div>
+  <div class="u2l1-jumpfig" id="u2l1-jumpfig"></div>
+  <p class="u2l1-c">From 8:40 a.m. to 1:25 p.m.: <span class="tex">20\text{ min}+4\text{ h}+25\text{ min}=</span> <b>4 h 45 min</b>.</p>
+  <div class="u2l1-keys">
+    <div><b>Or use the 24-hour clock and subtract:</b><span class="eg">13:25 − 08:40 → borrow 1 h: 12:85 − 08:40 = <b>4 h 45 min</b></span></div>
+    <div><b>Across midnight:</b> find the time up to midnight, then add the time after midnight.<span class="eg">10:00 p.m. → 2:00 a.m.: 2 h + 2 h = <b>4 h</b></span></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>The time from 8:50 to 10:15 is not <span class="tex">10.15-8.50=1.65</span>.</b> There are 60 minutes in an hour, so count up: 10 min + 1 h + 15 min = <b>1 h 25 min</b>.</div></div>
+  <div class="explainer" data-explainer="countUp"></div>
+  <div data-extra><div class="explainer" data-explainer="sub24"></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Elapsed time</h3></div>
+  <p class="q">Find the elapsed time.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) from 8:50 a.m. to 11:20 a.m.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">8:50 → 9:00: 10 min<br>9:00 → 11:00: 2 h<br>11:00 → 11:20: 20 min<br>total: <b>2 h 30 min</b></div></div></div>
+    <div class="part"><div class="pl">(b) from 10:35 a.m. to 3:10 p.m. (Do it two ways.)</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Count up: 10:35 a.m. → 11:00 a.m.: 25 min; 11:00 a.m. → 3:00 p.m.: 4 h; 3:00 p.m. → 3:10 p.m.: 10 min. Total: <b>4 h 35 min</b><br>24-hour: 3:10 p.m. = 15:10. 15:10 − 10:35 → 14:70 − 10:35 = 4 h 35 min ✓</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Night shifts and bus trips</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A security guard works overnight from 10:45 p.m. to 7:15 a.m. How long is his shift? Give the answer in hours and minutes and in decimal hours.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">10:45 p.m. → 11:00 p.m.: 15 min<br>11:00 p.m. → 7:00 a.m.: 8 h (1 h to midnight + 7 h)<br>7:00 a.m. → 7:15 a.m.: 15 min<br>total: 8 h 30 min = 8.5 h<br><b>His shift is 8 h 30 min, or 8.5 h.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Farah takes the bus from Calgary to Edmonton. It leaves at 13:50 and the trip takes 3 h 35 min. When does it arrive? Give the time in both clocks.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">13 h 50 min + 3 h 35 min = 16 h 85 min<br>85 min = 1 h 25 min, so 17 h 25 min<br><b>The bus arrives at 17:25, which is 5:25 p.m.</b></div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u2l1"></section>
+
+<!-- ================= 5. Timesheets ================= -->
+<section class="card" data-ink="s5" data-section="5. Timesheets and Unpaid Breaks">
+  <div class="sec-h"><span class="badge">5</span><h2>Timesheets and Unpaid Breaks</h2></div>
+  <p>A <b>timesheet</b> (or <b>time card</b>) records when you start work (<b>in</b>) and when you stop (<b>out</b>) each day. Your employer uses it to work out your pay, so it must be right. You are not paid for an <b>unpaid break</b>, such as a 30 min lunch, so subtract it. Some jobs have a <b>split shift</b>: two blocks of work in one day, with time off in between. Find the time for each block, then add.</p>
+  <div class="def"><b>Hours worked in a day</b> <span class="tex">=</span> (time from in to out) <span class="tex">-</span> unpaid break<br><b>Hours for the week:</b> add the days in hours and minutes. Change the total to decimal hours <b>at the end</b>.</div>
+  <div class="tip"><div class="tip-ic">i</div><div><b>Did you know?</b> In Alberta, a worker must get a break of at least <b>30 min</b> during a shift of more than <b>5 hours</b> in a row. The employer decides whether the break is paid. (Rules as of 2026; rules can change.)</div></div>
+  <div class="explainer" data-explainer="timesheet"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Hours worked</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Priya works at a grocery store from 8:30 a.m. to 5:15 p.m. She takes a 30 min unpaid lunch. How many hours does she work? Give the answer in hours and minutes and in decimal hours.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">8:30 a.m. → 9:00 a.m.: 30 min; 9:00 a.m. → 5:00 p.m.: 8 h; 5:00 p.m. → 5:15 p.m.: 15 min. Total: 8 h 45 min<br>Subtract the break: 8 h 45 min − 30 min = 8 h 15 min<br><span class="tex">15\div60=0.25</span>, so <b>Priya works 8 h 15 min = 8.25 h.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Mr. Dhillon drives a school bus. He works a split shift: 6:45 a.m. to 9:10 a.m., and 2:50 p.m. to 5:05 p.m. How many hours does he work? Round decimal hours to 2 places.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Morning: 6:45 → 7:00 is 15 min, 7:00 → 9:00 is 2 h, 9:00 → 9:10 is 10 min: 2 h 25 min<br>Afternoon: 10 min + 2 h + 5 min = 2 h 15 min<br>Total: 4 h 40 min <span class="tex">=4\tfrac23</span> h (<span class="tex">40\div60=0.666\ldots</span>)<br><b>He works about 4.67 h.</b></div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Jordan’s timesheet</h3></div>
+  <p class="q">Jordan is a cook at a restaurant in Cochrane. Complete his timesheet for the week.</p>
+  <table class="u2l1-tbl u2l1-ts">
+    <tr><th>Day</th><th>In</th><th>Out</th><th>Time in to out</th><th>Unpaid break</th><th>Hours worked</th></tr>
+    <tr><th>Monday</th><td>7:15 a.m.</td><td>3:45 p.m.</td><td><span data-reveal>8 h 30 min</span></td><td>30 min</td><td><span data-reveal>8 h 0 min</span></td></tr>
+    <tr><th>Tuesday</th><td>11:30 a.m.</td><td>7:50 p.m.</td><td><span data-reveal>8 h 20 min</span></td><td>30 min</td><td><span data-reveal>7 h 50 min</span></td></tr>
+    <tr><th>Wednesday</th><td colspan="5" class="off">day off</td></tr>
+    <tr><th>Thursday</th><td>4:00 p.m.</td><td>11:45 p.m.</td><td><span data-reveal>7 h 45 min</span></td><td>45 min</td><td><span data-reveal>7 h 0 min</span></td></tr>
+    <tr><th>Friday</th><td>5:30 p.m.</td><td>1:15 a.m.</td><td><span data-reveal>7 h 45 min</span></td><td>30 min</td><td><span data-reveal>7 h 15 min</span></td></tr>
+    <tr><th>Saturday</th><td>9:00 a.m.</td><td>1:40 p.m.</td><td><span data-reveal>4 h 40 min</span></td><td>none</td><td><span data-reveal>4 h 40 min</span></td></tr>
+    <tr class="tot"><th colspan="5">Total hours (hours and minutes)</th><td><span data-reveal>34 h 45 min</span></td></tr>
+    <tr class="tot"><th colspan="5">Total hours (decimal hours)</th><td><span data-reveal>34.75 h</span></td></tr>
+  </table>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Friday goes past midnight: 5:30 p.m. → 6:00 p.m. is 30 min, 6:00 p.m. → 1:00 a.m. is 7 h, then 15 min: 7 h 45 min.<br>Add the hours: <span class="tex">8+7+7+7+4=33</span> h. Add the minutes: <span class="tex">0+50+0+15+40=105</span> min = 1 h 45 min.<br>Total: 33 h + 1 h 45 min = 34 h 45 min. <span class="tex">45\div60=0.75</span>, so <b>Jordan worked 34.75 h this week.</b></div></div></div>
+  </div>
+  <p class="small muted" data-extra><b>Think:</b> why change to decimal hours only at the <b>end</b>? (Rounding each day first, like 7 h 50 min ≈ 7.83 h, can make the weekly total a little off. Adding hours and minutes first keeps it exact.)</p>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>60 minutes = 1 hour.</b> Minutes → decimal hours: <b>÷ 60</b> (7 h 45 min = 7.75 h). Decimal hours → minutes: decimal part <b>× 60</b> (3.4 h = 3 h 24 min). 7.30 h is <b>not</b> 7 h 30 min.</div>
+    <div><b>Add or subtract</b> hours with hours and minutes with minutes. <b>Regroup at 60:</b> 75 min = 1 h 15 min; borrow 1 h = 60 min.</div>
+    <div><b>24-hour clock:</b> p.m. → add 12 (4:20 p.m. = 16:20). 13 to 23 → subtract 12, p.m. Midnight is 00:00; 12:40 a.m. = 00:40.</div>
+    <div><b>Elapsed time:</b> count up (next hour, whole hours, minutes left). <b>Timesheet:</b> in to out, minus the unpaid break; total in hours and minutes, then change to decimal hours at the end.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u2l1">
+    <div><div class="kicker">Your turn</div><b>Assignment 1 · Questions 8–19</b><div class="muted">Both clocks, elapsed time (even past midnight), end times, hours worked, timesheets, finding the mistake, and multiple choice. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l2/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 2 — Wages and Salaries: Gross Pay and Pay Periods</b><div class="muted">Hours × hourly wage, Alberta’s minimum wage, and splitting a yearly salary into paycheques.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u2l1.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u2l1', homeHref: '../../', title: '2.1 Time Math' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

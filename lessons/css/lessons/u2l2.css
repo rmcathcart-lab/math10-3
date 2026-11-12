@@ -1,0 +1,128 @@
+/* Math 10-3 · Unit 2 · Lesson 2 — Wages and Salaries: styles used only on this page (prefix u2l2-).
+ * Hours amber, money green, salary/year brand brown, minimums blue (students) and brown (everyone), answers red. */
+.u2l2 .ex-cap .katex { font-size: 1.04em; }
+.u2l2 .pl .katex { font-size: 1.08em; }
+.u2l2 .ans .katex { font-size: 1.05em; }
+.u2l2 .katex { white-space: nowrap; }
+.u2l2-gap { display: inline-block; width: 22px; }
+.u2l2-ind { display: inline-block; width: 128px; }
+.u2l2-pcol { display: flex; flex-direction: column; gap: 6px; flex: none; }
+.u2l2 .tip:not(.watch):not(.calc-tip) { background: var(--brand-soft); }
+.u2l2 .tip:not(.watch):not(.calc-tip) .tip-ic { background: var(--brand2); color: #fff; }
+
+/* ---------------- notes ---------------- */
+.u2l2-two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; margin: 6px 0 12px; }
+.u2l2-two > div { background: var(--brand-soft); border-left: 5px solid var(--brand2); border-radius: 10px; padding: 10px 14px; font-size: 19px; line-height: 1.38; }
+.u2l2-two > div > b:first-child { display: block; font: 800 22px var(--round); color: var(--brand); margin-bottom: 4px; }
+.u2l2-tips { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+.u2l2-tbl { border-collapse: collapse; margin: 10px auto 12px; font-size: 19px; }
+.u2l2-tbl th, .u2l2-tbl td { border: 2px solid #cfc6b4; padding: 6px 12px; text-align: center; height: 48px; }
+.u2l2-tbl th { background: var(--brand-soft); font-weight: 800; }
+.u2l2-jobs td { width: 440px; text-align: left; line-height: 1.4; }
+.u2l2-ts td { min-width: 130px; }
+.u2l2-ts th:first-child { text-align: left; }
+.u2l2-ts td.off { font-style: italic; color: var(--muted); }
+.u2l2-ts tr.tot th { text-align: right; }
+.u2l2-pp td:nth-child(2) { text-align: left; min-width: 380px; }
+.u2l2-pp td b { font: 800 22px var(--round); color: var(--brand); }
+.u2l2-hana td { min-width: 150px; }
+.u2l2-pc th:first-child { text-align: left; }
+.u2l2-pc td { width: 380px; text-align: left; line-height: 1.4; }
+.u2l2-minw { margin: 8px 0 12px; border: 2px solid var(--brand2); border-radius: 14px; overflow: hidden; }
+.u2l2-minw .h { background: var(--brand); color: #fff; font: 800 20px var(--round); padding: 8px 16px; }
+.u2l2-minw .h small { font-weight: 600; opacity: .85; font-size: 15px; }
+.u2l2-minw .r { display: grid; grid-template-columns: 140px 1fr; gap: 14px; align-items: center; padding: 10px 16px; font-size: 19px; line-height: 1.38; background: #fff; }
+.u2l2-minw .r + .r { border-top: 2px solid #eadfcd; }
+.u2l2-minw .r > b { font: 800 30px var(--round); color: var(--brand); text-align: center; }
+.u2l2-minw .r.s > b { color: #1f5bd6; }
+
+/* ---------------- explainers: shared ---------------- */
+.u2l2-abs { position: absolute; }
+.u2l2-mid { translate: -50% -50%; }
+.u2l2-ml { translate: 0 -50%; }
+.u2l2-eqn { font-size: 26px; white-space: nowrap; background: var(--brand-soft); border-radius: 12px; padding: 4px 18px; }
+.u2l2-eqn .katex { font-size: 1.06em; }
+.u2l2-lane { font: 700 15px var(--round); color: var(--muted); text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
+.u2l2-tk { font: 700 18px var(--round); color: var(--ink); white-space: nowrap; }
+.u2l2-tk2 { font: 700 14px var(--round); color: var(--muted); white-space: nowrap; }
+.u2l2-mon { font: 700 14px var(--round); color: var(--muted); }
+.u2l2-cnt { font: 600 21px var(--round); color: var(--ink); white-space: nowrap; }
+.u2l2-cnt b { font-size: 28px; color: var(--brand); }
+.u2l2-yh { font: 600 22px var(--round); color: var(--ink); white-space: nowrap; }
+.u2l2-yh b { color: var(--brand); font-size: 26px; }
+.u2l2-rowl { font: 800 22px var(--round); color: var(--ink); white-space: nowrap; }
+
+/* paycheque */
+.u2l2-hblk { height: 52px; box-sizing: border-box; border: 2.5px solid var(--ink); border-radius: 8px; background: #fffdf8; overflow: hidden; }
+.u2l2-hblk i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #f2b84b; }
+.u2l2-hblk span { position: absolute; inset: 0; display: grid; place-items: center; font: 700 15px var(--round); color: #5a4630; }
+.u2l2-hl { font: 600 22px var(--round); white-space: nowrap; color: var(--ink); }
+.u2l2-hl b { color: #9a5d00; }
+.u2l2-chq { width: 560px; height: 150px; box-sizing: border-box; border-radius: 10px; padding: 10px 18px; display: grid; grid-template-rows: auto auto 1fr; gap: 4px;
+  background: repeating-linear-gradient(135deg, #f4faf6 0 10px, #eaf5ee 10px 20px); border: 2px solid #9fd3b4; box-shadow: 0 6px 16px rgba(0, 0, 0, .08); }
+.u2l2-chq .top { display: flex; justify-content: space-between; font: 700 15px var(--round); color: #2f6b4b; letter-spacing: .08em; border-bottom: 2px dashed #9fd3b4; padding-bottom: 4px; }
+.u2l2-chq .top span { letter-spacing: 0; font-weight: 600; color: var(--muted); }
+.u2l2-chq .mid { display: flex; justify-content: space-between; font-size: 18px; color: var(--ink); }
+.u2l2-chq .cx { color: var(--muted); font: 600 18px var(--round); }
+.u2l2-chq .amt { justify-self: end; align-self: center; display: flex; align-items: baseline; gap: 6px; background: #fff; border: 2.5px solid #2f9e66; border-radius: 10px; padding: 0 16px; font: 800 40px ui-monospace, "SF Mono", Menlo, monospace; color: #1d6b44; }
+.u2l2-chq .amt span { font-size: 28px; }
+.u2l2-chq.done .amt { color: var(--red); border-color: var(--red); }
+.u2l2-est { width: 280px; box-sizing: border-box; background: #fff4dc; border: 2px dashed var(--amber); border-radius: 12px; padding: 8px 14px; font-size: 24px; display: grid; gap: 4px; justify-items: center; }
+.u2l2-est .k { font: 800 14px var(--round); color: #9a5d00; text-transform: uppercase; letter-spacing: .06em; }
+
+/* Sofia's timesheet + running paycheque */
+.u2l2-tsx { width: 600px; border-collapse: collapse; font-size: 18px; background: #fff; }
+.u2l2-tsx th, .u2l2-tsx td { border: 2px solid #cfc6b4; padding: 0 8px; height: 36px; text-align: center; white-space: nowrap; }
+.u2l2-tsx tr:first-child th { background: var(--brand-soft); font: 800 15px var(--round); }
+.u2l2-tsx th { text-align: left; font-weight: 800; }
+.u2l2-tsx tr.off td { font-style: italic; color: var(--muted); }
+.u2l2-tsx tr.lit td, .u2l2-tsx tr.lit th { background: #fff4dc; }
+.u2l2-tsx td.f, .u2l2-tsx td.t { color: #9a5d00; font: 800 20px var(--round); width: 110px; }
+.u2l2-tsx tr.tot th { text-align: right; background: #fbf8f2; }
+.u2l2-run { width: 290px; height: 250px; box-sizing: border-box; border-radius: 14px; padding: 12px 16px; display: grid; align-content: start; gap: 6px; justify-items: center;
+  background: repeating-linear-gradient(135deg, #f4faf6 0 10px, #eaf5ee 10px 20px); border: 2px solid #9fd3b4; }
+.u2l2-run .k { font: 800 14px var(--round); color: #2f6b4b; text-transform: uppercase; letter-spacing: .08em; }
+.u2l2-run .r { font: 600 17px var(--round); color: var(--muted); }
+.u2l2-run .h { font: 800 26px var(--round); color: #9a5d00; }
+.u2l2-run .m { font: 800 40px ui-monospace, "SF Mono", Menlo, monospace; color: #1d6b44; background: #fff; border: 2.5px solid #2f9e66; border-radius: 10px; padding: 0 12px; }
+.u2l2-run .x { font-size: 20px; min-height: 30px; }
+.u2l2-run.done .m { color: var(--red); border-color: var(--red); }
+
+/* undo */
+.u2l2-box { font: 800 36px var(--round); padding: 12px 22px; border-radius: 14px; background: #fff; border: 3px solid; white-space: nowrap; }
+.u2l2-box.hrs { color: #9a5d00; border-color: var(--amber); }
+.u2l2-box.pay { color: #1d6b44; border-color: #2f9e66; }
+.u2l2-arl { font: 800 22px var(--round); white-space: nowrap; background: rgba(255, 255, 255, .92); border-radius: 8px; padding: 0 8px; }
+.u2l2-g { color: var(--ok, #12805a); }
+.u2l2-r { color: var(--red); }
+.u2l2-b { color: #1f5bd6; }
+.u2l2-a { color: #9a5d00; }
+
+/* minimum wage */
+.u2l2-id { width: 340px; box-sizing: border-box; background: #fff; border: 2px solid #d6cfc0; border-radius: 14px; box-shadow: 0 6px 16px rgba(0, 0, 0, .07); padding: 12px 18px; display: grid; gap: 8px; }
+.u2l2-id .nm { display: flex; justify-content: space-between; align-items: baseline; font: 800 28px var(--round); color: var(--brand); border-bottom: 2px solid #eadfcd; padding-bottom: 4px; }
+.u2l2-id .nm span { font: 600 19px var(--round); color: var(--muted); }
+.u2l2-id .ln { font-size: 21px; color: var(--ink); }
+.u2l2-ml2 { font: 800 18px/1.15 var(--round); text-align: center; white-space: nowrap; background: rgba(255, 255, 255, .92); border-radius: 8px; padding: 2px 6px; }
+.u2l2-ml2 small { font-weight: 600; font-size: 13px; }
+.u2l2-pinl { font: 800 24px var(--round); color: var(--red); white-space: nowrap; }
+.u2l2-cell { height: 50px; box-sizing: border-box; border: 2px solid #b9ad97; border-radius: 6px; background: #fffdf8; display: grid; place-items: center; font: 700 13px var(--round); color: var(--muted); transition: background .2s; }
+.u2l2-cell.b { background: #a9c4f0; border-color: #1f5bd6; color: #12347a; }
+.u2l2-cell.a { background: #f2b84b; border-color: #c27a0e; color: #5a3500; }
+.u2l2-bl { font: 700 20px var(--round); white-space: nowrap; background: rgba(255, 255, 255, .94); border-radius: 8px; padding: 2px 10px; }
+
+/* compare jobs */
+.u2l2-job { width: 430px; box-sizing: border-box; font-size: 19px; padding: 8px 14px; border-radius: 12px; border: 2px solid; background: #fff; }
+.u2l2-job.a { border-color: #e3b25f; }
+.u2l2-job.b { border-color: #2f9e66; }
+.u2l2-job b { font-family: var(--round); }
+.u2l2-unit { font: 700 17px var(--round); color: var(--muted); text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
+.u2l2-bv { font: 800 26px var(--round); color: var(--ink); white-space: nowrap; }
+
+/* mistakes */
+.u2l2-paper { width: 410px; height: 150px; box-sizing: border-box; background: #fff; border: 1.5px solid #d6cfc0; border-radius: 6px; box-shadow: 0 6px 16px rgba(0, 0, 0, .08); padding: 12px 20px; display: grid; align-content: start; gap: 18px;
+  background-image: repeating-linear-gradient(180deg, transparent 0 33px, #e8eef8 33px 34px); }
+.u2l2-paper .nm { font: 800 20px var(--round); color: var(--brand); border-bottom: 2px solid #e5b5b0; padding-bottom: 4px; }
+.u2l2-paper .w { font-size: 28px; }
+.u2l2-paper.fix .nm { color: var(--ok, #12805a); border-bottom-color: #9fd3b4; }
+.u2l2-note { font: 600 22px var(--round); color: var(--red); background: #fff1ef; border-radius: 10px; padding: 6px 14px; white-space: nowrap; }

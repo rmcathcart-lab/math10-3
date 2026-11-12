@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Temperature · Math 10-3 4.3</title>
+<meta name="description" content="Math 10-3 Unit 4 Lesson 3: temperature in degrees Celsius and degrees Fahrenheit. The double thermometer and referents, F = 1.8 × C + 32 and C = (F − 32) ÷ 1.8, estimating in your head, comparing temperatures, and changing a temperature change. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u4l3.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u4l3">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Ice Cube Race">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Ice Cube Race</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Two ice cubes come out of the same freezer.</p><p class="vw-ctx">One goes on a <b>metal</b> baking pan. One goes on a <b>wooden</b> cutting board. The pan and the board have sat on the counter all day.</p><p class="vw-ask">Which ice cube melts first?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="An ice cube on a metal pan and an ice cube on a wooden board, with a question mark between them">
+    <rect x="10" y="196" width="310" height="40" rx="8" fill="#efe6d6"/>
+    <rect x="18" y="176" width="140" height="18" rx="5" fill="#a9b2bf" stroke="#5d6675" stroke-width="3"/>
+    <rect x="24" y="170" width="128" height="8" rx="3" fill="#c9d0da"/>
+    <rect x="172" y="172" width="140" height="22" rx="6" fill="#c08a4c" stroke="#7a5124" stroke-width="3"/>
+    <path d="M182 180 H300 M186 187 H296" stroke="#a46f35" stroke-width="2" fill="none"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.6s" repeatCount="indefinite"/>
+      <rect x="62" y="122" width="48" height="48" rx="8" fill="#d8f0fb" stroke="#4f97c4" stroke-width="3"/>
+      <path d="M70 132 L80 130 M71 141 L76 140" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 -3;0 0;0 -3" dur="2.6s" repeatCount="indefinite"/>
+      <rect x="218" y="122" width="48" height="48" rx="8" fill="#d8f0fb" stroke="#4f97c4" stroke-width="3"/>
+      <path d="M226 132 L236 130 M227 141 L232 140" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g>
+    <g fill="#fff" opacity=".9"><circle cx="58" cy="118" r="3"><animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="270" cy="118" r="3"><animate attributeName="opacity" values="0;1;0" dur="1.8s" begin=".9s" repeatCount="indefinite"/></circle></g>
+    <text x="86" y="218" font-size="17" font-weight="800" fill="#4a4436" text-anchor="middle">metal</text>
+    <text x="242" y="218" font-size="17" font-weight="800" fill="#4a4436" text-anchor="middle">wood</text>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="1.6s" repeatCount="indefinite"/>
+      <text x="165" y="96" font-size="52" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Vote: <b>metal</b>, <b>wood</b>, or <b>a tie</b>? Then touch a metal table leg and a wooden desk.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>The one on the metal pan melts first, by a lot!</b> The pan and the board are the <b>same</b> temperature (room temperature). Metal only <i>feels</i> colder because it pulls heat out of your warm hand quickly. In the same way, it pushes room heat into the ice quickly. Wood moves heat slowly. <span class="muted">“Feels cold” is not the same as “is cold”. A thermometer tells the truth, and today we read two kinds.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 4 Volume, Capacity, Mass and Temperature · Lesson 3</div>
+  <h1>Temperature: Celsius and Fahrenheit</h1>
+  <p class="lede">Canada says 25 degrees. A US weather app says 77 degrees. Same afternoon! Today we read the <b>two temperature scales</b>, change from one to the other with a formula, <b>estimate</b> in our heads, and compare temperatures and temperature <b>changes</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>read a <b>double thermometer</b> and use <b>referents</b> (water freezes, body temperature, …)</li>
+      <li>change °C to °F: <b>× 1.8, then + 32</b></li>
+      <li>change °F to °C: <b>− 32, then ÷ 1.8</b> (with brackets on the calculator)</li>
+      <li><b>estimate</b> in my head: double and add 30, or subtract 30 and halve</li>
+      <li>compare temperatures, and change a temperature <b>change</b> (× 1.8 or ÷ 1.8 only)</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M1</b> Demonstrate an understanding of the Système International (SI) by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; applying strategies to convert SI units to imperial units.</div>
+  <div class="outcome"><b>M2</b> Demonstrate an understanding of the imperial system by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; comparing the American and British imperial units for capacity; applying strategies to convert imperial units to SI units.</div>
+</section>
+
+<!-- ================= 1. Two temperature scales ================= -->
+<section class="card" data-ink="s1" data-section="1. Two Temperature Scales">
+  <div class="sec-h"><span class="badge">1</span><h2>Two Temperature Scales</h2></div>
+  <p><b>Temperature</b> tells how hot or cold something is. Canada uses <b>degrees Celsius</b> (°C), the SI scale. The United States uses <b>degrees Fahrenheit</b> (°F), the imperial scale. You see Fahrenheit on US weather reports, US recipes and ovens, and on some tools and manuals made in the US.</p>
+  <p>A <b>double thermometer</b> shows both scales side by side. Each height on it is <b>one</b> temperature with two names.</p>
+  <div class="u4l3-refs">
+    <div class="def"><b>Key idea</b> &nbsp; <b>Referents</b> (temperatures to remember)
+      <table class="u4l3-tbl u4l3-ref">
+        <tr><th></th><th>°C</th><th>°F</th></tr>
+        <tr><td>Water boils</td><td>100</td><td>212</td></tr>
+        <tr><td>Hot oven (baking)</td><td>180</td><td>350</td></tr>
+        <tr><td>Normal body temperature</td><td>37</td><td>98.6</td></tr>
+        <tr><td>Room temperature</td><td>20 to 22</td><td>68 to 72</td></tr>
+        <tr><td>Water freezes</td><td>0</td><td>32</td></tr>
+        <tr><td>Very cold winter day</td><td><span class="tex">-40</span></td><td><span class="tex">-40</span></td></tr>
+      </table></div>
+    <div class="u4l3-refnote">
+      <p>From freezing to boiling is <b>100 Celsius degrees</b> but <b>180 Fahrenheit degrees</b>. So a Celsius degree is bigger:</p>
+      <p class="u4l3-big">A change of <b>1 Celsius degree</b> is a change of <b>1.8 Fahrenheit degrees</b>.</p>
+      <p>The scales also start in different places: water freezes at <b>0</b> on one and at <b>32</b> on the other.</p>
+    </div>
+  </div>
+  <div class="explainer" data-explainer="scales"></div>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Try It: The Double Thermometer">
+  <h3 class="sub">Try it: the double thermometer</h3>
+  <p>Drag the red line up and down, or tap a button. The thermometer shows one temperature with its two names.</p>
+  <div class="u4l3-dt" id="u4l3-dt"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Read the double thermometer</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Use the double thermometer to estimate each temperature on the other scale.</div>
+      <div class="u4l3-lines">
+        <div>(i) 10 °C ≈ <span class="u4l3-blank" data-reveal="&nbsp;">50 °F</span></div>
+        <div>(ii) 80 °F ≈ <span class="u4l3-blank" data-reveal="&nbsp;">27 °C</span></div>
+        <div>(iii) <span class="tex">-20</span> °C ≈ <span class="u4l3-blank" data-reveal="&nbsp;"><span class="tex">-4</span> °F</span></div>
+      </div>
+      <div class="work" style="--h:40px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(i) about <b>50 °F</b> · (ii) about <b>27 °C</b> · (iii) about <b><span class="tex">-4</span> °F</b>. Estimates within a few degrees are fine.</div></div></div>
+    <div class="part"><div class="pl">(b) Each temperature is missing its unit. Write °C or °F so that it makes sense.</div>
+      <div class="u4l3-lines">
+        <div>(i) A mug of hot chocolate: 60 <span class="u4l3-blank sm" data-reveal="&nbsp;">°C</span></div>
+        <div>(ii) A sunny spring day in Calgary: 15 <span class="u4l3-blank sm" data-reveal="&nbsp;">°C</span></div>
+        <div>(iii) A warm swimming pool: 80 <span class="u4l3-blank sm" data-reveal="&nbsp;">°F</span></div>
+        <div>(iv) A child with a fever: 39 <span class="u4l3-blank sm" data-reveal="&nbsp;">°C</span></div>
+      </div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">°C, °C, °F, °C. (60 °F, 15 °F and 39 °F are all colder than a room; 80 °C is close to boiling.)</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- sources: https://www.lindahall.org/about/news/scientist-of-the-day/anders-celsius (Celsius proposed his scale in 1742 with
+     100 for freezing and 0 for boiling; it was inverted not long after his death in 1744; some credit Linnaeus);
+     https://www.ebsco.com/research-starters/history/celsius-proposes-temperature-scale -->
+<section class="card history" data-ink="hist" data-section="Math History: Celsius Upside Down">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1742</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">The Celsius scale started upside down</h3>
+      <p>In <b>1742</b>, a Swedish astronomer named <b>Anders Celsius</b> made a scale with 100 degrees between freezing and boiling.</p>
+      <p>But on his scale, water <b>boiled at 0</b> and <b>froze at 100</b>! Colder days had <b>bigger</b> numbers.</p>
+      <p>Celsius died in 1744. Not long after, the scale was flipped to the way we use it today. Some people give the scientist Carl Linnaeus the credit.</p>
+      <div class="part hist-q"><div class="pl">On the old upside-down scale, what number would a 20 °C room be?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The room is 20 degrees up from freezing. On the old scale freezing was 100 and you count <b>down</b> as it gets warmer: <span class="tex">100-20=80</span>. The room would be <b>80 degrees</b>.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u4l3-hist" viewBox="0 0 600 300" role="img" aria-label="A thermometer labelled with 0 at the top for boiling and 100 at the bottom for freezing; the labels flip to today's scale"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 2. Celsius to Fahrenheit ================= -->
+<section class="card" data-ink="s2" data-section="2. Celsius to Fahrenheit">
+  <div class="sec-h"><span class="badge">2</span><h2>Celsius to Fahrenheit</h2></div>
+  <p>To change °C to °F, <b>multiply by 1.8</b> (Fahrenheit degrees are smaller, so there are more of them), then <b>add 32</b> (because water freezes at 32 °F, not 0).</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Celsius to Fahrenheit:</b> &nbsp; <span class="tex">F=1.8\times C+32</span> &nbsp; (the same as <span class="tex">F=\tfrac95C+32</span>, because <span class="tex">\tfrac95=1.8</span>)
+    <div class="eg"><b>Step 1:</b> Multiply the °C temperature by 1.8. &nbsp;&nbsp; <b>Step 2:</b> Add 32.</div></div>
+  <div class="explainer" data-explainer="cToF"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">1.8 <kbd>×</kbd> 25 <kbd>+</kbd> 32 <kbd>ENTER</kbd></span> shows 77, so 25 °C = 77 °F. For a temperature below zero, use the <b>negative key</b> <kbd>(−)</kbd>, not the subtract key <kbd>−</kbd>: <span class="keys">1.8 <kbd>×</kbd> <kbd>(−)</kbd> 15 <kbd>+</kbd> 32 <kbd>ENTER</kbd></span> shows 5.</div>
+    <div class="u4l3-pcol"><button class="pill" type="button" data-keys="1.8 × 25 + 32 =">25 °C</button><button class="pill" type="button" data-keys="1.8 × (−) 15 + 32 =">−15 °C</button></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Why × 1.8 and + 32?">
+  <h3 class="sub">Why × 1.8, then + 32? Climb the thermometer</h3>
+  <p>Start at freezing: 0 °C is 32 °F. Every Celsius degree up is 1.8 Fahrenheit degrees up. So climb 1.8 for each Celsius degree, starting from 32.</p>
+  <div class="explainer" data-explainer="whyF"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Without a calculator: what is 5 °C in °F? (Hint: 5 Celsius degrees is half of 10.)</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">10 Celsius degrees is 18 Fahrenheit degrees, so 5 is <b>9</b>. Start at 32: <span class="tex">32+9=41</span>. So 5 °C = <b>41 °F</b>.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Change each temperature to degrees Fahrenheit</h3></div>
+  <div class="part">
+    <table class="u4l3-tbl u4l3-wide">
+      <tr><th></th><th>°C</th><th>Work (<span class="tex">1.8\times C+32</span>)</th><th>°F</th></tr>
+      <tr><td>(a) A hot summer afternoon</td><td>25 °C</td><td><span data-reveal="&nbsp;"><span class="tex">1.8\times25+32=45+32</span></span></td><td><span data-reveal="&nbsp;">77 °F</span></td></tr>
+      <tr><td>(b) Normal body temperature</td><td>37 °C</td><td><span data-reveal="&nbsp;"><span class="tex">1.8\times37+32=66.6+32</span></span></td><td><span data-reveal="&nbsp;">98.6 °F</span></td></tr>
+      <tr><td>(c) A cold January morning</td><td><span class="tex">-15</span> °C</td><td><span data-reveal="&nbsp;"><span class="tex">1.8\times(-15)+32=-27+32</span></span></td><td><span data-reveal="&nbsp;">5 °F</span></td></tr>
+      <tr><td>(d) A pizza oven</td><td>230 °C</td><td><span data-reveal="&nbsp;"><span class="tex">1.8\times230+32=414+32</span></span></td><td><span data-reveal="&nbsp;">446 °F</span></td></tr>
+      <tr><td>(e) A warm bedroom</td><td>22.5 °C</td><td><span data-reveal="&nbsp;"><span class="tex">1.8\times22.5+32=40.5+32</span></span></td><td><span data-reveal="&nbsp;">72.5 °F</span></td></tr>
+      <tr><td>(f) A bitter cold night</td><td><span class="tex">-30</span> °C</td><td><span data-reveal="&nbsp;"><span class="tex">1.8\times(-30)+32=-54+32</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">-22</span> °F</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>77 °F</b> · (b) <b>98.6 °F</b> · (c) <b>5 °F</b> · (d) <b>446 °F</b> · (e) <b>72.5 °F</b> · (f) <b><span class="tex">-22</span> °F</b></div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Amira’s hotel room</h3></div>
+  <p class="q">Amira’s family is staying at a hotel in Montana. The thermostat in the room is in °F.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) At home, Amira keeps her room at 21 °C. What should she set the hotel thermostat to? Round to the nearest degree.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">F=1.8\times21+32</span><br><span class="tex">F=37.8+32=69.8</span><br>She should set the thermostat to about <b>70 °F</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Her phone says it is <span class="tex">-8</span> °C at home in Calgary. Her cousin in Montana asks what that is in °F. What should Amira tell her?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">F=1.8\times(-8)+32</span><br><span class="tex">F=-14.4+32=17.6</span><br>It is about <b>17.6 °F</b> (about 18 °F) in Calgary.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Fahrenheit to Celsius ================= -->
+<section class="card" data-ink="s3" data-section="3. Fahrenheit to Celsius">
+  <div class="sec-h"><span class="badge">3</span><h2>Fahrenheit to Celsius</h2></div>
+  <p>To go the other way, <b>undo</b> the steps in reverse order: first <b>subtract 32</b>, then <b>divide by 1.8</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Fahrenheit to Celsius:</b> &nbsp; <span class="tex">C=(F-32)\div1.8</span> &nbsp; (the same as <span class="tex">C=\tfrac59(F-32)</span>)
+    <div class="eg"><b>Step 1:</b> Subtract 32 from the °F temperature. &nbsp;&nbsp; <b>Step 2:</b> Divide by 1.8.</div></div>
+  <div class="explainer" data-explainer="fToC"></div>
+  <div class="def-grid">
+    <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Use <b>brackets</b> so the calculator subtracts first: <span class="keys"><kbd>(</kbd> 98.6 <kbd>−</kbd> 32 <kbd>)</kbd> <kbd>÷</kbd> 1.8 <kbd>ENTER</kbd></span> shows 37.</div>
+      <button class="pill" type="button" data-keys="( 98.6 − 32 ) ÷ 1.8 =">Show me</button></div>
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Without the brackets, <span class="keys">98.6 <kbd>−</kbd> 32 <kbd>÷</kbd> 1.8 <kbd>ENTER</kbd></span> divides first (order of operations) and shows 80.82…, which is wrong. Unless a question says otherwise, round temperatures to the nearest <b>tenth</b> of a degree.
+      <button class="pill small u4l3-wrongbtn" type="button" data-keys="98.6 − 32 ÷ 1.8 =">Show the mistake</button></div></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. Why Brackets?">
+  <h3 class="sub">Why brackets? The calculator’s order</h3>
+  <p>The calculator always divides before it subtracts (order of operations). Brackets tell it to subtract first. A referent shows which answer makes sense.</p>
+  <div class="explainer" data-explainer="brackets"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Why do we subtract 32 <b>first</b> when we change °F to °C?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Changing °C to °F does <b>× 1.8 first, + 32 last</b>. To undo it, take off the last step first (<b>− 32</b>), then undo the first step (<b>÷ 1.8</b>). Like taking off your boots before your socks.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Change each temperature to degrees Celsius</h3></div>
+  <div class="part"><div class="pl">Round to the nearest tenth of a degree.</div>
+    <table class="u4l3-tbl u4l3-wide">
+      <tr><th></th><th>°F</th><th>Work (<span class="tex">(F-32)\div1.8</span>)</th><th>°C</th></tr>
+      <tr><td>(a) A beach day in California</td><td>86 °F</td><td><span data-reveal="&nbsp;"><span class="tex">(86-32)\div1.8=54\div1.8</span></span></td><td><span data-reveal="&nbsp;">30 °C</span></td></tr>
+      <tr><td>(b) A very hot day</td><td>100 °F</td><td><span data-reveal="&nbsp;"><span class="tex">(100-32)\div1.8=68\div1.8</span></span></td><td><span data-reveal="&nbsp;">37.8 °C</span></td></tr>
+      <tr><td>(c) A deep freezer</td><td>0 °F</td><td><span data-reveal="&nbsp;"><span class="tex">(0-32)\div1.8=-32\div1.8</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">-17.8</span> °C</span></td></tr>
+      <tr><td>(d) A winter night in Minnesota</td><td><span class="tex">-13</span> °F</td><td><span data-reveal="&nbsp;"><span class="tex">(-13-32)\div1.8=-45\div1.8</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">-25</span> °C</span></td></tr>
+      <tr><td>(e) An oven for roasting</td><td>425 °F</td><td><span data-reveal="&nbsp;"><span class="tex">(425-32)\div1.8=393\div1.8</span></span></td><td><span data-reveal="&nbsp;">218.3 °C</span></td></tr>
+      <tr><td>(f) A cool fall morning</td><td>59 °F</td><td><span data-reveal="&nbsp;"><span class="tex">(59-32)\div1.8=27\div1.8</span></span></td><td><span data-reveal="&nbsp;">15 °C</span></td></tr>
+    </table>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>30 °C</b> · (b) <b>37.8 °C</b> · (c) <b><span class="tex">-17.8</span> °C</b> · (d) <b><span class="tex">-25</span> °C</b> · (e) <b>218.3 °C</b> · (f) <b>15 °C</b></div></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Lucas bakes from a US recipe</h3></div>
+  <p class="q">Lucas is baking his aunt’s cookie recipe from Arizona. It says “Bake at 375 °F”. His oven is in °C and can be set in steps of 5 degrees.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Change 375 °F to °C, to the nearest tenth. What should Lucas set his oven to?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">C=(375-32)\div1.8</span><br><span class="tex">C=343\div1.8=190.55\ldots\approx190.6</span> °C<br>He should set the oven to <b>190 °C</b> (the closest step).</div></div></div>
+    <div class="part"><div class="pl">(b) A US meat thermometer says chicken is safe when it reaches 165 °F inside. What is that in °C, to the nearest degree?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">C=(165-32)\div1.8</span><br><span class="tex">C=133\div1.8=73.88\ldots</span><br>Chicken is safe at about <b>74 °C</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–4">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 3 · Questions 1–4</h2>
+  <p class="pr-t">Try these before we learn the quick estimates.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Referents</span>
+    <span><b>2</b>°C or °F?</span>
+    <span><b>3</b>Change to °F</span>
+    <span><b>4</b>Change to °C</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 4.</span><a class="pill" href="../../../#/lesson/u4l3">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Estimating in your head ================= -->
+<section class="card" data-ink="s4" data-section="4. Estimating in Your Head">
+  <div class="sec-h"><span class="badge">4</span><h2>Estimating in Your Head</h2></div>
+  <p>You will not always have a calculator, for example when a friend tells you a US weather forecast. These quick rules round 1.8 <b>up to 2</b> and 32 <b>down to 30</b>:</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Quick estimates:</b>
+    <div class="u4l3-est"><div><span class="tex">F\approx2\times C+30</span><small>double, then add 30</small></div><div><span class="tex">C\approx(F-30)\div2</span><small>subtract 30, then halve</small></div></div></div>
+  <p>The estimate is very close for ordinary weather. It gets worse for very hot or very cold temperatures. For <b>cooking, medicine or a job</b>, use the exact formula.</p>
+  <div class="explainer" data-explainer="estimate"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A friend in Texas says it is 68 °F. Estimate in °C in your head. Then check with the formula.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">(68-30)\div2=38\div2=19</span> °C. Exact: <span class="tex">(68-32)\div1.8=36\div1.8=20</span> °C. Only 1 degree off: a nice room-temperature day.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>How good is the quick estimate?</h3></div>
+  <div class="u4l3-ex6">
+    <div class="part"><div class="pl">(a) Complete the table.</div>
+      <table class="u4l3-tbl u4l3-est6">
+        <tr><th>°C</th><th>Estimate<br><span class="tex">2C+30</span></th><th>Exact<br><span class="tex">1.8C+32</span></th><th>How far off?</th></tr>
+        <tr><td><span class="tex">-20</span></td><td><span data-reveal="&nbsp;"><span class="tex">-10</span> °F</span></td><td><span data-reveal="&nbsp;"><span class="tex">-4</span> °F</span></td><td><span data-reveal="&nbsp;">6°</span></td></tr>
+        <tr><td>0</td><td><span data-reveal="&nbsp;">30 °F</span></td><td><span data-reveal="&nbsp;">32 °F</span></td><td><span data-reveal="&nbsp;">2°</span></td></tr>
+        <tr><td>10</td><td><span data-reveal="&nbsp;">50 °F</span></td><td><span data-reveal="&nbsp;">50 °F</span></td><td><span data-reveal="&nbsp;">0°</span></td></tr>
+        <tr><td>20</td><td><span data-reveal="&nbsp;">70 °F</span></td><td><span data-reveal="&nbsp;">68 °F</span></td><td><span data-reveal="&nbsp;">2°</span></td></tr>
+        <tr><td>30</td><td><span data-reveal="&nbsp;">90 °F</span></td><td><span data-reveal="&nbsp;">86 °F</span></td><td><span data-reveal="&nbsp;">4°</span></td></tr>
+        <tr><td>200</td><td><span data-reveal="&nbsp;">430 °F</span></td><td><span data-reveal="&nbsp;">392 °F</span></td><td><span data-reveal="&nbsp;">38°</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Off by 6°, 2°, 0°, 2°, 4° and <b>38°</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Finish the sentences.</div>
+      <p class="u4l3-frame">The estimate is exact at <span class="u4l3-blank" data-reveal="&nbsp;">10 °C</span>.</p>
+      <p class="u4l3-frame">It is within a few degrees for <span class="u4l3-blank w2" data-reveal="&nbsp;">everyday weather</span> temperatures,</p>
+      <p class="u4l3-frame">but it is far off for <span class="u4l3-blank w2" data-reveal="&nbsp;">very hot (or very cold)</span> temperatures, like an oven.</p>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">exact at <b>10 °C</b> · close for <b>everyday weather</b> · far off for <b>very hot (or very cold)</b> temperatures</div></div></div>
+  </div>
+  <div class="parts c2 u4l3-gap">
+    <div class="part"><div class="pl">(c) In Seattle, the forecast says 54 °F. Estimate the temperature in °C. Then find the exact value. Is the estimate good enough to decide whether to wear a jacket?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">(54-30)\div2=24\div2=12</span> °C<br>Exact: <span class="tex">(54-32)\div1.8=22\div1.8\approx12.2</span> °C<br><b>Yes.</b> The estimate is only 0.2 degrees off. About 12 °C is cool, so a light jacket makes sense.</div></div></div>
+    <div class="part"><div class="pl">(d) A US recipe says to roast vegetables at 450 °F. Estimate in °C, then find the exact value. Is the estimate good enough?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">(450-30)\div2=420\div2=210</span> °C<br>Exact: <span class="tex">(450-32)\div1.8=418\div1.8\approx232.2</span> °C<br><b>No.</b> The estimate is about 22 degrees too low, so the food would cook too slowly. Use the formula for ovens.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u4l3"></section>
+
+<!-- ================= 5. Comparing temperatures and temperature changes ================= -->
+<section class="card" data-ink="s5" data-section="5. Comparing Temperatures">
+  <div class="sec-h"><span class="badge">5</span><h2>Comparing Temperatures and Temperature Changes</h2></div>
+  <p>To <b>compare</b> two temperatures, change them to the <b>same scale</b> first.</p>
+  <p>A <b>temperature change</b> is how much the temperature goes up or down. Subtract: higher − lower. With a negative temperature, count up to 0 and then past it: from <span class="tex">-21</span> up to 7 is <span class="tex">21+7=28</span> degrees.</p>
+  <p>To change a <b>temperature change</b> to the other scale, <b>only</b> multiply or divide by 1.8. Do <b>not</b> add or subtract 32: the 32 is about where the scales start, and a change does not depend on where they start.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Change in °F = 1.8 × change in °C</b> &nbsp;&nbsp;&nbsp; <b>Change in °C = change in °F ÷ 1.8</b>
+    <div class="eg"><b><span class="tex">-40</span> is the same on both scales:</b> &nbsp; <span class="tex">1.8\times(-40)+32=-72+32=-40</span>.</div></div>
+  <div class="explainer" data-explainer="chinook"></div>
+</section>
+
+<section class="card" data-extra data-ink="s5b" data-section="5. Where the Scales Meet: −40">
+  <h3 class="sub">Where the two scales meet: <span class="tex">-40</span></h3>
+  <p>Go down 10 Celsius degrees at a time. Fahrenheit goes down 18 each time, so it catches up by 8. At <span class="tex">-40</span> the two scales say the same number.</p>
+  <div class="explainer" data-explainer="minus40"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Is there any other temperature where °C and °F show the same number?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> Above <span class="tex">-40</span>, °F is always the bigger number. Below <span class="tex">-40</span>, °F is always the smaller number. They only meet once.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Same scale first</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) On the same morning it is <span class="tex">-25</span> °C in Edmonton and <span class="tex">-15</span> °F in Minneapolis. Which city is colder, and by how much?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Change <span class="tex">-15</span> °F to °C:<br><span class="tex">C=(-15-32)\div1.8=-47\div1.8\approx-26.1</span> °C<br><span class="tex">-26.1</span> is lower than <span class="tex">-25</span>, so <b>Minneapolis</b> is colder, by about <b>1.1 Celsius degrees</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Food safety rules say a fridge should be at 4 °C or colder. A US-made fridge thermometer reads 38 °F. Is the fridge cold enough?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">C=(38-32)\div1.8=6\div1.8\approx3.3</span> °C<br>3.3 °C is colder than 4 °C, so <b>yes</b>, the fridge is cold enough.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s5c" data-section="5. Same Scale, Side by Side">
+  <h3 class="sub">Same scale, side by side</h3>
+  <p>Put both temperatures on one double thermometer. The lower mark is the colder one.</p>
+  <div class="explainer" data-explainer="compare"></div>
+</section>
+
+<section class="card example" data-extra data-ink="exx" data-section="Extra Example: Florida Holiday">
+  <div class="ex-head"><span class="ex-tag">Extra example</span><h3>A holiday in Florida</h3></div>
+  <p class="q">Kiara’s family from Lethbridge is going to Florida in March. All the signs and forecasts there are in °F.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) The hotel pool is 84 °F. What is that in °C, to the nearest tenth?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">C=(84-32)\div1.8</span><br><span class="tex">=52\div1.8\approx28.9</span> °C<br>A warm pool.</div></div></div>
+    <div class="part"><div class="pl">(b) The forecast in Lethbridge says 32 °C next week. Her cousin in Florida asks for it in °F.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">F=1.8\times32+32</span><br><span class="tex">=57.6+32=89.6</span> °F<br>Hot in Lethbridge too!</div></div></div>
+    <div class="part"><div class="pl">(c) In Florida the temperature drops 9 Fahrenheit degrees overnight. How many Celsius degrees is that?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A change: only divide by 1.8.<br><span class="tex">9\div1.8=5</span><br>It drops <b>5 Celsius degrees</b>. (No 32!)</div></div></div>
+  </div>
+  <div class="space" id="exx-space"></div>
+  <button class="more" data-more="exx-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A chinook in Calgary</h3></div>
+  <p class="q">A <b>chinook</b> is a warm, dry wind that blows down from the Rocky Mountains in winter. One morning in Calgary it is <span class="tex">-21</span> °C. A chinook arrives, and by the afternoon it is 7 °C.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) By how many Celsius degrees did the temperature rise?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">7-(-21)=7+21=28</span><br>It rose <b>28 Celsius degrees</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) By how many Fahrenheit degrees did it rise?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1.8\times28=50.4</span><br>It rose <b>50.4 Fahrenheit degrees</b>.<br>(No <span class="tex">+32</span>: this is a change.)</div></div></div>
+    <div class="part"><div class="pl">(c) Check (b): change both temperatures to °F and subtract.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1.8\times(-21)+32=-5.8</span> °F<br><span class="tex">1.8\times7+32=44.6</span> °F<br><span class="tex">44.6-(-5.8)=50.4</span> ✓</div></div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> If you add 32 to the change, you get <span class="tex">50.4+32=82.4</span>, which is far too big. Only actual temperatures (readings on a thermometer) use the <span class="tex">+32</span> or <span class="tex">-32</span>.</div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Referents:</b> water freezes at 0 °C = 32 °F, boils at 100 °C = 212 °F; body 37 °C = 98.6 °F; room about 21 °C = 70 °F. 1 Celsius degree = 1.8 Fahrenheit degrees.</div>
+    <div><b>°C → °F:</b> <span class="tex">F=1.8\times C+32</span> (× 1.8, then + 32). Use <kbd>(−)</kbd> for a negative temperature.</div>
+    <div><b>°F → °C:</b> <span class="tex">C=(F-32)\div1.8</span> (− 32, then ÷ 1.8). Use <b>brackets</b> on the calculator. Round to the nearest tenth.</div>
+    <div><b>Estimate:</b> double and add 30, or subtract 30 and halve. <b>Compare</b> on the same scale. A <b>change</b> is only × 1.8 or ÷ 1.8 (no 32). <span class="tex">-40</span> °C = <span class="tex">-40</span> °F.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u4l3">
+    <div><div class="kicker">Your turn</div><b>Assignment 3 · Questions 5–18</b><div class="muted">Quick estimates, calculator mistakes, ranges, comparing temperatures, and temperature changes. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l4/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 4 — Mass: Grams, Kilograms, Ounces, Pounds and Tons</b><div class="muted">How heavy is a toonie? A tonne or a ton? Next we weigh things in metric and imperial units.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u4l3.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u4l3', homeHref: '../../', title: '4.3 Temperature' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

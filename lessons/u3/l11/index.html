@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Surface Area of Cylinders, Pyramids and Cones · Math 10-3 3.11</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 11: surface area of cylinders, square pyramids and cones. Unroll a can's label into a rectangle, unfold a pyramid, flatten a cone into a fan, then add the pieces. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l11.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l11">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Roll It Two Ways">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Roll It Two Ways</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Take one sheet of paper, <b>8½ in by 11 in</b>. Roll it into a tube and tape the edges. You can roll it two ways: a <b>tall, thin</b> tube or a <b>short, fat</b> tube.</p><p class="vw-ctx">Stand each tube on a table and fill it to the top with <b>popcorn</b>.</p><p class="vw-ask">Which tube holds more popcorn: the tall one, the short one, or are they the same?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A sheet of paper rolling up into a tall tube, unrolling, then rolling up into a short tube">
+    <ellipse cx="165" cy="234" rx="140" ry="10" fill="#efe6d6"/>
+    <!-- the flat sheet (fades out while a tube is showing) -->
+    <g>
+      <animate attributeName="opacity" values="1;1;0;0;1;1;0;0;1" keyTimes="0;0.08;0.16;0.42;0.5;0.58;0.66;0.92;1" dur="8s" repeatCount="indefinite"/>
+      <polygon points="80,226 250,226 290,196 120,196" fill="#fffdf6" stroke="#9a6a24" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M100 216 H246 M112 207 H258" stroke="#cdbb98" stroke-width="2"/>
+    </g>
+    <!-- tall, thin tube -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0" keyTimes="0;0.08;0.16;0.42;0.5;0.58;0.66;0.92;1" dur="8s" repeatCount="indefinite"/>
+      <path d="M140 226 V66 A26 8 0 0 1 192 66 V226 A26 8 0 0 1 140 226 Z" fill="#fffdf6" stroke="#9a6a24" stroke-width="3"/>
+      <ellipse cx="166" cy="66" rx="26" ry="8" fill="#f3e3c2" stroke="#9a6a24" stroke-width="3"/>
+      <line x1="178" y1="70" x2="178" y2="232" stroke="#cdbb98" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="214" y="150" font-size="20" font-weight="800" fill="#6e4a1c">tall</text>
+    </g>
+    <!-- short, fat tube -->
+    <g>
+      <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;0" keyTimes="0;0.08;0.16;0.42;0.5;0.58;0.66;0.92;1" dur="8s" repeatCount="indefinite"/>
+      <path d="M130 226 V104 A36 10 0 0 1 202 104 V226 A36 10 0 0 1 130 226 Z" fill="#fffdf6" stroke="#9a6a24" stroke-width="3"/>
+      <ellipse cx="166" cy="104" rx="36" ry="10" fill="#f3e3c2" stroke="#9a6a24" stroke-width="3"/>
+      <line x1="184" y1="108" x2="184" y2="234" stroke="#cdbb98" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="222" y="170" font-size="20" font-weight="800" fill="#6e4a1c">short</text>
+    </g>
+    <!-- popcorn bouncing -->
+    <g fill="#fff3c4" stroke="#c99a2e" stroke-width="2">
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" dur="1.4s" repeatCount="indefinite"/>
+      <circle cx="44" cy="70" r="9"/><circle cx="56" cy="64" r="8"/><circle cx="50" cy="56" r="7"/>
+      <circle cx="286" cy="58" r="9"/><circle cx="276" cy="50" r="7"/>
+    </g>
+    <text x="52" y="128" font-size="44" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Pick one: <b>tall</b>, <b>short</b> or <b>the same</b>. Tell the person beside you why.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>The short, fat tube holds more</b>, about 30% more! The tall tube holds about <b>63 in³</b> and the short tube about <b>82 in³</b>. Both tubes use the <b>same paper</b> (<span class="tex">8.5\times11=93.5</span> in² around the side), but a wider circle holds a lot more inside. <span class="muted">Today we find how much material covers a can, a tent or a cone. Same paper does not mean same space inside.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 11</div>
+  <h1>Surface Area of Cylinders, Pyramids and Cones</h1>
+  <p class="lede">How much metal makes a can? How much fabric is in a tent, or steel in a grain bin? Today we <b>unroll</b> a cylinder, <b>unfold</b> a pyramid and <b>flatten</b> a cone. Then we add up the areas of the pieces.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>draw the <b>net</b> of a cylinder (2 circles and a rectangle) and find its <b>surface area</b></li>
+      <li>use <b>only the pieces that are there</b>: a pail has no lid, a pipe has no ends</li>
+      <li>find the surface area of a <b>square pyramid</b> with the <b>slant height</b></li>
+      <li>find the surface area of a <b>cone</b>: base <span class="tex">\pi r^2</span> plus side <span class="tex">\pi rs</span></li>
+      <li>add the parts of an object made of two solids, and find the <b>cost</b> of the material</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M4</b> Solve problems that involve SI and imperial area measurements of regular, composite and irregular 2-D shapes and 3-D objects, including decimal and fractional measurements, and verify the solutions.</div>
+</section>
+
+<!-- ================= 1. The net of a cylinder ================= -->
+<section class="card" data-ink="s1" data-section="1. The Net of a Cylinder">
+  <div class="sec-h"><span class="badge">1</span><h2>The Net of a Cylinder</h2></div>
+  <p>A <b>cylinder</b> has two circles of the same size (the top and the bottom) and one curved side. Think of a can of soup. Peel off the label and lay it flat: it is a <b>rectangle</b>. So the <b>net</b> of a cylinder is one rectangle and two circles.</p>
+  <ul class="u3l11-list">
+    <li>The rectangle’s <b>width</b> is the <b>height</b> of the cylinder, <span class="tex">h</span>.</li>
+    <li>The rectangle’s <b>length</b> wraps once around the can, so it is the <b>circumference</b> of the circle: <span class="tex">C=2\pi r</span> (or <span class="tex">\pi d</span>).</li>
+  </ul>
+  <p>The <b>surface area</b> (SA) of a solid is the total area of all the pieces of its net. It is in <b>square units</b>.</p>
+  <div class="explainer" data-explainer="unroll"></div>
+  <div class="def"><b>Key idea</b>
+    <div class="u3l11-kg">
+      <div><b>Each circle:</b> <span class="tex">A=\pi r^2</span></div>
+      <div><b>Curved side</b> (the label): <span class="tex">A=\text{length}\times\text{width}=2\pi r\times h=2\pi rh</span></div>
+    </div>
+    <div class="eg"><b>Closed cylinder:</b> &nbsp; <span class="tex">\text{SA}=2\pi r^2+2\pi rh</span> &nbsp; (two circles + the side)</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Find each part, write it down, then add. Keep all the decimals until the end. For <span class="tex">r=4</span> and <span class="tex">h=11</span>: <span class="keys">2 <kbd>×</kbd> <kbd>π</kbd> <kbd>×</kbd> 4 <kbd>x²</kbd> <kbd>ENTER</kbd></span> gives 100.53…, and <span class="keys">2 <kbd>×</kbd> <kbd>π</kbd> <kbd>×</kbd> 4 <kbd>×</kbd> 11 <kbd>ENTER</kbd></span> gives 276.46…</div>
+      <div class="u3l11-pcol"><button class="pill" type="button" data-keys="2 × π × 4 x² =">Circles</button><button class="pill" type="button" data-keys="2 × π × 4 × 11 =">Side</button></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> If you are given the <b>diameter</b>, halve it to get the radius. And <span class="tex">2\pi r^2</span> means <span class="tex">2\times\pi\times r\times r</span>: only the <span class="tex">r</span> is squared.</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A can is 8 cm across and 11 cm tall. Which is longer: the label, or the can’s height?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The <b>label</b>. It goes all the way around: <span class="tex">\pi\times8\approx25.1</span> cm. That is more than <b>3 times</b> the 8 cm width of the can, and much longer than the 11 cm height.</div></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. Why Is the Length the Circumference?">
+  <h3 class="sub">Why is the label’s length the circumference? Roll the can</h3>
+  <p>Put wet paint on the label and roll the can one full turn. The stripe it prints is the label, laid flat.</p>
+  <div class="explainer" data-explainer="rollCan"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>A can of soup</h3></div>
+  <div class="u3l11-exfig">
+    <div>
+      <p class="q">A can of soup is 8 cm across (its diameter) and 11 cm tall.</p>
+      <div class="part"><div class="pl">(a) Fill in the measurements of the net.</div>
+        <p class="u3l11-blanks">The rectangle is <span data-reveal="______"><span class="tex">\pi\times8\approx25.1</span></span> cm long and <span data-reveal="____">11</span> cm wide.<br>Each circle has a radius of <span data-reveal="____">4</span> cm.</p>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Length <span class="tex">=\pi d=\pi\times8\approx25.1</span> cm; width = the height, <b>11 cm</b>; radius <span class="tex">=8\div2=4</span> cm.</div></div></div>
+    </div>
+    <div class="u3l11-fig" id="u3l11-fig-ex1"></div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(b) Find the area of the label (the curved side), to the nearest tenth.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Side <span class="tex">=2\pi rh</span> (or <span class="tex">\pi d\times h</span>)<br><span class="tex">=2\times\pi\times4\times11=276.46\ldots</span><br>The label is about <b>276.5 cm²</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) Find the surface area of the whole can, to the nearest tenth.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Two circles <span class="tex">=2\times\pi\times4^2=100.53\ldots</span><br><span class="tex">\text{SA}=100.53\ldots+276.46\ldots=376.99\ldots</span><br>The can’s surface area is about <b>377.0 cm²</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Rhys paints a rain barrel</h3></div>
+  <p class="q">Rhys is painting the outside of an old steel drum (with both ends) to use as a rain barrel. The drum has a diameter of <span class="tex">22\tfrac12</span> in and a height of <span class="tex">34\tfrac12</span> in.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the surface area in square inches, to the nearest whole number.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=22.5\div2=11.25</span> in; <span class="tex">h=34.5</span> in<br>Circles: <span class="tex">2\times\pi\times11.25^2=795.21\ldots</span><br>Side: <span class="tex">2\times\pi\times11.25\times34.5=2\,438.66\ldots</span><br><span class="tex">\text{SA}=795.21\ldots+2\,438.66\ldots=3\,233.87\ldots</span><br>The drum is about <b>3&#8239;234 in²</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Change the area to square feet, to the nearest tenth. (1 ft² = 144 in²)</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Small unit to big unit: divide.<br><span class="tex">3\,233.87\ldots\div144=22.457\ldots</span><br>The drum is about <b>22.5 ft²</b>.</div></div></div>
+  </div>
+  <div class="parts c1 u3l11-gap">
+    <div class="part"><div class="pl">(c) One can of spray paint covers about 20 ft². How many cans does Rhys need for one coat?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">22.46\div20=1.12\ldots</span> cans. Round <b>up</b>: Rhys needs <b>2 cans</b>.</div></div></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> 1.12 is closer to 1 than to 2. Why does Rhys still buy 2 cans?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One can covers only 20 ft². With 1 can, about <span class="tex">22.46-20\approx2.5</span> ft² of the drum would not get painted. You can’t buy part of a can, so <b>round up</b>.</div></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Open cylinders ================= -->
+<section class="card" data-ink="s2" data-section="2. Open Cylinders">
+  <div class="sec-h"><span class="badge">2</span><h2>Open Cylinders: Use Only the Parts You Need</h2></div>
+  <p>Not every cylinder has two ends. A pipe has no ends. A pail has a bottom but no top. Before you calculate, ask: <b>which pieces are really there</b>, or which pieces really get covered?</p>
+  <div class="def"><b>Key idea</b>
+    <table class="u3l11-kt">
+      <tr><td><b>Closed</b> (a can with a lid, a drum)</td><td>2 circles + side</td><td><span class="tex">\text{SA}=2\pi r^2+2\pi rh</span></td></tr>
+      <tr><td><b>Open at one end</b> (a pail, a planter, a stock tank)</td><td>1 circle + side</td><td><span class="tex">\text{SA}=\pi r^2+2\pi rh</span></td></tr>
+      <tr><td><b>No ends</b> (a pipe, a label, the walls of a grain bin)</td><td>side only</td><td><span class="tex">\text{SA}=2\pi rh</span></td></tr>
+    </table></div>
+  <div class="explainer" data-explainer="pieces"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Which pieces are there?</h3></div>
+  <div class="part"><div class="pl">(a) Which pieces of the net does each object need? Write “2 circles + side”, “1 circle + side” or “side only”.</div>
+    <div class="u3l11-sort">
+      <div>a tube of tennis balls with a lid <span data-reveal="__________">2 circles + side</span></div>
+      <div>a metal drainpipe <span data-reveal="__________">side only</span></div>
+      <div>a round cake pan <span data-reveal="__________">1 circle + side</span></div>
+      <div>the paper label on a jar <span data-reveal="__________">side only</span></div>
+    </div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Tennis ball tube: <b>2 circles + side</b> · drainpipe: <b>side only</b> · cake pan: <b>1 circle + side</b> (no top) · jar label: <b>side only</b></div></div></div>
+  <div class="u3l11-exfig r u3l11-gap">
+    <div class="part"><div class="pl">(b) Amara is covering a round storage ottoman with fabric. The fabric covers the top and the side, but not the bottom. The ottoman has a diameter of 18 in and a height of <span class="tex">16\tfrac12</span> in. How much fabric covers it, in in² (to the nearest whole number) and in ft² (to the nearest tenth)?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Pieces: 1 circle (the top) + the side. <span class="tex">r=18\div2=9</span> in<br>Top: <span class="tex">\pi\times9^2=254.46\ldots</span> &nbsp; Side: <span class="tex">2\times\pi\times9\times16.5=933.05\ldots</span><br><span class="tex">\text{SA}=254.46\ldots+933.05\ldots=1\,187.52\ldots\approx1\,188</span> in²<br><span class="tex">1\,187.52\ldots\div144=8.246\ldots\approx8.2</span> ft². The fabric covers about <b>1&#8239;188 in²</b>, or <b>8.2 ft²</b>.</div></div></div>
+    <div class="u3l11-fig" id="u3l11-fig-ex3"></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Painting parkade columns</h3></div>
+  <p class="q">A parkade in Calgary has 12 round concrete columns. Each column has a diameter of 0.6 m and a height of 3.2 m. Only the curved sides get painted, with 2 coats. One can of paint covers 37 m² and costs $68.99.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the area of the side of one column.</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Side only: <span class="tex">2\pi rh</span> (<span class="tex">r=0.3</span> m)<br><span class="tex">2\times\pi\times0.3\times3.2=6.031\ldots</span> m²</div></div></div>
+    <div class="part"><div class="pl">(b) Find the total area to paint (12 columns, 2 coats).</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6.031\ldots\times12\times2=144.76\ldots</span><br>About <b>144.8 m²</b> of painting.</div></div></div>
+    <div class="part"><div class="pl">(c) How many cans of paint are needed?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">144.76\ldots\div37=3.91\ldots</span> cans<br>Round <b>up</b>: <b>4 cans</b>.</div></div></div>
+    <div class="part"><div class="pl">(d) What do the cans cost with 5% GST?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4\times\$68.99=\$275.96</span><br><span class="tex">\$275.96\times1.05=\$289.758\approx\$289.76</span><br>The paint costs <b>$289.76</b> with GST.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex4c" data-section="2. Check Example 4">
+  <h3 class="sub">Check Example 4: paint the parkade</h3>
+  <div class="explainer" data-explainer="columns"></div>
+</section>
+
+<!-- sources: https://en.wikipedia.org/wiki/On_the_Sphere_and_Cylinder (written c. 225 BCE; a sphere's surface area equals the
+     curved side of the cylinder around it, and is 2/3 of the cylinder's whole surface; Archimedes asked for a sphere in a
+     cylinder on his tomb); https://physics.weber.edu/carroll/Archimedes/cicero.htm (Cicero, quaestor in Sicily, found the
+     overgrown tomb in 75 BCE, marked by a column with a sphere and a cylinder) -->
+<section class="card history" data-ink="hist" data-section="Math History: Archimedes' Favourite Can">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">c. 225 BCE</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">The ball and the can on Archimedes’ grave</h3>
+      <p>About 2&#8239;250 years ago, the Greek thinker <b>Archimedes</b> fit a ball snugly inside a cylinder (a can just as tall and as wide as the ball). He proved something amazing: the ball’s surface has <b>exactly the same area as the can’s curved side</b>, the label!</p>
+      <p>He was so proud of it that he asked for a ball inside a cylinder to be carved on his tomb. In 75 BCE, the Roman writer <b>Cicero</b> found the tomb in Sicily, hidden in thorn bushes. He knew it by the ball and the cylinder.</p>
+      <div class="part hist-q"><div class="pl">A ball with a radius of 3 cm fits snugly in a can 6 cm wide and 6 cm tall. Use the label to find the area of the ball’s surface.</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Label <span class="tex">=2\pi rh=2\times\pi\times3\times6=113.09\ldots</span> So the ball’s surface is about <b>113.1 cm²</b>.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u3l11-hist" viewBox="0 0 600 300" role="img" aria-label="A ball drops into a can that fits it exactly; the can's label peels off, and the ball's surface and the label are shown to have the same area"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 3. Square pyramids ================= -->
+<section class="card" data-ink="s3" data-section="3. Square Pyramids">
+  <div class="sec-h"><span class="badge">3</span><h2>Square Pyramids</h2></div>
+  <p>A <b>square pyramid</b> has a square base and four triangles that meet at a point at the top, called the <b>apex</b>. In this booklet the four triangles are always the same size. Unfold it and the net is a square with a triangle on each side.</p>
+  <p>The <b>slant height</b> <span class="tex">s</span> is the height of one triangle face. It goes from the middle of a base edge, up the face, to the apex. The <b>height</b> <span class="tex">h</span> of the pyramid goes straight up the <b>inside</b>, from the centre of the base to the apex. Surface area uses the <b>slant height</b>, not the height.</p>
+  <div class="explainer" data-explainer="pyramid"></div>
+  <div class="def"><b>Key idea</b>
+    <div class="u3l11-kg">
+      <div><b>Base:</b> <span class="tex">b\times b=b^2</span></div>
+      <div><b>One triangle:</b> <span class="tex">\tfrac12\times b\times s</span></div>
+    </div>
+    <div class="eg"><b>Square pyramid:</b> &nbsp; <span class="tex">\text{SA}=b^2+4\times\tfrac12bs</span> &nbsp; (base + 4 triangles; this is the same as <span class="tex">b^2+2bs</span>)<br>A roof, or a tent with no floor, has <b>no base</b>: use only the 4 triangles.</div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Use the <b>slant height</b> <span class="tex">s</span>, not the height <span class="tex">h</span>. The slant height is on the outside of the face, and it is always longer than the height. If a picture shows both, the height is the dashed line inside.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. Why Is s Longer Than h?">
+  <h3 class="sub">Why is the slant height always longer than the height?</h3>
+  <p>Cut the solid straight down the middle. The height, half the base and the slant height make a <b>right triangle</b>.</p>
+  <div class="explainer" data-explainer="slant"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>A pyramid and Jonah’s tent</h3></div>
+  <div class="u3l11-exfig r">
+    <div class="part"><div class="pl">(a) Find the surface area of the square pyramid. Which length is <b>not</b> used?</div><div class="work" style="--h:210px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Base: <span class="tex">10\times10=100</span> cm²<br>One triangle: <span class="tex">\tfrac12\times10\times13=65</span> cm²<br>4 triangles: <span class="tex">4\times65=260</span> cm²<br><span class="tex">\text{SA}=100+260=360</span> cm². The height, <b>12 cm</b>, is not used.</div></div></div>
+    <div class="u3l11-fig" id="u3l11-fig-ex5"></div>
+  </div>
+  <div class="parts c1 u3l11-gap">
+    <div class="part"><div class="pl">(b) Jonah’s camping tent is a square pyramid with a sewn-in floor. The floor is 7 ft by 7 ft, and the slant height of each wall is <span class="tex">6\tfrac12</span> ft. How much fabric is in the tent (4 walls and the floor)?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">One wall: <span class="tex">\tfrac12\times7\times6\tfrac12=22\tfrac34</span> ft² (22.75)<br>4 walls: <span class="tex">4\times22.75=91</span> ft² &nbsp; Floor: <span class="tex">7\times7=49</span> ft²<br>Total: <span class="tex">91+49=140</span> ft². The tent has <b>140 ft²</b> of fabric.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= 4. Cones ================= -->
+<section class="card" data-ink="s4" data-section="4. Cones">
+  <div class="sec-h"><span class="badge">4</span><h2>Cones</h2></div>
+  <p>A <b>cone</b> has a circle for a base and a curved side that comes to a point, the <b>apex</b>. The <b>slant height</b> <span class="tex">s</span> goes from the apex, down the outside, to the edge of the base.</p>
+  <p>Cut the curved side along a slant line and flatten it: you get a <b>fan</b> shape. The fan’s curved edge goes all the way around the base, so it is <span class="tex">2\pi r</span> long. Its area is <span class="tex">\pi rs</span>.</p>
+  <div class="explainer" data-explainer="cone"></div>
+  <div class="def"><b>Key idea</b>
+    <div class="u3l11-kg">
+      <div><b>Base:</b> <span class="tex">\pi r^2</span></div>
+      <div><b>Curved side:</b> <span class="tex">\pi rs</span></div>
+    </div>
+    <div class="eg"><b>Closed cone:</b> &nbsp; <span class="tex">\text{SA}=\pi r^2+\pi rs</span><br>An <b>open</b> cone (an ice-cream cone, a funnel, a party hat, a roof) has no base: use only <span class="tex">\pi rs</span>.</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For <span class="tex">r=9</span> and <span class="tex">s=15</span>: <span class="keys"><kbd>π</kbd> <kbd>×</kbd> 9 <kbd>x²</kbd> <kbd>ENTER</kbd></span> gives 254.46… (base), and <span class="keys"><kbd>π</kbd> <kbd>×</kbd> 9 <kbd>×</kbd> 15 <kbd>ENTER</kbd></span> gives 424.11… (side).</div>
+      <div class="u3l11-pcol"><button class="pill" type="button" data-keys="π × 9 x² =">Base</button><button class="pill" type="button" data-keys="π × 9 × 15 =">Side</button></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Just like the pyramid, use the <b>slant height</b> <span class="tex">s</span>, not the height <span class="tex">h</span>. And use the <b>radius</b>: if you are given the diameter, halve it first.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Why Is the Fan πrs?">
+  <h3 class="sub">Why is the fan’s area <span class="tex">\pi rs</span>? Cut it into thin slices</h3>
+  <p>Think of the fan as many thin triangles. Each one has a height of <span class="tex">s</span>, and all their bases together go around the circle, <span class="tex">2\pi r</span>. Put the slices top to tail and they make a shape very close to a rectangle.</p>
+  <div class="explainer" data-explainer="slices"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>A cone and a waffle cone</h3></div>
+  <p class="q">Round each answer to the nearest tenth.</p>
+  <div class="u3l11-ex6">
+    <div class="u3l11-fig" id="u3l11-fig-ex6a"></div>
+    <div class="u3l11-fig" id="u3l11-fig-ex6b"></div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the surface area of the closed cone (radius 9 cm, slant height 15 cm, height 12 cm).</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Base: <span class="tex">\pi\times9^2=254.46\ldots</span><br>Side: <span class="tex">\pi\times9\times15=424.11\ldots</span><br><span class="tex">\text{SA}=254.46\ldots+424.11\ldots=678.58\ldots</span><br>The cone is about <b>678.6 cm²</b>. The 12 cm height is not used.</div></div></div>
+    <div class="part"><div class="pl">(b) A waffle cone for ice cream is open at the top. It is 5 cm across the top and has a slant height of 12 cm. How much waffle is in it?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Open: side only. <span class="tex">r=5\div2=2.5</span> cm<br>Side: <span class="tex">\pi rs=\pi\times2.5\times12=94.24\ldots</span><br>The cone has about <b>94.2 cm²</b> of waffle.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–11">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 11 · Questions 1–11</h2>
+  <p class="pr-t">Try these before we put two solids together.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Name the solid from its net</span>
+    <span><b>2–4</b>Cylinders: the net, closed cans, a label</span>
+    <span><b>5–8</b>Pyramids, cones, a party hat, a bucket</span>
+    <span><b>9–11</b>A roof, a display case, which can uses less</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 11.</span><a class="pill" href="../../../#/lesson/u3l11">Open the Practice site</a></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l11"></section>
+
+<!-- ================= 5. Two solids together ================= -->
+<section class="card" data-ink="s5" data-section="5. Two Solids Together">
+  <div class="sec-h"><span class="badge">5</span><h2>Two Solids Together</h2></div>
+  <p>Some objects are made of two solids, like a grain bin with a cone roof. Find the area of <b>each part you need</b>, then add. Leave out the faces that are hidden or not there, like the floor of a bin that sits on concrete.</p>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>A steel grain bin near Three Hills</h3></div>
+  <div class="u3l11-exfig r">
+    <p class="q">A farmer near Three Hills is building a steel grain bin. The walls are a cylinder with a diameter of 6.4 m and a height of 5.5 m. The roof is a cone with a slant height of 3.6 m. The floor is concrete, so it needs no steel.</p>
+    <div class="u3l11-fig" id="u3l11-fig-ex7"></div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the area of the walls.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Walls: side only. <span class="tex">r=6.4\div2=3.2</span> m<br><span class="tex">2\times\pi\times3.2\times5.5=110.58\ldots</span> m²</div></div></div>
+    <div class="part"><div class="pl">(b) Find the area of the roof.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Roof: open cone, <span class="tex">\pi rs</span><br><span class="tex">\pi\times3.2\times3.6=36.19\ldots</span> m²</div></div></div>
+    <div class="part"><div class="pl">(c) Find the total area of steel, to the nearest tenth.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">110.58\ldots+36.19\ldots=146.77\ldots</span><br>About <b>146.8 m²</b> of steel.</div></div></div>
+    <div class="part"><div class="pl">(d) The steel costs $24.80 per m². Use your answer to (c) to find the cost before tax.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">146.8\times\$24.80=\$3\,640.64</span><br>The steel costs <b>$3&#8239;640.64</b> before tax.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex7c" data-section="5. Check Example 7">
+  <h3 class="sub">Check Example 7: build the bin from flat steel</h3>
+  <div class="explainer" data-explainer="bin"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Surface area</b> = the total area of all the pieces of the net, in <b>square units</b>. Find each piece, write it down, then add. Round only at the end.</div>
+    <div><b>Cylinder:</b> 2 circles <span class="tex">\pi r^2</span> + a rectangle <span class="tex">2\pi r\times h</span>. Closed: <span class="tex">2\pi r^2+2\pi rh</span>. Use only the pieces that are there: pail <span class="tex">\pi r^2+2\pi rh</span>, pipe <span class="tex">2\pi rh</span>.</div>
+    <div><b>Square pyramid:</b> <span class="tex">b^2+4\times\tfrac12bs</span>. <b>Cone:</b> <span class="tex">\pi r^2+\pi rs</span>. Use the <b>slant height</b> <span class="tex">s</span>, not the height. A roof or an open cone has no base.</div>
+    <div><b>On the job:</b> halve the diameter, add only the parts you need, change units (÷ 144 for in² to ft²), <b>round up</b> cans and bundles, then find the cost.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l11">
+    <div><div class="kicker">Your turn</div><b>Assignment 11 · Questions 12–17</b><div class="muted">A giant crayon (a cylinder with a cone on top), Tyler’s mistake, and four quick checks. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l12/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 12 — Unit 3 Review</b><div class="muted">Every rule from the unit on one page, and worked examples that mix the topics, set up like the unit test.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l11.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l11', homeHref: '../../', title: '3.11 Surface Area of Cylinders, Pyramids and Cones' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

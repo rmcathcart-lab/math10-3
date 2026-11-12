@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Area of 2-D Shapes · Math 10-3 3.8</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 8: area of 2-D shapes. Square units and referents, area of rectangles, parallelograms, triangles, trapezoids and circles, changing area units (ft² to in², yd² to ft², m² to cm²), and the cost of a job with boxes rounded up and 10% extra. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l8.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l8">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Missing Square">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Missing Square</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Four pieces make a triangle <b>13 squares long</b> and <b>5 squares tall</b>.</p><p class="vw-ctx">Move the same four pieces around, and you get the same triangle… with a <b>hole</b> in it!</p><p class="vw-ask">Where did the extra square come from?</p></div><div class="vw-art"><svg viewBox="0 0 340 250" role="img" aria-label="Four pieces on a grid, a red triangle, a blue triangle, a green piece and an orange piece, that keep swapping places between two arrangements">
+    <g stroke="#e3dccd" stroke-width="1">
+      <path d="M14 200 H326 M14 176 H326 M14 152 H326 M14 128 H326 M14 104 H326 M14 80 H326"/>
+      <path d="M14 80 V200 M38 80 V200 M62 80 V200 M86 80 V200 M110 80 V200 M134 80 V200 M158 80 V200 M182 80 V200 M206 80 V200 M230 80 V200 M254 80 V200 M278 80 V200 M302 80 V200 M326 80 V200"/>
+    </g>
+    <g stroke="#3a4254" stroke-width="2" stroke-linejoin="round">
+      <path d="M14 200 L206 200 L206 128 Z" fill="#e05a4f"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;120 -48;120 -48;0 0;0 0" keyTimes="0;0.3;0.45;0.8;0.95;1" dur="8s" repeatCount="indefinite"/></path>
+      <path d="M206 128 L326 128 L326 80 Z" fill="#3b78d8"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-192 72;-192 72;0 0;0 0" keyTimes="0;0.3;0.45;0.8;0.95;1" dur="8s" repeatCount="indefinite"/></path>
+      <path d="M206 200 L326 200 L326 176 L278 176 L278 152 L206 152 Z" fill="#3fae6a"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-72 0;-72 0;0 0;0 0" keyTimes="0;0.3;0.45;0.8;0.95;1" dur="8s" repeatCount="indefinite"/></path>
+      <path d="M278 176 L326 176 L326 128 L206 128 L206 152 L278 152 Z" fill="#f0a23a"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 24;0 24;0 0;0 0" keyTimes="0;0.3;0.45;0.8;0.95;1" dur="8s" repeatCount="indefinite"/></path>
+    </g>
+    <text x="170" y="232" font-size="17" font-weight="800" fill="#9a6a24" text-anchor="middle">Same 4 pieces. Watch them swap.</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Make a guess with your neighbour. Then <b>count</b> the squares in each piece.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>Neither shape is really a triangle!</b> The red triangle goes up 3 in 8 squares; the blue one goes up 2 in 5. Those slopes are a tiny bit different, so the long edge <b>bends</b>: in one shape it bends in, in the other it bends out. That hides exactly 1 square. Count: <span class="tex">12+5+8+7=32</span> squares, but a real 13-by-5 triangle holds <span class="tex">13\times5\div2=32.5</span>. <span class="muted">Today: area, the number of squares inside a shape.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 8</div>
+  <h1>Area of 2-D Shapes</h1>
+  <p class="lede">Carpet, sod, paint, tile and pizza are all about the surface <b>inside</b> a shape. Today we measure it in <b>square units</b>, with a formula for each shape, and use it to work out the <b>cost of a job</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>explain what area is, and count it in <b>square units</b> (cm², m², in², ft², yd²)</li>
+      <li>find the area of a <b>rectangle</b>, <b>parallelogram</b>, <b>triangle</b> and <b>trapezoid</b>, using the height at a right angle</li>
+      <li>find the area of a <b>circle</b> with <span class="tex">A=\pi r^2</span>, and estimate it with <span class="tex">3\times r\times r</span></li>
+      <li>change between <b>area units</b>, and find the <b>cost of a job</b>, rounding the boxes up</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M4</b> Solve problems that involve SI and imperial area measurements of regular, composite and irregular 2-D shapes and 3-D objects, including decimal and fractional measurements, and verify the solutions.</div>
+</section>
+
+<!-- ================= 1. What is area? ================= -->
+<section class="card" data-ink="s1" data-section="1. What Is Area?">
+  <div class="sec-h"><span class="badge">1</span><h2>What Is Area?</h2></div>
+  <p>The <b>area</b> of a flat shape is the amount of surface inside it. We measure area by counting <b>square units</b>. A square that is 1 cm long and 1 cm wide has an area of <b>1 square centimetre</b>, written <b>1 cm²</b>.</p>
+  <p>Other square units: square metres (m²), square inches (in²), square feet (ft²) and square yards (yd²). Some <b>referents</b>:</p>
+  <div class="u3l8-refs">
+    <div class="u3l8-ref"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="22" y="14" width="36" height="52" rx="16" fill="#f7d9cc" stroke="#9a6a24" stroke-width="3"/><rect x="27" y="18" width="26" height="24" rx="8" fill="#fff" stroke="#c9a68a" stroke-width="2"/></svg><div><b>about 1 cm²</b>your fingernail</div></div>
+    <div class="u3l8-ref"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="12" y="12" width="56" height="56" fill="#e8e3d6" stroke="#6e4a1c" stroke-width="3"/><path d="M12 40 H68 M40 12 V68" stroke="#cfc6b4" stroke-width="2"/></svg><div><b>1 ft²</b>a 1 ft by 1 ft floor tile</div></div>
+    <div class="u3l8-ref"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="8" y="8" width="64" height="64" fill="#d9b98a" stroke="#8a5a14" stroke-width="3"/><path d="M8 30 H72" stroke="#b98d54" stroke-width="2" stroke-dasharray="5 4"/></svg><div><b>1 m²</b>a big square of cardboard, 1 m by 1 m</div></div>
+  </div>
+  <div class="tip u3l8-vs"><div class="tip-ic">↔</div><div><b>Area vs perimeter.</b> <b>Perimeter</b> is the distance <b>around</b> a shape (fencing, trim). It is a length, in cm, m, in or ft. <b>Area</b> is the surface <b>inside</b> (carpet, paint, sod). It is in <b>square</b> units.</div></div>
+  <div class="explainer" data-explainer="count"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Count the squares</h3></div>
+  <p class="q">Each small square stands for 1 cm². Find the area of each shape by counting squares.</p>
+  <div class="u3l8-ex1">
+    <figure class="u3l8-fig"><svg viewBox="0 0 470 230" role="img" aria-label="A grid 14 squares wide and 6 tall. Shape (a) is a rectangle 6 squares long and 4 tall. Shape (b) is a right triangle with two sides of 4 squares.">
+      <g stroke="#cfc6b4" stroke-width="1"><path d="M10 30 H458 M10 62 H458 M10 94 H458 M10 126 H458 M10 158 H458 M10 190 H458 M10 222 H458"/><path d="M10 30 V222 M42 30 V222 M74 30 V222 M106 30 V222 M138 30 V222 M170 30 V222 M202 30 V222 M234 30 V222 M266 30 V222 M298 30 V222 M330 30 V222 M362 30 V222 M394 30 V222 M426 30 V222 M458 30 V222"/></g>
+      <rect x="42" y="62" width="192" height="128" fill="rgba(110,74,28,.18)" stroke="#3a4254" stroke-width="3"/>
+      <path d="M298 190 L426 190 L298 62 Z" fill="rgba(110,74,28,.18)" stroke="#3a4254" stroke-width="3" stroke-linejoin="round"/>
+      <text x="138" y="22" font-size="18" font-weight="800" text-anchor="middle" fill="#4a2c14">(a)</text><text x="362" y="22" font-size="18" font-weight="800" text-anchor="middle" fill="#4a2c14">(b)</text>
+    </svg></figure>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) the rectangle &nbsp; <span data-reveal>24 cm²</span></div><div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">4 rows of 6 squares: 24 squares, so <b>24 cm²</b>.</div></div></div>
+      <div class="part"><div class="pl">(b) the triangle &nbsp; <span data-reveal>8 cm²</span></div><div class="work" style="--h:60px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">6 full squares and 4 half squares. The 4 halves make 2 full squares. <span class="tex">6+2=8</span> cm². The triangle is half of a 4 by 4 square: <span class="tex">16\div2=8</span> ✓</div></div></div>
+    </div>
+  </div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(c) How could you find the area of (a) without counting every square?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">4 rows of 6 squares: <span class="tex">4\times6=24</span>.</div></div></div>
+  </div>
+  <p>Counting works for small shapes on a grid. For real rooms, yards and pieces of fabric, we use a <b>formula</b> instead.</p>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Rectangles and parallelograms ================= -->
+<section class="card" data-ink="s2" data-section="2. Rectangles and Parallelograms">
+  <div class="sec-h"><span class="badge">2</span><h2>Rectangles and Parallelograms</h2></div>
+  <p>A rectangle is rows of squares, so its area is <b>length times width</b>. A <b>parallelogram</b> is a “pushed over” rectangle with two pairs of parallel sides. Cut a triangle off one end and slide it to the other end: you get a rectangle with the <b>same base and height</b>.</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u3l8-fgrid">
+      <div><span>Rectangle</span><span class="tex">A=lw</span><small>length × width</small></div>
+      <div><span>Square</span><span class="tex">A=s\times s=s^2</span><small>side × side</small></div>
+      <div><span>Parallelogram</span><span class="tex">A=bh</span><small>base × height</small></div>
+    </div>
+    <div class="eg u3l8-eg">The <b>height</b> is measured <b>straight</b> across, at a right angle (90°) to the base. It is not the slanted side.</div></div>
+  <div class="explainer" data-explainer="slide"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Both lengths must be in the <b>same unit</b> before you multiply. Metres times metres gives square metres: <span class="tex">\text{m}\times\text{m}=\text{m}^2</span>.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Same Units First">
+  <h3 class="sub">Why the same unit?</h3>
+  <p>A shelf is 2 m long and 50 cm deep. Multiplying the numbers as they are gives nonsense. Change one length first.</p>
+  <div class="explainer" data-explainer="sameUnits"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>A bedroom floor and a parallelogram</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A bedroom floor is a rectangle 4.2 m long and 3.6 m wide. Estimate its area, then find it.</div><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">4\times4=16</span> m²<br><span class="tex">A=lw</span><br><span class="tex">A=4.2\times3.6=15.12</span><br>The floor is <b>15.12 m²</b> (close to 16 ✓).</div></div></div>
+    <div class="part"><div class="pl">(b) Find the area of the parallelogram. Which length do you <b>not</b> use?</div>
+      <figure class="u3l8-fig sm"><svg viewBox="0 0 330 150" role="img" aria-label="A parallelogram with base 9.5 cm, a dashed height of 5.2 cm and a slanted side of 6 cm">
+        <path d="M20 125 L222 125 L284 30 L82 30 Z" fill="#f5ecdf" stroke="#3a4254" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M82 30 V125" stroke="#c27a0e" stroke-width="2.5" stroke-dasharray="7 5"/><path d="M82 125 h12 v-12 h-12" fill="none" stroke="#c27a0e" stroke-width="2"/>
+        <text x="121" y="146" font-size="17" font-weight="700" text-anchor="middle" fill="#2b2b2b">9.5 cm</text>
+        <text x="90" y="84" font-size="17" font-weight="700" fill="#8a560a">5.2 cm</text>
+        <text x="262" y="86" font-size="17" font-weight="700" fill="#2b2b2b">6 cm</text>
+      </svg></figure>
+      <div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=bh=9.5\times5.2=49.4</span> cm²<br>Do <b>not</b> use the slanted side, 6 cm.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>A pine shelf</h3></div>
+  <p>Many imperial measurements have fractions. The calculator can work with them for you.</p>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>To enter <span class="tex">11\tfrac14</span>, press <span class="keys">11 <kbd>A b/c</kbd> 1 <kbd>A b/c</kbd> 4</span>. So <span class="tex">11\tfrac14\times35\tfrac12</span> is <span class="keys">11 <kbd>A b/c</kbd> 1 <kbd>A b/c</kbd> 4 <kbd>×</kbd> 35 <kbd>A b/c</kbd> 1 <kbd>A b/c</kbd> 2 <kbd>ENTER</kbd></span>. 399⌟3⌟8 means <span class="tex">399\tfrac38</span> (if it shows 3195⌟8, press <span class="keys"><kbd>2nd</kbd><kbd>A b/c</kbd></span> for the mixed number). Press <span class="keys"><kbd>2nd</kbd><kbd>F◂▸D</kbd></span> to see it as a decimal.</div>
+    <div class="u3l8-pcol"><button class="pill" type="button" data-keys="11 ab/c 1 ab/c 4 × 35 ab/c 1 ab/c 2 = d/e">Show me</button><button class="pill" type="button" data-keys="11 ab/c 1 ab/c 4 × 35 ab/c 1 ab/c 2 = F◂▸D">Decimal</button></div></div>
+  <p class="q">A carpenter cuts a shelf from a pine board. The shelf is <span class="tex">35\tfrac12</span> in long and <span class="tex">11\tfrac14</span> in wide. Find the area of the top of the shelf. Check that your answer is reasonable.</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=lw=35\tfrac12\times11\tfrac14</span><br>Calculator: <span class="tex">399\tfrac38</span> (as a decimal, 399.375)<br>Check: <span class="tex">36\times11=396</span>, which is close ✓<br>The top of the shelf is <b><span class="tex">399\tfrac38</span> in²</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Triangles and trapezoids ================= -->
+<section class="card" data-ink="s3" data-section="3. Triangles and Trapezoids">
+  <div class="sec-h"><span class="badge">3</span><h2>Triangles and Trapezoids</h2></div>
+  <p>Two copies of the same <b>triangle</b> fit together to make a parallelogram. So a triangle’s area is <b>half</b> of base times height. The height goes from the top corner straight down to the base. For some triangles, the height falls <b>outside</b> the triangle, so you may need to extend the base with a dotted line.</p>
+  <p>A <b>trapezoid</b> has exactly one pair of parallel sides, <i>a</i> and <i>b</i>. Two copies of a trapezoid also make a parallelogram, with base <span class="tex">a+b</span>. So its area is half of <span class="tex">(a+b)</span> times the height.</p>
+  <figure class="u3l8-fig wide"><svg viewBox="0 0 900 170" role="img" aria-label="Three shapes: a triangle with a dashed copy making a parallelogram; a triangle whose height falls outside it, with the base extended by a dotted line; a trapezoid with parallel sides a and b and height h">
+    <path d="M30 120 L190 120 L78 24 Z" fill="#f5ecdf" stroke="#3a4254" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M190 120 L238 24 L78 24" fill="none" stroke="#3a4254" stroke-width="2" stroke-dasharray="7 5"/>
+    <path d="M78 24 V120" stroke="#c27a0e" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="110" y="142" font-size="18" font-style="italic" text-anchor="middle" font-family="Georgia, serif">b</text><text x="66" y="80" font-size="18" font-style="italic" font-family="Georgia, serif" fill="#8a560a">h</text>
+    <text x="130" y="164" font-size="15" text-anchor="middle" fill="#5b5b5b">triangle = half a parallelogram</text>
+    <path d="M330 120 L430 120 L490 24 Z" fill="#f5ecdf" stroke="#3a4254" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M430 120 H490" stroke="#3a4254" stroke-width="2.5" stroke-dasharray="2 5"/>
+    <path d="M490 24 V120" stroke="#c27a0e" stroke-width="2" stroke-dasharray="5 4"/><path d="M490 120 h-10 v-10 h10" fill="none" stroke="#c27a0e" stroke-width="2"/>
+    <text x="380" y="142" font-size="18" font-style="italic" text-anchor="middle" font-family="Georgia, serif">b</text><text x="498" y="80" font-size="18" font-style="italic" font-family="Georgia, serif" fill="#8a560a">h</text>
+    <text x="410" y="164" font-size="15" text-anchor="middle" fill="#5b5b5b">height outside the triangle</text>
+    <path d="M620 120 L800 120 L760 24 L660 24 Z" fill="#f5ecdf" stroke="#3a4254" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M660 24 V120" stroke="#c27a0e" stroke-width="2" stroke-dasharray="5 4"/><path d="M660 120 h10 v-10 h-10" fill="none" stroke="#c27a0e" stroke-width="2"/>
+    <text x="710" y="16" font-size="18" font-style="italic" text-anchor="middle" font-family="Georgia, serif">a</text><text x="710" y="142" font-size="18" font-style="italic" text-anchor="middle" font-family="Georgia, serif">b</text><text x="668" y="80" font-size="18" font-style="italic" font-family="Georgia, serif" fill="#8a560a">h</text>
+    <text x="710" y="164" font-size="15" text-anchor="middle" fill="#5b5b5b">trapezoid</text>
+  </svg></figure>
+  <div class="def"><b>Key idea</b>
+    <div class="u3l8-fgrid n2">
+      <div><span>Triangle</span><span class="tex">A=\dfrac12bh</span><small>(or <span class="tex">A=b\times h\div2</span>)</small></div>
+      <div><span>Trapezoid</span><span class="tex">A=\dfrac12(a+b)h</span><small>(or <span class="tex">A=(a+b)\times h\div2</span>)</small></div>
+    </div>
+    <div class="eg u3l8-eg"><i>a</i> and <i>b</i> are the two <b>parallel</b> sides. The height <i>h</i> is the straight distance between them.</div></div>
+  <div class="explainer" data-explainer="halfTri"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Don’t forget the <span class="tex">\tfrac12</span>. Base × height alone gives the area of the whole parallelogram, which is <b>double</b> the triangle.</div></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Three triangles</h3></div>
+  <p class="q">Find the area of each triangle.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A triangle with base 8 cm and height 5 cm.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=\tfrac12bh</span><br><span class="tex">A=8\times5\div2=20</span><br>The area is <b>20 cm²</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) The triangle at the top of a shed wall has base 8 ft and height <span class="tex">3\tfrac12</span> ft.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=8\times3\tfrac12\div2</span><br><span class="tex">=28\div2=14</span><br>The area is <b>14 ft²</b>.</div></div></div>
+    <div class="part"><div class="pl">(c)</div>
+      <figure class="u3l8-fig sm"><svg viewBox="0 0 260 120" role="img" aria-label="A triangle with base 6.4 m; its height of 3.5 m falls outside it, past a dotted extension of the base">
+        <path d="M14 96 L130 96 L190 24 Z" fill="#f5ecdf" stroke="#3a4254" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M130 96 H190" stroke="#3a4254" stroke-width="2.5" stroke-dasharray="2 5"/>
+        <path d="M190 24 V96" stroke="#c27a0e" stroke-width="2.5" stroke-dasharray="6 4"/><path d="M190 96 h-10 v-10 h10" fill="none" stroke="#c27a0e" stroke-width="2"/>
+        <text x="72" y="116" font-size="16" font-weight="700" text-anchor="middle">6.4 m</text><text x="196" y="66" font-size="16" font-weight="700" fill="#8a560a">3.5 m</text>
+      </svg></figure>
+      <div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The base is 6.4 m (not the dotted part).<br><span class="tex">A=6.4\times3.5\div2=11.2</span><br>The area is <b>11.2 m²</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Nadia’s flower bed</h3></div>
+  <div class="u3l8-ex5">
+    <p class="q">Nadia is building a flower bed along her back fence in Okotoks. It is a trapezoid. The side along the fence is 3.8 m, the front side is 2.4 m, and the two parallel sides are 1.5 m apart.</p>
+    <figure class="u3l8-fig sm"><svg viewBox="0 0 300 150" role="img" aria-label="A trapezoid flower bed along a fence: 3.8 m along the fence, 2.4 m at the front, 1.5 m apart">
+      <path d="M6 30 H294" stroke="#7a4a26" stroke-width="7"/><text x="282" y="20" font-size="13" text-anchor="end" fill="#7a4a26">fence</text>
+      <path d="M20 34 L266 34 L220 128 L64 128 Z" fill="#dff1e3" stroke="#3a4254" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M64 34 V128" stroke="#c27a0e" stroke-width="2.5" stroke-dasharray="6 4"/><path d="M64 34 h10 v10 h-10" fill="none" stroke="#c27a0e" stroke-width="2"/>
+      <text x="150" y="58" font-size="16" font-weight="700" text-anchor="middle">3.8 m</text><text x="142" y="146" font-size="16" font-weight="700" text-anchor="middle">2.4 m</text><text x="58" y="86" font-size="16" font-weight="700" text-anchor="end" fill="#8a560a">1.5 m</text>
+    </svg></figure>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the area of the flower bed.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=\tfrac12(a+b)h</span><br><span class="tex">A=(2.4+3.8)\times1.5\div2=6.2\times1.5\div2=4.65</span><br>The flower bed is <b>4.65 m²</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Garden soil is sold by the bag. One bag covers 0.5 m². How many bags should Nadia buy?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4.65\div0.5=9.3</span> bags. She can’t buy part of a bag, so round <b>up</b>.<br>Nadia should buy <b>10 bags</b>. (9 bags would only cover 4.5 m².)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Use brackets for a trapezoid so the adding is done first: <span class="keys"><kbd>(</kbd> 2.4 <kbd>+</kbd> 3.8 <kbd>)</kbd> <kbd>×</kbd> 1.5 <kbd>÷</kbd> 2 <kbd>ENTER</kbd></span> gives 4.65.</div>
+    <button class="pill" type="button" data-keys="( 2.4 + 3.8 ) × 1.5 ÷ 2 =">Show me</button></div>
+  <div class="explainer" data-explainer="trap"></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. Think: Halves and Doubles">
+  <h3 class="sub">Think it through</h3>
+  <div class="parts c2">
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> A triangle and a parallelogram have the same base, 10 cm, and the same height, 4 cm. Compare their areas.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Parallelogram: <span class="tex">10\times4=40</span> cm². Triangle: <span class="tex">40\div2=20</span> cm². The triangle is <b>half</b> the parallelogram.</div></div></div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> A trapezoid has parallel sides 6 m and 6 m. What shape is it really? Does the formula still work?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Both pairs of sides are parallel, so it is a <b>parallelogram</b>. The formula gives <span class="tex">(6+6)\times h\div2=6h</span>, which is base × height ✓</div></div></div>
+  </div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–5">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 8 · Questions 1–5</h2>
+  <p class="pr-t">Try these before we find the area of a circle.</p>
+  <div class="pr-chips n3">
+    <span><b>1</b>Count the squares; check with a formula</span>
+    <span><b>2</b>Rectangles and a square</span>
+    <span><b>3</b>Two parallelograms</span>
+    <span><b>4</b>Three triangles</span>
+    <span><b>5</b>Two trapezoids</span>
+    <span><b>✓</b>Use the height at a right angle, and write square units</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 5.</span><a class="pill" href="../../../#/lesson/u3l8">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Circles ================= -->
+<section class="card" data-ink="s4" data-section="4. Circles">
+  <div class="sec-h"><span class="badge">4</span><h2>Circles</h2></div>
+  <p>The <b>radius</b> <i>r</i> of a circle goes from the centre to the edge. The <b>diameter</b> <i>d</i> goes all the way across through the centre, so <span class="tex">d=2r</span> and <span class="tex">r=d\div2</span>.</p>
+  <div class="u3l8-circ">
+    <figure class="u3l8-fig xs"><svg viewBox="0 0 160 160" role="img" aria-label="A circle with radius r and a shaded r by r square in one corner">
+      <rect x="80" y="20" width="60" height="60" fill="#e9dfcf"/>
+      <circle cx="80" cy="80" r="60" fill="none" stroke="#3a4254" stroke-width="3"/>
+      <path d="M80 80 H140 M80 80 V20" stroke="#3a4254" stroke-width="2.5"/><circle cx="80" cy="80" r="3.5" fill="#3a4254"/>
+      <text x="110" y="98" font-size="18" font-style="italic" text-anchor="middle" font-family="Georgia, serif">r</text><text x="70" y="56" font-size="18" font-style="italic" text-anchor="middle" font-family="Georgia, serif">r</text>
+    </svg></figure>
+    <div><p>The shaded square is <i>r</i> by <i>r</i>, so its area is <span class="tex">r^2</span>. The circle’s area is a bit more than <b>3</b> of these squares. The exact number is <span class="tex">\pi</span> (pi), about 3.14.</p>
+      <div class="def"><b>Key idea</b> &nbsp; <b>Circle:</b> <span class="tex">A=\pi r^2</span> (that is, <span class="tex">\pi\times r\times r</span>) &nbsp;&nbsp;&nbsp; <b>Estimate:</b> <span class="tex">A\approx3\times r\times r</span></div></div>
+  </div>
+  <div class="explainer" data-explainer="circleSq"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Use the <kbd>π</kbd> key and the <kbd>x²</kbd> key. For a radius of 45 cm: <span class="keys"><kbd>π</kbd> <kbd>×</kbd> 45 <kbd>x²</kbd> <kbd>ENTER</kbd></span> gives 6361.725…</div>
+    <button class="pill" type="button" data-keys="π × 45 x² =">Show me</button></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> If you are given the <b>diameter</b>, halve it first to get the radius. And <span class="tex">r^2</span> means <span class="tex">r\times r</span>, not <span class="tex">r\times2</span>.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Why πr²?">
+  <h3 class="sub">Why is it π × r × r? Cut the pizza</h3>
+  <p>Cut a circle into thin slices and lay them out top-to-tail. They make a shape that is almost a parallelogram: its base is half the way around the circle, and its height is the radius.</p>
+  <div class="explainer" data-explainer="slices"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>A table top and a rug</h3></div>
+  <p class="q">Round each area to the nearest tenth.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A round table top has a radius of 45 cm. Find its area.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=\pi r^2=\pi\times45^2</span><br><span class="tex">=\pi\times2025=6361.72\ldots</span><br>The table top is about <b>6361.7 cm²</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A round rug has a diameter of 8 ft. Estimate its area, then find it.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=8\div2=4</span> ft<br>Estimate: <span class="tex">3\times4\times4=48</span> ft²<br><span class="tex">A=\pi\times4^2=50.265\ldots</span><br>The rug is about <b>50.3 ft²</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Pizza Palace</h3></div>
+  <p class="q">A pizza’s size is its diameter. Pizza Palace sells one 16 in pizza for $21.99, or two 10 in pizzas for $11.99 each.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Which choice gives more pizza?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">16 in: <span class="tex">r=8</span>; <span class="tex">A=\pi\times8^2\approx201.06</span> in²<br>10 in: <span class="tex">r=5</span>; <span class="tex">A=\pi\times5^2\approx78.54</span> in²<br>Two 10 in: <span class="tex">2\times78.54=157.08</span> in²<br>One 16 in pizza gives <b>more pizza</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Find the price per square inch of each choice, to a tenth of a cent. Which is the better buy?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">16 in: <span class="tex">\$21.99\div201.06\approx\$0.109</span> per in²<br>Two 10 in: <span class="tex">2\times\$11.99=\$23.98</span>; <span class="tex">\$23.98\div157.08\approx\$0.153</span> per in²<br>The <b>16 in pizza</b> is the better buy: more pizza for less money.</div></div></div>
+  </div>
+  <div class="explainer" data-explainer="pizza"></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Math History box (brown) ================= -->
+<!-- sources: https://mathshistory.st-andrews.ac.uk/HistTopics/Egyptian_papyri/ (Problem 50: diameter 9 khet, take away 1/9, square: 64 setat; π ≈ 4(8/9)² ≈ 3.1605)
+     https://www.britannica.com/science/mathematics/Mathematics-in-ancient-Egypt (Rhind papyrus, 17th century BCE, a copy of a text about two centuries older, British Museum; discard 1/9 of the diameter and square the rest) -->
+<section class="card history" data-ink="hist" data-section="Math History: Ahmes’s Round Field">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">about 1650 BCE</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">A round field, nearly 3700 years ago</h3>
+      <p>The <b>Rhind papyrus</b> is an Egyptian math scroll written by a scribe named <b>Ahmes</b>, copied from an even older text. Today it is in the British Museum. One of its problems asks for the area of a <b>round field</b> 9 khet across (a khet is an old Egyptian length).</p>
+      <p>Ahmes had no <span class="tex">\pi</span> key. His rule: take away <span class="tex">\tfrac19</span> of the diameter, then make a <b>square</b> with what is left. <span class="tex">9-1=8</span>, and <span class="tex">8\times8=64</span>. So the field is about 64 square khet.</p>
+      <div class="part hist-q"><div class="pl">Use <span class="tex">A=\pi r^2</span> on the same field. How close was Ahmes?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=9\div2=4.5</span>; <span class="tex">A=\pi\times4.5^2=63.6</span> square khet. Ahmes’s 64 is only <b>0.4</b> too big, less than 1% off. His rule acts like <span class="tex">\pi\approx3.16</span>.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u3l8-hist" viewBox="0 0 600 300" role="img" aria-label="A round field 9 units across on a grid; a 9 by 9 square shrinks to an 8 by 8 square that covers almost exactly the same area as the circle"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l8"></section>
+
+<!-- ================= 5. Changing area units, and the cost of a job ================= -->
+<section class="card" data-ink="s5" data-section="5. Area Units and the Cost of a Job">
+  <div class="sec-h"><span class="badge">5</span><h2>Changing Area Units, and the Cost of a Job</h2></div>
+  <p>A square foot is 12 in by 12 in, so it holds <span class="tex">12\times12=144</span> square inches. A square yard is 3 ft by 3 ft, so it holds <span class="tex">3\times3=9</span> square feet. In the same way, 1 m² is 100 cm by 100 cm <span class="tex">=10\,000</span> cm².</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Area units</b>
+    <div class="u3l8-units"><span>1 ft² = 144 in²</span><span>1 yd² = 9 ft²</span><span>1 m² = 10&#8239;000 cm²</span><span>1 m² ≈ 10.76 ft²</span></div>
+    <div class="u3l8-two"><span>Big unit → small unit: <b>multiply</b>.</span><span>Small unit → big unit: <b>divide</b>.</span></div>
+    <div class="eg u3l8-eg"><b>Cost of a job</b> = area × price per square unit</div></div>
+  <div class="explainer" data-explainer="unitSq"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> 1 ft² is <b>not</b> 12 in². The 12 is used twice (<span class="tex">12\times12</span>), once for each side. If the lengths are in different units (like ft and in), you can also change the lengths first, then multiply.</div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Change the units</h3></div>
+  <p class="q">Complete the table. Round to the nearest tenth if needed. <span class="muted">(Tap a cell to show it.)</span></p>
+  <div class="parts c1">
+    <div class="part">
+      <table class="u3l8-tbl">
+        <tr><th>Change</th><th>Work</th><th>Answer</th></tr>
+        <tr><td>(a) 5 ft² to in²</td><td><span data-reveal><span class="tex">5\times144</span></span></td><td><span data-reveal>720 in²</span></td></tr>
+        <tr><td>(b) 2880 in² to ft²</td><td><span data-reveal><span class="tex">2880\div144</span></span></td><td><span data-reveal>20 ft²</span></td></tr>
+        <tr><td>(c) 27 ft² to yd²</td><td><span data-reveal><span class="tex">27\div9</span></span></td><td><span data-reveal>3 yd²</span></td></tr>
+        <tr><td>(d) 3.5 m² to cm²</td><td><span data-reveal><span class="tex">3.5\times10\,000</span></span></td><td><span data-reveal>35&#8239;000 cm²</span></td></tr>
+        <tr><td>(e) 12 m² to ft²</td><td><span data-reveal><span class="tex">12\times10.76=129.12</span></span></td><td><span data-reveal>about 129.1 ft²</span></td></tr>
+      </table>
+      <div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Big → small, multiply: (a) 720 in², (d) 35&#8239;000 cm², (e) about 129.1 ft². Small → big, divide: (b) 20 ft², (c) 3 yd².</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. Buying Materials">
+  <h3 class="sub">Buying materials: round up, and add 10%</h3>
+  <p>Materials like flooring, sod and tile are sold in whole <b>boxes</b>, <b>rolls</b> or <b>pieces</b>. Always round the number you buy <b>up</b>. Installers also buy about <b>10% extra</b> for cutting and mistakes (multiply the area by 1.10).</p>
+  <div class="explainer" data-explainer="flooring"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Owen’s new floor</h3></div>
+  <p class="q">Owen is putting vinyl plank flooring in a bedroom that is 12 ft 6 in long and 10 ft wide. One box covers 23.4 ft² and costs $54.99. He adds 10% for waste.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the area of the floor in ft².</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">6 in <span class="tex">=6\div12=0.5</span> ft, so 12 ft 6 in = 12.5 ft<br><span class="tex">A=12.5\times10=125</span> ft²</div></div></div>
+    <div class="part"><div class="pl">(b) How much flooring does Owen need with the 10% extra?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">125\times1.10=137.5</span> ft²</div></div></div>
+    <div class="part"><div class="pl">(c) How many boxes must he buy?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">137.5\div23.4=5.87\ldots</span> boxes<br>Round <b>up</b>: Owen must buy <b>6 boxes</b>.</div></div></div>
+    <div class="part"><div class="pl">(d) What is the total cost with 5% GST?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6\times\$54.99=\$329.94</span><br><span class="tex">\$329.94\times1.05=\$346.437\approx\$346.44</span><br>The flooring costs <b>$346.44</b> with GST.</div></div></div>
+  </div>
+  <div class="tip calc-tip" data-extra><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(c) <span class="keys">125 <kbd>×</kbd> 1.1 <kbd>÷</kbd> 23.4 <kbd>ENTER</kbd></span> shows 5.876…&nbsp;&nbsp; (d) <span class="keys">6 <kbd>×</kbd> 54.99 <kbd>×</kbd> 1.05 <kbd>ENTER</kbd></span> shows 346.437</div>
+    <div class="u3l8-pcol"><button class="pill" type="button" data-keys="125 × 1.1 ÷ 23.4 =">(c)</button><button class="pill" type="button" data-keys="6 × 54.99 × 1.05 =">(d)</button></div></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex9b" data-section="More Practice: Area Jobs">
+  <div class="ex-head"><span class="ex-tag">More practice</span><h3>Two more area jobs</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A round pool cover has a diameter of 14 ft. The material costs $2.25 per ft². Estimate the area, then find the cost of the material to the nearest cent.</div><div class="work" style="--h:210px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=14\div2=7</span> ft. Estimate: <span class="tex">3\times7\times7=147</span> ft²<br><span class="tex">A=\pi\times7^2=153.93\ldots</span> ft²<br>Cost: <span class="tex">153.93\ldots\times\$2.25=\$346.36</span></div></div></div>
+    <div class="part"><div class="pl">(b) A triangular garden in a Red Deer park has a base of 9 m and a height of 4.4 m. Topsoil covers 2 m² per bag. How many bags are needed?</div><div class="work" style="--h:210px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">A=9\times4.4\div2=19.8</span> m²<br><span class="tex">19.8\div2=9.9</span> bags → round up: <b>10 bags</b></div></div></div>
+  </div>
+  <div class="space" id="ex9b-space"></div>
+  <button class="more" data-more="ex9b-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s5c" data-section="5. Think: Twice as Wide">
+  <h3 class="sub">Think it through</h3>
+  <div class="parts c2">
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> A round rug has twice the radius of another. Does it have twice the area?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No, 4 times.</b> The radius is used twice: <span class="tex">\pi\times(2r)\times(2r)=4\pi r^2</span>. The 8 ft rug (50.3 ft²) has 4 times the area of a 4 ft rug (12.6 ft²).</div></div></div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> Without the 10% extra, how many boxes would Owen need? Why do installers add it?</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">125\div23.4=5.34\ldots</span>, still 6 boxes. Planks get cut to fit the walls, and the cut-off bits often can’t be used, so you need more than the exact area.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Area</b> is the surface inside, in <b>square units</b>. Perimeter is the distance around, in plain units. Both lengths in the same unit before you multiply.</div>
+    <div><b>Rectangle</b> <span class="tex">A=lw</span>, <b>parallelogram</b> <span class="tex">A=bh</span>, <b>triangle</b> <span class="tex">A=b\times h\div2</span>, <b>trapezoid</b> <span class="tex">A=(a+b)\times h\div2</span>. The height is at a right angle.</div>
+    <div><b>Circle</b> <span class="tex">A=\pi r^2</span>; estimate with <span class="tex">3\times r\times r</span>. Halve a diameter first. <span class="tex">r^2=r\times r</span>.</div>
+    <div>1 ft² = 144 in², 1 yd² = 9 ft², 1 m² = 10&#8239;000 cm². Big → small: ×; small → big: ÷. <b>Cost</b> = area × price; round boxes <b>up</b>; add 10% for waste.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l8">
+    <div><div class="kicker">Your turn</div><b>Assignment 8 · Questions 6–18</b><div class="muted">Circles, a wall to paint, a sail, a glass table top, unit changes, sod, carpet by the square yard, floor tiles, a rug, and multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l9/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 9 — Composite and Irregular Shapes</b><div class="muted">Split a shape into pieces and add, take away a cut-out, and estimate an irregular shape on a grid.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l8.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l8', homeHref: '../../', title: '3.8 Area of 2-D Shapes' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

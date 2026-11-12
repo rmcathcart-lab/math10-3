@@ -1,0 +1,142 @@
+/* Math 10-3 · Unit 2 · Lesson 1 — Time Math: styles used only on this page (prefix u2l1-).
+ * Minutes/time amber, hours brand brown, answers red, after midnight night blue. */
+.u2l1 .ex-cap .katex { font-size: 1.04em; }
+.u2l1 .pl .katex { font-size: 1.1em; }
+.u2l1 .ans .katex { font-size: 1.06em; }
+.u2l1 .katex { white-space: nowrap; }
+.u2l1-gap { display: inline-block; width: 26px; }
+.u2l1-pcol { display: flex; flex-direction: column; gap: 6px; flex: none; }
+.u2l1 .tip:not(.watch):not(.calc-tip) { background: var(--brand-soft); }
+.u2l1 .tip:not(.watch):not(.calc-tip) .tip-ic { background: var(--brand2); color: #fff; }
+
+/* ---------------- notes ---------------- */
+.u2l1-clockrow { display: grid; grid-template-columns: 300px 1fr; gap: 28px; align-items: center; margin: 8px 0 12px; }
+.u2l1-clock45 { width: 300px; height: auto; display: block; }
+.u2l1-big { font-size: 24px; margin: 6px 0; }
+.u2l1-three { display: flex; align-items: center; gap: 18px; font-size: 26px; margin: 6px 0 0; }
+.u2l1-three b { font: 800 26px var(--round); color: var(--brand); }
+.u2l1-keys { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 10px 0 12px; }
+.u2l1-keys > div { background: var(--brand-soft); border-left: 5px solid var(--brand2); border-radius: 10px; padding: 10px 14px; font-size: 19px; line-height: 1.38; }
+.u2l1-keys > div.w { grid-column: 1 / -1; background: #fff4dc; border-left-color: var(--amber); }
+.u2l1-keys .eg { display: block; margin-top: 6px; font-size: 20px; text-align: center; }
+.u2l1-ribbon svg, .u2l1-jumpfig svg { display: block; width: 100%; height: auto; margin: 4px 0 8px; }
+.u2l1-c { text-align: center; font-size: 20px; margin: 0 0 6px; }
+.u2l1-tbl { border-collapse: collapse; margin: 8px auto 12px; font-size: 20px; }
+.u2l1-tbl th, .u2l1-tbl td { border: 2px solid #cfc6b4; padding: 6px 10px; text-align: center; height: 52px; }
+.u2l1-tbl th { background: var(--brand-soft); font-weight: 800; }
+.u2l1-bench td { min-width: 70px; }
+.u2l1-bench th { text-align: left; }
+.u2l1-clk td { min-width: 140px; }
+.u2l1-clk tr.gap th, .u2l1-clk tr.gap td { border-top-width: 6px; }
+.u2l1-ts td { min-width: 120px; }
+.u2l1-ts th:first-child { text-align: left; }
+.u2l1-ts td.off { font-style: italic; color: var(--muted); }
+.u2l1-ts tr.tot th { text-align: right; }
+
+/* ---------------- explainers: shared ---------------- */
+.u2l1-abs { position: absolute; }
+.u2l1-mid { translate: -50% -50%; }
+.u2l1-ml { translate: 0 -50%; }
+.u2l1-red { color: var(--red); }
+.u2l1-grn { color: var(--ok, #12805a); }
+.u2l1-eq { font-size: 26px; white-space: nowrap; background: var(--brand-soft); border-radius: 12px; padding: 4px 18px; }
+.u2l1-eq .katex { font-size: 1.08em; }
+.u2l1-count { font: 600 22px var(--round); color: var(--ink2, #3a4254); white-space: nowrap; }
+.u2l1-count b { font-size: 30px; color: var(--ink); }
+.u2l1-cn { font: 800 17px var(--round); fill: #6b6457; text-anchor: middle; }
+.u2l1-bt { font: 700 16px var(--round); fill: #5a5f6a; text-anchor: middle; }
+.u2l1-bt.u2l1-bh { fill: var(--brand); font-size: 17px; }
+.u2l1-btag { font: 700 18px var(--round); color: var(--ink); background: rgba(255, 255, 255, .9); border-radius: 6px; padding: 0 6px; white-space: nowrap; }
+.u2l1-tile { display: grid; grid-template-rows: auto 1fr; align-items: center; gap: 6px; height: 118px; box-sizing: border-box; background: #fbf8f2; border: 2px solid #e6dfd0; border-radius: 12px; padding: 10px 14px; }
+.u2l1-tile .k { font: 800 15px var(--round); color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.u2l1-tile .v { font-size: 26px; color: var(--red); text-align: center; white-space: nowrap; }
+
+/* the machine */
+.u2l1-lane { font: 700 15px var(--round); color: var(--muted); text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
+.u2l1-mach { width: 170px; height: 100px; box-sizing: border-box; background: #2c3442; border-radius: 16px; box-shadow: 0 5px 0 #1b2128; color: #e9eef5; display: grid; align-content: center; justify-items: center; gap: 2px; }
+.u2l1-mach .nm { font: 800 12px var(--round); letter-spacing: .18em; color: #9fb2c8; }
+.u2l1-mach .op { font: 800 38px var(--round); color: #f2b84b; }
+.u2l1-gear { pointer-events: none; }
+.u2l1-tok { font: 800 32px var(--round); padding: 4px 12px; border-radius: 10px; white-space: nowrap; background: #fff; border: 2.5px solid var(--line, #d6cfc0); box-shadow: 0 3px 8px rgba(0, 0, 0, .08); }
+.u2l1-tok.h { color: var(--brand); border-color: var(--brand2); }
+.u2l1-tok.m { color: #9a5d00; border-color: var(--amber); background: #fff7e6; }
+.u2l1-tok.u { color: var(--muted); }
+.u2l1-tok.r { color: var(--red); border-color: var(--red); }
+.u2l1-tok .katex { font-size: 0.95em; }
+.u2l1-out { font-size: 25px; white-space: nowrap; background: var(--brand-soft); border-radius: 12px; padding: 6px 16px; }
+.u2l1-out.fin { box-shadow: inset 0 0 0 2.5px var(--red); }
+
+/* 7.30 h trap */
+.u2l1-tt { font: 800 18px var(--round); fill: var(--brand); text-anchor: middle; }
+.u2l1-tb { font: 800 18px var(--round); fill: #9a5d00; text-anchor: middle; }
+.u2l1-tk { font: 700 15px var(--round); fill: var(--muted); text-transform: uppercase; }
+.u2l1-pl { font: 800 22px var(--round); white-space: nowrap; background: rgba(255, 255, 255, .92); border-radius: 8px; padding: 0 8px; }
+
+/* clocks cut into pieces */
+.u2l1-pn { font: 800 20px var(--round); color: var(--ink); pointer-events: none; }
+.u2l1-hl { font: 800 22px var(--round); color: var(--brand); white-space: nowrap; }
+
+/* the hours | minutes board */
+.u2l1-colh { font: 800 16px var(--round); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.u2l1-cell { font: 800 32px var(--round); color: var(--ink); white-space: nowrap; }
+.u2l1-cell s { color: #9aa0ab; font-size: 24px; margin-right: 4px; }
+.u2l1-cell.u2l1-sum { color: #5a4630; }
+.u2l1-cell.u2l1-fin { color: var(--brand); }
+.u2l1-cell.u2l1-ans { color: var(--red); }
+.u2l1-cell.u2l1-warn { background: #fff1ef; border-radius: 8px; box-shadow: 0 0 0 2px var(--red); }
+.u2l1-op { font: 800 32px var(--round); color: var(--muted); }
+.u2l1-rule { height: 4px; background: var(--ink); border-radius: 2px; }
+.u2l1-chip { font: 800 22px var(--round); color: #fff; background: var(--brand2); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.u2l1-mbar { display: flex; gap: 0; height: 56px; border: 2.5px solid var(--ink); border-radius: 8px; overflow: hidden; background: #fffdf8; }
+.u2l1-mbar .blk { display: grid; place-items: center; font: 800 18px var(--round); color: #fff; box-sizing: border-box; border-right: 2px solid #fff; }
+.u2l1-mbar .blk.full { background: #b08a5a; }
+.u2l1-mbar .blk.full.lit { background: var(--brand); }
+.u2l1-mbar .blk.rest { background: var(--amber); }
+
+/* both clocks */
+.u2l1-rbh { font: 700 15px var(--round); fill: #5a5f6a; text-anchor: middle; }
+.u2l1-rb24 { font: 800 15px var(--round); fill: var(--ink); text-anchor: middle; }
+.u2l1-rb12 { font: 700 14px var(--round); fill: var(--brand); text-anchor: middle; }
+.u2l1-rbn { font: italic 600 14px var(--font); fill: var(--muted); text-anchor: middle; }
+.u2l1-rbk { font: 800 13px var(--round); fill: var(--muted); }
+.u2l1-rd { width: 240px; height: 96px; box-sizing: border-box; display: grid; grid-template-rows: auto 1fr; gap: 4px; background: #fbf8f2; border: 2px solid #e6dfd0; border-radius: 12px; padding: 8px 14px; }
+.u2l1-rd .k { font: 800 14px var(--round); color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.u2l1-rd .v { font: 800 34px var(--round); color: var(--ink); text-align: center; align-self: center; white-space: nowrap; }
+.u2l1-rd .v.lcd { font: 700 38px ui-monospace, "SF Mono", Menlo, monospace; background: #c9d4b8; color: #1e2618; border-radius: 8px; }
+.u2l1-rd .v.u2l1-ansv { color: var(--red); }
+.u2l1-rd .v.lcd.u2l1-ansv { color: #a3241d; }
+.u2l1-rule2 { font: 800 21px var(--round); color: var(--brand); background: var(--brand-soft); border-radius: 10px; padding: 4px 14px; white-space: nowrap; }
+
+/* count-up jumps */
+.u2l1-jt { font: 700 17px var(--round); fill: var(--ink); text-anchor: middle; }
+.u2l1-jt.u2l1-jn { fill: #2d3f7a; font-style: italic; }
+.u2l1-ja { font: 800 19px var(--round); text-anchor: middle; }
+
+/* 24-hour subtraction */
+.u2l1-lcdrow { display: flex; align-items: center; gap: 4px; font: 700 52px ui-monospace, "SF Mono", Menlo, monospace; color: #1e2618; }
+.u2l1-lcdrow .sg { width: 46px; text-align: center; color: var(--muted); font-family: var(--round); }
+.u2l1-lcdrow .hh, .u2l1-lcdrow .mm { background: #c9d4b8; border-radius: 8px; padding: 0 10px; min-width: 70px; text-align: center; display: inline-flex; align-items: baseline; gap: 6px; }
+.u2l1-lcdrow s { font-size: 28px; color: #6b7660; }
+.u2l1-lcdrow b { color: #a3241d; }
+.u2l1-lcdres { font: 800 36px var(--round); color: var(--red); white-space: nowrap; }
+.u2l1-side { font: 600 22px/1.6 var(--round); color: var(--ink); background: var(--brand-soft); border-radius: 12px; padding: 10px 18px; white-space: nowrap; }
+.u2l1-bad { font-size: 28px; color: var(--red); background: #fff1ef; border-radius: 12px; padding: 6px 16px; white-space: nowrap; }
+
+/* the timesheet */
+.u2l1-tsx { width: 936px; border-collapse: collapse; font-size: 19px; background: #fff; }
+.u2l1-tsx th, .u2l1-tsx td { border: 2px solid #cfc6b4; padding: 0 8px; height: 36px; text-align: center; white-space: nowrap; }
+.u2l1-tsx tr:first-child th { background: var(--brand-soft); font: 800 16px var(--round); }
+.u2l1-tsx th { text-align: left; font-weight: 800; }
+.u2l1-tsx tr.off td { font-style: italic; color: var(--muted); }
+.u2l1-tsx tr.lit td, .u2l1-tsx tr.lit th { background: #fff4dc; }
+.u2l1-tsx td.f1 { color: #9a5d00; font-weight: 800; width: 170px; }
+.u2l1-tsx td.f2, .u2l1-tsx td.t1, .u2l1-tsx td.t2 { color: var(--brand); font-weight: 800; width: 170px; }
+.u2l1-tsx tr.tot th { text-align: right; background: #fbf8f2; }
+.u2l1-tsx td.t2.fin { color: var(--red); }
+.u2l1-tsx .so { color: var(--muted); font: 600 16px var(--round); }
+
+/* Math History: base 60 */
+.u2l1-hcap { font: 700 18px Georgia, serif; fill: #4a2c14; text-anchor: middle; }
+.u2l1-hsm { font: 600 15px Georgia, serif; fill: #7a4a26; text-anchor: middle; }
+.u2l1-hyr { font: 700 20px Georgia, serif; fill: #b07a12; text-anchor: middle; }
+.u2l1-hnum { font: 700 18px Georgia, serif; fill: #4a2c14; text-anchor: middle; }

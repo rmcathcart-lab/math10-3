@@ -1,0 +1,90 @@
+/* Math 10-3 · Unit 3 · Lesson 3 — The Imperial System and Reading a Tape Measure: styles used only on this page
+ * (prefix u3l3-). Tick colours (when "Colour the lines" is on): inch ink, half red, quarter blue, eighth green,
+ * sixteenth purple. Tape blade yellow #f6d64a. */
+.u3l3 .ans .katex, .u3l3 .pl .katex, .u3l3 .def .katex { font-size: 1.08em; }
+.u3l3 .ex-cap .katex { font-size: 1.06em; }
+.u3l3-gap { margin-top: 14px; }
+.u3l3-pcol { display: flex; gap: 8px; flex: none; flex-wrap: wrap; }
+
+/* ---------- tips ---------- */
+.tip.u3l3-know { background: #f5ecdf; } .tip.u3l3-know .tip-ic { background: var(--brand2); color: #fff; font-family: Georgia, serif; }
+
+/* ---------- tables on the page ---------- */
+.u3l3-tbl { border-collapse: collapse; font-size: 19px; margin: 8px 0 4px; background: #fff; width: 100%; }
+.u3l3-tbl th, .u3l3-tbl td { border: 2px solid #b9ad97; padding: 6px 12px; text-align: left; height: 42px; }
+.u3l3-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u3l3-tbl td.u3l3-cc { text-align: center; width: 150px; font-weight: 700; }
+.u3l3-units td:first-child { font-weight: 800; width: 90px; }
+.u3l3-units td:nth-child(2) { width: 110px; }
+.u3l3-def-units { padding-bottom: 14px; }
+.u3l3-tiers { display: grid; grid-template-columns: 1.05fr 1fr; gap: 18px; align-items: start; }
+.u3l3-tiers .def { margin: 0; }
+.u3l3-tierlist { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; align-items: center; margin-top: 8px; font-size: 19px; }
+.u3l3-tierlist .k { font-weight: 800; }
+.u3l3-swatch { display: inline-block; width: 26px; height: 5px; border-radius: 3px; vertical-align: middle; margin-right: 8px; }
+.u3l3-steps { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 4px; }
+.u3l3-steps li { font-size: 19px; }
+
+/* ---------- Example 1: choices in a row ---------- */
+.u3l3-pick { display: grid; grid-template-columns: 300px repeat(4, 1fr); gap: 8px; align-items: center; margin: 6px 0; font-size: 19px; }
+.u3l3-opt { display: inline-block; text-align: center; padding: 4px 6px; border: 2px solid transparent; border-radius: 22px; }
+.part.shown .u3l3-opt.u3l3-yes { border-color: var(--red); color: var(--red); font-weight: 800; animation: fadeUp .35s; }
+.u3l3-why { grid-column: 2 / -1; font-size: 16px; color: var(--muted); visibility: hidden; margin-top: -4px; }
+.part.shown .u3l3-why { visibility: visible; }
+.u3l3-cmp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; font-size: 20px; margin: 8px 0; }
+.u3l3-blank { display: inline-block; min-width: 96px; border-bottom: 2px solid #8b7d66; padding: 0 6px; text-align: center; }
+.u3l3-blank.w2 { min-width: 140px; }
+.u3l3-blank .bk-rv-q { border: 0; background: none; }
+
+/* ---------- static figures (rulers drawn by JS) ---------- */
+.u3l3-fig { position: relative; margin: 6px auto 4px; }
+.u3l3-fig svg { display: block; overflow: visible; }
+.u3l3-fl { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 19px; line-height: 1.1; white-space: nowrap; }
+.u3l3-fl.u3l3-fa { visibility: hidden; color: var(--red); font-weight: 700; }
+.part.shown .u3l3-fl.u3l3-fa { visibility: visible; animation: fadeUp .35s; }
+.u3l3-lines { display: flex; flex-wrap: wrap; gap: 12px 30px; font-size: 21px; margin: 8px 0 4px; }
+.u3l3-lines > div { min-width: 200px; }
+.u3l3-ex5 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; align-items: center; }
+.u3l3-t5 td, .u3l3-t5 th { text-align: center !important; }
+
+/* ---------- the hands-on ruler / tape measure ---------- */
+.u3l3-tool { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 12px 16px 14px; }
+.u3l3-ov { touch-action: none; cursor: pointer; user-select: none; margin-bottom: 6px; }
+.u3l3-ov svg, .u3l3-main svg { display: block; }
+.u3l3-main { touch-action: none; cursor: ew-resize; user-select: none; position: relative; }
+.u3l3-trow { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 10px; }
+.u3l3-read { display: flex; align-items: center; gap: 18px; min-height: 92px; background: #f6f3ec; border-radius: 14px; padding: 8px 16px; }
+.u3l3-big { font: 900 40px var(--round); color: #1c2230; min-width: 210px; text-align: center; }
+.u3l3-big .katex { font-size: 1.05em; }
+.u3l3-big .u3l3-q { color: var(--muted); }
+.u3l3-how { font-size: 19px; color: var(--ink2); line-height: 1.35; }
+.u3l3-how .katex { font-size: 1.25em; }
+.u3l3-how b.u3l3-ftin { color: #6e4a1c; }
+.u3l3-tbtns { display: grid; grid-template-columns: auto auto; gap: 8px; }
+.u3l3-tbtns .pill { font-size: 17px; }
+.u3l3-tbtns .pill[aria-pressed="true"] { background: #2e3c4f; color: #fff; }
+.u3l3-nudge { display: flex; gap: 6px; justify-content: center; margin-top: 8px; flex-wrap: wrap; }
+.u3l3-nudge .pill { font-size: 17px; min-width: 64px; }
+.u3l3-nudge .u3l3-nl { font: 700 16px var(--round); color: var(--muted); align-self: center; margin-right: 4px; }
+
+/* ---------- explainer pieces ---------- */
+.u3l3-c { box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; }
+.u3l3-card { background: #fff; border: 3px solid #9a6a24; border-radius: 12px; font-size: 21px; padding: 4px 10px; }
+.u3l3-card.blue { border-color: #1f5bd6; } .u3l3-card.green { border-color: #12805a; } .u3l3-card.red { border-color: #c93a33; } .u3l3-card.purple { border-color: #7b4fc4; }
+.u3l3-res { background: #fff6e5; border: 3px solid #e2a63a; border-radius: 12px; font-size: 22px; font-weight: 700; padding: 4px 12px; }
+.u3l3-res .katex { font-size: 1.1em; }
+.u3l3-tag { font: 800 17px var(--round); color: #3a4254; }
+.u3l3-card .katex, .u3l3-res .katex, .u3l3-tag .katex { font-size: 1.3em; }
+.u3l3 .ex-cap .katex .mfrac, .u3l3 .ex-ask .katex .mfrac { font-size: 1.12em; }
+.u3l3-small { font-size: 16px; color: var(--ink2); }
+.u3l3-svg { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.u3l3-hop { font: 700 13px var(--round); }
+.u3l3-person { font: 800 17px var(--round); }
+
+/* ---------- warm-up ---------- */
+.u3l3-wpoll .poll-opts { margin-left: 0; } .u3l3-wpoll > .pill, .u3l3-wpoll .poll-ans { margin-left: 0; }
+.u3l3-wpoll .opt { font-size: 21px; padding: 10px 14px; } .u3l3-wpoll .poll-ans { font-size: 19px; }
+.u3l3-wpoll .opt .katex { font-size: 1.1em; }
+
+/* ---------- Math History: barleycorns ---------- */
+.u3l3-hist-t { font-family: Georgia, serif; }

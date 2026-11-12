@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 4 Review · Math 10-3 4.7</title>
+<meta name="description" content="Math 10-3 Unit 4 Lesson 7: the Unit 4 review. Every skill from the unit on one page (volume of prisms and cylinders, cubic units, capacity, US and British gallons, temperature, mass in SI and imperial units, bushels and tonnes), worked examples that mix the topics, and a practice unit test. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u4l7.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u4l7">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: One Spoonful Back">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>One Spoonful Back</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Glass A holds <b>1 cup of orange juice</b>. Glass B holds <b>1 cup of water</b>.</p><p class="vw-ctx">Move <b>one spoonful</b> of juice from A into B and stir. Then move <b>one spoonful</b> of that mix from B back into A.</p><p class="vw-ask">Now is there more juice in Glass B, or more water in Glass A?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="Two glasses, one of orange juice and one of water, with a spoon moving back and forth between them">
+    <rect x="20" y="226" width="290" height="10" rx="5" fill="#d9c9ae"/>
+    <!-- glass A: juice -->
+    <path d="M42 98 L56 224 H122 L136 98 Z" fill="#fff" stroke="#8a7d66" stroke-width="3"/>
+    <path d="M46 132 L56 222 H122 L132 132 Z" fill="#f2a33a"/>
+    <text x="89" y="88" font-size="20" font-weight="800" fill="#6e4a1c" text-anchor="middle">A</text>
+    <!-- glass B: water -->
+    <path d="M194 98 L208 224 H274 L288 98 Z" fill="#fff" stroke="#8a7d66" stroke-width="3"/>
+    <path d="M198 132 L208 222 H274 L284 132 Z" fill="#9cc6f2"/>
+    <text x="241" y="88" font-size="20" font-weight="800" fill="#6e4a1c" text-anchor="middle">B</text>
+    <!-- the spoon: dips in A, swings over to B, dips, swings back -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 26;0 0;152 0;152 26;152 0;0 0" keyTimes="0;0.12;0.24;0.5;0.62;0.74;1" dur="6s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
+      <path d="M118 30 L96 108" stroke="#7a838d" stroke-width="6" stroke-linecap="round"/>
+      <ellipse cx="92" cy="116" rx="17" ry="9" fill="#c9ccd1" stroke="#5b6470" stroke-width="2.5"/>
+      <ellipse cx="92" cy="114" rx="11" ry="4.5" fill="#f2a33a">
+        <animate attributeName="fill" values="#f2a33a;#f2a33a;#f2a33a;#f2a33a;#e9b67a;#e9b67a;#f2a33a" keyTimes="0;0.12;0.24;0.5;0.62;0.74;1" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;1;1;0;1;0" keyTimes="0;0.12;0.2;0.56;0.62;0.7;1" dur="6s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.6s" repeatCount="indefinite"/><text x="165" y="196" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Pick one: <b>more juice in B</b>, <b>more water in A</b>, or <b>the same</b>. Convince the person beside you.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>They are exactly the same.</b> After both moves, each glass holds 1 cup again. So whatever juice is <b>missing</b> from Glass A was filled back in by water, the same amount. That juice is sitting in Glass B. <span class="muted">Try numbers: 100 mL cups, a 10 mL spoon. B gets 10 mL of juice (110 mL). A spoonful of the mix back is about 0.91 mL juice and 9.09 mL water. Now A has 9.09 mL of water, and B has <span class="tex">10-0.91=9.09</span> mL of juice.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 4 Volume, Capacity, Mass and Temperature · Lesson 7</div>
+  <h1>Unit 4 Review</h1>
+  <p class="lede">Every rule from the unit on <b>one page</b>, then worked examples that <b>mix the topics</b>, set up like the unit test. Try each example on your own first. Then we check it together.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find the <b>volume</b> of a box, a prism or a cylinder, with every length in the <b>same unit</b></li>
+      <li>change <b>cubic units</b>, and change a volume to a <b>capacity</b> (mL, L, gallons)</li>
+      <li>tell a <b>US gallon</b> from a <b>British gallon</b></li>
+      <li>change <b>°C to °F</b> and back, and <b>estimate</b> in my head</li>
+      <li>change <b>mass</b> units, regroup <b>pounds and ounces</b>, and change kg to lb and back</li>
+      <li>change <b>bushels to tonnes</b> (and back) with a conversion factor</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M1</b> Demonstrate an understanding of the Système International (SI) by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; applying strategies to convert SI units to imperial units.</div>
+  <div class="outcome"><b>M2</b> Demonstrate an understanding of the imperial system by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; comparing the American and British imperial units for capacity; applying strategies to convert imperial units to SI units.</div>
+</section>
+
+<!-- ================= 1. The unit on one page ================= -->
+<section class="card" data-ink="s1" data-section="1. The Unit on One Page">
+  <div class="sec-h"><span class="badge">1</span><h2>The Unit on One Page</h2></div>
+  <p>Use this page to study. Each row is one skill: what to do, and a short example. The small tag shows the lesson it came from. The conversion numbers marked <span class="tex">\approx</span> are rounded, so answers that use them are close, not exact.</p>
+  <table class="u4l7-one">
+    <tr><th>Skill</th><th>What to do</th><th>Example</th></tr>
+    <tr><td><b>Volume of a prism</b><i>4.1</i></td><td><span class="tex">V=(\text{area of base})\times h</span>. A box: <span class="tex">V=lwh</span>. A triangular prism: base area <span class="tex">=\tfrac12bh</span> of the triangle. Use the same unit for every length. Volume is in <b>cubic units</b> (cm³, m³, ft³).</td><td>A box 2 m × 1.5 m × 0.4 m:<br><span class="tex">V=2\times1.5\times0.4=1.2\text{ m}^3</span></td></tr>
+    <tr><td><b>Volume of a cylinder</b><i>4.1</i></td><td><span class="tex">V=\pi r^2h</span>. The radius is half the diameter: <span class="tex">r=d\div2</span>.</td><td><span class="tex">r=10</span> cm, <span class="tex">h=30</span> cm:<br><span class="tex">V=\pi\times10^2\times30\approx9\,425\text{ cm}^3</span></td></tr>
+    <tr><td><b>Cubic units</b><i>4.1</i></td><td><span class="tex">1\text{ m}^3=1\,000\,000\text{ cm}^3</span>; <span class="tex">1\text{ ft}^3=1\,728\text{ in}^3</span> (<span class="tex">12\times12\times12</span>); <span class="tex">1\text{ yd}^3=27\text{ ft}^3</span> (<span class="tex">3\times3\times3</span>).</td><td><span class="tex">54\text{ ft}^3\div27=2\text{ yd}^3</span></td></tr>
+    <tr><td><b>Capacity (SI)</b><i>4.2</i></td><td><span class="tex">1\text{ mL}=1\text{ cm}^3</span>; <span class="tex">1\text{ L}=1\,000\text{ mL}=1\,000\text{ cm}^3</span>; <span class="tex">1\text{ m}^3=1\,000\text{ L}</span>.</td><td><span class="tex">9\,425\text{ cm}^3=9\,425\text{ mL}=9.425\text{ L}</span></td></tr>
+    <tr><td><b>Capacity (imperial)</b><i>4.2</i></td><td>US: 1 gal = 4 qt = 8 pt = 16 cups = 128 fl oz; 1 US gal <span class="tex">\approx3.785</span> L; 1 US fl oz <span class="tex">\approx29.57</span> mL. British: 1 gal <span class="tex">\approx4.546</span> L (about 20% bigger); 1 pint = 20 fl oz <span class="tex">\approx568</span> mL. Metric cup = 250 mL; US cup <span class="tex">\approx237</span> mL.</td><td>5 US gal <span class="tex">\approx5\times3.785=18.925</span> L</td></tr>
+    <tr><td><b>Temperature</b><i>4.3</i></td><td><span class="tex">F=1.8\times C+32</span>; <span class="tex">C=(F-32)\div1.8</span>. Quick estimate: <span class="tex">F\approx2\times C+30</span>. Water freezes at 0 °C (32 °F) and boils at 100 °C (212 °F); body 37 °C.</td><td>25 °C: <span class="tex">1.8\times25+32=77</span> °F</td></tr>
+    <tr><td><b>Mass (SI)</b><i>4.4</i></td><td>1 g = 1000 mg; 1 kg = 1000 g; 1 t = 1000 kg. To a <b>smaller</b> unit, multiply; to a <b>bigger</b> unit, divide.</td><td>2.75 kg = 2750 g</td></tr>
+    <tr><td><b>Mass (imperial)</b><i>4.4</i></td><td>1 lb = 16 oz; 1 ton = 2000 lb. When you add, change every 16 oz into 1 lb. When you subtract, borrow 1 lb as 16 oz.</td><td>4 lb 10 oz + 2 lb 11 oz<br>= 6 lb 21 oz = 7 lb 5 oz</td></tr>
+    <tr><td><b>SI ↔ imperial mass</b><i>4.5</i></td><td>1 lb <span class="tex">\approx0.454</span> kg; 1 kg <span class="tex">\approx2.2</span> lb; 1 oz <span class="tex">\approx28.35</span> g; 1 ton <span class="tex">\approx0.907</span> t. Check: the number of pounds is always <b>bigger</b> than the number of kilograms.</td><td>50 lb <span class="tex">\approx50\times0.454=22.7</span> kg</td></tr>
+    <tr><td><b>Bushels and tonnes</b><i>4.6</i></td><td>The factor (bushels per tonne, bu/t) is given for each crop. tonnes × factor = bushels; bushels ÷ factor = tonnes.</td><td>2205 bu of canola at 44.1 bu/t:<br><span class="tex">2\,205\div44.1=50</span> t</td></tr>
+  </table>
+  <div class="def u4l7-rem"><b>Remember.</b> Change every length to the same unit <b>before</b> you find a volume (4 in <span class="tex">=\tfrac{4}{12}</span> ft). Use the <b>radius</b>, not the diameter, in <span class="tex">\pi r^2h</span>. Say which gallon or cup you mean: US and British are different. Estimate first, so you can spot a wrong calculator answer. Round only at the <b>end</b>, and round <b>up</b> when you buy whole bags, cans or loads.</div>
+</section>
+
+<section class="card" data-extra data-ink="s1c" data-section="1. Check Yourself: Which Rule?">
+  <h3 class="sub">Check yourself: which rule do you need?</h3>
+  <p>Name the row of the table first, then tap a card to check.</p>
+  <div class="bk-flips" style="--bk-cols:4">
+    <div class="bk-flip"><div class="bk-front">How many litres fill a fish tank 60 cm × 30 cm × 40 cm?</div><div class="bk-back"><b>Volume of a prism</b>, then <b>capacity</b><br><span class="tex">\text{cm}^3=\text{mL}</span>, then ÷ 1000</div></div>
+    <div class="bk-flip"><div class="bk-front">A recipe from Texas says 350 °F. Set the oven in °C.</div><div class="bk-back"><b>Temperature</b><br><span class="tex">(350-32)\div1.8</span></div></div>
+    <div class="bk-flip"><div class="bk-front">A truck delivers 45 ft³ of gravel. How many cubic yards?</div><div class="bk-back"><b>Cubic units</b><br><span class="tex">\div27</span></div></div>
+    <div class="bk-flip"><div class="bk-front">A puppy weighs 9 lb 12 oz. How many ounces?</div><div class="bk-back"><b>Mass (imperial)</b><br><span class="tex">9\times16+12</span></div></div>
+    <div class="bk-flip"><div class="bk-front">A British recipe uses 1 pint of cream. How many mL?</div><div class="bk-back"><b>Capacity (imperial)</b><br>British pint <span class="tex">\approx568</span> mL</div></div>
+    <div class="bk-flip"><div class="bk-front">How much water fits in a round tank 2 m across and 1 m tall?</div><div class="bk-back"><b>Volume of a cylinder</b><br><span class="tex">r=1</span>: <span class="tex">\pi\times1^2\times1</span></div></div>
+    <div class="bk-flip"><div class="bk-front">A 20 kg bag of salt. How many pounds?</div><div class="bk-back"><b>SI ↔ imperial mass</b><br><span class="tex">20\times2.2</span></div></div>
+    <div class="bk-flip"><div class="bk-front">A farmer has 300 t of wheat (36.7 bu/t). How many bushels?</div><div class="bk-back"><b>Bushels and tonnes</b><br>tonnes × factor</div></div>
+  </div>
+</section>
+
+<!-- ================= 2. Volume and capacity ================= -->
+<section class="card example" data-ink="ex1" data-section="2. Volume and Capacity: Example 1">
+  <div class="sec-h"><span class="badge">2</span><h2>Volume and Capacity</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>The raised garden bed</h3></div>
+  <p class="q">A raised garden bed is a box 2.4 m long, 1.2 m wide and 0.35 m deep.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many cubic metres of soil fill the bed?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">V=lwh=2.4\times1.2\times0.35</span><br><span class="tex">V=1.008\text{ m}^3</span><br><b>It takes about 1.008 m³ of soil.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Garden soil is sold in 25 L bags. How many bags are needed?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1\text{ m}^3=1\,000</span> L, so <span class="tex">1.008\times1\,000=1\,008</span> L<br><span class="tex">1\,008\div25=40.32</span> bags<br>40 bags is not quite enough, so round up: <b>41 bags</b>.</div></div></div>
+  </div>
+  <p class="small muted" data-extra><b>Think:</b> why can’t you buy 40 bags and stop? (40 bags hold <span class="tex">40\times25=1\,000</span> L. The bed needs 1008 L, so it would be 8 L short.)</p>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex1c" data-section="2. Check Example 1">
+  <h3 class="sub">Check Example 1: fill the bed</h3>
+  <div class="explainer" data-explainer="bed"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>The rain barrel</h3></div>
+  <p class="q">A rain barrel is a cylinder 60 cm across (diameter) and 90 cm tall.</p>
+  <div class="u4l7-ex2">
+    <div class="u4l7-fig"><svg viewBox="0 0 230 250" role="img" aria-label="A cylinder 60 cm across and 90 cm tall">
+      <path d="M30 60 V210 A80 22 0 0 0 190 210 V60" fill="#eef3fb" stroke="#1c2230" stroke-width="2.5"/>
+      <path d="M30 210 A80 22 0 0 1 190 210" fill="none" stroke="#1c2230" stroke-width="2" stroke-dasharray="6 5"/>
+      <ellipse cx="110" cy="60" rx="80" ry="22" fill="#fff" stroke="#1c2230" stroke-width="2.5"/>
+      <line x1="34" y1="60" x2="186" y2="60" stroke="#c93a33" stroke-width="2.5"/>
+      <path d="M34 60 l10 -5 v10 z M186 60 l-10 -5 v10 z" fill="#c93a33"/>
+      <rect x="82" y="22" width="56" height="22" rx="5" fill="#fff"/><text x="110" y="39" font-size="17" font-weight="700" text-anchor="middle" fill="#1c2230">60 cm</text>
+      <line x1="208" y1="60" x2="208" y2="210" stroke="#1c2230" stroke-width="2"/>
+      <path d="M208 60 l-5 10 h10 z M208 210 l-5 -10 h10 z" fill="#1c2230"/>
+      <text x="214" y="140" font-size="17" font-weight="700" fill="#1c2230" transform="rotate(90 214 140)" text-anchor="middle">90 cm</text>
+    </svg></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Find the volume of the barrel in cubic centimetres.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=60\div2=30</span> cm<br><span class="tex">V=\pi r^2h=\pi\times30^2\times90\approx254\,469\text{ cm}^3</span></div></div></div>
+      <div class="part"><div class="pl">(b) How many litres does it hold?</div><div class="work" style="--h:80px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1\text{ L}=1\,000\text{ cm}^3</span>: <span class="tex">254\,469\div1\,000\approx254.5</span> L</div></div></div>
+    </div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(c) An American store lists the barrel in US gallons. About how many US gallons is it? (1 US gal <span class="tex">\approx3.785</span> L)</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">254.469\div3.785\approx67.2</span><br><b>The barrel holds about 67.2 US gallons.</b></div></div></div>
+    <div class="part"><div class="pl">(d) A British store lists it in British gallons (1 gal <span class="tex">\approx4.546</span> L). Find that number. Why is it smaller than (c)?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">254.469\div4.546\approx56.0</span> British gallons<br>A British gallon is <b>bigger</b> than a US gallon, so it takes <b>fewer</b> of them to fill the same barrel.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Cylinder on the TI-30XIIS:</b> <span class="keys"><kbd>π</kbd><kbd>×</kbd>30<kbd>x²</kbd><kbd>×</kbd>90<kbd>ENTER</kbd></span> gives 254&#8239;469.0049. Keep that number for (b), (c) and (d), and round at the end.</div>
+    <div class="u4l7-pcol"><button class="pill" type="button" data-keys="π × 30 x² × 90 =">(a)</button><button class="pill" type="button" data-keys="254.469 ÷ 3.785 =">(c)</button><button class="pill" type="button" data-keys="254.469 ÷ 4.546 =">(d)</button></div></div>
+  <p class="small muted" data-extra><b>Think:</b> what goes wrong if you put the diameter, 60, into <span class="tex">\pi r^2h</span>? (<span class="tex">60^2</span> is <b>4 times</b> <span class="tex">30^2</span>, so the answer would be 4 times too big: about 1018 L.)</p>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex2c" data-section="2. Check Example 2">
+  <h3 class="sub">Check Example 2: the rain barrel</h3>
+  <div class="explainer" data-explainer="barrel"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Dev’s concrete pad</h3></div>
+  <p class="q">Dev is pouring a concrete pad for a shed. The pad is 10 ft by 12 ft and 4 in thick.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the volume of the pad in cubic feet.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same units first: 4 in <span class="tex">=4\div12=\tfrac13</span> ft<br><span class="tex">V=10\times12\times\tfrac13=40\text{ ft}^3</span></div></div></div>
+    <div class="part"><div class="pl">(b) Change the volume to cubic yards.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1\text{ yd}^3=27\text{ ft}^3</span>, so divide by 27.<br><span class="tex">40\div27\approx1.48\text{ yd}^3</span></div></div></div>
+    <div class="part u4l7-wide"><div class="pl">(c) The concrete plant sells in half cubic yards (0.5, 1, 1.5, …) at $210.00 per cubic yard. How much should Dev order, and what will it cost before tax?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1.48 yd³ is more than 1, so he orders the next half yard up: <b>1.5 yd³</b>.<br>Cost: <span class="tex">1.5\times\$210.00=\$315.00</span>. <b>Dev orders 1.5 yd³ for $315.00.</b></div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex3c" data-section="2. Check Example 3">
+  <h3 class="sub">Check Example 3: the concrete pad</h3>
+  <div class="explainer" data-explainer="pad"></div>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Why 27 and 1728?">
+  <h3 class="sub">Why 27 and 1728? Build the cube</h3>
+  <p>A cubic yard is a cube 1 yd on each edge. Every edge is 3 ft, so count the little 1 ft cubes: one layer, then the layers.</p>
+  <div class="explainer" data-explainer="cubic"></div>
+</section>
+
+<!-- ================= 3. Temperature ================= -->
+<section class="card example" data-ink="ex4" data-section="3. Temperature: Example 4">
+  <div class="sec-h"><span class="badge">3</span><h2>Temperature</h2></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> In <span class="tex">C=(F-32)\div1.8</span>, subtract 32 <b>first</b>. On the TI-30XIIS use brackets: <span class="keys"><kbd>(</kbd>104<kbd>−</kbd>32<kbd>)</kbd><kbd>÷</kbd>1.8<kbd>ENTER</kbd></span>. For a negative number use <span class="keys"><kbd>(−)</kbd></span>, not the minus key.</div>
+    <div class="u4l7-pcol"><button class="pill" type="button" data-keys="( 104 − 32 ) ÷ 1.8 =">(a)</button><button class="pill" type="button" data-keys="1.8 × (−) 15 + 32 =">(b)</button></div></div>
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Phoenix, Calgary and a cookie recipe</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) The forecast in Phoenix, Arizona, is a high of 104 °F. What is that in Celsius?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">C=(104-32)\div1.8</span><br><span class="tex">=72\div1.8=40</span><br><b>It will be 40 °C in Phoenix.</b></div></div></div>
+    <div class="part"><div class="pl">(b) It is <span class="tex">-15</span> °C in Calgary. What is that in Fahrenheit?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">F=1.8\times(-15)+32</span><br><span class="tex">=-27+32=5</span><br><b>It is 5 °F in Calgary.</b></div></div></div>
+    <div class="part"><div class="pl">(c) Use the quick estimate to change 22 °C to Fahrenheit. Then find the exact answer. Is the estimate good enough to decide what to wear?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">2\times22+30=74</span> °F<br>Exact: <span class="tex">1.8\times22+32=71.6</span> °F<br><b>Yes.</b> The estimate is only about 2 degrees off, so it is good enough to choose clothes.</div></div></div>
+    <div class="part"><div class="pl">(d) A cookie recipe from a US website says to bake at 375 °F. What should you set a Celsius oven to?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">(375-32)\div1.8=343\div1.8\approx190.6</span> °C<br>Ovens go up in steps of 5 or 10 degrees, so set the oven to <b>about 190 °C</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex4c" data-section="3. Check Example 4">
+  <h3 class="sub">Check Example 4 on the double thermometer</h3>
+  <div class="explainer" data-explainer="thermo"></div>
+</section>
+
+<section class="card" data-extra data-ink="s3x" data-section="3. How Good Is the Quick Estimate?">
+  <h3 class="sub">How good is the quick estimate?</h3>
+  <p>Graph the exact rule <span class="tex">F=1.8C+32</span> and the estimate <span class="tex">F\approx2C+30</span>. The gap between the two lines is how far off the estimate is.</p>
+  <div class="explainer" data-explainer="estLine"></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u4l7"></section>
+
+<!-- ================= 4. Mass ================= -->
+<section class="card example" data-ink="ex5" data-section="4. Mass: Example 5">
+  <div class="sec-h"><span class="badge">4</span><h2>Mass</h2></div>
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Fill in the blanks, and Baby Amira</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Fill in the blanks.<div class="u4l7-blanks"><div>3.6 kg = <span class="u4l7-bl"><span data-reveal>3600</span></span> g</div><div>750 mg = <span class="u4l7-bl"><span data-reveal>0.75</span></span> g</div><div>4.2 t = <span class="u4l7-bl"><span data-reveal>4200</span></span> kg</div></div></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">kg to g: <span class="tex">\times1\,000</span>: <span class="tex">3.6\times1\,000=3\,600</span><br>mg to g: <span class="tex">\div1\,000</span>: <span class="tex">750\div1\,000=0.75</span><br>t to kg: <span class="tex">\times1\,000</span>: <span class="tex">4.2\times1\,000=4\,200</span></div></div></div>
+    <div class="part"><div class="pl">(b) Fill in the blanks.<div class="u4l7-blanks"><div>3 lb 6 oz = <span class="u4l7-bl"><span data-reveal>54</span></span> oz</div><div>74 oz = <span class="u4l7-bl sm"><span data-reveal>4</span></span> lb <span class="u4l7-bl sm"><span data-reveal>10</span></span> oz</div></div></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3\times16=48</span>; <span class="tex">48+6=54</span> oz<br><span class="tex">74\div16=4</span> remainder 10 (<span class="tex">4\times16=64</span>, <span class="tex">74-64=10</span>)<br>74 oz = <b>4 lb 10 oz</b></div></div></div>
+    <div class="part u4l7-wide"><div class="pl">(c) Baby Amira weighed 7 lb 9 oz at birth and 11 lb 4 oz at two months. How much did she gain?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">4 oz − 9 oz will not work, so borrow 1 lb = 16 oz: 11 lb 4 oz = 10 lb 20 oz<br>10 lb 20 oz − 7 lb 9 oz = 3 lb 11 oz<br>Check: 7 lb 9 oz + 3 lb 11 oz = 10 lb 20 oz = 11 lb 4 oz ✓ <b>She gained 3 lb 11 oz.</b></div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex5c" data-section="4. Check Example 5">
+  <h3 class="sub">Check Example 5: the staircase and the ounce strip</h3>
+  <div class="explainer" data-explainer="massUnits"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Suitcases, ground beef, chips and hay</h3></div>
+  <p class="q">Use 1 lb <span class="tex">\approx0.454</span> kg, 1 kg <span class="tex">\approx2.2</span> lb, 1 oz <span class="tex">\approx28.35</span> g and 1 ton <span class="tex">\approx0.907</span> t.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) An airline allows a checked bag of up to 23 kg. Jordan’s suitcase weighs 48 lb on his bathroom scale. Is it under the limit?</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">48\times0.454\approx21.8</span> kg<br>Check: 21.8 is less than 48 ✓<br><span class="tex">21.8&lt;23</span>, so <b>the suitcase is under the limit.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Ground beef is $5.99/lb at one store and $12.99/kg at another. Which is the better price? (Use 1 kg <span class="tex">\approx2.2</span> lb.)</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 kg is about 2.2 lb, so a kilogram at the first store costs<br><span class="tex">5.99\times2.2\approx\$13.18</span> per kg.<br>$12.99/kg is less than $13.18/kg, so <b>the second store is the better price.</b></div></div></div>
+    <div class="part"><div class="pl">(c) A bag of chips is labelled 12 oz. What is that in grams?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">12\times28.35=340.2</span> g</div></div></div>
+    <div class="part"><div class="pl">(d) A load of hay is 1.5 tons. What is that in tonnes?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1.5\times0.907\approx1.36</span> t</div></div></div>
+  </div>
+  <p class="small muted" data-extra><b>Think:</b> in (a), how could you check with the other number, 1 kg <span class="tex">\approx2.2</span> lb? (<span class="tex">48\div2.2\approx21.8</span> kg. The same answer, because 0.454 and 2.2 are two ways of saying the same thing.)</p>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex6c" data-section="4. Check Example 6">
+  <h3 class="sub">Check Example 6: kilograms and pounds</h3>
+  <div class="explainer" data-explainer="scale2"></div>
+</section>
+
+<!-- ================= 5. Bushels and tonnes ================= -->
+<section class="card example" data-ink="ex7" data-section="5. Bushels and Tonnes: Example 7">
+  <div class="sec-h"><span class="badge">5</span><h2>Bushels and Tonnes</h2></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A tonne holds <em>many</em> bushels, so the number of bushels is always <b>bigger</b> than the number of tonnes. If your tonnes answer is bigger, you multiplied when you should have divided.</div></div>
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>The canola and barley harvest</h3></div>
+  <p class="q">A farmer near Lethbridge harvests 8820 bushels of canola. For canola, use 44.1 bu/t.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many tonnes of canola is that?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">bushels ÷ factor = tonnes<br><span class="tex">8\,820\div44.1=200</span> t</div></div></div>
+    <div class="part"><div class="pl">(b) The elevator pays $680.00 per tonne. How much is the crop worth?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">200\times\$680.00=\$136\,000.00</span><br><b>The crop is worth $136&#8239;000.00.</b></div></div></div>
+    <div class="part"><div class="pl">(c) What is the price <b>per bushel</b>, to the nearest cent?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">One tonne is 44.1 bushels, so one bushel is worth<br><span class="tex">\$680.00\div44.1\approx\$15.42</span> per bushel.</div></div></div>
+    <div class="part"><div class="pl">(d) The farmer also has 92 t of barley. For barley, use 45.9 bu/t. How many bushels is that?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">tonnes × factor = bushels<br><span class="tex">92\times45.9=4\,222.8</span>, <b>about 4223 bushels</b></div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Check the size:</b> <span class="keys">8820<kbd>÷</kbd>44.1<kbd>ENTER</kbd></span> gives 200, fewer tonnes than bushels ✓. <span class="keys">92<kbd>×</kbd>45.9<kbd>ENTER</kbd></span> gives 4222.8, more bushels than tonnes ✓.</div>
+    <div class="u4l7-pcol"><button class="pill" type="button" data-keys="8820 ÷ 44.1 =">(a)</button><button class="pill" type="button" data-keys="680 ÷ 44.1 =">(c)</button><button class="pill" type="button" data-keys="92 × 45.9 =">(d)</button></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="ex7c" data-section="5. Check Example 7">
+  <h3 class="sub">Check Example 7 at the grain elevator</h3>
+  <div class="explainer" data-explainer="grain"></div>
+</section>
+
+<!-- ================= 6. Practice test: multiple choice traps ================= -->
+<section class="card" data-extra data-ink="s6x" data-section="6. Practice Test: Spot the Trap">
+  <div class="sec-h"><span class="badge">6</span><h2>Practice Test: Spot the Trap</h2></div>
+  <p>On a multiple-choice test, the wrong answers are often the answers you get from a <b>common mistake</b>. Work it out first, then find the mistake behind each wrong choice.</p>
+  <div class="explainer" data-explainer="traps"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Volume.</b> Same units first. Prism: area of base × height (a box is <span class="tex">lwh</span>). Cylinder: <span class="tex">\pi r^2h</span> with the <b>radius</b>. <span class="tex">1\text{ yd}^3=27\text{ ft}^3</span>, <span class="tex">1\text{ ft}^3=1\,728\text{ in}^3</span>, <span class="tex">1\text{ m}^3=1\,000\,000\text{ cm}^3</span>.</div>
+    <div><b>Capacity.</b> <span class="tex">1\text{ cm}^3=1\text{ mL}</span>, <span class="tex">1\text{ m}^3=1\,000</span> L. US gallon <span class="tex">\approx3.785</span> L; British gallon <span class="tex">\approx4.546</span> L, about 20% bigger, so you need <b>fewer</b> of them. Round <b>up</b> for bags and loads.</div>
+    <div><b>Temperature.</b> <span class="tex">F=1.8C+32</span>. <span class="tex">C=(F-32)\div1.8</span>: subtract 32 <b>first</b>. Quick estimate: double and add 30. Use <span class="keys"><kbd>(−)</kbd></span> for a negative.</div>
+    <div><b>Mass.</b> SI: × or ÷ 1000. 1 lb = 16 oz: regroup 16 oz as 1 lb, borrow 1 lb as 16 oz. 1 kg <span class="tex">\approx2.2</span> lb (more pounds than kilograms). Bushels ÷ factor = tonnes; tonnes × factor = bushels.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u4l7">
+    <div><div class="kicker">Your turn</div><b>Assignment 7 · Unit 4 Review · Questions 1–26</b><div class="muted">A practice unit test: written response (1–14), multiple choice (15–22) and numerical response (23–26). Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+<!-- ================= up next: the unit test ================= -->
+<section class="card u4l7-next" data-ink="next" data-section="Up next: Unit 4 Test">
+  <div class="u4l7-next-h"><span class="kicker">Up next</span><b>Unit 4 test</b> <span class="muted">Shaky on an idea today? Go back to its lesson.</span></div>
+  <div class="u4l7-next-grid">
+    <a href="../l1/"><span class="rn">4.1</span>Volume of prisms and cylinders <small>Examples 1, 2(a), 3</small></a>
+    <a href="../l2/"><span class="rn">4.2</span>Capacity: litres, gallons, US vs British <small>Examples 1(b), 2(b)–(d)</small></a>
+    <a href="../l3/"><span class="rn">4.3</span>Temperature: Celsius and Fahrenheit <small>Example 4</small></a>
+    <a href="../l4/"><span class="rn">4.4</span>Mass: grams, kilograms, ounces, pounds, tons <small>Example 5</small></a>
+    <a href="../l5/"><span class="rn">4.5</span>Converting mass between SI and imperial <small>Example 6</small></a>
+    <a href="../l6/"><span class="rn">4.6</span>From volume to mass: bushels and tonnes <small>Example 7</small></a>
+    <div class="test"><span class="rn">Test</span>Unit 4 test: M1, M2 <small>calculator allowed · set up like today’s practice test · every idea from today’s review</small></div>
+  </div>
+  <div class="space" id="next-space" style="min-height:80px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u4l7.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u4l7', homeHref: '../../', title: '4.7 Unit 4 Review' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

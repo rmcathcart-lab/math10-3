@@ -1,0 +1,99 @@
+/* Math 10-3 · Unit 3 · Lesson 2 — The SI System: styles used only on this page (prefix u3l2-).
+ * The unit you have amber, the unit you want green, steps down (×) blue, steps up (÷) purple, answers red. */
+.u3l2 .ex-cap .katex { font-size: 1.06em; }
+.u3l2 .ans .katex, .u3l2 .pl .katex { font-size: 1.06em; }
+.u3l2 .katex { white-space: nowrap; }
+.u3l2-gap { display: inline-block; width: 26px; }
+.u3l2-gap.s { width: 12px; }
+.u3l2-pcol { display: flex; flex-direction: column; gap: 6px; flex: none; }
+.u3l2 .vw-ctx .katex { font-size: 1.1em; }
+
+/* ---------------- notes ---------------- */
+.u3l2-tbl { border-collapse: collapse; margin: 8px auto 12px; font-size: 19px; }
+.u3l2-tbl th, .u3l2-tbl td { border: 2px solid #cfc6b4; padding: 6px 12px; text-align: center; height: 46px; }
+.u3l2-tbl th { background: var(--brand-soft); font-weight: 800; }
+.u3l2-units td:last-child, .u3l2-units td:nth-child(2) { text-align: left; }
+.u3l2-units th:first-child, .u3l2-ex1 tr > th:first-child, .u3l2-ex3 th, .u3l2-ex6 tr > th:first-child { text-align: left; }
+.u3l2-ex1 td { min-width: 200px; }
+.u3l2-pre td { min-width: 96px; font-size: 18px; }
+.u3l2-pre td.base { background: #efe6d6; }
+.u3l2-ref td:nth-child(2), .u3l2-ref td:nth-child(4) { text-align: left; }
+.u3l2-ref td:nth-child(3) { border-left-width: 5px; }
+.u3l2-ex3 td { min-width: 80px; font-weight: 800; color: var(--red); }
+.u3l2-ex6 td { min-width: 150px; }
+.u3l2-e5 td { min-width: 110px; }
+.u3l2-ul { margin: 4px 0 0; padding-left: 1.3em; }
+.u3l2-ul li { margin: 2px 0; }
+.u3l2-steps ol { margin: 0 0 6px; padding-left: 1.6em; }
+.u3l2-steps li { margin: 2px 0; }
+.u3l2-two { display: grid; grid-template-columns: auto 1fr; gap: 30px; align-items: start; }
+.u3l2-two .u3l2-tbl { margin: 4px 0 0; }
+.u3l2-blanks { display: grid; gap: 14px; font-size: 24px; margin: 10px 0 14px; }
+.u3l2-keys { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 14px; margin: 10px 0 12px; }
+.u3l2-keys.two { grid-template-columns: 1fr 1fr; }
+.u3l2-keys > div { background: var(--brand-soft); border-left: 5px solid var(--brand2); border-radius: 10px; padding: 10px 14px; font-size: 19px; line-height: 1.38; }
+.u3l2-keys > div.w { background: #fff4dc; border-left-color: var(--amber); }
+.u3l2-fig svg { display: block; width: 100%; height: auto; }
+.u3l2-rrow { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+.u3l2-stairfig { margin: 4px 0 8px; }
+
+/* ---------------- explainers: shared ---------------- */
+.u3l2-abs { position: absolute; }
+.u3l2-mid { translate: -50% -50%; }
+.u3l2-ml { translate: 0 -50%; }
+.u3l2-tile { font-size: 28px; white-space: nowrap; background: var(--brand-soft); border-radius: 12px; padding: 6px 18px; }
+.u3l2-tile.fin { box-shadow: inset 0 0 0 2.5px var(--red); }
+.u3l2-tile .katex { font-size: 1.05em; }
+.u3l2-lab { font: 800 20px var(--round); color: var(--ink); white-space: nowrap; }
+.u3l2-lab.sm { font-size: 18px; color: var(--muted); }
+.u3l2-lab.r { color: var(--red); }
+.u3l2-lab.b { color: #1f5bd6; }
+.u3l2-lab.g { color: var(--ok, #12805a); }
+.u3l2-lab .katex { font-size: 1.05em; }
+.u3l2-big { font: 800 30px var(--round); white-space: nowrap; }
+.u3l2-big .katex { font-size: 1.05em; }
+
+/* the staircase */
+.u3l2-sb { font: 800 24px var(--round); fill: var(--ink); text-anchor: middle; }
+.u3l2-ss { font: 700 13px var(--round); fill: #6b6457; text-anchor: middle; }
+.u3l2-hop { font: 800 17px var(--round); text-anchor: middle; }
+.u3l2-cell { width: 40px; text-align: center; font: 800 52px/1 var(--round); color: var(--ink); translate: -50% -50%; }
+.u3l2-cell.pad { color: var(--amber); }
+.u3l2-pt { width: 12px; height: 12px; border-radius: 50%; background: var(--red); translate: -50% -50%; }
+.u3l2-unit { font: 800 40px var(--round); color: var(--brand); translate: 0 -50%; white-space: nowrap; }
+
+/* referents */
+.u3l2-rt { width: 172px; height: 262px; box-sizing: border-box; background: #fff; border: 2.5px solid #e6dfd0; border-radius: 14px; padding: 6px; text-align: center; }
+.u3l2-rt svg { display: block; width: 156px; height: 140px; margin: 0 auto; }
+.u3l2-rt .v { font: 800 30px var(--round); color: var(--brand); margin-top: 2px; }
+.u3l2-rt .d { font: 600 16px/1.25 var(--round); color: var(--ink); }
+
+/* option cards + verdicts */
+.u3l2-opt { width: 250px; height: 110px; box-sizing: border-box; display: grid; place-items: center; background: #fff; border: 3px solid #d9cfbd; border-radius: 16px; font: 800 40px var(--round); color: var(--ink); translate: -50% 0; }
+.u3l2-opt.yes { border-color: var(--ok, #12805a); background: #eaf6ef; }
+.u3l2-opt.no { color: var(--muted); }
+.u3l2-why { width: 270px; font: 600 18px/1.3 var(--round); color: var(--ink); text-align: center; translate: -50% 0; }
+.u3l2-why b { color: var(--brand); }
+
+/* the ruler */
+.u3l2-rn { font: 800 17px var(--round); fill: #3a2a12; text-anchor: middle; }
+.u3l2-ptr { font: 800 22px var(--round); fill: var(--red); text-anchor: middle; }
+.u3l2-mm { font: 800 13px var(--round); fill: #1f5bd6; text-anchor: middle; }
+
+/* place-value chart */
+.u3l2-pc { border-collapse: collapse; font: 800 42px var(--round); }
+.u3l2-pc th { font-size: 20px; padding: 4px 0; color: var(--brand); background: var(--brand-soft); border: 2px solid #cfc6b4; width: 104px; }
+.u3l2-pc td { height: 74px; border: 2px solid #cfc6b4; text-align: center; background: #fff; }
+.u3l2-pc td.pad { color: var(--amber); }
+.u3l2-pc td.hl { background: #fff4dc; }
+
+/* compare + lemonade */
+.u3l2-nm { font: 800 19px var(--round); fill: var(--ink); }
+.u3l2-vv { font: 800 18px var(--round); fill: var(--brand); }
+.u3l2-medal { font-size: 30px; }
+
+/* the history animation */
+.u3l2-hcap { font: 700 17px Georgia, serif; fill: #4a2c14; text-anchor: middle; }
+.u3l2-hyr { font: 700 22px Georgia, serif; fill: #b07a12; text-anchor: middle; }
+.u3l2-hsm { font: 600 14px Georgia, serif; fill: #7a4a26; text-anchor: middle; }
+.u3l2-ref td:nth-child(odd) { white-space: nowrap; }

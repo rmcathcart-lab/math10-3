@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Overtime · Math 10-3 2.3</title>
+<meta name="description" content="Math 10-3 Unit 2 Lesson 3: overtime. Time-and-a-half and double-time rates, gross pay with overtime, Alberta's 8/44 rule (daily vs weekly overtime, use the bigger), and timesheets with unpaid breaks. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u2l3.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u2l3">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Socks in the Dark">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Socks in the Dark</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">It is 5:30 a.m. You have an early shift, and the power is out.</p><p class="vw-ctx">Your drawer has <b>10 black socks</b> and <b>10 grey socks</b>, all mixed up.</p><p class="vw-ask">How many socks must you grab, without looking, to be <u>sure</u> you have a matching pair?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A dark bedroom: a dresser drawer full of mixed black and grey socks, a clock showing 5:30 and a moon in the window">
+    <rect x="0" y="0" width="330" height="250" rx="18" fill="#1f2433"/>
+    <rect x="22" y="20" width="84" height="70" rx="6" fill="#2d3550" stroke="#4a5574" stroke-width="3"/>
+    <circle cx="74" cy="46" r="15" fill="#f4e7b8"/><circle cx="81" cy="41" r="13" fill="#2d3550"/>
+    <g><animate attributeName="opacity" values="0.3;1;0.3" dur="2.6s" repeatCount="indefinite"/>
+      <circle cx="44" cy="70" r="1.8" fill="#f4e7b8"/><circle cx="92" cy="74" r="1.5" fill="#f4e7b8"/></g>
+    <rect x="200" y="22" width="106" height="44" rx="8" fill="#0e1018" stroke="#4a5574" stroke-width="3"/>
+    <text x="253" y="54" font-size="28" font-weight="800" fill="#e2543a" text-anchor="middle" font-family="ui-monospace, Menlo, monospace">5<tspan><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>:</tspan>30</text>
+    <rect x="30" y="112" width="270" height="118" rx="8" fill="#6b4a2a" stroke="#3b2814" stroke-width="3"/>
+    <rect x="44" y="124" width="242" height="94" rx="6" fill="#3b2814"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.2s" repeatCount="indefinite"/>
+      <path d="M64 150 h24 v26 q0 10 10 10 h14 v12 h-26 q-22 0 -22 -22 Z" fill="#14161c" stroke="#5a6070" stroke-width="2"/>
+      <path d="M128 140 h24 v26 q0 10 10 10 h14 v12 h-26 q-22 0 -22 -22 Z" fill="#9aa1ad" stroke="#5a6070" stroke-width="2"/>
+      <path d="M190 152 h24 v26 q0 10 10 10 h14 v12 h-26 q-22 0 -22 -22 Z" fill="#14161c" stroke="#5a6070" stroke-width="2"/>
+      <path d="M240 138 h22 v24 q0 9 9 9 h10 v11 h-22 q-19 0 -19 -20 Z" fill="#9aa1ad" stroke="#5a6070" stroke-width="2"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="2.6s" repeatCount="indefinite"/>
+      <path d="M96 176 h22 v22 q0 8 8 8 h12 v10 h-22 q-20 0 -20 -18 Z" fill="#9aa1ad" stroke="#5a6070" stroke-width="2"/>
+      <path d="M160 180 h22 v20 q0 8 8 8 h12 v10 h-22 q-20 0 -20 -18 Z" fill="#14161c" stroke="#5a6070" stroke-width="2"/>
+    </g>
+    <text x="165" y="104" font-size="40" font-weight="800" fill="#f4e7b8" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Got a number? <b>Test it</b>: what is the <b>unluckiest</b> way your grabs could go?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>Just 3 socks!</b> With 2 socks you might get one black and one grey. The 3rd sock is black or grey, so it <b>must</b> match one of them. <span class="muted">Many people say 11 or 20 at first. Twist: to be sure of a <b>black</b> pair, you need 12 (the unluckiest case is all 10 grey first).</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 2 Earning an Income · Lesson 3</div>
+  <h1>Overtime: Time-and-a-Half and Double Time</h1>
+  <p class="lede">A long week at work? The <b>extra hours pay more</b>. Today we find overtime rates, add overtime to a paycheque, and use <b>Alberta’s 8/44 rule</b> to decide which hours count as overtime.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find a <b>time-and-a-half</b> rate (× 1.5) and a <b>double-time</b> rate (× 2)</li>
+      <li>find <b>gross pay = regular pay + overtime pay</b></li>
+      <li>use Alberta’s <b>8/44 rule</b>: find daily and weekly overtime, then use the <b>bigger</b> one</li>
+      <li>go from a <b>timesheet</b> (start, end, unpaid break) to a paycheque</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N2</b> Demonstrate an understanding of income, including: wages; salary; contracts; commissions; piecework to calculate gross pay and net pay.<br><span class="muted">Today: wages with overtime.</span></div>
+</section>
+
+<!-- ================= 1. Overtime rates ================= -->
+<section class="card" data-ink="s1" data-section="1. Overtime Rates">
+  <div class="sec-h"><span class="badge">1</span><h2>Overtime Rates</h2></div>
+  <p>Every job has a usual number of hours, called the <b>regular hours</b>. Hours worked past that are <b>overtime</b>. Overtime hours are paid at a higher rate than your regular hourly wage (your <b>base wage</b>).</p>
+  <div class="u2l3-two">
+    <div><b>Time and a half</b>1.5 times your base wage. This is the usual overtime rate.</div>
+    <div><b>Double time</b>2 times your base wage. Some employers and union agreements pay this, for example on holidays or after a very long day. Use it only when a question says the job pays it.</div>
+  </div>
+  <p class="u2l3-small">A few agreements use other numbers, such as 1.25 times or 2.5 times (“double time and a half”). They work the same way: multiply the base wage by the number.</p>
+  <div class="def"><b>Key idea</b> &nbsp; time-and-a-half rate = base wage × 1.5 &nbsp;&nbsp;·&nbsp;&nbsp; double-time rate = base wage × 2
+    <div class="u2l3-defl"><b>overtime pay = overtime hours × overtime rate</b></div></div>
+  <div class="explainer" data-explainer="rates"></div>
+  <div class="def-grid">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Time and a half means 1.5 <b>times</b> the wage. It does not mean adding $1.50 to the wage, or adding half an hour. At $18.00/h, time and a half is <span class="tex">\$18.00\times1.5=\$27.00</span>/h, not $19.50/h.</div></div>
+    <div class="tip u2l3-est"><div class="tip-ic">≈</div><div><b>Estimate.</b> Half of the wage, added to the wage, gives time and a half. Half of $18 is $9, and <span class="tex">\$18+\$9=\$27</span>.</div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">18 <kbd>×</kbd> 1.5 <kbd>ENTER</kbd></span> shows 27. Double time: <span class="keys">18 <kbd>×</kbd> 2 <kbd>ENTER</kbd></span> shows 36.</div>
+    <div class="u2l3-pcol"><button class="pill" type="button" data-keys="18 × 1.5 =">× 1.5</button><button class="pill" type="button" data-keys="18 × 2 =">× 2</button></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. Times 1.5, Not Plus $1.50">
+  <h3 class="sub">Times 1.5, not plus $1.50</h3>
+  <p>Adding $1.50 gives a tiny raise. Multiplying by 1.5 adds <b>half the wage</b>. Look at the size of the difference.</p>
+  <div class="explainer" data-explainer="notPlus"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Is time and a half at $16.00/h more or less than double time at $12.00/h?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$16.00\times1.5=\$24.00</span> and <span class="tex">\$12.00\times2=\$24.00</span>. They are the <b>same</b>: $24.00/h.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Overtime rates</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Complete the table. Alberta’s minimum wage is $15.00/h (as of 2026; rates can change).</div>
+      <table class="u2l3-tbl u2l3-ex1">
+        <tr><th>Base wage</th><td>$15.00/h</td><td>$18.50/h</td><td>$21.20/h</td><td>$27.80/h</td></tr>
+        <tr><th>Time and a half (× 1.5)</th><td><span data-reveal="&nbsp;">$22.50/h</span></td><td><span data-reveal="&nbsp;">$27.75/h</span></td><td><span data-reveal="&nbsp;">$31.80/h</span></td><td><span data-reveal="&nbsp;">$41.70/h</span></td></tr>
+        <tr><th>Double time (× 2)</th><td><span data-reveal="&nbsp;">$30.00/h</span></td><td><span data-reveal="&nbsp;">$37.00/h</span></td><td><span data-reveal="&nbsp;">$42.40/h</span></td><td><span data-reveal="&nbsp;">$55.60/h</span></td></tr>
+      </table>
+      <div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">15.00\times1.5=22.50</span>; &nbsp;<span class="tex">18.50\times1.5=27.75</span>; &nbsp;<span class="tex">21.20\times1.5=31.80</span>; &nbsp;<span class="tex">27.80\times1.5=41.70</span>.<br>Double time: multiply each wage by 2: <b>$30.00</b>, <b>$37.00</b>, <b>$42.40</b>, <b>$55.60</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Gross pay with overtime ================= -->
+<section class="card" data-ink="s2" data-section="2. Gross Pay With Overtime">
+  <div class="sec-h"><span class="badge">2</span><h2>Gross Pay With Overtime</h2></div>
+  <p>When you work overtime, your <b>gross pay</b> (pay before deductions) has two parts: <b>regular pay</b> for the regular hours and <b>overtime pay</b> for the extra hours.</p>
+  <div class="def"><b>Key idea: gross pay with overtime</b>
+    <ol class="u2l3-steps">
+      <li><b>Step 1:</b> regular pay = regular hours × base wage</li>
+      <li><b>Step 2:</b> overtime pay = overtime hours × overtime rate</li>
+      <li><b>Step 3:</b> gross pay = regular pay + overtime pay</li>
+    </ol>
+    <div class="eg">Round to the nearest cent at the <b>end</b>.</div></div>
+  <p>The job sets when overtime starts. Many employers pay overtime after <b>40 hours a week</b>. The law in Alberta sets the <b>latest</b> point it can start (Section 3). An employer may always pay overtime sooner, because that is better for the worker. <b>If a question gives the employer’s rule, use it.</b></p>
+  <div class="explainer" data-explainer="payStack"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Jordan, the line cook</h3></div>
+  <p class="q">Jordan is a line cook. He earns $17.60/h. Last week he worked 40 regular hours and 6 overtime hours at time and a half. Find his gross pay.</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: regular pay <span class="tex">=40\times\$17.60=\$704.00</span><br>Step 2: overtime rate <span class="tex">=\$17.60\times1.5=\$26.40</span>/h; &nbsp;overtime pay <span class="tex">=6\times\$26.40=\$158.40</span><br>Step 3: gross pay <span class="tex">=\$704.00+\$158.40=\$862.40</span><br>Jordan’s gross pay is <b>$862.40</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Calculator: Keep the Decimals">
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>If the overtime rate has three decimals, <b>do not round it</b>. Do the overtime pay in one line instead: <span class="keys">6.5 <kbd>×</kbd> 1.5 <kbd>×</kbd> 22.75 <kbd>ENTER</kbd></span> shows 221.8125. Round only the final answer.</div>
+    <div class="u2l3-pcol"><button class="pill" type="button" data-keys="6.5 × 1.5 × 22.75 =">Show me</button></div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>The whole gross pay in one line (the calculator multiplies before it adds): <span class="keys">40 <kbd>×</kbd> 17.60 <kbd>+</kbd> 6 <kbd>×</kbd> 1.5 <kbd>×</kbd> 17.60 <kbd>ENTER</kbd></span> shows 862.4, Jordan’s $862.40.</div>
+    <div class="u2l3-pcol"><button class="pill" type="button" data-keys="40 × 17.60 + 6 × 1.5 × 17.60 =">Show me</button></div></div>
+  <div data-extra>
+    <h3 class="sub">Why not round the rate first?</h3>
+    <p>A rate of $34.125/h rounds to $34.13/h. That tiny change is multiplied by every overtime hour, and it can change the cents in the answer.</p>
+    <div class="explainer" data-explainer="oneLine"></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Priya, the drywall labourer</h3></div>
+  <p class="q">Priya is a drywall labourer. She earns $22.75/h. Her company pays time and a half for every hour over 40 in a week. This week she worked 46 h 30 min. Find her gross pay.</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Hours: 30 min = 0.5 h, so she worked 46.5 h. &nbsp;Overtime hours <span class="tex">=46.5-40=6.5</span> h<br>Step 1: regular pay <span class="tex">=40\times\$22.75=\$910.00</span><br>Step 2: overtime rate <span class="tex">=\$22.75\times1.5=\$34.125</span>/h (keep all the decimals); &nbsp;overtime pay <span class="tex">=6.5\times\$34.125=\$221.8125</span><br>Step 3: gross pay <span class="tex">=\$910.00+\$221.8125=\$1\,131.8125\approx\$1\,131.81</span><br>Priya’s gross pay is <b>$1&#8239;131.81</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2c" data-section="2. Double Time on a Holiday">
+  <h3 class="sub">Double time on a holiday</h3>
+  <p>Some agreements pay <b>double time</b>: every hour pays two hours’ wages. Watch two pay meters run through the same shift.</p>
+  <div class="explainer" data-explainer="holiday"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Some agreements pay double time</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Kyle works at a grocery store. His union agreement pays double time on general holidays. He earns $16.20/h and works a 7.5 h shift on Canada Day. How much does he earn for the shift?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">double-time rate <span class="tex">=\$16.20\times2=\$32.40</span>/h<br>pay <span class="tex">=7.5\times\$32.40=\$243.00</span><br>Kyle earns <b>$243.00</b> for the shift.<br>(A regular shift would pay <span class="tex">7.5\times\$16.20=\$121.50</span>, half as much.)</div></div></div>
+    <div class="part"><div class="pl">(b) Ayesha is an apprentice electrician. She earns $28.60/h. One week she worked 44 regular hours, 4 hours at time and a half and 3 hours at double time. Find her gross pay.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">regular: <span class="tex">44\times\$28.60=\$1\,258.40</span><br>time and a half: <span class="tex">\$28.60\times1.5=\$42.90</span>; &nbsp;<span class="tex">4\times\$42.90=\$171.60</span><br>double time: <span class="tex">\$28.60\times2=\$57.20</span>; &nbsp;<span class="tex">3\times\$57.20=\$171.60</span><br>gross <span class="tex">=\$1\,258.40+\$171.60+\$171.60=\$1\,601.60</span><br>Ayesha’s gross pay is <b>$1&#8239;601.60</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 3 · Questions 1–7</h2>
+  <p class="pr-t">Try these before we learn Alberta’s 8/44 rule.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Overtime rates</span>
+    <span><b>2</b>Overtime pay</span>
+    <span><b>3</b>Regular + overtime</span>
+    <span><b>4</b>The employer’s rule</span>
+    <span><b>5</b>Find the mistakes</span>
+    <span><b>6</b>Double time on a holiday</span>
+    <span><b>7</b>Three different rates</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u2l3">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Alberta's 8/44 rule ================= -->
+<section class="card" data-ink="s3" data-section="3. Alberta’s 8/44 Rule">
+  <div class="sec-h"><span class="badge">3</span><h2>Alberta’s Overtime Rule: 8 Hours a Day or 44 Hours a Week</h2></div>
+  <p>In Alberta, the law says most workers must get overtime at time and a half for every hour over <b>8 hours in a day</b> (<b>daily overtime</b>), or every hour over <b>44 hours in a week</b> (<b>weekly overtime</b>), <b>whichever gives more overtime hours.</b> You work out both, then use the bigger number.</p>
+  <p class="u2l3-small">(Rules as of 2026. Rules can change, and a few kinds of jobs have different rules.)</p>
+  <div class="def"><b>Key idea: Alberta 8/44 rule</b>
+    <ol class="u2l3-steps">
+      <li><b>Step 1: Daily overtime.</b> For each day, hours over 8. Add them up.</li>
+      <li><b>Step 2: Weekly overtime.</b> Total hours for the week − 44. (If the total is 44 or less, this is 0.)</li>
+      <li><b>Step 3: Overtime hours = the bigger of the two.</b> &nbsp;Regular hours = total hours − overtime hours.</li>
+      <li><b>Step 4:</b> Find the gross pay (regular pay + overtime pay).</li>
+    </ol></div>
+  <div class="explainer" data-explainer="week844"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Do <b>not</b> add the daily and weekly overtime together. They count the same extra hours in two ways. <b>Pick the bigger one.</b></div></div>
+  <div data-extra>
+    <h3 class="sub">Why not add them?</h3>
+    <p>The weekly total already includes every hour, the long days too. Take a long day’s extra time away and watch the weekly overtime shrink.</p>
+    <div class="explainer" data-explainer="noAdd"></div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> Sam works 4 days of 11 h. How many overtime hours is that under the 8/44 rule?</div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Daily: <span class="tex">4\times3=12</span> h. Weekly: 44 h in all, so 0 h. Use the bigger: <b>12 h</b>. A short week can still have lots of overtime.</div></div></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Maya at the tire shop</h3></div>
+  <p class="q">Maya works at a tire shop for $18.00/h. Complete her timesheet. Then find her overtime hours and her gross pay.</p>
+  <div class="u2l3-ex5">
+    <table class="u2l3-tbl u2l3-ts">
+      <tr><th>Day</th><th>Hours</th><th>Hours over 8</th></tr>
+      <tr><td>Monday</td><td>10</td><td><span data-reveal="&nbsp;">2</span></td></tr>
+      <tr><td>Tuesday</td><td>8</td><td><span data-reveal="&nbsp;">0</span></td></tr>
+      <tr><td>Wednesday</td><td>9.5</td><td><span data-reveal="&nbsp;">1.5</span></td></tr>
+      <tr><td>Thursday</td><td>7</td><td><span data-reveal="&nbsp;">0</span></td></tr>
+      <tr><td>Friday</td><td>8</td><td><span data-reveal="&nbsp;">0</span></td></tr>
+      <tr class="tot"><td>Total</td><td><span data-reveal="&nbsp;">42.5</span></td><td><span data-reveal="&nbsp;">3.5</span></td></tr>
+    </table>
+    <div class="part"><div class="work" style="--h:300px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: daily overtime <span class="tex">=2+0+1.5+0+0=3.5</span> h<br>Step 2: total = 42.5 h, which is less than 44, so weekly overtime = 0 h<br>Step 3: overtime = 3.5 h (the bigger); &nbsp;regular <span class="tex">=42.5-3.5=39</span> h<br>Step 4: regular pay <span class="tex">=39\times\$18.00=\$702.00</span><br>overtime rate = $27.00/h; &nbsp;<span class="tex">3.5\times\$27.00=\$94.50</span><br>gross <span class="tex">=\$702.00+\$94.50=\$796.50</span><br>Maya’s gross pay is <b>$796.50</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Ethan at the hardware store</h3></div>
+  <p class="q">Ethan stocks shelves at a hardware store for $16.50/h. He worked Monday to Saturday: 8 h, 8 h, 8.5 h, 8 h, 8 h and 7.5 h. Find his overtime hours and his gross pay.</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: daily overtime: only Wednesday is over 8, by 0.5 h. Daily overtime = 0.5 h<br>Step 2: total <span class="tex">=8+8+8.5+8+8+7.5=48</span> h; &nbsp;weekly overtime <span class="tex">=48-44=4</span> h<br>Step 3: overtime = 4 h (4 is bigger than 0.5); &nbsp;regular <span class="tex">=48-4=44</span> h<br>Step 4: regular pay <span class="tex">=44\times\$16.50=\$726.00</span><br>overtime rate <span class="tex">=\$16.50\times1.5=\$24.75</span>/h; &nbsp;<span class="tex">4\times\$24.75=\$99.00</span><br>gross <span class="tex">=\$726.00+\$99.00=\$825.00</span><br>Ethan worked <b>4 h</b> of overtime. His gross pay is <b>$825.00</b>.</div></div></div>
+  </div>
+  <div class="tip u2l3-est"><div class="tip-ic">?</div><div><b>When does each rule win?</b> Long days (more than 8 hours) make daily overtime bigger. Many days in a row, even short ones, can make weekly overtime bigger. That is why you <b>always check both</b>.</div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= Math History box (brown) ================= -->
+<!-- sources: https://www.thecanadianencyclopedia.ca/en/article/origins-of-labour-day-feature (strike 25 March 1872; march of about 2 000 on 15 April 1872, about 10 000 by Queen's Park; 24 strike leaders jailed; Trade Unions Act 14 June 1872; Labour Day a national holiday 23 July 1894) -->
+<section class="card history" data-ink="hist" data-section="Math History: The Nine-Hour Day">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1872 and 1894</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">The march for a nine-hour day</h3>
+      <p>In 1872, many workers in Canada worked 10 hours a day or more, six days a week. In Toronto, the printers went on strike on 25 March 1872. They wanted a <b>nine-hour day</b>.</p>
+      <p>On 15 April, about <b>2&#8239;000</b> workers marched through Toronto. By the time they reached Queen’s Park, the crowd had grown to about <b>10&#8239;000</b>. The strike leaders were jailed, but that June a new law made unions legal.</p>
+      <p>In 1894, Canada made <b>Labour Day</b> a national holiday. Limits on work hours, like Alberta’s 8/44 rule, grew out of fights like this one.</p>
+      <div class="part hist-q"><div class="pl">Imagine a printer who works 10 h a day, 6 days a week. Under today’s 8/44 rule, how many overtime hours is that?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Daily: <span class="tex">6\times2=12</span> h. Weekly: <span class="tex">60-44=16</span> h. Use the bigger: <b>16 h</b> of overtime every week.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u2l3-hist" viewBox="0 0 600 300" role="img" aria-label="Marchers with signs walk across Toronto while a counter grows from 2000 to 10 000, then a calendar shows Labour Day, 1894"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u2l3"></section>
+
+<!-- ================= 4. From timesheet to paycheque ================= -->
+<section class="card" data-ink="s4" data-section="4. From Timesheet to Paycheque">
+  <div class="sec-h"><span class="badge">4</span><h2>From Timesheet to Paycheque</h2></div>
+  <p>Real timesheets show <b>start and end times</b>, not hours. Put together what you learned in Lesson 1 and in this lesson:</p>
+  <ol class="u2l3-steps big">
+    <li><b>Step 1:</b> For each day, find the time from start to end, and subtract any <b>unpaid break</b>.</li>
+    <li><b>Step 2:</b> Write each day’s hours as a decimal (15 min = 0.25 h, 30 min = 0.5 h, 45 min = 0.75 h).</li>
+    <li><b>Step 3:</b> Use the 8/44 rule to find the overtime hours, then the gross pay.</li>
+  </ol>
+  <div class="explainer" data-explainer="timesheet"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Why do we take off the unpaid break <b>before</b> we use the 8/44 rule?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Overtime counts the hours you are <b>paid to work</b>. An unpaid break is not work time, so it is not part of the 8 h or the 44 h.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Tomás, the landscaper</h3></div>
+  <p class="q">Tomás is a landscaper in Cochrane. He earns $19.20/h. Complete his timesheet. Use the Alberta 8/44 rule to find his gross pay.</p>
+  <table class="u2l3-tbl u2l3-ts7">
+    <tr><th>Day</th><th>Start</th><th>End</th><th>Unpaid break</th><th>Hours worked</th><th>Hours over 8</th></tr>
+    <tr><td>Monday</td><td>7:00 a.m.</td><td>5:30 p.m.</td><td>30 min</td><td><span data-reveal="&nbsp;">10</span></td><td><span data-reveal="&nbsp;">2</span></td></tr>
+    <tr><td>Tuesday</td><td>7:00 a.m.</td><td>3:30 p.m.</td><td>30 min</td><td><span data-reveal="&nbsp;">8</span></td><td><span data-reveal="&nbsp;">0</span></td></tr>
+    <tr><td>Wednesday</td><td>6:30 a.m.</td><td>5:15 p.m.</td><td>45 min</td><td><span data-reveal="&nbsp;">10</span></td><td><span data-reveal="&nbsp;">2</span></td></tr>
+    <tr><td>Thursday</td><td>7:00 a.m.</td><td>3:00 p.m.</td><td>30 min</td><td><span data-reveal="&nbsp;">7.5</span></td><td><span data-reveal="&nbsp;">0</span></td></tr>
+    <tr><td>Friday</td><td>7:00 a.m.</td><td>4:15 p.m.</td><td>30 min</td><td><span data-reveal="&nbsp;">8.75</span></td><td><span data-reveal="&nbsp;">0.75</span></td></tr>
+    <tr class="tot"><td colspan="4">Total</td><td><span data-reveal="&nbsp;">44.25</span></td><td><span data-reveal="&nbsp;">4.75</span></td></tr>
+  </table>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Mon: 7:00 to 5:30 is 10 h 30 min; minus 30 min = 10 h. &nbsp;Tue: 8 h 30 min − 30 min = 8 h.<br>Wed: 6:30 to 5:15 is 10 h 45 min; minus 45 min = 10 h. &nbsp;Thu: <span class="tex">8-0.5=7.5</span> h. &nbsp;Fri: 9 h 15 min − 30 min = 8 h 45 min = 8.75 h.<br>Daily overtime <span class="tex">=2+0+2+0+0.75=4.75</span> h. &nbsp;Weekly overtime <span class="tex">=44.25-44=0.25</span> h.<br>Overtime = 4.75 h (the bigger); &nbsp;regular <span class="tex">=44.25-4.75=39.5</span> h<br>regular pay <span class="tex">=39.5\times\$19.20=\$758.40</span>; &nbsp;overtime rate = $28.80/h; &nbsp;overtime pay <span class="tex">=4.75\times\$28.80=\$136.80</span><br>gross <span class="tex">=\$758.40+\$136.80=\$895.20</span>. &nbsp;Tomás’s gross pay is <b>$895.20</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Overtime rates:</b> time and a half = base wage <b>× 1.5</b>; double time = base wage <b>× 2</b>. Not + $1.50! Estimate: the wage plus half of it.</div>
+    <div><b>Gross pay = regular pay + overtime pay.</b> Overtime pay = overtime hours × overtime rate. Round to the nearest cent at the <b>end</b>.</div>
+    <div><b>Alberta 8/44 rule:</b> daily overtime (hours over 8 each day) and weekly overtime (total − 44). Use the <b>bigger</b>; never add them. Regular = total − overtime.</div>
+    <div><b>Timesheets:</b> end − start − unpaid break, as a decimal (45 min = 0.75 h). Then the 8/44 rule, then the gross pay.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u2l3">
+    <div><div class="kicker">Your turn</div><b>Assignment 3 · Questions 8–18</b><div class="muted">The 8/44 rule, timesheets on the 24-hour clock, pay periods, comparing jobs and working backwards. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l4/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 4 — Piecework and Contracts</b><div class="muted">Paid by the tree, by the box or by the job: what does that work out to per hour?</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u2l3.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u2l3', homeHref: '../../', title: '2.3 Overtime' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

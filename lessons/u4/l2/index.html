@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Capacity · Math 10-3 4.2</title>
+<meta name="description" content="Math 10-3 Unit 4 Lesson 2: capacity. Millilitres, litres and cubic centimetres, the capacity of tanks, US fluid ounces, cups, pints, quarts and gallons, US vs British gallons, converting between SI and imperial capacity, and kitchen measures. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u4l2.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u4l2">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Two Jugs">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Two Jugs</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">You have a <b>3 L jug</b>, a <b>5 L jug</b> and a tap. The jugs have <b>no lines</b> on them.</p><p class="vw-ctx">You can fill a jug, empty it, or pour from one jug into the other.</p><p class="vw-ask">How can you end up with exactly 4 L of water?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A tap dripping between an empty 3 litre jug and an empty 5 litre jug">
+    <rect x="10" y="230" width="310" height="10" rx="5" fill="#e3eef6"/>
+    <path d="M150 18 H190 V30 H182 V46 H158 V30 H150 Z" fill="#9aa0ab" stroke="#3a4254" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="164" y="6" width="12" height="14" rx="3" fill="#3a4254"/>
+    <circle cx="170" cy="56" r="5" fill="#5aa7e6"><animate attributeName="cy" values="52;150;52" keyTimes="0;0.9;1" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.85;1" dur="1.6s" repeatCount="indefinite"/></circle>
+    <g>
+      <path d="M40 120 Q40 108 52 108 H96 Q108 108 108 120 V218 Q108 230 96 230 H52 Q40 230 40 218 Z" fill="#eef6fd" stroke="#3a4254" stroke-width="3.5"/>
+      <path d="M108 136 Q132 140 130 170 Q128 196 108 200" fill="none" stroke="#3a4254" stroke-width="7" stroke-linecap="round"/>
+      <path d="M44 214 Q74 208 104 214 V218 Q104 226 96 226 H52 Q44 226 44 218 Z" fill="#5aa7e6" opacity=".6"><animate attributeName="d" values="M44 214 Q74 208 104 214 V218 Q104 226 96 226 H52 Q44 226 44 218 Z;M44 214 Q74 220 104 214 V218 Q104 226 96 226 H52 Q44 226 44 218 Z;M44 214 Q74 208 104 214 V218 Q104 226 96 226 H52 Q44 226 44 218 Z" dur="2s" repeatCount="indefinite"/></path>
+      <text x="74" y="176" font-size="34" font-weight="800" fill="#1f5bd6" text-anchor="middle">3 L</text>
+    </g>
+    <g>
+      <path d="M210 80 Q210 66 224 66 H286 Q300 66 300 80 V216 Q300 230 286 230 H224 Q210 230 210 216 Z" fill="#eef6fd" stroke="#3a4254" stroke-width="3.5"/>
+      <path d="M210 98 Q182 104 184 140 Q186 172 210 178" fill="none" stroke="#3a4254" stroke-width="7" stroke-linecap="round"/>
+      <path d="M214 214 Q255 220 296 214 V216 Q296 226 286 226 H224 Q214 226 214 216 Z" fill="#5aa7e6" opacity=".6"><animate attributeName="d" values="M214 214 Q255 220 296 214 V216 Q296 226 286 226 H224 Q214 226 214 216 Z;M214 214 Q255 208 296 214 V216 Q296 226 286 226 H224 Q214 226 214 216 Z;M214 214 Q255 220 296 214 V216 Q296 226 286 226 H224 Q214 226 214 216 Z" dur="2s" repeatCount="indefinite"/></path>
+      <text x="255" y="160" font-size="40" font-weight="800" fill="#1f5bd6" text-anchor="middle">5 L</text>
+    </g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Found a way? Count your steps. Can anyone do it in <b>fewer</b>?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>One way (6 steps):</b> ① Fill the 5 L jug. ② Pour it into the 3 L jug until that is full: <b>2 L</b> stay in the 5 L jug. ③ Empty the 3 L jug. ④ Pour the 2 L into the 3 L jug. ⑤ Fill the 5 L jug again. ⑥ Top up the 3 L jug: it only takes 1 L. Now the 5 L jug holds <span class="tex">5-1=4</span> L! <span class="muted">Another way: fill the 3 L jug twice into the 5 L jug (1 L is left over), empty the 5 L jug, pour in the 1 L, then add one more full 3 L jug: <span class="tex">1+3=4</span>.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 4 Volume, Capacity, Mass and Temperature · Lesson 2</div>
+  <h1>Capacity: Litres, Gallons, and US vs British Units</h1>
+  <p class="lede">How much does a fish tank, a stock tank or a gas tank <b>hold</b>? Today we link capacity to volume (1 mL = 1 cm³), learn the US cups, pints, quarts and gallons, find out why a <b>British gallon is bigger</b> than a US gallon, and change between litres and gallons.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>change between <b>mL, L, cm³ and m³</b>, and find the capacity of a tank in litres</li>
+      <li>change between US <b>fluid ounces, cups, pints, quarts and gallons</b></li>
+      <li>compare the <b>US gallon</b> and the <b>British gallon</b></li>
+      <li><b>estimate</b>, then convert between litres and gallons, and between mL and fluid ounces</li>
+      <li>use kitchen measures and adjust an <b>American recipe</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M1</b> Demonstrate an understanding of the Système International (SI) by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; applying strategies to convert SI units to imperial units.</div>
+  <div class="outcome u4l2-oc2"><b>M2</b> Demonstrate an understanding of the imperial system by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; comparing the American and British imperial units for capacity; applying strategies to convert imperial units to SI units.<br><span class="u4l2-today">Today: capacity, and comparing American (US) and British units for capacity.</span></div>
+</section>
+
+<!-- ================= 1. Capacity and volume ================= -->
+<section class="card" data-ink="s1" data-section="1. Millilitres, Litres and cm³">
+  <div class="sec-h"><span class="badge">1</span><h2>Capacity and Volume: Millilitres, Litres and Cubic Centimetres</h2></div>
+  <p><b>Volume</b> is the amount of space an object takes up. <b>Capacity</b> is the amount a container can <b>hold</b>, usually of a liquid like water, milk or gas. A jug’s capacity is the volume of the space inside it.</p>
+  <p>In the SI (metric) system, capacity is measured in <b>litres</b> (L) and <b>millilitres</b> (mL). “Milli” means one thousandth, so 1000 mL = 1 L. Capacity and volume are linked: a cube 1 cm on each side holds exactly 1 mL, and a cube 10 cm on each side holds exactly 1 L.</p>
+  <div class="explainer" data-explainer="litreCube"></div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>1 mL = 1 cm³</b> &nbsp;&nbsp;·&nbsp;&nbsp; <b>1 L = 1000 mL = 1000 cm³</b> &nbsp;&nbsp;·&nbsp;&nbsp; <b>1 m³ = 1000 L</b>
+    <div class="eg">L → mL: × 1000 &nbsp;&nbsp; mL → L: ÷ 1000 &nbsp;&nbsp;&nbsp; m³ → L: × 1000 &nbsp;&nbsp; L → m³: ÷ 1000</div></div>
+  <div class="u4l2-refs">
+    <div><b>5 mL</b>a teaspoon</div>
+    <div><b>355 mL</b>a can of pop</div>
+    <div><b>1 L or 2 L</b>a carton of milk (a big jug: 4 L)</div>
+    <div><b>50–70 L</b>a car’s gas tank</div>
+    <div><b>150–200 L</b>a bathtub</div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. Move the Decimal Point">
+  <h3 class="sub">× 1000 or ÷ 1000: the decimal point moves 3 places</h3>
+  <p>Multiplying by 1000 moves the decimal point 3 places to the right. Dividing by 1000 moves it 3 places to the left.</p>
+  <div class="explainer" data-explainer="mlMachine"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Convert each measurement</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Convert each measurement.</div>
+      <table class="u4l2-tbl u4l2-t1">
+        <tr><th></th><th>Work</th><th>Answer</th><th></th><th>Work</th><th>Answer</th></tr>
+        <tr><td>(a) 2.5 L = ___ mL</td><td><span data-reveal="&nbsp;"><span class="tex">2.5\times1000</span></span></td><td><span data-reveal="&nbsp;">2500 mL</span></td>
+            <td>(b) 750 mL = ___ L</td><td><span data-reveal="&nbsp;"><span class="tex">750\div1000</span></span></td><td><span data-reveal="&nbsp;">0.75 L</span></td></tr>
+        <tr><td>(c) 340 cm³ = ___ mL</td><td><span data-reveal="&nbsp;">1 cm³ = 1 mL</span></td><td><span data-reveal="&nbsp;">340 mL</span></td>
+            <td>(d) 4.2 L = ___ cm³</td><td><span data-reveal="&nbsp;"><span class="tex">4.2\times1000</span></span></td><td><span data-reveal="&nbsp;">4200 cm³</span></td></tr>
+        <tr><td>(e) 2.6 m³ = ___ L</td><td><span data-reveal="&nbsp;"><span class="tex">2.6\times1000</span></span></td><td><span data-reveal="&nbsp;">2600 L</span></td>
+            <td>(f) 1800 L = ___ m³</td><td><span data-reveal="&nbsp;"><span class="tex">1800\div1000</span></span></td><td><span data-reveal="&nbsp;">1.8 m³</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>2500 mL</b> · (b) <b>0.75 L</b> · (c) <b>340 mL</b> · (d) <b>4200 cm³</b> · (e) <b>2600 L</b> · (f) <b>1.8 m³</b></div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1c" data-section="1. How Much Does It Hold?">
+  <h3 class="sub">How much does a container hold?</h3>
+  <p>Find the volume of the inside (Lesson 1), then change the cubic units to litres.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Capacity:</b> find the volume inside in <b>cm³</b> (then ÷ 1000 for L) or in <b>m³</b> (then × 1000 for L).</div>
+  <div class="explainer" data-explainer="tankFill"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Nadia’s fish tank</h3></div>
+  <p class="q">Nadia’s fish tank is a rectangular prism. Inside, it is 60 cm long, 30 cm wide and 40 cm high.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Find the volume of the tank in cm³.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">V=lwh</span><br><span class="tex">V=60\times30\times40</span><br><span class="tex">V=72\,000</span> cm³</div></div></div>
+    <div class="part"><div class="pl">(b) What is the capacity of the tank in litres?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">72 000 cm³ = 72 000 mL<br><span class="tex">72\,000\div1000=72</span><br>The tank holds <b>72 L</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) Nadia fills it with water to 4 cm below the top. How many litres of water is that?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Water height: <span class="tex">40-4=36</span> cm<br><span class="tex">60\times30\times36=64\,800</span> cm³<br><span class="tex">64\,800\div1000=64.8</span> L of water</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>A stock tank near Brooks</h3></div>
+  <p class="q">A rancher near Brooks has a round stock tank for her cattle. It is a cylinder with a diameter of 2.4 m and a height of 0.6 m.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the volume of the tank in m³. Round to three decimal places.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Radius: <span class="tex">r=2.4\div2=1.2</span> m<br><span class="tex">V=\pi r^2h=\pi\times1.2^2\times0.6</span><br><span class="tex">V\approx2.714</span> m³</div></div></div>
+    <div class="part"><div class="pl">(b) How many litres of water does the tank hold? Round to the nearest litre.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 m³ = 1000 L, so multiply by 1000.<br><span class="tex">2.71433\ldots\times1000\approx2714</span> L<br>The tank holds about <b>2714 L</b> of water.</div></div></div>
+  </div>
+  <div class="def-grid u4l2-gap">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The formula uses the <b>radius</b>, not the diameter. Halve the diameter first.</div></div>
+    <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Volume and litres in one go: <span class="keys"><kbd>π</kbd> <kbd>×</kbd> 1.2 <kbd>x²</kbd> <kbd>×</kbd> 0.6 <kbd>×</kbd> 1000 <kbd>ENTER</kbd></span></div>
+      <button class="pill" type="button" data-keys="π × 1.2 x² × 0.6 × 1000 =">Show me</button></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Imperial capacity ================= -->
+<section class="card" data-ink="s2" data-section="2. Imperial Capacity">
+  <div class="sec-h"><span class="badge">2</span><h2>Imperial Capacity: Fluid Ounces, Cups, Pints, Quarts and Gallons</h2></div>
+  <p>Canada uses litres, but you still see imperial capacity units on US recipes, on drinks bottled for the US, at gas stations in the US, and on older tools and machines. The imperial units, from smallest to largest, are the <b>fluid ounce</b> (fl oz), the <b>cup</b>, the <b>pint</b> (pt), the <b>quart</b> (qt) and the <b>gallon</b> (gal).</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>US units:</b> &nbsp; 1 gal = 4 qt &nbsp;·&nbsp; 1 qt = 2 pt &nbsp;·&nbsp; 1 pt = 2 cups &nbsp;·&nbsp; 1 cup = 8 fl oz
+    <div class="eg">So 1 gal = 4 qt = 8 pt = 16 cups = 128 fl oz. &nbsp; Bigger unit → smaller unit: <b>multiply</b>. &nbsp; Smaller unit → bigger unit: <b>divide</b>.</div></div>
+  <div class="explainer" data-explainer="usLadder"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A <b>fluid</b> ounce measures capacity (how much liquid). An ounce (oz) on a scale measures mass. They are different units (mass is Lesson 4).</div></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>US units, and lemonade in Montana</h3></div>
+  <div class="u4l2-ex4">
+    <div class="part"><div class="pl">(a) Convert each US measurement.</div>
+      <table class="u4l2-tbl u4l2-t4">
+        <tr><th></th><th>Work</th><th>Answer</th></tr>
+        <tr><td>3 gal = ___ qt</td><td><span data-reveal="&nbsp;"><span class="tex">3\times4</span></span></td><td><span data-reveal="&nbsp;">12 qt</span></td></tr>
+        <tr><td>5 pt = ___ cups</td><td><span data-reveal="&nbsp;"><span class="tex">5\times2</span></span></td><td><span data-reveal="&nbsp;">10 cups</span></td></tr>
+        <tr><td>24 fl oz = ___ cups</td><td><span data-reveal="&nbsp;"><span class="tex">24\div8</span></span></td><td><span data-reveal="&nbsp;">3 cups</span></td></tr>
+        <tr><td>6 qt = ___ gal</td><td><span data-reveal="&nbsp;"><span class="tex">6\div4</span></span></td><td><span data-reveal="&nbsp;">1.5 gal</span></td></tr>
+        <tr><td>2 gal = ___ pt</td><td><span data-reveal="&nbsp;"><span class="tex">2\times4\times2</span></span></td><td><span data-reveal="&nbsp;">16 pt</span></td></tr>
+        <tr><td>1 gal = ___ fl oz</td><td><span data-reveal="&nbsp;"><span class="tex">4\times2\times2\times8</span></span></td><td><span data-reveal="&nbsp;">128 fl oz</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>12 qt</b> · <b>10 cups</b> · <b>3 cups</b> · <b>1.5 gal</b> · <b>16 pt</b> · <b>128 fl oz</b></div></div></div>
+    <div class="part"><div class="pl">(b) At a baseball tournament in Montana, the team’s concession stand makes 3 US gallons of lemonade. It sells the lemonade in 12 fl oz cups for $2.50 each. How many cups can it fill, and how much money will it take in if it sells them all?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3\times128=384</span> fl oz<br><span class="tex">384\div12=32</span> cups<br><span class="tex">32\times\$2.50=\$80.00</span><br>It can fill <b>32 cups</b> and take in <b>$80.00</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Lemonade Stand">
+  <h3 class="sub">The lemonade stand: pour it out</h3>
+  <p>Example 4(b), one cup at a time.</p>
+  <div class="explainer" data-explainer="lemonade"></div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 2 · Questions 1–7</h2>
+  <p class="pr-t">Try these before we compare US and British gallons.</p>
+  <div class="pr-chips">
+    <span><b>1–2</b>mL, L, cm³, m³, and the best unit</span>
+    <span><b>3–5</b>How much does it hold? A juice box, a tank, a rain barrel</span>
+    <span><b>6</b>US units: gal, qt, pt, cups, fl oz</span>
+    <span><b>7</b>The hockey team’s water cooler</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u4l2">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. US vs British gallons ================= -->
+<section class="card" data-ink="s3" data-section="3. US Gallons vs British Gallons">
+  <div class="sec-h"><span class="badge">3</span><h2>US Gallons vs British Gallons</h2></div>
+  <p>Here is the tricky part: the word “gallon” means <b>two different sizes</b>. The <b>US gallon</b> is used in the United States. The <b>British gallon</b> (also called the <b>imperial gallon</b>) was used in Britain and in Canada before Canada changed to metric in the 1970s. You still see it on older Canadian farm equipment, boats and recipes.</p>
+  <p>Both systems say 1 gallon = 4 quarts = 8 pints. But a British pint holds 20 British fluid ounces, while a US pint holds 16 US fluid ounces. So the British pint, quart and gallon are all about <b>20% bigger</b> than the US ones.</p>
+  <table class="u4l2-tbl u4l2-t3">
+    <tr><th></th><th>US</th><th>British (imperial)</th></tr>
+    <tr><td>1 gallon</td><td>≈ 3.785 L</td><td>≈ 4.546 L</td></tr>
+    <tr><td>1 pint</td><td>16 US fl oz ≈ 473 mL</td><td>20 British fl oz ≈ 568 mL</td></tr>
+    <tr><td>1 fluid ounce</td><td>≈ 29.57 mL</td><td>≈ 28.4 mL</td></tr>
+  </table>
+  <div class="explainer" data-explainer="twoGallons"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> When a question says “gallon”, check which country. In this booklet, a gallon is a <b>US gallon</b> unless it says British. Gas pumps in the US sell by the US gallon.</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A US gallon is exactly <b>231 in³</b>. Use 1 in = 2.54 cm (Lesson 1: change the lengths first) to check that this is about 3.785 L.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 in³ = <span class="tex">2.54\times2.54\times2.54=16.387\ldots</span> cm³. &nbsp; <span class="tex">231\times16.387\ldots\approx3785</span> cm³ = 3785 mL ≈ <b>3.785 L</b> ✓</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Gallons and pints, US and British</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(a) How many litres are in 5 US gallons? In 5 British gallons? How many more litres are in 5 British gallons? Round to the nearest hundredth.</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">US: <span class="tex">5\times3.785=18.925\approx18.93</span> L &nbsp;·&nbsp; British: <span class="tex">5\times4.546=22.73</span> L<br>Difference: <span class="tex">22.73-18.925=3.805\approx3.81</span> L more in 5 British gallons.</div></div></div>
+  </div>
+  <div class="parts c2 u4l2-gap">
+    <div class="part"><div class="pl">(b) A restaurant in London, England, serves a pint of juice (568 mL). A restaurant in Seattle serves a US pint. How many millilitres is a US pint? How many more millilitres are in the British pint?</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">US pint: <span class="tex">16\times29.57=473.12\approx473</span> mL<br>Difference: <span class="tex">568-473=95</span> mL more in the British pint.</div></div></div>
+    <div class="part"><div class="pl">(c) Show that a British gallon is about 20% bigger than a US gallon. (Hint: percent increase from Unit 1.)</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Increase: <span class="tex">4.546-3.785=0.761</span> L<br>Percent: <span class="tex">0.761\div3.785\times100\approx20.1\%</span><br>A British gallon is about <b>20% bigger</b> than a US gallon.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. About 20% Bigger">
+  <h3 class="sub">About 20% bigger: one fifth more</h3>
+  <p>20% is one fifth. Cut the US gallon into 5 equal pieces: the extra part of the British gallon is about one of those pieces.</p>
+  <div class="explainer" data-explainer="percentBigger"></div>
+</section>
+
+<!-- ================= 4. Converting between SI and imperial ================= -->
+<section class="card" data-ink="s4" data-section="4. Converting Between SI and Imperial">
+  <div class="sec-h"><span class="badge">4</span><h2>Converting Between SI and Imperial Capacity</h2></div>
+  <p>To change a capacity between the two systems, multiply or divide by the matching number. Write the units in each step so you can see which way to go. A gallon is <b>bigger</b> than a litre (1 US gal ≈ 3.785 L), and a fluid ounce is <b>bigger</b> than a millilitre (1 US fl oz ≈ 29.57 mL). So going <b>to</b> L or mL you get more units: <b>multiply</b>. Going <b>back</b> to gallons or fluid ounces you get fewer units: <b>divide</b>.</p>
+  <div class="def"><b>Key idea</b>
+    <div class="u4l2-convg">
+      <span>US gal → L: <b>× 3.785</b></span><span>L → US gal: <b>÷ 3.785</b></span>
+      <span>US fl oz → mL: <b>× 29.57</b></span><span>mL → US fl oz: <b>÷ 29.57</b></span>
+      <span>British gal → L: <b>× 4.546</b></span><span>L → British gal: <b>÷ 4.546</b></span>
+    </div></div>
+  <div class="tip u4l2-esttip"><div class="tip-ic">≈</div><div><b>Estimate first.</b> A US gallon is a bit less than 4 L. A British gallon is about 4.5 L. A US fluid ounce is about 30 mL. If your answer is far from the estimate, you probably multiplied when you should have divided.</div></div>
+  <div class="explainer" data-explainer="convertSI"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Which is more: 1 US quart or 1 litre?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 US quart is a quarter of a gallon: <span class="tex">3.785\div4\approx0.946</span> L. So <b>1 litre</b> is a little more.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Estimate, then convert</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Estimate, then convert. Round to the nearest hundredth (or tenth for mL).</div>
+      <table class="u4l2-tbl u4l2-t6">
+        <tr><th></th><th>Estimate</th><th>Work</th><th>Answer</th></tr>
+        <tr><td>(a) 10 US gal to litres</td><td><span data-reveal="&nbsp;"><span class="tex">10\times4=40</span> L</span></td><td><span data-reveal="&nbsp;"><span class="tex">10\times3.785</span></span></td><td><span data-reveal="&nbsp;">37.85 L</span></td></tr>
+        <tr><td>(b) 60 L to US gallons</td><td><span data-reveal="&nbsp;"><span class="tex">60\div4=15</span> gal</span></td><td><span data-reveal="&nbsp;"><span class="tex">60\div3.785=15.852\ldots</span></span></td><td><span data-reveal="&nbsp;">15.85 US gal</span></td></tr>
+        <tr><td>(c) a 12 US fl oz can to mL</td><td><span data-reveal="&nbsp;"><span class="tex">12\times30=360</span> mL</span></td><td><span data-reveal="&nbsp;"><span class="tex">12\times29.57</span></span></td><td><span data-reveal="&nbsp;">354.8 mL</span></td></tr>
+        <tr><td>(d) a 500 mL bottle to US fl oz</td><td><span data-reveal="&nbsp;"><span class="tex">500\div30\approx17</span> fl oz</span></td><td><span data-reveal="&nbsp;"><span class="tex">500\div29.57=16.909\ldots</span></span></td><td><span data-reveal="&nbsp;">16.91 US fl oz</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>37.85 L</b> · (b) <b>15.85 US gal</b> · (c) <b>354.8 mL</b> · (d) <b>16.91 US fl oz</b></div></div></div>
+    <div class="part"><div class="pl">(e) Look at a can of pop and a 500 mL water bottle from a store. What do the labels say, and do they match (c) and (d)?</div><div class="work" style="--h:80px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A can says 355 mL (12 fl oz). A 500 mL bottle says 16.9 fl oz. Both match: drinks sold in Canada and the US often show both units.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Sana fills up in Montana</h3></div>
+  <p class="q">Sana drives her car from Calgary to Montana. Her gas tank holds 52 L. In Montana, gas costs $3.29 USD per US gallon.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many US gallons does her tank hold? Round to the nearest hundredth.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">52\div3.785=13.738\ldots</span><br>Her tank holds about <b>13.74 US gallons</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) How much will it cost to fill the tank from empty, in US dollars?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">13.74\times\$3.29=45.2046</span><br>It costs about <b>$45.20 USD</b> to fill the tank.</div></div></div>
+    <div class="part"><div class="pl">(c) Find the price of gas per litre in US dollars. Round to three decimals.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$3.29\div3.785\approx\$0.869</span> USD per L<br>($3.29 buys one gallon, which is 3.785 L.)</div></div></div>
+    <div class="part"><div class="pl">(d) Use 1 USD = 1.38 CAD. Is gas in Montana cheaper than $1.45 CAD per litre in Calgary? By how much per litre?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.8692\ldots\times1.38\approx\$1.20</span> CAD per L<br><span class="tex">\$1.45-\$1.20=\$0.25</span><br>Yes. Gas in Montana is about <b>25¢ per litre cheaper</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. At the Pump">
+  <h3 class="sub">At the pump in Montana</h3>
+  <p>Example 7 on a US gas pump: it counts gallons and US dollars.</p>
+  <div class="explainer" data-explainer="gasTrip"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(a) <span class="keys">52 <kbd>÷</kbd> 3.785 <kbd>ENTER</kbd></span> &nbsp; (c) and (d) in one go: <span class="keys">3.29 <kbd>÷</kbd> 3.785 <kbd>×</kbd> 1.38 <kbd>ENTER</kbd></span></div>
+    <div class="u4l2-pcol"><button class="pill" type="button" data-keys="52 ÷ 3.785 =">Gallons</button><button class="pill" type="button" data-keys="3.29 ÷ 3.785 × 1.38 =">CAD per L</button></div></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u4l2"></section>
+
+<section class="card" data-ink="s4c" data-section="4. Kitchen Measures">
+  <h3 class="sub">Kitchen measures</h3>
+  <p>Canadian measuring cups and spoons are metric. American recipes use US cups. The two cups are close but not the same.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Canadian (metric) kitchen:</b> 1 teaspoon (tsp) = 5 mL &nbsp;·&nbsp; 1 tablespoon (tbsp) = 15 mL = 3 tsp &nbsp;·&nbsp; 1 cup = 250 mL
+    <div class="eg"><b>US recipes:</b> 1 US cup = 8 US fl oz ≈ 237 mL</div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Marco’s pancakes</h3></div>
+  <p class="q">Marco finds a pancake recipe on an American website. It needs <span class="tex">1\tfrac12</span> US cups of milk, <span class="tex">\tfrac34</span> US cup of oil and 2 tsp of vanilla. Use 1 US cup ≈ 237 mL.</p>
+  <div class="u4l2-ex8">
+    <div class="part"><div class="pl">(a) Convert each amount to millilitres. Round to the nearest millilitre.</div>
+      <table class="u4l2-tbl u4l2-t8">
+        <tr><th>Ingredient</th><th>Work</th><th>mL</th></tr>
+        <tr><td><span class="tex">1\tfrac12</span> US cups of milk</td><td><span data-reveal="&nbsp;"><span class="tex">1.5\times237=355.5</span></span></td><td><span data-reveal="&nbsp;">about 356 mL</span></td></tr>
+        <tr><td><span class="tex">\tfrac34</span> US cup of oil</td><td><span data-reveal="&nbsp;"><span class="tex">0.75\times237=177.75</span></span></td><td><span data-reveal="&nbsp;">about 178 mL</span></td></tr>
+        <tr><td>2 tsp of vanilla</td><td><span data-reveal="&nbsp;"><span class="tex">2\times5</span></span></td><td><span data-reveal="&nbsp;">10 mL</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Milk <b>356 mL</b> · oil <b>178 mL</b> · vanilla <b>10 mL</b></div></div></div>
+    <div class="part"><div class="pl">(b) Marco measures the milk with his Canadian 250 mL cup instead: <span class="tex">1\tfrac12</span> metric cups. How much extra milk is that?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1.5\times250=375</span> mL; &nbsp; <span class="tex">375-355.5=19.5</span> mL<br>That is about 20 mL (about 4 teaspoons) of extra milk.</div></div></div>
+  </div>
+  <div class="parts c1 u4l2-gap">
+    <div class="part"><div class="pl">(c) Finish the sentence.</div>
+      <p class="u4l2-frame">For pancakes, using metric cups is <span class="u4l2-blank w1" data-reveal="&nbsp;">close enough</span> because <span class="u4l2-blank w2" data-reveal="&nbsp;">20 mL is only about 5–6% more milk; the batter will just be a little thinner. (For exact baking, convert carefully.)</span></p>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Close enough</b>: 20 mL is only about 5–6% more milk, so the batter is just a little thinner.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4d" data-section="4. Two Cups of Milk">
+  <h3 class="sub">A US cup and a metric cup, side by side</h3>
+  <p>Example 8(b) and (c): how much extra milk, and does it matter?</p>
+  <div class="explainer" data-explainer="pancakes"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Capacity</b> is how much a container holds. <b>1 mL = 1 cm³</b>, 1 L = 1000 mL = 1000 cm³, 1 m³ = 1000 L. Tank: volume inside, then change to litres.</div>
+    <div><b>US units:</b> 1 gal = 4 qt, 1 qt = 2 pt, 1 pt = 2 cups, 1 cup = 8 fl oz (1 gal = 128 fl oz). Big → small: multiply. Small → big: divide.</div>
+    <div><b>Two gallons:</b> US ≈ 3.785 L, British ≈ 4.546 L (about 20% bigger). A “gallon” is US unless it says British.</div>
+    <div><b>Converting:</b> estimate first (US gal ≈ 4 L, fl oz ≈ 30 mL). Gal → L: × 3.785. L → gal: ÷ 3.785. Fl oz → mL: × 29.57. Kitchen: 1 tsp = 5 mL, 1 tbsp = 15 mL, metric cup 250 mL, US cup ≈ 237 mL.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u4l2">
+    <div><div class="kicker">Your turn</div><b>Assignment 2 · Questions 8–18</b><div class="muted">US vs British gallons, an old sprayer tank, estimating and converting, a road trip in Idaho, muffins, lattes, an aquarium, and quick checks. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l3/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 3 — Temperature: Celsius and Fahrenheit</b><div class="muted">Is 75° hot or cold? It depends on the scale. Next we read and convert temperatures both ways.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u4l2.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u4l2', homeHref: '../../', title: '4.2 Capacity' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Piecework and Contracts · Math 10-3 2.4</title>
+<meta name="description" content="Math 10-3 Unit 2 Lesson 4: piecework and contracts. Pay per piece, different rates for different pieces, the effective hourly rate and minimum wage, working backwards, contract earnings after materials and helpers, setting a contract price, and comparing hourly, piecework and contract pay. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u2l4.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u2l4">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Trees Along the Path">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Trees Along the Path</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A tree planter plants spruce seedlings along a straight path that is <b>20 m</b> long.</p><p class="vw-ctx">She plants one at the <b>very start</b>, then one <b>every 2 m</b>. The last one is at the <b>very end</b>.</p><p class="vw-ask">How many seedlings does she plant?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A tree planter with a shovel walks along a path, planting seedlings one by one; a sign says 20 m">
+    <rect x="0" y="0" width="330" height="250" rx="18" fill="#e9f4fb"/>
+    <path d="M0 150 Q80 120 165 140 T330 132 V250 H0 Z" fill="#cfe6b8"/>
+    <rect x="10" y="186" width="310" height="22" rx="11" fill="#d9b98a" stroke="#9a6a24" stroke-width="2"/>
+    <g fill="#4a3010" font-size="15" font-weight="800" text-anchor="middle"><text x="20" y="232">0 m</text><text x="310" y="232">20 m</text></g>
+    <line x1="20" y1="214" x2="20" y2="220" stroke="#4a3010" stroke-width="2"/><line x1="310" y1="214" x2="310" y2="220" stroke="#4a3010" stroke-width="2"/>
+    <circle cx="282" cy="40" r="18" fill="#ffd34d"/>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.08;0.12;0.92;1" dur="6s" repeatCount="indefinite"/>
+      <path d="M20 190 l-8 0 l8 -16 l8 16 Z M20 180 l-6 0 l6 -12 l6 12 Z" fill="#2f7a45"/></g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.36;0.40;0.92;1" dur="6s" repeatCount="indefinite"/>
+      <path d="M49 190 l-8 0 l8 -16 l8 16 Z M49 180 l-6 0 l6 -12 l6 12 Z" fill="#2f7a45"/></g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.64;0.68;0.92;1" dur="6s" repeatCount="indefinite"/>
+      <path d="M78 190 l-8 0 l8 -16 l8 16 Z M78 180 l-6 0 l6 -12 l6 12 Z" fill="#2f7a45"/></g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;84 0;84 0;0 0" keyTimes="0;0.85;0.92;1" dur="6s" repeatCount="indefinite"/>
+      <circle cx="36" cy="112" r="11" fill="#7a4a26"/>
+      <path d="M26 124 h20 l4 40 h-28 Z" fill="#c0392b"/>
+      <rect x="20" y="126" width="12" height="22" rx="4" fill="#e0a21a"/>
+      <path d="M38 164 l-6 22 M44 164 l6 22" stroke="#1c2230" stroke-width="5" stroke-linecap="round"/>
+      <line x1="52" y1="128" x2="62" y2="186" stroke="#4a3010" stroke-width="4" stroke-linecap="round"/>
+      <path d="M57 184 h12 l-2 10 h-8 Z" fill="#8a96a8"/>
+    </g>
+    <text x="180" y="96" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Got a number? <b>Test your idea</b> on a tiny path first: 4 m long.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>11 seedlings, not 10!</b> <span class="tex">20\div2=10</span> gives the number of <b>gaps</b>. There is always one more seedling than gaps. On a 4 m path: seedlings at 0, 2 and 4 m make <b>3 seedlings</b> and 2 gaps. <span class="muted">Twist: around a circle 20 m long, the start and the end are the same spot, so it is just 10.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 2 Earning an Income · Lesson 4</div>
+  <h1>Piecework and Contracts</h1>
+  <p class="lede">Some workers are paid for <b>each piece</b> they finish. Others get <b>one price for a whole job</b>. Today we find that pay, and what it is really worth <b>per hour</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find <b>piecework pay = piece rate × number of pieces</b></li>
+      <li>find an <b>effective hourly rate</b> (pay ÷ hours) and check it against minimum wage</li>
+      <li>work backwards to find a <b>rate</b> or a <b>number of pieces</b> (round up to reach a goal)</li>
+      <li>find a <b>contractor’s earnings</b> and set a <b>contract price</b></li>
+      <li>compare <b>hourly, piecework and contract</b> pay</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N2</b> Demonstrate an understanding of income, including: wages; salary; contracts; commissions; piecework to calculate gross pay and net pay.<br><span class="muted">Today: piecework and contracts.</span></div>
+</section>
+
+<!-- ================= 1. Piecework ================= -->
+<section class="card" data-ink="s1" data-section="1. Piecework: Paid for Each Piece">
+  <div class="sec-h"><span class="badge">1</span><h2>Piecework: Paid for Each Piece</h2></div>
+  <p>People earn money in many ways. You already know two: an <b>hourly wage</b> (paid for each hour) and a <b>salary</b> (a set amount per year).</p>
+  <table class="u2l4-tbl u2l4-ways">
+    <tr><th>Method</th><th>You are paid …</th><th>Jobs that often use it</th></tr>
+    <tr><td>Hourly wage</td><td>for each hour you work</td><td>cashier, cook, labourer, lifeguard</td></tr>
+    <tr><td>Salary</td><td>a set amount per year, split into pay periods</td><td>teacher, nurse, office manager</td></tr>
+    <tr class="hi"><td><b>Piecework</b></td><td>for each piece or task you finish</td><td>tree planter, fruit picker, flyer carrier, sewing worker</td></tr>
+    <tr class="hi"><td><b>Contract</b></td><td>one set price for a whole job</td><td>house painter, roofer, landscaper, web designer</td></tr>
+    <tr><td>Commission (Lesson 5)</td><td>a percent of what you sell</td><td>car salesperson, real estate agent</td></tr>
+    <tr><td>Tips and bonuses (Lesson 6)</td><td>extra money on top of your pay</td><td>server, hairstylist, hotel staff</td></tr>
+  </table>
+  <p>With <b>piecework</b>, you are paid a set amount, the <b>piece rate</b>, for each item you make or each task you finish. The more pieces you finish, the more you earn.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Piecework pay = piece rate × number of pieces</b>
+    <div class="eg">2&#8239;350 seedlings at $0.16 each: <span class="tex">2\,350\times\$0.16=\$376.00</span></div></div>
+  <div class="explainer" data-explainer="planter"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">2350 <kbd>×</kbd> 0.16 <kbd>ENTER</kbd></span> shows 376. Write it as money: <b>$376.00</b>. <b>Estimate to check:</b> about 2&#8239;000 trees at about 20¢ is about $400.</div>
+    <div class="u2l4-pcol"><button class="pill" type="button" data-keys="2350 × 0.16 =">Show me</button></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Paid by the piece</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Find each worker’s pay for the day. The tree planter is Nadia.</div>
+      <table class="u2l4-tbl u2l4-ex1">
+        <tr><th>Worker</th><th>Pieces</th><th>Piece rate</th><th>Work (rate × pieces)</th><th>Pay</th></tr>
+        <tr><td>(a) Tree planter</td><td>2&#8239;350 seedlings</td><td>$0.16 each</td><td><span data-reveal="&nbsp;"><span class="tex">0.16\times2\,350</span></span></td><td><span data-reveal="&nbsp;">$376.00</span></td></tr>
+        <tr><td>(b) Flyer carrier</td><td>580 flyers</td><td>$0.05 each</td><td><span data-reveal="&nbsp;"><span class="tex">0.05\times580</span></span></td><td><span data-reveal="&nbsp;">$29.00</span></td></tr>
+        <tr><td>(c) Sewing worker</td><td>64 pillow covers</td><td>$1.85 each</td><td><span data-reveal="&nbsp;"><span class="tex">1.85\times64</span></span></td><td><span data-reveal="&nbsp;">$118.40</span></td></tr>
+        <tr><td>(d) Strawberry picker</td><td>27 flats</td><td>$4.25 per flat</td><td><span data-reveal="&nbsp;"><span class="tex">4.25\times27</span></span></td><td><span data-reveal="&nbsp;">$114.75</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>$376.00</b> &nbsp;·&nbsp; (b) <b>$29.00</b> &nbsp;·&nbsp; (c) <b>$118.40</b> &nbsp;·&nbsp; (d) <b>$114.75</b></div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Different Rates, Pay Per Hour">
+  <h3 class="sub">Different rates for different pieces</h3>
+  <p>Harder pieces often pay more. Find the pay for each kind of piece, then <b>add</b>.</p>
+  <h3 class="sub">What is piecework worth per hour?</h3>
+  <p>To compare piecework with an hourly job, divide the pay by the hours worked. This is the <b>effective hourly rate</b>: what the pay works out to for each hour (like the hourly equivalent of a salary in Lesson 2).</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Effective hourly rate = pay ÷ hours worked</b></div>
+  <div class="tip u2l4-mw"><div class="tip-ic">$</div><div><b>Minimum wage.</b> In Alberta, most employees who are paid by the piece must still earn at least the <b>minimum wage</b>, $15.00 per hour, for the hours they work (as of 2026; rates can change). If the piecework pay is less, the employer must add the difference.</div></div>
+  <div class="explainer" data-explainer="perHour"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A planter earns $0.16 per tree. About how many trees an hour must she plant to earn the $15.00 minimum wage?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$15.00\div\$0.16=93.75</span>, so about <b>94 trees an hour</b>. Fast planters do far more than that.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Mei-Ling’s alterations</h3></div>
+  <p class="q">Mei-Ling does clothing alterations at a dry cleaner in Airdrie. She is paid by the piece.</p>
+  <div class="u2l4-ex2">
+    <div class="part"><div class="pl">(a) Complete the table.</div>
+      <table class="u2l4-tbl u2l4-mei">
+        <tr><th>Task</th><th>Rate</th><th>Number</th><th>Pay</th></tr>
+        <tr><td>Hem a pair of pants</td><td>$9.50</td><td>18</td><td><span data-reveal="&nbsp;">$171.00</span></td></tr>
+        <tr><td>Replace a zipper</td><td>$14.00</td><td>7</td><td><span data-reveal="&nbsp;">$98.00</span></td></tr>
+        <tr><td>Take in a shirt</td><td>$11.25</td><td>4</td><td><span data-reveal="&nbsp;">$45.00</span></td></tr>
+        <tr class="tot"><td colspan="3">Total for the week</td><td><span data-reveal="&nbsp;">$314.00</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">9.50\times18=171.00</span>; &nbsp;<span class="tex">14.00\times7=98.00</span>; &nbsp;<span class="tex">11.25\times4=45.00</span>; &nbsp;total = <b>$314.00</b></div></div></div>
+    <div class="part"><div class="pl">(b) Mei-Ling did all this work in 13.5 hours. What did she earn per hour? Round to the nearest cent.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$314.00\div13.5=23.259\ldots\approx\$23.26</span> per hour</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Nadia, sunny day and rainy day</h3></div>
+  <p class="q">Nadia is the tree planter from Example 1. She worked 10 hours to plant the 2&#8239;350 seedlings.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) What was her effective hourly rate?</div><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$376.00\div10=\$37.60</span> per hour<br>Nadia earned <b>$37.60</b> per hour. That is far more than minimum wage.</div></div></div>
+    <div class="part"><div class="pl">(b) On a rainy day, she plants only 820 seedlings in 9 hours. Find her effective hourly rate. Does her employer need to add money to reach minimum wage? If so, how much?</div><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Pay: <span class="tex">820\times\$0.16=\$131.20</span><br>Per hour: <span class="tex">\$131.20\div9=14.577\ldots\approx\$14.58</span>, less than $15.00.<br>Minimum for 9 h: <span class="tex">9\times\$15.00=\$135.00</span><br>Yes. The employer adds <span class="tex">\$135.00-\$131.20=\$3.80</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Working backwards ================= -->
+<section class="card" data-ink="s2" data-section="2. Working Backwards with Piecework">
+  <div class="sec-h"><span class="badge">2</span><h2>Working Backwards with Piecework</h2></div>
+  <p>Sometimes you know the pay and want the piece rate, or you know the pay you want and need the number of pieces. The formula can be turned around.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>pay = rate × pieces</b> &nbsp;&nbsp;·&nbsp;&nbsp; <b>rate = pay ÷ pieces</b> &nbsp;&nbsp;·&nbsp;&nbsp; <b>pieces = pay ÷ rate</b>
+    <div class="eg">Check by multiplying: rate × pieces should give the pay.</div></div>
+  <div class="explainer" data-explainer="backwards"></div>
+  <div class="def-grid">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> When you find how many pieces you need to reach a goal, <b>round up</b>. You cannot get paid for part of a piece, and rounding down leaves you short of your goal.</div></div>
+    <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">120 <kbd>÷</kbd> 4.25 <kbd>ENTER</kbd></span> shows 28.235…, so <b>29</b> flats.</div>
+      <div class="u2l4-pcol"><button class="pill" type="button" data-keys="120 ÷ 4.25 =">Show me</button></div></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Work backwards</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) A florist is paid $382.50 to make 30 table centrepieces for a wedding. How much is she paid for each one?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">rate = pay ÷ pieces<br><span class="tex">\$382.50\div30=\$12.75</span><br>Check: <span class="tex">30\times\$12.75=\$382.50</span> ✓<br>She is paid <b>$12.75</b> per centrepiece.</div></div></div>
+    <div class="part"><div class="pl">(b) Tomas translates documents for $0.12 per word. He was paid $258.00 for one document. How many words long was it?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">pieces = pay ÷ rate<br><span class="tex">258.00\div0.12=2\,150</span><br>Check: <span class="tex">2\,150\times\$0.12=\$258.00</span> ✓<br>The document was <b>2&#8239;150 words</b> long.</div></div></div>
+    <div class="part"><div class="pl">(c) Sana picks strawberries for $4.25 per flat. How many flats must she pick to earn at least $120.00?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">120.00\div4.25=28.23\ldots</span><br>28 flats: <span class="tex">28\times\$4.25=\$119.00</span> (not enough)<br>29 flats: <span class="tex">29\times\$4.25=\$123.25</span><br>She must pick <b>29 flats</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. The Employer’s Side">
+  <h3 class="sub">The employer’s side</h3>
+  <p>An employer who pays by the piece then sells the pieces for more. The difference pays for the employer’s other costs (land, tools, rent) and profit.</p>
+  <div data-extra>
+    <p>Follow one basket of raspberries: where does the $9.00 go?</p>
+    <div class="explainer" data-explainer="farm"></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>The berry farm</h3></div>
+  <p class="q">A berry farm near Red Deer pays pickers $3.50 for each basket of raspberries. The farm sells each basket at its market stand for $9.00. One day the pickers fill 240 baskets, and the farm sells them all.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) How much does the farm pay the pickers?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">240\times\$3.50=\$840.00</span><br>The farm pays the pickers <b>$840.00</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) How much money does the farm take in, and how much is left after paying the pickers?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Takes in: <span class="tex">240\times\$9.00=\$2\,160.00</span><br>Left: <span class="tex">\$2\,160.00-\$840.00=\$1\,320.00</span><br>(This pays the farm’s other costs and profit.)</div></div></div>
+    <div class="part"><div class="pl">(c) What percent of the selling price goes to the picker? Round to one decimal place.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3.50\div9.00\times100=38.88\ldots</span><br>About <b>38.9%</b> of the price goes to the picker.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–6">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 4 · Questions 1–6</h2>
+  <p class="pr-t">Try these before we learn about contracts.</p>
+  <div class="pr-chips">
+    <span><b>1</b>How is each worker paid?</span>
+    <span><b>2</b>Piecework pay</span>
+    <span><b>3</b>Different rates</span>
+    <span><b>4</b>Per hour and minimum wage</span>
+    <span><b>5</b>Work backwards</span>
+    <span><b>6</b>The employer’s side</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 6.</span><a class="pill" href="../../../#/lesson/u2l4">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Contracts ================= -->
+<section class="card" data-ink="s3" data-section="3. Contracts: One Price for the Whole Job">
+  <div class="sec-h"><span class="badge">3</span><h2>Contracts: One Price for the Whole Job</h2></div>
+  <p>A <b>contract</b> is an agreement to do a whole job for one set price, no matter how long it takes. The person who does the job is a <b>contractor</b>. Before the job, a contractor gives the customer a <b>bid</b> (or <b>quote</b>): the price they will charge.</p>
+  <p>Out of the contract price, the contractor usually pays for the <b>materials</b> (paint, lumber, parts) and for any <b>helpers</b>. What is left is what the contractor really earns.</p>
+  <div class="def"><b>Key idea</b>
+    <ul class="u2l4-kl">
+      <li><b>Contractor’s earnings = contract price − materials − helpers’ wages − other costs</b></li>
+      <li><b>Effective hourly rate = contractor’s earnings ÷ hours the contractor worked</b></li>
+      <li><b>Helpers’ wages = number of helpers × hours × hourly wage</b></li>
+    </ul></div>
+  <div class="explainer" data-explainer="contract"></div>
+  <div class="def-grid">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Subtract all the costs <b>before</b> you divide by the hours. The contract price is not all yours.</div></div>
+    <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Use brackets: <span class="keys"><kbd>(</kbd> 2400 <kbd>−</kbd> 465.80 <kbd>)</kbd> <kbd>÷</kbd> 38 <kbd>ENTER</kbd></span>. Or find the earnings first, press <kbd>ENTER</kbd>, then <span class="keys"><kbd>÷</kbd> 38 <kbd>ENTER</kbd></span>.</div>
+      <div class="u2l4-pcol"><button class="pill" type="button" data-keys="( 2400 − 465.80 ) ÷ 38 =">Show me</button></div></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Darnell, the house painter</h3></div>
+  <p class="q">Darnell is a house painter. He agrees to paint the inside of a house in Cochrane for $2&#8239;400.00. He buys the paint and supplies for $465.80. He does all the work himself.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) The job takes Darnell 38 hours. How much does he earn, and what is his effective hourly rate?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Earnings: <span class="tex">\$2\,400.00-\$465.80=\$1\,934.20</span><br>Per hour: <span class="tex">\$1\,934.20\div38=\$50.90</span><br>He earns <b>$1&#8239;934.20</b>, or <b>$50.90</b> per hour.</div></div></div>
+    <div class="part"><div class="pl">(b) Suppose the walls need extra repairs, and the job takes 52 hours instead. The price stays the same. What is his effective hourly rate now?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$1\,934.20\div52=37.196\ldots\approx\$37.20</span> per hour<br>He earns the same $1&#8239;934.20, but only <b>$37.20</b> per hour, because the job took longer.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Setting a Contract Price">
+  <h3 class="sub">Setting a contract price</h3>
+  <p>To make a bid, the contractor adds up all the costs and the amount they want to earn. Some contractors instead add a percent to their costs for their profit, the same way a store adds a markup (Unit 1).</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Contract price = materials + helpers’ wages + what the contractor wants to earn</b>
+    <div class="u2l4-defl">or &nbsp;<b>contract price = costs × (1 + profit rate)</b> &nbsp;&nbsp; e.g. costs plus 30%: costs × 1.30</div></div>
+  <div class="explainer" data-explainer="bid"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Amara’s patio bid</h3></div>
+  <p class="q">Amara runs a small landscaping business in Okotoks. She is bidding on a job to build a stone patio.</p>
+  <ul class="u2l4-facts">
+    <li>Pavers, gravel and sand cost <b>$1&#8239;180.00</b>.</li>
+    <li>She will hire <b>2 helpers</b> for <b>12 hours each</b> at <b>$19.50 per hour</b>.</li>
+    <li>She wants to earn <b>$600.00</b> for herself.</li>
+  </ul>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) What should Amara charge for the patio?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Helpers: <span class="tex">2\times12\times\$19.50=\$468.00</span><br>Price: <span class="tex">\$1\,180.00+\$468.00+\$600.00=\$2\,248.00</span><br>Amara should charge <b>$2&#8239;248.00</b>. (Many contractors round a bid, for example to $2&#8239;250.00.)</div></div></div>
+    <div class="part"><div class="pl">(b) Amara’s friend says, “Just charge your costs plus 30%.” What price would that give? How much would Amara earn for herself?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Costs: <span class="tex">\$1\,180.00+\$468.00=\$1\,648.00</span><br>Price: <span class="tex">\$1\,648.00\times1.30=\$2\,142.40</span><br>She would earn <span class="tex">\$2\,142.40-\$1\,648.00=\$494.40</span>, which is <b>less</b> than the $600.00 she wants.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u2l4"></section>
+
+<!-- ================= 4. Which is better? ================= -->
+<section class="card" data-ink="s4" data-section="4. Which Is Better?">
+  <div class="sec-h"><span class="badge">4</span><h2>Which Is Better? Comparing Ways to Earn</h2></div>
+  <p>Each way of being paid has good points (<b>advantages</b>) and bad points (<b>disadvantages</b>) for the worker.</p>
+  <table class="u2l4-tbl u2l4-pros">
+    <tr><th>Method</th><th>Advantages</th><th>Disadvantages</th></tr>
+    <tr><td>Hourly wage</td><td>Paid for every hour, even on slow days. Overtime pay for long days and weeks.</td><td>Working faster does not earn more money.</td></tr>
+    <tr><td>Piecework</td><td>Fast, skilled workers earn more. You can see your pay grow as you work.</td><td>Pay drops on slow days (bad weather, learning a new job). Rushing can lead to mistakes or injuries.</td></tr>
+    <tr><td>Contract</td><td>If you work well and fast, you can earn a lot per hour. You are your own boss and choose your jobs.</td><td>If the job takes longer or costs more, you earn less. You pay for materials, tools and helpers. No minimum wage, overtime, paid vacation or benefits. You must keep finding new jobs.</td></tr>
+  </table>
+  <p>To compare a contract with an hourly job, find what each pays for the <b>same number of hours</b>. Ask: “What if the job takes longer?”</p>
+  <div class="explainer" data-explainer="compare"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Jaxon’s two offers</h3></div>
+  <p class="q">Jaxon installs drywall. A builder offers him two ways to be paid for finishing a basement. The work is spread over two weeks, so there is no overtime.</p>
+  <div class="u2l4-stores">
+    <div><b>Option A:</b> $26.50 per hour.</div>
+    <div><b>Option B:</b> a contract for $1&#8239;400.00. Jaxon must buy the tape and mud, about $95.00.</div>
+  </div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Jaxon thinks the job will take 40 hours. Which option pays more, and by how much?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: <span class="tex">40\times\$26.50=\$1\,060.00</span><br>B: <span class="tex">\$1\,400.00-\$95.00=\$1\,305.00</span><br><b>B</b> pays more, by <span class="tex">\$1\,305.00-\$1\,060.00=\$245.00</span>.</div></div></div>
+    <div class="part"><div class="pl">(b) What if the job takes 55 hours? Which option pays more now?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">A: <span class="tex">55\times\$26.50=\$1\,457.50</span><br>B: still $1&#8239;305.00<br><b>A</b> pays more, by <span class="tex">\$1\,457.50-\$1\,305.00=\$152.50</span>.</div></div></div>
+    <div class="part"><div class="pl">(c) For about how many hours do the two options pay the same? Round to one decimal place.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">hours = pay ÷ rate<br><span class="tex">\$1\,305.00\div\$26.50=49.24\ldots</span><br>About <b>49.2 hours</b>. If the job takes less time, the contract is better; if it takes more, the hourly wage is better.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Kiana’s choice</h3></div>
+  <p class="q">Kiana is choosing between two jobs at a sewing company. As a beginner, Kiana can sew about 5 bags an hour. After a few months of practice, she expects to sew about 9 bags an hour.</p>
+  <div class="u2l4-stores">
+    <div><b>Job 1:</b> $16.50 per hour.</div>
+    <div><b>Job 2:</b> piecework, $2.40 for each bag sewn (the company tops up to the $15.00 minimum wage if needed).</div>
+  </div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(a) Find what Job 2 pays per hour for a beginner and after practice.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Beginner: <span class="tex">5\times\$2.40=\$12.00</span> per hour, which is topped up to <b>$15.00</b><br>After practice: <span class="tex">9\times\$2.40=\$21.60</span> per hour</div></div></div>
+    <div class="part"><div class="pl">(b) Finish the sentences.</div>
+      <p class="u2l4-frame">As a beginner, the better job is <span class="u2l4-blank w1" data-reveal="&nbsp;">Job 1</span> because <span class="u2l4-blank w2" data-reveal="&nbsp;">$16.50 is more than $15.00.</span></p>
+      <p class="u2l4-frame">After practice, the better job is <span class="u2l4-blank w1" data-reveal="&nbsp;">Job 2</span> because <span class="u2l4-blank w2" data-reveal="&nbsp;">$21.60 is more than $16.50.</span></p>
+      <p class="u2l4-frame">One disadvantage of Job 2 is <span class="u2l4-blank w3" data-reveal="&nbsp;">her pay drops if she is slow, sick or tired, or the work is harder, and rushing to sew faster can cause mistakes or injuries.</span></p>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Job 1</b> for a beginner ($16.50 &gt; $15.00); <b>Job 2</b> after practice ($21.60 &gt; $16.50).</div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Kiana: When Does Job 2 Win?">
+  <h3 class="sub">Kiana: when does Job 2 start to win?</h3>
+  <p>Kiana gets faster a little at a time. Check every speed from 5 to 9 bags an hour.</p>
+  <div class="explainer" data-explainer="kiana"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Piecework pay = piece rate × pieces.</b> Different pieces: find each pay, then add. Estimate to check.</div>
+    <div><b>Effective hourly rate = pay ÷ hours.</b> If it is under the $15.00 minimum wage, the employer adds the difference. <b>Backwards:</b> rate = pay ÷ pieces; pieces = pay ÷ rate (round <b>up</b> for a goal).</div>
+    <div><b>Contracts:</b> earnings = price − materials − helpers − other costs. Subtract <b>before</b> you divide by the hours. A bid = costs + what you want to earn, or costs × (1 + profit rate).</div>
+    <div><b>Compare</b> for the same number of hours. A contract wins if the job is fast; an hourly wage wins if it takes longer.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u2l4">
+    <div><div class="kicker">Your turn</div><b>Assignment 4 · Questions 7–17</b><div class="muted">Contract earnings, bids, comparing ways to earn, and finding the mistake. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l5/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 5 — Commission and Salary Plus Commission</b><div class="muted">Paid a percent of what you sell: how commission works, and which job pays more.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u2l4.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u2l4', homeHref: '../../', title: '2.4 Piecework and Contracts' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

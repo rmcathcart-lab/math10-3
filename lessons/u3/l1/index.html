@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mixed Numbers · Math 10-3 3.1</title>
+<meta name="description" content="Math 10-3 Unit 3 Lesson 1 (refresher): mixed numbers and improper fractions; adding, subtracting and multiplying mixed numbers with regrouping; estimating first and checking with the TI-30XIIS. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u3l1.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u3l1">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The 17 Horses">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The 17 Horses</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A rancher near Cochrane retires and gives her <b>17 horses</b> to her three kids.</p><p class="vw-ctx">The oldest gets <span class="tex">\tfrac12</span> of the horses, the middle kid <span class="tex">\tfrac13</span>, the youngest <span class="tex">\tfrac19</span>. No cutting a horse!</p><p class="vw-ask">How can they share the horses and follow her rule exactly?</p></div><div class="vw-art"><svg viewBox="0 0 320 250" role="img" aria-label="Two horses trotting back and forth in a fenced corral with a sign that says 17 horses">
+    <rect x="0" y="176" width="320" height="74" fill="#e9dcc0"/>
+    <rect x="96" y="14" width="128" height="44" rx="6" fill="#fffaf1" stroke="#6e4a1c" stroke-width="4"/>
+    <text x="160" y="45" text-anchor="middle" font-size="24" font-weight="800" fill="#6e4a1c" font-family="system-ui, sans-serif">17 horses</text>
+    <path d="M128 58 V84 M192 58 V84" stroke="#6e4a1c" stroke-width="5"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="-30 0;150 0;150 0;-30 0;-30 0" keyTimes="0;0.45;0.5;0.95;1" dur="7s" repeatCount="indefinite"/>
+      <use href="#u3l1-horse" x="20" y="102"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="170 0;10 0;10 0;170 0;170 0" keyTimes="0;0.45;0.5;0.95;1" dur="7s" repeatCount="indefinite"/>
+      <g transform="translate(130 0) scale(-1 1)"><use href="#u3l1-horse" x="0" y="122"/></g>
+    </g>
+    <defs>
+      <g id="u3l1-horse">
+        <g stroke-linecap="round" stroke-width="7">
+          <path d="M28 50 L22 86" stroke="#7a4a26"><animateTransform attributeName="transform" type="rotate" values="-12 28 50;12 28 50;-12 28 50" dur="0.6s" repeatCount="indefinite"/></path>
+          <path d="M40 50 L44 86" stroke="#7a4a26"><animateTransform attributeName="transform" type="rotate" values="12 40 50;-12 40 50;12 40 50" dur="0.6s" repeatCount="indefinite"/></path>
+          <path d="M70 50 L66 86" stroke="#7a4a26"><animateTransform attributeName="transform" type="rotate" values="12 70 50;-12 70 50;12 70 50" dur="0.6s" repeatCount="indefinite"/></path>
+          <path d="M82 50 L86 86" stroke="#7a4a26"><animateTransform attributeName="transform" type="rotate" values="-12 82 50;12 82 50;-12 82 50" dur="0.6s" repeatCount="indefinite"/></path>
+        </g>
+        <ellipse cx="56" cy="40" rx="38" ry="17" fill="#9a6a24"/>
+        <path d="M82 34 L98 6 L110 12 L94 44 Z" fill="#9a6a24"/>
+        <ellipse cx="108" cy="12" rx="16" ry="8" fill="#9a6a24" transform="rotate(28 108 12)"/>
+        <path d="M84 32 L96 4" stroke="#4a2c14" stroke-width="6" stroke-linecap="round"/>
+        <path d="M18 34 C4 40 2 56 8 66" stroke="#4a2c14" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <circle cx="110" cy="9" r="2.4" fill="#1c2230"/>
+      </g>
+    </defs>
+    <g stroke="#6e4a1c" stroke-width="6" stroke-linecap="round"><path d="M8 150 H312 M8 184 H312"/><path d="M14 132 V204 M110 132 V204 M210 132 V204 M306 132 V204"/></g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>17 doesn’t split into halves, thirds or ninths. Is it impossible?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans">A neighbour rides over and <b>lends them her horse</b>. Now there are <b>18</b>. <span class="tex">\tfrac12</span> of 18 is <b>9</b>, <span class="tex">\tfrac13</span> of 18 is <b>6</b> and <span class="tex">\tfrac19</span> of 18 is <b>2</b>. That is <span class="tex">9+6+2=17</span> horses, so one horse is left: the neighbour rides home on it! The twist: <span class="tex">\tfrac12+\tfrac13+\tfrac19=\tfrac{17}{18}</span>, not 1 whole, so the rule never gave away all the horses. Today: fractions, and adding them.</div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 3 Length, Area and Surface Area · Lesson 1</div>
+  <h1>Fractions Refresher: Mixed Numbers</h1>
+  <p class="lede">Tape measures, building plans and recipes are full of fractions like <span class="tex">2\tfrac34</span> in. Before we measure anything, we review <b>mixed numbers</b> and <b>improper fractions</b>, how to <b>add, subtract and multiply</b> them, and how to check an answer with an <b>estimate</b> and the <b>calculator</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>change a <b>mixed number</b> to an <b>improper fraction</b> and back (<span class="tex">2\tfrac34=\tfrac{11}{4}</span>)</li>
+      <li><b>add</b> mixed numbers, and <b>regroup</b> when the fraction part is 1 or more</li>
+      <li><b>subtract</b> mixed numbers, and regroup (borrow) a whole when I need to</li>
+      <li><b>multiply</b> with mixed numbers by changing them to improper fractions first</li>
+      <li><b>estimate</b> first, then check my answer with the calculator</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>Refresher</b> Skills from earlier grades that this unit uses (not marked as a unit outcome).</div>
+</section>
+
+<!-- ================= 1. Mixed numbers and improper fractions ================= -->
+<section class="card" data-ink="s1" data-section="1. Mixed Numbers and Improper Fractions">
+  <div class="sec-h"><span class="badge">1</span><h2>Mixed Numbers and Improper Fractions</h2></div>
+  <p>Measurements in inches, feet, yards and cups often use fractions bigger than 1, like <span class="tex">2\tfrac34</span> in. There are two ways to write them.</p>
+  <div class="u3l1-defs">
+    <div><b>Proper fraction</b>less than 1. The top (numerator) is smaller than the bottom (denominator).<span class="eg"><span class="tex">\tfrac34,\ \ \tfrac58</span></span></div>
+    <div><b>Improper fraction</b>1 or more. The top is the same as or bigger than the bottom.<span class="eg"><span class="tex">\tfrac{11}{4},\ \ \tfrac88</span></span></div>
+    <div><b>Mixed number</b>a whole number and a proper fraction together.<span class="eg"><span class="tex">2\tfrac34</span> means <span class="tex">2+\tfrac34</span></span></div>
+  </div>
+  <div class="u3l1-figrow">
+    <div class="u3l1-fig" id="u3l1-fig-intro"></div>
+    <p>Each whole bar is <b>4 quarters</b>. 2 wholes and 3 more quarters make <b>11 quarters</b>:<br><span class="u3l1-big"><span class="tex">2\tfrac34=\tfrac{11}{4}</span></span></p>
+  </div>
+  <div class="u3l1-keys">
+    <div><b>Improper fraction → mixed number:</b> divide the top by the bottom. The answer is the whole number. The remainder goes over the same bottom.<span class="eg"><span class="tex">\tfrac{17}{5}</span>: <span class="tex">17\div5=3</span> remainder 2, so <span class="tex">\tfrac{17}{5}=3\tfrac25</span></span></div>
+    <div><b>Mixed number → improper fraction:</b> multiply the whole number by the bottom, add the top, and keep the bottom.<span class="eg"><span class="tex">4\tfrac23=\tfrac{4\times3+2}{3}=\tfrac{14}{3}</span></span></div>
+  </div>
+  <div class="explainer" data-explainer="bars"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Reading the picture</h3></div>
+  <p class="q">Write each picture as a mixed number and as an improper fraction.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a)</div><div class="u3l1-fig" id="u3l1-fig-e1a"></div><div class="u3l1-blanks">Mixed: <span data-reveal><span class="tex">2\tfrac35</span></span> <span class="u3l1-gap"></span> Improper: <span data-reveal><span class="tex">\tfrac{13}{5}</span></span></div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 wholes of 5 fifths is 10 fifths, plus 3 more: <span class="tex">2\tfrac35=\tfrac{13}{5}</span></div></div></div>
+    <div class="part"><div class="pl">(b)</div><div class="u3l1-fig" id="u3l1-fig-e1b"></div><div class="u3l1-blanks">Mixed: <span data-reveal><span class="tex">1\tfrac56</span></span> <span class="u3l1-gap"></span> Improper: <span data-reveal><span class="tex">\tfrac{11}{6}</span></span></div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 whole is 6 sixths, plus 5 more: <span class="tex">1\tfrac56=\tfrac{11}{6}</span></div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Simplest Form and the Calculator">
+  <h3 class="sub">Simplest form, and the calculator</h3>
+  <p>A mixed number is in <b>simplest form</b> when its fraction part is in simplest form (Lesson 1.2): <span class="tex">3\tfrac68=3\tfrac34</span>.</p>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>When you simplify a mixed number, only the fraction part changes.</b> The whole number stays the same: <span class="tex">3\tfrac68=3\tfrac34</span>, not <span class="tex">\tfrac34</span> and not <span class="tex">1\tfrac12</span>.</div></div>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>On the TI-30XIIS:</b> enter <span class="tex">2\tfrac34</span> as <span class="keys"><kbd>2</kbd><kbd>A b/c</kbd><kbd>3</kbd><kbd>A b/c</kbd><kbd>4</kbd><kbd>ENTER</kbd></span>. The screen shows <b>2u3⌟4</b> (the <b>u</b> sits between the whole number and the fraction). Press <span class="keys"><kbd>2nd</kbd><kbd>d/e</kbd></span> (the second job of the <kbd>A b/c</kbd> key) to switch to <b>11⌟4</b>. Press it again to switch back. The calculator also puts fractions in simplest form for you.</div>
+    <div class="u3l1-pcol"><button class="pill" data-keys="2 ab/c 3 ab/c 4 = d/e">Show me</button></div>
+  </div>
+  <div class="explainer" data-explainer="convert"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Changing forms</h3></div>
+  <p class="q">Write each improper fraction as a mixed number in simplest form.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) <span class="tex">\dfrac{23}{4}</span></div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">23\div4=5</span> R 3<br><span class="tex">\mathbf{5\tfrac34}</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">\dfrac{45}{8}</span></div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">45\div8=5</span> R 5<br><span class="tex">\mathbf{5\tfrac58}</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">\dfrac{38}{6}</span></div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">38\div6=6</span> R 2<br><span class="tex">6\tfrac26=\mathbf{6\tfrac13}</span></div></div></div>
+    <div class="part"><div class="pl">(d) <span class="tex">\dfrac{30}{12}</span></div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">30\div12=2</span> R 6<br><span class="tex">2\tfrac6{12}=\mathbf{2\tfrac12}</span></div></div></div>
+  </div>
+  <p class="q">Write each mixed number as an improper fraction.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(e) <span class="tex">3\dfrac58</span></div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac{3\times8+5}{8}=\mathbf{\tfrac{29}{8}}</span></div></div></div>
+    <div class="part"><div class="pl">(f) <span class="tex">6\dfrac23</span></div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac{6\times3+2}{3}=\mathbf{\tfrac{20}{3}}</span></div></div></div>
+    <div class="part"><div class="pl">(g) <span class="tex">4\dfrac7{10}</span></div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac{4\times10+7}{10}=\mathbf{\tfrac{47}{10}}</span></div></div></div>
+    <div class="part"><div class="pl">(h) <span class="tex">12\dfrac12</span></div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac{12\times2+1}{2}=\mathbf{\tfrac{25}{2}}</span></div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Scoops at the café</h3></div>
+  <p class="q">A breakfast café measures dry ingredients with scoops.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A batch of granola needs <span class="tex">3\tfrac12</span> cups of oats. The cook uses a <span class="tex">\tfrac14</span>-cup scoop. How many scoops is that?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Count quarters: <span class="tex">3\tfrac12=3\tfrac24=\tfrac{3\times4+2}{4}=\tfrac{14}{4}</span><br>14 quarters, so the cook needs <b>14 scoops</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) The cook adds 11 scoops of sugar with a <span class="tex">\tfrac13</span>-cup scoop. How many cups of sugar is that, as a mixed number?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">11 scoops of <span class="tex">\tfrac13</span> cup is <span class="tex">\tfrac{11}{3}</span> cups.<br><span class="tex">11\div3=3</span> R 2, so <span class="tex">\tfrac{11}{3}=</span> <b><span class="tex">3\tfrac23</span> cups</b> of sugar.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s1c" data-section="1. Check Yourself: Changing Forms">
+  <h3 class="sub">Check yourself: the other form</h3>
+  <p>Say the other form first, then tap a card to check.</p>
+  <div class="bk-flips" style="--bk-cols:4">
+    <div class="bk-flip"><div class="bk-front"><span class="tex">\dfrac72</span></div><div class="bk-back"><span class="tex">3\tfrac12</span><br><small><span class="tex">7\div2=3</span> R 1</small></div></div>
+    <div class="bk-flip"><div class="bk-front"><span class="tex">\dfrac{19}{6}</span></div><div class="bk-back"><span class="tex">3\tfrac16</span><br><small><span class="tex">19\div6=3</span> R 1</small></div></div>
+    <div class="bk-flip"><div class="bk-front"><span class="tex">1\dfrac34</span></div><div class="bk-back"><span class="tex">\tfrac74</span><br><small><span class="tex">1\times4+3=7</span></small></div></div>
+    <div class="bk-flip"><div class="bk-front"><span class="tex">5\dfrac23</span></div><div class="bk-back"><span class="tex">\tfrac{17}{3}</span><br><small><span class="tex">5\times3+2=17</span></small></div></div>
+  </div>
+</section>
+
+<!-- ================= 2. Adding ================= -->
+<section class="card" data-ink="s2" data-section="2. Adding Mixed Numbers">
+  <div class="sec-h"><span class="badge">2</span><h2>Adding Mixed Numbers</h2></div>
+  <p>You can only add pieces that are the <b>same size</b>. So fractions must have the <b>same denominator</b> before you add them. Then add the tops and keep the bottom: <span class="tex">\tfrac38+\tfrac18=\tfrac48=\tfrac12</span>.</p>
+  <p>If the bottoms are different, find a <b>common denominator</b>: a number that both bottoms divide into evenly. The smallest one, the <b>lowest common denominator</b>, keeps the numbers small.</p>
+  <div class="tip"><div class="tip-ic">i</div><div><b>Quick refresher:</b> to find a common denominator, count by the bigger bottom until the smaller one divides in. For 4 and 6: 6, 12. 12 works, so use twelfths. Then make equivalent fractions (Lesson 1.2): <span class="tex">\tfrac34=\tfrac9{12}</span> and <span class="tex">\tfrac16=\tfrac2{12}</span>.</div></div>
+  <div data-extra><div class="explainer" data-explainer="lcd"></div></div>
+  <div class="def u3l1-steps"><b>To add mixed numbers</b>
+    <ol><li>Give the fraction parts a common denominator.</li><li>Add the whole numbers. Add the fractions.</li><li>If the fraction part is improper, <b>regroup</b>: change it to a mixed number and add its whole to the whole number. <span class="u3l1-gap"></span><span class="tex">5\tfrac{11}{8}=5+1\tfrac38=6\tfrac38</span></li><li>Write the answer in simplest form.</li></ol></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Never add the denominators.</b> <span class="tex">\tfrac14+\tfrac14=\tfrac24</span> (two quarters), not <span class="tex">\tfrac28</span>.</div></div>
+  <div class="explainer" data-explainer="addBars"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Adding</h3></div>
+  <p class="q">Add. Write each answer in simplest form.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) <span class="tex">\dfrac38+\dfrac18</span></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Same denominator:<br><span class="tex">\tfrac{3+1}{8}=\tfrac48=\mathbf{\tfrac12}</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">\dfrac23+\dfrac14</span></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Common denominator 12:<br><span class="tex">\tfrac8{12}+\tfrac3{12}=\mathbf{\tfrac{11}{12}}</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">2\dfrac16+3\dfrac12</span></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac12=\tfrac36</span><br><span class="tex">2\tfrac16+3\tfrac36=5\tfrac46</span><br><span class="tex">=\mathbf{5\tfrac23}</span></div></div></div>
+    <div class="part"><div class="pl">(d) <span class="tex">4\dfrac34+1\dfrac58</span></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac34=\tfrac68</span><br><span class="tex">4\tfrac68+1\tfrac58=5\tfrac{11}8</span><br>Regroup: <span class="tex">\tfrac{11}8=1\tfrac38</span>, so <span class="tex">5+1\tfrac38=\mathbf{6\tfrac38}</span></div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. End to End on the Tape">
+  <h3 class="sub">End to end: lengths on a tape measure</h3>
+  <p>When pipes, boards or pieces of fabric are joined <b>end to end</b>, the total length is the <b>sum</b> of the pieces. When a piece is <b>cut off</b>, what is left is a <b>difference</b>. Watch it happen on a tape measure. Estimate first by rounding each piece to the nearest whole unit.</p>
+  <div class="explainer" data-explainer="tape"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Copper pipe</h3></div>
+  <p class="q">A plumber joins three pieces of copper pipe end to end. They are <span class="tex">14\tfrac38</span> in, <span class="tex">9\tfrac34</span> in and <span class="tex">6\tfrac12</span> in long.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Estimate the total length. Round each piece to the nearest inch.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">14\tfrac38\approx14</span>, <span class="tex">9\tfrac34\approx10</span>, <span class="tex">6\tfrac12\approx7</span><br><span class="tex">14+10+7=31</span> in<br><b>About 31 in.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Find the exact total length. Is it close to your estimate?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Eighths: <span class="tex">14\tfrac38+9\tfrac68+6\tfrac48</span><br>Wholes: <span class="tex">14+9+6=29</span>; fractions: <span class="tex">\tfrac{13}{8}=1\tfrac58</span><br><span class="tex">29+1\tfrac58=30\tfrac58</span> in<br><b>The pipe is <span class="tex">30\tfrac58</span> in long</b>, close to 31 in.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Subtracting ================= -->
+<section class="card" data-ink="s3" data-section="3. Subtracting Mixed Numbers">
+  <div class="sec-h"><span class="badge">3</span><h2>Subtracting Mixed Numbers</h2></div>
+  <p>Subtract the same way: common denominator first, then subtract the whole numbers and the fractions. Sometimes the top fraction is too small to take the other fraction away, as in <span class="tex">5\tfrac14-2\tfrac34</span>. Then <b>regroup</b> (borrow): take 1 whole from the whole number and change it into fraction pieces.</p>
+  <div class="u3l1-fig u3l1-fig-wide" id="u3l1-fig-borrow"></div>
+  <p class="u3l1-c"><span class="tex">5\tfrac14=4+\tfrac44+\tfrac14=4\tfrac54</span>. Now take away <span class="tex">2\tfrac34</span>: <span class="tex">4\tfrac54-2\tfrac34=2\tfrac24=2\tfrac12</span>.</p>
+  <div class="def u3l1-steps"><b>To subtract mixed numbers</b>
+    <ol><li>Give the fraction parts a common denominator.</li><li>If the first fraction is smaller than the one you subtract, <b>regroup</b>: take 1 from the whole number and add it to the fraction as <span class="tex">\tfrac88</span>, <span class="tex">\tfrac44</span>, <span class="tex">\tfrac{12}{12}</span>, …</li><li>Subtract the whole numbers. Subtract the fractions.</li><li>Write the answer in simplest form.</li></ol></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Do not flip the fractions to make the subtraction easy.</b> In <span class="tex">5\tfrac14-2\tfrac34</span>, doing <span class="tex">\tfrac34-\tfrac14</span> gives the wrong answer <span class="tex">3\tfrac24</span>. Regroup instead. To subtract from a whole number, regroup too: <span class="tex">9=8\tfrac{16}{16}</span>.</div></div>
+  <div class="explainer" data-explainer="subBars"></div>
+  <div data-extra><div class="explainer" data-explainer="flipTrap"></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Subtracting</h3></div>
+  <p class="q">Subtract. Write each answer in simplest form.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) <span class="tex">6\dfrac78-2\dfrac38</span></div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6-2=4</span>; <span class="tex">\tfrac78-\tfrac38=\tfrac48</span><br><span class="tex">4\tfrac48=\mathbf{4\tfrac12}</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">5\dfrac13-1\dfrac56</span></div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5\tfrac13=5\tfrac26</span>. <span class="tex">\tfrac26</span> is less than <span class="tex">\tfrac56</span>, so regroup: <span class="tex">5\tfrac26=4\tfrac86</span><br><span class="tex">4\tfrac86-1\tfrac56=3\tfrac36=\mathbf{3\tfrac12}</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">9-3\dfrac5{16}</span></div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Regroup: <span class="tex">9=8\tfrac{16}{16}</span><br><span class="tex">8\tfrac{16}{16}-3\tfrac5{16}=\mathbf{5\tfrac{11}{16}}</span></div></div></div>
+    <div class="part"><div class="pl">(d) <span class="tex">7\dfrac14-3\dfrac23</span></div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Twelfths: <span class="tex">7\tfrac3{12}-3\tfrac8{12}</span><br>Regroup: <span class="tex">7\tfrac3{12}=6\tfrac{15}{12}</span><br><span class="tex">6\tfrac{15}{12}-3\tfrac8{12}=\mathbf{3\tfrac7{12}}</span></div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Fabric for the school play</h3></div>
+  <p class="q">Hailey has <span class="tex">5\tfrac14</span> yd of fabric to make costumes for the school play. She uses <span class="tex">1\tfrac78</span> yd for a cape and <span class="tex">2\tfrac12</span> yd for a curtain.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How much fabric is left?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Used: <span class="tex">1\tfrac78+2\tfrac48=3\tfrac{11}8=4\tfrac38</span> yd<br>Left: <span class="tex">5\tfrac14-4\tfrac38=5\tfrac28-4\tfrac38</span><br>Regroup: <span class="tex">4\tfrac{10}8-4\tfrac38=\tfrac78</span><br><b>She has <span class="tex">\tfrac78</span> yd of fabric left.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Is there enough left for a sash that needs <span class="tex">\tfrac34</span> yd? Explain.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac34=\tfrac68</span>, and <span class="tex">\tfrac78>\tfrac68</span>.<br><b>Yes.</b> There is enough, with <span class="tex">\tfrac18</span> yd to spare.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (one per lesson) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 1 · Questions 1–8</h2>
+  <p class="pr-t">Try these before we go on to multiplying.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Pictures as fractions</span>
+    <span><b>2–4</b>Mixed numbers ↔ improper fractions</span>
+    <span><b>5</b>Adding</span>
+    <span><b>6</b>Subtracting</span>
+    <span><b>7–8</b>Walls and boards</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u3l1">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Multiplying ================= -->
+<section class="card" data-ink="s4" data-section="4. Multiplying with Mixed Numbers">
+  <div class="sec-h"><span class="badge">4</span><h2>Multiplying with Mixed Numbers</h2></div>
+  <p>To multiply two fractions, <b>multiply the tops and multiply the bottoms</b>: <span class="tex">\tfrac23\times\tfrac45=\tfrac8{15}</span>. Remember that <b>“of” means multiply</b>: <span class="tex">\tfrac12</span> of <span class="tex">3\tfrac13</span> is <span class="tex">\tfrac12\times3\tfrac13</span>.</p>
+  <p>Mixed numbers must be changed to <b>improper fractions</b> first. A whole number is a fraction over 1: <span class="tex">4=\tfrac41</span>.</p>
+  <div class="def u3l1-steps"><b>To multiply with mixed numbers</b>
+    <ol><li>Change each mixed number (and whole number) to an improper fraction.</li><li>Multiply the tops. Multiply the bottoms.</li><li>Change the answer back to a mixed number in simplest form.</li></ol>
+    <div class="u3l1-c"><span class="tex">4\times2\tfrac38=\tfrac41\times\tfrac{19}8=\tfrac{76}8=9\tfrac48=9\tfrac12</span></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Do not just multiply the whole numbers and the fractions separately.</b> <span class="tex">2\tfrac12\times2\tfrac12</span> is <b>not</b> <span class="tex">4\tfrac14</span>. Change to improper fractions: <span class="tex">\tfrac52\times\tfrac52=\tfrac{25}4=6\tfrac14</span>.</div></div>
+  <div class="tip"><div class="tip-ic">i</div><div><b>Shortcut:</b> you may simplify before you multiply: divide a top and a bottom by the same number. <span class="tex">\tfrac74\times\tfrac{12}5</span>: <span class="tex">12\div4=3</span> and <span class="tex">4\div4=1</span>, so it becomes <span class="tex">\tfrac71\times\tfrac35=\tfrac{21}5</span>. Smaller numbers, same answer.</div></div>
+  <div class="explainer" data-explainer="multiply"></div>
+  <div data-extra><div class="explainer" data-explainer="areaWhy"></div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Multiplying</h3></div>
+  <p class="q">Multiply. Write each answer in simplest form.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) <span class="tex">\dfrac23\times\dfrac35</span></div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac{2\times3}{3\times5}=\tfrac6{15}=\mathbf{\tfrac25}</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">4\times2\dfrac38</span></div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac41\times\tfrac{19}8=\tfrac{76}8</span><br><span class="tex">76\div8=9</span> R 4: <span class="tex">9\tfrac48=\mathbf{9\tfrac12}</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">\dfrac12</span> of <span class="tex">3\dfrac13</span></div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac12\times\tfrac{10}3=\tfrac{10}6</span><br><span class="tex">=1\tfrac46=\mathbf{1\tfrac23}</span></div></div></div>
+    <div class="part"><div class="pl">(d) <span class="tex">1\dfrac34\times2\dfrac25</span></div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac74\times\tfrac{12}5=\tfrac{84}{20}</span><br><span class="tex">84\div20=4</span> R 4: <span class="tex">4\tfrac4{20}=\mathbf{4\tfrac15}</span><br>(Shortcut: <span class="tex">\tfrac71\times\tfrac35=\tfrac{21}5=4\tfrac15</span>)</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Pancakes for the team</h3></div>
+  <p class="q">Jamal’s pancake recipe makes 12 pancakes. He wants to make 3 batches for a team breakfast, and half a batch at home. Complete the table.</p>
+  <table class="u3l1-tbl">
+    <tr><th>Ingredient</th><th>1 batch</th><th>3 batches</th><th><span class="tex">\tfrac12</span> batch</th></tr>
+    <tr><th>Flour</th><td><span class="tex">1\tfrac34</span> cups</td><td><span data-reveal><span class="tex">3\times\tfrac74=\tfrac{21}4=5\tfrac14</span> cups</span></td><td><span data-reveal><span class="tex">\tfrac12\times\tfrac74=\tfrac78</span> cup</span></td></tr>
+    <tr><th>Milk</th><td><span class="tex">1\tfrac13</span> cups</td><td><span data-reveal><span class="tex">3\times\tfrac43=\tfrac{12}3=4</span> cups</span></td><td><span data-reveal><span class="tex">\tfrac12\times\tfrac43=\tfrac46=\tfrac23</span> cup</span></td></tr>
+    <tr><th>Sugar</th><td><span class="tex">2\tfrac12</span> tbsp</td><td><span data-reveal><span class="tex">3\times\tfrac52=\tfrac{15}2=7\tfrac12</span> tbsp</span></td><td><span data-reveal><span class="tex">\tfrac12\times\tfrac52=\tfrac54=1\tfrac14</span> tbsp</span></td></tr>
+  </table>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Check one: 3 batches of <span class="tex">1\tfrac34</span> cups is <span class="tex">1\tfrac34+1\tfrac34+1\tfrac34=3\tfrac94=5\tfrac14</span> cups ✓</div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u3l1"></section>
+
+<!-- ================= 5. Estimating and checking ================= -->
+<section class="card" data-ink="s5" data-section="5. Estimating and Checking">
+  <div class="sec-h"><span class="badge">5</span><h2>Estimating and Checking with the Calculator</h2></div>
+  <p>Before you trust an answer, <b>estimate</b>. Round each mixed number to the nearest whole number: if the fraction part is <span class="tex">\tfrac12</span> or more, round up; if it is less than <span class="tex">\tfrac12</span>, round down. Then do the easy calculation in your head.</p>
+  <p>The calculator can do the exact work. It can also change a mixed number to a decimal, and a decimal back to a fraction. Tape measures and plans use fractions of an inch, so this helps when a calculation gives a decimal.</p>
+  <div class="def"><b>Estimate</b> (round to whole numbers) <span class="tex">\;\rightarrow\;</span> <b>calculate</b> (by hand or calculator) <span class="tex">\;\rightarrow\;</span> <b>check</b> (is the answer close to the estimate?)<br>A mixed number as a decimal: divide the fraction part, then add the whole: <span class="tex">3\tfrac34=3+0.75=3.75</span></div>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>On the TI-30XIIS:</b> <span class="tex">7\tfrac78-2\tfrac13</span>: <span class="keys"><kbd>7</kbd><kbd>A b/c</kbd><kbd>7</kbd><kbd>A b/c</kbd><kbd>8</kbd><kbd>−</kbd><kbd>2</kbd><kbd>A b/c</kbd><kbd>1</kbd><kbd>A b/c</kbd><kbd>3</kbd><kbd>ENTER</kbd></span>. If the answer shows as an improper fraction, press <span class="keys"><kbd>2nd</kbd><kbd>d/e</kbd></span> to see the mixed number.<br><b>Fraction ↔ decimal:</b> press <span class="keys"><kbd>2nd</kbd><kbd>F◂▸D</kbd></span>. A decimal such as <b>4.625</b> <kbd>ENTER</kbd> then <span class="keys"><kbd>2nd</kbd><kbd>F◂▸D</kbd></span> shows the fraction (<span class="tex">4\tfrac58</span>).</div>
+    <div class="u3l1-pcol"><button class="pill" data-keys="7 ab/c 7 ab/c 8 − 2 ab/c 1 ab/c 3 =">Show me</button><button class="pill" data-keys="4.625 = F◂▸D">4.625</button></div>
+  </div>
+  <div class="explainer" data-explainer="estCheck"></div>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>Estimate, calculate, check</h3></div>
+  <p class="q">For each one, estimate first. Then find the exact answer as a mixed number and as a decimal (to the nearest hundredth). Check with the calculator.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) <span class="tex">7\dfrac78-2\dfrac13</span></div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">8-2=6</span><br>Exact: <span class="tex">7\tfrac{21}{24}-2\tfrac8{24}=\mathbf{5\tfrac{13}{24}}</span><br>Decimal: <span class="tex">13\div24=0.5416\ldots</span>, so <span class="tex">5\tfrac{13}{24}\approx\mathbf{5.54}</span><br>Close to 6, so it is reasonable.</div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">3\dfrac25\times4\dfrac12</span></div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">3\times5=15</span> (<span class="tex">4\tfrac12</span> rounds up)<br>Exact: <span class="tex">\tfrac{17}5\times\tfrac92=\tfrac{153}{10}=\mathbf{15\tfrac3{10}}</span><br>Decimal: <b>15.3</b><br>Close to 15, so it is reasonable.</div></div></div>
+  </div>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex11" data-section="Example 11">
+  <div class="ex-head"><span class="ex-tag">Example 11</span><h3>Jesse’s bench</h3></div>
+  <p class="q">Jesse is building a bench seat from 3 boards laid end to end. Each board is <span class="tex">23\tfrac58</span> in long. He says the seat will be <span class="tex">59\tfrac78</span> in long.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Use an estimate to show that Jesse’s answer is not reasonable.</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">23\tfrac58\approx24</span>, and <span class="tex">3\times24=72</span> in.<br><span class="tex">59\tfrac78</span> in is far from 72 in, so <b>Jesse made a mistake.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Find the correct length.</div><div class="work" style="--h:160px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3\times23\tfrac58=\tfrac31\times\tfrac{189}8=\tfrac{567}8</span><br><span class="tex">567\div8=70</span> R 7, so <span class="tex">70\tfrac78</span> in.<br><b>The seat will be <span class="tex">70\tfrac78</span> in long.</b></div></div></div>
+  </div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(c) A drawing for the bench says the legs are 16.375 in long. Write this as a mixed number of inches, so Jesse can find it on his tape measure.</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.375=\tfrac{375}{1000}=\tfrac38</span> (or 16.375 <kbd>ENTER</kbd> <kbd>2nd</kbd> <kbd>F◂▸D</kbd>), so <b>the legs are <span class="tex">16\tfrac38</span> in long.</b></div></div></div>
+  </div>
+  <div class="space" id="ex11-space"></div>
+  <button class="more" data-more="ex11-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Improper → mixed:</b> divide; the remainder goes over the same bottom (<span class="tex">\tfrac{17}5=3\tfrac25</span>). <b>Mixed → improper:</b> whole × bottom + top, over the bottom (<span class="tex">4\tfrac23=\tfrac{14}3</span>). Simplify only the fraction part.</div>
+    <div><b>Add:</b> common denominator, add wholes, add fractions, then <b>regroup</b> (<span class="tex">5\tfrac{11}8=6\tfrac38</span>). Never add the bottoms.</div>
+    <div><b>Subtract:</b> common denominator; if the top fraction is too small, <b>borrow 1 whole</b> (<span class="tex">5\tfrac14=4\tfrac54</span>). Never flip the fractions.</div>
+    <div><b>Multiply:</b> change to improper fractions, multiply tops and bottoms, change back. <b>Estimate</b> (round to whole numbers) and <b>check</b> with the calculator (<kbd>A b/c</kbd>, <kbd>d/e</kbd>, <kbd>F◂▸D</kbd>).</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u3l1">
+    <div><div class="kicker">Your turn</div><b>Assignment 1 · Questions 9–18</b><div class="muted">Multiplying, finding a mistake, scaling a muffin recipe, fabric and garden edging, decimals ↔ fractions of an inch, a fence, multiple choice and numerical response. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l2/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 2 — The SI System: Units, Prefixes and Referents</b><div class="muted">Metres, grams and litres, the prefixes kilo, centi and milli, and everyday things that help you estimate.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u3l1.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u3l1', homeHref: '../../', title: '3.1 Mixed Numbers' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

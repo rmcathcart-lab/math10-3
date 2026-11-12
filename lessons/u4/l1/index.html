@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Volume of Prisms and Cylinders · Math 10-3 4.1</title>
+<meta name="description" content="Math 10-3 Unit 4 Lesson 1: volume of prisms and cylinders. Counting cubes, V = (area of base) × height, triangular prisms, cylinders, changing cubic units, and ordering concrete, soil and gravel. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u4l1.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u4l1">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Painted Cube">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Painted Cube</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A big wooden cube is painted <b>red</b> on all 6 faces.</p><p class="vw-ctx">Then it is cut into <b>27</b> small cubes: 3 by 3 by 3.</p><p class="vw-ask">How many of the small cubes have no paint at all?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A red cube cut into 3 by 3 by 3 small cubes, with a paint roller rolling back and forth across its top">
+    <ellipse cx="150" cy="232" rx="120" ry="10" fill="#efe6d6"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-2 150 140;2 150 140;-2 150 140" dur="4s" repeatCount="indefinite"/>
+      <polygon points="60,226 186,226 186,100 60,100" fill="#d8453b" stroke="#7a1f16" stroke-width="3" stroke-linejoin="round"/>
+      <polygon points="60,100 186,100 240,64 114,64" fill="#ee6a5e" stroke="#7a1f16" stroke-width="3" stroke-linejoin="round"/>
+      <polygon points="186,100 240,64 240,190 186,226" fill="#b5342b" stroke="#7a1f16" stroke-width="3" stroke-linejoin="round"/>
+      <g stroke="#7a1f16" stroke-width="2" fill="none" opacity=".8">
+        <path d="M102 100 V226 M144 100 V226 M60 142 H186 M60 184 H186"/>
+        <path d="M78 88 H204 M96 76 H222 M102 100 L156 64 M144 100 L198 64"/>
+        <path d="M204 88 V214 M222 76 V202 M186 142 L240 106 M186 184 L240 148"/>
+      </g>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;70 -2;0 0" keyTimes="0;0.5;1" dur="3.2s" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1" repeatCount="indefinite"/>
+      <path d="M118 38 L118 14 L176 14" fill="none" stroke="#4a4436" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="176" y1="14" x2="210" y2="-4" stroke="#9a6a24" stroke-width="10" stroke-linecap="round"/>
+      <rect x="88" y="38" width="62" height="24" rx="11" fill="#ee6a5e" stroke="#7a1f16" stroke-width="3"/>
+    </g>
+    <text x="290" y="150" font-size="44" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Got a number? Tell the person beside you <b>where</b> those cubes are.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>Just 1!</b> It is the cube hidden in the very middle. Every other cube touches the outside. Count them all: the <b>8</b> corner cubes have 3 red faces, the <b>12</b> edge cubes have 2, and the <b>6</b> face-centre cubes have 1. &nbsp;<span class="tex">8+12+6+1=27</span> ✓ <span class="muted">Bonus: cut a cube 4 by 4 by 4 into 64 small cubes. How many have no paint? (8: a 2 by 2 by 2 cube inside.)</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 4 Volume, Capacity, Mass and Temperature · Lesson 1</div>
+  <h1>Volume of Prisms and Cylinders</h1>
+  <p class="lede">How much fits in a box, a can or a cake pan? How much concrete for a patio? Today we count the <b>cubes</b> that fill a space, find volumes with one big idea: <b>area of the base × height</b>, change cubic units, and order material for a job.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find the volume of a <b>rectangular prism</b> by counting layers of cubes, and with <span class="tex">V=l\times w\times h</span></li>
+      <li>find the volume of <b>any prism</b> and of a <b>cylinder</b>: <b>area of the base × height</b></li>
+      <li><b>estimate</b> a volume to check my calculator answer</li>
+      <li>change <b>cubic units</b> (in³, ft³, yd³, cm³, m³)</li>
+      <li>order <b>concrete, soil and gravel</b>, and work backwards to find a thickness</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>M1</b> Demonstrate an understanding of the Système International (SI) by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; applying strategies to convert SI units to imperial units.</div>
+  <div class="outcome u4l1-oc2"><b>M2</b> Demonstrate an understanding of the imperial system by: describing the relationships of the units for length, area, volume, capacity, mass and temperature; comparing the American and British imperial units for capacity; applying strategies to convert imperial units to SI units.<br><span class="u4l1-today">Today: the units for volume (cm³, m³, in³, ft³, yd³) and how they are related.</span></div>
+</section>
+
+<!-- ================= 1. What is volume? ================= -->
+<section class="card" data-ink="s1" data-section="1. What Is Volume?">
+  <div class="sec-h"><span class="badge">1</span><h2>What Is Volume?</h2></div>
+  <p>The <b>volume</b> of an object is the amount of <b>space</b> it takes up. For a box, a tank or a truck, it also tells you how much fits inside. We measure volume by counting how many <b>cubes</b> would fill the space.</p>
+  <div class="u4l1-refs">
+    <div><div class="u4l1-refpic" id="u4l1-ref-cm"></div><b>1 cm³</b> (cubic centimetre): a cube 1 cm on each edge, about the size of a <b>sugar cube</b>.</div>
+    <div><div class="u4l1-refpic" id="u4l1-ref-in"></div><b>1 in³</b> (cubic inch): a cube 1 in on each edge, about the size of a <b>small ice cube</b>.</div>
+    <div><div class="u4l1-refpic" id="u4l1-ref-m"></div><b>1 m³</b> (cubic metre): a cube 1 m on each edge, about as tall as a <b>kitchen counter</b>. <b>ft³</b> and <b>yd³</b> are used for big jobs too.</div>
+  </div>
+  <p>The small 3 means <b>cubed</b>: three lengths were multiplied. Say “cubic centimetres” for cm³.</p>
+  <p>A <b>rectangular prism</b> is a box shape with 6 rectangle faces. To count its cubes, count the cubes in the <b>bottom layer</b>, then multiply by the number of <b>layers</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Rectangular prism: <span class="tex">V=l\times w\times h</span></b> &nbsp;(length × width × height)
+    <div class="eg">Cubes in the bottom layer = <span class="tex">l\times w</span> = the <b>area of the base</b>. Number of layers = <span class="tex">h</span>. So <b>V = (area of base) × height</b>.</div></div>
+  <div class="explainer" data-explainer="fillBox"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> All three lengths must be in the <b>same unit</b> before you multiply. Volume has a <b>cubed</b> unit (cm³, ft³). Area has a squared unit (cm²), and length has no small number (cm).</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A box is 2 cm by 3 cm by 4 cm. You make it <b>twice as tall</b>. What happens to the volume?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">It <b>doubles</b>: twice as many layers. <span class="tex">2\times3\times4=24</span> cm³ becomes <span class="tex">2\times3\times8=48</span> cm³.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>A box of cubes</h3></div>
+  <div class="u4l1-ex1">
+    <div class="u4l1-fig" id="u4l1-fig-ex1"></div>
+    <div class="parts c2">
+      <div class="part"><div class="pl">This box is built from 1 cm cubes.<br>(a) How many cubes are in the bottom layer?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4\times3=12</span> cubes</div></div></div>
+      <div class="part"><div class="pl">(b) How many layers are there?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>2</b> layers</div></div></div>
+      <div class="part"><div class="pl">(c) What is the volume of the box?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">12\times2=24</span> cm³</div></div></div>
+      <div class="part"><div class="pl">(d) Check with the formula <span class="tex">V=l\times w\times h</span>.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4\times3\times2=24</span> cm³ ✓</div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Boxes big and small</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Find the volume of each rectangular prism. Round to the nearest hundredth where needed.</div>
+      <table class="u4l1-tbl u4l1-t2">
+        <tr><th>Object</th><th>Length × width × height</th><th>Work</th><th>Volume</th></tr>
+        <tr><td>(a) Cereal box</td><td>19 cm × 7 cm × 28 cm</td><td><span data-reveal="&nbsp;"><span class="tex">19\times7\times28</span></span></td><td><span data-reveal="&nbsp;">3724 cm³</span></td></tr>
+        <tr><td>(b) Shoe box</td><td>13 in × 7.5 in × 5 in</td><td><span data-reveal="&nbsp;"><span class="tex">13\times7.5\times5</span></span></td><td><span data-reveal="&nbsp;">487.5 in³</span></td></tr>
+        <tr><td>(c) Shipping container</td><td>12 m × 2.4 m × 2.6 m</td><td><span data-reveal="&nbsp;"><span class="tex">12\times2.4\times2.6</span></span></td><td><span data-reveal="&nbsp;">74.88 m³</span></td></tr>
+        <tr><td>(d) Wooden storage box</td><td><span class="tex">2\tfrac{1}{2}</span> ft × <span class="tex">1\tfrac{1}{2}</span> ft × <span class="tex">1\tfrac{1}{4}</span> ft</td><td><span data-reveal="&nbsp;"><span class="tex">2.5\times1.5\times1.25</span></span></td><td><span data-reveal="&nbsp;"><span class="tex">4.6875\approx4.69</span> ft³</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>3724 cm³</b> &nbsp;·&nbsp; (b) <b>487.5 in³</b> &nbsp;·&nbsp; (c) <b>74.88 m³</b> &nbsp;·&nbsp; (d) <b>4.69 ft³</b></div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For fractions, change to decimals first: <span class="tex">\tfrac12=0.5</span>, <span class="tex">\tfrac14=0.25</span>, <span class="tex">\tfrac34=0.75</span>. So <span class="tex">2\tfrac12</span> ft is 2.5 ft. (You can also enter <span class="tex">2\tfrac12</span> as <span class="keys">2 <kbd>A b/c</kbd> 1 <kbd>A b/c</kbd> 2</span>. The answer then shows as a fraction: <span class="keys"><kbd>2nd</kbd><kbd>F◂▸D</kbd></span> changes it to a decimal.)</div>
+    <div class="u4l1-pcol"><button class="pill" type="button" data-keys="2.5 × 1.5 × 1.25 =">Decimals</button><button class="pill" type="button" data-keys="2 ab/c 1 ab/c 2 × 1 ab/c 1 ab/c 2 × 1 ab/c 1 ab/c 4 = F◂▸D">Fractions</button></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Any prism ================= -->
+<section class="card" data-ink="s2" data-section="2. Volume of Any Prism">
+  <div class="sec-h"><span class="badge">2</span><h2>Volume of Any Prism</h2></div>
+  <p>A <b>prism</b> is a 3-D shape with two matching ends, called the <b>bases</b>, joined by flat rectangle sides. A prism is the same shape all the way through, like a loaf of bread: every slice is the same. A prism is named for its base: a <b>triangular prism</b> has triangle bases.</p>
+  <p>The idea from Section 1 works for every prism: find the area of the base, then multiply by how far the prism goes.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Any prism: V = (area of base) × height of the prism</b>
+    <div class="eg"><b>Step 1:</b> Find the area of the base (the end shape) with an area formula. Triangle: <span class="tex">A=\tfrac12bh</span>.<br><b>Step 2:</b> Multiply by the height of the prism (the distance from one base to the other; for a prism lying down, its length).</div></div>
+  <div class="explainer" data-explainer="prismSlide"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A triangular prism has <b>two</b> “heights”: the height of the triangle (use it for the base area) and the length of the prism. Use each one once. And the base is the <b>end shape</b>, not always the bottom.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Why the ½? Half a Box">
+  <h3 class="sub">Why the ½? A triangular prism is half a box</h3>
+  <p>Put the triangle inside a rectangle with the same base and height. The triangle is half the rectangle, so the prism is half the box.</p>
+  <div class="explainer" data-explainer="halfBox"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>The chocolate bar box</h3></div>
+  <div class="u4l1-ex3">
+    <div class="u4l1-fig" id="u4l1-fig-ex3"></div>
+    <div class="part"><div class="pl">A chocolate bar comes in a box shaped like a triangular prism. Each triangle end has a base of 6 cm and a height of 4 cm. The box is 15 cm long. Find the volume of the box.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: area of the base (triangle) <span class="tex">=\tfrac12\times6\times4=12</span> cm²<br>Step 2: <span class="tex">V=12\times15=180</span> cm³<br>The box has a volume of <b>180 cm³</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>A concrete wheelchair ramp</h3></div>
+  <div class="u4l1-ex4">
+    <p class="q">A concrete wheelchair ramp is a triangular prism lying on its side. The triangle (the side of the ramp) is 3.6 m along the ground and 0.3 m high. The ramp is 1.2 m wide.</p>
+    <div class="u4l1-fig" id="u4l1-fig-ex4"></div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How much concrete is in the ramp?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The base is the triangle at the side.<br>Area of base <span class="tex">=\tfrac12\times3.6\times0.3=0.54</span> m²<br><span class="tex">V=0.54\times1.2=0.648</span> m³<br>The ramp needs <b>0.648 m³</b> of concrete.</div></div></div>
+    <div class="part"><div class="pl">(b) Concrete costs $245.00 per m³. What does the concrete cost?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">0.648\times\$245.00=\$158.76</span><br>The concrete costs <b>$158.76</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Cylinders ================= -->
+<section class="card" data-ink="s3" data-section="3. Volume of a Cylinder">
+  <div class="sec-h"><span class="badge">3</span><h2>Volume of a Cylinder</h2></div>
+  <p>A <b>cylinder</b> has two matching <b>circle</b> bases joined by a curved side, like a can. A cylinder is the same all the way up, so the prism idea still works: area of base × height. The base is a circle, with area <span class="tex">\pi r^2</span>.</p>
+  <div class="def u4l1-cdef"><div><b>Key idea</b> &nbsp; <b>Cylinder: <span class="tex">V=\pi r^2h</span></b> &nbsp;(area of the circle base × height)
+    <div class="eg"><span class="tex">r</span> is the <b>radius</b> (centre to edge). If you know the <b>diameter</b> (all the way across), <span class="tex">r=d\div2</span>.<br><b>Estimate</b> with <span class="tex">\pi\approx3</span> and rounded numbers to check your answer.</div></div>
+    <div class="u4l1-fig" id="u4l1-fig-cyl"></div></div>
+  <div class="explainer" data-explainer="cylinder"></div>
+  <div class="def-grid">
+    <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For <span class="tex">r=3.7</span> and <span class="tex">h=10.2</span>: <span class="keys"><kbd>π</kbd> <kbd>×</kbd> 3.7 <kbd>x²</kbd> <kbd>×</kbd> 10.2 <kbd>ENTER</kbd></span> shows 438.68… The <kbd>x²</kbd> key squares only the number just before it.</div>
+      <button class="pill" type="button" data-keys="π × 3.7 x² × 10.2 =">Show me</button></div>
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> <span class="tex">r^2</span> means <span class="tex">r\times r</span>, not <span class="tex">r\times2</span>. And square the <b>radius</b>, not the diameter: halve the diameter first.</div></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Can P has <b>twice the radius</b> of Can Q. Can R has <b>twice the height</b> of Can Q. Which holds more, P or R?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>Can P.</b> The radius is squared: twice the radius gives <span class="tex">2\times2=4</span> times the base area, so 4 times the volume. Twice the height only doubles it.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>A soup can and hay bales</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A soup can is 7.4 cm across (diameter) and 10.2 cm tall. Estimate its volume, then calculate it to the nearest tenth.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=7.4\div2=3.7</span> cm<br>Estimate: <span class="tex">3\times4^2\times10=3\times16\times10=480</span> cm³<br>Calculate: <span class="tex">V=\pi\times3.7^2\times10.2=438.68\ldots\approx438.7</span> cm³<br>This is close to the estimate, so it is reasonable.</div></div></div>
+    <div class="part"><div class="pl">(b) A round hay bale is a cylinder 5 ft across and 4 ft wide (its “height” when it stands on end). Find its volume to the nearest hundredth.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">r=5\div2=2.5</span> ft<br><span class="tex">V=\pi\times2.5^2\times4=\pi\times6.25\times4</span><br><span class="tex">V=78.539\ldots\approx78.54</span> ft³<br>One bale has a volume of about <b>78.54 ft³</b>.</div></div></div>
+  </div>
+  <div class="parts c1 u4l1-gap">
+    <div class="part"><div class="pl">(c) A farmer has 60 of these bales. What is their total volume, to the nearest cubic foot?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">60\times78.539\ldots=4712.38\ldots\approx4712</span> ft³ &nbsp; The 60 bales take up about <b>4712 ft³</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Marisol’s cake pans</h3></div>
+  <p class="q">Marisol has a cake recipe for one 9 in round pan that is 2 in deep. She only owns an 8 in by 8 in square pan, also 2 in deep.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the volume of each pan, to the nearest hundredth. Will the batter fit in the square pan?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Round: <span class="tex">r=9\div2=4.5</span> in<br><span class="tex">V=\pi\times4.5^2\times2\approx127.23</span> in³<br>Square: <span class="tex">V=8\times8\times2=128</span> in³<br>The two pans hold almost the same amount, so the batter <b>will fit</b> in the square pan.</div></div></div>
+    <div class="part"><div class="pl">(b) A 9 in by 13 in pan, 2 in deep, holds how many round pans of batter? Round to the nearest tenth.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">V=9\times13\times2=234</span> in³<br><span class="tex">234\div127.23\approx1.8</span><br>It holds about <b>1.8 round pans</b> of batter (a little less than 2).</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Will the Batter Fit?">
+  <h3 class="sub">Will the batter fit? Pour it and see</h3>
+  <p>All three pans are 2 in deep, so the pan with the bigger base holds more.</p>
+  <div class="explainer" data-explainer="panVerdict"></div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 1 · Questions 1–8</h2>
+  <p class="pr-t">Try these before we change cubic units.</p>
+  <div class="pr-chips">
+    <span><b>1–2</b>Boxes: count cubes, then l × w × h</span>
+    <span><b>3</b>Which planter holds more?</span>
+    <span><b>4–5</b>Triangular prisms (and a mistake to find)</span>
+    <span><b>6–8</b>Cylinders: estimate, then calculate</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u4l1">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Converting cubic units ================= -->
+<section class="card" data-ink="s4" data-section="4. Converting Cubic Units">
+  <div class="sec-h"><span class="badge">4</span><h2>Converting Cubic Units</h2></div>
+  <p>How many cubic inches are in a cubic foot? A foot is 12 in, so a 1 ft cube is 12 in long, 12 in wide and 12 in high. Its bottom layer has <span class="tex">12\times12=144</span> cubes, and there are 12 layers.</p>
+  <div class="explainer" data-explainer="cubeCut"></div>
+  <div class="def u4l1-conv"><b>Key idea</b>
+    <div class="u4l1-convg">
+      <div><b>Within a system</b> (exact)<br>1 ft³ = <span class="tex">12\times12\times12=1728</span> in³<br>1 yd³ = <span class="tex">3\times3\times3=27</span> ft³<br>1 m³ = <span class="tex">100\times100\times100=1\,000\,000</span> cm³</div>
+      <div><b>Between SI and imperial</b> (rounded)<br>1 m³ ≈ 1.31 yd³ &nbsp;&nbsp; 1 yd³ ≈ 0.765 m³<br>1 m³ ≈ 35.3 ft³</div>
+    </div>
+    <div class="eg">Big unit → small unit: <b>multiply</b>. &nbsp;&nbsp; Small unit → big unit: <b>divide</b>.</div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> 1 ft = 12 in, but 1 ft³ is <b>not</b> 12 in³. The 12 is used three times (length, width and height). In the same way, 1 m³ is not 100 cm³.</div></div>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Multiply or Divide?">
+  <h3 class="sub">Multiply or divide? Ask which unit is bigger</h3>
+  <p>A big unit holds many small units. Changing to the small unit gives <b>more</b> of them, so the number gets bigger: multiply.</p>
+  <div class="explainer" data-explainer="unitMachine"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Convert each volume</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Convert each volume.</div>
+      <table class="u4l1-tbl u4l1-t7">
+        <tr><th>Change</th><th>Work</th><th>Answer</th></tr>
+        <tr><td>(a) 3.5 ft³ to in³</td><td><span data-reveal="&nbsp;"><span class="tex">3.5\times1728</span></span></td><td><span data-reveal="&nbsp;">6048 in³</span></td></tr>
+        <tr><td>(b) 5184 in³ to ft³</td><td><span data-reveal="&nbsp;"><span class="tex">5184\div1728</span></span></td><td><span data-reveal="&nbsp;">3 ft³</span></td></tr>
+        <tr><td>(c) 4 yd³ to ft³</td><td><span data-reveal="&nbsp;"><span class="tex">4\times27</span></span></td><td><span data-reveal="&nbsp;">108 ft³</span></td></tr>
+        <tr><td>(d) 81 ft³ to yd³</td><td><span data-reveal="&nbsp;"><span class="tex">81\div27</span></span></td><td><span data-reveal="&nbsp;">3 yd³</span></td></tr>
+        <tr><td>(e) 0.25 m³ to cm³</td><td><span data-reveal="&nbsp;"><span class="tex">0.25\times1\,000\,000</span></span></td><td><span data-reveal="&nbsp;">250 000 cm³</span></td></tr>
+        <tr><td>(f) 45 000 cm³ to m³</td><td><span data-reveal="&nbsp;"><span class="tex">45\,000\div1\,000\,000</span></span></td><td><span data-reveal="&nbsp;">0.045 m³</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>6048 in³</b> · (b) <b>3 ft³</b> · (c) <b>108 ft³</b> · (d) <b>3 yd³</b> · (e) <b>250 000 cm³</b> · (f) <b>0.045 m³</b></div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4c" data-section="4. Change the Lengths First">
+  <h3 class="sub">Another way: change the lengths first</h3>
+  <p>You can also change each length to the unit you want, <b>before</b> you find the volume. This is often easier, and it works between SI and imperial too (1 in = 2.54 cm, 1 ft = 30.48 cm, 1 yd = 0.9144 m).</p>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>The toy chest, two ways</h3></div>
+  <p class="q">A toy chest is 30 in long, 18 in wide and 16 in high. Find its volume in cubic feet two ways.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the volume in in³, then change it to ft³.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">V=30\times18\times16=8640</span> in³<br><span class="tex">8640\div1728=5</span> ft³<br>The toy chest holds <b>5 ft³</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Change each length to feet first (÷ 12), then find the volume.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">30\div12=2.5</span> ft, <span class="tex">18\div12=1.5</span> ft, <span class="tex">16\div12=1\tfrac13</span> ft<br><span class="tex">V=2.5\times1.5\times1\tfrac13=5</span> ft³<br>(Calculator: <span class="tex">2.5\times1.5\times16\div12=5</span>.) Both ways give <b>5 ft³</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4d" data-section="4. Two Ways, One Answer">
+  <h3 class="sub">Two ways, one answer</h3>
+  <p>Example 8 side by side: change at the end, or change at the start.</p>
+  <div class="explainer" data-explainer="twoWays"></div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u4l1"></section>
+
+<!-- ================= 5. On the job ================= -->
+<section class="card" data-ink="s5" data-section="5. Concrete, Soil and Gravel">
+  <div class="sec-h"><span class="badge">5</span><h2>Volume on the Job: Concrete, Soil and Gravel</h2></div>
+  <p>Concrete, gravel, sand, topsoil and mulch are sold by volume: by the <b>cubic yard</b> or the <b>cubic metre</b>. On a job site, “a yard of concrete” means 1 yd³. The thickness of a slab or a layer is usually small (inches or centimetres), so change it to feet or metres first: <span class="tex">4\text{ in}=4\div12</span> ft, <span class="tex">10\text{ cm}=0.1</span> m.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Ordering material</b>
+    <div class="u4l1-order"><span><b>1</b>Write all the lengths in the same unit (feet or metres).</span><span><b>2</b>Find the volume.</span><span><b>3</b>Change to the unit the supplier sells (ft³ ÷ 27 = yd³).</span><span><b>4</b><b>Round up</b> to an amount you can buy.</span><span><b>5</b>Find the cost.</span></div></div>
+  <div class="explainer" data-explainer="pour"></div>
+  <div class="def-grid">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Always round <b>up</b> when ordering. If you round down, the job comes up short, and a second small delivery costs extra.</div></div>
+    <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Thickness 4 in: let the calculator do the ÷ 12. <span class="keys">12 <kbd>×</kbd> 10 <kbd>×</kbd> 4 <kbd>÷</kbd> 12 <kbd>ENTER</kbd></span> shows 40 (ft³).</div>
+      <div class="u4l1-pcol"><button class="pill" type="button" data-keys="12 × 10 × 4 ÷ 12 =">ft³</button><button class="pill" type="button" data-keys="40 ÷ 27 =">yd³</button></div></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Tyrell’s patio</h3></div>
+  <p class="q">Tyrell is pouring a concrete patio 12 ft long and 10 ft wide. The slab will be 4 in thick. Concrete is sold in half cubic yards (1, 1.5, 2, …) and costs $215.00 per yd³.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Find the volume of the slab in ft³.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">4 in <span class="tex">=4\div12=\tfrac13</span> ft<br><span class="tex">V=12\times10\times\tfrac13</span><br><span class="tex">V=40</span> ft³</div></div></div>
+    <div class="part"><div class="pl">(b) Change it to yd³. How much should Tyrell order?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">40\div27=1.48\ldots</span> yd³<br>Round up to the next half yard.<br>He should order <b>1.5 yd³</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) What will the concrete cost?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1.5\times\$215.00=\$322.50</span><br>The concrete will cost <b>$322.50</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>Gravel for a farm driveway</h3></div>
+  <p class="q">A farm driveway is 15 m long and 3.5 m wide. It needs a layer of gravel 10 cm deep. The gravel pit sells only whole cubic yards, at $48.00 per yd³. Use 1 m³ ≈ 1.31 yd³.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the volume of gravel in m³.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">10 cm <span class="tex">=0.1</span> m<br><span class="tex">V=15\times3.5\times0.1=5.25</span> m³</div></div></div>
+    <div class="part"><div class="pl">(b) How many cubic yards should be ordered, and what will they cost?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5.25\times1.31=6.8775</span> yd³<br>Round up to <b>7 yd³</b>.<br><span class="tex">7\times\$48.00=\$336.00</span>. Order 7 yd³, for <b>$336.00</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. Working Backwards">
+  <h3 class="sub">Working backwards</h3>
+  <p>If you know the volume and the base, you can find the height (or thickness, or depth). Undo the multiplication by dividing.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <span class="tex">V=(\text{area of base})\times h</span> &nbsp; so &nbsp; <b><span class="tex">h=V\div(\text{area of base})</span></b>
+    <div class="eg">For a box: <span class="tex">h=V\div(l\times w)</span></div></div>
+  <div class="explainer" data-explainer="backwards"></div>
+</section>
+
+<section class="card example" data-ink="ex11" data-section="Example 11">
+  <div class="ex-head"><span class="ex-tag">Example 11</span><h3>Mia’s shed slab</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Mia has 0.9 m³ of concrete left in the truck. She uses it all to pour a slab for a shed, 3 m by 2.5 m. How thick will the slab be, in centimetres? Check your answer.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Area of base <span class="tex">=3\times2.5=7.5</span> m²<br><span class="tex">h=0.9\div7.5=0.12</span> m <span class="tex">=12</span> cm<br>Check: <span class="tex">3\times2.5\times0.12=0.9</span> m³ ✓ &nbsp; The slab will be <b>12 cm</b> thick.</div></div></div>
+  </div>
+  <div class="space" id="ex11-space"></div>
+  <button class="more" data-more="ex11-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Volume</b> is the space inside, counted in <b>cubes</b> (cm³, in³, ft³, yd³, m³). Box: <span class="tex">V=l\times w\times h</span>, all lengths in the same unit.</div>
+    <div><b>Any prism or cylinder: V = (area of base) × height.</b> Triangle base: <span class="tex">\tfrac12bh</span>. Cylinder: <span class="tex">V=\pi r^2h</span>, with <span class="tex">r=d\div2</span>. Estimate with <span class="tex">\pi\approx3</span>.</div>
+    <div><b>Cubic units:</b> 1 ft³ = 1728 in³, 1 yd³ = 27 ft³, 1 m³ = 1 000 000 cm³. Big → small: multiply. Small → big: divide. Or change the lengths first.</div>
+    <div><b>On the job:</b> same units, volume, change to the unit sold, <b>round up</b>, find the cost. <b>Backwards:</b> <span class="tex">h=V\div(\text{area of base})</span>.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u4l1">
+    <div><div class="kicker">Your turn</div><b>Assignment 1 · Questions 9–17</b><div class="muted">Changing cubic units, a freezer, soil for a garden bed, concrete and mulch orders, working backwards, and three quick checks. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l2/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 2 — Capacity: Litres, Gallons, and US vs British Units</b><div class="muted">How much does it <i>hold</i>? Millilitres and cubic centimetres, and why an American gallon is smaller than a British one.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u4l1.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u4l1', homeHref: '../../', title: '4.1 Volume of Prisms and Cylinders' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

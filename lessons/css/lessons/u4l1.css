@@ -1,0 +1,65 @@
+/* Math 10-3 · Unit 4 · Lesson 1 — Volume of Prisms and Cylinders: styles used only on this page (prefix u4l1-).
+ * Colours: lengths dark, base areas brown, volumes red (answers), checks green, estimates grey-blue. */
+.u4l1 .ex-cap .katex { font-size: 1.04em; }
+.u4l1 .ans .katex, .u4l1 .pl .katex { font-size: 1.06em; }
+.u4l1-oc2 { margin-top: 8px; }
+.u4l1-today { display: inline-block; margin-top: 4px; color: var(--brand2); font-weight: 700; }
+.u4l1-pcol { display: flex; gap: 8px; flex: none; }
+.u4l1-gap { margin-top: 14px; }
+.u4l1 .def-grid > .tip { margin: 0; }
+
+/* ---------- page pieces ---------- */
+.u4l1-refs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 14px; }
+.u4l1-refs > div { background: var(--brand-soft); border-radius: 14px; padding: 8px 14px 12px; font-size: 18px; line-height: 1.35; }
+.u4l1-refpic { display: grid; place-items: center; height: 110px; }
+.u4l1-fig { display: grid; place-items: center; }
+.u4l1-fsvg { display: block; overflow: visible; max-width: 100%; height: auto; }
+.u4l1-ex1 { display: grid; grid-template-columns: 330px 1fr; gap: 16px; align-items: center; }
+.u4l1-ex3 { display: grid; grid-template-columns: 350px 1fr; gap: 16px; align-items: center; }
+.u4l1-ex4 { display: grid; grid-template-columns: 1fr 390px; gap: 16px; align-items: center; margin-bottom: 10px; }
+.u4l1-ex4 .q { margin: 0; }
+.u4l1-cdef { display: grid; grid-template-columns: 1fr 200px; gap: 12px; align-items: center; }
+.u4l1-conv .u4l1-convg { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; margin: 8px 0 4px; }
+.u4l1-convg > div { background: #fff; border-radius: 10px; padding: 8px 14px; line-height: 1.6; font-size: 19px; }
+.u4l1-order { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 8px; }
+.u4l1-order > span { background: #fff; border-radius: 10px; padding: 8px 10px; font-size: 17px; line-height: 1.3; }
+.u4l1-order > span > b:first-child { display: block; font: 800 22px var(--round); color: var(--brand2); }
+
+.u4l1-tbl { border-collapse: collapse; font-size: 19px; margin: 8px auto 6px; background: #fff; width: 100%; }
+.u4l1-tbl th, .u4l1-tbl td { border: 2px solid #b9ad97; padding: 8px 14px; text-align: center; height: 48px; }
+.u4l1-tbl th { background: var(--brand-soft); font: 800 17px var(--round); }
+.u4l1-tbl td:first-child { text-align: left; font-weight: 600; }
+.u4l1-t2 td:nth-child(3) { width: 230px; } .u4l1-t2 td:nth-child(4) { width: 190px; }
+.u4l1-t7 td:nth-child(2) { width: 300px; } .u4l1-t7 td:nth-child(3) { width: 220px; }
+
+/* ---------- explainer pieces ---------- */
+.u4l1-svg { overflow: visible; pointer-events: none; }
+.u4l1-c { box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; }
+.u4l1-lab { font: 700 19px var(--round); color: var(--ink); white-space: nowrap; pointer-events: none; }
+.u4l1-lab.ctr { transform: translate(-50%, -50%); }
+.u4l1-lab.dim { background: rgba(255,255,255,.85); border-radius: 6px; padding: 1px 6px; }
+.u4l1-lab.blue { color: #1f5bd6; } .u4l1-lab.red { color: var(--red); }
+.u4l1-lab.area { font: 800 20px var(--round); color: #6e4a1c; background: rgba(255,255,255,.88); border-radius: 8px; padding: 2px 8px; }
+.u4l1-lab.note { font: 600 15px var(--font); color: var(--muted); white-space: normal; }
+.u4l1-lab.tag { font: 600 18px/1.35 var(--font); text-align: center; }
+.u4l1-lab.tag b { color: var(--red); }
+.u4l1-lab.pl { font: 600 20px var(--font); }
+.u4l1-lab.way { font: 600 20px var(--font); color: var(--brand); }
+.u4l1-ln { box-sizing: border-box; display: flex; align-items: center; font-size: 20.5px; line-height: 1.25; padding: 0 12px; background: #fff; border: 2px solid var(--line); border-radius: 10px; }
+.u4l1-ln b { color: var(--brand); }
+.u4l1-ln.big { border-color: var(--red); font-size: 22px; } .u4l1-ln.big .katex { color: var(--red); }
+.u4l1-ln.ok { border-color: var(--ok); background: #eef8f2; }
+.u4l1-ln.no { border-color: var(--red); background: #fbecea; }
+.u4l1-ln.est { border-color: #8aa6c8; background: #eef3f9; color: #2c4a6e; }
+.u4l1-cnt { background: #fff6e5; border: 2px solid #9a6a24; border-radius: 12px; font: 600 20px var(--round); }
+.u4l1-cnt b { color: var(--red); font-size: 24px; margin-right: 6px; }
+.u4l1-key { background: var(--brand-soft); border: 2px solid var(--brand2); border-radius: 12px; font-size: 21px; color: var(--brand); }
+.u4l1-res { background: #fff; border: 3px solid var(--red); border-radius: 14px; font-size: 21px; padding: 0 10px; }
+.u4l1-res .katex { color: var(--red); }
+.u4l1-lcd { box-sizing: border-box; background: #c9d4bf; border: 5px solid #3a4254; border-radius: 12px; padding: 3px 12px; font: 700 18px/1.25 ui-monospace, Menlo, monospace; color: #1d2a18; box-shadow: inset 0 2px 6px rgba(0,0,0,.25); }
+.u4l1-lcd .e { white-space: nowrap; }
+.u4l1-lcd .r { text-align: right; font-size: 26px; font-weight: 800; }
+.u4l1-mach { border: 4px solid var(--brand); border-radius: 16px; font-size: 30px; background: #fff6e5; }
+.u4l1-mach.div { border-color: #1f5bd6; background: #eaf0fc; }
+.u4l1-why { background: #f6f5f0; border-radius: 10px; font-size: 20px; }
+.u4l1-card { background: #fff; border: 3px solid var(--ink); border-radius: 12px; font-size: 24px; }

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Extra Earnings · Math 10-3 2.6</title>
+<meta name="description" content="Math 10-3 Unit 2 Lesson 6: extra earnings. Tips and tip percents, tip pools shared by hours, tip-outs, bonuses, shift premiums, danger pay and isolation pay, and adding it all up to find total gross pay. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u2l6.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u2l6">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Flashlight Bridge">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Flashlight Bridge</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Four friends finish a late shift at 1 a.m. They must cross an old footbridge in the dark.</p><p class="vw-ctx">Only <b>2 people</b> fit on the bridge at once. They have <b>one flashlight</b>, and anyone crossing needs it, so it must be carried back each time.</p><p class="vw-ctx">Ana takes <b>1 min</b>, Ben <b>2 min</b>, Cam <b>5 min</b>, Dee <b>10 min</b>. A pair walks at the <b>slower</b> one’s speed.</p><p class="vw-ask">What is the fewest minutes it takes to get all four across?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A rope footbridge over a dark canyon at night, with a flashlight beam sweeping back and forth">
+    <rect x="0" y="0" width="330" height="250" rx="16" fill="#1d2640"/>
+    <circle cx="272" cy="44" r="20" fill="#f4ecd0"/><circle cx="281" cy="38" r="18" fill="#1d2640"/>
+    <g fill="#f4ecd0"><circle cx="40" cy="30" r="1.8"><animate attributeName="opacity" values="1;.2;1" dur="2.2s" repeatCount="indefinite"/></circle><circle cx="120" cy="52" r="1.5"><animate attributeName="opacity" values=".3;1;.3" dur="2.8s" repeatCount="indefinite"/></circle><circle cx="196" cy="24" r="1.8"><animate attributeName="opacity" values="1;.3;1" dur="3.1s" repeatCount="indefinite"/></circle><circle cx="230" cy="82" r="1.4"><animate attributeName="opacity" values=".2;1;.2" dur="2.5s" repeatCount="indefinite"/></circle></g>
+    <path d="M0 150 L52 140 L60 250 L0 250 Z" fill="#3a3220"/><path d="M330 150 L278 140 L270 250 L330 250 Z" fill="#3a3220"/>
+    <path d="M52 140 Q165 196 278 140" fill="none" stroke="#9a6a24" stroke-width="5"/>
+    <path d="M52 112 Q165 168 278 112" fill="none" stroke="#c9a26b" stroke-width="2.5"/>
+    <g stroke="#c9a26b" stroke-width="2"><line x1="80" y1="125" x2="80" y2="153"/><line x1="110" y1="137" x2="110" y2="165"/><line x1="140" y1="145" x2="140" y2="173"/><line x1="170" y1="148" x2="170" y2="176"/><line x1="200" y1="145" x2="200" y2="173"/><line x1="230" y1="137" x2="230" y2="165"/><line x1="258" y1="126" x2="258" y2="154"/></g>
+    <line x1="52" y1="112" x2="52" y2="142" stroke="#6e4a1c" stroke-width="4"/><line x1="278" y1="112" x2="278" y2="142" stroke="#6e4a1c" stroke-width="4"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;150 6;0 0" keyTimes="0;0.5;1" dur="5s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
+      <g><animateTransform attributeName="transform" type="rotate" values="-8 74 118;8 74 118;-8 74 118" dur="1.6s" repeatCount="indefinite"/>
+        <path d="M80 116 L160 92 L160 150 Z" fill="#fff3b0" opacity=".35"/>
+        <rect x="66" y="112" width="16" height="10" rx="2" fill="#e9c46a" stroke="#6e4a1c" stroke-width="2"/>
+      </g>
+    </g>
+    <text x="165" y="232" font-size="40" font-weight="800" fill="#e9c46a" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Stuck? Ana could walk each friend over and come back: that takes <b>19 min</b>. Can you <b>beat 19</b>?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>17 minutes!</b> The trick: send the two <b>slowest</b> across <b>together</b>, so their slow times overlap.
+      Ana + Ben cross (2) · Ana back (1) · Cam + Dee cross (10) · Ben back (2) · Ana + Ben cross (2): <span class="tex">2+1+10+2+2=17</span>. <span class="muted">Today: the extra money workers earn for late shifts, good service and hard jobs.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 2 Earning an Income · Lesson 6</div>
+  <h1>Extra Earnings: Tips, Bonuses and Shift Premiums</h1>
+  <p class="lede">Many jobs pay <b>extra</b> money on top of the wage or salary: tips from customers, bonuses for good work, and more per hour for late shifts or hard jobs. Today we find each one and add it all up to get the <b>gross pay</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find a <b>tip</b> and a <b>tip percent</b>, and estimate a tip in my head</li>
+      <li>share a <b>tip pool by hours</b> and find a <b>tip-out</b></li>
+      <li>find a <b>bonus</b>: a lump sum, a percent, or an amount per item</li>
+      <li>find pay with a <b>shift premium</b>, <b>danger pay</b> or <b>isolation pay</b></li>
+      <li>add every kind of pay to find the <b>total gross pay</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N2</b> Demonstrate an understanding of income, including: wages; salary; contracts; commissions; piecework to calculate gross pay and net pay.<br><span class="muted">Today: extra earnings that are part of gross pay.</span></div>
+</section>
+
+<!-- ================= 1. Tips ================= -->
+<section class="card" data-ink="s1" data-section="1. Tips">
+  <div class="sec-h"><span class="badge">1</span><h2>Tips</h2></div>
+  <p>Many jobs pay extra money on top of the base wage or salary. All of this extra money is part of your <b>gross pay</b> (your pay before deductions).</p>
+  <p>A <b>tip</b> (also called a <b>gratuity</b>) is money a customer gives to thank a worker for good service. Servers, bartenders, hairstylists, taxi and delivery drivers often earn tips. A tip is usually a <b>percent of the bill</b>. In Canada, 15% to 20% is common. In this booklet, the tip is found on the bill <b>before tax</b>.</p>
+  <p>In Alberta, a server must still be paid at least minimum wage ($15.00/h as of 2026; rates can change). The tips are <b>extra</b>, and they belong to the workers, not to the owner.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Tips</b>
+    <div class="eg"><b>tip = bill × tip rate</b> &emsp;&emsp; tip percent <span class="tex">=\dfrac{\text{tip}}{\text{bill}}\times100</span></div>
+    <div class="eg"><b>gross pay = wage pay + tips</b> &emsp; (wage pay = hours × hourly wage)</div></div>
+  <div class="tip u2l6-esttip"><div class="tip-ic">≈</div><div><b>Estimate.</b> Round the bill. Find <b>10%</b> by moving the decimal one place left. Then <b>15% = 10% + half of 10%</b>, and <b>20% = 2 × 10%</b>.</div></div>
+  <div class="explainer" data-explainer="tipCalc"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Dinner and a haircut</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A family’s dinner bill in Calgary is <b>$64.80</b> before tax. Estimate a 15% tip in your head. Then find a <b>15%</b> tip and a <b>20%</b> tip.</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: $64.80 is about $65. 10% is $6.50, half of that is $3.25.<br><span class="tex">\$6.50+\$3.25=\$9.75</span>, so about <b>$9.75</b>.<br>15%: <span class="tex">\$64.80\times0.15=\$9.72</span><br>20%: <span class="tex">\$64.80\times0.20=\$12.96</span></div></div></div>
+    <div class="part"><div class="pl">(b) A customer leaves a <b>$9.00</b> tip on a <b>$52.00</b> haircut. What percent tip is that? Round to the nearest tenth of a percent.</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">tip percent <span class="tex">=\dfrac{9.00}{52.00}\times100</span><br><span class="tex">=0.17307\ldots\times100\approx17.3\%</span><br>The customer tipped about <b>17.3%</b>.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Tip percent in one line: <span class="keys">9 <kbd>÷</kbd> 52 <kbd>×</kbd> 100 <kbd>ENTER</kbd></span> shows 17.30769…, about <b>17.3%</b>.</div>
+    <button class="pill" type="button" data-keys="9 ÷ 52 × 100 =">Show me</button></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Wage Pay Plus Tips">
+  <h3 class="sub">Wage pay plus tips</h3>
+  <p>A server’s gross pay for a shift is the <b>wage pay</b> plus the <b>tips</b>. Dividing by the hours shows what the shift was really worth per hour.</p>
+  <div class="explainer" data-explainer="shiftTips"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Noor’s Friday shift</h3></div>
+  <p class="q">Noor is a server at a restaurant in Lethbridge. She earns <b>$15.50/h</b>. On Friday she worked a <b>6-hour</b> shift. Her customers’ bills added up to <b>$1240.00</b>, and her tips were <b>16%</b> of the bills.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find Noor’s gross pay for the shift.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">wage pay <span class="tex">=6\times\$15.50=\$93.00</span><br>tips <span class="tex">=\$1240.00\times0.16=\$198.40</span><br>gross pay <span class="tex">=\$93.00+\$198.40=\$291.40</span><br>Noor earned <b>$291.40</b> for the shift.</div></div></div>
+    <div class="part"><div class="pl">(b) How much did she earn per hour, with tips?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$291.40\div6=\$48.566\ldots\approx\$48.57</span><br>With tips, she earned about <b>$48.57</b> per hour, more than three times her wage.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1c" data-section="1. Working Backwards">
+  <h3 class="sub">Working backwards: from the tips to the bills</h3>
+  <p>Sometimes you know the tips and the tip rate, and you want the total of the bills. Work backwards: <b>divide the tips by the rate</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Working backwards</b> &nbsp; bill = tip ÷ tip rate
+    <div class="eg">$30 is 15% of the bill: &nbsp;<span class="tex">\$30\div0.15=\$200</span></div></div>
+  <div class="explainer" data-extra data-explainer="tipBack"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Tips change from day to day. A busy Saturday and a slow Tuesday can be very different, so workers often talk about their <b>average</b> tips.</div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Mateo’s deliveries</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Mateo delivers food in Airdrie. Last weekend he got <b>$86.40</b> in tips. His tips were <b>12%</b> of the orders he delivered, on average. What was the total of his orders?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">orders <span class="tex">=\$86.40\div0.12=\$720.00</span><br>(Or find 1% first: <span class="tex">\$86.40\div12=\$7.20</span>, then <span class="tex">100\%=100\times\$7.20=\$720.00</span>.)<br>Check: <span class="tex">\$720.00\times0.12=\$86.40</span> ✓<br>Mateo’s orders totalled <b>$720.00</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Pooled tips and tip-outs ================= -->
+<section class="card" data-ink="s2" data-section="2. Pooled Tips and Tip-Outs">
+  <div class="sec-h"><span class="badge">2</span><h2>Pooled Tips and Tip-Outs</h2></div>
+  <p>In many restaurants, all the tips go into one <b>tip pool</b>. At the end of the shift, the pool is shared. It can be shared <b>equally</b>, or <b>by hours worked</b>, so a person who worked longer gets more. Sharing by hours is sharing in a ratio, as in Unit 1.</p>
+  <p>Servers often also give a part of their tips to the kitchen staff, dishwashers or bussers. This is called a <b>tip-out</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Sharing a tip pool by hours</b>
+    <div class="eg"><b>Step 1.</b> Add everyone’s hours to get the total hours.</div>
+    <div class="eg"><b>Step 2.</b> Find the share for 1 hour: pool ÷ total hours.</div>
+    <div class="eg"><b>Step 3.</b> Multiply each person’s hours by the share for 1 hour.</div>
+    <div class="eg"><b>Step 4.</b> Check: the shares add up to the pool.</div></div>
+  <div class="explainer" data-explainer="tipJar"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>The café’s tip pool</h3></div>
+  <p class="q">Four servers at a café in Cochrane share a tip pool of <b>$612.00</b> from Saturday.</p>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(a) How much does each server get if they share the pool <b>equally</b>?</div><div class="work" style="--h:80px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$612.00\div4=\$153.00</span> each</div></div></div>
+    <div class="part"><div class="pl">(b) The café shares the pool <b>by hours worked</b>. Complete the table.</div>
+      <table class="u2l6-tbl u2l6-pool">
+        <tr><th>Server</th><th>Mia</th><th>Jon</th><th>Priya</th><th>Sam</th><th>Total</th></tr>
+        <tr><td>Hours</td><td>8</td><td>6</td><td>5</td><td>5</td><td><span data-reveal="&nbsp;">24</span></td></tr>
+        <tr><td>Share</td><td><span data-reveal="&nbsp;">$204.00</span></td><td><span data-reveal="&nbsp;">$153.00</span></td><td><span data-reveal="&nbsp;">$127.50</span></td><td><span data-reveal="&nbsp;">$127.50</span></td><td><span data-reveal="&nbsp;">$612.00</span></td></tr>
+      </table>
+      <div class="work" style="--h:150px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: <span class="tex">8+6+5+5=24</span> h<br>Step 2: <span class="tex">\$612.00\div24=\$25.50</span> for each hour<br>Step 3: Mia <span class="tex">8\times\$25.50=\$204.00</span>; Jon <span class="tex">6\times\$25.50=\$153.00</span>; Priya and Sam <span class="tex">5\times\$25.50=\$127.50</span> each<br>Step 4: <span class="tex">\$204.00+\$153.00+\$127.50+\$127.50=\$612.00</span> ✓</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>The bar’s tip-out</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">The bar at a Red Deer restaurant collects <b>$825.00</b> in tips on a Friday night. First, <b>30%</b> of the tips go to the kitchen staff. The rest is shared <b>equally</b> by the <b>3 bartenders</b>. How much does each bartender get?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">kitchen <span class="tex">=\$825.00\times0.30=\$247.50</span><br>left for the bartenders <span class="tex">=\$825.00-\$247.50=\$577.50</span> &nbsp;(or <span class="tex">\$825.00\times0.70</span>)<br>each bartender <span class="tex">=\$577.50\div3=\$192.50</span><br>Each bartender gets <b>$192.50</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. The Tip-Out, Step by Step">
+  <h3 class="sub">The tip-out, step by step</h3>
+  <p>Take the kitchen’s part off the top first. Then share what is left.</p>
+  <div class="explainer" data-explainer="tipOut"></div>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–6">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 6 · Questions 1–6</h2>
+  <p class="pr-t">Try these before we go on to bonuses and shift premiums.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Estimate and find tips</span>
+    <span><b>2</b>Tip percent</span>
+    <span><b>3</b>Wage pay + tips</span>
+    <span><b>4</b>Tips from gross pay; bills from tips</span>
+    <span><b>5</b>A tip pool by hours</span>
+    <span><b>6</b>Tip-outs</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 6.</span><a class="pill" href="../../../#/lesson/u2l6">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Bonuses ================= -->
+<section class="card" data-ink="s3" data-section="3. Bonuses">
+  <div class="sec-h"><span class="badge">3</span><h2>Bonuses</h2></div>
+  <p>A <b>bonus</b> is extra money paid for good work, for reaching a goal, or for agreeing to stay with a company. A bonus can be:</p>
+  <div class="u2l6-kinds">
+    <div><b>A lump sum</b>one set amount, like $500</div>
+    <div><b>A percent</b>of your salary, wages or sales, like 4% of your yearly salary</div>
+    <div><b>Per sale or per item</b>like $15 for each phone plan you sell</div>
+  </div>
+  <p>Year-end bonuses, <b>signing</b> bonuses (for joining or coming back) and <b>referral</b> bonuses (for bringing in a new worker) are common. A bonus is part of gross pay.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Bonuses</b>
+    <div class="eg">percent bonus = amount × bonus rate &emsp;&emsp; per-item bonus = number of items × bonus per item</div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>A percent and a per-item bonus</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Kyle is a parts manager at a car dealership. He earns <b>$46&#8239;800</b> a year. His year-end bonus is <b>4%</b> of his salary. Find his bonus.</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4\%=0.04</span><br>bonus <span class="tex">=\$46\,800\times0.04=\$1872.00</span><br>Kyle’s bonus is <b>$1872.00</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A phone store pays a bonus for each plan sold: <b>$8</b> for a Basic plan, <b>$15</b> for a Plus plan, and <b>$30</b> for a Premium plan. In March, Erin sold <b>12 Basic</b>, <b>7 Plus</b> and <b>4 Premium</b> plans. Find her bonus.</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Basic: <span class="tex">12\times\$8=\$96</span><br>Plus: <span class="tex">7\times\$15=\$105</span><br>Premium: <span class="tex">4\times\$30=\$120</span><br>total <span class="tex">=\$96+\$105+\$120=\$321.00</span><br>Erin’s bonus is <b>$321.00</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Which Bonus Is Better?">
+  <h3 class="sub">Which choice is better?</h3>
+  <p>When you can choose between a <b>lump sum</b> and a <b>percent</b>, work out the percent in dollars. Then compare.</p>
+  <div class="explainer" data-explainer="bonusChoice"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Rosa’s holiday bonus</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">A hotel offers its housekeepers a choice of holiday bonus: a lump sum of <b>$750</b>, or <b>3%</b> of their pay for the year. Rosa earned <b>$28&#8239;600</b> this year. Which bonus should she choose, and how much more is it?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">3% bonus <span class="tex">=\$28\,600\times0.03=\$858.00</span><br><span class="tex">\$858.00-\$750.00=\$108.00</span><br>Rosa should choose the <b>3% bonus</b>. It is <b>$108.00</b> more than the lump sum.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u2l6"></section>
+
+<!-- ================= 4. Shift premiums, danger pay and isolation pay ================= -->
+<section class="card" data-ink="s4" data-section="4. Shift Premiums">
+  <div class="sec-h"><span class="badge">4</span><h2>Shift Premiums, Danger Pay and Isolation Pay</h2></div>
+  <p>Some hours or some jobs are harder, so employers pay extra for them.</p>
+  <div class="u2l6-kinds">
+    <div><b>Shift premium</b>extra pay per hour for evenings, nights or weekends (nurses, health-care aides, security guards, factory and warehouse workers). Paid only for the hours in that time, for example every hour after 6:00 p.m.</div>
+    <div><b>Danger pay</b>(or hazard pay) extra pay for risky work, such as fighting wildfires or working on power lines.</div>
+    <div><b>Isolation pay</b>extra pay for working far from towns, such as at a northern mine or an oil sands camp. It can be per hour, per day or per month.</div>
+  </div>
+  <p>Extra pay can be a <b>dollar amount per hour</b>, or a <b>percent more</b> per hour.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Extra pay per hour</b>
+    <div class="eg"><b>$ per hour:</b> premium pay = premium hours × premium per hour &emsp;(add it to the regular pay)</div>
+    <div class="eg"><b>percent:</b> new hourly rate = wage × (1 + rate) &emsp; e.g. 30% more: wage × 1.30</div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A shift premium is paid only on the hours <b>inside</b> the premium time, not on the whole shift. Count those hours carefully on the timesheet.</div></div>
+  <div class="explainer" data-explainer="shiftLine"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Sana’s evening premium</h3></div>
+  <p class="q">Sana is a health-care aide at a seniors’ home in Calgary. She earns <b>$21.60/h</b>, plus an evening premium of <b>$2.50/h</b> for every hour she works <b>after 6:00 p.m.</b> Her breaks are paid. Complete her timesheet and find her gross pay for the week.</p>
+  <div class="part">
+    <table class="u2l6-tbl u2l6-ts">
+      <tr><th>Day</th><th>Start</th><th>End</th><th>Hours worked</th><th>Hours after 6:00 p.m.</th></tr>
+      <tr><td>Monday</td><td>2:00 p.m.</td><td>10:00 p.m.</td><td><span data-reveal="&nbsp;">8</span></td><td><span data-reveal="&nbsp;">4</span></td></tr>
+      <tr><td>Tuesday</td><td>10:00 a.m.</td><td>6:00 p.m.</td><td><span data-reveal="&nbsp;">8</span></td><td><span data-reveal="&nbsp;">0</span></td></tr>
+      <tr><td>Wednesday</td><td>3:00 p.m.</td><td>11:00 p.m.</td><td><span data-reveal="&nbsp;">8</span></td><td><span data-reveal="&nbsp;">5</span></td></tr>
+      <tr><td>Friday</td><td>4:30 p.m.</td><td>11:30 p.m.</td><td><span data-reveal="&nbsp;">7</span></td><td><span data-reveal="&nbsp;">5.5</span></td></tr>
+      <tr class="tot"><td colspan="3">Total</td><td><span data-reveal="&nbsp;">31</span></td><td><span data-reveal="&nbsp;">14.5</span></td></tr>
+    </table>
+    <div class="work" style="--h:170px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No day is over 8 h and the week is under 44 h, so there is no overtime.<br>regular pay <span class="tex">=31\times\$21.60=\$669.60</span><br>premium pay <span class="tex">=14.5\times\$2.50=\$36.25</span><br>gross pay <span class="tex">=\$669.60+\$36.25=\$705.85</span>. Sana’s gross pay is <b>$705.85</b>.</div></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Only the Premium Hours">
+  <h3 class="sub">Only the premium hours get the premium</h3>
+  <p>A common mistake is to add the premium to the wage for <b>every</b> hour of the shift.</p>
+  <div class="explainer" data-explainer="premiumWrong"></div>
+</section>
+
+<section class="card" data-ink="s4c" data-section="4. A Percent More per Hour">
+  <h3 class="sub">A percent more per hour</h3>
+  <p>“30% more per hour” means the new rate is the wage <b>plus</b> 30% of the wage: wage × 1.30. The danger pay is the difference between the new pay and the regular pay.</p>
+  <div class="explainer" data-explainer="dangerPay"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>The fire line and the mine camp</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A wildfire crew member earns <b>$24.00/h</b>. For hours on the fire line, she gets danger pay of <b>30% more</b> per hour. How much does she earn for an <b>8-hour</b> day on the fire line? How much of that is danger pay?</div><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">new rate <span class="tex">=\$24.00\times1.30=\$31.20</span>/h<br>day’s pay <span class="tex">=8\times\$31.20=\$249.60</span><br>without danger pay: <span class="tex">8\times\$24.00=\$192.00</span><br>danger pay <span class="tex">=\$249.60-\$192.00=\$57.60</span><br>She earns <b>$249.60</b>; <b>$57.60</b> of it is danger pay.</div></div></div>
+    <div class="part"><div class="pl">(b) A cook at a northern mine camp earns <b>$5850 a month</b>. He can choose isolation pay of <b>$650 a month</b>, or <b>10%</b> of his monthly pay. His contract is <b>4 months</b> long. Which choice pays more, and by how much?</div><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">flat: <span class="tex">4\times\$650=\$2600.00</span><br>10%: <span class="tex">\$5850\times0.10=\$585.00</span> a month;<br><span class="tex">4\times\$585.00=\$2340.00</span><br><span class="tex">\$2600.00-\$2340.00=\$260.00</span><br>The <b>$650 a month</b> choice pays <b>$260.00</b> more.</div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= 5. Putting it all together ================= -->
+<section class="card" data-ink="s5" data-section="5. Total Gross Pay">
+  <div class="sec-h"><span class="badge">5</span><h2>Putting It All Together: Total Gross Pay</h2></div>
+  <table class="u2l6-tbl u2l6-extras">
+    <tr><th>Extra</th><th>Jobs that often get it</th><th>Good for the worker</th><th>Not so good</th></tr>
+    <tr><td>Tips</td><td>servers, bartenders, stylists, drivers</td><td>good service can mean a lot more money</td><td>tips change from day to day; slow days pay less</td></tr>
+    <tr><td>Bonus</td><td>sales, office jobs, trades, hotels</td><td>a reward for working hard or staying</td><td>often not promised; can change each year</td></tr>
+    <tr><td>Shift premium</td><td>nurses, aides, guards, factory work</td><td>more pay per hour</td><td>late hours are hard on sleep and family time</td></tr>
+    <tr><td>Danger or isolation pay</td><td>firefighting, power lines, mines, camps</td><td>much higher pay</td><td>risky, or far from home for weeks</td></tr>
+  </table>
+  <p>To find total gross pay, find each kind of pay <b>on its own</b>, then add. A table keeps it organized.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Total gross pay</b>
+    <div class="eg"><b>Step 1:</b> Regular pay = regular hours × wage. Overtime pay = overtime hours × 1.5 × wage (Lesson 3).</div>
+    <div class="eg"><b>Step 2:</b> Add each extra: premiums, tips, bonuses.</div>
+    <div class="eg"><b>Step 3:</b> Add everything to get the gross pay.</div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Overtime is 1.5 times the <b>base</b> wage. A shift premium in dollars per hour is added on top, the same amount for every premium hour (overtime or not), unless the question says something else.</div></div>
+  <div class="explainer" data-explainer="payStack"></div>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>Diego’s pay summary</h3></div>
+  <p class="q">Diego is a cook at a hotel in Banff. He earns <b>$19.00/h</b>. This week he worked <b>46 hours</b>, and never more than 8 hours in a day. He gets a night premium of <b>$1.50/h</b>, and <b>20</b> of his hours were night hours. His share of the kitchen tip-out was <b>$142.75</b>. Complete his pay summary.</p>
+  <div class="part">
+    <table class="u2l6-tbl u2l6-sum">
+      <tr><th>Type of pay</th><th>Work</th><th>Amount</th></tr>
+      <tr><td>Regular pay</td><td><span data-reveal="&nbsp;"><span class="tex">44\times\$19.00</span></span></td><td><span data-reveal="&nbsp;">$836.00</span></td></tr>
+      <tr><td>Overtime pay</td><td><span data-reveal="&nbsp;"><span class="tex">2\times\$28.50</span></span></td><td><span data-reveal="&nbsp;">$57.00</span></td></tr>
+      <tr><td>Night premium</td><td><span data-reveal="&nbsp;"><span class="tex">20\times\$1.50</span></span></td><td><span data-reveal="&nbsp;">$30.00</span></td></tr>
+      <tr><td>Tip-out share</td><td></td><td>$142.75</td></tr>
+      <tr class="tot"><td>Gross pay</td><td></td><td><span data-reveal="&nbsp;">$1065.75</span></td></tr>
+    </table>
+    <div class="work" style="--h:140px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No day is over 8 h, so use the weekly rule: <span class="tex">46-44=2</span> h of overtime, and 44 regular hours.<br>overtime rate <span class="tex">=1.5\times\$19.00=\$28.50</span>/h<br>gross pay <span class="tex">=\$836.00+\$57.00+\$30.00+\$142.75=\$1065.75</span>. Diego’s gross pay is <b>$1065.75</b>.</div></div></div>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Tip = bill × rate.</b> Tip percent = tip ÷ bill × 100. Estimate: 15% = 10% + half of 10%; 20% = 2 × 10%. Gross pay = wage pay + tips.</div>
+    <div><b>Tip pool by hours:</b> pool ÷ total hours = share for 1 hour; × each person’s hours; check the shares add to the pool. A <b>tip-out</b> comes off the top first.</div>
+    <div><b>Bonus:</b> a lump sum, a percent (amount × rate) or per item (items × bonus). To choose, find both in dollars and compare.</div>
+    <div><b>Premiums:</b> only the premium hours × premium per hour. <b>Percent more:</b> wage × (1 + rate). <b>Total gross pay:</b> find each part on its own, then add.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u2l6">
+    <div><div class="kicker">Your turn</div><b>Assignment 6 · Questions 7–18</b><div class="muted">Bonuses, timesheets with premiums, percent-more pay, danger and isolation pay, a mistake to find, and a full pay summary. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l7/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 7 — Deductions and Net Pay: Reading a Pay Stub</b><div class="muted">Gross pay is not what lands in your bank account. CPP, EI and income tax come off first.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u2l6.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u2l6', homeHref: '../../', title: '2.6 Extra Earnings' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

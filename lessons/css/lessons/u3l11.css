@@ -1,0 +1,50 @@
+/* Math 10-3 · Unit 3 · Lesson 11 — Surface Area of Cylinders, Pyramids and Cones: styles used only on this page (prefix u3l11-).
+ * Colours: circumference / curved edges blue, slant heights red, areas brown on white, totals red. */
+.u3l11 .ans .katex, .u3l11 .pl .katex { font-size: 1.06em; }
+.u3l11-list { margin: 0 0 12px; padding-left: 1.4em; font-size: 20px; line-height: 1.45; }
+.u3l11-kg { display: grid; grid-template-columns: 1fr 1.6fr; gap: 12px; margin: 8px 0 6px; }
+.u3l11-kg > div { background: #fff; border-radius: 10px; padding: 8px 14px; font-size: 19px; }
+.u3l11-pcol { display: flex; gap: 8px; flex: none; }
+.u3l11-gap { margin-top: 14px; }
+.u3l11 .def-grid > .tip { margin: 0; }
+.u3l11-kt { border-collapse: collapse; width: 100%; margin: 8px 0 2px; font-size: 19px; background: #fff; }
+.u3l11-kt td { border: 2px solid #d9c9ae; padding: 7px 12px; }
+.u3l11-kt td:nth-child(2) { font-weight: 700; color: var(--brand); white-space: nowrap; }
+
+/* example figures */
+.u3l11-exfig { display: grid; grid-template-columns: 1fr 260px; gap: 16px; align-items: center; }
+.u3l11-exfig .q { margin: 0; }
+.u3l11-fig { display: grid; place-items: center; }
+.u3l11-fsvg { display: block; overflow: visible; max-width: 100%; height: auto; }
+.u3l11-ex6 { display: flex; justify-content: center; gap: 80px; margin: 0 0 10px; }
+.u3l11-blanks { font-size: 20px; line-height: 1.9; margin: 6px 0; }
+.u3l11-sort { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; font-size: 19px; margin: 8px 0; }
+.u3l11-sort > div { background: var(--brand-soft); border-radius: 10px; padding: 8px 14px; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.u3l11-sort [data-reveal] { font-weight: 700; color: var(--brand); white-space: nowrap; }
+
+/* explainer pieces */
+.u3l11-svg { overflow: visible; pointer-events: none; }
+.u3l11-lab { font: 700 19px var(--round); color: var(--ink); white-space: nowrap; pointer-events: none; }
+.u3l11-lab.u3l11-ctr { transform: translate(-50%, -50%); }
+.u3l11-lab.u3l11-rot { transform: translate(-50%, -50%) rotate(-90deg); }
+.u3l11-lab.u3l11-dim { background: rgba(255,255,255,.88); border-radius: 6px; padding: 1px 6px; }
+.u3l11-lab.u3l11-red { color: #c93a33; }
+.u3l11-lab.u3l11-blue { color: #1f5bd6; }
+.u3l11-lab.u3l11-small { font: 600 17px var(--font); }
+.u3l11-lab.u3l11-dim.u3l11-small { font: 700 17px var(--round); }
+.u3l11-lab.u3l11-area { font: 800 19px var(--round); color: var(--brand); background: rgba(255,255,255,.92); border: 1.5px solid #d9c9ae; border-radius: 8px; padding: 2px 8px; }
+.u3l11-lab.u3l11-tag { font: 600 19px/1.35 var(--font); background: #fff; border-radius: 8px; padding: 2px 8px; }
+.u3l11-ln { box-sizing: border-box; display: flex; align-items: center; font-size: 19px; line-height: 1.2; padding: 0 12px; background: #fff; border: 2px solid var(--line); border-radius: 10px; white-space: nowrap; overflow: hidden; }
+.u3l11-ln.u3l11-big { border-color: #c93a33; font-size: 20.5px; }
+.u3l11-ln.u3l11-big .katex { color: #c93a33; }
+.u3l11-chk { background: #fff; border: 2px solid var(--brand2); border-radius: 12px; padding: 8px 14px; font: 700 20px var(--round); }
+.u3l11-chk > div { display: flex; justify-content: space-between; gap: 26px; padding: 2px 0; }
+.u3l11-chk .u3l11-y { color: #12805a; font-size: 24px; }
+.u3l11-chk .u3l11-n { color: #c93a33; font-size: 24px; }
+.u3l11-bin { box-sizing: border-box; border: 3px dashed var(--brand2); border-radius: 14px; background: #fbf6ec; }
+.u3l11-bin-h { font: 800 20px var(--round); color: var(--brand); text-align: center; padding: 6px 0 0; }
+.u3l11-rcpt { box-sizing: border-box; background: #fffef8; border: 2px solid #b9ad97; border-radius: 6px; padding: 8px 14px; font: 600 18px ui-monospace, Menlo, monospace; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+.u3l11-rr { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; }
+.u3l11-rr.u3l11-rt { border-top: 2px dashed #b9ad97; margin-top: 4px; padding-top: 8px; font-size: 20px; color: #c93a33; }
+.u3l11-res { box-sizing: border-box; display: flex; align-items: center; justify-content: center; background: #fff; border: 3px solid #c93a33; border-radius: 14px; font-size: 22px; }
+.u3l11-res .katex { color: #c93a33; }
