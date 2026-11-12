@@ -40,7 +40,7 @@ const prodAt = (stage, kind, hgt, cx, bottom) => add(stage, prod(kind, hgt), cx 
 const UP = {
   a: { item: '(a) Pack of AA batteries', what: 'pack of AA batteries', price: 11.92, n: 8, qty: '8 batteries', per: 'battery', piece: 'battery', kind: 'battery', est: '\\$12\\div8=\\$1.50', lcd: '1.49', to: 1.49 },
   b: { item: '(b) Bag of potatoes', what: 'bag of potatoes', price: 5.97, n: 3, qty: '3 kg', per: 'kg', piece: 'kilogram', kind: 'bag', tag: '1 kg', est: '\\$6\\div3=\\$2', lcd: '1.99', to: 1.99 },
-  c: { item: '(c) Bag of bagels', what: 'bag of bagels', price: 4.49, n: 6, qty: '6 bagels', per: 'bagel', piece: 'bagel', kind: 'bagel', est: '\\$4.50\\div6=\\$0.75', lcd: '0.7483333333', to: 0.75,
+  c: { item: '(c) Bag of bagels', what: 'bag of bagels', price: 4.49, n: 6, qty: '6 bagels', per: 'bagel', piece: 'bagel', kind: 'bagel', est: '\\$4.50\\div6=\\$0.75', lcd: '0.748333333', to: 0.75,
     round: 'the next digit is <b>8</b> (5 or more), so round up', rlcd: '0.74<u>8</u>3…' },
   d: { item: '(d) Jug of milk', what: 'jug of milk', price: 6.29, n: 4, qty: '4 L', per: 'L', piece: 'litre', kind: 'carton', est: '\\$6\\div4=\\$1.50', lcd: '1.5725', to: 1.57,
     round: 'the next digit is <b>2</b> (4 or less), so keep the 7', rlcd: '1.57<u>2</u>5' }
@@ -97,8 +97,8 @@ const unitPrice = {
  * 2. Which way do I divide? (Full notes)
  * ===================================================================================== */
 const WW = {
-  a: { price: 11.92, n: 8, one: 'battery', est: 'about $12 for 8, so a bit more than <b>$1</b> each', right: '1.49', rv: 1.49, wrong: '0.6711409396', wv: 0.67 },
-  c: { price: 4.49, n: 6, one: 'bagel', est: 'about $4.50 for 6, so less than <b>$1</b> each', right: '0.7483333333', rv: 0.75, wrong: '1.336302895', wv: 1.34, approx: true }
+  a: { price: 11.92, n: 8, one: 'battery', est: 'about $12 for 8, so a bit more than <b>$1</b> each', right: '1.49', rv: 1.49, wrong: '0.67114094', wv: 0.67 },
+  c: { price: 4.49, n: 6, one: 'bagel', est: 'about $4.50 for 6, so less than <b>$1</b> each', right: '0.748333333', rv: 0.75, wrong: '1.336302895', wv: 1.34, approx: true }
 };
 const wrongWay = {
   title: 'Money ÷ amount, not amount ÷ money',

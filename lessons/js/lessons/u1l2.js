@@ -498,7 +498,7 @@ const fracDec = {
         run: async (c) => { for (let i = 0; i < places; i++) { cells[i + 1].textContent = digs[i]; await pop(c, cells[i + 1]); } heads[places].classList.add('lit'); cells[places].classList.add('lit'); } },
       { cap: `So ${s} is ${num} ${cols[places]}: ${T(`${s}=${F(num, denT)}`)}.`, run: (c) => pop(c, f1) },
       { cap: `Simplify. The GCF of ${num} and ${den === 1000 ? '1 000' : den} is ${g}: ${T(`${F(num, denT)}=${F(num / g, den / g)}`)}.`, run: (c) => pop(c, f2) },
-      { cap: `Check on the calculator: ${s} <kbd>ENTER</kbd>, then <kbd>2nd</kbd> <kbd>F◂▸D</kbd> shows <b>${num / g}┘${den / g}</b>.`,
+      { cap: `Check on the calculator: ${s} <kbd>ENTER</kbd>, then <kbd>2nd</kbd> <kbd>F◂▸D</kbd> shows <b>${num / g}⌟${den / g}</b>.`,
         run: async (c) => { await fadeIn(c, mk, 400, { from: 'translateY(-30px)' }); await show(c, mkl); } }
     ];
   }

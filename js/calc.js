@@ -71,13 +71,13 @@
     neg: function () { return { s: '⁻', k: 'neg' }; }, // small raised minus, like the TI's (−)
     lp: function () { return { s: '(', k: 'lp' }; }, rp: function () { return { s: ')', k: 'rp' }; },
     c: function (s, name) { return { s: s, k: 'const', n: name } },
-    frac: function () { return { s: '┘', k: 'frac' }; }, // ┘ fraction bar
+    frac: function () { return { s: '⌟', k: 'frac' }; }, // ⌟ fraction bar
     comma: function () { return { s: ',', k: 'comma' }; }
   };
 
   function Calc() {
     this.entry = []; this.cur = 0; this.ins = false; this.second = false; this.mode = { angle: 'DEG', fix: -1, note: 'FLO' }; this.hyp = false;
-    this.ans = V(0, [0, 1]); this.hist = []; this.hpos = -1; this.result = null; this.resultShown = false; this.showFrac = true;
+    this.ans = V(0, [0, 1]); this.hist = []; this.hpos = -1; this.result = null; this.resultShown = false; this.showFrac = true; this.mixed = true; // results show as mixed numbers (2u3⌟4) until 2nd d/e
     this.vars = { A: V(0, [0, 1]), B: V(0, [0, 1]), C: V(0, [0, 1]), D: V(0, [0, 1]), E: V(0, [0, 1]) };
     this.menu = null; this.error = null; this.on = true;
   }
@@ -100,7 +100,7 @@
     parse: function () {
       var toks = this.entry, i = 0, self = this;
       function peek() { return toks[i]; }
-      function numberLit() { // digits with optional . and E, and fraction bars a┘b or a┘b┘c
+      function numberLit() { // digits with optional . and E, and fraction bars a⌟b or a⌟b⌟c (shown a u b⌟c, like the real screen)
         var s = '', parts = [];
         function readNum() {
           var t = '', seenE = false;
@@ -236,7 +236,7 @@
       try {
         var v = this.parse(); if (!v) return;
         if (Math.abs(v.f) >= 1e100) throw err('OVERFLOW');
-        this.ans = v; this.result = v; this.showFrac = !!this.usedFrac; this.showDMS = !!this.toDMS;
+        this.ans = v; this.result = v; this.showFrac = !!this.usedFrac; this.mixed = true; this.showDMS = !!this.toDMS; // d/e converts the shown answer only; the next answer is mixed again
         this.hist.unshift({ entry: this.entry.slice(), result: v, frac: this.showFrac, dms: this.showDMS }); if (this.hist.length > 30) this.hist.pop();
         this.resultShown = true; this.hpos = -1; this.cur = this.entry.length;
       } catch (e) { if (!e.calc) throw e; this.error = e.message + ' ERROR'; }
@@ -248,8 +248,8 @@
       var fq = this.showFrac ? fracOf(v) : null;
       if (fq) {
         var n = fq[0], d = fq[1];
-        if (this.mixed && Math.abs(n) > d) { var w = Math.trunc(n / d), r = Math.abs(n % d); return w + '┘' + r + '┘' + d; }
-        return n + '┘' + d;
+        if (this.mixed && Math.abs(n) > d) { var w = Math.trunc(n / d), r = Math.abs(n % d); return w + 'u' + r + '⌟' + d; }
+        return n + '⌟' + d;
       }
       var x = v.f; if (Math.abs(x) < 1e-99) x = 0;
       if (this.showDMS && Math.abs(x) < 1e7) { // ▸DMS: degrees°minutes′seconds″
@@ -272,9 +272,10 @@
         var ms = String(Number(m.toPrecision(10))); if (!/\./.test(ms) && ms.length < 2) ms += '';
         return { m: ms, e: e };
       }
-      var s = Number(x.toPrecision(10)).toString();
+      // 10 digit places, counting the leading 0 of a number below 1 (0.700207538, like the real screen)
+      var intD = x === 0 ? 1 : Math.max(1, Math.floor(Math.log10(Math.abs(x))) + 1);
+      var s = Number(x.toFixed(Math.max(0, 10 - intD))).toString();
       if (/e/.test(s)) { var p = s.split('e'); return { m: p[0], e: Number(p[1]) }; }
-      if (s.replace(/[-.]/g, '').length > 10) s = Number(x.toPrecision(10 - Math.max(0, Math.floor(Math.log10(Math.abs(x))) + 1 - 10))).toString();
       if (!/\./.test(s) && x % 1 === 0) s = s + '.';
       return { m: s };
     }
@@ -440,8 +441,12 @@
       // entry line with cursor
       var html = '', toks = c.entry;
       for (var i = 0; i <= toks.length; i++) {
-        if (i === c.cur && !c.resultShown) html += '<span class="calc-cur' + (c.ins ? ' ins' : '') + '">' + (toks[i] ? esc(toks[i].s) : '&nbsp;') + '</span>';
-        else if (toks[i]) html += esc(toks[i].s);
+        var ts = toks[i] ? toks[i].s : null;
+        if (toks[i] && toks[i].k === 'frac') { // first bar of a mixed number a⌟b⌟c shows as "u" (2u3⌟4)
+          for (var j = i + 1; toks[j] && (toks[j].k === 'digit' || toks[j].k === 'frac'); j++) if (toks[j].k === 'frac') { ts = 'u'; break; }
+        }
+        if (i === c.cur && !c.resultShown) html += '<span class="calc-cur' + (c.ins ? ' ins' : '') + '">' + (toks[i] ? esc(ts) : '&nbsp;') + '</span>';
+        else if (toks[i]) html += esc(ts);
       }
       l1.innerHTML = '<span class="calc-entry">' + html + '</span>';
       l1.scrollLeft = l1.scrollWidth;
