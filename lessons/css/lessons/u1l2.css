@@ -1,0 +1,117 @@
+/* Math 10-3 · Unit 1 · Lesson 2 — Fractions Refresher: styles used only on this page (prefix u1l2-).
+ * Shaded parts amber, second fraction blue, answers red, the GCF gold. */
+.u1l2 .ex-cap .katex { font-size: 1.04em; }
+.u1l2 .pl .katex { font-size: 1.1em; }
+.u1l2 .ans .katex { font-size: 1.06em; }
+.u1l2 .katex { white-space: nowrap; }
+
+/* ---------------- cards ---------------- */
+.u1l2 .tip:not(.watch):not(.calc-tip) { background: var(--brand-soft); }
+.u1l2 .tip:not(.watch):not(.calc-tip) .tip-ic { background: var(--brand2); color: #fff; }
+.u1l2-tipfig { display: flex; align-items: center; gap: 18px; width: 100%; }
+.u1l2-tipfig > div { flex: 1 1 auto; }
+.u1l2-tipfig > span { flex: none; width: 190px; }
+.u1l2-tipfig svg { width: 100%; height: auto; display: block; }
+.u1l2-twoeg { display: flex; gap: 70px; justify-content: center; margin-top: 8px; font-size: 22px; }
+.u1l2-recipe { display: grid; grid-template-columns: auto 1fr 1fr; gap: 10px; align-items: stretch; margin: 6px 0 12px; }
+.u1l2-recipe > div { background: var(--brand-soft); border-radius: 12px; padding: 10px 14px; font-size: 19px; line-height: 1.32; }
+.u1l2-recipe > .h { background: var(--brand); color: #fff; font: 800 18px/1.25 var(--round); display: grid; place-items: center; max-width: 220px; text-align: center; }
+.u1l2-recipe .n { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 8px; border-radius: 50%; background: var(--brand2); color: #fff; font-size: 16px; }
+.u1l2-pic { display: grid; place-items: center; height: 120px; margin: 4px 0 6px; }
+.u1l2-pic svg { width: var(--pw, 180px); max-height: 116px; height: auto; display: block; }
+.u1l2-sn { font-size: 18px; line-height: 1.7; }
+.u1l2-sn .katex { font-size: 1.15em; }
+.u1l2-pcol { display: flex; flex-direction: column; gap: 6px; flex: none; }
+.u1l2-tbl { border-collapse: collapse; margin: 8px auto 12px; font-size: 21px; }
+.u1l2-tbl th, .u1l2-tbl td { border: 2px solid #cfc6b4; padding: 8px 14px; text-align: center; min-width: 96px; height: 62px; }
+.u1l2-tbl th { background: var(--brand-soft); text-align: left; font-weight: 800; }
+.u1l2-tbl .u1l2-dbl { border-left: 5px double #9a8f78; }
+.u1l2-tbl .katex { font-size: 1.05em; }
+
+/* ---------------- explainers: shared ---------------- */
+.u1l2-abs { position: absolute; }
+.u1l2-mid { translate: -50% -50%; }
+.u1l2-ml { translate: 0 -50%; }
+.u1l2-bar { position: absolute; overflow: visible; }
+.u1l2-pn { font: 800 15px var(--round); fill: var(--ink); }
+.u1l2-nl { font: 700 17px var(--round); fill: var(--ink2); }
+.u1l2-nls { font: 700 13px var(--round); fill: var(--muted); }
+.u1l2-flab { font-size: 28px; white-space: nowrap; }
+.u1l2-flab.u1l2-sm { font-size: 22px; }
+.u1l2-eqn { font-size: 24px; white-space: nowrap; background: var(--brand-soft); border-radius: 12px; padding: 4px 16px; }
+.u1l2-eqn .katex { font-size: 1.12em; }
+.u1l2-line { font-size: 21px; line-height: 1.35; white-space: nowrap; }
+.u1l2-mut { color: var(--muted); font-size: 18px; white-space: nowrap; }
+.u1l2-op { font: 800 22px var(--round); color: var(--brand); white-space: nowrap; text-align: center; }
+.u1l2-op .katex { font-size: 1.15em; }
+.u1l2-optag small { display: block; font: 600 13px var(--font); color: var(--muted); }
+.u1l2-gold { color: #9a6a00; background: #fff3d6; border-radius: 6px; padding: 0 6px; }
+.u1l2-note { font-size: 17px; color: var(--ink2); white-space: nowrap; background: #f6f3ec; border-radius: 8px; padding: 2px 10px; }
+.u1l2-ans { color: var(--red); font-weight: 800; }
+.u1l2-mkl { font: 800 18px var(--round); color: var(--red); white-space: nowrap; }
+
+/* fraction builder (what a fraction means) */
+.u1l2-fb { display: grid; grid-template-columns: 96px 1fr; gap: 8px 16px; align-items: center; }
+.u1l2-fb .nb, .u1l2-fb .db { height: 66px; border: 3px solid var(--brand2); border-radius: 12px; display: grid; place-items: center; font: 800 42px var(--round); background: #fff; }
+.u1l2-fb .nb { border-color: var(--amber); color: #9a5f00; }
+.u1l2-fb .q { color: #c9c3b4; }
+.u1l2-fb .fl { height: 5px; background: var(--ink); border-radius: 3px; }
+.u1l2-fb .nl, .u1l2-fb .dl { font-size: 18px; line-height: 1.25; color: var(--ink2); }
+
+/* stacked fractions (scale arrows, steps) */
+.u1l2-sf { translate: -50% -50%; display: grid; justify-items: center; font: 700 46px/1.05 var(--round); color: var(--ink); }
+.u1l2-sf .bar { width: 100%; min-width: 70px; height: 4px; background: var(--ink); border-radius: 2px; margin: 4px 0; }
+.u1l2-sf .t, .u1l2-sf .b { padding: 0 8px; border-radius: 10px; transition: background .3s; }
+.u1l2-sf .lit { background: #fff3d6; box-shadow: inset 0 0 0 2px var(--amber); }
+.u1l2-sf .lit2 { background: #e8f0fd; }
+.u1l2-sfb { color: var(--brand); }
+.u1l2-sfr { color: var(--red); }
+.u1l2-box { display: inline-grid; place-items: center; min-width: 54px; height: 54px; border: 3px dashed var(--muted); border-radius: 8px; color: var(--muted); font-size: 34px; }
+.u1l2-eqsign { font-size: 34px; }
+
+/* factor lists */
+.u1l2-frow { font-size: 21px; white-space: nowrap; }
+.u1l2-fac { display: inline-block; min-width: 32px; text-align: center; margin: 0 3px; padding: 1px 6px; border-radius: 8px; border: 2px solid #e2ddd1; background: #fff; transition: background .3s, border-color .3s; }
+.u1l2-lit .u1l2-common { background: #e9f6ef; border-color: var(--ok); }
+.u1l2-lit .u1l2-gcf { background: #fff3d6; border-color: var(--amber); font-weight: 800; }
+
+/* division machine, place value */
+.u1l2-mach { font: 800 18px var(--round); color: var(--brand); text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+.u1l2-machio { font-size: 24px; background: #fff; border-radius: 8px; padding: 2px 10px; border: 2px solid var(--brand2); }
+.u1l2-lcd { display: grid; gap: 4px; background: #c9d4b8; border: 4px solid #3b4430; border-radius: 10px; padding: 8px 14px; font: 700 28px/1.15 ui-monospace, "SF Mono", Menlo, monospace; color: #1e2618; min-height: 92px; box-sizing: border-box; }
+.u1l2-lcd .e { font-size: 20px; text-align: left; min-height: 24px; }
+.u1l2-lcd .r { text-align: right; min-height: 34px; }
+.u1l2-cut { color: #8a9a7a; text-decoration: line-through; }
+.u1l2-pv { display: grid; gap: 4px; }
+.u1l2-pv .hd, .u1l2-pv .dg { display: grid; grid-template-columns: 100px 12px 100px 12px 100px 12px 100px; align-items: center; text-align: center; }
+.u1l2-pv .hd > span { font: 700 15px var(--round); color: var(--muted); background: #f6f3ec; border-radius: 8px; padding: 4px 0; }
+.u1l2-pv .dg > span { height: 64px; border: 2px solid #d8d0bf; border-radius: 10px; display: grid; place-items: center; font: 800 38px var(--round); background: #fff; }
+.u1l2-pv .dg > i { font: 900 40px var(--round); font-style: normal; }
+.u1l2-pv .hd > span.lit { background: #fff3d6; color: #9a5f00; }
+.u1l2-pv .dg > span.lit { border-color: var(--amber); background: #fff8e6; }
+
+/* compare: digits lined up, wrenches */
+.u1l2-dig { display: grid; gap: 6px; background: #fff; border: 1.5px solid var(--line2); border-radius: 12px; padding: 8px 14px; }
+.u1l2-dig > div { display: flex; align-items: center; font: 800 32px ui-monospace, "SF Mono", Menlo, monospace; }
+.u1l2-dig .nm { display: inline-block; width: 90px; font: 700 18px var(--round); color: var(--muted); }
+.u1l2-dig .d { display: inline-block; width: 30px; text-align: center; border-radius: 6px; }
+.u1l2-dig .d.lit { background: #fff3d6; color: var(--red); box-shadow: inset 0 0 0 2px var(--amber); }
+.u1l2-wr { width: 86px; margin-left: -43px; display: grid; justify-items: center; gap: 0; background: #fff; border: 2px solid #c9cfd8; border-radius: 12px; padding: 4px 2px 6px; box-sizing: border-box; height: 100px; }
+.u1l2-wr svg { width: 66px; height: 22px; }
+.u1l2-wr .f { font-size: 24px; }
+.u1l2-wr .s { font-size: 19px; color: var(--blue, #1f5bd6); }
+
+/* fraction of an amount, gas tank */
+.u1l2-amt { font: 800 24px var(--round); background: #fff; padding: 0 10px; }
+.u1l2-pval { font: 800 21px var(--round); color: var(--ink); white-space: nowrap; }
+.u1l2-ansl { font-size: 24px; color: var(--red); white-space: nowrap; }
+.u1l2-gl { font: 800 20px var(--round); fill: #2b2f38; }
+.u1l2-tq { font: 800 18px var(--round); color: var(--ink2); }
+.u1l2-empl { font: 700 18px var(--round); line-height: 1.3; white-space: nowrap; }
+.u1l2-pump { background: #24303f; color: #e9eef5; border-radius: 14px; padding: 10px 14px; box-sizing: border-box; display: grid; gap: 8px; }
+.u1l2-pump .ph { font: 800 14px var(--round); letter-spacing: .12em; color: #9fb2c8; }
+.u1l2-pump .pr { display: flex; justify-content: space-between; align-items: center; background: #0f1620; border-radius: 8px; padding: 6px 12px; }
+.u1l2-pump .pr > span { font: 700 14px var(--round); color: #9fb2c8; letter-spacing: .06em; }
+.u1l2-pump .pr > b { font: 700 32px ui-monospace, "SF Mono", Menlo, monospace; color: #ffcf4a; }
+.u1l2-pump .pr.sm > b { font-size: 22px; color: #e9eef5; }
+.u1l2-est { font-size: 20px; line-height: 1.4; background: #e9f6ef; border-left: 5px solid var(--ok); border-radius: 10px; padding: 8px 14px; box-sizing: border-box; }

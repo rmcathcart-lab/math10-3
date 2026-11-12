@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Percents Refresher · Math 10-3 1.7</title>
+<meta name="description" content="Math 10-3 Unit 1 Lesson 7 (refresher): what a percent means on a 10 by 10 grid, switching between percents, decimals and fractions, benchmark percents in your head (10%, 5%, 1%) and tips, a percent of an amount, and what percent one number is of another. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u1l7.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u1l7">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Count the Squares">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Count the Squares</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Here is a <b>4 by 4</b> grid, like a small waffle.</p><p class="vw-ctx">Squares come in different sizes. A big square can be made of several small ones.</p><p class="vw-ask">How many squares can you find in all?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A 4 by 4 grid with a gold outline that jumps around, showing squares of different sizes">
+    <rect x="45" y="25" width="200" height="200" rx="6" fill="#f6dc9a"/>
+    <g stroke="#8a5a1c" stroke-width="3" fill="none"><rect x="45" y="25" width="200" height="200" rx="6"/><path d="M95 25 V225 M145 25 V225 M195 25 V225 M45 75 H245 M45 125 H245 M45 175 H245"/></g>
+    <rect x="45" y="25" width="50" height="50" fill="none" stroke="#c93a33" stroke-width="7" stroke-linejoin="round">
+      <animate attributeName="x" values="45;145;95;45;145;45;95" dur="7s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="y" values="25;125;75;25;25;125;75" dur="7s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="width" values="50;50;100;100;100;50;150" dur="7s" calcMode="discrete" repeatCount="indefinite"/>
+      <animate attributeName="height" values="50;50;100;100;100;50;150" dur="7s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.4s" repeatCount="indefinite"/><text x="290" y="130" font-size="46" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>And in a 10 by 10 grid, like the ones in today’s lesson?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>30 squares</b> in the 4 by 4 grid: 16 small (1 by 1), 9 of size 2 by 2, 4 of size 3 by 3 and 1 big one. <span class="tex">16+9+4+1=30</span>. Notice: 16, 9, 4, 1 are square numbers! A 10 by 10 grid has <span class="tex">100+81+64+\dots+4+1=\mathbf{385}</span> squares, but only <b>100</b> small ones. Those 100 small squares are today’s lesson.</div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 1 Unit Pricing and Currency Exchange · Lesson 7</div>
+  <h1>Percents Refresher: Percents, Decimals and Percent of an Amount</h1>
+  <p class="lede">Sales, tips, tax, a raise at work, your mark on a test: percents are everywhere. Today we review what a <b>percent</b> means, how to switch between <b>percents, decimals and fractions</b>, quick percents you can do <b>in your head</b>, and how to find a <b>percent of an amount</b>. The next lessons (markup, tax and sales) are built on these skills.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>explain what a <b>percent</b> means, using a 10 by 10 grid</li>
+      <li>change between <b>percents, decimals and fractions</b></li>
+      <li>find <b>10%, 5% and 1%</b> in my head, build other percents from them, and estimate a <b>tip</b></li>
+      <li>find a <b>percent of an amount</b>, like 35% of 260</li>
+      <li>find <b>what percent</b> one number is of another</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>Refresher</b> Skills from earlier grades that this unit uses (not marked as a unit outcome).</div>
+</section>
+
+<!-- ================= 1. What is a percent? ================= -->
+<section class="card" data-ink="s1" data-section="1. What Is a Percent?">
+  <div class="sec-h"><span class="badge">1</span><h2>What Is a Percent?</h2></div>
+  <p><b>Percent</b> means <b>“out of 100”</b>. The sign % stands for “per hundred”. So 37% means 37 out of every 100.</p>
+  <p>A <span class="tex">10\times10</span> grid has 100 small squares, so each square is <b>1%</b>. The whole grid is <b>100%</b>. More than one whole grid is <b>more than 100%</b>.</p>
+  <div class="def"><b>Percent = per hundred.</b> <span class="u1l7-gap"></span><span class="tex">37\%=\dfrac{37}{100}=0.37</span> <span class="u1l7-gap"></span> The whole <span class="tex">=100\%</span>.</div>
+  <div class="explainer" data-explainer="grid"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Shaded grids</h3></div>
+  <div class="u1l7-ex1">
+    <div class="u1l7-figs"><figure><div class="u1l7-grids" data-grids="37"></div><figcaption>Grid A</figcaption></figure><figure><div class="u1l7-grids" data-grids="100,25"></div><figcaption>Grid B (two grids)</figcaption></figure></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) What percent of Grid A is shaded? Write it three ways.</div><div class="u1l7-blanks">Percent <span data-reveal>37%</span> <span class="u1l7-gap"></span> Fraction <span data-reveal><span class="tex">\dfrac{37}{100}</span></span> <span class="u1l7-gap"></span> Decimal <span data-reveal>0.37</span></div><div class="work" style="--h:50px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">37 of the 100 squares are shaded: <b>37%</b>, <span class="tex">\dfrac{37}{100}</span>, <b>0.37</b></div></div></div>
+      <div class="part"><div class="pl">(b) What percent of Grid A is <em>not</em> shaded?</div><div class="work" style="--h:50px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">100\%-37\%=\mathbf{63\%}</span></div></div></div>
+      <div class="part"><div class="pl">(c) Each grid in B is one whole. What percent is shaded?</div><div class="work" style="--h:50px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">One full grid (100 squares) and 25 more: <span class="tex">100+25=125</span> squares out of 100, so <b>125%</b>.</div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Percents, decimals and fractions ================= -->
+<section class="card" data-ink="s2" data-section="2. Percents, Decimals and Fractions">
+  <div class="sec-h"><span class="badge">2</span><h2>Percents, Decimals and Fractions</h2></div>
+  <p>A percent, a decimal and a fraction can all name the <b>same amount</b>. To switch between them, use these four rules.</p>
+  <div class="u1l7-rules">
+    <div><b>Percent → decimal:</b> divide by 100 (move the decimal point <b>2 places left</b>).<span class="eg"><span class="tex">48\%\to0.48</span></span></div>
+    <div><b>Decimal → percent:</b> multiply by 100 (move the decimal point <b>2 places right</b>).<span class="eg"><span class="tex">0.3\to30\%</span></span></div>
+    <div class="b"><b>Fraction → percent:</b> divide top by bottom, then multiply by 100.<span class="eg"><span class="tex">\tfrac34=3\div4=0.75=75\%</span></span></div>
+    <div class="b"><b>Percent → fraction:</b> write it over 100, then simplify.<span class="eg"><span class="tex">60\%=\tfrac{60}{100}=\tfrac35</span></span></div>
+  </div>
+  <p>If there is no decimal point, it is at the <b>end</b> of the number: <span class="tex">7\%=7.\%\to0.07</span>. Fill empty places with <b>zeros</b>.</p>
+  <div class="explainer" data-explainer="slide"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b><span class="tex">7\%</span> is <span class="tex">0.07</span>, not <span class="tex">0.7</span>.</b> A one-digit percent needs a zero after the decimal point. Check: 7% is less than 10%, and <span class="tex">10\%=0.10</span>, so the decimal must be less than 0.10.</div></div>
+  <div data-extra><div class="explainer" data-explainer="cents"></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Percents and decimals</h3></div>
+  <p class="q">Write each percent as a decimal, and each decimal as a percent.</p>
+  <div class="u1l7-conv">
+    <div><span class="u1l7-l">(a)</span><span class="tex">48\%=</span><span data-reveal>0.48</span></div>
+    <div><span class="u1l7-l">(b)</span><span class="tex">7\%=</span><span data-reveal>0.07</span></div>
+    <div><span class="u1l7-l">(c)</span><span class="tex">7.5\%=</span><span data-reveal>0.075</span></div>
+    <div><span class="u1l7-l">(d)</span><span class="tex">125\%=</span><span data-reveal>1.25</span></div>
+    <div><span class="u1l7-l">(e)</span><span class="tex">0.5\%=</span><span data-reveal>0.005</span></div>
+    <div><span class="u1l7-l">(f)</span><span class="tex">300\%=</span><span data-reveal>3</span></div>
+    <div><span class="u1l7-l">(g)</span><span class="tex">0.82=</span><span data-reveal>82%</span></div>
+    <div><span class="u1l7-l">(h)</span><span class="tex">0.06=</span><span data-reveal>6%</span></div>
+    <div><span class="u1l7-l">(i)</span><span class="tex">1.4=</span><span data-reveal>140%</span></div>
+    <div><span class="u1l7-l">(j)</span><span class="tex">0.025=</span><span data-reveal>2.5%</span></div>
+    <div><span class="u1l7-l">(k)</span><span class="tex">0.004=</span><span data-reveal>0.4%</span></div>
+    <div><span class="u1l7-l">(l)</span><span class="tex">2=</span><span data-reveal>200%</span></div>
+  </div>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Percent to decimal: move <b>2 places left</b>, e.g. <span class="tex">7.5\%\to0.075</span>, <span class="tex">0.5\%\to0.005</span>.<br>Decimal to percent: move <b>2 places right</b>, e.g. <span class="tex">0.004\to0.4\%</span>, <span class="tex">2=2.00\to200\%</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Fractions and Percents">
+  <h3 class="sub">Fractions and percents</h3>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>Fraction to decimal on the TI-30XIIS:</b> type the top, <span class="keys"><kbd>÷</kbd></span>, the bottom, then <span class="keys"><kbd>ENTER</kbd></span>: <span class="keys"><kbd>7</kbd><kbd>÷</kbd><kbd>8</kbd><kbd>ENTER</kbd></span> gives 0.875. If you type the fraction with <span class="keys"><kbd>A b/c</kbd></span> instead, the screen shows a fraction (like <b>7┘8</b>). Press <span class="keys"><kbd>2nd</kbd><kbd>F◂▸D</kbd></span> to change it to a decimal.</div>
+    <div class="u1l7-pcol"><button class="pill" data-keys="7 ÷ 8 =">7 ÷ 8</button><button class="pill" data-keys="7 ab/c 8 = F◂▸D">7┘8 → decimal</button></div>
+  </div>
+  <div class="explainer" data-explainer="fracPct"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Fractions and percents</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Write each fraction as a percent.<br><span class="tex">\dfrac{2}{5}</span> <span class="u1l7-gap"></span> <span class="tex">\dfrac{7}{8}</span> <span class="u1l7-gap"></span> <span class="tex">\dfrac{1}{3}</span> <span class="small">(to the nearest tenth of a percent)</span></div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\tfrac25=2\div5=0.4=\mathbf{40\%}</span><br><span class="tex">\tfrac78=7\div8=0.875=\mathbf{87.5\%}</span><br><span class="tex">\tfrac13=1\div3=0.33333\ldots=33.333\ldots\%\approx\mathbf{33.3\%}</span></div></div></div>
+    <div class="part"><div class="pl">(b) Write each percent as a fraction in simplest form.<br><span class="tex">15\%</span> <span class="u1l7-gap"></span> <span class="tex">240\%</span></div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">15\%=\tfrac{15}{100}=\boldsymbol{\tfrac{3}{20}}</span> (divide top and bottom by 5)<br><span class="tex">240\%=\tfrac{240}{100}=\boldsymbol{\tfrac{12}{5}}</span> (divide by 20), or <span class="tex">2\tfrac25</span></div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2c" data-section="2. Check Yourself: Fractions to Know">
+  <h3 class="sub">Check yourself: fractions worth knowing by heart</h3>
+  <p>These come up all the time with money. Say the percent first, then tap a card to check.</p>
+  <div class="bk-flips" style="--bk-cols:4">
+    <div class="bk-flip"><div class="bk-front"><span class="tex">\dfrac12</span></div><div class="bk-back"><b>50%</b><br><span class="tex">1\div2=0.5</span></div></div>
+    <div class="bk-flip"><div class="bk-front"><span class="tex">\dfrac34</span></div><div class="bk-back"><b>75%</b><br><span class="tex">3\div4=0.75</span></div></div>
+    <div class="bk-flip"><div class="bk-front"><span class="tex">\dfrac15</span></div><div class="bk-back"><b>20%</b><br><span class="tex">1\div5=0.2</span></div></div>
+    <div class="bk-flip"><div class="bk-front"><span class="tex">\dfrac{1}{10}</span></div><div class="bk-back"><b>10%</b><br><span class="tex">1\div10=0.1</span></div></div>
+  </div>
+</section>
+
+<!-- ================= 3. Quick percents in your head ================= -->
+<section class="card" data-ink="s3" data-section="3. Quick Percents in Your Head">
+  <div class="sec-h"><span class="badge">3</span><h2>Quick Percents in Your Head</h2></div>
+  <p>Some percents are easy to find without a calculator. These are called <b>benchmarks</b>. Use them to <b>estimate</b>, and to <b>check</b> that a calculator answer makes sense.</p>
+  <div class="u1l7-bench">
+    <div><b>100%</b><span>the whole amount</span></div>
+    <div><b>10%</b><span>divide by 10 (move the decimal <b>1</b> place left)</span></div>
+    <div><b>50%</b><span>half: divide by 2</span></div>
+    <div><b>5%</b><span>half of 10%</span></div>
+    <div><b>25%</b><span>a quarter: divide by 4 (or half of 50%)</span></div>
+    <div><b>1%</b><span>divide by 100 (move the decimal <b>2</b> places left)</span></div>
+  </div>
+  <p class="u1l7-build"><b>Build others:</b> <span class="tex">15\%=10\%+5\%</span> <span class="tex">20\%=2\times10\%</span> <span class="tex">30\%=3\times10\%</span> <span class="tex">75\%=50\%+25\%</span> <span class="tex">2\%=2\times1\%</span></p>
+  <div class="explainer" data-explainer="bench"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Benchmarks without a calculator</h3></div>
+  <p class="q">Complete the table without a calculator.</p>
+  <table class="u1l7-tbl">
+    <tr><th>Amount</th><th>10%</th><th>5%</th><th>15%</th><th>20%</th><th>50%</th><th>25%</th><th>1%</th></tr>
+    <tr><th>$60.00</th><td><span data-reveal>$6.00</span></td><td><span data-reveal>$3.00</span></td><td><span data-reveal>$9.00</span></td><td><span data-reveal>$12.00</span></td><td><span data-reveal>$30.00</span></td><td><span data-reveal>$15.00</span></td><td><span data-reveal>$0.60</span></td></tr>
+    <tr><th>$84.20</th><td><span data-reveal>$8.42</span></td><td><span data-reveal>$4.21</span></td><td><span data-reveal>$12.63</span></td><td><span data-reveal>$16.84</span></td><td><span data-reveal>$42.10</span></td><td><span data-reveal>$21.05</span></td><td><span data-reveal>$0.84</span></td></tr>
+  </table>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">$84.20: 10% is <b>$8.42</b> (decimal 1 place left). 5% is half of that, <b>$4.21</b>. 15% <span class="tex">=8.42+4.21=\$12.63</span>. 20% <span class="tex">=2\times8.42=\$16.84</span>.<br>50% <span class="tex">=84.20\div2=\$42.10</span>. 25% <span class="tex">=42.10\div2=\$21.05</span>. 1% <span class="tex">=\$0.842\approx\$0.84</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s3c" data-section="3. Check Yourself: Benchmarks">
+  <h3 class="sub">Check yourself: benchmarks of $35.00</h3>
+  <p>Work it out in your head first, then tap a card to check.</p>
+  <div class="bk-flips" style="--bk-cols:4">
+    <div class="bk-flip"><div class="bk-front">10% of $35.00</div><div class="bk-back"><b>$3.50</b><br>decimal 1 place left</div></div>
+    <div class="bk-flip"><div class="bk-front">5% of $35.00</div><div class="bk-back"><b>$1.75</b><br>half of $3.50</div></div>
+    <div class="bk-flip"><div class="bk-front">1% of $35.00</div><div class="bk-back"><b>$0.35</b><br>decimal 2 places left</div></div>
+    <div class="bk-flip"><div class="bk-front">30% of $35.00</div><div class="bk-back"><b>$10.50</b><br><span class="tex">3\times3.50</span></div></div>
+  </div>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Tipping">
+  <h3 class="sub">Tipping</h3>
+  <div class="tip"><div class="tip-ic">$</div><div>In Canada, people usually leave a <b>tip</b> of <b>15% to 20%</b> of the bill at a sit-down restaurant, and often for haircuts, taxis and delivery. A tip is a <b>percent of an amount</b>.</div></div>
+  <p>You can build a tip from benchmarks: <b>15% = 10% + 5%</b>, and <b>20% = 2 × 10%</b>. Watch the tip calculator do it (Example 5).</p>
+  <div class="explainer" data-explainer="tipCalc"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Supper out</h3></div>
+  <p class="q">Noor and her brother have supper at a restaurant. The bill is $47.60.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Estimate a 15% tip in your head.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Round: <span class="tex">\$47.60\approx\$48</span>.<br>10% of $48 is $4.80. 5% is half: $2.40.<br><span class="tex">15\%\approx4.80+2.40=\$7.20</span><br><b>A 15% tip is about $7.20</b> (a little over $7).</div></div></div>
+    <div class="part"><div class="pl">(b) Find a 20% tip exactly, then the total they pay.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">10% of $47.60 is $4.76.<br><span class="tex">20\%=2\times4.76=\$9.52</span><br>Total <span class="tex">=47.60+9.52=\$57.12</span><br><b>They pay $57.12 with a 20% tip.</b></div></div></div>
+  </div>
+  <p class="small muted" data-extra><b>Think:</b> why is the estimate in (a) a little <b>more</b> than the exact 15% tip? (We rounded the bill <b>up</b> to $48. The exact 15% tip is <span class="tex">4.76+2.38=\$7.14</span>.)</p>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u1l7"></section>
+
+<!-- ================= 4. Percent of an amount ================= -->
+<section class="card" data-ink="s4" data-section="4. Finding a Percent of an Amount">
+  <div class="sec-h"><span class="badge">4</span><h2>Finding a Percent of an Amount</h2></div>
+  <p>In math, <b>“of” means multiply</b>. To find a percent of an amount, change the percent to a <b>decimal</b> and <b>multiply</b>.</p>
+  <div class="def"><b>Percent of an amount:</b> <span class="u1l7-gap"></span> part <span class="tex">=</span> (percent as a decimal) <span class="tex">\times</span> amount <span class="u1l7-gap"></span> <span class="tex">35\%\text{ of }260=0.35\times260=91</span></div>
+  <p>You can also use a <b>proportion</b>: <span class="tex">\dfrac{35}{100}=\dfrac{x}{260}</span>, then cross-multiply. Both ways give the same answer.</p>
+  <div class="explainer" data-explainer="pctOf"></div>
+  <div data-extra><div class="explainer" data-explainer="proportion"></div></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Estimate first</b> so you can catch a misplaced decimal point. More than 100% of an amount is <b>more</b> than the amount (150% of 40 is 60). Less than 1% of an amount is very <b>small</b> (0.5% of 40 is 0.2).</div></div>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>On the calculator:</b> <span class="keys"><kbd>0</kbd><kbd>.</kbd><kbd>3</kbd><kbd>5</kbd><kbd>×</kbd><kbd>2</kbd><kbd>6</kbd><kbd>0</kbd><kbd>ENTER</kbd></span>. On the TI-30XIIS you can also type 35 <span class="keys"><kbd>2nd</kbd><kbd>%</kbd></span>, which divides by 100 for you, then <span class="keys"><kbd>×</kbd><kbd>2</kbd><kbd>6</kbd><kbd>0</kbd><kbd>ENTER</kbd></span>. Money: round to the cent only at the <b>end</b>.</div>
+    <div class="u1l7-pcol"><button class="pill" data-keys="0.35 × 260 =">0.35 × 260</button><button class="pill" data-keys="35 % × 260 =">35 % × 260</button></div>
+  </div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Percent of an amount</h3></div>
+  <p class="q">Calculate. Estimate first.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) 35% of 260</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: a bit more than <span class="tex">\tfrac13</span> of 260, about 90.<br><span class="tex">0.35\times260=\mathbf{91}</span></div></div></div>
+    <div class="part"><div class="pl">(b) 8% of $54.75</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: 10% is about $5.50, so 1% is about $0.55. 8% is about 8 × $0.55 = $4.40.<br><span class="tex">0.08\times54.75=4.38</span>, so <b>$4.38</b></div></div></div>
+    <div class="part"><div class="pl">(c) 140% of 85</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: more than 85.<br><span class="tex">1.4\times85=\mathbf{119}</span></div></div></div>
+    <div class="part"><div class="pl">(d) 0.4% of 3&#8201;200</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: 1% is 32, so less than 32.<br><span class="tex">0.004\times3\,200=\mathbf{12.8}</span></div></div></div>
+    <div class="part"><div class="pl">(e) 12.5% of 96</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: 10% is 9.6, so a bit more than 9.6.<br><span class="tex">0.125\times96=\mathbf{12}</span></div></div></div>
+    <div class="part"><div class="pl">(f) 250% of $18</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: 2 and a half times $18.<br><span class="tex">2.5\times18=45</span>, so <b>$45.00</b></div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (one per lesson) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–8">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 7 · Questions 1–8</h2>
+  <p class="pr-t">Try these before we go on to “what percent is it?”.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Percent grids</span>
+    <span><b>2–4</b>Percents, decimals and fractions</span>
+    <span><b>5</b>Benchmarks and a tip estimate</span>
+    <span><b>6–8</b>Percent of an amount: wages and tips</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 8.</span><a class="pill" href="../../../#/lesson/u1l7">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 5. What percent is one number of another? ================= -->
+<section class="card" data-ink="s5" data-section="5. What Percent Is One Number of Another?">
+  <div class="sec-h"><span class="badge">5</span><h2>What Percent Is One Number of Another?</h2></div>
+  <p>To find what percent a <b>part</b> is of a <b>whole</b>, divide the part by the whole, then multiply by 100. The <b>whole</b> is the number that comes after <b>“of”</b>.</p>
+  <div class="def"><b>Percent</b> <span class="tex">=\dfrac{\text{part}}{\text{whole}}\times100</span> <span class="u1l7-gap"></span> 18 is what percent of 72? <span class="u1l7-gap"></span> <span class="tex">18\div72=0.25=25\%</span></div>
+  <p>If the part is <b>bigger</b> than the whole, the answer is <b>more than 100%</b>. If the division does not come out evenly, round the percent as asked (often to the nearest <b>tenth</b> of a percent).</p>
+  <div class="explainer" data-explainer="whatPct"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>What percent?</h3></div>
+  <p class="q">Find each percent. Round to the nearest tenth of a percent if needed.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) 18 of 72</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">18\div72=0.25</span><br><span class="tex">=\mathbf{25\%}</span></div></div></div>
+    <div class="part"><div class="pl">(b) 9 of 40</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">9\div40=0.225</span><br><span class="tex">=\mathbf{22.5\%}</span></div></div></div>
+    <div class="part"><div class="pl">(c) 7 of 9</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">7\div9=0.7777\ldots</span><br><span class="tex">=77.77\ldots\%</span><br><span class="tex">\approx\mathbf{77.8\%}</span></div></div></div>
+    <div class="part"><div class="pl">(d) 60 of 48</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">60\div48=1.25</span><br><span class="tex">=\mathbf{125\%}</span><br>(part <span class="tex">&gt;</span> whole)</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s5c" data-section="5. Check Yourself: Which Is the Whole?">
+  <h3 class="sub">Check yourself: which number is the whole?</h3>
+  <p>The whole comes after “of”. Find the whole, then the percent. Tap a card to check.</p>
+  <div class="bk-flips" style="--bk-cols:4">
+    <div class="bk-flip"><div class="bk-front">12 is what percent of 48?</div><div class="bk-back">Whole: <b>48</b><br><span class="tex">12\div48=25\%</span></div></div>
+    <div class="bk-flip"><div class="bk-front">What percent of 80 is 20?</div><div class="bk-back">Whole: <b>80</b><br><span class="tex">20\div80=25\%</span></div></div>
+    <div class="bk-flip"><div class="bk-front">30 out of 120</div><div class="bk-back">Whole: <b>120</b><br><span class="tex">30\div120=25\%</span></div></div>
+    <div class="bk-flip"><div class="bk-front">15 is what percent of 10?</div><div class="bk-back">Whole: <b>10</b><br><span class="tex">15\div10=150\%</span></div></div>
+  </div>
+  <p class="small muted"><b>Think:</b> the first three are all 25%. Why? Each part is <span class="tex">\tfrac14</span> of its whole.</p>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Tests and tips</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Priya got 38 out of 45 on her first test and 22 out of 25 on her second test. On which test did she do better?</div><div class="work" style="--h:210px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Test 1: <span class="tex">38\div45=0.8444\ldots\approx84.4\%</span><br>Test 2: <span class="tex">22\div25=0.88=88\%</span><br><b>She did better on the second test</b> (88% &gt; 84.4%), even though she got fewer marks. Percents let us compare tests with different totals.</div></div></div>
+    <div class="part"><div class="pl">(b) Marco left a $12.00 tip on a $64.00 bill. What percent tip is that, to the nearest tenth of a percent? Is it more or less than 15%?</div><div class="work" style="--h:210px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">part = 12, whole = 64 (the bill)<br><span class="tex">12\div64=0.1875=18.75\%\approx18.8\%</span><br><b>Marco tipped about 18.8%, which is more than 15%.</b><br>(Check: 15% of $64 is <span class="tex">6.40+3.20=\$9.60</span>, less than $12.)</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. Check Example 8">
+  <h3 class="sub">Check Example 8 with percents</h3>
+  <p>Marks out of different totals, a tip on a bill: change each one to a <b>percent</b>, then compare.</p>
+  <div class="explainer" data-explainer="verdict"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Percent means “out of 100”.</b> On a 10 by 10 grid, each square is 1% and the whole grid is 100%. <span class="tex">37\%=\tfrac{37}{100}=0.37</span>.</div>
+    <div><b>Percent → decimal:</b> 2 places <b>left</b> (<span class="tex">7\%=0.07</span>). <b>Decimal → percent:</b> 2 places <b>right</b>. <b>Fraction → percent:</b> top ÷ bottom, × 100. <b>Percent → fraction:</b> over 100, simplify.</div>
+    <div><b>Benchmarks:</b> 10% (1 place left), 5% (half of 10%), 1% (2 places left), 50%, 25%. Build others: <span class="tex">15\%=10\%+5\%</span>. Use them to estimate tips and to check answers.</div>
+    <div><b>Percent of:</b> decimal × amount (<span class="tex">0.35\times260=91</span>). <b>What percent:</b> part ÷ whole × 100 (<span class="tex">18\div72=25\%</span>). The whole comes after “of”.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u1l7">
+    <div><div class="kicker">Your turn</div><b>Assignment 7 · Questions 9–18</b><div class="muted">What percent one number is of another, comparing scores, budgets, benchmarks and multiple choice. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l8/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 8 — Setting a Price: Markup and Sales Tax</b><div class="muted">How a store turns its cost into a price tag, and how GST is added at the till.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u1l7.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u1l7', homeHref: '../../', title: '1.7 Percents Refresher' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

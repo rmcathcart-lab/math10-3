@@ -1,0 +1,56 @@
+"""The home page's lesson cards and the lesson sidebar's "Go to the lesson" link: uses the block set for the class (beats the letter in the code),
+points at the right lesson page, and is absent for lessons the teaching site doesn't have yet.
+Needs python3 -m http.server 8841 and a fresh mock (tests/restart_mock.sh)."""
+import asyncio, json, urllib.request
+from playwright.async_api import async_playwright
+BASE = 'http://localhost:8841/'; MOCK = 'http://localhost:8845/'
+CONFIG = "var HW_CONFIG = { siteName: 'Math 10C Practice', backend: '%s' };" % MOCK
+async def main():
+    urllib.request.urlopen(MOCK + '?action=setblock&key=testkey&class=10c-b&block=C').read()
+    errs = []
+    async with async_playwright() as p:
+        b = await p.chromium.launch(); ctx = await b.new_context(viewport={'width': 1300, 'height': 950}, service_workers='block')
+        await ctx.route('**/script.google.com/**', lambda r: r.abort())  # the live Teaching Ink backend
+        page = await ctx.new_page()
+        page.on('pageerror', lambda e: errs.append(str(e)))
+        await page.route('**/cdn.jsdelivr.net/**', lambda r: r.abort())
+        await page.route(BASE + 'js/config.js', lambda r: r.fulfill(status=200, content_type='application/javascript', body=CONFIG))
+        await page.goto(BASE + '?class=10c-b'); await page.wait_for_selector('.name-btn', timeout=10000)
+        await page.click('.name-btn:has-text("Ben Lee")')
+        pins = page.locator('.field.pin'); await pins.nth(0).fill('4321'); await pins.nth(1).fill('4321')
+        await page.click('.btn-primary'); await page.wait_for_selector('.lesson-row')
+        # home page: a lesson card to the left of each assignment (Unit 1 only so far)
+        home = await page.evaluate("[...document.querySelectorAll('.lesson-line')].map(l => { const a = l.querySelector('a.lesson-teach'); return a ? a.getAttribute('href') : null; })")
+        about = await page.evaluate("(document.querySelector('.home-about a') || {}).getAttribute ? document.querySelector('.home-about a').getAttribute('href') : null")
+        print('about the course:', about); assert about and about.endswith('/u1/l0/?class=C'), about  # the course intro is at the bottom, not in Unit 1
+        mail = await page.evaluate("[...document.querySelectorAll('.home-about a')].map(a => [a.textContent, a.getAttribute('href')])")
+        print('bottom buttons:', mail); assert mail[1][0] == 'Email Mr. Cathcart' and mail[1][1].startswith('mailto:rcathcart@rvschools.ab.ca?subject=Math%2010C%20question%20from%20'), mail
+        print('home cards:', home)
+        want = ['lessons/u1/l1/?class=C', 'lessons/u1/l2/?class=C', 'lessons/u1/l3/?class=C', 'lessons/u1/l4/?class=C', 'lessons/u1/l5/?class=C', 'lessons/u1/l6/?class=C', 'lessons/u1/l7/?class=C', 'lessons/u1/l8/?class=C', 'lessons/u1/l9/?class=C', 'lessons/u2/l1/?class=C', 'lessons/u2/l2/?class=C', 'lessons/u2/l3/?class=C', 'lessons/u2/l4/?class=C', 'lessons/u2/l5/?class=C', 'lessons/u2/l6/?class=C', 'lessons/u3/l1/?class=C', 'lessons/u3/l2/?class=C', 'lessons/u3/l3/?class=C', 'lessons/u3/l4/?class=C', 'lessons/u3/l5/?class=C', 'lessons/u3/l6/?class=C', 'lessons/u4/l1/?class=C', 'lessons/u4/l2/?class=C', 'lessons/u4/l3/?class=C', 'lessons/u4/l4/?class=C', 'lessons/u4/l5/?class=C', 'lessons/u4/l6/?class=C', 'lessons/u4/l7/?class=C', 'lessons/u4/l8/?class=C', 'lessons/u5/l1/?class=C', 'lessons/u5/l2/?class=C', 'lessons/u5/l3/?class=C', 'lessons/u5/l4/?class=C', 'lessons/u5/l5/?class=C', 'lessons/u5/l6/?class=C', 'lessons/u5/l7/?class=C', 'lessons/u5/l8/?class=C', 'lessons/u5/l9/?class=C', 'lessons/u6/l1/?class=C', 'lessons/u6/l2/?class=C', 'lessons/u6/l3/?class=C', 'lessons/u6/l4/?class=C', 'lessons/u6/l5/?class=C', 'lessons/u7/l1/?class=C', 'lessons/u7/l2/?class=C', 'lessons/u7/l3/?class=C', 'lessons/u7/l4/?class=C', 'lessons/u7/l5/?class=C', 'lessons/u7/l6/?class=C', 'lessons/u7/l7/?class=C', 'lessons/u8/l1/?class=C', 'lessons/u8/l2/?class=C', 'lessons/u8/l3/?class=C', 'lessons/u8/l4/?class=C', 'lessons/u8/l5/?class=C', 'lessons/u8/l6/?class=C', 'lessons/u9/l1/?class=C', 'lessons/u9/l2/?class=C', 'lessons/u9/l3/?class=C', 'lessons/u9/l4/?class=C', 'lessons/u9/l5/?class=C', 'lessons/u9/l6/?class=C', 'lessons/u9/l7/?class=C', 'lessons/u9/l8/?class=C', 'lessons/u10/l1/?class=C', 'lessons/u10/l2/?class=C', 'lessons/u10/l3/?class=C', 'lessons/u10/l4/?class=C', 'lessons/u10/l5/?class=C', 'lessons/u10/l6/?class=C']
+        assert home == want, home  # one lesson card per lesson, in course order (70)
+        await page.screenshot(path='/tmp/home_cards.png', full_page=False)
+        # the card opens the lesson page itself in the same tab; the student shows in the ledger as on the lesson page;
+        # the lesson's home button goes back to the assignments
+        await page.click('a.lesson-teach >> nth=0'); await page.wait_for_url('**/lessons/u1/l1/**'); await page.wait_for_timeout(2500)
+        lesson = await page.evaluate("[location.pathname + location.search, !!(window.HW && HW.Calc), document.querySelectorAll('.katex').length, (document.querySelector('a.assign')||{}).href, (document.querySelector('a.assign')||{}).target, document.querySelector('.tbtn.home').getAttribute('href')]")
+        print('lesson page:', lesson); assert lesson[0] == '/lessons/u1/l1/?class=C' and lesson[1] and lesson[3] == BASE + '#/lesson/u1l1' and lesson[4] == '' and lesson[5] == '../../../', lesson
+        live = json.loads(urllib.request.urlopen(MOCK + '?action=live&key=testkey&class=10c-b').read())['live']
+        print('live:', live); assert any(r.get('view') == 'teach' and r.get('lesson') == 'u1l1' for r in live.values()), live
+        await page.click('.tbtn.home'); await page.wait_for_selector('.lesson-row'); assert page.url.rstrip('/').split('#')[0] == BASE.rstrip('/'), page.url
+        await page.set_viewport_size({'width': 390, 'height': 800}); await page.wait_for_timeout(200)
+        await page.screenshot(path='/tmp/home_cards_phone.png')
+        await page.set_viewport_size({'width': 1300, 'height': 950})
+        out = {}
+        for lid in ['u1l1', 'u1l7', 'u2l1']:
+            await page.evaluate("location.hash = '#/lesson/%s'" % lid); await page.wait_for_selector('.qcard'); await page.wait_for_timeout(300)
+            out[lid] = await page.evaluate("(document.querySelector('.qnav a.teach-link')||{}).href || null")
+        print(out)
+        await page.evaluate("location.hash = '#/lesson/u1l1'"); await page.wait_for_timeout(400)
+        await page.screenshot(path='/tmp/teach_link.png', clip={'x': 0, 'y': 0, 'width': 1300, 'height': 600})
+        await page.set_viewport_size({'width': 390, 'height': 800}); await page.evaluate("location.hash = '#/lesson/u1l2'"); await page.wait_for_timeout(500)
+        await page.screenshot(path='/tmp/teach_link_phone.png')
+        ok = out == {'u1l1': BASE + 'lessons/u1/l1/?class=C',
+                     'u1l7': BASE + 'lessons/u1/l7/?class=C', 'u2l1': BASE + 'lessons/u2/l1/?class=C'}
+        print('errors:', errs); print('PASS' if ok and not errs else 'FAIL')
+        await b.close()
+asyncio.run(main())

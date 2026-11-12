@@ -1,0 +1,124 @@
+"""Class calendar: the ledger's Calendar tab (make, drag earlier/later, skip by dragging to Skipped, put back, days off,
+undo) on the mock class, then the student's home (Lessons / Class calendar toggle, next test, month view).
+Needs python3 -m http.server 8841 (repo root) and a fresh mock (tests/restart_mock.sh)."""
+import asyncio, json, urllib.request
+from playwright.async_api import async_playwright
+BASE = 'http://localhost:8841/'; MOCK = 'http://localhost:8845/'
+CONFIG = "var HW_CONFIG = { siteName: 'Math 10C Practice', backend: '%s' };" % MOCK
+SH = '/tmp/cal_'
+def get(q): return json.loads(urllib.request.urlopen(MOCK + '?' + q).read())
+async def drag(pg, src, dst):
+    a = await pg.locator(src).first.bounding_box(); b = await pg.locator(dst).first.bounding_box()
+    await pg.mouse.move(a['x'] + 20, a['y'] + 10); await pg.mouse.down()
+    await pg.mouse.move(a['x'] + 40, a['y'] + 30, steps=3); await pg.mouse.move(b['x'] + b['width'] / 2, b['y'] + b['height'] / 2, steps=8); await pg.mouse.up()
+    await pg.wait_for_timeout(500)
+async def main():
+    errs = []
+    get('action=setroster&key=testkey&class=10c-d&label=Block%20D&names=Zed%20Q&mode=add')
+    async with async_playwright() as p:
+        b = await p.chromium.launch()
+        ctx = await b.new_context(viewport={'width': 1400, 'height': 1700})
+        await ctx.add_init_script("localStorage.setItem('hw:tkey','testkey'); localStorage.setItem('hw:tclass','10c-b'); localStorage.setItem('hw:ttab','calendar');")
+        tp = await ctx.new_page(); tp.on('pageerror', lambda e: errs.append('T ' + str(e)))
+        tp.on('dialog', lambda d: asyncio.ensure_future(d.accept()))
+        await tp.route(BASE + 'js/config.js', lambda r: r.fulfill(status=200, content_type='application/javascript', body=CONFIG))
+        await tp.goto(BASE + 'teacher/'); await tp.wait_for_selector('.kc-start', timeout=15000)
+        await tp.click('.kc-start .calp-day[data-date="2026-09-02"]'); await tp.click('.kc-start .btn-primary'); await tp.wait_for_selector('.kc-grid')  # day one (the course introduction, Lesson 0) on Sept 2, Lesson 1.1 on Sept 3
+        for _ in range(30):
+            if get('action=cal&class=10c-b')['cal']: break
+            await tp.wait_for_timeout(300)
+        cal = get('action=cal&class=10c-b')['cal']; print('saved start', cal['start'], len(cal['items']), 'items')
+        await tp.evaluate("document.querySelector('.kc-grid').scrollToDate('2026-09-01')"); await tp.wait_for_timeout(200)
+        # Today brings this week back
+        await tp.click('.kc-grid .calv-today'); await tp.wait_for_timeout(800)
+        assert await tp.evaluate("(() => { const b = document.querySelector('.kc-grid'), t = b.querySelector('.calm-day.calm-today'); if (!t) return true; const r = t.getBoundingClientRect(), q = b.getBoundingClientRect(); return r.top >= q.top && r.bottom <= q.bottom; })()"), 'today in view'
+        await tp.evaluate("document.querySelector('.kc-grid').scrollToDate('2026-09-01')"); await tp.wait_for_timeout(200)
+        assert await tp.locator('.calm-day.calm-we').count() > 0, 'weekends shown'
+        await tp.screenshot(path=SH + 'sept.png', full_page=True)
+        dateOf = lambda k: tp.evaluate("(k) => { const c = document.querySelector('.kc-grid .kc-chip[data-key=' + k + ']'); return c ? c.closest('.calm-day').dataset.date : null; }", k)
+        keysOn = lambda d: tp.evaluate("(d) => [...document.querySelectorAll('.calm-day[data-date=\"' + d + '\"] .kc-chip')].map(c => c.dataset.key)", d)
+        # drag Lesson 4 onto Lesson 3's day: two in one day, everything after moves up a day
+        d3, d5 = await dateOf('u1l3'), await dateOf('u1l5')
+        await drag(tp, '.kc-chip[data-key=u1l4]', '.calm-day[data-date="%s"]' % d3)
+        print(d3, await keysOn(d3)); assert await keysOn(d3) == ['u1l3', 'u1l4']
+        d5b = await dateOf('u1l5'); print('L5 moved from', d5, 'to', d5b); assert d5b < d5
+        # drag Lesson 5 two class days later: the days between stay empty, what follows falls in line
+        days = await tp.evaluate("[...document.querySelectorAll('.kc-grid .calm-day:not(.calm-off):not(.calm-blank):not(.calm-we)')].map(c => c.dataset.date)")
+        i5 = days.index(d5b); target = days[i5 + 2]
+        await drag(tp, '.kc-chip[data-key=u1l5]', '.calm-day[data-date="%s"]' % target)
+        assert await dateOf('u1l5') == target and await keysOn(days[i5]) == [] and await keysOn(days[i5 + 1]) == [] and await dateOf('u1l6') == days[i5 + 3]
+        # skip Lesson 2 by dragging it to Skipped
+        await drag(tp, '.kc-chip[data-key=u1l2]', '.kc-tray')
+        assert await tp.locator('.kc-tray .kc-chip[data-key=u1l2]').count() == 1
+        d2 = '2026-09-04'; print('after skip,', d2, await keysOn(d2)); assert await keysOn(d2) == ['u1l3', 'u1l4']
+        # put it back on Sept 4 (that day's lessons and everything after move back a day)
+        await drag(tp, '.kc-tray .kc-chip[data-key=u1l2]', '.calm-day[data-date="2026-09-04"]')
+        print('put back:', await keysOn(d2), await keysOn('2026-09-07'), await tp.inner_text('.kc-msg')); assert await keysOn(d2) == ['u1l2'] and await keysOn('2026-09-07') == ['u1l3', 'u1l4']
+        assert await tp.locator('.kc-tray .kc-chip').count() == 0
+        # undo puts it back in Skipped
+        await tp.click('.kc-top .btn:has-text("Undo")'); await tp.wait_for_timeout(500); assert await tp.locator('.kc-tray .kc-chip[data-key=u1l2]').count() == 1
+        # tap a chip: options
+        await tp.click('.kc-grid .kc-chip[data-key=u1l1]'); await tp.wait_for_selector('.kc-pop'); await tp.screenshot(path=SH + 'pop.png')
+        await tp.keyboard.press('Escape')
+        # days off: Labour Day (Sept 7) — that day's lessons and everything after move along a day
+        before = await dateOf('u1l6')
+        # days off are set in the Teaching Hub now: the button links there, and the hub sends them to this ledger (setnoschool)
+        href = await tp.get_attribute('.kc-top a.btn:has-text("Days off")', 'href'); print('days off link', href)
+        assert href.endswith('teaching/#/calendar/daysoff')
+        get('action=setnoschool&key=testkey&dates=2026-09-07')
+        await tp.evaluate("HW.DashCal.reload(); HW.Dash.state.noSchool = ['2026-09-07']; HW.Dash.render()"); await tp.wait_for_selector('.kc-grid'); await tp.wait_for_timeout(600)
+        after = await dateOf('u1l6'); print('after', before, '->', after)
+        assert '2026-09-07' in get('action=classes&key=testkey')['noSchool'] and after > before and 'No school' in await tp.inner_text('.calm-day[data-date="2026-09-07"]')
+        await tp.screenshot(path=SH + 'edited.png', full_page=True)
+        cal = get('action=cal&class=10c-b')
+        print('saved:', cal['cal']['items'][:8], cal['cal']['skipped'], cal['noSchool'])
+        # keep all classes the same: copies now, then every change goes to every class
+        await tp.check('.kc-sync input[type=checkbox]'); await tp.wait_for_timeout(900)
+        a, d = get('action=cal&class=10c-b'), get('action=cal&class=10c-d'); assert a['cal'] == d['cal'] and a['sync'], 'synced'
+        await drag(tp, '.kc-grid .kc-chip[data-key=u1l7]', '.calm-day[data-date="%s"]' % (await dateOf('u1l6')))
+        await tp.wait_for_timeout(600); assert get('action=cal&class=10c-b')['cal'] == get('action=cal&class=10c-d')['cal'], 'a change goes to every class'
+        await tp.uncheck('.kc-sync input[type=checkbox]'); await tp.wait_for_timeout(600); assert not get('action=cal&class=10c-b')['sync']
+        # ---- the student ----
+        urllib.request.urlopen(MOCK + '?action=setroster&key=testkey&class=10c-b&label=Block%20B&names=Ava%20Brown&mode=add').read()
+        sp = await (await b.new_context(viewport={'width': 1280, 'height': 900})).new_page(); sp.on('pageerror', lambda e: errs.append('S ' + str(e)))
+        await sp.route('**/cdn.jsdelivr.net/**', lambda r: r.abort())
+        await sp.route(BASE + 'js/config.js', lambda r: r.fulfill(status=200, content_type='application/javascript', body=CONFIG))
+        await sp.goto(BASE + '?class=10c-b'); await sp.wait_for_selector('.name-btn', timeout=10000)
+        await sp.click('.name-btn:has-text("Ava Brown")'); pins = sp.locator('.field.pin'); await pins.nth(0).fill('1111'); await pins.nth(1).fill('1111')
+        await sp.click('.btn-primary'); await sp.wait_for_selector('.lesson-row'); await sp.wait_for_selector('.hh-calbtn', timeout=10000)
+        print('beside the greeting:', (await sp.inner_text('.home-head .hh-cal')).replace('\n', ' ')); assert await sp.locator('.top-right .hh-calbtn').count() == 0
+        assert await sp.locator('.vtog').count() == 0, 'no toggle on the student home'
+        await sp.screenshot(path=SH + 'student_home.png')
+        await sp.click('.hh-calbtn'); await sp.wait_for_selector('.cal-pop .calv'); await sp.wait_for_timeout(300)
+        await sp.screenshot(path=SH + 'student_pop.png')
+        hd = await sp.evaluate("[...document.querySelectorAll('.cal-pop .calm-hd div')].map(d => d.textContent)"); assert hd[0] == 'Sun' and hd[6] == 'Sat', hd
+        await sp.evaluate("document.querySelector('.cal-pop .calv').scrollToDate('2026-09-04')"); await sp.wait_for_timeout(300)
+        t1 = await sp.inner_text('.cal-pop .calv-title'); print('header:', t1); assert t1.startswith('September')
+        await sp.evaluate("document.querySelector('.cal-pop .calv').scrollToDate('2026-11-16')"); await sp.wait_for_timeout(300)
+        t2 = await sp.inner_text('.cal-pop .calv-title'); print('header:', t2); assert t2.startswith('November')
+        assert await sp.locator('.cal-pop .calm-grid').count() == 1, 'one continuous grid'
+        await sp.evaluate("document.querySelector('.cal-pop .calv').scrollToDate('2026-09-04')"); await sp.wait_for_timeout(300)
+        st4 = await sp.evaluate("[...document.querySelectorAll('.calm-day[data-date=\"2026-09-04\"] .calm-chip')].map(c => c.textContent)"); print('student Sept 4:', st4); assert len(st4) == 2
+        assert 'No school' in await sp.inner_text('.calm-day[data-date="2026-09-07"]')
+        await sp.keyboard.press('Escape'); assert await sp.locator('.cal-pop').count() == 0
+        # units fold: only the current unit (from the calendar) is open; a unit opens when tapped
+        await sp.goto(BASE); await sp.wait_for_selector('.unit')
+        units = await sp.evaluate("[...document.querySelectorAll('section.unit')].map(s => [s.querySelector('.unit-num').textContent, s.classList.contains('closed'), !!s.querySelector('.ut-cur')])"); print('units:', units[:6])
+        assert sum(1 for u in units if not u[1]) == 1 and [u for u in units if not u[1]][0][2], 'only the current unit is open'
+        await sp.click('section.unit >> nth=0 >> .unit-title'); assert not await sp.evaluate("document.querySelector('section.unit').classList.contains('closed')")
+        await sp.screenshot(path=SH + 'units.png')
+        # the lessons home (lessons/, the iPad home-screen app): a student sees the lessons and the practice site link, no ledger link
+        get('action=setblock&key=testkey&class=10c-b&block=C')
+        await sp.goto(BASE + 'lessons/'); await sp.wait_for_selector('#units a.row'); assert sp.url.split('#')[0] == BASE + 'lessons/', sp.url
+        assert await sp.locator('a[href="../teacher/"]').count() == 0 and await sp.locator('.cls button').count() == 0
+        # the ledger header: Lessons pop-up (cards / calendar) and Launch Today's Lesson for this class's block
+        await tp.reload(); await tp.wait_for_selector('.top-lessons', timeout=15000); await tp.wait_for_timeout(1200)
+        launch = await tp.evaluate("(() => { const b = document.querySelector('.top-launch'); return [b.tagName, b.getAttribute('href'), b.title, b.disabled]; })()"); print('launch:', launch)
+        await tp.click('.top-lessons'); await tp.wait_for_selector('.lp-card')
+        cards = await tp.evaluate("[...document.querySelectorAll('.lp-card')].slice(0, 3).map(c => [c.getAttribute('href'), c.className, c.innerText.replace(/\\n/g, ' | ')])"); print('cards:', cards)
+        assert cards[0][0] == '../lessons/u1/l0/?class=C' and 'is-past' in cards[0][1] and cards[1][0] == '../lessons/u1/l1/?class=C'
+        await tp.click('.lp-head .seg button:has-text("Calendar")'); await tp.wait_for_selector('.lp-cal a.calm-chip')
+        await tp.screenshot(path=SH + 'lessons_pop.png'); await tp.keyboard.press('Escape'); assert await tp.locator('#lp-modal').count() == 0
+        await b.close()
+    print('errors', errs); assert not errs; print('PASS')
+asyncio.run(main())

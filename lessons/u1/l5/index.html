@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rates and Unit Rates · Math 10-3 1.5</title>
+<meta name="description" content="Math 10-3 Unit 1 Lesson 5: rates and unit rates. Rate vs ratio, finding a unit rate, predicting with a unit rate, fuel consumption in L/100 km, and comparing and converting rates. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u1l5.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u1l5">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Snail in the Well">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Snail in the Well</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A snail is at the bottom of a well that is <b>10 m deep</b>.</p><p class="vw-ctx">Every <b>day</b> it climbs up <b>3 m</b>. Every <b>night</b> it slides back down <b>2 m</b>.</p><p class="vw-ask">How many days does it take the snail to get out of the well?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A snail in a deep well climbs up the wall by day and slides back down at night">
+    <rect x="0" y="0" width="330" height="40" fill="#eaf2fb"/>
+    <path d="M0 40 H112 M218 40 H330" stroke="#6b5a3e" stroke-width="5"/>
+    <g fill="#d9cdb6" stroke="#8a7656" stroke-width="2">
+      <rect x="112" y="40" width="20" height="196"/><rect x="198" y="40" width="20" height="196"/><rect x="112" y="232" width="106" height="12"/>
+    </g>
+    <g stroke="#8a7656" stroke-width="1.6">
+      <path d="M112 72 H132 M112 104 H132 M112 136 H132 M112 168 H132 M112 200 H132 M198 72 H218 M198 104 H218 M198 136 H218 M198 168 H218 M198 200 H218"/>
+    </g>
+    <rect x="132" y="40" width="66" height="192" fill="#f4efe4"/>
+    <g stroke="#6e4a1c" stroke-width="2.5"><line x1="88" y1="42" x2="88" y2="232"/><line x1="80" y1="42" x2="96" y2="42"/><line x1="80" y1="232" x2="96" y2="232"/></g>
+    <text x="60" y="140" font-size="22" font-weight="800" fill="#6e4a1c" text-anchor="middle">10 m</text>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -57;0 -57;0 -19;0 -19;0 0" keyTimes="0;0.4;0.5;0.8;0.94;1" dur="6s" repeatCount="indefinite"/>
+      <g transform="translate(196 214) rotate(-90) scale(1.5)">
+        <path d="M-6 0 Q4 -4 22 -2 Q30 0 30 4 L-6 4 Z" fill="#c9a26b" stroke="#7a5a30" stroke-width="2"/>
+        <line x1="24" y1="-2" x2="30" y2="-12" stroke="#7a5a30" stroke-width="2"/><circle cx="30" cy="-13" r="2.4" fill="#4a3a20"/>
+        <circle cx="6" cy="-10" r="11" fill="#b5652d" stroke="#6e3a14" stroke-width="2.5"/>
+        <path d="M6 -10 m-6 0 a6 6 0 1 1 6 6 a3 3 0 1 1 -3 -3" fill="none" stroke="#f0c9a0" stroke-width="2"/>
+      </g>
+    </g>
+    <g transform="translate(278 22)">
+      <g><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.48;0.52;0.94;1" dur="6s" repeatCount="indefinite"/>
+        <circle r="13" fill="#f2b632"/><g stroke="#f2b632" stroke-width="3" stroke-linecap="round"><path d="M0 -20 V-17 M0 17 V20 M-20 0 H-17 M17 0 H20 M-14 -14 L-12 -12 M12 12 L14 14 M-14 14 L-12 12 M12 -12 L14 -14"/></g></g>
+      <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.48;0.52;0.94;1" dur="6s" repeatCount="indefinite"/>
+        <path d="M4 -14 A14 14 0 1 0 12 8 A11 11 0 1 1 4 -14 Z" fill="#5b6aa8"/></g>
+    </g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Guess first. Then convince the person beside you.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>8 days!</b> Most people say 10. Each full day and night, the snail gains only 1 m. After 7 days and 7 nights it is 7 m up. On day 8 it climbs 3 m, reaches the top (10 m), and crawls out. It never slides back that night. <span class="muted">The snail’s “rate” is not the same all the time. Today: rates that stay the same.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 1 Unit Pricing and Currency Exchange · Lesson 5</div>
+  <h1>Rates and Unit Rates</h1>
+  <p class="lede">Your pay is <b>dollars per hour</b>. A speed limit is <b>kilometres per hour</b>. Gas is <b>dollars per litre</b>. These are all <b>rates</b>. Today we find the rate for <b>one</b> unit, then use it to predict, compare and plan a road trip.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>tell a <b>rate</b> from a <b>ratio</b>, and write a rate with its units</li>
+      <li>find a <b>unit rate</b>, like $16.65/h or 65 words/min</li>
+      <li>use a unit rate to <b>predict</b> an amount, or how many hours or cans I need</li>
+      <li>find and use <b>fuel consumption</b> in L/100 km</li>
+      <li><b>compare</b> rates, and <b>convert</b> a rate to new units</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N1</b> Solve problems that involve unit pricing and currency exchange, using proportional reasoning.</div>
+</section>
+
+<!-- ================= 1. What is a rate? ================= -->
+<section class="card" data-ink="s1" data-section="1. What Is a Rate?">
+  <div class="sec-h"><span class="badge">1</span><h2>What Is a Rate?</h2></div>
+  <p>A <b>rate</b> compares two quantities that have <b>different units</b>. “90 km in 1 h”, “$45 for 3 h of work” and “120 heartbeats in 2 min” are all rates.</p>
+  <p>A <b>ratio</b> (Lesson 3) compares quantities with the <b>same</b> unit, like 2 cups of flour to 3 cups of milk. In a rate the units are different, so you must <b>always write them</b>.</p>
+  <div class="u1l5-3ways">
+    <div><small>in words</small>$45 for 3 h</div>
+    <div><small>as a fraction</small><span class="tex">\dfrac{\$45}{3\text{ h}}</span></div>
+    <div><small>with a slash</small>$45/3 h</div>
+  </div>
+  <p>The slash “/” is read as <b>per</b>. “Per” means “for each” or “for every”.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Rate:</b> a comparison of two quantities with <b>different units</b>. &nbsp; <b>Ratio:</b> a comparison of quantities with the <b>same unit</b>.
+    <div class="eg">A rate always keeps its units: &nbsp; 72 pages/3 min &nbsp;·&nbsp; $6.60/2 kg &nbsp;·&nbsp; 15 L/2 min</div></div>
+  <div class="explainer" data-explainer="rateOrRatio"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Rate or ratio?</h3></div>
+  <p class="q">Decide whether each statement is a rate or a ratio. Give a reason.</p>
+  <table class="u1l5-tbl u1l5-rr">
+    <tr><th>Statement</th><th>Rate or ratio?</th><th>Reason</th></tr>
+    <tr><td>(a) A printer prints 72 pages in 3 minutes.</td><td><span data-reveal="&nbsp;">rate</span></td><td><span data-reveal="&nbsp;">pages and minutes are different units</span></td></tr>
+    <tr><td>(b) A recipe uses 2 cups of rice for every 3 cups of water.</td><td><span data-reveal="&nbsp;">ratio</span></td><td><span data-reveal="&nbsp;">both amounts are in cups</span></td></tr>
+    <tr><td>(c) Pears cost $6.60 for 2 kg.</td><td><span data-reveal="&nbsp;">rate</span></td><td><span data-reveal="&nbsp;">dollars and kilograms are different units</span></td></tr>
+    <tr><td>(d) A hockey team won 9 games and lost 6 games.</td><td><span data-reveal="&nbsp;">ratio</span></td><td><span data-reveal="&nbsp;">both amounts are games</span></td></tr>
+  </table>
+  <div class="parts c1 u1l5-gap">
+    <div class="part"><div class="pl">(e) Write the rate in (a) as a fraction and with a slash.</div><div class="work" style="--h:100px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{72\text{ pages}}{3\text{ min}}</span> &nbsp; and &nbsp; <b>72 pages/3 min</b></div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Unit rates ================= -->
+<section class="card" data-ink="s2" data-section="2. Unit Rates">
+  <div class="sec-h"><span class="badge">2</span><h2>Unit Rates</h2></div>
+  <p>A <b>unit rate</b> is a rate for <b>one</b> unit of the second quantity. “75 km/h” is a unit rate: it means 75 km in 1 hour.</p>
+  <p>To find a unit rate, <b>divide</b> the first quantity by the second quantity. This is the same as dividing the top and bottom of the rate by the bottom number:</p>
+  <div class="u1l5-bigeq"><span class="tex">\dfrac{\$45}{3\text{ h}}=\dfrac{\$45\div3}{3\text{ h}\div3}=\dfrac{\$15}{1\text{ h}}=\$15\text{/h}</span></div>
+  <div class="u1l5-key2">
+    <div class="def"><b>Key idea</b> &nbsp; <b>Unit rate = first quantity ÷ second quantity</b>
+      <div class="eg">The answer is the amount for <b>1</b> unit.</div></div>
+    <table class="u1l5-tbl u1l5-ut">
+      <tr><td>Speed</td><td><b>km/h</b></td><td>kilometres travelled in 1 hour</td></tr>
+      <tr><td>Wage (pay)</td><td><b>$/h</b></td><td>dollars earned in 1 hour</td></tr>
+      <tr><td>Typing speed</td><td><b>words/min</b></td><td>words typed in 1 minute</td></tr>
+      <tr><td>Heart rate</td><td><b>beats/min</b></td><td>heartbeats in 1 minute</td></tr>
+    </table>
+  </div>
+  <div class="explainer" data-explainer="unitRate"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Divide in the right order. The unit after “per” goes on the <b>bottom</b>: dollars <i>per hour</i> means dollars ÷ hours. If Jordan earns $133.20 in 8 h, then <span class="tex">8\div133.20=0.06</span> makes no sense, but <span class="tex">133.20\div8=16.65</span> gives a sensible wage of <b>$16.65/h</b>.</div></div>
+  <div data-extra><div class="explainer" data-explainer="wrongWay"></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Find the unit rate</h3></div>
+  <p class="q">Find each unit rate. Include the units.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A cyclist rides 54 km in 3 h.</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">54\div3=18</span>. The unit rate is <b>18 km/h</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Jordan earns $133.20 for an 8-hour shift at a hardware store.</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">133.20\div8=16.65</span>. The unit rate is <b>$16.65/h</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) Mei types 390 words in 6 min.</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">390\div6=65</span>. The unit rate is <b>65 words/min</b>.</div></div></div>
+    <div class="part"><div class="pl">(d) A tap fills a 24 L bucket in 1.5 min.</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">24\div1.5=16</span>. The unit rate is <b>16 L/min</b>.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Always type the <b>first</b> quantity first: <span class="keys"><kbd>1</kbd><kbd>3</kbd><kbd>3</kbd><kbd>.</kbd><kbd>2</kbd><kbd>÷</kbd><kbd>8</kbd><kbd>ENTER</kbd></span></div>
+    <div class="u1l5-pcol"><button class="pill" type="button" data-keys="133.20 ÷ 8 =">(b)</button><button class="pill" type="button" data-keys="24 ÷ 1.5 =">(d)</button></div></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Taking your pulse</h3></div>
+  <p class="q">To find your heart rate, press two fingers on the side of your neck and count the beats. Counting for a whole minute is slow, so people often count for <b>15 s and multiply by 4</b> (because <span class="tex">15\text{ s}\times4=60\text{ s}</span>), or count for <b>20 s and multiply by 3</b>.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) At rest, Aiden counts 18 beats in 15 s. What is his heart rate in beats per minute?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">60 s is <span class="tex">4\times15</span> s, so multiply both by 4: <span class="tex">18\times4=72</span>. His heart rate is <b>72 beats/min</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) After running up the stairs, he counts 37 beats in 20 s. What is his heart rate now?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">60 s is <span class="tex">3\times20</span> s, so multiply both by 3: <span class="tex">37\times3=111</span>. His heart rate is <b>111 beats/min</b>.</div></div></div>
+  </div>
+  <div class="explainer" data-explainer="heartRate"></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= 3. Using a unit rate to predict ================= -->
+<section class="card" data-ink="s3" data-section="3. Using a Unit Rate to Predict">
+  <div class="sec-h"><span class="badge">3</span><h2>Using a Unit Rate to Predict</h2></div>
+  <p>Once you know the amount for <b>1</b> unit, you can find the amount for <b>any</b> number of units. You can also work <b>backwards</b> to find how many units (how many hours, minutes or cans) you need.</p>
+  <div class="def-grid">
+    <div class="def"><b>Amount</b> = unit rate × number of units</div>
+    <div class="def amber"><b>Number of units</b> = amount ÷ unit rate</div>
+  </div>
+  <p>You can also set up a <b>proportion</b> (Lesson 4). Put the same units in the same places, for example dollars on top and hours on the bottom of both fractions.</p>
+  <div class="explainer" data-explainer="predict"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Kiran’s pay</h3></div>
+  <p class="q">Kiran works at a garden centre. He earned <b>$247.50 for 15 h</b> of work. At this rate, how much will he earn for <b>22 h</b>? Estimate first, then solve two ways.</p>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Estimate</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">About <span class="tex">\$16\text{/h}\times22\text{ h}\approx\$350</span></div></div></div>
+  </div>
+  <div class="parts c2 u1l5-gap">
+    <div class="part"><div class="pl"><b>Method 1:</b> unit rate</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: unit rate <span class="tex">=247.50\div15=\$16.50\text{/h}</span><br>Step 2: <span class="tex">16.50\times22=363</span><br>Kiran will earn <b>$363.00</b> for 22 h.</div></div></div>
+    <div class="part"><div class="pl"><b>Method 2:</b> proportion</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\$247.50}{15\text{ h}}=\dfrac{\$x}{22\text{ h}}</span><br><span class="tex">15x=247.50\times22=5445</span><br><span class="tex">x=5445\div15=363</span> &nbsp; (<b>$363.00</b>, close to the estimate)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Method 1 on the calculator: the unit rate first, then times 22.</div>
+    <div class="u1l5-pcol"><button class="pill" type="button" data-keys="247.50 ÷ 15 =">Step 1</button><button class="pill" type="button" data-keys="16.50 × 22 =">Step 2</button></div></div>
+  <div data-extra><div class="explainer" data-explainer="propMethod"></div></div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Typing and the deli</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Talia types 48 words/min. How long will it take her to type a 1200-word essay?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">This asks for the number of <b>minutes</b>, so divide: <span class="tex">1200\div48=25</span>. It will take her <b>25 min</b>. (Check: <span class="tex">48\times25=1200</span>.)</div></div></div>
+    <div class="part"><div class="pl">(b) At the deli, smoked turkey costs $2.38 per 100 g. How much will 450 g cost?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The rate is for 100 g. <span class="tex">450\div100=4.5</span>, so 450 g is 4.5 groups of 100 g. <span class="tex">4.5\times2.38=10.71</span>. 450 g will cost <b>$10.71</b>.</div></div></div>
+  </div>
+  <div class="tip u1l5-uptip"><div class="tip-ic">→</div><div><b>Coming up.</b> A rate that gives a price for an amount, like $2.38 per 100 g, is called a <b>unit price</b>. In Lesson 6 you will use unit prices to find the <b>best buy</b>.</div></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Units Must Match; Round Up">
+  <h3 class="sub">Units must match, and sometimes you round up</h3>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The units must <b>match</b> before you multiply or divide. If a rate is per <i>minute</i> and the time is in <i>hours</i>, change the hours to minutes first (1 h = 60 min). And when you must buy <b>whole items</b> (cans, bags, boxes), <b>round up</b>: 4.2 cans means you need 5 cans, because 4 cans are not enough.</div></div>
+  <div data-extra><div class="explainer" data-explainer="paintCans"></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>A bottling machine and a paint job</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A machine at a juice plant fills 270 bottles in 45 min. How many bottles can it fill in a 7.5-hour shift?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: unit rate <span class="tex">=270\div45=6</span> bottles/min<br>Step 2: change hours to minutes: <span class="tex">7.5\times60=450</span> min<br>Step 3: <span class="tex">6\times450=2700</span><br>It can fill <b>2700 bottles</b> in one shift.</div></div></div>
+    <div class="part"><div class="pl">(b) One can of paint covers 35 m². Ty needs to paint 160 m² of walls. How many cans should he buy?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">160\div35=4.57\ldots</span> cans<br>4 cans cover only <span class="tex">4\times35=140</span> m², which is not enough.<br>Round up: Ty should buy <b>5 cans</b>.</div></div></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> In (b), the answer 4.57 is closer to 5 than to 4. What if it were 4.1 cans? Would Ty still buy 5?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Yes. Even 4.1 cans means 4 cans are <b>not enough</b>. With whole items you always round <b>up</b>, not to the nearest.</div></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–9">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 5 · Questions 1–9</h2>
+  <p class="pr-t">Try these before we go on to fuel economy.</p>
+  <div class="pr-chips">
+    <span><b>1–2</b>Rate or ratio? Writing rates</span>
+    <span><b>3</b>Unit rates</span>
+    <span><b>4–7</b>Predict with a unit rate</span>
+    <span><b>8–9</b>Match units, round up</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 9.</span><a class="pill" href="../../../#/lesson/u1l5">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Fuel economy ================= -->
+<section class="card" data-ink="s4" data-section="4. Fuel Economy: L/100 km">
+  <div class="sec-h"><span class="badge">4</span><h2>Fuel Economy: Litres per 100 km</h2></div>
+  <p>In Canada, the fuel a vehicle uses is given as a rate in <b>litres per 100 km</b> (L/100 km). It tells you how many litres of gas the vehicle burns to drive 100 km.</p>
+  <p>Why per 100 km and not per 1 km? A car burns only a tiny amount of gas in 1 km, such as 0.078 L. Numbers like that are hard to read and compare. For 100 km the same car uses <b>7.8 L</b>, a friendlier number. A <b>lower</b> number means the vehicle uses <b>less</b> fuel, which is better.</p>
+  <div class="def-grid">
+    <div class="def"><b>Fuel consumption (L/100 km)</b> = litres used ÷ km driven × 100</div>
+    <div class="def amber"><b>Fuel needed (L)</b> = fuel consumption × km to drive ÷ 100</div>
+  </div>
+  <div class="explainer" data-explainer="fuelTrip"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Calculator.</b> For 55.2 L used in 480 km, press <span class="keys">55.2 <kbd>÷</kbd> 480 <kbd>×</kbd> 100 <kbd>ENTER</kbd></span> to get 11.5.</div>
+    <button class="pill" type="button" data-keys="55.2 ÷ 480 × 100 =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Dana’s pickup truck</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">On a road trip, Dana’s pickup truck used 55.2 L of gas to travel 480 km. What is its fuel consumption in L/100 km?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: 480 km is about <span class="tex">5\times100</span> km, and <span class="tex">55\div5=11</span>, so about 11 L/100 km.<br><span class="tex">55.2\div480\times100=11.5</span>. Dana’s truck uses <b>11.5 L/100 km</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A trip to Banff</h3></div>
+  <p class="q">Calgary to Banff is about <b>130 km</b> each way. Sam’s car uses <b>7.4 L/100 km</b>, and gas costs <b>$1.42/L</b>.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many litres of gas will Sam need for the round trip (there and back)?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Round trip <span class="tex">=2\times130=260</span> km<br><span class="tex">7.4\times260\div100=19.24</span><br>Sam needs <b>19.24 L</b> of gas.</div></div></div>
+    <div class="part"><div class="pl">(b) How much will the gas cost?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">19.24\times1.42=27.3208</span><br>Round to the cent at the end.<br>The gas will cost <b>$27.32</b>.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Keep every digit until the end, then round to the cent.</div>
+    <div class="u1l5-pcol"><button class="pill" type="button" data-keys="7.4 × 260 ÷ 100 =">(a)</button><button class="pill" type="button" data-keys="19.24 × 1.42 =">(b)</button></div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Sam’s friend has a truck that uses 11.5 L/100 km. Would the Banff trip cost more or less in the truck? Explain without calculating.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>More.</b> 11.5 is higher than 7.4, so the truck burns more litres for the same 260 km, and every litre costs $1.42.</div></div></div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex8x" data-section="Extra: A Trip to Lethbridge">
+  <div class="ex-head"><span class="ex-tag">Extra</span><h3>A trip to Lethbridge</h3></div>
+  <p class="q">Calgary to Lethbridge is about <b>210 km</b> each way. Kim’s car uses <b>6.5 L/100 km</b>, and gas costs <b>$1.45/L</b>.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many litres of gas does Kim need for the round trip?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Round trip <span class="tex">=2\times210=420</span> km<br><span class="tex">6.5\times420\div100=27.3</span>. Kim needs <b>27.3 L</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) How much will the gas cost?</div><div class="work" style="--h:140px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">27.3\times1.45=39.585</span>. Round to the cent: <b>$39.59</b>.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= 5. Comparing and converting ================= -->
+<section class="card" data-ink="s5" data-section="5. Comparing Rates">
+  <div class="sec-h"><span class="badge">5</span><h2>Comparing and Converting Rates</h2></div>
+  <p>To <b>compare</b> two rates, write both as <b>unit rates with the same units</b>. Then compare the numbers.</p>
+  <div class="def-grid">
+    <div class="def"><b>Think about what “better” means.</b> For pay or typing speed, <b>higher</b> is better.</div>
+    <div class="def amber"><b>For fuel consumption,</b> <b>lower</b> is better: the vehicle burns less gas.</div>
+  </div>
+  <div class="explainer" data-explainer="race"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Who is faster? Which uses less?</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Noah types 504 words in 7 min. Priya types 620 words in 8 min. Who types faster?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Noah: <span class="tex">504\div7=72</span> words/min<br>Priya: <span class="tex">620\div8=77.5</span> words/min<br><b>Priya types faster</b>, by 5.5 words/min.</div></div></div>
+    <div class="part"><div class="pl">(b) An SUV used 46.8 L of gas for 520 km. A hatchback used 31.5 L for 450 km. Which uses less fuel?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">SUV: <span class="tex">46.8\div520\times100=9.0</span> L/100 km<br>Hatchback: <span class="tex">31.5\div450\times100=7.0</span> L/100 km<br><b>The hatchback uses less fuel</b>, because 7.0 is lower than 9.0.</div></div></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Priya typed more words (620) than Noah (504). Is that enough to say she is faster?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. She also typed for <b>longer</b> (8 min, not 7). To be fair, compare the words in <b>1 minute</b>: the unit rates.</div></div></div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u1l5"></section>
+
+<section class="card" data-ink="s5b" data-section="5. Converting Rates">
+  <h3 class="sub">Converting a rate to new units</h3>
+  <p>To <b>convert</b> a rate to new units, change <b>one unit at a time</b>: first the top unit, then the bottom unit.</p>
+  <div class="u1l5-conv">
+    <div class="def"><b>Key idea</b> &nbsp; 1 km = 1000 m &nbsp;·&nbsp; 1 h = 60 min &nbsp;·&nbsp; 1 min = 60 s &nbsp;·&nbsp; $1 = 100 cents</div>
+    <div class="def amber"><b>km/h to m/min:</b> × 1000 (km to m), then ÷ 60 (per hour to per minute)
+      <div class="eg"><b>m/min to km/h:</b> × 60 (per minute to per hour), then ÷ 1000 (m to km)</div></div>
+  </div>
+  <div class="explainer" data-explainer="convert"></div>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>Converting rates</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Lena walks at 4.8 km/h. Write her speed in m/min.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">4.8 km <span class="tex">=4.8\times1000=4800</span> m, so 4800 m in 60 min.<br><span class="tex">4800\div60=80</span><br>Lena walks <b>80 m/min</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) An escalator moves at 30 m/min. Write its speed in km/h.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">In 1 h (60 min): <span class="tex">30\times60=1800</span> m<br>1800 m <span class="tex">=1800\div1000=1.8</span> km<br>The escalator moves at <b>1.8 km/h</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) Ethan earns $18.60/h. How much is that per minute?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1 h = 60 min<br><span class="tex">18.60\div60=0.31</span><br>He earns <b>$0.31/min</b> (31 cents).</div></div></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> How can you check (a)? Lena walks 80 m every minute. How far is that in an hour?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">80\times60=4800</span> m <span class="tex">=4.8</span> km in an hour. That matches 4.8 km/h ✓</div></div></div>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex11" data-section="Extra: Which Job Pays More?">
+  <div class="ex-head"><span class="ex-tag">Extra</span><h3>Pay by the shift or by the hour?</h3></div>
+  <p class="q">A gas station pays <b>$142.00 for an 8-hour shift</b>. A car wash pays <b>$17.95/h</b>.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Which job pays more per hour?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Gas station: <span class="tex">142.00\div8=\$17.75\text{/h}</span>. The <b>car wash</b> pays more: $17.95/h is more than $17.75/h.</div></div></div>
+    <div class="part"><div class="pl">(b) How much more would you earn at the car wash in an 8-hour shift?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">17.95\times8=143.60</span>, and <span class="tex">143.60-142.00=\$1.60</span> more.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Rate:</b> two quantities with <b>different units</b> (72 pages/3 min). <b>Ratio:</b> the <b>same</b> unit. A rate always keeps its units. “/” means <b>per</b>.</div>
+    <div><b>Unit rate</b> = first quantity ÷ second quantity: the amount for <b>1</b> unit. The unit after “per” goes on the bottom.</div>
+    <div><b>Predict:</b> amount = unit rate × units; units = amount ÷ unit rate. Make the units <b>match</b> first; <b>round up</b> for whole items.</div>
+    <div><b>L/100 km</b> = litres ÷ km × 100 (lower is better). <b>Compare</b> unit rates in the same units. <b>Convert</b> one unit at a time.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u1l5">
+    <div><div class="kicker">Your turn</div><b>Assignment 5 · Questions 10–18</b><div class="muted">Fuel consumption, a road trip, comparing job offers, and converting rates. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l6/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 6 — Unit Price: Finding the Best Buy</b><div class="muted">The big jar or the small one? Next time we use unit prices to find the best buy at the store.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u1l5.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u1l5', homeHref: '../../', title: '1.5 Rates and Unit Rates' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

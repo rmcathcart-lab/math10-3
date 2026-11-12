@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ratios · Math 10-3 1.3</title>
+<meta name="description" content="Math 10-3 Unit 1 Lesson 3: ratios. Writing a ratio three ways, part-to-part and part-to-whole, simplest form (with decimals and different units), ratio tables and mixing recipes, and sharing an amount in a ratio. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u1l3.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u1l3">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Pick a Table">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Pick a Table</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">You show up late to a pizza party.</p><p class="vw-ctx"><b>Table A:</b> 3 friends share 2 pizzas.<br><b>Table B:</b> 5 friends share 3 pizzas.<br>Each table shares its pizza equally.</p><p class="vw-ask">Which table should you sit at to get the most pizza?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="Two party tables with pizzas and friends, and you deciding where to sit">
+    <g><circle cx="80" cy="120" r="54" fill="#f5ecdf" stroke="#6e4a1c" stroke-width="4"/>
+      <circle cx="64" cy="110" r="19" fill="#e9b54a" stroke="#b5651d" stroke-width="3"/><circle cx="96" cy="130" r="19" fill="#e9b54a" stroke="#b5651d" stroke-width="3"/>
+      <g fill="#c93a33"><circle cx="58" cy="104" r="3.5"/><circle cx="70" cy="115" r="3.5"/><circle cx="91" cy="125" r="3.5"/><circle cx="101" cy="136" r="3.5"/></g>
+      <g fill="#2b55a0"><circle cx="80" cy="50" r="12"/><circle cx="20" cy="150" r="12"/><circle cx="140" cy="150" r="12"/></g>
+      <text x="80" y="200" font-size="26" font-weight="800" fill="#6e4a1c" text-anchor="middle">A</text></g>
+    <g><circle cx="250" cy="120" r="58" fill="#f5ecdf" stroke="#6e4a1c" stroke-width="4"/>
+      <circle cx="230" cy="102" r="17" fill="#e9b54a" stroke="#b5651d" stroke-width="3"/><circle cx="270" cy="104" r="17" fill="#e9b54a" stroke="#b5651d" stroke-width="3"/><circle cx="250" cy="140" r="17" fill="#e9b54a" stroke="#b5651d" stroke-width="3"/>
+      <g fill="#c93a33"><circle cx="226" cy="97" r="3.2"/><circle cx="236" cy="107" r="3.2"/><circle cx="266" cy="99" r="3.2"/><circle cx="275" cy="110" r="3.2"/><circle cx="246" cy="136" r="3.2"/><circle cx="256" cy="145" r="3.2"/></g>
+      <g fill="#7b4fc4"><circle cx="250" cy="46" r="12"/><circle cx="185" cy="88" r="12"/><circle cx="315" cy="88" r="12"/><circle cx="200" cy="170" r="12"/><circle cx="300" cy="170" r="12"/></g>
+      <text x="250" y="210" font-size="26" font-weight="800" fill="#6e4a1c" text-anchor="middle">B</text></g>
+    <g><animateTransform attributeName="transform" type="translate" values="-60 0;60 0;-60 0" keyTimes="0;.5;1" dur="5s" repeatCount="indefinite"/>
+      <circle cx="165" cy="214" r="13" fill="#12805a"/><text x="165" y="243" font-size="15" font-weight="800" fill="#12805a" text-anchor="middle">you</text>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="1.2s" repeatCount="indefinite"/><text x="190" y="224" font-size="28" font-weight="800" fill="#12805a" text-anchor="middle">?</text></g></g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Which table did the person beside you pick? Why?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>It doesn’t matter!</b> Right now, Table A gets more each: <span class="tex">2\div3\approx0.67</span> of a pizza, and Table B gets <span class="tex">3\div5=0.6</span>. But once <b>you</b> sit down, Table A is 4 people for 2 pizzas and Table B is 6 people for 3 pizzas. That’s <b>half a pizza each</b> at either table.</div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 1 Unit Pricing and Currency Exchange · Lesson 3</div>
+  <h1>Ratios</h1>
+  <p class="lede">A <b>ratio</b> compares two amounts, like 1 can of juice concentrate to 4 cans of water. Today we write ratios, make them as <b>simple</b> as possible, scale a recipe <b>up or down</b>, and <b>share</b> money fairly.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>write a ratio three ways, and tell a <b>part-to-part</b> ratio from a <b>part-to-whole</b> ratio</li>
+      <li>write a ratio in <b>simplest form</b>, even with decimals or different units</li>
+      <li>use a <b>ratio table</b> to make a mix or a recipe bigger or smaller</li>
+      <li><b>share</b> an amount in a given ratio</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N1</b> Solve problems that involve unit pricing and currency exchange, using proportional reasoning.</div>
+</section>
+
+<!-- ================= 1. What is a ratio? ================= -->
+<section class="card" data-ink="s1" data-section="1. What Is a Ratio?">
+  <div class="sec-h"><span class="badge">1</span><h2>What Is a Ratio?</h2></div>
+  <div class="def">A <b>ratio</b> compares two amounts measured in the <b>same units</b>. The numbers in a ratio are its <b>terms</b>.</div>
+  <div class="u1l3-three">
+    <div class="u1l3-th">Three ways to write a ratio</div>
+    <div class="u1l3-way"><i>with a colon</i><b><span class="tex">3:2</span></b></div>
+    <div class="u1l3-way"><i>in words</i><b>3 to 2</b></div>
+    <div class="u1l3-way"><i>as a fraction</i><b><span class="tex">\dfrac{3}{2}</span></b></div>
+    <div class="u1l3-tf">All three are read “3 to 2”. <b>Order matters:</b> the first amount named goes first (or on top).</div>
+  </div>
+  <div class="def-grid">
+    <div class="def"><b>Part-to-part</b> compares one part of a group with another part.<div class="eg">goldfish : guppies</div></div>
+    <div class="def amber"><b>Part-to-whole</b> compares one part with the <b>whole</b> group. To find the whole, <b>add all the parts</b>.<div class="eg">goldfish : all the fish</div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><span class="tex">3:2</span> and <span class="tex">2:3</span> are <b>different</b> ratios. Read the question: “guppies to goldfish” means <b>guppies first</b>. Also, never change a ratio like <span class="tex">\tfrac{5}{3}</span> into a mixed number (<span class="tex">1\tfrac{2}{3}</span>). A ratio compares <b>two</b> numbers, so keep both.</div></div>
+  <div class="explainer" data-explainer="fish"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>The fish tank</h3></div>
+  <p class="q">A fish tank at a pet store has <b>5 goldfish</b>, <b>3 guppies</b> and <b>4 tetras</b>. Complete the table.</p>
+  <div class="part u1l3-tpart">
+    <table class="u1l3-tbl u1l3-ex1">
+      <thead><tr><th>Comparison</th><th>Colon</th><th>Words</th><th>Fraction</th><th>Part-to-part or part-to-whole?</th></tr></thead>
+      <tbody>
+        <tr><td>goldfish to guppies</td><td><span data-reveal><span class="tex">5:3</span></span></td><td><span data-reveal>5 to 3</span></td><td><span data-reveal><span class="tex">\dfrac{5}{3}</span></span></td><td><span data-reveal>part-to-part</span></td></tr>
+        <tr><td>guppies to goldfish</td><td><span data-reveal><span class="tex">3:5</span></span></td><td><span data-reveal>3 to 5</span></td><td><span data-reveal><span class="tex">\dfrac{3}{5}</span></span></td><td><span data-reveal>part-to-part</span></td></tr>
+        <tr><td>tetras to all fish</td><td><span data-reveal><span class="tex">4:12</span></span></td><td><span data-reveal>4 to 12</span></td><td><span data-reveal><span class="tex">\dfrac{4}{12}</span></span></td><td><span data-reveal>part-to-whole</span></td></tr>
+        <tr><td>fish that are <b>not</b> tetras to tetras</td><td><span data-reveal><span class="tex">8:4</span></span></td><td><span data-reveal>8 to 4</span></td><td><span data-reveal><span class="tex">\dfrac{8}{4}</span></span></td><td><span data-reveal>part-to-part</span></td></tr>
+      </tbody>
+    </table>
+    <div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">All fish: <span class="tex">5+3+4=12</span>. Not tetras: <span class="tex">5+3=8</span> (or <span class="tex">12-4=8</span>). <span class="muted">Tap any cell to check just that one.</span></div></div>
+  </div>
+  <div data-extra class="part think"><div class="pl"><span class="think-tag">Think</span> The store adds <b>2 more tetras</b>. Which ratios in the table change? Which one stays the same?</div><div class="work" style="--h:80px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Now there are 6 tetras and 14 fish. Tetras to all fish becomes <span class="tex">6:14</span> and not-tetras to tetras becomes <span class="tex">8:6</span>. Goldfish to guppies (<span class="tex">5:3</span>) and guppies to goldfish (<span class="tex">3:5</span>) don’t change.</div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex1x" data-section="Extra Example: Apples">
+  <div class="ex-head"><span class="ex-tag">Extra</span><h3>A bag of apples</h3></div>
+  <p class="q">A bag from the farmers’ market has <b>7 red</b> apples and <b>5 green</b> apples.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) green to red, three ways</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5:7</span>, 5 to 7, <span class="tex">\dfrac{5}{7}</span> (part-to-part)</div></div></div>
+    <div class="part"><div class="pl">(b) red to all the apples</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">All: <span class="tex">7+5=12</span><br><span class="tex">\boldsymbol{7:12}</span> (part-to-whole)</div></div></div>
+    <div class="part"><div class="pl">(c) all the apples to green</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\boldsymbol{12:5}</span>. The whole comes first this time; it is still part-to-whole.</div></div></div>
+  </div>
+</section>
+
+<!-- ================= 2. Simplifying ================= -->
+<section class="card" data-ink="s2" data-section="2. Simplifying Ratios">
+  <div class="sec-h"><span class="badge">2</span><h2>Simplifying Ratios</h2></div>
+  <div class="def-grid">
+    <div class="def"><b>Equivalent ratios</b> compare the same way, like <span class="tex">2:4</span> and <span class="tex">1:2</span>.</div>
+    <div class="def amber">A ratio is in <b>simplest form</b> when its terms are whole numbers with <b>no common factor</b> except 1.</div>
+  </div>
+  <div class="def"><b>To simplify a ratio:</b> divide <b>both</b> terms by the <b>greatest common factor</b> (GCF), the biggest number that divides into both.
+    <div class="u1l3-big"><span class="tex">12:18\;\to\;12\div6:18\div6\;\to\;2:3</span></div>
+    <div class="eg">If you can’t spot the GCF, divide by any common factor and repeat.</div></div>
+  <div class="explainer" data-explainer="groups"></div>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>The TI-30XIIS simplifies fractions for you.</b> For <span class="tex">12:18</span>, type <span class="keys"><kbd>12</kbd><kbd>A b/c</kbd><kbd>18</kbd><kbd>=</kbd></span>. The screen shows <b>2┘3</b>, so the ratio is <span class="tex">2:3</span>.<br>If it shows a mixed number like <b>2┘2┘3</b>, press <span class="keys"><kbd>2nd</kbd><kbd>d/e</kbd></span> (above <kbd>A b/c</kbd>) to see <b>8┘3</b>, which means <span class="tex">8:3</span>.</div>
+    <div class="pill-col"><button class="pill" data-keys="12 ab/c 18 =">12 : 18</button><button class="pill" data-keys="40 ab/c 15 =">40 : 15</button></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s2x" data-section="2. Can’t Spot the GCF?">
+  <h3 class="sub">Can’t spot the GCF? Divide, then divide again</h3>
+  <p>Any common factor is a good start. Keep dividing both terms until the only common factor left is 1. You end up in the same place as dividing by the GCF once.</p>
+  <div class="explainer" data-explainer="ladder"></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Simplest form</h3></div>
+  <p class="q">Write each ratio in simplest form.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) <span class="tex">12:18</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">GCF is 6<br><span class="tex">12\div6:18\div6</span><br><span class="tex">=\boldsymbol{2:3}</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">40:15</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">GCF is 5<br><span class="tex">40\div5:15\div5</span><br><span class="tex">=\boldsymbol{8:3}</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">4:12</span> <span class="muted small">(the tetras from Example 1)</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">GCF is 4<br><span class="tex">4\div4:12\div4</span><br><span class="tex">=\boldsymbol{1:3}</span></div></div></div>
+    <div class="part"><div class="pl">(d) <span class="tex">24:24</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">GCF is 24<br><span class="tex">=\boldsymbol{1:1}</span><br>(keep both 1s)</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Decimals and Different Units">
+  <h3 class="sub">Decimals and different units</h3>
+  <p>The terms of a simplified ratio must be <b>whole numbers</b>, and both amounts must be in the <b>same unit</b>.</p>
+  <div class="def-grid">
+    <div class="def"><b>Decimals:</b> multiply both terms by 10 or 100 to make whole numbers, then simplify.<div class="eg"><span class="tex">0.5:2\;\to\;5:20\;\to\;1:4</span></div></div>
+    <div class="def amber"><b>Different units:</b> change both amounts to the <b>same</b> unit (usually the smaller one), drop the units, then simplify.</div>
+  </div>
+  <div class="u1l3-units"><span>1 h = 60 min</span><span>1 min = 60 s</span><span>1 kg = 1&#8201;000 g</span><span>1 L = 1&#8201;000 mL</span><span>1 m = 100 cm</span></div>
+  <div class="explainer" data-explainer="blocks"></div>
+  <div data-extra class="part think"><div class="pl"><span class="think-tag">Think</span> Why not just write 45 min : 2 h as <span class="tex">45:2</span>?</div><div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">45:2</span> makes the 45 min look more than 20 times as long as 2 h. Really it is <b>less than half</b> as long: 45 min out of 120 min.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Decimals and units</h3></div>
+  <p class="q">Write each ratio in simplest form.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) <span class="tex">2.5:4</span></div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\times10</span>: <span class="tex">25:40</span><br>GCF 5: <span class="tex">\boldsymbol{5:8}</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">0.75:1.5</span></div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\times100</span>: <span class="tex">75:150</span><br>GCF 75: <span class="tex">\boldsymbol{1:2}</span></div></div></div>
+    <div class="part"><div class="pl">(c) 45 min : 2 h</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 h = 120 min<br><span class="tex">45:120</span><br>GCF 15: <span class="tex">\boldsymbol{3:8}</span></div></div></div>
+    <div class="part"><div class="pl">(d) 250 g : 1.5 kg</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">1.5 kg = 1&#8201;500 g<br><span class="tex">250:1\,500</span><br>GCF 250: <span class="tex">\boldsymbol{1:6}</span></div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex3x" data-section="Extra Examples: Decimals and Units">
+  <div class="ex-head"><span class="ex-tag">Extra</span><h3>More decimals and units</h3></div>
+  <p class="q">Write each ratio in simplest form.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) 90 s : 2 min</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 min = 120 s<br><span class="tex">90:120</span><br>GCF 30: <span class="tex">\boldsymbol{3:4}</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">1.2:0.8</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\times10</span>: <span class="tex">12:8</span><br>GCF 4: <span class="tex">\boldsymbol{3:2}</span></div></div></div>
+    <div class="part"><div class="pl">(c) 3 m : 80 cm</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">3 m = 300 cm<br><span class="tex">300:80</span><br>GCF 20: <span class="tex">\boldsymbol{15:4}</span></div></div></div>
+  </div>
+</section>
+
+<section class="card" data-ink="s2c" data-section="2. Mixing in a Jug">
+  <h3 class="sub">A drink is a mix of parts</h3>
+  <p>Mix concentrate with water and you get <b>two</b> ratios: concentrate to <b>water</b> (part-to-part) and concentrate to the <b>whole drink</b> (part-to-whole).</p>
+  <div class="explainer" data-explainer="jug"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Iced tea</h3></div>
+  <p class="q">A <b>2 L</b> jug of iced tea is made with <b>400 mL</b> of iced tea concentrate. The rest is water.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Write the ratio of concentrate to the <b>whole drink</b> in simplest form.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 L = 2&#8201;000 mL<br><span class="tex">400:2\,000</span>, GCF 400: <span class="tex">\boldsymbol{1:5}</span></div></div></div>
+    <div class="part"><div class="pl">(b) How much water is in the jug?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2\,000-400=1\,600</span> mL of water <b>(1.6 L)</b></div></div></div>
+    <div class="part"><div class="pl">(c) Write the ratio of concentrate to <b>water</b> in simplest form.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">400:1\,600</span>, GCF 400: <span class="tex">\boldsymbol{1:4}</span></div></div></div>
+    <div class="part"><div class="pl">(d) Which ratio, (a) or (c), is part-to-whole?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>(a)</b> is part-to-whole: it compares the concentrate with the whole drink.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u1l3"></section>
+
+<!-- ================= 3. Equivalent ratios and mixing recipes ================= -->
+<section class="card" data-ink="s3" data-section="3. Equivalent Ratios and Mixing">
+  <div class="sec-h"><span class="badge">3</span><h2>Equivalent Ratios and Mixing Recipes</h2></div>
+  <p>Multiply (or divide) <b>both</b> terms of a ratio by the <b>same</b> number to get an equivalent ratio. A <b>ratio table</b> lists equivalent ratios side by side.</p>
+  <div class="def-grid">
+    <div class="def"><b>Equivalent ratios:</b> <span class="tex">a:b=(a\times n):(b\times n)</span><div class="eg"><span class="tex">1:4=2:8=3:12</span></div></div>
+    <div class="def amber"><b>Two ratios are equivalent</b> if they simplify to the <b>same</b> simplest form.<div class="eg"><span class="tex">3:12=1:4</span> and <span class="tex">5:20=1:4</span>, so they are equivalent.</div></div>
+  </div>
+  <p>Mixing instructions often say “1 part to 4 parts”. A <b>part</b> can be any size (a cup, a can, a bucket) as long as every part in the mix uses the <b>same size</b>.</p>
+  <div class="explainer" data-explainer="table"></div>
+  <p class="small muted">When two ratios are equal, you can write them as an equation called a <b>proportion</b>. You will solve these in Lesson 1.4.</p>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Frozen lemonade</h3></div>
+  <p class="q">A can of frozen lemonade concentrate says: mix <b>1 can</b> of concentrate with <b>4 cans</b> of water.</p>
+  <div class="part u1l3-tpart">
+    <div class="pl">(a) Complete the ratio table.</div>
+    <table class="u1l3-tbl u1l3-rt">
+      <tbody>
+        <tr><th>Cans of concentrate</th><td>1</td><td>2</td><td>3</td><td><span data-reveal>5</span></td><td>8</td></tr>
+        <tr><th>Cans of water</th><td>4</td><td><span data-reveal>8</span></td><td><span data-reveal>12</span></td><td>20</td><td><span data-reveal>32</span></td></tr>
+      </tbody>
+    </table>
+    <div class="work" style="--h:90px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Water is always <span class="tex">4\times</span> the concentrate: <span class="tex">2\times4=8</span>, <span class="tex">3\times4=12</span>, <span class="tex">8\times4=32</span>. Concentrate is water <span class="tex">\div4</span>: <span class="tex">20\div4=5</span>.</div></div>
+  </div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(b) For a party, Lucas mixes <b>6 cans</b> of concentrate with <b>20 cans</b> of water. Is this the same as the instructions? Will his lemonade taste stronger or weaker?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6:20</span> simplifies to <span class="tex">3:10</span>, not <span class="tex">1:4</span>, so it is <b>not the same</b>.<br>With 6 cans of concentrate, the instructions need <span class="tex">6\times4=24</span> cans of water. Lucas used only 20, so his lemonade is <b>stronger</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex5x" data-section="Extra Example: Equivalent?">
+  <div class="ex-head"><span class="ex-tag">Extra</span><h3>Equivalent or not?</h3></div>
+  <p class="q">Simplify both ratios. Are they equivalent?</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) <span class="tex">6:15</span> and <span class="tex">4:10</span></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6:15=2:5</span> and <span class="tex">4:10=2:5</span><br><b>Yes</b>, equivalent.</div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">9:12</span> and <span class="tex">12:15</span></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">9:12=3:4</span> but <span class="tex">12:15=4:5</span><br><b>No</b>, not equivalent. (Adding 3 to both terms does not keep a ratio the same.)</div></div></div>
+  </div>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Stronger or Weaker?">
+  <h3 class="sub">Stronger or weaker? Compare with the same amount of concentrate</h3>
+  <p>Scale the instructions up to the <b>same</b> number of cans of concentrate. Less water than that: <b>stronger</b>. More water: <b>weaker</b>.</p>
+  <div class="explainer" data-explainer="taste"></div>
+  <div data-extra class="part think"><div class="pl"><span class="think-tag">Think</span> Lucas’s lemonade is too strong. What could he add to fix it?</div><div class="work" style="--h:70px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>4 more cans of water.</b> Then he has <span class="tex">6:24=1:4</span>, just like the instructions.</div></div></div>
+</section>
+
+<section class="card" data-ink="s3c" data-section="3. Three-Term Ratios">
+  <h3 class="sub">Ratios with three terms</h3>
+  <p>A ratio can compare <b>three</b> amounts, like <span class="tex">1:2:3</span>. Multiply or divide <b>all three</b> terms by the same number. The whole is all the parts added: <span class="tex">1+2+3=6</span> parts.</p>
+  <div class="explainer" data-explainer="concrete"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>A patio of concrete</h3></div>
+  <p class="q">A concrete mix for a backyard patio uses cement, sand and gravel in the ratio <span class="tex">1:2:3</span> (by buckets).</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Marco uses <b>4 buckets of cement</b>. How much sand and gravel does he need?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Multiply every term by 4:<br><span class="tex">1:2:3=4:8:12</span><br><b>8 buckets of sand</b> and <b>12 buckets of gravel</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Marco has only <b>15 buckets of gravel</b>. How much cement and sand go with it?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Gravel: <span class="tex">3\times5=15</span>, so multiply by 5:<br><span class="tex">1:2:3=5:10:15</span><br><b>5 buckets of cement</b> and <b>10 buckets of sand</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) What is the ratio of cement to the <b>whole mix</b>?</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Whole: <span class="tex">1+2+3=6</span> parts<br>cement : whole <span class="tex">=\boldsymbol{1:6}</span></div></div></div>
+    <div class="part"><div class="pl">(d) How many buckets of mix does (b) make?</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5+10+15=\boldsymbol{30}</span> <b>buckets</b></div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= Math History box (brown) ================= -->
+<!-- sources: Vitruvius, The Ten Books on Architecture 2.5.1 (Morgan translation) https://lexundria.com/vitr/2.5/mg ;
+     Pantheon (completed under Hadrian, dedicated about AD 126; still the largest unreinforced concrete dome, about 43 m) https://en.wikipedia.org/wiki/Pantheon,_Rome -->
+<section class="card history" data-ink="hist" data-section="Math History: A Roman Recipe">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">about 25 BCE</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">A 2000-year-old mixing ratio</h3>
+      <p>The Roman builder <b>Vitruvius</b> wrote a famous book on how to build. His recipe for mortar, the paste that holds stones and bricks together, is a ratio: <b>3 parts sand to 1 part lime</b> for sand dug from a pit, and <b>2 parts sand to 1 part lime</b> for river or sea sand.</p>
+      <p>Roman concrete was built from mortar like this. The concrete dome of the <b>Pantheon</b> in Rome, finished about 1900 years ago, is still the biggest dome in the world made of concrete with no steel inside: about 43 m across.</p>
+      <div class="part hist-q"><div class="pl">A Roman builder has <b>12 baskets of pit sand</b>. How many baskets of lime should he use?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans">sand : lime <span class="tex">=3:1=12:4</span> (multiply by 4), so <b>4 baskets of lime</b>.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u1l3-hist" viewBox="0 0 600 300" role="img" aria-label="Baskets of sand and lime pouring into a mortar trough, 3 of sand for each 1 of lime"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= practice break ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–10">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 3 · Questions 1–10</h2>
+  <p class="pr-t">Try these before we learn how to share an amount in a ratio.</p>
+  <div class="pr-chips">
+    <span><b>1–2</b>Write ratios three ways; part-to-part or part-to-whole</span>
+    <span><b>3–6</b>Simplest form, with decimals and different units</span>
+    <span><b>7–8</b>Ratio tables and equivalent ratios</span>
+    <span><b>9–10</b>Three-term recipes; which mix is lighter?</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 10.</span><a class="pill" href="../../../#/lesson/u1l3">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Sharing in a ratio ================= -->
+<section class="card" data-ink="s4" data-section="4. Sharing in a Ratio">
+  <div class="sec-h"><span class="badge">4</span><h2>Sharing in a Ratio</h2></div>
+  <p>Sometimes a total (money, a mixture) must be split in a given ratio. Split it into equal <b>parts</b> first.</p>
+  <div class="u1l3-steps">
+    <div class="u1l3-sh">Sharing an amount in the ratio <span class="tex">a:b</span></div>
+    <div><b class="n">1</b>Add the terms to get the <b>total number of parts</b>: <span class="tex">a+b</span>.</div>
+    <div><b class="n">2</b>Find <b>one part</b>: total amount <span class="tex">\div</span> total number of parts.</div>
+    <div><b class="n">3</b>Multiply one part by each term: <span class="tex">a\times</span> (one part) and <span class="tex">b\times</span> (one part).</div>
+    <div><b class="n">4</b><b>Check:</b> the shares add up to the total.</div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div>For <span class="tex">3:5</span>, do <b>not</b> divide by 3 or by 5. Divide by <span class="tex">3+5=8</span>, the total number of parts.</div></div>
+  <div class="explainer" data-explainer="share"></div>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>Estimate first, then use the calculator.</b> Owen gets 5 of the 8 parts, a bit more than half of $120, so a bit more than $60. Then find one part and multiply: <span class="keys"><kbd>120</kbd><kbd>÷</kbd><kbd>8</kbd><kbd>=</kbd></span> gives 15, and <span class="keys"><kbd>5</kbd><kbd>×</kbd><kbd>15</kbd><kbd>=</kbd></span> gives 75.</div>
+    <div class="pill-col"><button class="pill" data-keys="120 ÷ 8 =">One part</button><button class="pill" data-keys="5 × 15 =">Owen’s share</button></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s4x" data-section="4. Why Not Divide by 3?">
+  <h3 class="sub">Why not divide by 3 or by 5?</h3>
+  <p>Try it and check: the shares must add up to the total. Dividing by one term gives shares that add up to <b>far too much</b>.</p>
+  <div class="explainer" data-explainer="wrong"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Sharing money</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Jaya and Owen earn <b>$120</b> shovelling driveways. Owen shovelled more, so they share the money in the ratio <span class="tex">3:5</span> (Jaya : Owen). How much does each get?</div><div class="work" style="--h:290px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: <span class="tex">3+5=8</span> parts<br>Step 2: one part <span class="tex">=\$120\div8=\$15</span><br>Step 3: Jaya <span class="tex">3\times\$15=\$45</span>; Owen <span class="tex">5\times\$15=\$75</span><br>Step 4: <span class="tex">\$45+\$75=\$120</span> ✓<br><b>Jaya gets $45 and Owen gets $75.</b></div></div></div>
+    <div class="part"><div class="pl">(b) Ellie worked <b>6 h</b> and Ravi worked <b>9 h</b> at a car wash. They share <b>$187.50</b> in tips in the ratio of the hours they worked. How much does each get?</div><div class="work" style="--h:290px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Ratio <span class="tex">6:9=2:3</span> (or use <span class="tex">6+9=15</span> parts)<br>Step 1: <span class="tex">2+3=5</span> parts<br>Step 2: one part <span class="tex">=\$187.50\div5=\$37.50</span><br>Step 3: Ellie <span class="tex">2\times\$37.50=\$75.00</span>; Ravi <span class="tex">3\times\$37.50=\$112.50</span><br>Step 4: <span class="tex">\$75.00+\$112.50=\$187.50</span> ✓<br><b>Ellie gets $75.00 and Ravi gets $112.50.</b></div></div></div>
+  </div>
+  <div data-extra class="part think"><div class="pl"><span class="think-tag">Think</span> Jaya says, “The ratio is <span class="tex">3:5</span>, so I get <span class="tex">\tfrac35</span> of the money.” Is she right?</div><div class="work" style="--h:80px"></div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> <span class="tex">3:5</span> is part-to-part (Jaya to Owen). Jaya gets 3 of the <b>8</b> parts, so <span class="tex">\tfrac38</span> of the money: <span class="tex">\tfrac38</span> of $120 is $45.</div></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Washer fluid</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Windshield washer fluid is mixed <b>1 part concentrate to 5 parts water</b>. Nadia wants to fill a <b>4.5 L</b> jug. How much concentrate and how much water does she need?</div><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: <span class="tex">1+5=6</span> parts<br>Step 2: one part <span class="tex">=4.5\div6=0.75</span> L<br>Step 3: concentrate <span class="tex">1\times0.75=0.75</span> L; water <span class="tex">5\times0.75=3.75</span> L<br>Step 4: <span class="tex">0.75+3.75=4.5</span> L ✓<br><b>Nadia needs 0.75 L (750 mL) of concentrate and 3.75 L of water.</b></div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-extra data-ink="ex9" data-section="Extra Example: Three Ways">
+  <div class="ex-head"><span class="ex-tag">Extra</span><h3>Sharing three ways</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Kai, Liv and Sam work a booth at the Calgary Stampede. They share <b>$90</b> in tips in the ratio <span class="tex">1:2:3</span>. How much does each get?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: <span class="tex">1+2+3=6</span> parts<br>Step 2: one part <span class="tex">=\$90\div6=\$15</span><br>Step 3: Kai <span class="tex">1\times\$15=\$15</span>; Liv <span class="tex">2\times\$15=\$30</span>; Sam <span class="tex">3\times\$15=\$45</span><br>Step 4: <span class="tex">\$15+\$30+\$45=\$90</span> ✓</div></div></div>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>A ratio compares two amounts</b> in the same units: <span class="tex">3:2</span>, 3 to 2, or <span class="tex">\tfrac32</span>. Order matters. <b>Part-to-whole</b>: add all the parts to get the whole.</div>
+    <div><b>Simplest form:</b> divide both terms by the GCF. Decimals: <span class="tex">\times10</span> or <span class="tex">\times100</span> first. Different units: change to the same unit first.</div>
+    <div><b>Equivalent ratios:</b> multiply or divide <b>every</b> term by the same number. A ratio table shows them side by side.</div>
+    <div><b>Sharing in <span class="tex">a:b</span>:</b> total parts <span class="tex">a+b</span>, one part = total ÷ parts, multiply by each term, check the shares add up.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u1l3">
+    <div><div class="kicker">Your turn</div><b>Assignment 3 · Questions 11–18</b><div class="muted">Sharing in a ratio, then mixed review (multiple choice and numerical response). Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l4/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 4 — Proportions: Finding the Missing Value</b><div class="muted">1 can to 4 cans… so how many cans of water go with 7 cans? Next time we find the missing number in two equal ratios.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u1l3.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u1l3', homeHref: '../../', title: '1.3 Ratios' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

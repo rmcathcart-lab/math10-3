@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit Price · Math 10-3 1.6</title>
+<meta name="description" content="Math 10-3 Unit 1 Lesson 6: unit price and finding the best buy. Price ÷ quantity, price per 100 g or 100 mL, matching units, multi-buy deals and shipping, the best buy for you, and using a unit price to find a cost. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u1l6.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u1l6">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Stick and the Puck">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Stick and the Puck</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">At a sports store, a hockey stick and a puck cost <b>$110</b> together.</p><p class="vw-ctx">The stick costs <b>$100 more</b> than the puck.</p><p class="vw-ask">How much does the puck cost?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A hockey stick and a puck under a price tag that says $110 together; the puck slides back and forth">
+    <rect x="18" y="214" width="294" height="14" rx="7" fill="#e3eef6"/>
+    <g><animateTransform attributeName="transform" type="rotate" values="0 150 200;-4 150 200;0 150 200" dur="2.4s" repeatCount="indefinite"/>
+      <path d="M72 30 L150 196 Q156 208 170 208 L238 208 Q250 208 250 198 L250 192 Q250 186 242 186 L172 186 L96 22 Z" fill="#9a6a24" stroke="#4a3010" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="190" y="186" width="44" height="22" fill="#1c2230" opacity=".85"/>
+      <path d="M78 34 L90 28 L99 47 L87 53 Z" fill="#1c2230"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;-22 0;0 0" keyTimes="0;0.5;1" dur="2.4s" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1" repeatCount="indefinite"/>
+      <ellipse cx="296" cy="212" rx="22" ry="8" fill="#1c2230"/><rect x="274" y="203" width="44" height="9" fill="#1c2230"/><ellipse cx="296" cy="203" rx="22" ry="8" fill="#3a4254"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-6 250 24;4 250 24;-6 250 24" dur="3s" repeatCount="indefinite"/>
+      <line x1="250" y1="8" x2="250" y2="34" stroke="#4a4436" stroke-width="2.5"/>
+      <path d="M200 34 H300 V96 H200 Z" fill="#fff6e5" stroke="#9a6a24" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="250" cy="44" r="4" fill="#9a6a24"/>
+      <text x="250" y="76" font-size="28" font-weight="800" fill="#6e4a1c" text-anchor="middle">$110</text>
+      <text x="250" y="91" font-size="13" font-weight="700" fill="#4a4436" text-anchor="middle">together</text>
+    </g>
+    <text x="300" y="168" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Got an answer? <b>Check it</b>: add the two prices.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>The puck is $5, not $10!</b> The stick is <span class="tex">\$5+\$100=\$105</span>, and <span class="tex">\$105+\$5=\$110</span> ✓. If the puck were $10, the stick would be $110, and together they would cost $120. <span class="muted">Most people say $10 first. A quick check catches it.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 1 Unit Pricing and Currency Exchange · Lesson 6</div>
+  <h1>Unit Price: Finding the Best Buy</h1>
+  <p class="lede">The big box or the small box? The 12-pack or “4 for $5”? Today we find the price of <b>one unit</b>, use it to compare sizes and deals, and decide what the <b>best buy</b> really is: for your wallet, and for you.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find a <b>unit price</b>: price ÷ quantity</li>
+      <li>compare sizes with the price <b>per 100 g</b> or <b>per 100 mL</b>, after changing to the <b>same unit</b></li>
+      <li>find the price of one in a <b>multi-buy deal</b>, and include <b>shipping</b></li>
+      <li>choose the best buy for <b>cost</b> and for <b>other reasons</b></li>
+      <li>use a unit price to find the <b>cost of any amount</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N1</b> Solve problems that involve unit pricing and currency exchange, using proportional reasoning.</div>
+</section>
+
+<!-- ================= 1. What is a unit price? ================= -->
+<section class="card" data-ink="s1" data-section="1. What Is a Unit Price?">
+  <div class="sec-h"><span class="badge">1</span><h2>What Is a Unit Price?</h2></div>
+  <p>Stores sell many things in packs, bags and bottles. The <b>unit price</b> is the price of <b>one unit</b>: one item, one kilogram, one litre, and so on. A unit price is a <b>unit rate</b> with money on top.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Unit price = price ÷ quantity</b>
+    <div class="eg">8 batteries for $11.92: &nbsp; <span class="tex">\$11.92\div8=\$1.49</span> per battery</div></div>
+  <div class="explainer" data-explainer="unitPrice"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Always divide the <b>price</b> by the <b>quantity</b> (money ÷ amount). If you divide the other way, you get a number that does not make sense. <b>Estimate first:</b> $11.92 for 8 is about $12 for 8, so a bit more than $1 each.</div></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">11.92 <kbd>÷</kbd> 8 <kbd>ENTER</kbd></span> shows 1.49. If the screen shows more decimals, round to the nearest cent: 0.74833… is about <b>$0.75</b>.</div>
+    <div class="u1l6-pcol"><button class="pill" type="button" data-keys="11.92 ÷ 8 =">Batteries</button><button class="pill" type="button" data-keys="4.49 ÷ 6 =">Bagels</button></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. Which Way Do I Divide?">
+  <h3 class="sub">Which way do I divide?</h3>
+  <p>Money ÷ amount gives dollars <b>per item</b>. Amount ÷ money gives items per dollar, and that is not a price. An estimate tells you right away which one makes sense.</p>
+  <div class="explainer" data-explainer="wrongWay"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Find each unit price</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">Find each unit price. Round to the nearest cent.</div>
+      <table class="u1l6-tbl u1l6-ex1">
+        <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Work (price ÷ quantity)</th><th>Unit price</th></tr>
+        <tr><td>(a) Pack of AA batteries</td><td>$11.92</td><td>8 batteries</td><td><span data-reveal="&nbsp;"><span class="tex">11.92\div8=1.49</span></span></td><td><span data-reveal="&nbsp;">$1.49 per battery</span></td></tr>
+        <tr><td>(b) Bag of potatoes</td><td>$5.97</td><td>3 kg</td><td><span data-reveal="&nbsp;"><span class="tex">5.97\div3=1.99</span></span></td><td><span data-reveal="&nbsp;">$1.99 per kg</span></td></tr>
+        <tr><td>(c) Bag of bagels</td><td>$4.49</td><td>6 bagels</td><td><span data-reveal="&nbsp;"><span class="tex">4.49\div6=0.7483\ldots</span></span></td><td><span data-reveal="&nbsp;">about $0.75 per bagel</span></td></tr>
+        <tr><td>(d) Jug of milk</td><td>$6.29</td><td>4 L</td><td><span data-reveal="&nbsp;"><span class="tex">6.29\div4=1.5725</span></span></td><td><span data-reveal="&nbsp;">about $1.57 per L</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">(a) <b>$1.49</b> per battery &nbsp;·&nbsp; (b) <b>$1.99</b> per kg &nbsp;·&nbsp; (c) <b>$0.75</b> per bagel &nbsp;·&nbsp; (d) <b>$1.57</b> per L</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Priya’s salon</h3></div>
+  <p class="q">Priya owns a hair salon. She buys a case of 36 bottles of shampoo for $89.64. She sells each bottle to customers for $7.50.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) How much does one bottle cost Priya?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$89.64\div36=\$2.49</span><br>One bottle costs Priya <b>$2.49</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) How much <b>profit</b> (money she keeps) does she make on one bottle?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Profit = selling price − cost<br><span class="tex">\$7.50-\$2.49=\$5.01</span><br>She makes <b>$5.01</b> per bottle.</div></div></div>
+    <div class="part"><div class="pl">(c) What is her profit if she sells the whole case?</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">36\times\$5.01=\$180.36</span><br>Her profit on the case is <b>$180.36</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Comparing sizes ================= -->
+<section class="card" data-ink="s2" data-section="2. Comparing Sizes">
+  <div class="sec-h"><span class="badge">2</span><h2>Comparing Sizes: Which Is the Best Buy?</h2></div>
+  <p>To compare two or more sizes, find the unit price of each using the <b>same unit</b>. The size with the <b>lowest unit price</b> is the <b>best buy</b> (when cost is all that matters).</p>
+  <p>A price per gram or per millilitre is a tiny number, so stores often show the price <b>per 100 g</b> or <b>per 100 mL</b>. Find it by dividing the price by the number of hundreds: 525 g is <b>5.25 hundreds</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Price per 100 g = price ÷ grams × 100</b>
+    <div class="eg">The same for mL: price ÷ mL × 100</div></div>
+  <div class="explainer" data-explainer="shelf"></div>
+  <div class="def-grid">
+    <div class="tip u1l6-oktip"><div class="tip-ic">3</div><div><b>Keep an extra decimal.</b> When you compare unit prices, keep <b>three decimals</b> (to a tenth of a cent), for example $0.950 and $0.905. Two prices that round to the same cent can still be different.</div></div>
+    <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><span class="keys">4.99 <kbd>÷</kbd> 525 <kbd>×</kbd> 100 <kbd>ENTER</kbd></span> shows 0.950476…, so about <b>$0.950</b> per 100 g.</div>
+      <button class="pill" type="button" data-keys="4.99 ÷ 525 × 100 =">Show me</button></div>
+  </div>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Why ÷ Grams × 100?">
+  <h3 class="sub">Why price ÷ grams × 100? Count the hundreds</h3>
+  <p>Cut the package into 100 g blocks. The price is shared over the blocks, so each block’s share is the price per 100 g.</p>
+  <div class="explainer" data-explainer="per100"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> A 12-pack of pop costs $7.99. A 24-pack costs $13.99. Without a calculator, which is cheaper per can?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Two 12-packs would cost about $16. The 24-pack gives the same 24 cans for $13.99, so the <b>24-pack</b> is cheaper per can.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Two boxes of cereal</h3></div>
+  <p class="q">A 525 g box of cereal costs $4.99. A 750 g box of the same cereal costs $6.79. Which is the better buy?</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Estimate the price per 100 g of each box.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">525 g box: about $5 for 500 g, so about <b>$1.00</b> per 100 g.<br>750 g box: about $6.80 for 7.5 hundreds, so about <b>$0.90</b> per 100 g.</div></div></div>
+    <div class="part"><div class="pl">(b) Calculate the price per 100 g of each box, and answer the question.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">525 g: <span class="tex">4.99\div525\times100=0.9505\approx\$0.950</span> per 100 g<br>750 g: <span class="tex">6.79\div750\times100=0.9053\approx\$0.905</span> per 100 g<br>The <b>750 g box</b> is the better buy. It costs about 4.5¢ less per 100 g.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Three jars of peanut butter</h3></div>
+  <div class="tip watch u1l6-tip0"><div class="tip-ic">!</div><div><b>Watch out.</b> Bigger is <b>not always</b> cheaper per unit. Always check.</div></div>
+  <div class="u1l6-ex4">
+    <div class="part"><div class="pl">Peanut butter comes in three sizes. (a) Complete the table. (Remember: 1 kg = 1000 g.)</div>
+      <table class="u1l6-tbl u1l6-pb">
+        <tr><th>Size</th><th>Price</th><th>Work</th><th>Per 100 g</th></tr>
+        <tr><td>375 g</td><td>$3.29</td><td><span data-reveal="&nbsp;"><span class="tex">3.29\div375\times100</span></span></td><td><span data-reveal="&nbsp;">$0.877</span></td></tr>
+        <tr><td>1 kg</td><td>$6.99</td><td><span data-reveal="&nbsp;"><span class="tex">6.99\div1000\times100</span></span></td><td><span data-reveal="&nbsp;">$0.699</span></td></tr>
+        <tr><td>2 kg</td><td>$14.49</td><td><span data-reveal="&nbsp;"><span class="tex">14.49\div2000\times100</span></span></td><td><span data-reveal="&nbsp;">$0.725</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">375 g: <b>$0.877</b> &nbsp;·&nbsp; 1 kg: <b>$0.699</b> &nbsp;·&nbsp; 2 kg: <b>$0.725</b> per 100 g</div></div></div>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(b) Which size is the best buy?</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">The <b>1 kg jar</b> (the lowest price per 100 g)</div></div></div>
+      <div class="part"><div class="pl">(c) You want 2 kg of peanut butter. How much do you save by buying two 1 kg jars instead of one 2 kg jar?</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Two 1 kg jars: <span class="tex">2\times\$6.99=\$13.98</span><br>Save <span class="tex">\$14.49-\$13.98=\$0.51</span> by buying two 1 kg jars.</div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2c" data-section="2. When the Units Don’t Match">
+  <h3 class="sub">When the units do not match</h3>
+  <p>Sometimes one size is in millilitres and another in litres, or one is in grams and another in kilograms. <b>Change to the same unit first</b>, then compare.</p>
+  <div class="def"><b>Key idea</b> &nbsp; 1 L = 1000 mL &nbsp;&nbsp;·&nbsp;&nbsp; 1 kg = 1000 g
+    <div class="eg">For example: 1.5 L = 1500 mL (× 1000) &nbsp;·&nbsp; 650 g = 0.65 kg (÷ 1000)</div></div>
+  <div class="explainer" data-explainer="meatScale"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Same unit first</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A 740 mL bottle of dish soap costs $3.97. A 1.5 L bottle of the same soap costs $7.49. Which is the better buy?</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Change 1.5 L to mL: <span class="tex">1.5\times1000=1500</span> mL<br>740 mL: <span class="tex">3.97\div740\times100\approx\$0.536</span> per 100 mL<br>1500 mL: <span class="tex">7.49\div1500\times100\approx\$0.499</span> per 100 mL<br>The <b>1.5 L bottle</b> is the better buy.</div></div></div>
+    <div class="part"><div class="pl">(b) At the meat counter, lean ground beef is $11.00 per kg. A 650 g package in the cooler is $7.49. Which is the better buy?</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Change 650 g to kg: <span class="tex">650\div1000=0.65</span> kg<br>Package: <span class="tex">\$7.49\div0.65\approx\$11.52</span> per kg<br>Counter: $11.00 per kg<br>The <b>meat counter</b> is the better buy.<br>(Or: 0.65 kg at the counter costs <span class="tex">0.65\times\$11.00=\$7.15</span>, less than $7.49.)</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–4">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 6 · Questions 1–4</h2>
+  <p class="pr-t">Try these before we go on to deals and shipping.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Unit prices</span>
+    <span><b>2</b>Estimate, then check the calculator</span>
+    <span><b>3</b>Cost and profit</span>
+    <span><b>4</b>Which is the better buy?</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 4.</span><a class="pill" href="../../../#/lesson/u1l6">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Multi-buy deals and extra costs ================= -->
+<section class="card" data-ink="s3" data-section="3. Multi-Buy Deals">
+  <div class="sec-h"><span class="badge">3</span><h2>Multi-Buy Deals and Extra Costs</h2></div>
+  <p>A <b>multi-buy deal</b> gives a price for a group, like “4 for $5.00”. To find the price of one, divide: <span class="tex">\$5.00\div4=\$1.25</span> each. <b>Read the sign:</b> some stores give the deal price even if you buy just one, but some say “must buy 4”.</p>
+  <div class="explainer" data-explainer="multiBuy"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> The sign says “4 for $5.00” and you only want 1 cup. Is the deal good for you?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Only if the store gives the deal price for one ($1.25). If the sign says <b>must buy 4</b>, you would pay $5.00 for cups you don’t want.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Yogurt cups</h3></div>
+  <p class="q">At a grocery store, a single cup of yogurt costs $1.49. The sign also says “4 for $5.00”. A 12-pack of the same cups costs $13.99.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the price of one cup each way. Which is the best buy?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Single: $1.49 per cup<br>4 for $5.00: <span class="tex">\$5.00\div4=\$1.25</span> per cup<br>12-pack: <span class="tex">\$13.99\div12\approx\$1.166</span> per cup<br>The <b>12-pack</b> is the best buy.</div></div></div>
+    <div class="part"><div class="pl">(b) How much do you save by buying the 12-pack instead of 12 single cups?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">12 single cups: <span class="tex">12\times\$1.49=\$17.88</span><br>Savings: <span class="tex">\$17.88-\$13.99=\$3.89</span><br>You save <b>$3.89</b> with the 12-pack.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Shipping and Delivery">
+  <h3 class="sub">Extra costs: shipping and delivery</h3>
+  <p>If you must pay extra to get the items (<b>shipping</b>, delivery), add it to the price <b>before</b> you divide.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Unit price with extra costs = (price + shipping or delivery) ÷ quantity</b></div>
+  <div class="explainer" data-explainer="shipping"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Use <b>brackets</b> so the calculator adds the shipping first: <span class="keys"><kbd>(</kbd> 62.40 <kbd>+</kbd> 9.99 <kbd>)</kbd> <kbd>÷</kbd> 24 <kbd>ENTER</kbd></span></div>
+    <button class="pill" type="button" data-keys="( 62.40 + 9.99 ) ÷ 24 =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Water bottles for the soccer club</h3></div>
+  <p class="q">Coach Okafor is ordering water bottles for her soccer club online.</p>
+  <div class="u1l6-stores">
+    <div><b>Store A:</b> 24 bottles for $62.40, plus $9.99 shipping.</div>
+    <div><b>Store B:</b> 30 bottles for $84.00, with free shipping.</div>
+  </div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the price per bottle at Store A <i>without</i> shipping.</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$62.40\div24=\$2.60</span> per bottle<br>(It looks cheaper than Store B, but shipping is not counted yet.)</div></div></div>
+    <div class="part"><div class="pl">(b) Find the real price per bottle at each store, with shipping. Which store is the better buy?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Store A: <span class="tex">\$62.40+\$9.99=\$72.39</span><br><span class="tex">\$72.39\div24\approx\$3.016</span> per bottle<br>Store B: <span class="tex">\$84.00\div30=\$2.80</span> per bottle<br><b>Store B</b> is the better buy, by about $0.22 per bottle.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u1l6"></section>
+
+<!-- ================= 4. Not always the cheapest ================= -->
+<section class="card" data-ink="s4" data-section="4. Not Always the Cheapest">
+  <div class="sec-h"><span class="badge">4</span><h2>The Best Buy Is Not Always the Cheapest</h2></div>
+  <p>The lowest unit price only tells you about <b>cost</b>. The best buy for <b>you</b> also depends on other things:</p>
+  <div class="u1l6-why">
+    <div><b>Will it spoil?</b>Food you throw out is money wasted.</div>
+    <div><b>Do you need that much?</b>A big pack is not a deal if you only use a little.</div>
+    <div><b>Room to store it?</b>Is there space in the fridge or cupboard?</div>
+    <div><b>Quality</b>Is it the same product, brand and quality?</div>
+    <div><b>Money today</b>Can you afford the higher total price right now?</div>
+  </div>
+  <div class="explainer" data-explainer="spoil"></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Jasmine’s spinach</h3></div>
+  <p class="q">Jasmine lives on her own. She eats about 100 g of spinach a week. Fresh spinach stays good for about 5 days. Her store sells a 142 g box for $3.49 and a 1 kg tub for $10.99.</p>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(a) Find the price per 100 g of each size.</div><div class="work" style="--h:130px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">142 g: <span class="tex">3.49\div142\times100\approx\$2.458</span> per 100 g<br>1 kg = 1000 g: <span class="tex">10.99\div1000\times100\approx\$1.099</span> per 100 g &nbsp;(less than half the price per 100 g)</div></div></div>
+    <div class="part"><div class="pl">(b) Which is the better buy for Jasmine? Finish the sentence.</div>
+      <p class="u1l6-frame">The better buy for Jasmine is <span class="u1l6-blank w1" data-reveal="&nbsp;">the 142 g box</span> because <span class="u1l6-blank w2" data-reveal="&nbsp;">she would only eat about 100 g before the 1 kg tub spoiled; she would throw out about 900 g and pay $10.99 for 100 g of spinach.</span></p>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The <b>142 g box</b>. The tub would spoil before she could eat it.</div></div></div>
+    <div class="part"><div class="pl">(c) Give another reason (not price) that could change which size is the best buy for someone.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">For example: a family of five eats spinach every day, so the tub would not spoil; or there is no room in the fridge for the big tub.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= 5. Using a unit price to find a cost ================= -->
+<section class="card" data-ink="s5" data-section="5. Using a Unit Price to Find a Cost">
+  <div class="sec-h"><span class="badge">5</span><h2>Using a Unit Price to Find a Cost</h2></div>
+  <p>Once you know the unit price, you can find the cost of <b>any amount</b>:</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Cost = unit price × amount</b>
+    <div class="eg">The amount must be in the same unit as the unit price.</div></div>
+  <p>This is the same as solving a proportion. For $2.36 per 100 g, the cost of 350 g is
+    <span class="tex">\dfrac{\$2.36}{100\text{ g}}=\dfrac{x}{350\text{ g}}</span>, so <span class="tex">x=3.5\times\$2.36=\$8.26</span>.</p>
+  <div class="explainer" data-explainer="deliScale"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>350 g is 3.5 hundreds: <span class="keys">3.5 <kbd>×</kbd> 2.36 <kbd>ENTER</kbd></span></div>
+    <button class="pill" type="button" data-keys="3.5 × 2.36 =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>The deli, the trail mix and the floor</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Kai works at a deli. Black Forest ham is $2.36 per 100 g. Complete his price chart.</div>
+      <table class="u1l6-tbl u1l6-ham">
+        <tr><th>Amount</th><th>Work</th><th>Cost</th></tr>
+        <tr><td>100 g</td><td></td><td>$2.36</td></tr>
+        <tr><td>50 g</td><td><span data-reveal="&nbsp;"><span class="tex">0.5\times2.36</span></span></td><td><span data-reveal="&nbsp;">$1.18</span></td></tr>
+        <tr><td>150 g</td><td><span data-reveal="&nbsp;"><span class="tex">1.5\times2.36</span></span></td><td><span data-reveal="&nbsp;">$3.54</span></td></tr>
+        <tr><td>350 g</td><td><span data-reveal="&nbsp;"><span class="tex">3.5\times2.36</span></span></td><td><span data-reveal="&nbsp;">$8.26</span></td></tr>
+        <tr><td>1 kg</td><td><span data-reveal="&nbsp;"><span class="tex">10\times2.36</span></span></td><td><span data-reveal="&nbsp;">$23.60</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">50 g: <b>$1.18</b> · 150 g: <b>$3.54</b> · 350 g: <b>$8.26</b> · 1 kg: <b>$23.60</b></div></div></div>
+    <div class="part"><div class="pl">(b) A 400 g bag of trail mix costs $5.60. At the same unit price, how much would 1.5 kg cost?</div><div class="work" style="--h:300px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Unit price: <span class="tex">\$5.60\div400\times100=\$1.40</span> per 100 g<br>1.5 kg = 1500 g = 15 hundreds<br><span class="tex">15\times\$1.40=\$21.00</span><br>1.5 kg would cost <b>$21.00</b>.</div></div></div>
+  </div>
+  <p class="q u1l6-gap">(c) A box of laminate flooring covers 2.4 m² (square metres) and costs $67.20. Malik’s bedroom floor is a rectangle 3 m by 4 m.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(i) Find the price per m².</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$67.20\div2.4=\$28.00</span> per m²</div></div></div>
+    <div class="part"><div class="pl">(ii) Find the area of the floor.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Area = length × width<br><span class="tex">3\times4=12</span> m²</div></div></div>
+    <div class="part"><div class="pl">(iii) How many boxes does Malik need, and what do they cost?</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">12\div2.4=5</span> boxes<br><span class="tex">5\times\$67.20=\$336.00</span><br>(Check: <span class="tex">12\times\$28.00=\$336.00</span>.)</div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s5b" data-section="5. Malik’s Floor, Box by Box">
+  <h3 class="sub">Malik’s floor, box by box</h3>
+  <p>Lay the boxes on the floor one at a time. Each box covers 2.4 m², so the number of boxes is the area ÷ 2.4.</p>
+  <div class="explainer" data-explainer="flooring"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Unit price = price ÷ quantity</b> (money ÷ amount). Estimate first, then round to the nearest cent.</div>
+    <div><b>Compare in the same unit:</b> change L to mL or kg to g first. Price per 100 g = price ÷ grams × 100. Keep three decimals. The lowest unit price is the best buy for <b>cost</b>.</div>
+    <div><b>Deals:</b> “4 for $5.00” is $5.00 ÷ 4 each. <b>Shipping or delivery:</b> add it to the price <b>before</b> you divide.</div>
+    <div><b>The best buy for you</b> also depends on spoiling, how much you need, storage, quality and money today. <b>Cost = unit price × amount.</b></div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u1l6">
+    <div><div class="kicker">Your turn</div><b>Assignment 6 · Questions 5–18</b><div class="muted">Tables of sizes, matching units, deals, delivery, the best buy for you, and the cost of any amount. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l7/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 7 — Percents Refresher: Percents, Decimals and Percent of an Amount</b><div class="muted">“30% off!” “Add 5% GST.” Before we look at sales and tax, we refresh percents.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u1l6.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u1l6', homeHref: '../../', title: '1.6 Unit Price' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

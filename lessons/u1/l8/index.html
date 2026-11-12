@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Markup and Sales Tax · Math 10-3 1.8</title>
+<meta name="description" content="Math 10-3 Unit 1 Lesson 8: setting a price. Cost, markup and retail price, the markup shortcut, markup percent (percent increase), GST, PST and HST, markup then tax, and completing a receipt. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u1l8.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u1l8">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: The Guitar Flip">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>The Guitar Flip</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">Maya buys a used guitar for <b>$60</b>. She sells it to a friend for <b>$70</b>.</p><p class="vw-ctx">Later she buys it back for <b>$80</b>, and then sells it again for <b>$90</b>.</p><p class="vw-ask">Did Maya make money or lose money? How much?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A guitar swinging gently on a hook, with two arrows that light up in turn: bought and sold">
+    <rect x="18" y="226" width="294" height="12" rx="6" fill="#efe4d2"/>
+    <line x1="165" y1="6" x2="165" y2="24" stroke="#4a4436" stroke-width="4" stroke-linecap="round"/>
+    <g><animateTransform attributeName="transform" type="rotate" values="-7 165 22;7 165 22;-7 165 22" dur="3.2s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
+      <path d="M158 22 Q165 14 172 22" fill="none" stroke="#4a4436" stroke-width="4"/>
+      <rect x="152" y="22" width="26" height="22" rx="5" fill="#4a3010"/>
+      <circle cx="152" cy="28" r="3.5" fill="#d9c7a3"/><circle cx="178" cy="28" r="3.5" fill="#d9c7a3"/><circle cx="152" cy="38" r="3.5" fill="#d9c7a3"/><circle cx="178" cy="38" r="3.5" fill="#d9c7a3"/>
+      <rect x="157" y="44" width="16" height="92" fill="#6b4318"/>
+      <line x1="157" y1="60" x2="173" y2="60" stroke="#d9c7a3" stroke-width="2"/><line x1="157" y1="76" x2="173" y2="76" stroke="#d9c7a3" stroke-width="2"/><line x1="157" y1="92" x2="173" y2="92" stroke="#d9c7a3" stroke-width="2"/><line x1="157" y1="108" x2="173" y2="108" stroke="#d9c7a3" stroke-width="2"/>
+      <path d="M165 128 C128 128 126 160 140 170 C116 182 118 222 165 222 C212 222 214 182 190 170 C204 160 202 128 165 128 Z" fill="#e0a21a" stroke="#8a5a14" stroke-width="3.5" stroke-linejoin="round"/>
+      <circle cx="165" cy="170" r="13" fill="#3a2610"/>
+      <rect x="150" y="196" width="30" height="7" rx="3" fill="#6b4318"/>
+      <line x1="161" y1="44" x2="161" y2="200" stroke="#f6efe0" stroke-width="1.2"/><line x1="165" y1="44" x2="165" y2="200" stroke="#f6efe0" stroke-width="1.2"/><line x1="169" y1="44" x2="169" y2="200" stroke="#f6efe0" stroke-width="1.2"/>
+    </g>
+    <g opacity=".25"><animate attributeName="opacity" values=".25;1;.25;.25" keyTimes="0;.25;.5;1" dur="3.2s" repeatCount="indefinite"/>
+      <path d="M28 120 H92" stroke="#12805a" stroke-width="6" stroke-linecap="round"/><path d="M80 106 L96 120 L80 134" fill="none" stroke="#12805a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="60" y="98" font-size="22" font-weight="800" fill="#12805a" text-anchor="middle">buy</text></g>
+    <g opacity=".25"><animate attributeName="opacity" values=".25;.25;1;.25" keyTimes="0;.5;.75;1" dur="3.2s" repeatCount="indefinite"/>
+      <path d="M238 120 H302" stroke="#c93a33" stroke-width="6" stroke-linecap="round"/><path d="M290 106 L306 120 L290 134" fill="none" stroke="#c93a33" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="270" y="98" font-size="22" font-weight="800" fill="#c93a33" text-anchor="middle">sell</text></g>
+    <text x="60" y="176" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+    <text x="270" y="176" font-size="40" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Got an answer? Tell the person beside you <b>how</b> you got it.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>She made $20.</b> She paid <span class="tex">\$60+\$80=\$140</span> in all, and she got <span class="tex">\$70+\$90=\$160</span> in all. <span class="tex">\$160-\$140=\$20</span>. <span class="muted">Another way: the first deal made $10 and the second deal made $10. Many people say $10, because the $70 → $80 part feels like a loss.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 1 Unit Pricing and Currency Exchange · Lesson 8</div>
+  <h1>Setting a Price: Markup and Sales Tax</h1>
+  <p class="lede">A store pays a supplier for a helmet. How does it decide what to put on the <b>price tag</b>? And why do you pay <b>more</b> than the tag at the till? Today we follow a price from the <b>cost</b> to the <b>tag</b> to the <b>total</b>.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>find the <b>markup</b> and the <b>retail price</b> from the cost and the markup rate</li>
+      <li>use the shortcut: retail price = cost × <b>(1 + markup rate)</b></li>
+      <li>find a <b>markup percent</b> (a percent increase)</li>
+      <li>find <b>GST</b>, <b>PST</b> or <b>HST</b> and the total cost</li>
+      <li>find what a customer pays after <b>markup, then tax</b>, and complete a <b>receipt</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N1</b> Solve problems that involve unit pricing and currency exchange, using proportional reasoning.</div>
+</section>
+
+<!-- ================= 1. Cost, markup and retail price ================= -->
+<section class="card" data-ink="s1" data-section="1. Cost, Markup and Retail Price">
+  <div class="sec-h"><span class="badge">1</span><h2>Cost, Markup and Retail Price</h2></div>
+  <p>A store does not make the things it sells. It buys them from a supplier, called a <b>wholesaler</b>. The price the store pays is the <b>wholesale price</b> (or <b>cost</b>).</p>
+  <p>The store then sells the item for more, so it can pay rent and wages and make a profit. The extra amount it adds is the <b>markup</b>. The price on the tag is the <b>retail price</b> (or <b>selling price</b>).</p>
+  <p>The markup is usually a percent of the cost, called the <b>markup rate</b>. A markup of 40% means the store adds 40% of what it paid.</p>
+  <div class="def-grid u1l8-kgrid">
+    <div class="def"><b>Key idea</b> &nbsp; <b>Markup and retail price</b>
+      <div class="u1l8-frm">markup = cost × markup rate<br>retail price = cost + markup</div>
+      <div class="eg"><b>Shortcut:</b> retail price = cost × (1 + markup rate)<br>For example, a 40% markup: cost × 1.40</div></div>
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Change the percent to a decimal first: 40% = 0.40, &nbsp;5% = <b>0.05</b> (not 0.5), &nbsp;180% = 1.80. A markup can be <b>more than 100%</b>. Then the retail price is more than double the cost.</div></div>
+  </div>
+  <p>The shortcut works because the store charges 100% of the cost <b>plus</b> 40% more. That is 140% of the cost, and 140% = 1.40.</p>
+  <div class="explainer" data-explainer="markup"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>The shortcut in one line: <span class="keys">48 <kbd>×</kbd> 1.40 <kbd>ENTER</kbd></span> shows 67.2, so the retail price is <b>$67.20</b>.</div>
+    <div class="u1l8-pcol"><button class="pill" type="button" data-keys="48 × 1.40 =">Helmet</button><button class="pill" type="button" data-keys="6.50 × 2.80 =">Phone case</button></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s1b" data-section="1. Percent to a Decimal">
+  <h3 class="sub">Percent to a decimal: move the point two places</h3>
+  <p>Percent means “out of 100”, so 40% = 40 ÷ 100. Dividing by 100 moves the decimal point <b>two places left</b>. Then add 1 (the 100%) for the shortcut.</p>
+  <div class="explainer" data-explainer="decimalSlide"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> A store marks up a $10.00 item by <b>100%</b>. What is the retail price?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">100% of $10.00 is $10.00, so the retail price is <span class="tex">\$10.00+\$10.00=\$20.00</span>. A 100% markup <b>doubles</b> the price (× 2).</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>A bike helmet</h3></div>
+  <p class="q">A bike shop pays $48.00 for a helmet. It uses a markup of 40%.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Find the markup in dollars.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">40% = 0.40<br>markup = <span class="tex">\$48.00\times0.40=\$19.20</span><br>The markup is <b>$19.20</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Find the retail price. Check with the shortcut.</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">retail = <span class="tex">\$48.00+\$19.20=\$67.20</span><br>Check: <span class="tex">\$48.00\times1.40=\$67.20</span> ✓<br>The helmet sells for <b>$67.20</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>The phone case and the granola bar</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A phone accessory kiosk pays $6.50 for a phone case. Its markup is 180%. Find the markup and the retail price.</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">180% = 1.80<br>markup = <span class="tex">\$6.50\times1.80=\$11.70</span><br>retail = <span class="tex">\$6.50+\$11.70=\$18.20</span><br>(Shortcut: <span class="tex">\$6.50\times2.80=\$18.20</span>)<br>The case sells for <b>$18.20</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A school café buys a box of 24 granola bars for $21.60. It marks them up 150%. What does it charge for one bar?</div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Cost of one bar: <span class="tex">\$21.60\div24=\$0.90</span><br><span class="tex">1+1.50=2.50</span><br>retail = <span class="tex">\$0.90\times2.50=\$2.25</span><br>One bar costs <b>$2.25</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Finding the markup percent ================= -->
+<section class="card" data-ink="s2" data-section="2. Finding the Markup Percent">
+  <div class="sec-h"><span class="badge">2</span><h2>Finding the Markup Percent</h2></div>
+  <p>Sometimes you know what the store paid and what it charges, and you want the markup rate. The markup is an <b>increase</b> from the cost, so this is a <b>percent increase</b>: compare the increase with the <b>starting</b> amount.</p>
+  <div class="def-grid u1l8-kgrid">
+    <div class="def"><b>Key idea</b>
+      <div class="u1l8-frm"><b>Percent increase</b> = <span class="tex">\dfrac{\text{new}-\text{original}}{\text{original}}\times100</span></div>
+      <div class="u1l8-frm"><b>Markup percent</b> = <span class="tex">\dfrac{\text{retail}-\text{cost}}{\text{cost}}\times100</span></div></div>
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Always divide by the <b>original</b> amount (for markup, the <b>cost</b>), not by the new price.</div></div>
+  </div>
+  <div class="explainer" data-explainer="markupPct"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>For a cost of $32 and a retail price of $56: <span class="keys"><kbd>(</kbd> 56 <kbd>−</kbd> 32 <kbd>)</kbd> <kbd>÷</kbd> 32 <kbd>×</kbd> 100 <kbd>ENTER</kbd></span> gives <b>75</b>. Use the brackets so the subtraction is done first.</div>
+    <button class="pill" type="button" data-keys="( 56 − 32 ) ÷ 32 × 100 =">Show me</button></div>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Divide by the Original">
+  <h3 class="sub">Why divide by the original? Check both ways</h3>
+  <p>A percent increase is “how much more, compared with what it <b>was</b>”. Test each answer: the original plus that percent must give the new price.</p>
+  <div class="explainer" data-explainer="wrongBase"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> In Example 4(b), the pizza went from $17.50 to $18.90. Use the percent increase formula to check that the increase is 8%.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">increase = <span class="tex">\$18.90-\$17.50=\$1.40</span>; &nbsp;<span class="tex">\$1.40\div\$17.50=0.08</span>; &nbsp;<span class="tex">0.08\times100=8\%</span> ✓</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>A skateboard deck</h3></div>
+  <p class="q">A skate shop buys a skateboard deck for $32.00 and sells it for $56.00. What is the markup percent?</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:210px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Step 1: markup = <span class="tex">\$56.00-\$32.00=\$24.00</span> &nbsp;·&nbsp; Step 2: <span class="tex">\$24.00\div\$32.00=0.75</span> &nbsp;·&nbsp; Step 3: <span class="tex">0.75\times100=75\%</span><br>The markup is <b>75%</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Prices go up</h3></div>
+  <p class="q">Prices go up for many reasons, not only markup.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A mechanic raises her hourly rate from $96 to $108. What is the percent increase?</div><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">increase = <span class="tex">\$108-\$96=\$12</span><br><span class="tex">\$12\div\$96=0.125</span><br><span class="tex">0.125\times100=12.5\%</span><br>Her rate went up <b>12.5%</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A pizza place raises the price of a $17.50 pizza by 8%. What is the new price?</div><div class="work" style="--h:240px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">1+0.08=1.08</span><br>new price = <span class="tex">\$17.50\times1.08=\$18.90</span><br>(Or: 8% of $17.50 = $1.40; <span class="tex">\$17.50+\$1.40=\$18.90</span>)<br>The pizza now costs <b>$18.90</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–6">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 8 · Questions 1–6</h2>
+  <p class="pr-t">Try these before we go on to sales tax.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Rates as decimals</span>
+    <span><b>2</b>Markup and retail price</span>
+    <span><b>3</b>The price of one can</span>
+    <span><b>4</b>Markup percent</span>
+    <span><b>5</b>Prices go up</span>
+    <span><b>6</b>The plumber’s tank</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 6.</span><a class="pill" href="../../../#/lesson/u1l8">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Sales tax ================= -->
+<section class="card" data-ink="s3" data-section="3. Sales Tax: GST, PST and HST">
+  <div class="sec-h"><span class="badge">3</span><h2>Sales Tax: GST, PST and HST</h2></div>
+  <p>When you buy something, the government adds <b>sales tax</b> to the retail price. There are three kinds in Canada:</p>
+  <div class="u1l8-taxes">
+    <div class="g"><b class="tn">GST</b><i>Goods and Services Tax</i>5%, charged by the <b>federal</b> government everywhere in Canada.</div>
+    <div class="p"><b class="tn">PST</b><i>Provincial Sales Tax</i>Added by <b>some provinces</b> on top of the GST.</div>
+    <div class="hst"><b class="tn">HST</b><i>Harmonized Sales Tax</i>In some provinces, the GST and the provincial tax are <b>joined into one</b> tax.</div>
+  </div>
+  <p><b>Alberta has GST only</b>, so in Calgary you pay 5%. Some things, like most basic groceries (milk, bread, fresh vegetables), have no GST at all.</p>
+  <div class="u1l8-tgrid">
+    <table class="u1l8-tbl u1l8-prov">
+      <tr><th>Province</th><th>Tax</th><th>Total</th><th>Multiply by</th></tr>
+      <tr><td>Alberta, territories</td><td>5% GST</td><td>5%</td><td>1.05</td></tr>
+      <tr><td>British Columbia</td><td>5% GST + 7% PST</td><td><span data-reveal="&nbsp;">12%</span></td><td><span data-reveal="&nbsp;">1.12</span></td></tr>
+      <tr><td>Saskatchewan</td><td>5% GST + 6% PST</td><td><span data-reveal="&nbsp;">11%</span></td><td><span data-reveal="&nbsp;">1.11</span></td></tr>
+      <tr><td>Ontario</td><td>13% HST</td><td><span data-reveal="&nbsp;">13%</span></td><td><span data-reveal="&nbsp;">1.13</span></td></tr>
+      <tr><td>Nova Scotia</td><td>14% HST</td><td><span data-reveal="&nbsp;">14%</span></td><td><span data-reveal="&nbsp;">1.14</span></td></tr>
+    </table>
+    <div class="u1l8-tnote"><p><b>Complete the table.</b> The “multiply by” number works just like the markup shortcut: 100% of the price <b>plus</b> the tax.</p><p class="muted">Rates as of 2026. Tax rates can change, so check before you use them in real life.</p></div>
+  </div>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Sales tax</b>
+    <div class="u1l8-frm">tax = retail price × tax rate &nbsp;&nbsp;&nbsp; total = retail price + tax</div>
+    <div class="eg"><b>Shortcut in Alberta:</b> total = retail price × 1.05 &nbsp;·&nbsp; Round each tax amount and each total to the <b>nearest cent</b>.</div></div>
+  <div class="explainer" data-explainer="taxMap"></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> A $20.00 phone case in Calgary. Without a calculator, what is the total with GST?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">10% of $20.00 is $2.00, so 5% is <b>$1.00</b>. The total is <span class="tex">\$20.00+\$1.00=\$21.00</span>.</div></div></div>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Estimating the GST">
+  <h3 class="sub">Estimating the GST</h3>
+  <div class="tip u1l8-esttip"><div class="tip-ic">≈</div><div><b>Estimate.</b> To estimate 5%, find <b>10%</b> (move the decimal one place left), then take <b>half</b>. 10% of $54.99 is about $5.50, so the GST is about <b>$2.75</b>.</div></div>
+  <div class="explainer" data-explainer="gstEstimate"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>The GST, then the total with the shortcut: <span class="keys">54.99 <kbd>×</kbd> 0.05 <kbd>ENTER</kbd></span> shows 2.7495; <span class="keys">54.99 <kbd>×</kbd> 1.05 <kbd>ENTER</kbd></span> shows 57.7395. Round both to the cent.</div>
+    <div class="u1l8-pcol"><button class="pill" type="button" data-keys="54.99 × 0.05 =">GST</button><button class="pill" type="button" data-keys="54.99 × 1.05 =">Total</button></div></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>A hoodie in Calgary</h3></div>
+  <p class="q">A hoodie at a Calgary store is $54.99. Estimate the GST, then find the GST and the total cost.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Estimate the GST.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">10% of $55 is $5.50.<br>Half of that is about <b>$2.75</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Find the GST.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$54.99\times0.05=\$2.7495</span><br><span class="tex">\approx\$2.75</span></div></div></div>
+    <div class="part"><div class="pl">(c) Find the total cost.</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$54.99+\$2.75=\$57.74</span><br>(Shortcut: <span class="tex">\$54.99\times1.05</span> <span class="tex">=\$57.7395\approx\$57.74</span>)<br>The hoodie costs <b>$57.74</b> with GST.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3c" data-section="3. Two Taxes, Two Lines">
+  <h3 class="sub">Two taxes: each one on its own line</h3>
+  <p>In a province with GST <b>and</b> PST, find each tax on its own, then add both to the price. Check with the shortcut.</p>
+  <div class="explainer" data-explainer="twoTaxes"></div>
+  <div class="tip u1l8-whytip"><div class="tip-ic">?</div><div><b>Why work out each tax?</b> A store must keep track of how much GST and how much PST it collects, so receipts show each tax on its own line. The shortcut is quicker when you only need the total. Once in a while the two ways differ by <b>1 cent</b> because of rounding. That is fine.</div></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Headphones in Kamloops</h3></div>
+  <p class="q">Liam buys headphones for $129.99 in Kamloops, BC (5% GST and 7% PST). Find each tax and the total.</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">GST = <span class="tex">\$129.99\times0.05=\$6.4995\approx\$6.50</span> &nbsp;·&nbsp; PST = <span class="tex">\$129.99\times0.07=\$9.0993\approx\$9.10</span><br>total = <span class="tex">\$129.99+\$6.50+\$9.10=\$145.59</span> &nbsp;·&nbsp; Check with the shortcut: <span class="tex">\$129.99\times1.12=\$145.5888\approx\$145.59</span> ✓<br>Liam pays <b>$145.59</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Calgary or Toronto?</h3></div>
+  <p class="q">A game console costs $499.99 in Calgary and $499.99 in Toronto (13% HST). How much more does it cost in Toronto after tax?</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Calgary: <span class="tex">\$499.99\times1.05=\$524.9895\approx\$524.99</span> &nbsp;·&nbsp; Toronto: <span class="tex">\$499.99\times1.13=\$564.9887\approx\$564.99</span><br>difference = <span class="tex">\$564.99-\$524.99=\$40.00</span><br>The console costs <b>$40.00 more</b> in Toronto.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u1l8"></section>
+
+<!-- ================= 4. Markup, then tax ================= -->
+<section class="card" data-ink="s4" data-section="4. Markup, Then Tax">
+  <div class="sec-h"><span class="badge">4</span><h2>Markup, Then Tax</h2></div>
+  <p>Many problems put the two ideas together. Do them in the order they happen in a store:</p>
+  <div class="u1l8-steps">
+    <div><b>Step 1</b>Find the <b>retail price</b> (cost + markup). This is the price on the tag, so round it to the cent.</div>
+    <div><b>Step 2</b>Find the <b>tax</b> on the <b>retail</b> price.</div>
+    <div><b>Step 3</b><b>Add</b> to get the total the customer pays.</div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> The tax is on the <b>retail price</b>, not on the cost. The customer never sees the cost.</div></div>
+  <div class="explainer" data-explainer="tagGrow"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>After <kbd>ENTER</kbd>, an operator keeps going from the answer: <span class="keys">85 <kbd>×</kbd> 1.60 <kbd>ENTER</kbd></span> shows 136, then <span class="keys"><kbd>×</kbd> 1.05 <kbd>ENTER</kbd></span> shows 142.8.</div>
+    <button class="pill" type="button" data-keys="85 × 1.60 = × 1.05 =">Show me</button></div>
+</section>
+
+<section class="card" data-extra data-ink="s4b" data-section="4. Tax the Tag, Not the Cost">
+  <h3 class="sub">Tax the tag, not the cost</h3>
+  <p>What goes wrong if you find the tax on the cost? The store would collect too little tax, and the total would be wrong.</p>
+  <div class="explainer" data-explainer="taxOnCost"></div>
+  <div class="part think"><div class="pl"><span class="think-tag">Think</span> Why does the store round the retail price to the cent <b>before</b> it finds the tax?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The retail price is printed on the <b>tag</b>, so it must be a real amount of money. The tax is then found on that tag price, the price the customer sees.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Steel-toed boots</h3></div>
+  <p class="q">A work-wear store in Red Deer buys steel-toed boots for $85.00 a pair. It marks them up 60%. What does a customer pay, with GST?</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">Step 1: the retail price</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">retail = <span class="tex">\$85.00\times1.60</span><br><span class="tex">=\$136.00</span></div></div></div>
+    <div class="part"><div class="pl">Step 2: the GST</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">GST = <span class="tex">\$136.00\times0.05</span><br><span class="tex">=\$6.80</span></div></div></div>
+    <div class="part"><div class="pl">Step 3: the total</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">total = <span class="tex">\$136.00+\$6.80</span><br><span class="tex">=\$142.80</span><br>The customer pays <b>$142.80</b> for the boots.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4c" data-section="4. Completing a Receipt">
+  <h3 class="sub">Completing a receipt</h3>
+  <p>A receipt does it all in order: <b>quantity × price</b> for each line, add for the <b>subtotal</b>, find the <b>GST</b> on the subtotal, add for the <b>total</b>, then subtract to find what is <b>left on the gift card</b>.</p>
+  <div class="explainer" data-explainer="receipt"></div>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Ava’s receipt</h3></div>
+  <p class="q">Ava shops at an outdoor store in Calgary. Complete her receipt. She pays with a $100 gift card. How much is left on the gift card?</p>
+  <div class="u1l8-ex9">
+    <table class="u1l8-tbl u1l8-rc">
+      <tr><th colspan="4" class="u1l8-rch">Bow Valley Outfitters <small>Calgary, AB</small></th></tr>
+      <tr><th>Item</th><th>Qty</th><th>Price each</th><th>Amount</th></tr>
+      <tr><td>Wool hiking socks</td><td>2</td><td>$12.99</td><td><span data-reveal="&nbsp;">$25.98</span></td></tr>
+      <tr><td>Toque</td><td>1</td><td>$24.50</td><td><span data-reveal="&nbsp;">$24.50</span></td></tr>
+      <tr><td>Water bottle</td><td>1</td><td>$18.75</td><td><span data-reveal="&nbsp;">$18.75</span></td></tr>
+      <tr class="r"><td colspan="3">Subtotal</td><td><span data-reveal="&nbsp;">$69.23</span></td></tr>
+      <tr class="r"><td colspan="3">GST 5%</td><td><span data-reveal="&nbsp;">$3.46</span></td></tr>
+      <tr class="r tot"><td colspan="3">Total</td><td><span data-reveal="&nbsp;">$72.69</span></td></tr>
+      <tr class="r"><td colspan="3">Gift card</td><td>$100.00</td></tr>
+      <tr class="r"><td colspan="3">Left on card</td><td><span data-reveal="&nbsp;">$27.31</span></td></tr>
+    </table>
+    <div class="parts c1">
+      <div class="part"><div class="pl">Show your work here.</div><div class="work" style="--h:330px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Socks: <span class="tex">2\times\$12.99=\$25.98</span><br>subtotal = <span class="tex">\$25.98+\$24.50+\$18.75</span> <span class="tex">=\$69.23</span><br>GST = <span class="tex">\$69.23\times0.05=\$3.4615\approx\$3.46</span><br>total = <span class="tex">\$69.23+\$3.46=\$72.69</span><br>left on card = <span class="tex">\$100.00-\$72.69=\$27.31</span><br>Ava has <b>$27.31</b> left on her gift card.</div></div></div>
+    </div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Markup = cost × markup rate.</b> Retail price = cost + markup, or the shortcut: <b>cost × (1 + rate)</b>. Change the percent to a decimal first (5% = 0.05).</div>
+    <div><b>Markup percent</b> (a percent increase) = (retail − cost) ÷ cost × 100. Always divide by the <b>original</b> amount.</div>
+    <div><b>Sales tax:</b> GST 5% everywhere (Alberta: GST only, × 1.05). Some provinces add a <b>PST</b>; some join them into one <b>HST</b>. Estimate 5%: find 10%, then take half.</div>
+    <div><b>Markup, then tax:</b> retail price first (round to the cent), then the tax on the <b>retail</b> price, then add. On a receipt, the GST is on the <b>subtotal</b>.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u1l8">
+    <div><div class="kicker">Your turn</div><b>Assignment 8 · Questions 7–18</b><div class="muted">GST estimates, two taxes, HST, comparing provinces, markup then tax, a receipt, and multiple choice. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l9/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 9 — On Sale! Discounts and Sale Prices</b><div class="muted">Today the price tag grew. Next time it shrinks: 30% off, sale prices, and the sale price plus tax.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u1l8.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u1l8', homeHref: '../../', title: '1.8 Markup and Sales Tax' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

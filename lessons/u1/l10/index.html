@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Currency Exchange · Math 10-3 1.10</title>
+<meta name="description" content="Math 10-3 Unit 1 Lesson 10: currency exchange. What an exchange rate means, converting both ways (multiply or divide), rate tables, estimating US prices in your head, the bank's buying and selling rates, fees, and shopping across the border. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u1l10.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u1l10">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Calgary to Toronto">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Calgary to Toronto</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">A plane leaves Calgary at <b>9:00 a.m.</b> Calgary time. It lands in Toronto at <b>3:00 p.m.</b> Toronto time.</p><p class="vw-ctx">Toronto clocks are <b>2 hours ahead</b> of Calgary clocks.</p><p class="vw-ask">How long was the flight?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="Two clocks, labelled Calgary and Toronto, with ticking hands; a plane flies back and forth between them">
+    <g font-weight="800" font-size="16" text-anchor="middle" fill="#4a4436"><text x="70" y="232">Calgary</text><text x="260" y="232">Toronto</text></g>
+    <g>
+      <circle cx="70" cy="170" r="44" fill="#fff6e5" stroke="#9a6a24" stroke-width="5"/>
+      <path d="M70 132 V138 M70 202 V208 M32 170 H38 M102 170 H108" stroke="#9a6a24" stroke-width="3"/>
+      <line x1="70" y1="170" x2="70" y2="148" stroke="#1c2230" stroke-width="5" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" values="0 70 170;360 70 170" dur="24s" repeatCount="indefinite"/></line>
+      <line x1="70" y1="170" x2="70" y2="136" stroke="#c0392b" stroke-width="3" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" values="0 70 170;360 70 170" dur="2s" repeatCount="indefinite"/></line>
+      <circle cx="70" cy="170" r="4" fill="#1c2230"/>
+    </g>
+    <g>
+      <circle cx="260" cy="170" r="44" fill="#fff6e5" stroke="#9a6a24" stroke-width="5"/>
+      <path d="M260 132 V138 M260 202 V208 M222 170 H228 M292 170 H298" stroke="#9a6a24" stroke-width="3"/>
+      <line x1="260" y1="170" x2="260" y2="148" stroke="#1c2230" stroke-width="5" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" values="60 260 170;420 260 170" dur="24s" repeatCount="indefinite"/></line>
+      <line x1="260" y1="170" x2="260" y2="136" stroke="#c0392b" stroke-width="3" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" values="0 260 170;360 260 170" dur="2s" repeatCount="indefinite"/></line>
+      <circle cx="260" cy="170" r="4" fill="#1c2230"/>
+    </g>
+    <text x="165" y="176" font-size="22" font-weight="800" fill="#9a6a24" text-anchor="middle">+2 h</text>
+    <path d="M60 70 Q165 10 270 70" fill="none" stroke="#c9b697" stroke-width="3" stroke-dasharray="7 7"/>
+    <g>
+      <animateMotion dur="5s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;1" keyTimes="0;0.85;1" calcMode="linear" path="M60 70 Q165 10 270 70"/>
+      <path d="M-22 0 L18 -3 Q26 0 18 3 Z M-2 -1 L-10 -16 L-4 -16 L8 -1 Z M-2 1 L-10 16 L-4 16 L8 1 Z M-20 -1 L-24 -9 L-19 -9 L-14 -1 Z" fill="#3b78d8" stroke="#1f3f7a" stroke-width="1.5" stroke-linejoin="round"/>
+    </g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Make a guess, then <b>check it</b>: what time is it in Calgary when the plane lands?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>4 hours, not 6!</b> When the plane lands at 3:00 p.m. in Toronto, Calgary clocks are 2 hours behind: they say <b>1:00 p.m.</b> From 9:00 a.m. to 1:00 p.m. is <b>4 hours</b>. <span class="muted">Before you compare, change both times to the same clock. Today we do the same with money: change it to the same currency first.</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 1 Unit Pricing and Currency Exchange · Lesson 10</div>
+  <h1>Currency Exchange: Converting, and Buy vs Sell Rates</h1>
+  <p class="lede">A road trip to Montana, a holiday in Mexico, a hoodie from a US website. Today we change Canadian dollars into other money and back, <b>estimate</b> foreign prices in our heads, and see why the bank’s <b>two rates</b> cost you money.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>read an <b>exchange rate</b> and tell which currency is worth more</li>
+      <li>convert money both ways: decide to <b>multiply</b> or <b>divide</b>, and check if the answer should be <b>bigger or smaller</b></li>
+      <li>use a <b>rate table</b></li>
+      <li><b>estimate</b> a US price in Canadian dollars in my head</li>
+      <li>use a bank’s <b>buying</b> and <b>selling</b> rates, and find the money lost changing it back</li>
+      <li>compare <b>total costs</b> with fees, and shopping across the border</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N1</b> Solve problems that involve unit pricing and currency exchange, using proportional reasoning.</div>
+</section>
+
+<!-- ================= 1. What an exchange rate means ================= -->
+<section class="card" data-ink="s1" data-section="1. What an Exchange Rate Means">
+  <div class="sec-h"><span class="badge">1</span><h2>What an Exchange Rate Means</h2></div>
+  <div class="u1l10-two">
+    <div>
+      <p>Each country has its own money, called its <b>currency</b>. Banks write each currency with a three-letter <b>code</b>.</p>
+      <p>An <b>exchange rate</b> tells you how much of one currency you get for <b>1 unit</b> of another currency.</p>
+    </div>
+    <table class="u1l10-tbl u1l10-codes">
+      <tr><th>Currency</th><th>Code</th><th>Used in</th></tr>
+      <tr><td>Canadian dollar</td><td><b>CAD</b></td><td>Canada</td></tr>
+      <tr><td>US dollar</td><td><b>USD</b></td><td>United States</td></tr>
+      <tr><td>euro</td><td><b>EUR</b></td><td>France, Germany, Italy, Spain and many other European countries</td></tr>
+      <tr><td>British pound</td><td><b>GBP</b></td><td>United Kingdom (England, Scotland, Wales, Northern Ireland)</td></tr>
+      <tr><td>Mexican peso</td><td><b>MXN</b></td><td>Mexico</td></tr>
+      <tr><td>Japanese yen</td><td><b>JPY</b></td><td>Japan</td></tr>
+    </table>
+  </div>
+  <div class="def"><b>Key idea</b> &nbsp; A rate can be written two ways:
+    <div class="eg"><span class="tex">1\text{ USD}=1.38\text{ CAD}</span> &nbsp;means&nbsp; one US dollar costs $1.38 in Canadian money.</div>
+    <div class="eg"><span class="tex">1\text{ CAD}=0.725\text{ USD}</span> &nbsp;means&nbsp; one Canadian dollar is worth about 72 US cents.</div>
+    <div class="eg">If the number after the equals sign is <b>bigger than 1</b>, then 1 unit of the first currency is worth <b>more</b> than 1 unit of the second.</div></div>
+  <div class="explainer" data-explainer="rateMeaning"></div>
+  <div class="tip u1l10-note"><div class="tip-ic">i</div><div><b>Note.</b> The exchange rates in this lesson are examples. Real rates change every day; banks post them on their websites.</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> <span class="tex">1\text{ EUR}=1.55\text{ CAD}</span> and <span class="tex">1\text{ USD}=1.38\text{ CAD}</span>. Which is worth more: one euro or one US dollar?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">One <b>euro</b>. It costs $1.55 in Canadian money, and a US dollar costs only $1.38.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>One US dollar, one yen</h3></div>
+  <p class="q">Use <span class="tex">1\text{ USD}=1.38\text{ CAD}</span>.</p>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(a) Which is worth more, one US dollar or one Canadian dollar? <span class="u1l10-blank" data-reveal="&nbsp;">one US dollar</span></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>One US dollar.</b> 1.38 is bigger than 1, so one US dollar buys more than one Canadian dollar.</div></div></div>
+    <div class="part"><div class="pl">(b) An exchange rate is a unit rate, so you can scale it up. Complete the table.</div>
+      <table class="u1l10-tbl u1l10-scale">
+        <tr><th>USD</th><td>$1.00</td><td>$10.00</td><td>$50.00</td><td>$200.00</td></tr>
+        <tr><th>CAD</th><td><span data-reveal="&nbsp;">$1.38</span></td><td><span data-reveal="&nbsp;">$13.80</span></td><td><span data-reveal="&nbsp;">$69.00</span></td><td><span data-reveal="&nbsp;">$276.00</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Multiply 1.38 by each number of US dollars: <span class="tex">10\times1.38=13.80</span>, <span class="tex">50\times1.38=69.00</span>, <span class="tex">200\times1.38=276.00</span>.</div></div></div>
+    <div class="part"><div class="pl">(c) In Japan, <span class="tex">1\text{ CAD}=108\text{ JPY}</span>. Is one yen worth more or less than one Canadian cent? Explain.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">$1.00 CAD is 100 cents, and it buys 108 yen. You get more yen than cents, so one yen is worth a little <b>less</b> than one cent.</div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<!-- ================= 2. Converting between currencies ================= -->
+<section class="card" data-ink="s2" data-section="2. Converting Between Currencies">
+  <div class="sec-h"><span class="badge">2</span><h2>Converting Between Currencies</h2></div>
+  <p>Converting money is a proportion problem: the rate is a unit rate (for 1 unit), and you scale it up. Look at which currency the rate <b>starts with</b>.</p>
+  <div class="def u1l10-steps"><b>Key idea</b>
+    <div class="eg"><b>Step 1.</b> Write the rate as &nbsp;<span class="tex">1\text{ [one currency]}=\text{rate [other currency]}</span>.</div>
+    <div class="eg"><b>Step 2.</b> If the rate starts with <b>the currency of the amount you have</b>, <b>multiply</b>: amount × rate.<br>If it starts with <b>the other currency</b>, <b>divide</b>: amount ÷ rate.</div>
+    <div class="eg"><b>Step 3.</b> Round money to the cent at the end (yen to the whole yen). Write the currency code.</div></div>
+  <div class="explainer" data-explainer="converter"></div>
+  <div class="def-grid">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> Before you press <b>ENTER</b>, ask: should my number get <b>bigger or smaller</b>? A US dollar is worth more than a Canadian dollar, so the same price is a <b>bigger number in CAD</b> than in USD. If your CAD answer is smaller than the US price, you multiplied when you should have divided (or the other way around).</div></div>
+    <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>To change $350.00 CAD at <span class="tex">1\text{ CAD}=0.725\text{ USD}</span>: <span class="keys">350 <kbd>×</kbd> 0.725 <kbd>ENTER</kbd></span> shows 253.75.</div>
+      <button class="pill" type="button" data-keys="350 × 0.725 =">Show me</button></div>
+  </div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Change $100.00 CAD into US dollars at <span class="tex">1\text{ CAD}=0.725\text{ USD}</span>. Then change it straight back at <span class="tex">1\text{ USD}=1.38\text{ CAD}</span>. About how much do you get back?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">100\times0.725=72.50</span> USD, then <span class="tex">72.50\times1.38=100.05</span>. About <b>$100</b>: the two ways of writing one rate undo each other (the 5¢ is rounding in the rates). A bank is different: see Section 4.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Hamza’s cash and a hotel in Montana</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Hamza changes $350.00 CAD into US dollars. The rate is <span class="tex">1\text{ CAD}=0.725\text{ USD}</span>. How many US dollars does he get?</div><div class="work" style="--h:220px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The rate starts with CAD, the currency he has, so multiply.<br><span class="tex">350.00\times0.725=253.75</span><br>Hamza gets <b>$253.75 USD</b>.<br>(Check: fewer US dollars than Canadian dollars. Makes sense.)</div></div></div>
+    <div class="part"><div class="pl">(b) A hotel in Great Falls, Montana, costs $164.00 USD a night. The rate is <span class="tex">1\text{ USD}=1.38\text{ CAD}</span>. What is the cost in Canadian dollars?</div><div class="work" style="--h:220px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The rate starts with USD, the currency of the price, so multiply.<br><span class="tex">164.00\times1.38=226.32</span><br>The hotel costs <b>$226.32 CAD</b> a night.<br>(Check: the CAD number is bigger. Makes sense.)</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2b" data-section="2. Only One Rate Posted">
+  <h3 class="sub">Only one rate posted? Divide</h3>
+  <p>Sometimes only one rate is posted, and it starts with the currency you <b>want</b>. Then <b>divide</b>, or set up a proportion and cross-multiply.</p>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>$450.00 CAD at <span class="tex">1\text{ EUR}=1.55\text{ CAD}</span>: <span class="keys">450 <kbd>÷</kbd> 1.55 <kbd>ENTER</kbd></span> shows 290.3225806, so about <b>290.32 EUR</b>.</div>
+    <div class="u1l10-pcol"><button class="pill" type="button" data-keys="450 ÷ 1.55 =">Euros</button><button class="pill" type="button" data-keys="1250 ÷ 108 =">Bento</button></div></div>
+</section>
+
+<section class="card" data-extra data-ink="s2c" data-section="2. Why Divide? A Proportion">
+  <h3 class="sub">Why divide? Set up a proportion</h3>
+  <p>The rate is a ratio, so the same ratio holds for any amount. Cross-multiplying turns the proportion into one division.</p>
+  <div class="explainer" data-explainer="proportion"></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Euros for Italy, a bento in Tokyo</h3></div>
+  <p class="q">A travel website shows only one rate: <span class="tex">1\text{ EUR}=1.55\text{ CAD}</span>.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Sofia has $450.00 CAD. How many euros can she get?</div><div class="work" style="--h:230px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">She has CAD and wants EUR. The rate starts with EUR, so divide.<br><span class="tex">450.00\div1.55=290.322\ldots</span><br>Or as a proportion: <span class="tex">\dfrac{1\text{ EUR}}{1.55\text{ CAD}}=\dfrac{x}{450}</span>, so <span class="tex">1.55x=450</span> and <span class="tex">x=290.32</span>.<br>Sofia gets <b>290.32 EUR</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A train ticket in Italy costs 38.40 EUR. What is that in CAD?</div><div class="work" style="--h:230px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">She has EUR. The rate starts with EUR, so multiply.<br><span class="tex">38.40\times1.55=59.52</span><br>The ticket costs <b>$59.52 CAD</b>.</div></div></div>
+  </div>
+  <div class="parts c1 u1l10-gap">
+    <div class="part"><div class="pl">(c) A shop in Tokyo posts only <span class="tex">1\text{ CAD}=108\text{ JPY}</span>. A bento lunch box costs 1250 JPY. What is that in CAD?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The price is in JPY. The rate starts with CAD, the currency we want, so divide.<br><span class="tex">1250\div108=11.574\ldots</span> &nbsp; The lunch costs about <b>$11.57 CAD</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s2d" data-section="2. Rate Tables">
+  <h3 class="sub">Rate tables</h3>
+  <p>Banks and travel sites show rates for many currencies in a <b>rate table</b>. Choose the column that starts with the currency you <b>have</b>, then <b>multiply</b>.</p>
+  <table class="u1l10-tbl u1l10-rates">
+    <tr><th colspan="3">Example exchange rates</th></tr>
+    <tr><th>Currency</th><th>1 unit = ___ CAD</th><th>1 CAD = ___ units</th></tr>
+    <tr><td>US dollar (USD)</td><td>1.38</td><td>0.725</td></tr>
+    <tr><td>euro (EUR)</td><td>1.55</td><td>0.645</td></tr>
+    <tr><td>British pound (GBP)</td><td>1.82</td><td>0.549</td></tr>
+    <tr><td>Mexican peso (MXN)</td><td>0.075</td><td>13.3</td></tr>
+    <tr><td>Japanese yen (JPY)</td><td>0.0093</td><td>108</td></tr>
+  </table>
+  <div class="explainer" data-explainer="rateBoard"></div>
+  <div class="tip u1l10-note"><div class="tip-ic">i</div><div><b>Note.</b> Yen have no cents, so round yen to the whole yen. A peso is worth only a few Canadian cents, so a price of hundreds of pesos is not very much money.</div></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Use the rate table</h3></div>
+  <p class="q">Use the rate table above. Show your multiplication.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Change $250.00 CAD into Japanese yen.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Have CAD: use <span class="tex">1\text{ CAD}=108\text{ JPY}</span>.<br><span class="tex">250\times108=27\,000</span> &nbsp; You get <b>27&#8239;000 JPY</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Lena comes home from Mexico with 1800 MXN. What are they worth in CAD?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Have MXN: use <span class="tex">1\text{ MXN}=0.075\text{ CAD}</span>.<br><span class="tex">1800\times0.075=135.00</span> &nbsp; They are worth <b>$135.00 CAD</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) A theatre ticket in London costs 46.50 GBP. What is that in CAD?</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Have GBP: use <span class="tex">1\text{ GBP}=1.82\text{ CAD}</span>.<br><span class="tex">46.50\times1.82=84.63</span> &nbsp; The ticket costs <b>$84.63 CAD</b>.</div></div></div>
+    <div class="part"><div class="pl">(d) Change $80.00 CAD into euros.</div><div class="work" style="--h:120px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Have CAD: use <span class="tex">1\text{ CAD}=0.645\text{ EUR}</span>.<br><span class="tex">80.00\times0.645=51.60</span> &nbsp; You get <b>51.60 EUR</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 10 · Questions 1–7</h2>
+  <p class="pr-t">Try these before we go on to estimating, and the bank’s two rates.</p>
+  <div class="pr-chips">
+    <span><b>1</b>What a rate means</span>
+    <span><b>2</b>CAD into USD</span>
+    <span><b>3</b>USD into CAD</span>
+    <span><b>4</b>More or fewer?</span>
+    <span><b>5</b>Multiply or divide?</span>
+    <span><b>6</b>A rate table</span>
+    <span><b>7</b>Marcus’s torque wrench</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u1l10">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 3. Estimating in your head ================= -->
+<section class="card" data-ink="s3" data-section="3. Estimating in Your Head">
+  <div class="sec-h"><span class="badge">3</span><h2>Estimating Canadian Prices in Your Head</h2></div>
+  <p>When you shop in the US, the price tags are in US dollars. You usually have no calculator out, but you still need to know what things really cost. With <span class="tex">1\text{ USD}\approx1.38\text{ CAD}</span>, each US dollar costs a bit more than <span class="tex">1\tfrac{1}{3}</span> Canadian dollars.</p>
+  <div class="def u1l10-steps"><b>Key idea</b> &nbsp; <b>Estimating a US price in CAD</b> (when 1 USD is about 1.35 to 1.40 CAD)
+    <div class="eg"><b>Step 1.</b> Round the US price to a friendly number. &nbsp; <b>Step 2.</b> Find about a third of it (÷ 3). &nbsp; <b>Step 3.</b> Add it on.</div>
+    <div class="eg">Or multiply by 1.4 in your head (× 1 plus × 0.4). This gives a slightly high estimate, which is safe for a budget.</div></div>
+  <div class="explainer" data-explainer="estimate"></div>
+  <div class="tip u1l10-why"><div class="tip-ic">★</div><div><b>Why it matters.</b> Estimating lets you keep to your budget, tell whether a “sale” is really cheaper than at home, and avoid a surprise when your credit card bill arrives in Canadian dollars. It also helps you catch a calculator mistake. The same idea works for other currencies: with <span class="tex">1\text{ EUR}\approx1.55\text{ CAD}</span>, add about <b>half</b>.</div></div>
+  <div class="u1l10-x14" data-extra>
+    <div><b>The × 1.4 way, for the $24.00 ball cap:</b> &nbsp;<span class="tex">24\times1=24</span> and <span class="tex">24\times0.4=9.6</span>, so about <span class="tex">24+9.6\approx\$34</span> CAD. The exact price is $33.12, so this estimate is a little <b>high</b>: safe for a budget.</div>
+    <div class="part think"><div class="pl"><span class="think-tag">Think</span> In France, <span class="tex">1\text{ EUR}\approx1.55\text{ CAD}</span>. A museum ticket costs 20 EUR. About how much is that in CAD?</div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Add about half: <span class="tex">20+10=30</span>, so about <b>$30 CAD</b>. (Exact: <span class="tex">20\times1.55=\$31.00</span>.)</div></div></div>
+  </div>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Bigger or Smaller?">
+  <h3 class="sub">Bigger or smaller? Catch a calculator mistake</h3>
+  <p>A US dollar is worth more than a Canadian dollar, so a US price is always a <b>bigger number</b> in CAD. An estimate tells you right away if the calculator answer is wrong.</p>
+  <div class="explainer" data-explainer="biggerSmaller"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Shopping in the US</h3></div>
+  <p class="q">Use <span class="tex">1\text{ USD}=1.38\text{ CAD}</span>. Estimate first, then find the exact cost.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) A ball cap costs $24.00 USD.</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: a third of 24 is 8; &nbsp;<span class="tex">24+8=32</span>, about $32 CAD.<br>Exact: <span class="tex">24.00\times1.38=33.12</span>, so <b>$33.12 CAD</b>.<br>The estimate is close.</div></div></div>
+    <div class="part"><div class="pl">(b) Running shoes cost $119.99 USD.</div><div class="work" style="--h:190px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">119.99\approx120</span>; a third of 120 is 40; &nbsp;<span class="tex">120+40=160</span>, about $160 CAD.<br>Exact: <span class="tex">119.99\times1.38=165.586\ldots</span>, so <b>$165.59 CAD</b>.</div></div></div>
+  </div>
+  <div class="parts c1 u1l10-gap">
+    <div class="part"><div class="pl">(c) Kayden’s calculator says a $45.00 USD hoodie costs $32.61 CAD. Is that reasonable? What went wrong?</div><div class="work" style="--h:130px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">45+15=60</span>, so it should be about $60 CAD. $32.61 is too small: the CAD number must be bigger than the US price.<br>Kayden divided (<span class="tex">45\div1.38=32.61</span>). He should multiply: <span class="tex">45.00\times1.38=62.10</span>, so <b>$62.10 CAD</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<!-- ================= 4. Buying and selling rates ================= -->
+<section class="card" data-ink="s4" data-section="4. Buying and Selling Rates">
+  <div class="sec-h"><span class="badge">4</span><h2>Buying and Selling Rates</h2></div>
+  <div class="u1l10-two wide">
+    <div>
+      <p>A bank or currency exchange does not use one rate. It posts <b>two rates</b>, written from the <b>bank’s point of view</b>, in CAD for 1 unit of foreign money:</p>
+      <ul class="u1l10-ul">
+        <li>The <b>selling rate</b> (“we sell”) is what the bank charges when it <b>sells you</b> foreign cash, for example before a trip. It is the <b>higher</b> rate.</li>
+        <li>The <b>buying rate</b> (“we buy”) is what the bank pays when it <b>buys</b> foreign cash back from you, for example after a trip. It is the <b>lower</b> rate.</li>
+      </ul>
+    </div>
+    <table class="u1l10-tbl u1l10-bank">
+      <tr><th colspan="3">Example Bank: foreign cash <span class="muted">(CAD for 1 unit)</span></th></tr>
+      <tr><th>Currency</th><th>We buy</th><th>We sell</th></tr>
+      <tr><td>US dollar (USD)</td><td>1.34</td><td>1.42</td></tr>
+      <tr><td>euro (EUR)</td><td>1.50</td><td>1.60</td></tr>
+      <tr><td>Mexican peso (MXN)</td><td>0.070</td><td>0.080</td></tr>
+    </table>
+  </div>
+  <p>The gap between the two rates is how the bank makes money. So if you change money and then change it back, you get back <b>less</b> than you started with.</p>
+  <div class="def"><b>Key idea</b>
+    <div class="eg"><b>Getting foreign cash</b> (you buy, the bank sells): use the <b>selling rate</b> (higher).</div>
+    <div class="eg"><b>Changing it back to CAD</b> (you sell, the bank buys): use the <b>buying rate</b> (lower).</div>
+    <div class="eg">Either way the bank’s rate is the worse one for you: you pay more, and you get less.</div></div>
+  <div class="explainer" data-explainer="buySell"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Owen’s US cash at the selling rate: <span class="keys">600 <kbd>×</kbd> 1.42 <kbd>ENTER</kbd></span> shows 852. His sister’s: <span class="keys">500 <kbd>÷</kbd> 1.42 <kbd>ENTER</kbd></span>.</div>
+    <div class="u1l10-pcol"><button class="pill" type="button" data-keys="600 × 1.42 =">Owen</button><button class="pill" type="button" data-keys="500 ÷ 1.42 =">His sister</button></div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> An airport counter posts <b>We buy USD 1.31, We sell USD 1.45</b>. Example Bank posts 1.34 and 1.42. Which has the bigger gap? Where would you rather change your money?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Airport gap: <span class="tex">1.45-1.31=0.14</span>. Bank gap: <span class="tex">1.42-1.34=0.08</span>. The <b>bank</b> is better both ways: you pay less for US cash (1.42 &lt; 1.45) and get more back (1.34 &gt; 1.31).</div></div></div>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. There and Back">
+  <h3 class="sub">There and back: where does the money go?</h3>
+  <p>Change money into US dollars and back again, and some of it stays with the bank: it <b>sells high</b> and <b>buys low</b>.</p>
+  <div class="explainer" data-explainer="roundTrip"></div>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Owen’s trip to Phoenix</h3></div>
+  <p class="q">Owen is going to Phoenix. Use the Example Bank board.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Owen buys $600.00 USD in cash. Which rate is used? How much does it cost him in CAD?</div><div class="work" style="--h:180px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The bank sells him USD: selling rate, <span class="tex">1\text{ USD}=1.42\text{ CAD}</span>.<br>The amount is in USD and the rate starts with USD, so multiply:<br><span class="tex">600.00\times1.42=852.00</span> &nbsp; It costs <b>$852.00 CAD</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) His sister has $500.00 CAD to change. How many US dollars does she get?</div><div class="work" style="--h:180px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Selling rate again, <span class="tex">1\text{ USD}=1.42\text{ CAD}</span>.<br>She has CAD and the rate starts with USD, so divide:<br><span class="tex">500.00\div1.42=352.112\ldots</span> &nbsp; She gets <b>$352.11 USD</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) Owen comes home with $140.00 USD left and sells it back to the bank. How much CAD does he get?</div><div class="work" style="--h:160px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The bank buys USD: buying rate, <span class="tex">1\text{ USD}=1.34\text{ CAD}</span>.<br><span class="tex">140.00\times1.34=187.60</span> &nbsp; He gets <b>$187.60 CAD</b>.</div></div></div>
+    <div class="part"><div class="pl">(d) How much did those $140.00 USD cost him before the trip? How much did he lose by changing them back?</div><div class="work" style="--h:160px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Cost: <span class="tex">140.00\times1.42=198.80</span>, so $198.80 CAD.<br>Loss: <span class="tex">198.80-187.60=11.20</span>.<br>He lost <b>$11.20</b> because the bank sells high and buys low.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u1l10"></section>
+
+<!-- ================= 5. Fees and cross-border shopping ================= -->
+<section class="card" data-ink="s5" data-section="5. Fees and Shopping Across the Border">
+  <div class="sec-h"><span class="badge">5</span><h2>Fees, and Shopping Across the Border</h2></div>
+  <p>Some exchange counters also charge a <b>fee</b> (a flat amount, such as $9.95) or a <b>commission</b> (a percent of the amount). A good-looking rate with a fee can cost more than a worse rate with no fee, so always compare the <b>total</b> cost.</p>
+  <p>When you buy from a US website with a credit card, the card company converts the price and usually adds a <b>foreign transaction fee</b>, often about 2.5%. To compare with a Canadian store, compare the total in CAD with the store’s price <b>plus GST</b>.</p>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Total cost in CAD</b> = (price in foreign money × rate) + flat fee
+    <div class="eg">or &nbsp; (price × rate) × (1 + commission rate)</div></div>
+  <div class="explainer" data-explainer="compareTotals"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>The calculator multiplies before it adds: <span class="keys">250 <kbd>×</kbd> 1.57 <kbd>+</kbd> 9.95 <kbd>ENTER</kbd></span> shows 402.45. A 4% commission: <span class="keys"><kbd>×</kbd> 1.04</span>.</div>
+    <div class="u1l10-pcol"><button class="pill" type="button" data-keys="250 × 1.57 + 9.95 =">Kiosk</button><button class="pill" type="button" data-keys="250 × 1.55 × 1.04 =">Mall</button></div></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Lucia’s euros for Spain</h3></div>
+  <p class="q">Lucia needs 250 EUR in cash for a trip to Spain. Complete the table to find the cheapest place to buy them.</p>
+  <div class="parts c1">
+    <div class="part">
+      <table class="u1l10-tbl u1l10-fees">
+        <tr><th>Place</th><th>Rate and fee</th><th>Working</th><th>Total (CAD)</th></tr>
+        <tr><td>Bank</td><td><span class="tex">1\text{ EUR}=1.60\text{ CAD}</span>, no fee</td><td><span data-reveal="&nbsp;"><span class="tex">250\times1.60</span></span></td><td><span data-reveal="&nbsp;">$400.00</span></td></tr>
+        <tr><td>Airport kiosk</td><td><span class="tex">1\text{ EUR}=1.57\text{ CAD}</span>, plus $9.95 fee</td><td><span data-reveal="&nbsp;"><span class="tex">250\times1.57+9.95</span></span></td><td><span data-reveal="&nbsp;">$402.45</span></td></tr>
+        <tr><td>Mall exchange</td><td><span class="tex">1\text{ EUR}=1.55\text{ CAD}</span>, plus 4% commission</td><td><span data-reveal="&nbsp;"><span class="tex">387.50\times1.04</span></span></td><td><span data-reveal="&nbsp;">$403.00</span></td></tr>
+      </table>
+      <div class="work" style="--h:90px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Kiosk: <span class="tex">250\times1.57=392.50</span>; <span class="tex">392.50+9.95=402.45</span>. &nbsp; Mall: <span class="tex">250\times1.55=387.50</span>; <span class="tex">387.50\times1.04=403.00</span>.<br>The <b>bank</b> is cheapest at <b>$400.00 CAD</b>, even though its rate is the highest, because it charges no fee.</div></div></div>
+  </div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Tyler’s hoodie: online or in Calgary?</h3></div>
+  <p class="q">Tyler wants a hoodie. A US website sells it for $52.00 USD plus $11.50 USD shipping. His credit card uses <span class="tex">1\text{ USD}=1.38\text{ CAD}</span> and adds a 2.5% foreign transaction fee. A store in Calgary sells the same hoodie for $79.99 plus 5% GST. (Ignore any charges at the border.)</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) What is the total cost of the online hoodie in CAD?</div><div class="work" style="--h:200px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">US total: <span class="tex">52.00+11.50=63.50</span> USD<br>In CAD: <span class="tex">63.50\times1.38=87.63</span><br>Add the 2.5% fee: <span class="tex">87.63\times1.025=89.82</span><br>Online total: <b>$89.82 CAD</b></div></div></div>
+    <div class="part"><div class="pl">(b) What is the total cost at the Calgary store?</div><div class="work" style="--h:200px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">79.99\times1.05=83.9895</span><br>Store total: <b>$83.99</b></div></div></div>
+  </div>
+  <div class="parts c1 u1l10-gap">
+    <div class="part"><div class="pl">(c) Which is the better deal? Give one reason that is not about price.</div><div class="work" style="--h:110px"></div>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">The <b>Calgary store</b> is cheaper by <span class="tex">89.82-83.99=\$5.83</span>. Also, Tyler can try the hoodie on, take it home today and return it easily.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s5b" data-section="5. Flat Fee or Percent?">
+  <h3 class="sub">Flat fee or percent? It depends how much you change</h3>
+  <p>A flat fee is the same for $50 or $5000, so it hurts most on a <b>small</b> amount. A percent grows with the amount. The cheapest place for Lucia’s 250 EUR is not always the cheapest for a bigger amount.</p>
+  <div class="explainer" data-explainer="feeBreak"></div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>1 USD = 1.38 CAD</b> means one US dollar costs $1.38 in Canadian money. A rate is a unit rate: scale it up. A number <b>bigger than 1</b> after the = means the first currency is worth more.</div>
+    <div><b>Convert:</b> the rate starts with the currency of the amount you have → <b>multiply</b>; it starts with the other currency → <b>divide</b>. Ask: <b>bigger or smaller?</b> Round to the cent (yen to the whole yen).</div>
+    <div><b>Estimate a US price:</b> round it, then add about a <b>third</b> (or × 1.4 in your head). For euros, add about half.</div>
+    <div><b>Banks:</b> getting foreign cash uses the <b>selling</b> rate (higher); changing it back uses the <b>buying</b> rate (lower). Compare the <b>total</b> cost with fees, and a store’s price <b>plus GST</b>.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u1l10">
+    <div><div class="kicker">Your turn</div><b>Assignment 10 · Questions 8–18</b><div class="muted">Estimating, buying and selling rates, money lost changing back, fees, and shopping online. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l11/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 11 — Unit 1 Review</b><div class="muted">We put the whole unit together: ratios, rates, unit prices, percents, markup, sales and currency, ready for the Unit 1 test.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u1l10.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u1l10', homeHref: '../../', title: '1.10 Currency Exchange' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

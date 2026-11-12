@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Proportions · Math 10-3 1.4</title>
+<meta name="description" content="Math 10-3 Unit 1 Lesson 4: proportions. Decide whether two ratios are equal, find a missing value by scaling or cross-multiplying, and set up proportions from recipes, maps, fuel mixes, doses and photos. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u1l4.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen">
+
+<!-- ================= warm-up: one screen, no teaching ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Cats and Mice">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Cats and Mice</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">On a farm, <b>3 cats</b> catch <b>3 mice</b> in <b>3 minutes</b>.</p><p class="vw-ctx">The cats keep catching mice at that same speed.</p><p class="vw-ask">How many cats does it take to catch 100 mice in 100 minutes?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A stopwatch ticking while mice scurry past">
+    <g transform="translate(165 92)">
+      <rect x="-12" y="-78" width="24" height="16" rx="4" fill="#9a6a24"/>
+      <circle r="62" fill="#fffdf6" stroke="#6e4a1c" stroke-width="7"/>
+      <g stroke="#6e4a1c" stroke-width="4" stroke-linecap="round"><line x1="0" y1="-50" x2="0" y2="-42"/><line x1="50" y1="0" x2="42" y2="0"/><line x1="0" y1="50" x2="0" y2="42"/><line x1="-50" y1="0" x2="-42" y2="0"/></g>
+      <g><animateTransform attributeName="transform" type="rotate" values="0;360" dur="6s" repeatCount="indefinite"/><line x1="0" y1="6" x2="0" y2="-46" stroke="#c93a33" stroke-width="5" stroke-linecap="round"/></g>
+      <circle r="6" fill="#6e4a1c"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="-40 0;40 0;-40 0" dur="3.4s" repeatCount="indefinite"/>
+      <g transform="translate(70 214)"><ellipse rx="22" ry="13" fill="#8a8f99"/><circle cx="16" cy="-10" r="7" fill="#b3b7bf"/><circle cx="22" cy="-2" r="2.4" fill="#1c2230"/><path d="M-22 2 q-18 6 -26 -6" stroke="#8a8f99" stroke-width="3" fill="none"/></g>
+      <g transform="translate(150 222)"><ellipse rx="22" ry="13" fill="#8a8f99"/><circle cx="16" cy="-10" r="7" fill="#b3b7bf"/><circle cx="22" cy="-2" r="2.4" fill="#1c2230"/><path d="M-22 2 q-18 6 -26 -6" stroke="#8a8f99" stroke-width="3" fill="none"/></g>
+      <g transform="translate(230 210)"><ellipse rx="22" ry="13" fill="#8a8f99"/><circle cx="16" cy="-10" r="7" fill="#b3b7bf"/><circle cx="22" cy="-2" r="2.4" fill="#1c2230"/><path d="M-22 2 q-18 6 -26 -6" stroke="#8a8f99" stroke-width="3" fill="none"/></g>
+    </g>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Guess first. Then convince the person beside you.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>Just 3 cats!</b> Each cat catches 1 mouse every 3 minutes. In 100 minutes, the same 3 cats keep going and catch 100 mice. Most people say 100 cats, but the <b>time</b> grew too, so we don’t need more cats.</div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 1 Unit Pricing and Currency Exchange · Lesson 4</div>
+  <h1>Proportions: Finding the Missing Value</h1>
+  <p class="lede">Two equal ratios make a <b>proportion</b>. When one number is missing, we can <b>scale</b> up or down, or <b>cross-multiply</b>, to find it. Recipes, maps, fuel mixes, medicine doses and photos all work this way.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>decide whether two ratios form a <b>proportion</b></li>
+      <li>find the missing number by <b>scaling</b> or by <b>cross-multiplying</b></li>
+      <li>set up a proportion from a <b>word problem</b>, with units that match, and decide whether to <b>round up or down</b></li>
+    </ul>
+  </div>
+  <div class="outcome"><b>N1</b> Solve problems that involve unit pricing and currency exchange, using proportional reasoning.</div>
+</section>
+
+<!-- ================= 1. What is a proportion? ================= -->
+<section class="card" data-ink="s1" data-section="1. What Is a Proportion?">
+  <div class="sec-h"><span class="badge">1</span><h2>What Is a Proportion?</h2></div>
+  <div class="def"><b>Proportion:</b> a statement that two ratios are <b>equal</b>. For example, <span class="tex">2:3=4:6</span> is a proportion. Written as fractions, it is <span class="tex">\dfrac{2}{3}=\dfrac{4}{6}</span>.</div>
+  <p>To decide if two ratios form a proportion, use one of these:</p>
+  <div class="def-grid">
+    <div class="def amber"><b>Simplify both ratios.</b> If they simplify to the same ratio, they form a proportion.<div class="eg"><span class="tex">4:6=2:3</span> and <span class="tex">2:3</span> is already simplest. Same!</div></div>
+    <div class="def amber"><b>Divide.</b> Turn each ratio into a decimal (top <span class="tex">\div</span> bottom). If the decimals are the same, they form a proportion.<div class="eg"><span class="tex">2\div3=0.667</span> and <span class="tex">4\div6=0.667</span>. Same!</div></div>
+  </div>
+  <div class="explainer" data-explainer="isProp"></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Proportion or not?</h3></div>
+  <p class="q">Do the two ratios form a proportion? Show how you know.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) <span class="tex">4:6</span> and <span class="tex">10:15</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4:6=2:3</span> (divide by 2)<br><span class="tex">10:15=2:3</span> (divide by 5)<br>Same ratio, so <b>yes</b>, it is a proportion.</div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">\dfrac{3}{8}</span> and <span class="tex">\dfrac{9}{16}</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">3\div8=0.375</span><br><span class="tex">9\div16=0.5625</span><br>Different, so <b>no</b>, not a proportion.</div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">12:20</span> and <span class="tex">9:15</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">12:20=3:5</span> (divide by 4)<br><span class="tex">9:15=3:5</span> (divide by 3)<br>Same ratio, so <b>yes</b>.</div></div></div>
+  </div>
+  <div data-extra class="part think"><div class="pl"><span class="think-tag">Think</span> Do <span class="tex">2:3</span> and <span class="tex">3:2</span> form a proportion? They use the same numbers.</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>No.</b> <span class="tex">2\div3=0.667</span> but <span class="tex">3\div2=1.5</span>. The <b>order</b> matters in a ratio: 2 scoops to 3 L of water is not the same drink as 3 scoops to 2 L.</div></div></div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Fruit punch</h3></div>
+  <p class="q">Three friends make fruit punch from drink crystals and water. <b>Jordan</b> mixes 2 scoops with 3 L of water. <b>Priya</b> mixes 5 scoops with 7.5 L of water. <b>Marco</b> mixes 3 scoops with 5 L of water.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Do Jordan’s and Priya’s punches taste the same strength?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Compare scoops : litres as decimals.<br>Jordan: <span class="tex">2\div3=0.667</span> &nbsp; Priya: <span class="tex">5\div7.5=0.667</span><br><span class="tex">\dfrac{2}{3}=\dfrac{5}{7.5}</span> is a proportion, so they are the <b>same strength</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Is Marco’s punch stronger or weaker than Jordan’s?</div><div class="work" style="--h:190px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Marco: <span class="tex">3\div5=0.6</span><br>Marco uses 0.6 scoops per litre, less than Jordan’s 0.667, so Marco’s punch is <b>weaker</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. The Three Jugs">
+  <h3 class="sub">Example 2 in the jugs</h3>
+  <div class="explainer" data-explainer="punch"></div>
+</section>
+
+<!-- ================= 2. Scaling ================= -->
+<section class="card" data-ink="s2" data-section="2. Solving by Scaling">
+  <div class="sec-h"><span class="badge">2</span><h2>Solving by Scaling Up or Down</h2></div>
+  <p>Often one number in a proportion is missing. We call it <span class="tex">x</span>. If a top or bottom number is an easy multiple of its partner, <b>scale</b>: find what the known pair was multiplied (or divided) by, then do the same to the other number.</p>
+  <div class="u1l4-scale">
+    <svg viewBox="0 0 260 200" class="u1l4-scfig" role="img" aria-label="3 over 4 equals x over 20, with times 5 arrows across the bottoms and across the tops">
+      <defs><marker id="u1l4-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#9a6a24"/></marker></defs>
+      <text x="70" y="86" class="u1l4-sn">3</text><line x1="48" y1="100" x2="92" y2="100" class="u1l4-sbar"/><text x="70" y="140" class="u1l4-sn">4</text>
+      <text x="130" y="112" class="u1l4-sn">=</text>
+      <text x="190" y="86" class="u1l4-sn u1l4-sx">x</text><line x1="164" y1="100" x2="216" y2="100" class="u1l4-sbar"/><text x="190" y="140" class="u1l4-sn">20</text>
+      <path d="M78 152 Q130 196 182 152" class="u1l4-sarc" marker-end="url(#u1l4-ah)"/><text x="130" y="194" class="u1l4-slab">×5</text>
+      <path d="M78 48 Q130 4 182 48" class="u1l4-sarc" marker-end="url(#u1l4-ah)"/><text x="130" y="22" class="u1l4-slab">×5</text>
+    </svg>
+    <div class="u1l4-steps">
+      <div><b class="n">1</b><div>Look at the pair with <b>both</b> numbers known (here 4 and 20). What do you multiply or divide by to get from one to the other? (<span class="tex">4\times5=20</span>)</div></div>
+      <div><b class="n">2</b><div>Do the <b>same thing</b> to the other pair: <span class="tex">x=3\times5=15</span>.</div></div>
+    </div>
+  </div>
+  <div class="def"><b>Scaling rule.</b> Multiply or divide the top <b>and</b> the bottom of a ratio by the <b>same</b> number and you get an equal ratio.</div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Only multiply or divide.</b> Adding the same number to the top and bottom does <b>not</b> make an equal ratio: <span class="tex">\frac{3}{4}</span> and <span class="tex">\frac{3+16}{4+16}=\frac{19}{20}</span> are not equal.</div></div>
+  <div class="explainer" data-explainer="scale"></div>
+  <div data-extra><h3 class="sub">Why adding doesn’t work</h3><div class="explainer" data-explainer="addTrap"></div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Solve by scaling</h3></div>
+  <p class="q">Solve each proportion by scaling. Write the <span class="tex">\times</span> or <span class="tex">\div</span> you used.</p>
+  <div class="parts c4">
+    <div class="part"><div class="pl">(a) <span class="tex">\dfrac{3}{4}=\dfrac{x}{20}</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">4\times5=20</span><br>so <span class="tex">x=3\times5</span><br><span class="tex">\boldsymbol{x=15}</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">\dfrac{5}{8}=\dfrac{35}{x}</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">5\times7=35</span><br>so <span class="tex">x=8\times7</span><br><span class="tex">\boldsymbol{x=56}</span></div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">\dfrac{18}{24}=\dfrac{x}{4}</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">24\div6=4</span><br>so <span class="tex">x=18\div6</span><br><span class="tex">\boldsymbol{x=3}</span></div></div></div>
+    <div class="part"><div class="pl">(d) <span class="tex">6:x=30:45</span></div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">30\div5=6</span><br>so <span class="tex">x=45\div5</span><br><span class="tex">\boldsymbol{x=9}</span></div></div></div>
+  </div>
+  <div data-extra class="part think"><div class="pl"><span class="think-tag">Think</span> Can you solve <span class="tex">\dfrac{6}{11}=\dfrac{x}{25}</span> by scaling? Why or why not?</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Not easily. <span class="tex">25\div11=2.2727\dots</span>, not a nice number, so there is no easy <span class="tex">\times</span> to see. For numbers like these we <b>cross-multiply</b> (next section).</div></div></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<!-- ================= Math History box (brown) ================= -->
+<!-- sources: https://www.lindahall.org/about/news/scientist-of-the-day/eratosthenes-of-cyrene (head librarian at Alexandria;
+     Syene noon sun overhead on the longest day; 7.2°; 5000 stadia; 250 000 stadia) ·
+     https://www.astronomy.ohio-state.edu/thompson.1847/161/measearth.html (7.2° ≈ 1/50 of a circle; 50 × 5000; length of a
+     stadion uncertain, about 185 m is a common guess → about 15% too big; Cleomedes is the only surviving ancient account) -->
+<section class="card history" data-ink="hist" data-section="Math History: Measuring the Earth">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">about 2200 years ago · Alexandria, Egypt</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">Measuring the whole Earth with a shadow</h3>
+      <p><b>Eratosthenes</b> ran the great library in Alexandria. At noon on the longest day of the year, the sun was straight overhead in <b>Syene</b>: a stick there cast <b>no shadow</b>. At the same moment, a stick in Alexandria cast a shadow at an angle of <b>7.2°</b>.</p>
+      <p><span class="tex">7.2^\circ</span> is <span class="tex">\tfrac{1}{50}</span> of a full circle, and the cities were about <b>5000 stadia</b> apart. His proportion: <span class="tex">\tfrac{7.2}{360}=\tfrac{5000}{x}</span>. Scale by <span class="tex">\times50</span>: <span class="tex">x=\boldsymbol{250\,000}</span> stadia around the Earth.</p>
+      <div class="part hist-q"><div class="pl">A city 2500 stadia from Syene, in the same direction. What angle would its shadow make?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\frac{7.2}{5000}=\frac{x}{2500}</span>: <span class="tex">5000\div2=2500</span>, so <span class="tex">x=7.2\div2=\boldsymbol{3.6^\circ}</span>. Half the distance, half the angle.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u1l4-hist" viewBox="0 0 600 300" role="img" aria-label="Sun rays hit the Earth. At Syene a stick has no shadow; at Alexandria the shadow makes a 7.2 degree angle. The same 7.2 degree angle at the centre of the Earth cuts off the 5000 stadia between the cities, and 50 such slices go around the whole Earth: 250 000 stadia."></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+      <p class="hist-note">Nobody knows exactly how long his “stadion” was. With a common guess (about 185 m), his answer is about 15% too big. Not bad with a stick and a shadow!</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 3. Cross-multiplying ================= -->
+<section class="card" data-ink="s3" data-section="3. Solving by Cross-Multiplying">
+  <div class="sec-h"><span class="badge">3</span><h2>Solving by Cross-Multiplying</h2></div>
+  <p>When the numbers do not scale nicely (like <span class="tex">\frac{6}{11}=\frac{x}{25}</span>), <b>cross-multiply</b>. In a proportion, the two numbers that sit diagonally across from each other multiply to the same answer. These answers are called the <b>cross products</b>.</p>
+  <div class="u1l4-key">
+    <svg viewBox="0 0 200 130" class="u1l4-xfig" role="img" aria-label="a over b equals c over d, with arrows from a to d and from b to c">
+      <defs><marker id="u1l4-ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9a6a24"/></marker></defs>
+      <text x="45" y="48" class="u1l4-sn">a</text><line x1="24" y1="62" x2="66" y2="62" class="u1l4-sbar"/><text x="45" y="104" class="u1l4-sn">b</text>
+      <text x="100" y="74" class="u1l4-sn">=</text>
+      <text x="155" y="48" class="u1l4-sn">c</text><line x1="134" y1="62" x2="176" y2="62" class="u1l4-sbar"/><text x="155" y="104" class="u1l4-sn">d</text>
+      <line x1="60" y1="40" x2="140" y2="86" class="u1l4-xd1" marker-end="url(#u1l4-ah2)"/>
+      <line x1="60" y1="86" x2="140" y2="40" class="u1l4-xd2" marker-end="url(#u1l4-ah2)"/>
+    </svg>
+    <div>
+      <p class="u1l4-rule"><b>Cross-multiplying.</b> If <span class="tex">\dfrac{a}{b}=\dfrac{c}{d}</span>, then <span class="tex">a\times d=b\times c</span>.</p>
+      <div class="u1l4-steps">
+        <div><b class="n">1</b><div>Multiply across <b>both diagonals</b> and write an equation.</div></div>
+        <div><b class="n">2</b><div>Divide both sides by the number that is <b>with <span class="tex">x</span></b>.</div></div>
+        <div><b class="n">3</b><div><b>Check:</b> put your answer in and find both cross products. They should be equal (or very close if you rounded).</div></div>
+      </div>
+    </div>
+  </div>
+  <p>For example, <span class="tex">\dfrac{x}{12}=\dfrac{7}{8}</span> gives <span class="tex">8\times x=12\times7</span>, so <span class="tex">8x=84</span> and <span class="tex">x=84\div8=10.5</span>. <br>Check: <span class="tex">10.5\times8=84</span> and <span class="tex">12\times7=84</span> ✓</p>
+  <div class="tip-row">
+    <div class="tip watch"><div class="tip-ic">!</div><div><b>Multiply along the diagonals</b> (top-left with bottom-right, bottom-left with top-right). Do not multiply the two tops together. It works the same way when <span class="tex">x</span> is on the bottom.</div></div>
+    <div class="tip calc-tip">
+      <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+      <div><b>One line.</b> Once you have <span class="tex">11x=6\times25</span>: <span class="keys"><kbd>6</kbd><kbd>×</kbd><kbd>2</kbd><kbd>5</kbd><kbd>÷</kbd><kbd>1</kbd><kbd>1</kbd><kbd>ENTER</kbd></span> gives 13.63636364. Round only at the end.</div>
+      <button class="pill" data-keys="6 × 25 ÷ 11 =">Show me</button>
+    </div>
+  </div>
+  <div class="explainer" data-explainer="cross"></div>
+</section>
+
+<section class="card" data-extra data-ink="s3b" data-section="3. Why Cross-Multiplying Works">
+  <h3 class="sub">Why do the cross products match?</h3>
+  <p>Give both fractions the <b>same bottom</b> by multiplying each one by the other’s bottom. The new tops are exactly the two cross products.</p>
+  <div class="explainer" data-explainer="whyCross"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Solve by cross-multiplying</h3></div>
+  <p class="q">Solve by cross-multiplying. Round to the nearest tenth where needed. Check part (b).</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) <span class="tex">\dfrac{9}{x}=\dfrac{15}{40}</span></div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">9\times40=15\times x</span><br><span class="tex">360=15x</span><br><span class="tex">x=360\div15</span><br><span class="tex">\boldsymbol{x=24}</span></div></div></div>
+    <div class="part"><div class="pl">(b) <span class="tex">\dfrac{6}{11}=\dfrac{x}{25}</span></div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6\times25=11\times x</span><br><span class="tex">150=11x</span><br><span class="tex">x=150\div11=13.636\dots</span><br><span class="tex">\boldsymbol{x\approx13.6}</span><br>Check: <span class="tex">6\times25=150</span>; <span class="tex">11\times13.6=149.6\approx150</span> ✓</div></div></div>
+    <div class="part"><div class="pl">(c) <span class="tex">\dfrac{2.5}{4}=\dfrac{7}{x}</span></div><div class="work" style="--h:250px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">2.5\times x=4\times7</span><br><span class="tex">2.5x=28</span><br><span class="tex">x=28\div2.5</span><br><span class="tex">\boldsymbol{x=11.2}</span></div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (one per lesson) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–5">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 4 · Questions 1–5</h2>
+  <p class="pr-t">Try these before we go on to word problems.</p>
+  <div class="pr-chips">
+    <span><b>1</b>Proportion or not?</span>
+    <span><b>2</b>Solve by scaling</span>
+    <span><b>3</b>Solve by cross-multiplying</span>
+    <span><b>4–5</b>Find the mistake · check with cross products</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 5.</span><a class="pill" href="../../../#/lesson/u1l4">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Word problems ================= -->
+<section class="card" data-ink="s4" data-section="4. Setting Up from a Word Problem">
+  <div class="sec-h"><span class="badge">4</span><h2>Setting Up a Proportion from a Word Problem</h2></div>
+  <p>The hardest part of a word problem is <b>writing the proportion</b>. Write it in <b>words</b> first, then put in the numbers.</p>
+  <div class="u1l4-steps u1l4-five">
+    <div><b class="n">1</b><div>Decide which <b>two things</b> are being compared (for example, cups of flour and muffins).</div></div>
+    <div><b class="n">2</b><div class="u1l4-wp"><span>Write a <b>word proportion</b> with the <b>same thing in the same position</b> on both sides.</span><span class="tex">\dfrac{\text{flour}}{\text{muffins}}=\dfrac{\text{flour}}{\text{muffins}}</span></div></div>
+    <div><b class="n">3</b><div>Put in the numbers and use <span class="tex">x</span> for the missing one. <b>Units in the same position must match</b> (both mL, or both L). Convert first if they don’t.</div></div>
+    <div><b class="n">4</b><div>Solve by scaling or cross-multiplying.</div></div>
+    <div><b class="n">5</b><div>Ask, “<b>Does my answer make sense?</b>” Then write a sentence answer with units.</div></div>
+  </div>
+  <div class="explainer" data-explainer="setup"></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>Muffins</h3></div>
+  <p class="q">A muffin recipe uses 2.5 cups of flour to make 12 muffins.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How much flour is needed for 30 muffins? Estimate first.</div><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: 30 muffins is a bit more than 2 batches of 12, so a bit more than 5 cups.<br><span class="tex">\dfrac{\text{flour}}{\text{muffins}}</span>: &nbsp;<span class="tex">\dfrac{2.5}{12}=\dfrac{x}{30}</span><br><span class="tex">12x=2.5\times30=75</span>, so <span class="tex">x=75\div12=6.25</span><br>You need <b>6.25 cups</b> of flour (about <span class="tex">6\frac{1}{4}</span> cups). A bit more than 5, so it makes sense.</div></div></div>
+    <div class="part"><div class="pl">(b) Lena has only 4 cups of flour. How many whole muffins can she make?</div><div class="work" style="--h:260px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{2.5}{12}=\dfrac{4}{x}</span><br><span class="tex">2.5x=12\times4=48</span>, so <span class="tex">x=48\div2.5=19.2</span><br>She can’t bake 0.2 of a muffin, so she can make <b>19 muffins</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>A hiking map</h3></div>
+  <p class="q">On a hiking map, 2 cm represents 5 km of real distance.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Two campsites are 7.4 cm apart on the map. How far apart are they really?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\text{map (cm)}}{\text{real (km)}}</span>: &nbsp;<span class="tex">\dfrac{2}{5}=\dfrac{7.4}{x}</span><br><span class="tex">2x=5\times7.4=37</span><br><span class="tex">x=18.5</span><br>The campsites are <b>18.5 km</b> apart.</div></div></div>
+    <div class="part"><div class="pl">(b) A trail is 12 km long. How long is it on the map?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{2}{5}=\dfrac{x}{12}</span><br><span class="tex">5x=2\times12=24</span><br><span class="tex">x=4.8</span><br>The trail is <b>4.8 cm</b> long on the map.</div></div></div>
+  </div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s4b" data-section="4. On the Map">
+  <h3 class="sub">Example 6 on the map</h3>
+  <div class="explainer" data-explainer="map"></div>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Fuel for a leaf blower</h3></div>
+  <p class="q">A leaf blower has a 2-stroke engine. Its fuel must be mixed with gas and oil in the ratio <span class="tex">50:1</span> (50 parts gas to 1 part oil).</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) How many millilitres of oil should be mixed with 4 L of gas?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Units must match: <span class="tex">4\text{ L}=4000\text{ mL}</span>.<br><span class="tex">\dfrac{\text{gas}}{\text{oil}}</span>: &nbsp;<span class="tex">\dfrac{50}{1}=\dfrac{4000}{x}</span><br><span class="tex">50x=4000</span>, so <span class="tex">x=80</span><br>Mix <b>80 mL</b> of oil with 4 L of gas.</div></div></div>
+    <div class="part"><div class="pl">(b) How much gas, in litres, goes with a full 250 mL bottle of oil?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{50}{1}=\dfrac{x}{250}</span><br>Scale: <span class="tex">1\times250=250</span>, so <span class="tex">x=50\times250=12\,500</span> mL<br><span class="tex">12\,500\text{ mL}\div1000=12.5\text{ L}</span><br>A 250 mL bottle of oil goes with <b>12.5 L</b> of gas.</div></div></div>
+  </div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Convert to the same units first.</b> In part (a), writing <span class="tex">\frac{50}{1}=\frac{4}{x}</span> (litres on one side, millilitres on the other) gives <span class="tex">x=0.08</span>. But 0.08 mL of oil in 4 L of gas makes no sense: it is far too little.</div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u1l4"></section>
+
+<!-- ================= 5. Proportions at work ================= -->
+<section class="card" data-ink="s5" data-section="5. Proportions at Work">
+  <div class="sec-h"><span class="badge">5</span><h2>Proportions at Work</h2></div>
+  <p>Nurses, photo technicians and landscapers all use proportions. Set them up the same way. Then <b>think about the answer</b>:</p>
+  <div class="def-grid">
+    <div class="def"><b>Round up</b> when part of a thing isn’t enough.<div class="eg">You can’t buy part of a bag: 3.56 bags means <b>buy 4</b>.</div></div>
+    <div class="def"><b>Round down</b> when you can’t make part of a thing.<div class="eg">You can’t bake part of a muffin: 19.2 muffins means <b>19</b>.</div></div>
+  </div>
+  <div class="tip calc-tip">
+    <div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div>
+    <div><b>Read the whole answer before you round.</b> <span class="keys"><kbd>1</kbd><kbd>6</kbd><kbd>0</kbd><kbd>÷</kbd><kbd>4</kbd><kbd>5</kbd><kbd>ENTER</kbd></span> gives 3.555555556 bags. Then decide: up or down?</div>
+    <button class="pill" data-keys="160 ÷ 45 =">Show me</button>
+  </div>
+  <div data-extra><h3 class="sub">Round up or round down?</h3><div class="explainer" data-explainer="roundIt"></div></div>
+  <div data-extra class="part think"><div class="pl"><span class="think-tag">Think</span> A school needs 13.4 buses for a field trip. How many buses should it book? You have enough flour for 13.4 batches of cookies. How many full batches can you make?</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>14 buses</b>: 13 buses would leave some students behind, so round <b>up</b>. <b>13 batches</b>: there isn’t enough flour for a 14th, so round <b>down</b>. The situation decides, not the decimal.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>A medicine dose</h3></div>
+  <p class="q">A nurse gives a child a medicine. The order says 1.5 mL for every 10 kg of body mass. The child has a mass of 24 kg. How many millilitres should the child get? <span class="muted small">(These numbers are made up for practice. Real doses always come from a doctor or pharmacist.)</span></p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\text{mL}}{\text{kg}}</span>: &nbsp;<span class="tex">\dfrac{1.5}{10}=\dfrac{x}{24}</span> &nbsp;&nbsp; <span class="tex">10x=1.5\times24=36</span>, so <span class="tex">x=3.6</span><br>The child should get <b>3.6 mL</b>. (Check: 24 kg is a bit more than 2 groups of 10 kg, so a bit more than <span class="tex">2\times1.5=3</span> mL.)</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex9" data-section="Example 9">
+  <div class="ex-head"><span class="ex-tag">Example 9</span><h3>Enlarging a photo</h3></div>
+  <p class="q">A photo is 10 cm wide and 15 cm tall. To enlarge a photo without stretching it, the width and height must stay in the same ratio.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) It is enlarged to 24 cm wide. How tall is it?</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\text{width}}{\text{height}}</span>: &nbsp;<span class="tex">\dfrac{10}{15}=\dfrac{24}{x}</span><br><span class="tex">10x=15\times24=360</span>, so <span class="tex">x=36</span><br>The enlargement is <b>36 cm</b> tall.</div></div></div>
+    <div class="part"><div class="pl">(b) Can the photo be enlarged to fill a 20 cm by 25 cm frame exactly, without cutting any off? Explain.</div><div class="work" style="--h:220px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Photo: <span class="tex">10\div15=0.667</span><br>Frame: <span class="tex">20\div25=0.8</span><br>The ratios are not equal, so <b>no</b>. Some of the photo would have to be cut off (cropped).</div></div></div>
+  </div>
+  <div class="space" id="ex9-space"></div>
+  <button class="more" data-more="ex9-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. The Photo Lab">
+  <h3 class="sub">Example 9 in the photo lab</h3>
+  <div class="explainer" data-explainer="photo"></div>
+</section>
+
+<section class="card example" data-ink="ex10" data-section="Example 10">
+  <div class="ex-head"><span class="ex-tag">Example 10</span><h3>Grass seed</h3></div>
+  <p class="q">One bag of grass seed covers 45 m<sup>2</sup> of lawn. Mateo’s new lawn is 160 m<sup>2</sup>. How many bags must he buy?</p>
+  <div class="parts c1">
+    <div class="part"><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\dfrac{\text{bags}}{\text{m}^2}</span>: &nbsp;<span class="tex">\dfrac{1}{45}=\dfrac{x}{160}</span> &nbsp;&nbsp; <span class="tex">45x=160</span>, so <span class="tex">x=160\div45=3.56</span> bags<br>3 bags would not be enough, so round <b>up</b>. Mateo must buy <b>4 bags</b>.</div></div></div>
+  </div>
+  <div class="space" id="ex10-space"></div>
+  <button class="more" data-more="ex10-space">+ More space</button>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>A proportion is two equal ratios.</b> To check, simplify both ratios or divide (top <span class="tex">\div</span> bottom) and compare.</div>
+    <div><b>Scaling:</b> find the <span class="tex">\times</span> or <span class="tex">\div</span> for the known pair, then do the same to the other number. Never add.</div>
+    <div><b>Cross-multiplying:</b> <span class="tex">\frac{a}{b}=\frac{c}{d}</span> means <span class="tex">a\times d=b\times c</span>. Divide by the number with <span class="tex">x</span>, then check.</div>
+    <div><b>Word problems:</b> words first, same thing in the same place, units that match. Does it make sense? Round up or down to suit the job.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u1l4">
+    <div><div class="kicker">Your turn</div><b>Assignment 4 · Questions 6–17</b><div class="muted">Recipes, maps, floor plans, fuel mixes, doses, photos and flooring. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l5/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 5 — Rates and Unit Rates</b><div class="muted">Which car is faster: 240 km in 3 h, or 150 km in 2 h? A rate compares two different units.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u1l4.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u1l4', homeHref: '../../', title: '1.4 Proportions' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

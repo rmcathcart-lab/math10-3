@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Welcome to Math 10-3 · Day One</title>
+<meta name="description" content="Math 10-3 day one: what the course is, how class works, our class website, unit projects, how you're assessed, certification cards, calculators and our classroom. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../../assets/certs.css">
+<link rel="stylesheet" href="../../css/lessons/u1l0.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+<!-- the practice site's catalog, class calendar, outcomes, certification cards and backend address
+     (course outline with this class's dates, class link, the cards) -->
+<script src="../../../js/config.js"></script>
+<script src="../../../js/catalog.js"></script>
+<script src="../../../js/calendar.js"></script>
+<script src="../../../js/outcomes.js"></script>
+<script src="../../../js/certs.js"></script>
+</head>
+<body>
+<main class="lesson screen u1l0">
+<!-- Day one (no assignment). Built from Ryan's Math 10C day-one page (math10c/lessons/u1/l0), rewritten for Math 10-3.
+     sources: W.H. Croxford student handbook https://whcroxford.rockyview.ab.ca/our-school/student-handbook (Test Centre
+     Fridays 2:15–3:45 in the Learning Commons; academic integrity incl. AI; BYOD + loaner Chromebooks; phones;
+     The Croxford Way) · diploma: 100 credits incl. a 20-level math (20-1, 20-2 or 20-3)
+     · grading rule (boxes secure at 3/4, half at 1/2; bands) = js/testcore.js; retests = js/app.js retestCtl;
+     cards = js/certs.js TIERS; Pop-Up Shop checkpoints = js/projects/u1.js; Skill Drills = js/drills.js -->
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: A Million or a Penny?">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>A Million Dollars or a Magic Penny?</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt">
+    <p class="vw-ctx">You win a prize. Pick one:</p>
+    <p class="vw-ctx u1l0-opt"><b class="u1l0-ol">A</b> <b>$1&thinsp;000&thinsp;000</b>, right now.</p>
+    <p class="vw-ctx u1l0-opt"><b class="u1l0-ol">B</b> A magic penny: <b>1¢</b> today, and it <b>doubles every day</b> for 30 days. On day 30, you keep what it’s worth.</p>
+    <p class="vw-ask">Which prize do you pick?</p></div>
+    <div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="A briefcase of cash beside a stack of pennies that doubles: 1, 2, 4, 8, 16 coins, then a question mark for day 30">
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="2.6s" repeatCount="indefinite"/>
+        <path d="M58 104v-12a10 10 0 0 1 10-10h34a10 10 0 0 1 10 10v12" fill="none" stroke="#4a3416" stroke-width="7" stroke-linejoin="round"/>
+        <rect x="18" y="104" width="134" height="96" rx="12" fill="#6e4a1c" stroke="#3b2810" stroke-width="3"/>
+        <rect x="18" y="138" width="134" height="26" fill="#9a6a24"/>
+        <rect x="76" y="132" width="18" height="38" rx="4" fill="#f2c14e" stroke="#3b2810" stroke-width="2"/>
+        <text x="85" y="228" text-anchor="middle" font-size="19" font-weight="800" fill="#3b2810">$1 000 000</text>
+        <text x="85" y="246" text-anchor="middle" font-size="14" font-weight="700" fill="#8a7a62">right now</text></g>
+      <text x="172" y="160" text-anchor="middle" font-size="20" font-weight="800" fill="#9aa0ab">or</text>
+      <g fill="#c8743a" stroke="#7a3e14" stroke-width="2">
+        <g opacity="1"><animate attributeName="opacity" values="1;0" keyTimes="0;0.1667" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/>
+          <ellipse cx="255" cy="200" rx="18" ry="6"/></g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.1667;0.3333" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/>
+          <ellipse cx="255" cy="200" rx="18" ry="6"/><ellipse cx="255" cy="193" rx="18" ry="6"/></g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.3333;0.5" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/>
+          <ellipse cx="255" cy="200" rx="18" ry="6"/><ellipse cx="255" cy="193" rx="18" ry="6"/><ellipse cx="255" cy="186" rx="18" ry="6"/><ellipse cx="255" cy="179" rx="18" ry="6"/></g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;0.6667" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/>
+          <ellipse cx="255" cy="200" rx="18" ry="6"/><ellipse cx="255" cy="193" rx="18" ry="6"/><ellipse cx="255" cy="186" rx="18" ry="6"/><ellipse cx="255" cy="179" rx="18" ry="6"/><ellipse cx="255" cy="172" rx="18" ry="6"/><ellipse cx="255" cy="165" rx="18" ry="6"/><ellipse cx="255" cy="158" rx="18" ry="6"/><ellipse cx="255" cy="151" rx="18" ry="6"/></g>
+        <g opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.6667;0.8333" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/>
+          <ellipse cx="236" cy="200" rx="18" ry="6"/><ellipse cx="236" cy="193" rx="18" ry="6"/><ellipse cx="236" cy="186" rx="18" ry="6"/><ellipse cx="236" cy="179" rx="18" ry="6"/><ellipse cx="236" cy="172" rx="18" ry="6"/><ellipse cx="236" cy="165" rx="18" ry="6"/><ellipse cx="236" cy="158" rx="18" ry="6"/><ellipse cx="236" cy="151" rx="18" ry="6"/>
+          <ellipse cx="274" cy="200" rx="18" ry="6"/><ellipse cx="274" cy="193" rx="18" ry="6"/><ellipse cx="274" cy="186" rx="18" ry="6"/><ellipse cx="274" cy="179" rx="18" ry="6"/><ellipse cx="274" cy="172" rx="18" ry="6"/><ellipse cx="274" cy="165" rx="18" ry="6"/><ellipse cx="274" cy="158" rx="18" ry="6"/><ellipse cx="274" cy="151" rx="18" ry="6"/></g>
+      </g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.8333" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/>
+        <rect x="222" y="40" width="66" height="166" rx="10" fill="none" stroke="#c8743a" stroke-width="3" stroke-dasharray="7 6"/>
+        <text x="255" y="140" text-anchor="middle" font-size="58" font-weight="800" fill="#9a6a24">?</text></g>
+      <g font-size="18" font-weight="800" fill="#3b2810" text-anchor="middle">
+        <text x="255" y="232">Day 1 · 1¢<animate attributeName="opacity" values="1;0" keyTimes="0;0.1667" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/></text>
+        <text x="255" y="232" opacity="0">Day 2 · 2¢<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.1667;0.3333" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/></text>
+        <text x="255" y="232" opacity="0">Day 3 · 4¢<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.3333;0.5" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/></text>
+        <text x="255" y="232" opacity="0">Day 4 · 8¢<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;0.6667" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/></text>
+        <text x="255" y="232" opacity="0">Day 5 · 16¢<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.6667;0.8333" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/></text>
+        <text x="255" y="232" opacity="0">Day 30 · ?<animate attributeName="opacity" values="0;1" keyTimes="0;0.8333" calcMode="discrete" dur="8.4s" repeatCount="indefinite"/></text>
+      </g>
+    </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Guess first. Then convince the person beside you.</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>Take the penny!</b> On day 30 it is worth <span class="tex">2^{29}</span> cents: <b>$5&thinsp;368&thinsp;709.12</b>, more than five million dollars.
+      <span class="muted">The twist: on day 20 it’s only $5&thinsp;242.88, and on day 27 it’s still under a million ($671&thinsp;088.64). It passes $1&thinsp;000&thinsp;000 on day 28.</span>
+      <button class="pill" type="button" data-keys="0.01 × 2 ^ 29 =">Show me</button></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero u1l0-hero" data-ink="hero" data-section="Start">
+  <div class="u1l0-hero-grid">
+    <div>
+      <div class="kicker">Math 10-3 · Day One</div>
+      <h1>Welcome to Math 10-3<br>with Mr. Cathcart</h1>
+      <p class="lede">Today is about how this course works: what we learn, where everything lives, how you’re assessed and what you need every day. Then we’ll do some math.</p>
+      <div class="goals">
+        <div class="goals-h">By the end of today, I can…</div>
+        <ul>
+          <li>sign in to our class website with the class code and my own PIN</li>
+          <li>explain how outcomes and indicators make my grade</li>
+          <li>find this unit’s project and say when it’s due</li>
+          <li>say what to do in a fire drill or a lockdown</li>
+        </ul>
+      </div>
+    </div>
+    <div class="u1l0-crest">
+      <img src="../../assets/intro/croxford-cavaliers.png" alt="Croxford Cavaliers crest" width="210" height="210">
+      <div class="u1l0-cavs">Compassionate Cavs</div>
+      <div class="u1l0-first" id="u1l0-first"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= about me ================= -->
+<section class="card u1l0-me" data-ink="me" data-section="A Little About Me">
+  <div class="sec-h"><span class="badge">1</span><h2>A Little About Me</h2></div>
+  <div class="u1l0-me-grid">
+    <figure class="u1l0-photo"><img src="../../assets/intro/cathcart-family.jpg" alt="Mr. Cathcart with his family at a park" width="720" height="540"></figure>
+    <div class="u1l0-tiles">
+      <div class="u1l0-tile"><div class="u1l0-th">Where I’m from</div>I grew up in Calgary, so I’ve been around here all my life. Airdrie is better though.</div>
+      <div class="u1l0-tile"><div class="u1l0-th">Outside of school</div>I love watching movies and TV, playing board games and video games, backpacking, and eating good food. Basic stuff.</div>
+      <div class="u1l0-tile"><div class="u1l0-th">Why I teach math</div>I used to be an engineer, but there wasn’t enough math involved.</div>
+      <div class="u1l0-tile"><div class="u1l0-th">How to reach me</div>Email <b>rcathcart@rvschools.ab.ca</b>, or just come find me in this room. I’m here most of the time.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= what is math 10-3 ================= -->
+<section class="card u1l0-what10" data-ink="what" data-section="What Is Math 10-3?">
+  <div class="sec-h"><span class="badge">2</span><h2>What Is Math 10-3?</h2></div>
+  <p class="u1l0-lead">Math 10-3 is the <b>workplace and apprenticeship</b> math course: the math you’ll use at a job, in a trade and at home.</p>
+  <div class="u1l0-topics">
+    <div class="u1l0-topic"><div class="u1l0-ti">🏷️</div><div><b>Money</b>best buys, sales tax, discounts and exchange rates</div></div>
+    <div class="u1l0-topic"><div class="u1l0-ti">💵</div><div><b>Pay</b>wages, overtime, commission and reading a pay stub</div></div>
+    <div class="u1l0-topic"><div class="u1l0-ti">📏</div><div><b>Measuring</b>metric <i>and</i> imperial, reading a tape measure, converting</div></div>
+    <div class="u1l0-topic"><div class="u1l0-ti">📦</div><div><b>Area and volume</b>paint, flooring, concrete, litres and gallons</div></div>
+    <div class="u1l0-topic"><div class="u1l0-ti">📐</div><div><b>Angles and scale</b>parallel lines, puzzles, maps and floor plans</div></div>
+    <div class="u1l0-topic"><div class="u1l0-ti">🔺</div><div><b>Right triangles</b>squaring a corner, ramps and roofs</div></div>
+  </div>
+  <div class="def u1l0-def">You don’t need to have loved math before. We go <b>one step at a time</b>, we review the basics when a unit needs them, and <b>calculators are allowed on everything</b>.</div>
+</section>
+
+<section class="card" data-ink="why" data-section="Where Math 10-3 Leads">
+  <div class="sec-h"><span class="badge">3</span><h2>Where Math 10-3 Leads</h2></div>
+  <div class="explainer" data-explainer="pathways"></div>
+</section>
+
+<!-- ================= the course ================= -->
+<section class="card u1l0-course" data-ink="course" data-section="The Course">
+  <div class="sec-h"><span class="badge">4</span><h2>The Course</h2><span class="u1l0-cnote" id="u1l0-cnote"></span></div>
+  <div class="u1l0-outline" id="u1l0-outline"></div>
+  <p class="u1l0-plan"><b>The dates are a plan, not a promise.</b> If we need longer on something, we take it, and you’ll always get notice. The <b>class calendar</b> on our website is always up to date.</p>
+</section>
+
+<!-- ================= the website ================= -->
+<section class="card u1l0-site" data-ink="site" data-section="Our Class Website">
+  <div class="sec-h"><span class="badge">5</span><h2>Our Class Website</h2></div>
+  <div class="u1l0-site-grid">
+    <div class="u1l0-join">
+      <div class="u1l0-qr" id="u1l0-qr"></div>
+      <div class="u1l0-url" id="u1l0-url"></div>
+      <ol class="u1l0-steps">
+        <li><b>Scan</b> the code (or type the link) on your laptop.</li>
+        <li>Type our <b>class code</b><span id="u1l0-ccode"></span>.</li>
+        <li><b>Pick your name</b> from the class list.</li>
+        <li><b>Make a 4-digit PIN.</b> Keep it to yourself: it’s how the site knows your work is yours.</li>
+      </ol>
+      <div class="u1l0-now">Do it right now.</div>
+    </div>
+    <div class="u1l0-what">
+      <div class="u1l0-wtile"><div class="u1l0-wi">📖</div><div><b>Lessons</b> — every lesson, with the notes I write in class.</div></div>
+      <div class="u1l0-wtile"><div class="u1l0-wi">✏️</div><div><b>Practice</b> — every lesson’s questions, with <b>new numbers every time</b> and <b>hints</b> when you get stuck.</div></div>
+      <div class="u1l0-wtile"><div class="u1l0-wi">📅</div><div><b>Calendar</b> — what we’re doing each day, when the next test is and when your project is due.</div></div>
+      <div class="u1l0-wtile"><div class="u1l0-wi">🪪</div><div><b>Certification cards</b> — one for each outcome, beside your name.</div></div>
+      <div class="u1l0-wtile"><div class="u1l0-wi">📝</div><div><b>Tests &amp; exit slips</b> — written right on the website, in class.</div></div>
+      <div class="u1l0-wtile"><div class="u1l0-wi">🧰</div><div><b>At the bottom of the home page</b> — Printable Notes, Skill Drills and a button to email me.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= google classroom ================= -->
+<section class="card u1l0-gc" data-ink="gc" data-section="Google Classroom">
+  <div class="sec-h"><span class="badge">6</span><h2>Join Our Google Classroom</h2></div>
+  <div class="u1l0-gc-grid">
+    <div class="u1l0-gc-code">
+      <div class="u1l0-gch">Class code</div>
+      <div class="u1l0-gcv" id="u1l0-gccode"></div>
+      <ol class="u1l0-steps">
+        <li>Go to <b>classroom.google.com</b>, signed in with your <b>school</b> Google account.</li>
+        <li><b>+</b> → <b>Join class</b> → type the code.</li>
+        <li>On your phone? Get the Google Classroom app and use the same code.</li>
+      </ol>
+      <div class="u1l0-now">Do it right now.</div>
+    </div>
+    <div class="u1l0-what">
+      <div class="u1l0-wtile"><div class="u1l0-wi">🔗</div><div><b>The link to our class website</b> — pinned at the top, so you can always find it.</div></div>
+      <div class="u1l0-wtile"><div class="u1l0-wi">📎</div><div><b>Files</b> — anything I hand out that isn’t on the website.</div></div>
+      <div class="u1l0-wtile"><div class="u1l0-wi">📣</div><div><b>Announcements</b> — changes to the plan, reminders, and anything else you need to know.</div></div>
+      <p class="u1l0-nogc">Lessons, practice, projects, the calendar, tests and exit slips stay on <b>our class website</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= a typical class ================= -->
+<section class="card" data-ink="day" data-section="A Typical Class">
+  <div class="sec-h"><span class="badge">7</span><h2>What a Typical Class Looks Like</h2></div>
+  <div class="explainer" data-explainer="period"></div>
+</section>
+
+<!-- ================= how you'll learn ================= -->
+<section class="card u1l0-learn" data-ink="learn" data-section="How You’ll Learn">
+  <div class="sec-h"><span class="badge">8</span><h2>How You’ll Learn</h2></div>
+  <div class="u1l0-learn-grid">
+    <div class="u1l0-lc"><div class="u1l0-lic" data-ic="notes"></div><div><div class="u1l0-ch">Notes</div>I teach from a lesson on the screen and write on it. You take notes on <b>paper</b>, or in the <b>printable notes booklet</b>: every lesson’s notes and examples with space to write (home page → <b>Printable Notes</b>).</div></div>
+    <div class="u1l0-lc"><div class="u1l0-lic" data-ic="practice"></div><div><div class="u1l0-ch">Practice on the website</div><b>New numbers every time</b>, so you can try a question again. Stuck? Tap <b>Hint</b>. Each lesson has a due date: it sets our <b>pace</b>, and nothing is marked late.</div></div>
+    <div class="u1l0-lc"><div class="u1l0-lic" data-ic="board"></div><div><div class="u1l0-ch">Stand Up Breaks</div>Most lessons, we get up and work at the <b>whiteboards</b> around the room in small, random groups. One marker, one question, talk it out.</div></div>
+    <div class="u1l0-lc"><div class="u1l0-lic" data-ic="drill"></div><div><div class="u1l0-ch">Skill Drills</div>Rusty on times tables, fractions or integers? <b>Skill Drills</b> (bottom of the home page) give you unlimited practice on the basics. They level up as you get better.</div></div>
+  </div>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u1l0"></section>
+
+<!-- ================= unit projects ================= -->
+<section class="card u1l0-proj" data-ink="proj" data-section="Unit Projects">
+  <div class="sec-h"><span class="badge">9</span><h2>Unit Projects</h2><span class="u1l0-cnote">One guided project in every unit</span></div>
+  <p class="u1l0-lead">Every unit has a <b>guided project</b> on our website: a real job, one checkpoint at a time, with a worked example for each step. Unit 1’s is the <b>Pop-Up Shop</b>.</p>
+  <div class="explainer" data-explainer="project"></div>
+</section>
+
+<!-- ================= what to bring ================= -->
+<section class="card u1l0-bring" data-ink="bring" data-section="What to Bring">
+  <div class="sec-h"><span class="badge">10</span><h2>What to Bring Every Day</h2></div>
+  <p class="u1l0-lead">On your desk <b>before</b> class starts — every day, not just test days.</p>
+  <div class="u1l0-items">
+    <div class="u1l0-item"><div class="u1l0-ic" data-ic="pencil"></div><b>Pencil, eraser &amp; sharpener</b></div>
+    <div class="u1l0-item"><div class="u1l0-ic" data-ic="paper"></div><b>Paper or a notebook</b><span>for notes while I teach (or your printed notes booklet)</span></div>
+    <div class="u1l0-item"><div class="u1l0-ic" data-ic="calc"></div><b>Scientific calculator</b><span>like the TI-30XIIS — NOT your phone</span></div>
+    <div class="u1l0-item"><div class="u1l0-ic" data-ic="laptop"></div><b>Laptop or Chromebook</b><span>charged, for practice, projects, exit slips and tests</span></div>
+  </div>
+  <div class="u1l0-notes">
+    <div class="tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>No calculator of your own?</b> I have a small number you can borrow, attached to big pieces of wood.</div></div>
+    <div class="tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M1 20h22"/></svg></div><div><b>No laptop?</b> Croxford is a bring-your-own-device school. Ask the office about borrowing a school Chromebook for the year.</div></div>
+  </div>
+</section>
+
+<!-- ================= calculators ================= -->
+<section class="card u1l0-calc" data-ink="calc" data-section="Calculators">
+  <div class="sec-h"><span class="badge">11</span><h2>Calculators</h2><span class="u1l0-cnote">Allowed on everything: practice, projects, exit slips and tests</span></div>
+  <div class="u1l0-calc-grid">
+    <div>
+      <div class="u1l0-box u1l0-okb">
+        <div class="u1l0-bh">What you need</div>
+        <ul>
+          <li>A <b>scientific calculator</b> like the <b>TI-30XIIS</b> — around $15–20. It’s the one I use in every lesson.</li>
+          <li>It needs <b>√</b>, <b>x²</b>, <b>brackets</b> and <b>SIN, COS, TAN</b> keys (we use those in Unit 7).</li>
+          <li>Your phone isn’t a calculator in here: it stays <b>off and away</b>.</li>
+          <li>Not sure about yours? Bring it to me and we’ll test it together.</li>
+        </ul>
+      </div>
+      <div class="u1l0-box web">
+        <div class="u1l0-bh">Forgot yours?</div>
+        <p>There’s a <b>TI-30XIIS built into our website</b>: the <b>Calc</b> button on every lesson and on the practice site. Same keys, same answers.</p>
+      </div>
+    </div>
+    <div>
+      <div class="u1l0-box test">
+        <div class="u1l0-bh">Test yours right now</div>
+        <p>A scientific calculator follows <b>BEDMAS</b>: multiply before you add.</p>
+        <div class="u1l0-try"><span class="keys"><kbd>2</kbd><kbd>+</kbd><kbd>3</kbd><kbd>×</kbd><kbd>4</kbd><kbd>ENTER</kbd></span><button class="pill" type="button" data-keys="2 + 3 × 4 =">Show me</button><span class="muted">→ 14</span></div>
+        <p class="small muted">Got <b>20</b>? That’s a basic calculator: it works left to right, so it gets questions like this wrong.</p>
+        <p>Money check: three shirts at $12.49.</p>
+        <div class="u1l0-try"><span class="keys"><kbd>3</kbd><kbd>×</kbd><kbd>1</kbd><kbd>2</kbd><kbd>.</kbd><kbd>4</kbd><kbd>9</kbd><kbd>ENTER</kbd></span><button class="pill" type="button" data-keys="3 × 12.49 =">Show me</button><span class="muted">→ 37.47</span></div>
+        <p class="small muted">Estimate first: 3 × $12 is about $36, so $37.47 makes sense.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= assessment ================= -->
+<section class="card" data-ink="assess" data-section="How You’ll Be Assessed">
+  <div class="sec-h"><span class="badge">12</span><h2>How You’ll Be Assessed</h2><span class="u1l0-cnote u1l0-cbig">Your mark shows <b>which outcomes you can do</b>,<br>not points collected.</span></div>
+  <div class="explainer" data-explainer="grade"></div>
+</section>
+
+<section class="card u1l0-counts" data-ink="counts" data-section="What Counts">
+  <div class="sec-h"><span class="badge">13</span><h2>What Counts</h2></div>
+  <div class="u1l0-three">
+    <div class="u1l0-col"><div class="u1l0-ch">Outcomes are what I assess</div><p>Each unit test and unit project covers that unit’s outcomes. Exit slips check one lesson along the way.</p><p class="u1l0-rev"><b>Refresher</b> lessons (the basics again, like fractions) are great practice, but they don’t count toward a level.</p></div>
+    <div class="u1l0-col"><div class="u1l0-ch">Everything else still counts</div><p>What I see you doing during work time matters. In a judgment call on an outcome, I’ll make the call based on how I’ve seen you work in class.</p></div>
+    <div class="u1l0-col"><div class="u1l0-ch">I can only assess what I see</div><p>If I didn’t watch you do it, I can’t know the thinking is yours. That’s why evidence is gathered <b>here, in this room</b>. Practice at home is still great for learning.</p></div>
+  </div>
+  <div class="u1l0-medal-wrap u1l0-cert-wrap">
+    <div class="u1l0-medal-text"><div class="u1l0-ch">Earn your certification cards</div><p>Every outcome has its own card, like a trade ticket. It shows the <b>best level</b> you’ve reached — from practice, your project or a unit test — and it levels up from <b>Trainee</b> to <b>Master Certified</b>. <span class="muted">Tap one to see it big.</span></p></div>
+    <div class="u1l0-certs" id="u1l0-medals"></div>
+  </div>
+</section>
+
+<!-- ================= tests & exit slips ================= -->
+<section class="card" data-ink="tests" data-section="Tests & Exit Slips">
+  <div class="sec-h"><span class="badge">14</span><h2>Tests &amp; Exit Slips on the Website</h2></div>
+  <div class="explainer" data-explainer="testmode"></div>
+  <div class="u1l0-missed"><b>Missed a test?</b> Make it up in the <b>Test Centre</b>: the Learning Commons, <b>Fridays 2:15–3:45</b> (ick). Fill out the missed-assessment form first. Miss your Test Centre time and you lose that chance.</div>
+</section>
+
+<!-- ================= retests ================= -->
+<section class="card" data-ink="retest" data-section="Retests">
+  <div class="sec-h"><span class="badge">15</span><h2>Retests: Earn Another Try</h2></div>
+  <div class="explainer" data-explainer="retest"></div>
+  <div class="u1l0-missed u1l0-pace"><b>Due dates set the pace.</b> Each lesson’s practice has a due date so we stay together, but it’s <b>never marked late</b>. Unfinished practice just means no retest yet. Retests have <b>no deadline</b>.</div>
+</section>
+
+<!-- ================= academic honesty ================= -->
+<section class="card u1l0-honest" data-ink="honest" data-section="Academic Honesty">
+  <div class="sec-h"><span class="badge">16</span><h2>Academic Honesty</h2></div>
+  <div class="u1l0-two">
+    <div class="u1l0-col"><div class="u1l0-ch">Practice and projects</div>
+      <p>Copying someone’s work helps neither of you — it costs you the practice.</p>
+      <p><b>AI and photo-solver apps:</b> fine for <b>checking</b> your work, not for <b>producing</b> it.</p></div>
+    <div class="u1l0-col u1l0-red"><div class="u1l0-ch">Tests &amp; exit slips</div>
+      <p>Talking, notes you weren’t allowed, another device, or using AI for any part of a test is <b>cheating</b>.</p>
+      <p>It can mean a call home and a <b>0</b> on that test (or a different test, at my discretion). Serious cases go further.</p>
+      <p>Leaving the test window locks your test.</p></div>
+  </div>
+</section>
+
+<!-- ================= getting help ================= -->
+<section class="card u1l0-help" data-ink="help" data-section="Where to Get Help">
+  <div class="sec-h"><span class="badge">17</span><h2>Where to Get Help</h2></div>
+  <div class="def">Asking for help <b>early</b> is the single biggest predictor of doing well in this course.</div>
+  <div class="u1l0-two">
+    <div class="u1l0-col"><div class="u1l0-ch">In class</div><p>Come ask me questions during work time. That’s what the time is for — I’d rather answer it now than mark it wrong later.</p><p><b>Don’t wait until a test</b> to ask me a question! That’s the only time I won’t help you.</p></div>
+    <div class="u1l0-col"><div class="u1l0-ch">Come see me</div><p>I’m here a lot of the time during lunch and before and after school.</p><p>…but during class is usually easiest for everyone.</p><p>Stuck on practice at home? Use the hints, then bring the question to class.</p></div>
+  </div>
+</section>
+
+<!-- ================= phones, bathroom & hallways ================= -->
+<section class="card u1l0-phones" data-ink="phones" data-section="Phones & Bathroom">
+  <div class="sec-h"><span class="badge">18</span><h2>Phones, Bathroom &amp; Hallways</h2></div>
+  <div class="u1l0-two">
+    <div class="u1l0-col"><div class="u1l0-ch">Phones</div>
+      <p>Phones are <b>off and away</b> during class — that’s the provincial rule, not just mine.</p>
+      <p>Away means in your bag, not in your lap.</p>
+      <p>Need it for something class-related? Ask first. But it’s better to use your laptop.</p></div>
+    <div class="u1l0-col"><div class="u1l0-ch">Bathroom &amp; hall pass</div>
+      <p><b>Sign out</b> on the sheet, take the <b>hall pass</b>, leave your <b>phone with me</b> — one person at a time.</p>
+      <p>Someone is always waiting on you to get back — don’t make it a field trip.</p>
+      <p>Genuinely don’t have a phone? Have a parent email me to confirm, so I know.</p></div>
+  </div>
+</section>
+
+<!-- ================= culture ================= -->
+<section class="card u1l0-culture" data-ink="culture" data-section="Compassionate Cavs">
+  <div class="u1l0-cul-head"><img src="../../assets/intro/croxford-cavaliers.png" alt="" width="84" height="84"><div><div class="kicker">Our classroom culture</div><h2>Compassionate Cavs</h2></div></div>
+  <div class="u1l0-cul-grid">
+    <div class="u1l0-cul"><b>Be kind to one another.</b> We’re all just here to try our best — me included.</div>
+    <div class="u1l0-cul"><b>Encourage each other.</b> Wrong answers are the whole point of a math class. This is a room where you can be wrong out loud.</div>
+    <div class="u1l0-cul"><b>Attention during lessons.</b> When I’m teaching, listen. That’s a kindness to me and to everyone around you trying to learn.</div>
+    <div class="u1l0-cul"><b>Ask the question.</b> The question you’re embarrassed to ask is the one five other people also have.</div>
+  </div>
+  <p class="u1l0-cul-foot">Cavs look out for each other. In here, that starts with how we treat someone who’s stuck. <span class="muted">(The Croxford Way: Unity · Innovation · Excellence.)</span></p>
+</section>
+
+<!-- ================= emergencies ================= -->
+<section class="card u1l0-safety" data-ink="safety" data-section="Emergency Protocols">
+  <div class="sec-h"><span class="badge">19</span><h2>Emergency Protocols</h2><span class="u1l0-cnote">Boring until it isn’t. Know these four before you need them.</span></div>
+  <div class="u1l0-four">
+    <div class="u1l0-em u1l0-em-fire"><div class="u1l0-emh">Fire drill</div>Leave your stuff, take your body. Out the nearest exit and across to the <b>back field</b>. I count you on the way out and again outside.</div>
+    <div class="u1l0-em u1l0-em-lock"><div class="u1l0-emh">Lockdown</div>Threat <b>inside</b> the building. Lights off, out of sight, silent — including phones. Nobody leaves until an administrator opens the door.</div>
+    <div class="u1l0-em u1l0-em-alert"><div class="u1l0-emh">On alert</div>Something happening <b>nearby</b>. Class continues, door locked, nobody in the hallways.</div>
+    <div class="u1l0-em u1l0-em-shelter"><div class="u1l0-emh">Shelter in place</div>Hazard <b>outside</b> — weather, air quality. We stay put, windows and doors closed.</div>
+  </div>
+  <div class="part think u1l0-look"><div class="pl"><span class="think-tag">Look around</span> Where is the nearest exit, the pull station and the fire extinguisher? What’s the fastest route from this room to the back field?</div></div>
+</section>
+
+<!-- ================= numbers about me ================= -->
+<section class="card example u1l0-num" data-ink="numbers" data-section="Let’s Do Some Math">
+  <div class="ex-head"><span class="ex-tag">Let’s do some math</span><h3>Numbers About Me</h3></div>
+  <p class="q">No marks, no wrong answers — just a warm-up so nobody leaves day one having done zero math.</p>
+  <div class="u1l0-nsteps">
+    <div><span class="u1l0-nn">1</span><b>Write four numbers that describe you.</b> Anything: jersey number, siblings, hours of sleep last night, kilometres from here to your favourite place.</div>
+    <div><span class="u1l0-nn">2</span><b>Trade with the person beside you.</b> No explanations yet — just the four numbers.</div>
+    <div><span class="u1l0-nn">3</span><b>Guess what each number means.</b> Then check. You’ll be wrong about at least one, and that’s the fun part.</div>
+  </div>
+  <div class="u1l0-mine">
+    <div class="u1l0-mh">Mr. Cathcart’s four numbers — the class guesses first</div>
+    <div class="u1l0-mnums"><div class="u1l0-mbox"></div><div class="u1l0-mbox"></div><div class="u1l0-mbox"></div><div class="u1l0-mbox"></div></div>
+  </div>
+  <div class="space" id="num-space" style="min-height:160px"></div>
+  <button class="more" data-more="num-space">+ More space</button>
+</section>
+
+<!-- ================= before next class ================= -->
+<section class="card summary" data-ink="sum" data-section="Before Next Class">
+  <div class="sec-h"><span class="badge">✓</span><h2>Before Next Class</h2></div>
+  <div class="sum-grid">
+    <div><b>Sign in</b> to our class website with the class code and make your PIN (if you didn’t today).</div>
+    <div><b>Find the Pop-Up Shop</b> on the website’s home page. It’s open now and due on the Unit 1 test day.</div>
+    <div><b>Bring everything</b> from the list: pencil, paper, scientific calculator, charged laptop.</div>
+    <div><b>Ask early.</b> Stuck? Ask in class, during work time — not on test day.</div>
+  </div>
+  <a class="assign" href="../../../">
+    <div><div class="kicker">Our class website</div><b>Your practice, project, calendar and cards</b><div class="muted">Math 10-3 Practice</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l1/">
+    <div><div class="kicker">Next class</div><b>Unit 1 · Lesson 1 — Money Sense: Rounding, Estimating and Using Your Calculator</b><div class="muted">Reading prices, rounding money, estimating a bill and making change.</div></div><span class="arrow">→</span>
+  </a>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u1l0.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u1l0', homeHref: '../../', title: 'Welcome to Math 10-3' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>

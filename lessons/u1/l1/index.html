@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Money Sense · Math 10-3 1.1</title>
+<meta name="description" content="Math 10-3 Unit 1 Lesson 1: money sense. Place value with money, rounding money, estimating a bill, BEDMAS on the TI-30XIIS, and making change. Write on it with an Apple Pencil.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="10-3 Lessons">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#6e4a1c">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="icon" href="../../assets/icon-192.png">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/calc.css">
+<link rel="stylesheet" href="../../css/lessons/u1l1.css">
+<link rel="stylesheet" href="../../css/views.css">
+<script src="../../../js/ns.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../js/calc.js"></script>
+<script src="../../js/vendor/qrcode.js"></script>
+</head>
+<body>
+<main class="lesson screen u1l1">
+
+<!-- ================= warm-up: one clear question, first thing on the screen ================= -->
+<section class="card warm wf" data-ink="warmq" data-section="Warm-up: Seven Coins, One Dollar">
+  <div class="wf-head"><span class="badge warm-b">Warm-up</span><h2>Seven Coins, One Dollar</h2></div>
+  <div class="vw-seq has-art"><div class="vw-txt"><p class="vw-ctx">You have a big pile of <b>nickels</b>, <b>dimes</b> and <b>quarters</b>.</p><p class="vw-ctx">You must use <b>exactly 7 coins</b>.</p><p class="vw-ask">How can you make exactly $1.00?</p></div><div class="vw-art"><svg viewBox="0 0 330 250" role="img" aria-label="Seven blank coins dropping into a jar, one at a time">
+    <path d="M95 70 V222 Q95 236 110 236 H220 Q235 236 235 222 V70" fill="#f4f8fb" stroke="#4a4436" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="86" y="58" width="158" height="16" rx="6" fill="#d9d3c4" stroke="#4a4436" stroke-width="3"/>
+    <g id="u1l1-wcoins">
+      <g><animateTransform attributeName="transform" type="translate" values="0 -200;0 -200;0 0;0 0" keyTimes="0;0.02;0.1;1" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.92;1" dur="9s" repeatCount="indefinite"/><ellipse cx="135" cy="216" rx="24" ry="9" fill="#c7ccd3" stroke="#6b7280" stroke-width="2.5"/></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 -200;0 -200;0 0;0 0" keyTimes="0;0.12;0.2;1" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.11;0.12;0.92;1" dur="9s" repeatCount="indefinite"/><ellipse cx="192" cy="216" rx="24" ry="9" fill="#c7ccd3" stroke="#6b7280" stroke-width="2.5"/></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 -200;0 -200;0 0;0 0" keyTimes="0;0.22;0.3;1" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.21;0.22;0.92;1" dur="9s" repeatCount="indefinite"/><ellipse cx="160" cy="203" rx="24" ry="9" fill="#c7ccd3" stroke="#6b7280" stroke-width="2.5"/></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 -200;0 -200;0 0;0 0" keyTimes="0;0.32;0.4;1" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.31;0.32;0.92;1" dur="9s" repeatCount="indefinite"/><ellipse cx="120" cy="196" rx="20" ry="8" fill="#c7ccd3" stroke="#6b7280" stroke-width="2.5"/></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 -200;0 -200;0 0;0 0" keyTimes="0;0.42;0.5;1" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.41;0.42;0.92;1" dur="9s" repeatCount="indefinite"/><ellipse cx="205" cy="198" rx="20" ry="8" fill="#c7ccd3" stroke="#6b7280" stroke-width="2.5"/></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 -200;0 -200;0 0;0 0" keyTimes="0;0.52;0.6;1" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.51;0.52;0.92;1" dur="9s" repeatCount="indefinite"/><ellipse cx="165" cy="188" rx="22" ry="8.5" fill="#c7ccd3" stroke="#6b7280" stroke-width="2.5"/></g>
+      <g><animateTransform attributeName="transform" type="translate" values="0 -200;0 -200;0 0;0 0" keyTimes="0;0.62;0.7;1" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.61;0.62;0.92;1" dur="9s" repeatCount="indefinite"/><ellipse cx="140" cy="178" rx="22" ry="8.5" fill="#c7ccd3" stroke="#6b7280" stroke-width="2.5"/></g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="1.4s" repeatCount="indefinite"/><text x="285" y="120" font-size="44" font-weight="800" fill="#9a6a24" text-anchor="middle">?</text></g>
+    <text x="285" y="168" font-size="22" font-weight="800" fill="#4a4436" text-anchor="middle">7 coins</text>
+  </svg></div></div>
+  <div class="bk-wq vw-rev"><div class="q-line"><div class="q-num">?</div><div>Is there more than one way?</div><button class="pill small" type="button" data-bk-toggle>Reveal</button></div>
+    <div class="bk-ans"><b>Two ways!</b> 2 quarters + 5 dimes (50¢ + 50¢), or 3 quarters + 1 dime + 3 nickels (75¢ + 10¢ + 15¢). Both use 7 coins and make $1.00. <span class="muted">And the fewest coins for $1.00? Just one: a loonie!</span></div></div>
+</section>
+
+<!-- ================= title ================= -->
+<section class="card hero" data-ink="hero" data-section="Start">
+  <div class="kicker">Math 10-3 · Unit 1 Unit Pricing and Currency Exchange · Lesson 1</div>
+  <h1>Money Sense: Rounding, Estimating and Using Your Calculator</h1>
+  <p class="lede">Pay cheques, grocery bills, gas, splitting a pizza: this whole unit is about money. Today we warm up the skills it runs on: <b>reading</b> money amounts, <b>rounding</b> them, <b>estimating</b> a bill in your head, and using the <b>TI-30XIIS</b> for exact totals and change.</p>
+  <div class="goals">
+    <div class="goals-h">I can…</div>
+    <ul>
+      <li>read and write money using <b>place value</b> (dollars, dimes, cents, tenths of a cent)</li>
+      <li><b>round</b> money to the nearest dollar, ten cents or cent</li>
+      <li><b>estimate</b> a bill in my head, and tell if an answer is <b>reasonable</b></li>
+      <li>use <b>BEDMAS</b> and <b>brackets</b> on my calculator</li>
+      <li>find <b>change</b> by counting up, and know when cash is rounded to 5¢</li>
+    </ul>
+  </div>
+  <div class="outcome"><b>Refresher</b> Skills from earlier grades that this unit uses (not marked as a unit outcome).</div>
+</section>
+
+<!-- ================= 1. Place value ================= -->
+<section class="card" data-ink="s1" data-section="1. Place Value with Money">
+  <div class="sec-h"><span class="badge">1</span><h2>Place Value with Money</h2></div>
+  <p>Money is written with a <b>decimal point</b>. The digits to the <b>left</b> of the point are whole dollars. The digits to the <b>right</b> are parts of a dollar.</p>
+  <div class="u1l1-places">
+    <div><b class="u1l1-cd">Tenths</b> the first place after the point: <b>dimes</b>. $0.30 is 3 dimes, or 30 cents.</div>
+    <div><b class="u1l1-cc">Hundredths</b> the second place: <b>cents</b>. $0.07 is 7 cents.</div>
+    <div><b class="u1l1-cth">Thousandths</b> the third place: <b>tenths of a cent</b>. You can’t pay it, but you see it on gas prices ($1.479 per litre) and shelf tags.</div>
+  </div>
+  <div class="explainer" data-explainer="placeValue"></div>
+</section>
+
+<section class="card" data-ink="s1b" data-section="1. Cents to Dollars">
+  <h3 class="sub">Cents to dollars</h3>
+  <div class="def"><b>Key idea</b> &nbsp; $1 = 100 cents &nbsp;·&nbsp; 1 dime = $0.10 &nbsp;·&nbsp; 1 cent = $0.01 &nbsp;·&nbsp; a tenth of a cent = $0.001
+    <div class="eg"><b>Cents to dollars:</b> divide by 100 (move the decimal point 2 places left). &nbsp; 85¢ = $0.85 &nbsp;·&nbsp; 149.9¢ = $1.499</div></div>
+  <div class="explainer" data-explainer="centsSlider"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> A calculator shows $4.50 as <b>4.5</b>. That is four dollars and <b>fifty</b> cents, not $4.05. Always write money with <b>two decimal places</b>: $4.50.</div>
+    <button class="pill" type="button" data-keys="4.50 =">Show me</button></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Is $0.5 the same as 5¢?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. $0.5 = $0.50 = <b>50¢</b> (5 dimes). Five cents is $0.05.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex1" data-section="Example 1">
+  <div class="ex-head"><span class="ex-tag">Example 1</span><h3>Reading and writing money</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(a) Write each digit of $23.586 in the place-value chart.</div>
+      <table class="u1l1-tbl u1l1-pvt">
+        <tr><th>Tens<small>($10 bills)</small></th><th>Ones<small>(dollars)</small></th><th class="pt"></th><th>Tenths<small>(dimes)</small></th><th>Hundredths<small>(cents)</small></th><th>Thousandths<small>(tenths of a cent)</small></th></tr>
+        <tr><td><span data-reveal="&nbsp;">2</span></td><td><span data-reveal="&nbsp;">3</span></td><td class="pt">.</td><td><span data-reveal="&nbsp;">5</span></td><td><span data-reveal="&nbsp;">8</span></td><td><span data-reveal="&nbsp;">6</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">2 tens, 3 ones, 5 tenths, 8 hundredths, 6 thousandths.</div></div></div>
+  </div>
+  <div class="parts c4 u1l1-gap">
+    <div class="part"><div class="pl">(b) What is the value of the 8 in $23.586?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">8 hundredths = <b>$0.08</b> = 8 cents</div></div></div>
+    <div class="part"><div class="pl">(c)(i) Write in dollars: six dollars and four cents</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>$6.04</b></div></div></div>
+    <div class="part"><div class="pl">(c)(ii) Write in dollars: 75¢</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>$0.75</b></div></div></div>
+    <div class="part"><div class="pl">(c)(iii) Write in dollars: 139.9¢ per litre</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>$1.399</b> per litre</div></div></div>
+  </div>
+  <div class="parts c1 u1l1-gap">
+    <div class="part"><div class="pl">(d) Put these prices in order from least to greatest: &nbsp; $2.5 &nbsp;&nbsp; $2.05 &nbsp;&nbsp; $2.45 &nbsp;&nbsp; $2.54</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Write them all with two decimals: $2.50, $2.05, $2.45, $2.54. Compare the dimes, then the cents:<br><b>$2.05, &nbsp;$2.45, &nbsp;$2.5 (= $2.50), &nbsp;$2.54</b></div></div></div>
+  </div>
+  <div class="space" id="ex1-space"></div>
+  <button class="more" data-more="ex1-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s1c" data-section="1. Prices in Order">
+  <h3 class="sub">Putting prices in order</h3>
+  <p>To compare prices, give them all <b>two decimals</b>. Then compare the dollars, then the dimes, then the cents.</p>
+  <div class="explainer" data-explainer="orderPrices"></div>
+</section>
+
+<!-- ================= 2. Rounding ================= -->
+<section class="card" data-ink="s2" data-section="2. Rounding Money">
+  <div class="sec-h"><span class="badge">2</span><h2>Rounding Money</h2></div>
+  <p>A calculator often shows more decimal places than you can pay. Then you <b>round</b>: you replace the number with a nearby number that is easier to use.</p>
+  <div class="u1l1-round">
+    <div class="def"><b>To round</b>
+      <div class="u1l1-st"><b class="n">1</b>Find the place you are rounding to.</div>
+      <div class="u1l1-st"><b class="n">2</b>Look at the digit just to its <b>right</b>.</div>
+      <div class="u1l1-st"><b class="n">3</b><b>5 or more</b>: round up (add 1 to your place). <b>4 or less</b>: keep your place the same. Drop the digits after it.</div></div>
+    <table class="u1l1-tbl u1l1-look">
+      <tr><td>To the nearest <b>dollar</b>:</td><td>look at the <b class="u1l1-cd">tenths</b> (dimes) digit</td></tr>
+      <tr><td>To the nearest <b>ten cents</b>:</td><td>look at the <b class="u1l1-cc">hundredths</b> (cents) digit</td></tr>
+      <tr><td>To the nearest <b>cent</b>:</td><td>look at the <b class="u1l1-cth">thousandths</b> digit</td></tr>
+    </table>
+  </div>
+  <div class="explainer" data-explainer="roundLines"></div>
+  <div class="tip watch"><div class="tip-ic">!</div><div><b>Watch out.</b> When you round up a 9, it becomes 10 and you carry 1 to the next place: $6.97 to the nearest ten cents is <b>$7.00</b>, not “$6.10”. Also, round only at the <b>end</b> of a calculation. Rounding in the middle can make your final answer a few cents off.</div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Why not just chop off the extra digits? Try $8.278 to the nearest cent.</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Chopping gives $8.27, but $8.278 is closer to <b>$8.28</b>. Rounding picks the <b>closer</b> one.</div></div></div>
+</section>
+
+<section class="card example" data-ink="ex2" data-section="Example 2">
+  <div class="ex-head"><span class="ex-tag">Example 2</span><h3>Rounding money</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(a) Round each amount.</div>
+      <table class="u1l1-tbl u1l1-rt">
+        <tr><th>Amount</th><th>Nearest dollar</th><th>Nearest ten cents</th><th>Nearest cent</th></tr>
+        <tr><td><b>$8.274</b></td><td><span data-reveal="&nbsp;">$8</span></td><td><span data-reveal="&nbsp;">$8.30</span></td><td><span data-reveal="&nbsp;">$8.27</span></td></tr>
+        <tr><td><b>$15.639</b></td><td><span data-reveal="&nbsp;">$16</span></td><td><span data-reveal="&nbsp;">$15.60</span></td><td><span data-reveal="&nbsp;">$15.64</span></td></tr>
+        <tr><td><b>$0.958</b></td><td><span data-reveal="&nbsp;">$1</span></td><td><span data-reveal="&nbsp;">$1.00</span></td><td><span data-reveal="&nbsp;">$0.96</span></td></tr>
+        <tr><td><b>$29.996</b></td><td><span data-reveal="&nbsp;">$30</span></td><td><span data-reveal="&nbsp;">$30.00</span></td><td><span data-reveal="&nbsp;">$30.00</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">For example, $15.639 to the nearest ten cents: the tenths digit is 6; the digit to its right is 3 (4 or less), so keep the 6: $15.60. &nbsp;$29.996 to the nearest cent: the 9 in the hundredths place rounds up to 10, so carry: $30.00.</div></div></div>
+  </div>
+  <div class="parts c1 u1l1-gap">
+    <div class="part"><div class="pl">(b) Kim puts 42 L of gas in her car. Gas costs $1.479 per litre. Her calculator shows <span class="u1l1-lcdt">62.118</span>. How much does she pay?</div><div class="work" style="--h:110px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Round to the nearest cent: the thousandths digit is 8 (5 or more), so round up. Kim pays <b>$62.12</b>.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Kim’s gas on the calculator: <span class="keys"><kbd>4</kbd><kbd>2</kbd><kbd>×</kbd><kbd>1</kbd><kbd>.</kbd><kbd>4</kbd><kbd>7</kbd><kbd>9</kbd><kbd>ENTER</kbd></span></div>
+    <button class="pill" type="button" data-keys="42 × 1.479 =">Show me</button></div>
+  <div class="space" id="ex2-space"></div>
+  <button class="more" data-more="ex2-space">+ More space</button>
+</section>
+
+<section class="card" data-extra data-ink="s2b" data-section="2. Round Only at the End">
+  <h3 class="sub">Why round only at the end?</h3>
+  <p>Every rounding moves the number a little. Do it once, at the end, and the answer is off by less than half a cent. Round in the middle, and the error gets <b>multiplied</b>.</p>
+  <div class="explainer" data-explainer="roundEnd"></div>
+</section>
+
+<!-- ================= 3. Estimating ================= -->
+<section class="card" data-ink="s3" data-section="3. Estimating a Bill">
+  <div class="sec-h"><span class="badge">3</span><h2>Estimating a Bill</h2></div>
+  <p>An <b>estimate</b> is an answer that is close to the exact answer and that you can find in your head. Estimating tells you if you have <b>enough money</b>, and if a calculator or receipt answer <b>makes sense</b>.</p>
+  <div class="def-grid">
+    <div class="def"><b>Rounding estimate:</b> round each price to the nearest dollar, then add.</div>
+    <div class="def amber"><b>Front-end estimate:</b> add the dollar parts first (the “front” digits). Then look at the cents and group them into amounts of about $1. Add those dollars on.</div>
+  </div>
+  <div class="explainer" data-explainer="receiptRace"></div>
+  <div class="tip u1l1-oktip"><div class="tip-ic">✓</div><div><b>Tip.</b> Need to be <b>sure</b> you have enough money? Round every price <b>up</b> to the next dollar ($3.20 becomes $4). That estimate is a bit too high, so if you have that much, you have enough.</div></div>
+</section>
+
+<section class="card example" data-ink="ex3" data-section="Example 3">
+  <div class="ex-head"><span class="ex-tag">Example 3</span><h3>Jordan’s groceries</h3></div>
+  <div class="u1l1-ex3">
+    <table class="u1l1-tbl u1l1-list">
+      <tr><th>Item</th><th>Price</th></tr>
+      <tr><td>Milk, 4 L</td><td>$6.49</td></tr>
+      <tr><td>Loaf of bread</td><td>$3.29</td></tr>
+      <tr><td>Bananas</td><td>$1.87</td></tr>
+      <tr><td>Peanut butter</td><td>$5.79</td></tr>
+      <tr><td>Cereal</td><td>$4.99</td></tr>
+    </table>
+    <div class="parts c1">
+      <div class="part"><div class="pl">(a) Find a front-end estimate of the total.</div><div class="work" style="--h:120px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Dollars: <span class="tex">6+3+1+5+4=\$19</span>. Cents: 99¢ is about $1; 87¢ + 29¢ is about $1; 49¢ + 79¢ is about $1. Estimate: <span class="tex">\$19+\$3=\boldsymbol{\$22}</span>.</div></div></div>
+      <div class="part"><div class="pl">(b) Find a rounding estimate of the total.</div><div class="work" style="--h:70px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">\$6+\$3+\$2+\$6+\$5=\boldsymbol{\$22}</span></div></div></div>
+    </div>
+  </div>
+  <div class="parts c2 u1l1-gap">
+    <div class="part"><div class="pl">(c) Find the exact total with your calculator.</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">6.49+3.29+1.87+5.79+4.99=\boldsymbol{\$22.43}</span> (close to both estimates)</div></div></div>
+    <div class="part"><div class="pl">(d) Jordan has a $20 bill and a $5 bill. Is that enough?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">He has $25.00, and $22.43 is less than $25.00. <b>Yes, Jordan has enough money.</b></div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>(c) on the calculator: type all five prices with <kbd>+</kbd> between them, then <kbd>ENTER</kbd> once.</div>
+    <button class="pill" type="button" data-keys="6.49 + 3.29 + 1.87 + 5.79 + 4.99 =">Show me</button></div>
+  <div class="space" id="ex3-space"></div>
+  <button class="more" data-more="ex3-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s3b" data-section="3. Is the Answer Reasonable?">
+  <h3 class="sub">Is the answer reasonable?</h3>
+  <div class="def"><b>Key idea</b> &nbsp; <b>Estimate first, then calculate.</b> If the two answers are far apart, check what you typed. A decimal point in the wrong place makes an answer <b>10 or 100 times</b> too big or too small.</div>
+  <div class="explainer" data-explainer="reasonable"></div>
+</section>
+
+<section class="card example" data-ink="ex4" data-section="Example 4">
+  <div class="ex-head"><span class="ex-tag">Example 4</span><h3>Does it make sense?</h3></div>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Emma and a friend each order a burger at $16.95 and a milkshake at $6.25. The bill says $56.40. Estimate the bill. Does it make sense?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">2\times\$17+2\times\$6=\$34+\$12=\$46</span>. $56.40 is about $10 more, so it <b>does not make sense</b>.<br>Exact: <span class="tex">2\times16.95+2\times6.25=33.90+12.50=\$46.40</span>. The bill is <b>$10.00 too high</b>. Emma should ask the server to fix it.</div></div></div>
+    <div class="part"><div class="pl">(b) Tyler buys 5 bags of chips at $3.89 each. His calculator shows <span class="u1l1-lcdt">194.5</span>. Is this reasonable? What did he probably do wrong?</div><div class="work" style="--h:230px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">5\times\$4=\$20</span>. $194.50 is about 10 times too big, so it is <b>not reasonable</b>.<br>He probably typed 38.9 instead of 3.89. Correct: <span class="tex">5\times3.89=\boldsymbol{\$19.45}</span>.</div></div></div>
+  </div>
+  <div class="space" id="ex4-space"></div>
+  <button class="more" data-more="ex4-space">+ More space</button>
+</section>
+
+<!-- ================= practice break (exactly one) ================= -->
+<section class="card practice" data-ink="p1" data-section="Practice: Questions 1–7">
+  <div class="pr-k">Your turn</div>
+  <h2>Assignment 1 · Questions 1–7</h2>
+  <p class="pr-t">Try these before we go on to the calculator.</p>
+  <div class="pr-chips">
+    <span><b>1–2</b>Place value and writing money</span>
+    <span><b>3–4</b>Rounding money</span>
+    <span><b>5–6</b>Estimating a bill</span>
+    <span><b>7</b>Is the answer reasonable?</span>
+  </div>
+  <div class="pr-foot"><span>We carry on when most of the class has finished Question 7.</span><a class="pill" href="../../../#/lesson/u1l1">Open the Practice site</a></div>
+</section>
+
+<!-- ================= 4. Order of operations ================= -->
+<section class="card" data-ink="s4" data-section="4. Order of Operations on the Calculator">
+  <div class="sec-h"><span class="badge">4</span><h2>Order of Operations on the Calculator</h2></div>
+  <p>When a calculation has more than one operation, you must do them in a set order, called the <b>order of operations</b>. Remember it with <b>BEDMAS</b>.</p>
+  <div class="u1l1-bedmas">
+    <div><b>B</b>rackets first</div><i>→</i><div><b>E</b>xponents</div><i>→</i><div><b>D</b>ivision and <b>M</b>ultiplication<small>left to right</small></div><i>→</i><div><b>A</b>ddition and <b>S</b>ubtraction<small>left to right</small></div>
+  </div>
+  <p>The TI-30XIIS follows BEDMAS by itself, so you can type a whole line and it multiplies before it adds. When you need to <b>add first</b> and then divide or multiply, put the adding in <b>brackets</b>.</p>
+  <div class="explainer" data-explainer="bedmas"></div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div><b>Calculator.</b> Type the whole calculation on one line, then press <kbd>ENTER</kbd> once at the end. Use <kbd>(</kbd> and <kbd>)</kbd> for brackets. The top line of the screen shows what you typed: check it before you press <kbd>ENTER</kbd>. To start over, press <kbd>CLEAR</kbd>.</div>
+    <button class="pill" type="button" data-keys="4 + 6 × 2 =">Show me</button></div>
+</section>
+
+<section class="card example" data-ink="ex5" data-section="Example 5">
+  <div class="ex-head"><span class="ex-tag">Example 5</span><h3>BEDMAS by hand and on the calculator</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a)(i) Work out by hand: <span class="tex">4+6\times2</span></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Multiply first: <span class="tex">4+12=\boldsymbol{16}</span></div></div></div>
+    <div class="part"><div class="pl">(a)(ii) Work out by hand: <span class="tex">(4+6)\times2</span></div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Brackets first: <span class="tex">10\times2=\boldsymbol{20}</span></div></div></div>
+    <div class="part"><div class="pl">(b) Nadia buys 3 jars of salsa at $4.29 each and 2 bags of tortilla chips at $1.89 each. Write one calculation for the total, find it with your calculator, and check it with an estimate.</div><div class="work" style="--h:150px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Type: <span class="keys">3 <kbd>×</kbd> 4.29 <kbd>+</kbd> 2 <kbd>×</kbd> 1.89 <kbd>ENTER</kbd></span><br>The calculator does <span class="tex">12.87+3.78=16.65</span>. The total is <b>$16.65</b>.<br>Estimate: <span class="tex">3\times\$4+2\times\$2=\$16</span>. Close, so it is reasonable.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Nadia’s total in one line: the calculator multiplies both pairs first, then adds.</div>
+    <button class="pill" type="button" data-keys="3 × 4.29 + 2 × 1.89 =">Show me</button></div>
+  <div class="space" id="ex5-space"></div>
+  <button class="more" data-more="ex5-space">+ More space</button>
+</section>
+
+<section class="card example" data-ink="ex6" data-section="Example 6">
+  <div class="ex-head"><span class="ex-tag">Example 6</span><h3>Sharing a lunch order</h3></div>
+  <div class="tip watch u1l1-tip0"><div class="tip-ic">!</div><div><b>Watch out.</b> To share a bill, you need the <b>total</b> first. Put the adding in brackets: <span class="tex">(a+b+c)\div4</span>. Without brackets, the calculator divides only the last number.</div></div>
+  <p class="q">Four coworkers share a lunch order: a pizza for $28.99, wings for $16.49 and drinks for $6.52. They split the cost equally.</p>
+  <div class="parts c2">
+    <div class="part"><div class="pl">(a) Write one calculation with brackets and find each person’s share.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Type: <span class="keys"><kbd>(</kbd> 28.99 <kbd>+</kbd> 16.49 <kbd>+</kbd> 6.52 <kbd>)</kbd> <kbd>÷</kbd> 4 <kbd>ENTER</kbd></span><br><span class="tex">(28.99+16.49+6.52)\div4=52.00\div4=13.00</span>. Each person pays <b>$13.00</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) Sam types <span class="keys">28.99 <kbd>+</kbd> 16.49 <kbd>+</kbd> 6.52 <kbd>÷</kbd> 4 <kbd>ENTER</kbd></span> and gets <span class="u1l1-lcdt">47.11</span>. Explain what went wrong.</div><div class="work" style="--h:170px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">With no brackets, the calculator divides only 6.52 by 4 (that is 1.63), then adds: <span class="tex">28.99+16.49+1.63=47.11</span>. That is almost the whole bill, not one person’s share. Sam needs <b>brackets</b> around the adding.</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>Try both ways and compare the answers.</div>
+    <div class="u1l1-pcol"><button class="pill" type="button" data-keys="( 28.99 + 16.49 + 6.52 ) ÷ 4 =">With brackets</button><button class="pill" type="button" data-keys="28.99 + 16.49 + 6.52 ÷ 4 =">Sam’s way</button></div></div>
+  <div class="space" id="ex6-space"></div>
+  <button class="more" data-more="ex6-space">+ More space</button>
+</section>
+
+<!-- ================= Stand Up Break! (whiteboard stations; lessons/js/standup.js) ================= -->
+<section class="card standup" data-ink="standup" data-section="Stand Up Break!" data-standup="u1l1"></section>
+
+<!-- ================= 5. Multiplying, dividing and change ================= -->
+<section class="card" data-ink="s5" data-section="5. Multiplying and Dividing Money">
+  <div class="sec-h"><span class="badge">5</span><h2>Multiplying, Dividing and Making Change</h2></div>
+  <div class="def-grid">
+    <div class="def"><b>Multiply</b> to find the cost of many of the same item, or your pay for many hours (<b>wage × hours</b>).</div>
+    <div class="def amber"><b>Divide</b> to share a cost, or to find the price of one item in a pack.</div>
+  </div>
+  <p><b>Estimate first</b>, use the calculator, then <b>round to the nearest cent at the end</b>.</p>
+</section>
+
+<section class="card example" data-ink="ex7" data-section="Example 7">
+  <div class="ex-head"><span class="ex-tag">Example 7</span><h3>Pay, packs and sharing</h3></div>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(a) Diego works at a garden centre for $16.25 per hour. Last week he worked 18.5 hours. How much did he earn?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">\$16\times20=\$320</span>; he worked a bit less than 20 h, so about $300.<br><span class="tex">16.25\times18.5=300.625</span>. Round to the nearest cent: <b>$300.63</b>.</div></div></div>
+    <div class="part"><div class="pl">(b) A case of 24 bottles of water costs $5.99. What does one bottle cost?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">Estimate: <span class="tex">\$6\div24=\$0.25</span>.<br><span class="tex">5.99\div24=0.249583\ldots</span>, which rounds to $0.25. One bottle costs about <b>$0.25</b>.</div></div></div>
+    <div class="part"><div class="pl">(c) Three friends share a $25.00 taxi ride. The calculator shows <span class="u1l1-lcdt">8.333333333</span>. How much should each friend pay?</div><div class="work" style="--h:200px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans">To the nearest cent, $8.33. But <span class="tex">3\times8.33=24.99</span>, one cent short of $25.00. So <b>two friends pay $8.33 and one pays $8.34</b>. (Check: <span class="tex">8.33+8.33+8.34=25.00</span>.)</div></div></div>
+  </div>
+  <div class="tip calc-tip"><div class="tip-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/></svg></div><div>The calculator gives every digit; <b>you</b> round to the cent at the end.</div>
+    <div class="u1l1-pcol"><button class="pill" type="button" data-keys="16.25 × 18.5 =">(a)</button><button class="pill" type="button" data-keys="5.99 ÷ 24 =">(b)</button><button class="pill" type="button" data-keys="25 ÷ 3 =">(c)</button></div></div>
+  <div class="part think" data-extra><div class="pl"><span class="think-tag">Think</span> Diego worked 18.5 hours. Is that 18 hours and 50 minutes?</div>
+    <div class="ansrow"><button class="reveal">Answer</button><div class="ans">No. 0.5 of an hour is <b>half an hour</b>: 18 hours and <b>30</b> minutes.</div></div></div>
+  <div class="space" id="ex7-space"></div>
+  <button class="more" data-more="ex7-space">+ More space</button>
+</section>
+
+<section class="card" data-ink="s5b" data-section="5. Making Change">
+  <h3 class="sub">Making change</h3>
+  <p>When you pay with cash, the cashier gives you <b>change</b>: the amount you paid minus the price. Cashiers often find change by <b>counting up</b> from the price.</p>
+  <div class="def"><b>Counting up:</b> start at the price. Add small coins to reach a friendly amount (one that ends in 00, 25, 50 or 75 cents), then the next dollar, then add bills up to the amount paid. The change is everything you added.
+    <div class="eg"><b>Check:</b> amount paid − price = change.</div></div>
+  <div class="explainer" data-explainer="countUp"></div>
+</section>
+
+<section class="card" data-ink="s5c" data-section="5. No Pennies">
+  <h3 class="sub">No pennies: paying cash</h3>
+  <div class="def amber"><b>No pennies.</b> Canada stopped making pennies in 2013. When you pay with <b>cash</b>, the total is rounded to the nearest 5 cents. A total ending in <b>1 or 2</b> cents rounds down to 0; <b>3 or 4</b> rounds up to 5; <b>6 or 7</b> rounds down to 5; <b>8 or 9</b> rounds up to the next 10. Card and debit payments are <b>not</b> rounded.</div>
+  <div data-extra><div class="explainer" data-explainer="cashRound"></div></div>
+</section>
+
+<section class="card example" data-ink="ex8" data-section="Example 8">
+  <div class="ex-head"><span class="ex-tag">Example 8</span><h3>Change and cash</h3></div>
+  <div class="parts c1">
+    <div class="part"><div class="pl">(a) Lunch costs $13.65. You pay with a $20 bill. Count up to find your change.</div>
+      <table class="u1l1-tbl u1l1-cu">
+        <tr><th>Start at</th><th>Add</th><th>Now at</th></tr>
+        <tr><td>$13.65</td><td><span data-reveal="&nbsp;">10¢ (a dime)</span></td><td><span data-reveal="&nbsp;">$13.75</span></td></tr>
+        <tr><td><span data-reveal="&nbsp;">$13.75</span></td><td><span data-reveal="&nbsp;">25¢ (a quarter)</span></td><td><span data-reveal="&nbsp;">$14.00</span></td></tr>
+        <tr><td><span data-reveal="&nbsp;">$14.00</span></td><td><span data-reveal="&nbsp;">$1 (a loonie)</span></td><td><span data-reveal="&nbsp;">$15.00</span></td></tr>
+        <tr><td><span data-reveal="&nbsp;">$15.00</span></td><td><span data-reveal="&nbsp;">$5 (a $5 bill)</span></td><td><span data-reveal="&nbsp;">$20.00</span></td></tr>
+      </table>
+      <div class="ansrow"><button class="reveal">Answer</button><div class="ans">Change: <span class="tex">\$0.10+\$0.25+\$1+\$5=\boldsymbol{\$6.35}</span>. Check: <span class="tex">20.00-13.65=6.35</span>.</div></div></div>
+  </div>
+  <p class="q u1l1-gap">(b) Your total at a convenience store is $8.42.</p>
+  <div class="parts c3">
+    <div class="part"><div class="pl">(i) What do you pay in cash?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>$8.40</b>: the total ends in 2 cents, so it rounds down.</div></div></div>
+    <div class="part"><div class="pl">(ii) What is your cash change from $10?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">10.00-8.40=\boldsymbol{\$1.60}</span></div></div></div>
+    <div class="part"><div class="pl">(iii) What do you pay by debit?</div><div class="work" style="--h:90px"></div><div class="ansrow"><button class="reveal">Answer</button><div class="ans"><b>$8.42</b>: debit is not rounded.</div></div></div>
+  </div>
+  <div class="space" id="ex8-space"></div>
+  <button class="more" data-more="ex8-space">+ More space</button>
+</section>
+
+<!-- ================= Math History box (brown) ================= -->
+<!-- sources: https://www.cbc.ca/news/canada/obituary-canadian-penny-1858-2013-1.1315144 (first cent 1858; last penny minted
+     May 4, 2012 in Winnipeg; distribution ended Feb 4, 2013; 1.6 cents to make one; cash rounded to the nearest 5 cents);
+     https://www.sootoday.com/local-news/penny-for-your-thoughts-but-only-until-february-4-164778 (1.6 cents to produce) -->
+<section class="card history" data-ink="hist" data-section="Math History: Goodbye, Penny">
+  <div class="hist-head"><span class="hist-tag">Math History</span><span class="hist-dates">1858 – 2013</span></div>
+  <div class="hist-grid">
+    <div class="hist-text">
+      <h3 class="hist-title">The coin that cost more than it was worth</h3>
+      <p>Canada’s first cents were made in <b>1858</b>. For more than 150 years, the penny was in every pocket and every till.</p>
+      <p>But by the end, making one penny cost about <b>1.6¢</b>, more than the coin was worth! The Royal Canadian Mint in Winnipeg made its last penny in <b>2012</b>, and stopped handing pennies out in <b>2013</b>. That is why cash totals now round to the nearest 5¢.</p>
+      <div class="part hist-q"><div class="pl">Making one penny cost 1.6¢. What did it cost to make 100 pennies (worth $1.00)?</div>
+        <div class="ansrow"><button class="reveal">Answer</button><div class="ans"><span class="tex">100\times1.6\text{¢}=160\text{¢}=\$1.60</span>. It cost <b>$1.60</b> to make $1.00 of pennies: 60¢ lost on every dollar.</div></div></div>
+    </div>
+    <figure class="hist-anim">
+      <svg id="u1l1-hist" viewBox="0 0 600 300" role="img" aria-label="A penny: worth 1 cent but cost 1.6 cents to make; 100 pennies worth $1.00 cost $1.60; a timeline from 1858 to 2013"></svg>
+      <figcaption><button class="hist-play" type="button">Replay</button><span>Tap the picture to play it again.</span></figcaption>
+      <p class="hist-note">Pennies still count as money, and stores may still take them. Card and debit payments are still charged to the exact cent.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= summary ================= -->
+<section class="card summary" data-ink="sum" data-section="Summary">
+  <div class="sec-h"><span class="badge">✓</span><h2>Key ideas</h2></div>
+  <div class="sum-grid">
+    <div><b>Place value:</b> tenths are dimes, hundredths are cents, thousandths are tenths of a cent. <b>Cents ÷ 100 = dollars</b>. Write money with two decimals: $4.50.</div>
+    <div><b>Rounding:</b> look one place to the right. <b>5 or more</b>, round up; <b>4 or less</b>, keep. Round only at the <b>end</b>.</div>
+    <div><b>Estimate first</b> (rounding or front-end). If the estimate and the answer are far apart, check what you typed.</div>
+    <div><b>Calculator:</b> it follows BEDMAS; put adding in <b>brackets</b> before you share. <b>Change:</b> count up from the price. Cash rounds to the nearest 5¢; debit doesn’t.</div>
+  </div>
+  <a class="assign" href="../../../#/lesson/u1l1">
+    <div><div class="kicker">Your turn</div><b>Assignment 1 · Questions 8–18</b><div class="muted">BEDMAS, sharing a bill, pay, the price of one, and making change. Practice on the Math 10-3 Practice site</div></div><span class="arrow">→</span>
+  </a>
+  <a class="assign next-l" href="../l2/">
+    <div><div class="kicker">Next lesson</div><b>Lesson 2 — Fractions Refresher: Equivalent Fractions and Simplest Form</b><div class="muted">Half a pizza, a quarter tank of gas: next time we refresh fractions, the other way to write part of a whole.</div></div><span class="arrow">→</span>
+  </a>
+  <div class="space" id="sum-space" style="min-height:120px"></div>
+</section>
+
+</main>
+
+<script type="module">
+  import { boot } from '../../js/ui.js';
+  import '../../js/lessons/u1l1.js';
+  import { views } from '../../js/views.js';
+  boot({ key: 'u1l1', homeHref: '../../', title: '1.1 Money Sense' });
+  views();
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../../sw.js').catch(function () {});</script>
+</body>
+</html>
