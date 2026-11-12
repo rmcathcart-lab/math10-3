@@ -7,7 +7,7 @@
  * that tilts so the pairs stop matching (Example 7), why the one-crossing rules are always true (Full), and finding all
  * eight angles when the lines are not parallel (Example 8).
  * Hands-on: "name the pair" (tap two angles) and "turn ℓ2" (slider; sizes and verdicts). Static figures, the Math
- * History box (Euclid's fifth postulate) and the Stand Up Break.
+ * The Stand Up Break.
  * Uses the shared geometry toolkit js/geo.js (Geo.transversal: 1–4 top crossing, 5–8 bottom, clockwise from upper left). */
 import { h, add, box, tex, svgEl, tween, pop, appear, pulse, stamp, stampIn, mountExplainers } from '../blocks.js';
 import { Geo, wedgeD, at, dirTo, text as gtext } from '../geo.js';
@@ -757,58 +757,7 @@ function figures() {
 }
 figures();
 
-/* ======================================================================================
- * Math History: Euclid's fifth postulate (same-side interior angles less than 180° → the lines meet on that side)
- * ====================================================================================== */
-function histAnim() {
-  const svg = document.getElementById('u5l7-hist'); if (!svg) return;
-  const NS = 'http://www.w3.org/2000/svg', mk = (t, a, p = svg) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; };
-  const BR = '#4a2c14', GOLD = '#b07a12', RAD = Math.PI / 180, pt = (V, d, r) => [V[0] + r * Math.cos(d * RAD), V[1] - r * Math.sin(d * RAD)];
-  mk('rect', { x: 0, y: 0, width: 600, height: 300, rx: 14, fill: '#fffaf1' });
-  const cap = mk('text', { x: 300, y: 34, 'text-anchor': 'middle', 'font-family': 'Georgia, serif', 'font-size': 22, fill: BR });
-  const X = 470, T1 = [X, 95], T2 = [X, 225];
-  mk('line', { x1: X, y1: 55, x2: X, y2: 270, stroke: BR, 'stroke-width': 3 });
-  const tl = mk('text', { x: X + 14, y: 66, 'font-family': 'Georgia, serif', 'font-style': 'italic', 'font-size': 20, fill: BR }); tl.textContent = 't';
-  const l1 = mk('line', { stroke: BR, 'stroke-width': 3, 'stroke-linecap': 'round' }), l2 = mk('line', { stroke: BR, 'stroke-width': 3, 'stroke-linecap': 'round' });
-  const a1 = mk('path', { fill: GOLD, 'fill-opacity': 0.3, stroke: GOLD, 'stroke-width': 2 }), a2 = mk('path', { fill: GOLD, 'fill-opacity': 0.3, stroke: GOLD, 'stroke-width': 2 });
-  const n1 = mk('text', { 'font-family': 'Georgia, serif', 'font-size': 18, 'font-weight': 700, fill: BR, 'text-anchor': 'middle' }), n2 = mk('text', { 'font-family': 'Georgia, serif', 'font-size': 18, 'font-weight': 700, fill: BR, 'text-anchor': 'middle' });
-  const sum = mk('text', { x: 300, y: 288, 'text-anchor': 'middle', 'font-family': 'Georgia, serif', 'font-size': 20, 'font-weight': 700, fill: GOLD });
-  const star = mk('circle', { r: 9, fill: GOLD, stroke: BR, 'stroke-width': 2 });
-  const wedge = (V, s, e, r) => { const p = pt(V, s, r), q = pt(V, e, r); return `M${V}L${p}A${r} ${r} 0 0 0 ${q}Z`; };
-  const clamp = (t) => Math.max(0, Math.min(1, t)), ease = (t) => t * t * (3 - 2 * t);
-  const draw = (s) => {
-    const p2 = s >= 7.4, A1 = p2 ? 90 : 70, A2 = p2 ? 90 : 75;               // same-side interior angles on the left of t
-    const d1 = 270 - A1, d2 = 90 + A2;                                         // left-going directions of ℓ1 (from T1) and ℓ2 (from T2)
-    const meetL = p2 ? 0 : 213 * Math.cos(15 * RAD) / Math.cos(20 * RAD);      // distance along ℓ1 to the meeting point
-    const grow = p2 ? ease(clamp((s - 8.2) / 2.2)) : ease(clamp((s - 3.6) / 2.4));
-    const Lleft = p2 ? 70 + grow * 370 : 70 + grow * (meetL - 70), Lright = p2 ? 60 + grow * 60 : 60;
-    const e1 = pt(T1, d1, Lleft), e2 = pt(T2, d2, p2 ? Lleft : Lleft * Math.cos(20 * RAD) / Math.cos(15 * RAD)), r1 = pt(T1, d1 + 180, Lright), r2 = pt(T2, d2 + 180, Lright);
-    l1.setAttribute('x1', e1[0]); l1.setAttribute('y1', e1[1]); l1.setAttribute('x2', r1[0]); l1.setAttribute('y2', r1[1]);
-    l2.setAttribute('x1', e2[0]); l2.setAttribute('y1', e2[1]); l2.setAttribute('x2', r2[0]); l2.setAttribute('y2', r2[1]);
-    const on = (s > 1 && s < 7.4) || s > 7.8;
-    a1.setAttribute('d', wedge(T1, d1, 270, 34)); a2.setAttribute('d', wedge(T2, 90, d2, 34));
-    a1.style.opacity = a2.style.opacity = on ? 1 : 0;
-    const q1 = pt(T1, (d1 + 270) / 2, 56), q2 = pt(T2, (90 + d2) / 2, 56);
-    n1.setAttribute('x', q1[0]); n1.setAttribute('y', q1[1] + 6); n1.textContent = on ? A1 + '°' : '';
-    n2.setAttribute('x', q2[0]); n2.setAttribute('y', q2[1] + 6); n2.textContent = on ? A2 + '°' : '';
-    sum.textContent = (s > 2.2 && s < 7.4) ? `${A1}° + ${A2}° = ${A1 + A2}°: less than 180°` : s > 8 ? '90° + 90° = 180°' : '';
-    const met = !p2 && s > 6;
-    star.setAttribute('cx', met ? e1[0] : -50); star.setAttribute('cy', met ? e1[1] : -50);
-    cap.textContent = p2 ? (s > 10.2 ? 'They never meet: parallel lines' : 'What if they add to exactly 180°?') : s > 6 ? 'The lines meet on that side!' : 'Euclid’s fifth rule';
-  };
-  let raf = 0;
-  const play = () => {
-    cancelAnimationFrame(raf);
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { draw(6.5); return; }
-    const t0 = performance.now(); const tick = (now) => { const s = (now - t0) / 1000; draw(Math.min(s, 12)); if (s < 12) raf = requestAnimationFrame(tick); }; raf = requestAnimationFrame(tick);
-  };
-  draw(6.5);
-  svg.addEventListener('click', play);
-  const btn = svg.closest('.hist-anim') && svg.closest('.hist-anim').querySelector('.hist-play'); if (btn) btn.addEventListener('click', play);
-  let seen = false;
-  new IntersectionObserver((es) => { es.forEach((e) => { if (e.isIntersecting && !seen) { seen = true; play(); } }); }, { threshold: 0.5 }).observe(svg);
-}
-histAnim();
+
 
 /* ======================================================================================
  * Stand Up Break! — name the angle, name the pair, find all eight (not parallel)
