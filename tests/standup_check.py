@@ -24,7 +24,7 @@ JS = r"""async () => {
       // a value that went missing (JS undefined, NaN, Infinity) — not the word "undefined" as a correct answer
       // ("the slope is undefined"); that is flagged only when it touches a number or operator
       var all = String(x.q) + (x.text || '') + JSON.stringify(x.a) + (x.atext || '');
-      if ((x.q === undefined && x.text === undefined) || x.a === undefined || /NaN|Infinity/.test(all) ||
+      if ((x.q === undefined && x.text === undefined) || (x.a === undefined && x.atext === undefined) || /NaN|Infinity/.test(all) ||
           /undefined\s*[\d\/+\-\u2212\u00d7*(=]|[\d\/+\-\u2212\u00d7*)=]\s*undefined/.test(all)) errs.push('undefined/NaN: ' + String(x.q || x.text).slice(0, 80));
       seen.add(String(x.q) + '|' + (x.text || '') + '|' + (x.fig || ''));
     }

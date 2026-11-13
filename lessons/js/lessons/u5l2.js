@@ -1209,9 +1209,9 @@ standup('u5l2', {
       }
     ])(),
     MAS: (r) => {
-      const n = r.pick([6, 9, 11, 12]), per = r.pick([1, 2]), mv = 2 ** n - 1, s = mv * per, m = Math.floor(s / 60), sec = s % 60;
-      return { text: `A tower puzzle has <b>${n} discs</b>. A visitor makes 1 move every ${per === 1 ? 'second' : '<b>2 seconds</b>'} and never makes a mistake. How long does it take? Give minutes and seconds.`, q: '',
-        a: [`2^{${n}}-1=${2 ** n}-1=${mv}\\text{ moves}`, ...(per === 2 ? [`${mv}\\times2=${s}\\text{ s}`] : [`${s}\\text{ s}`]), `${s}\\div60=${m}\\text{ R }${sec}`, `${m}\\text{ min }${sec}\\text{ s}`] };
+      const n = r.int(6, 12), per = r.pick([1, 2, 3]), mv = 2 ** n - 1, s = mv * per, m = Math.floor(s / 60), sec = s % 60;
+      return { text: `A tower puzzle has <b>${n} discs</b>. A visitor makes 1 move every ${per === 1 ? 'second' : `<b>${per} seconds</b>`} and never makes a mistake. How long does it take? Give minutes and seconds.`, q: '',
+        a: [`2^{${n}}-1=${2 ** n}-1=${mv}\\text{ moves}`, ...(per > 1 ? [`${mv}\\times${per}=${s}\\text{ s}`] : [`${s}\\text{ s}`]), `${s}\\div60=${m}\\text{ R }${sec}`, `${m}\\text{ min }${sec}\\text{ s}`] };
     }
   }
 });

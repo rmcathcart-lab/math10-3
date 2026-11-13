@@ -795,7 +795,9 @@ strip(); ex2(); ex3(); ex4(); minis(); rose(); ex7(); ex8(); ptTool(); compassTo
  * Stand Up Break
  * ====================================================================================== */
 const BUILDS = { 225: ['180^\\circ+45^\\circ', 'reflex'], 315: ['360^\\circ-45^\\circ', 'reflex'], 240: ['180^\\circ+60^\\circ', 'reflex'], 202.5: ['180^\\circ+22.5^\\circ', 'reflex'],
-  337.5: ['360^\\circ-22.5^\\circ', 'reflex'], 52.5: ['30^\\circ+22.5^\\circ', 'acute'], 82.5: ['60^\\circ+22.5^\\circ', 'acute'], 292.5: ['270^\\circ+22.5^\\circ', 'reflex'], 165: ['180^\\circ-15^\\circ', 'obtuse'] };
+  337.5: ['360^\\circ-22.5^\\circ', 'reflex'], 52.5: ['30^\\circ+22.5^\\circ', 'acute'], 82.5: ['60^\\circ+22.5^\\circ', 'acute'], 292.5: ['270^\\circ+22.5^\\circ', 'reflex'], 165: ['180^\\circ-15^\\circ', 'obtuse'],
+  135: ['90^\\circ+45^\\circ', 'obtuse'], 150: ['90^\\circ+60^\\circ', 'obtuse'], 120: ['90^\\circ+30^\\circ', 'obtuse'], 112.5: ['90^\\circ+22.5^\\circ', 'obtuse'], 105: ['60^\\circ+45^\\circ', 'obtuse'],
+  67.5: ['45^\\circ+22.5^\\circ', 'acute'], 75: ['45^\\circ+30^\\circ', 'acute'], 210: ['180^\\circ+30^\\circ', 'reflex'], 300: ['360^\\circ-60^\\circ', 'reflex'] };
 const MAIN = { north: 0, east: 90, south: 180, west: 270 };
 const NEXT = { north: ['east', 'west'], east: ['south', 'north'], south: ['west', 'east'], west: ['north', 'south'] };
 standup('u5l4', {
