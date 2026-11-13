@@ -771,8 +771,8 @@ standup('u3l3', {
   intro: 'Write every step. Count the sixteenths. Write the answer in simplest form, with the unit.',
   levels: {
     BEG: (r) => {
-      const n = r.pick([2, 4, 6, 10, 12, 14]), g = gcd(n, 16);
-      return { text: 'Write in simplest form.', q: `\\frac{${n}}{16}`, a: [`\\frac{${n}}{16}=\\frac{${n}\\div${g}}{16\\div${g}}`, `=\\frac{${n / g}}{${16 / g}}`] };
+      const [n, d] = r.pick([[2, 16], [4, 16], [6, 16], [8, 16], [10, 16], [12, 16], [14, 16], [2, 8], [4, 8], [6, 8], [2, 4]]), g = gcd(n, d);
+      return { text: 'Write in simplest form.', q: `\\frac{${n}}{${d}}`, a: [`\\frac{${n}}{${d}}=\\frac{${n}\\div${g}}{${d}\\div${g}}`, `=\\frac{${n / g}}{${d / g}}`] };
     },
     PRG: (r) => {
       const w = r.int(1, 7), off = r.int(1, 31); const s = 16 * w + (off === 16 ? 17 : off), ww = Math.floor(s / 16), rr = s - 16 * ww;

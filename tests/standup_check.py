@@ -26,7 +26,7 @@ JS = r"""async () => {
       var all = String(x.q) + (x.text || '') + JSON.stringify(x.a) + (x.atext || '');
       if ((x.q === undefined && x.text === undefined) || x.a === undefined || /NaN|Infinity/.test(all) ||
           /undefined\s*[\d\/+\-\u2212\u00d7*(=]|[\d\/+\-\u2212\u00d7*)=]\s*undefined/.test(all)) errs.push('undefined/NaN: ' + String(x.q || x.text).slice(0, 80));
-      seen.add(String(x.q) + '|' + (x.text || '') + '|' + (x.fig || '').length);
+      seen.add(String(x.q) + '|' + (x.text || '') + '|' + (x.fig || ''));
     }
     out.levels[lv] = { distinct: seen.size, errs: [...new Set(errs)].slice(0, 4), nerr: errs.length };
   }

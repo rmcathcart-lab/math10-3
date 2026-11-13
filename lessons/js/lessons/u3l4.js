@@ -580,7 +580,7 @@ standup('u3l4', {
       return { text: 'Change to inches.', q: `${f}'\\,${i}''`, a: [`${f}\\times12+${i}=${12 * f}+${i}`, `=${12 * f + i}\\text{ in}`] };
     },
     MAS: (r) => {
-      const af = r.int(4, 9), ai = r.int(1, 11);
+      const af = r.int(4, 9), ai = r.int(1, 10); // not 11: subtracting needs more inches below (bi > ai), so 11 left nothing to pick and the page froze
       if (r.chance(0.5)) { const bf = r.int(1, 5); let bi; do { bi = r.int(1, 11); } while (ai + bi < 12); const F = af + bf, I = ai + bi; return { text: 'Add. Write the answer with fewer than 12 inches.', q: `${af}'\\,${ai}''+${bf}'\\,${bi}''`, a: [`${F}'\\,${I}''`, `${I}''=1'\\,${I - 12}''`, `=${F + 1}'\\,${I - 12}''`] }; }
       const bf = r.int(1, af - 1); let bi; do { bi = r.int(1, 11); } while (bi <= ai);
       return { text: 'Subtract. Borrow if you need to.', q: `${af}'\\,${ai}''-${bf}'\\,${bi}''`, a: [`${af}'\\,${ai}''=${af - 1}'\\,${ai + 12}''`, `${af - 1}'\\,${ai + 12}''-${bf}'\\,${bi}''=${af - 1 - bf}'\\,${ai + 12 - bi}''`] };
