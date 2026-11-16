@@ -24,6 +24,7 @@ export const cleanCls = (v) => String(v || '').toUpperCase().replace(/[^A-Z0-9-]
 export function loadTeach(ms = 4000) {
   const ok = () => window.TEACH && typeof window.TEACH.periods === 'function' && typeof window.TEACH.data === 'function';
   if (ok()) return Promise.resolve(window.TEACH);
+  if (CONFIG.hub === false) return Promise.reject(new Error('no hub'));   // running without the Teaching Hub: pick the block by hand
   return new Promise((res, rej) => {
     const s = document.createElement('script'); s.src = COURSES_JS; s.async = true;
     const t = setTimeout(() => rej(new Error('timeout')), ms);

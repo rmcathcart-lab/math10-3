@@ -644,7 +644,7 @@
   var cp7 = {
     id: 'offer', title: 'My Job Offer — hand it in', needs: [], submit: true,
     goal: 'Make your printable <b>job offer</b> with your pay stub, plan your summer, write a short <b>reflection</b>, and <b>hand in</b> your project.',
-    passMsg: 'Your project has been handed in. Mr. Cathcart will look at it and give you feedback.',
+    passMsg: 'Your project has been handed in. ' + HW.teacherName('Your teacher') + ' will look at it and give you feedback.',
     example: { title: 'Leah’s summer at the garden centre', steps: [
       { cap: 'Leah takes the garden centre job. If every two-week pay is like her first one, a summer of <b>4 pay periods</b> gives her:', html: eq('4 × $1,031.48', 4125.92) },
       { cap: 'That’s more than the $2,400 dirt bike, so her goal works ✓. Her offer letter shows her pay rule and her pay stub.', html: '<div class="pj-x-mini"><b>🌷 Garden centre · Job offer</b><span>$16.00/h · overtime 1.5×</span><span>Gross $1,348.00 → net <b>$1,031.48</b></span><span>Summer: $4,125.92 ✓ dirt bike</span></div>' }] },

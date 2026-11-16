@@ -72,8 +72,13 @@
     var ub = button('btn-small', 'Undo', undo); ub.disabled = !K.undo.length; acts.appendChild(ub);
     acts.appendChild(button('btn-small kc-add', 'Add to calendar…', function () { editEvent(null); }));
     /* days off are set for every course in the Teaching Hub (they used to be marked here) */
-    var hubOff = el('a', 'btn btn-small', 'Days off ↗'); hubOff.href = (root.TEACH ? root.TEACH.HUB : '../../teaching/') + '#/calendar/daysoff'; hubOff.title = 'Days off are set for every course in the Teaching Hub'; acts.appendChild(hubOff);
-    var allCal = el('a', 'btn btn-small btn-ghost', 'All classes ↗'); allCal.href = (root.TEACH ? root.TEACH.HUB : '../../teaching/') + '#/calendar'; allCal.title = 'Every class’s calendar on one page'; acts.appendChild(allCal);
+    if (HW.noHub()) {   // no Teaching Hub: days off are marked right here, on the calendar
+      var offB = button('btn-small' + (K.offMode ? ' btn-primary' : ''), K.offMode ? 'Done marking days off' : 'Days off…', function () { K.offMode = !K.offMode; rerender(); });
+      offB.title = 'Mark the school’s days off (holidays, PD days): every class’s lessons move along'; offB.disabled = isDemo(); acts.appendChild(offB);
+    } else {
+      var hubOff = el('a', 'btn btn-small', 'Days off ↗'); hubOff.href = (root.TEACH ? root.TEACH.HUB : '../../teaching/') + '#/calendar/daysoff'; hubOff.title = 'Days off are set for every course in the Teaching Hub'; acts.appendChild(hubOff);
+      var allCal = el('a', 'btn btn-small btn-ghost', 'All classes ↗'); allCal.href = (root.TEACH ? root.TEACH.HUB : '../../teaching/') + '#/calendar'; allCal.title = 'Every class’s calendar on one page'; acts.appendChild(allCal);
+    }
     acts.appendChild(button('btn-small btn-ghost', 'Start over…', function () { startOver(); }));
     top.appendChild(acts); body.appendChild(top);
     if (!isDemo() && realClasses().length > 1) body.appendChild(syncRow());
@@ -102,7 +107,7 @@
   }
   function renderStart(body) {
     var p = el('div', 'panel kc-start');
-    p.innerHTML = '<h3>Make a class calendar for ' + esc(klassLabel()) + '</h3><p>Every lesson in course order, one per class day, with a unit test after each unit’s last lesson. Weekends and days off are skipped. Then drag lessons around as the semester goes.</p>';
+    p.innerHTML = '<h3>Make a class calendar for ' + esc(klassLabel()) + '</h3><p>Every lesson in course order, one per class day, with a unit test after each unit’s last lesson. Weekends and days off are skipped. Then drag lessons around as the semester goes.</p>' + (HW.noHub() ? '<p class="small muted">Holidays and PD days: make the calendar, then press <b>Days off…</b> and tap each one. The lessons move along by themselves.</p>' : '');
     var row = el('div', 'tt-row kc-startrow'), pick = C.picker({ value: defaultStart() || C.today(), off: off() });
     row.appendChild(el('div', 'kc-field-l', 'First class day')); row.appendChild(pick);
     row.appendChild(button('btn-primary', 'Make the calendar', function () { var s = C.firstClassDay(pick.value(), off()); if (!s) return; K.scroll = null; save(C.make(s), 'Calendar made.'); }));

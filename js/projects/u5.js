@@ -1080,7 +1080,7 @@
   var cp7 = {
     id: 'card', title: 'Puzzle obstacle — and hand it in', needs: ['u5l1', 'u5l2'], submit: true,
     goal: 'Fill your <b>obstacle pad</b> with pentominoes (and explain your strategy), spot the mistake in someone else’s tiling, then print your <b>hole design card</b> and hand it in.',
-    passMsg: 'Your hole has been handed in. Mr. Cathcart will look at it and give you feedback.',
+    passMsg: 'Your hole has been handed in. ' + HW.teacherName('Your teacher') + ' will look at it and give you feedback.',
     example: { title: 'Dev’s pentomino pad', scene: '<div class="pj-u5-exwrap pj-u5-expad">' + padSvg({ rows: 3, cols: 5 }, [{ p: 'U', cells: [[0, 0], [1, 0], [2, 0], [0, 1], [2, 1]] }], { cell: 34 }) + padSvg({ rows: 3, cols: 5 }, [{ p: 'U', cells: [[0, 0], [1, 0], [2, 0], [0, 1], [2, 1]] }, { p: 'X', cells: [[1, 1], [0, 2], [1, 2], [2, 2], [1, 3]] }, { p: 'U', cells: [[0, 3], [2, 3], [0, 4], [1, 4], [2, 4]] }], { cell: 34 }) + '</div>', steps: [
       { cap: 'Dev’s pad is 3 × 5 = 15 squares. Each pentomino covers 5 squares, so it takes 15 ÷ 5 pieces.', html: eq('15 ÷ 5', 3, ' pieces') },
       { cap: '<b>Strategy:</b> fill the <b>corners</b> and edges first — they’re the hardest to reach. He tries the U in the left corner…', html: chip('Start with the corners') },

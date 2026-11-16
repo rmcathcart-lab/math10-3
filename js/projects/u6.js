@@ -909,7 +909,7 @@
   var cp7 = {
     id: 'sheet', title: 'Plan sheet — and hand it in', needs: ['u6l1', 'u6l6'], submit: true,
     goal: 'Add the tree to your model, check your <b>plan sheet</b>, print it, write a short reflection and hand it in.',
-    passMsg: 'Your plan sheet has been handed in. Mr. Cathcart will look at it and give you feedback.',
+    passMsg: 'Your plan sheet has been handed in. ' + HW.teacherName('Your teacher') + ' will look at it and give you feedback.',
     example: { title: 'Maya finishes her plan sheet', steps: [
       { cap: 'The museum wants the <b>flagpole</b> in the model too. The real pole is 9 m. The model uses the same scale factor as everything else: k = 0.02.', html: chip('Same k for every part of the model') },
       { cap: 'Change to cm (9 m = 900 cm) and multiply by k.', html: eq('900 × 0.02', 18, ' cm') },

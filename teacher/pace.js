@@ -28,7 +28,7 @@
   var BANDS = (TC && TC.BANDS) || null;
   var LNAME = { NM: 'Not Yet Meeting', LIM: 'Limited', BEG: 'Beginning', EMG: 'Emerging', PRG: 'Progressing', ADV: 'Advancing', MAS: 'Mastery' };
   var SCALE = ['LIM', 'BEG', 'EMG', 'PRG', 'ADV', 'MAS'];
-  var SCHOOL = 'W.H. Croxford High School', TEACHER_EMAIL = 'rcathcart@rvschools.ab.ca';
+  var TT = HW.teacher(), SCHOOL = TT.school, TEACHER_EMAIL = TT.email;
 
   function ls(k, v) { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { return null; } }
   function button(cls, html, fn) { var b = el('button', 'btn ' + cls, html); b.type = 'button'; b.addEventListener('click', fn); return b; }
@@ -341,7 +341,7 @@
     side.appendChild(lab('Greeting', greet));
     var note = el('textarea', 'field eh-note'); note.rows = 4; note.placeholder = 'A sentence or two of your own (optional) — it goes first.';
     side.appendChild(lab('Your note', note));
-    var sign = el('textarea', 'field eh-sign'); sign.rows = 3; sign.value = ls('hw:famsign') || 'Ryan Cathcart\n' + course() + ' · ' + SCHOOL + '\n' + TEACHER_EMAIL;
+    var sign = el('textarea', 'field eh-sign'); sign.rows = 3; sign.value = ls('hw:famsign') || [TT.fullName, course() + (SCHOOL ? ' · ' + SCHOOL : ''), TEACHER_EMAIL].filter(Boolean).join('\n');
     side.appendChild(lab('Sign-off <span class="muted small">(remembered)</span>', sign));
     var subjW = el('div', 'eh-subj'); prevW.appendChild(subjW); prevW.appendChild(prev);
     var status = el('div', 'small muted eh-status');

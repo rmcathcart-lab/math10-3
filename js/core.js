@@ -7,6 +7,11 @@
 (function (root) {
   'use strict';
   var HW = root.HW = root.HW || {};
+  /* the teacher's details from js/config.js (HW_CONFIG.teacher): HW.teacher().name etc. ('' when not set). HW.teacherName(fb)
+   * is the name, or fb (default "your teacher") when none is set. HW.noHub(): the site runs without the Teaching Hub. */
+  HW.teacher = function () { var t = (root.HW_CONFIG && root.HW_CONFIG.teacher) || {}; return { name: String(t.name || ''), fullName: String(t.fullName || t.name || ''), email: String(t.email || ''), school: String(t.school || '') }; };
+  HW.teacherName = function (fb) { return HW.teacher().name || (fb == null ? 'your teacher' : fb); };
+  HW.noHub = function () { return !!(root.HW_CONFIG && root.HW_CONFIG.hub === false); };
 
   /* ---------------- seeded random ---------------- */
   function mulberry32(a) {

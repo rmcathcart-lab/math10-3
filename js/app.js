@@ -408,10 +408,12 @@
       foot.appendChild(ab);
     }
     // email the teacher: opens the student's mail app with a subject that says who it's from
-    var em = el('a', 'btn home-about-btn', 'Email Mr. Cathcart');
-    em.href = 'mailto:' + TEACHER_EMAIL + '?subject=' + encodeURIComponent('Math 10-3' + (session && session.name ? ' question from ' + session.name : ' question'));
-    em.title = 'Email Mr. Cathcart (' + TEACHER_EMAIL + ')';
-    foot.appendChild(em);
+    if (TEACHER_EMAIL) {
+      var em = el('a', 'btn home-about-btn', 'Email ' + esc(HW.teacherName())), tn = HW.teacherName();
+      em.href = 'mailto:' + TEACHER_EMAIL + '?subject=' + encodeURIComponent('Math 10-3' + (session && session.name ? ' question from ' + session.name : ' question'));
+      em.title = 'Email ' + tn + ' (' + TEACHER_EMAIL + ')';
+      foot.appendChild(em);
+    }
     // the lessons-only booklets (notes and examples, no assignments) to print and follow along with in class
     var nb = el('button', 'btn home-about-btn', 'Printable Notes'); nb.type = 'button';
     nb.title = 'Print a unit’s notes package to follow along with during the lessons';
@@ -892,7 +894,7 @@
     var m = /(?:^|[^a-z0-9])([a-d])$/i.exec(session.klass || '') || /block\s*([a-d])\b/i.exec(session.label || '');
     return m ? m[1].toUpperCase() : '';
   }
-  var TEACHER_EMAIL = 'rcathcart@rvschools.ab.ca';
+  var TEACHER_EMAIL = HW.teacher().email;
   function teachingUrl(lesson) {
     var T = HW.TEACHING; if (!T || T.lessons.indexOf(lesson.id) < 0) return '';
     var m = /^u(\d+)l(\w+)$/.exec(lesson.id), b = studentBlock();

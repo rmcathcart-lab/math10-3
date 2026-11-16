@@ -21,7 +21,7 @@
   var HW = root.HW = root.HW || {};
   var COND = "'Barlow Condensed','Arial Narrow','Roboto Condensed',sans-serif", SANS = "system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif",
     MONO = "ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace";
-  var ISSUER = 'Mr. Cathcart';
+  var ISSUER = HW.teacher ? HW.teacherName('Your teacher') : 'Your teacher';
 
   /* the levels: the card stock. body = fill (or a gradient key), edge/ew = the edge, ink/mu = text and small labels,
      lc = the level name's colour, rule = the line under the header, foil = holographic stripe, seal = the turning seal */

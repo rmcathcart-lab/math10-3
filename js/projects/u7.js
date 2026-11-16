@@ -722,7 +722,7 @@
   var cp7 = {
     id: 'card', title: 'Check it, print it, hand it in', needs: ['u7l9'], submit: true,
     goal: 'Make sure answers are <b>reasonable</b> by spotting another crew’s slip, then print your <b>build card</b> with every length and angle and hand in your design.',
-    passMsg: 'Your design has been handed in. Mr. Cathcart will look at it and give you feedback.',
+    passMsg: 'Your design has been handed in. ' + HW.teacherName('Your teacher') + ' will look at it and give you feedback.',
     example: { title: 'Is it reasonable?', scene: '<div class="pj-u7-exwrap pj-u7-exsm">' + rampSvg({ h: 0.63, run: 7.56, tags: true, labels: { rise: 'opp 0.63 m', run: 'adj 7.56 m', len: 'hyp 7.59 m' }, Wpx: 520, aria: 'A ramp triangle' }) + '</div>', steps: [
       { cap: 'Before anything is built, the Aspen crew checks every number on their card. Three quick tests catch most slips.', html: chip('Is it reasonable?') },
       { cap: '<b>1. The hypotenuse is the longest side.</b> A ramp shorter than its run, or a wire shorter than the height it reaches, is wrong.', html: chip('hyp 7.59 m &gt; adj 7.56 m ✓') },

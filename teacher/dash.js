@@ -920,18 +920,31 @@
       body.appendChild(p1);
 
       var p2 = el('div', 'panel'); p2.appendChild(el('h3', '', 'Class time'));
-      p2.appendChild(el('p', 'small muted', 'Work counts as “in class” only during this class’s block on the bell schedule. The block, the bell times and the days off are set once for every course in the Teaching Hub (Universal settings), from your semester schedule.'));
-      var bl = el('p', '', c.block ? '<b>Block ' + esc(c.block) + '</b> on the bell schedule. ' : '<b>No block</b> — everything counts as in class. Add this class to your schedule to give it one. ');
-      bl.appendChild(hubLink('schedule', 'Schedule ↗')); p2.appendChild(bl);
-      var nsr = el('p', 'small', 'Bell times and <b>' + (st.noSchool || []).length + '</b> days off come from the hub: ');
-      nsr.appendChild(hubLink('settings', 'Universal settings ↗')); p2.appendChild(nsr);
+      if (HW.noHub()) {
+        /* no Teaching Hub: the block is picked here; bell times are in the "Class times" panel below and days off on the Calendar tab */
+        p2.appendChild(el('p', 'small muted', 'Work counts as “in class” only during this class’s block on the bell schedule (the Class times panel below), and never on a day off (mark days off on the Calendar tab). With no block, everything counts as in class.'));
+        var brow = el('div', 'linkrow'), bsel = el('select', 'field'); bsel.setAttribute('aria-label', 'Block');
+        [['', 'No block'], ['A', 'Block A'], ['B', 'Block B'], ['C', 'Block C'], ['D', 'Block D']].forEach(function (o) { var op = el('option', '', o[1]); op.value = o[0]; if ((c.block || '') === o[0]) op.selected = true; bsel.appendChild(op); });
+        bsel.addEventListener('change', function () {
+          var want = bsel.value; bsel.disabled = true;
+          api('setblock', { 'class': c.code, block: want }).then(function (d) { bsel.disabled = false; if (!d.ok) { flash(p2, 'Couldn’t save: ' + d.error); return; } c.block = want; (st.classes || []).forEach(function (x) { if (x.code === c.code) x.block = want; }); flash(p2, want ? 'Saved: Block ' + want + '.' : 'Saved: no block.'); }, function () { bsel.disabled = false; flash(p2, 'Couldn’t reach the ledger.'); });
+        });
+        brow.appendChild(el('span', '', '<b>This class meets in</b>')); brow.appendChild(bsel); p2.appendChild(brow);
+        p2.appendChild(el('p', 'small', '<b>' + (st.noSchool || []).length + '</b> days off marked (Calendar tab → Days off).'));
+      } else {
+        p2.appendChild(el('p', 'small muted', 'Work counts as “in class” only during this class’s block on the bell schedule. The block, the bell times and the days off are set once for every course in the Teaching Hub (Universal settings), from your semester schedule.'));
+        var bl = el('p', '', c.block ? '<b>Block ' + esc(c.block) + '</b> on the bell schedule. ' : '<b>No block</b> — everything counts as in class. Add this class to your schedule to give it one. ');
+        bl.appendChild(hubLink('schedule', 'Schedule ↗')); p2.appendChild(bl);
+        var nsr = el('p', 'small', 'Bell times and <b>' + (st.noSchool || []).length + '</b> days off come from the hub: ');
+        nsr.appendChild(hubLink('settings', 'Universal settings ↗')); p2.appendChild(nsr);
+      }
       body.appendChild(p2);
       if (HW.DashCal && HW.DashCal.reminderPanel) body.appendChild(HW.DashCal.reminderPanel());
 
       body.appendChild(studentsPanel(c));
     }
     var p4 = el('div', 'panel'); p4.appendChild(el('h3', '', 'New class'));
-    var hubNote = el('p', 'small', 'Classes for your semester schedule are made for you when you save the schedule in the Teaching Hub: '); hubNote.appendChild(hubLink('schedule', 'Schedule ↗')); p4.appendChild(hubNote);
+    if (!HW.noHub()) { var hubNote = el('p', 'small', 'Classes for your semester schedule are made for you when you save the schedule in the Teaching Hub: '); hubNote.appendChild(hubLink('schedule', 'Schedule ↗')); p4.appendChild(hubNote); }
     p4.appendChild(el('p', 'small muted', 'A class code is what students type (or what the class link carries). Use something short like <code>103-b</code>. Paste the class list from PowerSchool — one name per line.'));
     var g = el('div', 'grid2');
     var code = el('input', 'field'); code.placeholder = 'Class code, e.g. 103-b'; var label = el('input', 'field'); label.placeholder = 'Name shown, e.g. Math 10-3 · Block B';
@@ -957,6 +970,7 @@
       api('setroster', q).then(function (d) { if (!d.ok) { flash(p4, d.error); return; } st.klass = d['class'].code; ls('hw:tclass', st.klass); loadClasses(); });
     });
     p4.appendChild(mk); body.appendChild(p4);
+    if (HW.noHub() && st.bell) body.appendChild(bellPanel());   // no Teaching Hub: the bell times are set here
     if (c) {
       var p5 = el('div', 'panel danger'); p5.appendChild(el('h3', '', 'Delete this class'));
       p5.appendChild(el('p', 'small muted', 'Removes the class code and its class list. Answers already in the spreadsheet stay there.'));
@@ -1087,7 +1101,7 @@
   function bellPanel() {
     var DAYS = [['day1', 'Mon / Wed', 'Day 1'], ['day2', 'Tue / Thu', 'Day 2'], ['fri', 'Friday', 'short periods']];
     var p = el('div', 'panel bell-panel'); p.appendChild(el('h3', '', 'Class times'));
-    p.appendChild(el('p', 'small muted', 'The bell schedule for every class: it decides what counts as in class, and when a test or exit slip set to “until the end of class” ends. ' + (st.bellCustom ? 'You’ve changed these from the 2026–27 schedule.' : 'These are the 2026–27 bell times.')));
+    p.appendChild(el('p', 'small muted', 'The bell schedule for every class: it decides what counts as in class, and when a test or exit slip set to “until the end of class” ends. ' + (HW.noHub() ? (st.bellCustom ? 'These are your school’s times.' : '<b>These are sample times: change them to your school’s bell schedule and save.</b>') : (st.bellCustom ? 'You’ve changed these from the 2026–27 schedule.' : 'These are the 2026–27 bell times.'))));
     var t = el('table', 'tbl bell-tbl'), head = '<thead><tr><th>Block</th>';
     DAYS.forEach(function (d) { head += '<th>' + d[1] + '<div class="th-sub">' + d[2] + '</div></th>'; });
     t.innerHTML = head + '</tr></thead>';
@@ -1117,8 +1131,8 @@
     });
     acts.appendChild(sv);
     if (st.bellCustom) {
-      var rs = el('button', 'btn btn-small btn-ghost', 'Go back to the 2026–27 times'); rs.type = 'button';
-      rs.addEventListener('click', function () { if (!confirm('Go back to the 2026–27 bell times?')) return; api('setbell', { bell: 'reset' }).then(function (d) { if (d.ok) { st.bell = d.bell; st.bellCustom = false; render(); } }); });
+      var rs = el('button', 'btn btn-small btn-ghost', HW.noHub() ? 'Go back to the sample times' : 'Go back to the 2026–27 times'); rs.type = 'button';
+      rs.addEventListener('click', function () { if (!confirm(HW.noHub() ? 'Go back to the sample bell times?' : 'Go back to the 2026–27 bell times?')) return; api('setbell', { bell: 'reset' }).then(function (d) { if (d.ok) { st.bell = d.bell; st.bellCustom = false; render(); } }); });
       acts.appendChild(rs);
     }
     p.appendChild(acts);

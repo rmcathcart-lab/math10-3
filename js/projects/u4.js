@@ -647,7 +647,7 @@
   var cp7 = {
     id: 'card', title: 'Your recipe card — and hand it in', needs: [], submit: true,
     goal: 'Style your <b>metric recipe card</b> and shopping list, look back at the cost per person, and <b>hand in</b> your project.',
-    passMsg: 'Your project has been handed in. Mr. Cathcart will look at it and give you feedback.',
+    passMsg: 'Your project has been handed in. ' + HW.teacherName('Your teacher') + ' will look at it and give you feedback.',
     example: { title: 'Coach Daniels’ card', steps: [
       { cap: 'The card is built from everything you did: metric amounts, °C, the pots and pans, and the shopping list.', html: '<div class="pj-x-mini"><b>Pucks’ Power Pancakes</b><span>1.1 kg bacon · 1.8 L milk · 150 mL sugar</span><span>Griddle at 190 °C · 2 pitchers</span><span>Shopping total: $45.20</span></div>' },
       { cap: '<b>Cost per person</b> = total ÷ number of people. That’s a unit rate, like in Unit 1!', html: eq('$45.20 ÷ 20', 2.26, '', 'money') },

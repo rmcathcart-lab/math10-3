@@ -215,7 +215,7 @@ function chipsHTML(st) {
 }
 function liveHTML(st) {
   const P = st.sched; if (P === undefined) return '';
-  if (P === null) return '<div class="mp-live">Couldn’t load your schedule from the Teaching Hub, so every block is shown. Pick the class you’re teaching.</div>';
+  if (P === null) return CONFIG.hub === false ? '<div class="mp-live">Pick the class you’re teaching: your notes go live to that class’s link.</div>' : '<div class="mp-live">Couldn’t load your schedule from the Teaching Hub, so every block is shown. Pick the class you’re teaching.</div>';
   const T = P.T, name = esc(P.name);
   const back = '<button class="mp-more" data-m="auto" type="button">Back to automatic</button>';
   const nxt = P.next ? ` Next: <b>${esc(CONFIG.classLabel(P.next.block))}</b> at ${BP.fmt(T, P.next.start)}.` : '';

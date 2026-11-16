@@ -733,7 +733,7 @@
   var cp7 = {
     id: 'quote', title: 'The quote — and hand it in', needs: [], submit: true,
     goal: 'Put it all together: a <b>quote</b> for the client with the materials, your labour, <b>GST (5%)</b> and the total. Then look back and <b>hand in</b> your project.',
-    passMsg: 'Your project has been handed in. Mr. Cathcart will look at it and give you feedback.',
+    passMsg: 'Your project has been handed in. ' + HW.teacherName('Your teacher') + ' will look at it and give you feedback.',
     example: { title: 'Chinook Carpentry’s quote for the sunroom', steps: [
       { cap: 'Add up the materials from every part of the job.', html: '<table class="pj-x-tbl"><tr><td>Baseboard</td><td>$64.90</td></tr><tr><td>Flooring</td><td>$257.94</td></tr><tr><td>Paint</td><td>$125.96</td></tr></table>' + eq('64.90 + 257.94 + 125.96', 448.8, '', 'money', 500) },
       { cap: '<b>Labour</b>: the crew charges by the hour. 9 hours at $60 an hour.', html: eq('9 × $60', 540, '', 'money') },

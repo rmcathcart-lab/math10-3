@@ -4,6 +4,7 @@
  * else sees the teacher's notes for their class link (?class=B), view only. */
 export const CONFIG = {
   inkApi: 'https://script.google.com/macros/s/AKfycbxxKvQ1KI_ei_ODIePwj2Y68wFQukpqCVaRBkJu2xualujA_s36MoyV6DJNMzYA887SoA/exec',
+  hub: true, // false = no Teaching Hub: the teacher picks the class on the lessons home (or a ?class= link) instead of the schedule
   course: 'math10-3', // the course id in the Teaching Hub's schedule (teaching/js/courses.js): the blocks and times come from there
   classes: ['A', 'B', 'C', 'D'],
   classLabel: (c) => (/^[A-D]$/.test(c) ? 'Block ' + c : c)

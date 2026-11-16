@@ -548,7 +548,7 @@
   var cp7 = {
     id: 'flyer', title: 'Your flyer — and hand it in', needs: [], submit: true,
     goal: 'Style your shop’s <b>flyer</b>, look back at your profits, and <b>hand in</b> your project.',
-    passMsg: 'Your project has been handed in. Mr. Cathcart will look at it and give you feedback.',
+    passMsg: 'Your project has been handed in. ' + HW.teacherName('Your teacher') + ' will look at it and give you feedback.',
     example: { title: 'Profit per item at Maple Leaf Treats', steps: [
       { cap: 'Your flyer is built from everything you’ve done: your name, products, prices and the sale.', html: '<div class="pj-x-mini"><b>Maple Leaf Treats</b><span>🍯 Maple syrup · $9.99</span><span>🍬 Maple fudge · $2.50 <i>20% off</i></span><span>🍪 Maple cookies · $1.49</span></div>' },
       { cap: '<b>Profit per item</b> = selling price − unit cost. Syrup: $9.99 − $6.40.', html: eq('$9.99 − $6.40', 3.59) },

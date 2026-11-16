@@ -19,6 +19,7 @@
 (function (root) {
   'use strict';
   var HW = root.HW = root.HW || {};
+  if (!HW.teacherName) HW.teacherName = function (fb) { return fb == null ? 'your teacher' : fb; };   // js/core.js has the real one (from js/config.js)
   var PJ = HW.Projects = HW.Projects || {};
   HW.PROJECTS = HW.PROJECTS || {};
   var hasDoc = typeof document !== 'undefined';
@@ -622,7 +623,7 @@
   /* hand in: the whole project goes to the ledger; then we ask the ledger whether it has it */
   function submit(def, P, fb) {
     P.submitted = Date.now(); P.subN = (P.subN || 0) + 1; touched(def.id); saveLocal();
-    var line = el('div', 'pj-sub-line', 'Sending it to Mr. Cathcart…'); fb.appendChild(line);
+    var line = el('div', 'pj-sub-line', 'Sending it to ' + HW.teacherName() + '…'); fb.appendChild(line);
     var Lg = L(), s = sess();
     if (!Lg.enabled || !s || !s.token) { line.textContent = 'Saved on this device (practice mode: no teacher ledger).'; return; }
     post(def.id);
@@ -632,9 +633,9 @@
       setTimeout(function () {
         Lg.get('myprojects', { 'class': s.klass, name: s.name, token: s.token }, 15000).then(function (d) {
           var r = d && d.ok && d.projects && d.projects[def.id];
-          if (r && r.state && Number(r.state.submitted) >= want) { line.className = 'pj-sub-line ok'; line.textContent = '✓ Mr. Cathcart has it. Nice work!'; return; }
-          if (tries < 4) { post(def.id); ask(); } else line.textContent = 'Saved on this device. It will be sent to Mr. Cathcart the next time you’re online.';
-        }, function () { if (tries < 4) ask(); else line.textContent = 'Saved on this device. It will be sent to Mr. Cathcart the next time you’re online.'; });
+          if (r && r.state && Number(r.state.submitted) >= want) { line.className = 'pj-sub-line ok'; line.textContent = '✓ ' + HW.teacherName('Your teacher') + ' has it. Nice work!'; return; }
+          if (tries < 4) { post(def.id); ask(); } else line.textContent = 'Saved on this device. It will be sent to ' + HW.teacherName() + ' the next time you’re online.';
+        }, function () { if (tries < 4) ask(); else line.textContent = 'Saved on this device. It will be sent to ' + HW.teacherName() + ' the next time you’re online.'; });
       }, tries === 1 ? 1500 : 3000);
     })();
   }
