@@ -115,8 +115,8 @@ async def main():
         await tp.keyboard.press('Escape'); assert await tp.locator('#tt-detail').count() == 0
         rel = await tp.inner_text('.tt-top .btn-primary'); assert 'Hide' in rel, 'exit slip not released on close: ' + rel  # exit slips release on close
         # ---- Ava sees her results ----
-        await a.goto(BASE + '?class=10c-b'); await a.wait_for_selector('.tm-res-card', timeout=15000)
-        await a.click('.tm-res-card'); await a.wait_for_selector('.tm-res-big')
+        await a.goto(BASE + '?class=10c-b'); await a.wait_for_selector('.latest-res', timeout=15000)
+        await a.click('.latest-res'); await a.wait_for_selector('.tm-res-big')
         big = await a.inner_text('.tm-res-big'); assert big.strip() == '1 / 3', big
         await a.screenshot(path=SHOTS + 'tm_s_results.png', full_page=True)
         # ---- a no-calculator test (orange) for the picture ----
